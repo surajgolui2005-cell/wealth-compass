@@ -1,0 +1,416 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+  DELETED
+}
+
+enum RiskTolerance {
+  CONSERVATIVE
+  MODERATE
+  AGGRESSIVE
+}
+
+enum ProviderCode {
+  ZERODHA
+  GROWW
+  BINANCE
+  ICICI_DIRECT
+  WAZIRX
+  MANUAL
+  CSV
+}
+
+enum ProviderStatus {
+  CONNECTED
+  DISCONNECTED
+  ERROR
+  SYNCING
+}
+
+enum AssetClassCode {
+  STOCKS
+  ETFS
+  MUTUAL_FUNDS
+  BONDS
+  CRYPTO
+  CASH
+  FIXED_DEPOSITS
+  REAL_ESTATE
+}
+
+enum AssetCategory {
+  EQUITY
+  FIXED_INCOME
+  CASH_EQUIVALENT
+  ALTERNATIVE
+}
+
+enum CostBasisMethod {
+  FIFO
+  LIFO
+  AVERAGE_COST
+}
+
+enum TransactionType {
+  BUY
+  SELL
+  DIVIDEND
+  SPLIT
+  BONUS
+  INTEREST
+  DEPOSIT
+  WITHDRAWAL
+  FEE
+}
+
+enum AlertType {
+  PRICE_THRESHOLD
+  DRAWDOWN_LIMIT
+  RISK_SCORE_SPIKE
+  FD_MATURITY
+  SYNC_FAILURE
+  PORTFOLIO_REBALANCE
+}
+
+enum DeliveryStatus {
+  PENDING
+  DELIVERED
+  FAILED
+}
+
+enum ReportType {
+  PORTFOLIO_SUMMARY
+  PERFORMANCE
+  TAX_GAINS
+  RISK_ANALYSIS
+  TRANSACTION_HISTORY
+}
+
+enum FileFormat {
+  PDF
+  CSV
+}
+
+enum ReportStatus {
+  PENDING
+  PROCESSING
+  COMPLETED
+  FAILED
+}
+
+model User {
+  id             String                     @id @default(uuid()) @db.Uuid
+  email          String                     @unique @db.VarChar(255)
+  passwordHash   String                     @map("password_hash") @db.VarChar(255)
+  phoneEncrypted String?                    @map("phone_encrypted") @db.VarChar(255)
+  fullName       String?                    @map("full_name") @db.VarChar(255)
+  status         UserStatus                 @default(ACTIVE)
+  createdAt      DateTime                   @default(now()) @map("created_at")
+  updatedAt      DateTime                   @updatedAt @map("updated_at")
+  deletedAt      DateTime?                  @map("deleted_at")
+
+  preferences      UserPreferences?
+  portfolios       Portfolio[]
+  providerAccounts FinancialProviderAccount[]
+  alertRules       AlertRule[]
+  reports          Report[]
+
+  @@index([status])
+  @@index([email])
+  @@index([deletedAt])
+  @@map("users")
+}
+
+model UserPreferences {
+  id                   String        @id @default(uuid()) @db.Uuid
+  userId               String        @unique @map("user_id") @db.Uuid
+  homeCurrency         String        @default("INR") @map("home_currency") @db.Char(3)
+  riskTolerance        RiskTolerance @default(MODERATE) @map("risk_tolerance")
+  timezone             String        @default("Asia/Kolkata") @db.VarChar(64)
+  notificationSettings Json          @default("{}") @map("notification_settings")
+  createdAt            DateTime      @default(now()) @map("created_at")
+  updatedAt            DateTime      @updatedAt @map("updated_at")
+  deletedAt            DateTime?     @map("deleted_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("user_preferences")
+}
+
+model Portfolio {
+  id          String    @id @default(uuid()) @db.Uuid
+  userId      String    @map("user_id") @db.Uuid
+  name        String    @db.VarChar(128)
+  description String?   @db.Text
+  isDefault   Boolean   @default(false) @map("is_default")
+  totalValue  Decimal   @default(0) @map("total_value") @db.Decimal(18, 4)
+  currency    String    @default("INR") @db.Char(3)
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+  deletedAt   DateTime? @map("deleted_at")
+
+  user        User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+  holdings    Holding[]
+  snapshots   PortfolioSnapshot[]
+  riskMetrics RiskMetricSnapshot[]
+  reports     Report[]
+
+  @@index([userId, deletedAt])
+  @@map("portfolios")
+}
+
+model FinancialProviderAccount {
+  id               String         @id @default(uuid()) @db.Uuid
+  userId           String         @map("user_id") @db.Uuid
+  providerCode     ProviderCode   @map("provider_code")
+  accountName      String         @map("account_name") @db.VarChar(128)
+  vaultSecretPath  String?        @map("vault_secret_path") @db.VarChar(255)
+  status           ProviderStatus @default(CONNECTED)
+  lastSyncAt       DateTime?      @map("last_sync_at")
+  lastSyncStatus   String?        @map("last_sync_status") @db.VarChar(64)
+  syncErrorMessage String?        @map("sync_error_message") @db.Text
+  createdAt        DateTime       @default(now()) @map("created_at")
+  updatedAt        DateTime       @updatedAt @map("updated_at")
+  deletedAt        DateTime?      @map("deleted_at")
+
+  user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  holdings Holding[]
+
+  @@index([userId, providerCode])
+  @@index([status])
+  @@map("financial_provider_accounts")
+}
+
+model AssetClass {
+  id          String         @id @default(uuid()) @db.Uuid
+  code        AssetClassCode @unique
+  name        String         @db.VarChar(64)
+  description String?        @db.Text
+  category    AssetCategory
+  createdAt   DateTime       @default(now()) @map("created_at")
+  updatedAt   DateTime       @updatedAt @map("updated_at")
+
+  assets Asset[]
+
+  @@map("asset_classes")
+}
+
+model Asset {
+  id           String    @id @default(uuid()) @db.Uuid
+  assetClassId String    @map("asset_class_id") @db.Uuid
+  symbol       String    @db.VarChar(64)
+  name         String    @db.VarChar(255)
+  isin         String?   @unique @db.VarChar(12)
+  exchange     String?   @db.VarChar(32)
+  currency     String    @default("INR") @db.Char(3)
+  isActive     Boolean   @default(true) @map("is_active")
+  metadata     Json?     @default("{}")
+  createdAt    DateTime  @default(now()) @map("created_at")
+  updatedAt    DateTime  @updatedAt @map("updated_at")
+  deletedAt    DateTime? @map("deleted_at")
+
+  assetClass   AssetClass    @relation(fields: [assetClassId], references: [id], onDelete: Restrict)
+  holdings     Holding[]
+  marketPrices MarketPrice[]
+
+  @@unique([symbol, exchange])
+  @@index([symbol])
+  @@index([isin])
+  @@index([assetClassId])
+  @@map("assets")
+}
+
+model Holding {
+  id                String                   @id @default(uuid()) @db.Uuid
+  portfolioId       String                   @map("portfolio_id") @db.Uuid
+  assetId           String                   @map("asset_id") @db.Uuid
+  providerAccountId String?                  @map("provider_account_id") @db.Uuid
+  symbol            String                   @db.VarChar(64)
+  quantity          Decimal                  @db.Decimal(18, 8)
+  avgCostBasis      Decimal                  @map("avg_cost_basis") @db.Decimal(18, 8)
+  currentPrice      Decimal                  @default(0) @map("current_price") @db.Decimal(18, 8)
+  currentValue      Decimal                  @default(0) @map("current_value") @db.Decimal(18, 4)
+  unrealizedPnL     Decimal                  @default(0) @map("unrealized_pnl") @db.Decimal(18, 4)
+  unrealizedPnLPct  Decimal                  @default(0) @map("unrealized_pnl_pct") @db.Decimal(18, 4)
+  costCurrency      String                   @default("INR") @map("cost_currency") @db.Char(3)
+  costBasisMethod   CostBasisMethod          @default(AVERAGE_COST) @map("cost_basis_method")
+  isManual          Boolean                  @default(false) @map("is_manual")
+  createdAt         DateTime                 @default(now()) @map("created_at")
+  updatedAt         DateTime                 @updatedAt @map("updated_at")
+  deletedAt         DateTime?                @map("deleted_at")
+
+  portfolio       Portfolio                 @relation(fields: [portfolioId], references: [id], onDelete: Cascade)
+  asset           Asset                     @relation(fields: [assetId], references: [id], onDelete: Restrict)
+  providerAccount FinancialProviderAccount? @relation(fields: [providerAccountId], references: [id], onDelete: SetNull)
+  transactions    Transaction[]
+
+  @@index([portfolioId, symbol])
+  @@index([portfolioId, deletedAt])
+  @@index([assetId])
+  @@index([providerAccountId])
+  @@map("holdings")
+}
+
+model Transaction {
+  id            String          @id @default(uuid()) @db.Uuid
+  holdingId     String          @map("holding_id") @db.Uuid
+  type          TransactionType
+  quantity      Decimal         @db.Decimal(18, 8)
+  pricePerUnit  Decimal         @map("price_per_unit") @db.Decimal(18, 8)
+  fees          Decimal         @default(0) @db.Decimal(18, 4)
+  totalAmount   Decimal         @map("total_amount") @db.Decimal(18, 4)
+  currency      String          @default("INR") @db.Char(3)
+  fxRateToHome  Decimal         @default(1.0) @map("fx_rate_to_home") @db.Decimal(18, 8)
+  transactedAt  DateTime        @map("transacted_at")
+  providerRefId String?         @map("provider_ref_id") @db.VarChar(128)
+  notes         String?         @db.Text
+  createdAt     DateTime        @default(now()) @map("created_at")
+  updatedAt     DateTime        @updatedAt @map("updated_at")
+  deletedAt     DateTime?       @map("deleted_at")
+
+  holding Holding @relation(fields: [holdingId], references: [id], onDelete: Cascade)
+
+  @@index([holdingId, transactedAt])
+  @@index([transactedAt])
+  @@index([type])
+  @@map("transactions")
+}
+
+model MarketPrice {
+  id             String   @id @default(uuid()) @db.Uuid
+  assetId        String   @map("asset_id") @db.Uuid
+  price          Decimal  @db.Decimal(18, 8)
+  openPrice      Decimal? @map("open_price") @db.Decimal(18, 8)
+  highPrice      Decimal? @map("high_price") @db.Decimal(18, 8)
+  lowPrice       Decimal? @map("low_price") @db.Decimal(18, 8)
+  closePrice     Decimal? @map("close_price") @db.Decimal(18, 8)
+  volume         Decimal? @db.Decimal(18, 4)
+  currency       String   @default("INR") @db.Char(3)
+  priceTimestamp DateTime @map("price_timestamp")
+  source         String   @db.VarChar(64)
+  createdAt      DateTime @default(now()) @map("created_at")
+
+  asset Asset @relation(fields: [assetId], references: [id], onDelete: Cascade)
+
+  @@index([assetId, priceTimestamp])
+  @@index([priceTimestamp])
+  @@map("market_prices")
+}
+
+model PortfolioSnapshot {
+  id             String   @id @default(uuid()) @db.Uuid
+  portfolioId    String   @map("portfolio_id") @db.Uuid
+  totalNetWorth  Decimal  @map("total_net_worth") @db.Decimal(18, 4)
+  totalCostBasis Decimal  @map("total_cost_basis") @db.Decimal(18, 4)
+  unrealizedPnL  Decimal  @map("unrealized_pnl") @db.Decimal(18, 4)
+  realizedPnL    Decimal  @default(0) @map("realized_pnl") @db.Decimal(18, 4)
+  dailyChangeAbs Decimal  @default(0) @map("daily_change_abs") @db.Decimal(18, 4)
+  dailyChangePct Decimal  @default(0) @map("daily_change_pct") @db.Decimal(18, 4)
+  assetAllocation Json    @map("asset_allocation")
+  snapshotDate   DateTime @map("snapshot_date")
+  createdAt      DateTime @default(now()) @map("created_at")
+
+  portfolio Portfolio @relation(fields: [portfolioId], references: [id], onDelete: Cascade)
+
+  @@index([portfolioId, snapshotDate])
+  @@index([snapshotDate])
+  @@map("portfolio_snapshots")
+}
+
+model RiskMetricSnapshot {
+  id                   String   @id @default(uuid()) @db.Uuid
+  portfolioId          String   @map("portfolio_id") @db.Uuid
+  var95_1d             Decimal  @map("var_95_1d") @db.Decimal(18, 4)
+  cvar95_1d            Decimal  @map("cvar_95_1d") @db.Decimal(18, 4)
+  sharpeRatio          Decimal  @map("sharpe_ratio") @db.Decimal(18, 4)
+  sortinoRatio         Decimal  @map("sortino_ratio") @db.Decimal(18, 4)
+  beta                 Decimal  @db.Decimal(18, 4)
+  maxDrawdown          Decimal  @map("max_drawdown") @db.Decimal(18, 4)
+  volatilityAnnual     Decimal  @map("volatility_annual") @db.Decimal(18, 4)
+  riskScore            Int      @map("risk_score")
+  concentrationRisk    Json?    @map("concentration_risk")
+  correlationMatrix    Json?    @map("correlation_matrix")
+  priceHistoryDaysUsed Int      @default(252) @map("price_history_days_used")
+  computedAt           DateTime @map("computed_at")
+  createdAt            DateTime @default(now()) @map("created_at")
+
+  portfolio Portfolio @relation(fields: [portfolioId], references: [id], onDelete: Cascade)
+
+  @@index([portfolioId, computedAt])
+  @@map("risk_metric_snapshots")
+}
+
+model AlertRule {
+  id                      String    @id @default(uuid()) @db.Uuid
+  userId                  String    @map("user_id") @db.Uuid
+  name                    String    @db.VarChar(128)
+  alertType               AlertType @map("alert_type")
+  condition               Json
+  channels                Json
+  cooldownDurationMinutes Int       @default(60) @map("cooldown_duration_minutes")
+  isActive                Boolean   @default(true) @map("is_active")
+  lastTriggeredAt         DateTime? @map("last_triggered_at")
+  createdAt               DateTime  @default(now()) @map("created_at")
+  updatedAt               DateTime  @updatedAt @map("updated_at")
+  deletedAt               DateTime? @map("deleted_at")
+
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  instances AlertLog[]
+
+  @@index([userId, isActive])
+  @@index([alertType])
+  @@map("alert_rules")
+}
+
+model AlertLog {
+  id              String         @id @default(uuid()) @db.Uuid
+  alertRuleId     String         @map("alert_rule_id") @db.Uuid
+  triggeredAt     DateTime       @default(now()) @map("triggered_at")
+  triggeredValues Json           @map("triggered_values")
+  deliveryStatus  DeliveryStatus @default(PENDING) @map("delivery_status")
+  deliveredAt     DateTime?      @map("delivered_at")
+  errorMessage    String?        @map("error_message") @db.Text
+  createdAt       DateTime       @default(now()) @map("created_at")
+
+  alertRule AlertRule @relation(fields: [alertRuleId], references: [id], onDelete: Cascade)
+
+  @@index([alertRuleId, triggeredAt])
+  @@index([deliveryStatus])
+  @@map("alert_logs")
+}
+
+model Report {
+  id            String       @id @default(uuid()) @db.Uuid
+  userId        String       @map("user_id") @db.Uuid
+  portfolioId   String?      @map("portfolio_id") @db.Uuid
+  reportType    ReportType   @map("report_type")
+  fileFormat    FileFormat   @map("file_format")
+  status        ReportStatus @default(PENDING)
+  fileUrl       String?      @map("file_url") @db.VarChar(512)
+  fileSizeBytes Int?         @map("file_size_bytes")
+  parameters    Json?        @default("{}")
+  errorMessage  String?      @map("error_message") @db.Text
+  generatedAt   DateTime?    @map("generated_at")
+  createdAt     DateTime     @default(now()) @map("created_at")
+  updatedAt     DateTime     @updatedAt @map("updated_at")
+
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  portfolio Portfolio? @relation(fields: [portfolioId], references: [id], onDelete: SetNull)
+
+  @@index([userId, status])
+  @@index([createdAt])
+  @@map("reports")
+}
