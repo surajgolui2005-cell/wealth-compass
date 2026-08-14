@@ -11,6 +11,7 @@
     "paths": {
       "@investor-pm/types": ["packages/shared-types/src/index.ts"],
       "@investor-pm/ui": ["packages/ui-components/src/index.ts"],
+      "@investor-pm/config": ["packages/config/src/index.ts"],
       "@investor-pm/config/*": ["packages/config/*"]
     }
   },

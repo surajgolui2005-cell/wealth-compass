@@ -1,0 +1,1631 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_docs_product_prd_md",
+      "label": "PRD.md",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_product_requirements_document_prd",
+      "label": "Product Requirements Document (PRD)",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_investor_portfolio_monitoring_risk_management_system",
+      "label": "Investor Portfolio Monitoring & Risk Management System",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_table_of_contents",
+      "label": "Table of Contents",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L19"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_1_document_conventions",
+      "label": "1. Document Conventions",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L33"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_1_1_user_story_format",
+      "label": "1.1 User Story Format",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L35"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_1_2_epic_codes",
+      "label": "1.2 Epic Codes",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L58"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_1_3_personas_quick_reference",
+      "label": "1.3 Personas Quick Reference",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L69"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_2_epic_1_auth_user_preference_management",
+      "label": "2. Epic 1 \u2014 Auth & User Preference Management",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L81"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_auth_01_user_registration_with_email_verification",
+      "label": "US-AUTH-01: User Registration with Email Verification",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L97"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L107"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_auth_02_user_login_with_jwt_session_management",
+      "label": "US-AUTH-02: User Login with JWT Session Management",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L184"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_194",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L194"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_auth_03_multi_factor_authentication_totp",
+      "label": "US-AUTH-03: Multi-Factor Authentication (TOTP)",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L242"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_252",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L252"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_auth_04_password_reset_flow",
+      "label": "US-AUTH-04: Password Reset Flow",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L313"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_323",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L323"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_auth_05_investor_profile_risk_tolerance_setup",
+      "label": "US-AUTH-05: Investor Profile & Risk Tolerance Setup",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L368"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_378",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L378"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_auth_06_home_currency_locale_preferences",
+      "label": "US-AUTH-06: Home Currency & Locale Preferences",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L419"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_429",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L429"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_auth_07_session_expiry_token_refresh",
+      "label": "US-AUTH-07: Session Expiry & Token Refresh",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L468"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_478",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L478"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_auth_08_account_deletion_pii_erasure",
+      "label": "US-AUTH-08: Account Deletion & PII Erasure",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L517"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_527",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L527"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_3_epic_2_multi_provider_data_ingestion_transaction_recording",
+      "label": "3. Epic 2 \u2014 Multi-Provider Data Ingestion & Transaction Recording",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L570"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_ing_01_oauth_brokerage_connection_zerodha",
+      "label": "US-ING-01: OAuth Brokerage Connection (Zerodha)",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L587"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_597",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L597"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_ing_02_api_key_crypto_exchange_connection_binance",
+      "label": "US-ING-02: API Key Crypto Exchange Connection (Binance)",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L666"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_676",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L676"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_ing_03_manual_asset_entry_fixed_deposit",
+      "label": "US-ING-03: Manual Asset Entry \u2014 Fixed Deposit",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L733"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_743",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L743"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_ing_04_manual_asset_entry_real_estate",
+      "label": "US-ING-04: Manual Asset Entry \u2014 Real Estate",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L799"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_809",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L809"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_ing_05_manual_transaction_recording_buy_sell_dividend",
+      "label": "US-ING-05: Manual Transaction Recording (Buy/Sell/Dividend)",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L853"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_863",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L863"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_ing_06_bulk_csv_import",
+      "label": "US-ING-06: Bulk CSV Import",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L949"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_959",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L959"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_ing_07_background_provider_sync_lifecycle",
+      "label": "US-ING-07: Background Provider Sync Lifecycle",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1015"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_1025",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1025"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_ing_08_stale_data_detection_staleness_indicator",
+      "label": "US-ING-08: Stale Data Detection & Staleness Indicator",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1069"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_1079",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1079"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_4_epic_3_deterministic_valuation_holding_engine",
+      "label": "4. Epic 3 \u2014 Deterministic Valuation & Holding Engine",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1114"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_val_01_aggregate_portfolio_net_worth_calculation",
+      "label": "US-VAL-01: Aggregate Portfolio Net Worth Calculation",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1129"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_1139",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1139"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_val_02_equity_holding_valuation_with_stock_split_adjustment",
+      "label": "US-VAL-02: Equity Holding Valuation with Stock Split Adjustment",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1187"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_1197",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1197"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_val_03_mutual_fund_nav_based_valuation",
+      "label": "US-VAL-03: Mutual Fund NAV-Based Valuation",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1241"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_1251",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1251"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_val_04_bond_valuation_accrued_interest_mark_to_market",
+      "label": "US-VAL-04: Bond Valuation (Accrued Interest + Mark-to-Market)",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1289"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_1299",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1299"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_val_05_zero_balance_holding_handling",
+      "label": "US-VAL-05: Zero Balance Holding Handling",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1334"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_1344",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1344"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_val_06_multi_currency_portfolio_aggregation",
+      "label": "US-VAL-06: Multi-Currency Portfolio Aggregation",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1370"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_1380",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1380"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_val_07_asset_allocation_weight_calculation",
+      "label": "US-VAL-07: Asset Allocation Weight Calculation",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1423"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_1433",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1433"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_5_epic_4_performance_risk_analytics_dashboard",
+      "label": "5. Epic 4 \u2014 Performance & Risk Analytics Dashboard",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1466"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_risk_01_xirr_computation_across_portfolio",
+      "label": "US-RISK-01: XIRR Computation Across Portfolio",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1482"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_1492",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1492"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_risk_02_value_at_risk_var_calculation",
+      "label": "US-RISK-02: Value-at-Risk (VaR) Calculation",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1543"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_1553",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1553"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_risk_03_portfolio_risk_score_display",
+      "label": "US-RISK-03: Portfolio Risk Score Display",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1603"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_1613",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1613"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_risk_04_maximum_drawdown_computation",
+      "label": "US-RISK-04: Maximum Drawdown Computation",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1645"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_1655",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1655"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_risk_05_sharpe_sortino_ratio_display",
+      "label": "US-RISK-05: Sharpe & Sortino Ratio Display",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1686"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_1696",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1696"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_risk_06_concentration_risk_heatmap",
+      "label": "US-RISK-06: Concentration Risk Heatmap",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1739"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_1749",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1749"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_risk_07_portfolio_beta_calculation",
+      "label": "US-RISK-07: Portfolio Beta Calculation",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1781"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_1791",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1791"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_risk_08_what_if_scenario_analysis",
+      "label": "US-RISK-08: What-If Scenario Analysis",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1819"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_1829",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1829"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_6_epic_5_automated_alert_engine",
+      "label": "6. Epic 5 \u2014 Automated Alert Engine",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1864"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_alt_01_create_configure_price_alert",
+      "label": "US-ALT-01: Create & Configure Price Alert",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1879"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_1889",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1889"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_alt_02_portfolio_drawdown_alert",
+      "label": "US-ALT-02: Portfolio Drawdown Alert",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1949"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_1959",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1959"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_alt_03_fixed_deposit_maturity_reminder",
+      "label": "US-ALT-03: Fixed Deposit Maturity Reminder",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2002"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_2012",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2012"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_alt_04_asset_allocation_drift_alert",
+      "label": "US-ALT-04: Asset Allocation Drift Alert",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2048"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_2058",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2058"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_alt_05_alert_deduplication_cooldown",
+      "label": "US-ALT-05: Alert Deduplication & Cooldown",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2101"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_2111",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2111"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_alt_06_alert_delivery_failure_handling",
+      "label": "US-ALT-06: Alert Delivery Failure Handling",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2152"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_2162",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2162"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_alt_07_alert_history_log",
+      "label": "US-ALT-07: Alert History Log",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2192"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_2202",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2202"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_7_epic_6_report_generation_pdf_csv",
+      "label": "7. Epic 6 \u2014 Report Generation (PDF/CSV)",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2232"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_rpt_01_portfolio_snapshot_export_csv",
+      "label": "US-RPT-01: Portfolio Snapshot Export (CSV)",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2245"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_2255",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2255"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_rpt_02_realised_gains_report_stcg_ltcg_classification",
+      "label": "US-RPT-02: Realised Gains Report (STCG/LTCG Classification)",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2299"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_2309",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2309"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_rpt_03_fd_interest_accrual_report",
+      "label": "US-RPT-03: FD Interest Accrual Report",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2353"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_2363",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2363"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_rpt_04_transaction_history_export",
+      "label": "US-RPT-04: Transaction History Export",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2394"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_2404",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2404"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_us_rpt_05_pdf_report_generation_with_branding",
+      "label": "US-RPT-05: PDF Report Generation with Branding",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2439"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_acceptance_criteria_2449",
+      "label": "Acceptance Criteria",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2449"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_8_cross_epic_edge_cases_matrix",
+      "label": "8. Cross-Epic Edge Cases Matrix",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2487"
+    },
+    {
+      "id": "$graphify-root$_docs_product_prd_9_story_dependency_graph",
+      "label": "9. Story Dependency Graph",
+      "file_type": "document",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2528"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_docs_product_prd_md",
+      "target": "$graphify-root$_docs_product_prd_product_requirements_document_prd",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_product_requirements_document_prd",
+      "target": "$graphify-root$_docs_product_prd_investor_portfolio_monitoring_risk_management_system",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_product_requirements_document_prd",
+      "target": "$graphify-root$_docs_product_prd_table_of_contents",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_product_requirements_document_prd",
+      "target": "$graphify-root$_docs_product_prd_1_document_conventions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_1_document_conventions",
+      "target": "$graphify-root$_docs_product_prd_1_1_user_story_format",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_1_document_conventions",
+      "target": "$graphify-root$_docs_product_prd_1_2_epic_codes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_1_document_conventions",
+      "target": "$graphify-root$_docs_product_prd_1_3_personas_quick_reference",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_product_requirements_document_prd",
+      "target": "$graphify-root$_docs_product_prd_2_epic_1_auth_user_preference_management",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_2_epic_1_auth_user_preference_management",
+      "target": "$graphify-root$_docs_product_prd_us_auth_01_user_registration_with_email_verification",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L97",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_auth_01_user_registration_with_email_verification",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_2_epic_1_auth_user_preference_management",
+      "target": "$graphify-root$_docs_product_prd_us_auth_02_user_login_with_jwt_session_management",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L184",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_auth_02_user_login_with_jwt_session_management",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_194",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L194",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_2_epic_1_auth_user_preference_management",
+      "target": "$graphify-root$_docs_product_prd_us_auth_03_multi_factor_authentication_totp",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L242",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_auth_03_multi_factor_authentication_totp",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_252",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L252",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_2_epic_1_auth_user_preference_management",
+      "target": "$graphify-root$_docs_product_prd_us_auth_04_password_reset_flow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L313",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_auth_04_password_reset_flow",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_323",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L323",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_2_epic_1_auth_user_preference_management",
+      "target": "$graphify-root$_docs_product_prd_us_auth_05_investor_profile_risk_tolerance_setup",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L368",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_auth_05_investor_profile_risk_tolerance_setup",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_378",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L378",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_2_epic_1_auth_user_preference_management",
+      "target": "$graphify-root$_docs_product_prd_us_auth_06_home_currency_locale_preferences",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L419",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_auth_06_home_currency_locale_preferences",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_429",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L429",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_2_epic_1_auth_user_preference_management",
+      "target": "$graphify-root$_docs_product_prd_us_auth_07_session_expiry_token_refresh",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L468",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_auth_07_session_expiry_token_refresh",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_478",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L478",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_2_epic_1_auth_user_preference_management",
+      "target": "$graphify-root$_docs_product_prd_us_auth_08_account_deletion_pii_erasure",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L517",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_auth_08_account_deletion_pii_erasure",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_527",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L527",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_product_requirements_document_prd",
+      "target": "$graphify-root$_docs_product_prd_3_epic_2_multi_provider_data_ingestion_transaction_recording",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L570",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_3_epic_2_multi_provider_data_ingestion_transaction_recording",
+      "target": "$graphify-root$_docs_product_prd_us_ing_01_oauth_brokerage_connection_zerodha",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L587",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_ing_01_oauth_brokerage_connection_zerodha",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_597",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L597",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_3_epic_2_multi_provider_data_ingestion_transaction_recording",
+      "target": "$graphify-root$_docs_product_prd_us_ing_02_api_key_crypto_exchange_connection_binance",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L666",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_ing_02_api_key_crypto_exchange_connection_binance",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_676",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L676",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_3_epic_2_multi_provider_data_ingestion_transaction_recording",
+      "target": "$graphify-root$_docs_product_prd_us_ing_03_manual_asset_entry_fixed_deposit",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L733",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_ing_03_manual_asset_entry_fixed_deposit",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_743",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L743",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_3_epic_2_multi_provider_data_ingestion_transaction_recording",
+      "target": "$graphify-root$_docs_product_prd_us_ing_04_manual_asset_entry_real_estate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L799",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_ing_04_manual_asset_entry_real_estate",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_809",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L809",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_3_epic_2_multi_provider_data_ingestion_transaction_recording",
+      "target": "$graphify-root$_docs_product_prd_us_ing_05_manual_transaction_recording_buy_sell_dividend",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L853",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_ing_05_manual_transaction_recording_buy_sell_dividend",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_863",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L863",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_3_epic_2_multi_provider_data_ingestion_transaction_recording",
+      "target": "$graphify-root$_docs_product_prd_us_ing_06_bulk_csv_import",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L949",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_ing_06_bulk_csv_import",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_959",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L959",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_3_epic_2_multi_provider_data_ingestion_transaction_recording",
+      "target": "$graphify-root$_docs_product_prd_us_ing_07_background_provider_sync_lifecycle",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1015",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_ing_07_background_provider_sync_lifecycle",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_1025",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1025",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_3_epic_2_multi_provider_data_ingestion_transaction_recording",
+      "target": "$graphify-root$_docs_product_prd_us_ing_08_stale_data_detection_staleness_indicator",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1069",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_ing_08_stale_data_detection_staleness_indicator",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_1079",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1079",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_product_requirements_document_prd",
+      "target": "$graphify-root$_docs_product_prd_4_epic_3_deterministic_valuation_holding_engine",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1114",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_4_epic_3_deterministic_valuation_holding_engine",
+      "target": "$graphify-root$_docs_product_prd_us_val_01_aggregate_portfolio_net_worth_calculation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1129",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_val_01_aggregate_portfolio_net_worth_calculation",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_1139",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1139",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_4_epic_3_deterministic_valuation_holding_engine",
+      "target": "$graphify-root$_docs_product_prd_us_val_02_equity_holding_valuation_with_stock_split_adjustment",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1187",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_val_02_equity_holding_valuation_with_stock_split_adjustment",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_1197",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1197",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_4_epic_3_deterministic_valuation_holding_engine",
+      "target": "$graphify-root$_docs_product_prd_us_val_03_mutual_fund_nav_based_valuation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1241",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_val_03_mutual_fund_nav_based_valuation",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_1251",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1251",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_4_epic_3_deterministic_valuation_holding_engine",
+      "target": "$graphify-root$_docs_product_prd_us_val_04_bond_valuation_accrued_interest_mark_to_market",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1289",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_val_04_bond_valuation_accrued_interest_mark_to_market",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_1299",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1299",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_4_epic_3_deterministic_valuation_holding_engine",
+      "target": "$graphify-root$_docs_product_prd_us_val_05_zero_balance_holding_handling",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1334",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_val_05_zero_balance_holding_handling",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_1344",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1344",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_4_epic_3_deterministic_valuation_holding_engine",
+      "target": "$graphify-root$_docs_product_prd_us_val_06_multi_currency_portfolio_aggregation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1370",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_val_06_multi_currency_portfolio_aggregation",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_1380",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1380",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_4_epic_3_deterministic_valuation_holding_engine",
+      "target": "$graphify-root$_docs_product_prd_us_val_07_asset_allocation_weight_calculation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1423",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_val_07_asset_allocation_weight_calculation",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_1433",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1433",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_product_requirements_document_prd",
+      "target": "$graphify-root$_docs_product_prd_5_epic_4_performance_risk_analytics_dashboard",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1466",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_5_epic_4_performance_risk_analytics_dashboard",
+      "target": "$graphify-root$_docs_product_prd_us_risk_01_xirr_computation_across_portfolio",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1482",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_risk_01_xirr_computation_across_portfolio",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_1492",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1492",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_5_epic_4_performance_risk_analytics_dashboard",
+      "target": "$graphify-root$_docs_product_prd_us_risk_02_value_at_risk_var_calculation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1543",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_risk_02_value_at_risk_var_calculation",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_1553",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1553",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_5_epic_4_performance_risk_analytics_dashboard",
+      "target": "$graphify-root$_docs_product_prd_us_risk_03_portfolio_risk_score_display",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1603",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_risk_03_portfolio_risk_score_display",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_1613",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1613",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_5_epic_4_performance_risk_analytics_dashboard",
+      "target": "$graphify-root$_docs_product_prd_us_risk_04_maximum_drawdown_computation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1645",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_risk_04_maximum_drawdown_computation",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_1655",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1655",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_5_epic_4_performance_risk_analytics_dashboard",
+      "target": "$graphify-root$_docs_product_prd_us_risk_05_sharpe_sortino_ratio_display",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1686",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_risk_05_sharpe_sortino_ratio_display",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_1696",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1696",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_5_epic_4_performance_risk_analytics_dashboard",
+      "target": "$graphify-root$_docs_product_prd_us_risk_06_concentration_risk_heatmap",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1739",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_risk_06_concentration_risk_heatmap",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_1749",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1749",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_5_epic_4_performance_risk_analytics_dashboard",
+      "target": "$graphify-root$_docs_product_prd_us_risk_07_portfolio_beta_calculation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1781",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_risk_07_portfolio_beta_calculation",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_1791",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1791",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_5_epic_4_performance_risk_analytics_dashboard",
+      "target": "$graphify-root$_docs_product_prd_us_risk_08_what_if_scenario_analysis",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1819",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_risk_08_what_if_scenario_analysis",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_1829",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1829",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_product_requirements_document_prd",
+      "target": "$graphify-root$_docs_product_prd_6_epic_5_automated_alert_engine",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1864",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_6_epic_5_automated_alert_engine",
+      "target": "$graphify-root$_docs_product_prd_us_alt_01_create_configure_price_alert",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1879",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_alt_01_create_configure_price_alert",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_1889",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1889",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_6_epic_5_automated_alert_engine",
+      "target": "$graphify-root$_docs_product_prd_us_alt_02_portfolio_drawdown_alert",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1949",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_alt_02_portfolio_drawdown_alert",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_1959",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L1959",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_6_epic_5_automated_alert_engine",
+      "target": "$graphify-root$_docs_product_prd_us_alt_03_fixed_deposit_maturity_reminder",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2002",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_alt_03_fixed_deposit_maturity_reminder",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_2012",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2012",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_6_epic_5_automated_alert_engine",
+      "target": "$graphify-root$_docs_product_prd_us_alt_04_asset_allocation_drift_alert",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2048",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_alt_04_asset_allocation_drift_alert",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_2058",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2058",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_6_epic_5_automated_alert_engine",
+      "target": "$graphify-root$_docs_product_prd_us_alt_05_alert_deduplication_cooldown",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2101",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_alt_05_alert_deduplication_cooldown",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_2111",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2111",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_6_epic_5_automated_alert_engine",
+      "target": "$graphify-root$_docs_product_prd_us_alt_06_alert_delivery_failure_handling",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2152",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_alt_06_alert_delivery_failure_handling",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_2162",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2162",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_6_epic_5_automated_alert_engine",
+      "target": "$graphify-root$_docs_product_prd_us_alt_07_alert_history_log",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2192",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_alt_07_alert_history_log",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_2202",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2202",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_product_requirements_document_prd",
+      "target": "$graphify-root$_docs_product_prd_7_epic_6_report_generation_pdf_csv",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2232",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_7_epic_6_report_generation_pdf_csv",
+      "target": "$graphify-root$_docs_product_prd_us_rpt_01_portfolio_snapshot_export_csv",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2245",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_rpt_01_portfolio_snapshot_export_csv",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_2255",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2255",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_7_epic_6_report_generation_pdf_csv",
+      "target": "$graphify-root$_docs_product_prd_us_rpt_02_realised_gains_report_stcg_ltcg_classification",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2299",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_rpt_02_realised_gains_report_stcg_ltcg_classification",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_2309",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2309",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_7_epic_6_report_generation_pdf_csv",
+      "target": "$graphify-root$_docs_product_prd_us_rpt_03_fd_interest_accrual_report",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2353",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_rpt_03_fd_interest_accrual_report",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_2363",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2363",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_7_epic_6_report_generation_pdf_csv",
+      "target": "$graphify-root$_docs_product_prd_us_rpt_04_transaction_history_export",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2394",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_rpt_04_transaction_history_export",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_2404",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2404",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_7_epic_6_report_generation_pdf_csv",
+      "target": "$graphify-root$_docs_product_prd_us_rpt_05_pdf_report_generation_with_branding",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2439",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_us_rpt_05_pdf_report_generation_with_branding",
+      "target": "$graphify-root$_docs_product_prd_acceptance_criteria_2449",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2449",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_product_requirements_document_prd",
+      "target": "$graphify-root$_docs_product_prd_8_cross_epic_edge_cases_matrix",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2487",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_prd_product_requirements_document_prd",
+      "target": "$graphify-root$_docs_product_prd_9_story_dependency_graph",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRD.md",
+      "source_location": "L2528",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

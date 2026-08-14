@@ -1,0 +1,719 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_md",
+      "label": "ARCHITECTURE.md",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_system_architecture_document",
+      "label": "System Architecture Document",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_investor_portfolio_monitoring_risk_management_system",
+      "label": "Investor Portfolio Monitoring & Risk Management System",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_table_of_contents",
+      "label": "Table of Contents",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L19"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_1_system_overview_architectural_philosophy",
+      "label": "1. System Overview & Architectural Philosophy",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L50"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_1_1_guiding_principles",
+      "label": "1.1 Guiding Principles",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L52"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_1_2_architectural_pattern_modular_monolith_quant_microservice",
+      "label": "1.2 Architectural Pattern: Modular Monolith + Quant Microservice",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L64"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_2_technology_stack_decisions",
+      "label": "2. Technology Stack Decisions",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L102"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_3_c4_architecture_diagrams",
+      "label": "3. C4 Architecture Diagrams",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L129"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_3_1_level_1_system_context_diagram",
+      "label": "3.1 Level 1 \u2014 System Context Diagram",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L131"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_3_2_level_2_container_diagram",
+      "label": "3.2 Level 2 \u2014 Container Diagram",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L180"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_3_3_level_3_component_diagram_nestjs_api_modular_monolith",
+      "label": "3.3 Level 3 \u2014 Component Diagram (NestJS API Modular Monolith)",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L231"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_3_4_level_3_component_diagram_python_quant_engine",
+      "label": "3.4 Level 3 \u2014 Component Diagram (Python Quant Engine)",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L290"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_4_bounded_context_map",
+      "label": "4. Bounded Context Map",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L335"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_4_1_context_relationship_patterns",
+      "label": "4.1 Context Relationship Patterns",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L394"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_4_2_anti_corruption_layers",
+      "label": "4.2 Anti-Corruption Layers",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L406"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_5_data_flow_pipeline_architecture",
+      "label": "5. Data Flow Pipeline Architecture",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L417"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_5_1_end_to_end_pipeline_overview",
+      "label": "5.1 End-to-End Pipeline Overview",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L419"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_5_2_stage_1_raw_data_ingestion",
+      "label": "5.2 Stage 1 \u2014 Raw Data Ingestion",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L504"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_5_3_stage_2_normalisation",
+      "label": "5.3 Stage 2 \u2014 Normalisation",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L547"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_5_4_stage_3_persistence",
+      "label": "5.4 Stage 3 \u2014 Persistence",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L588"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_5_5_stage_4_calculation",
+      "label": "5.5 Stage 4 \u2014 Calculation",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L694"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_5_6_stage_5_analytics",
+      "label": "5.6 Stage 5 \u2014 Analytics",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L737"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_5_7_stage_6_insights_alerting",
+      "label": "5.7 Stage 6 \u2014 Insights & Alerting",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L750"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_6_synchronous_vs_asynchronous_workflow_design",
+      "label": "6. Synchronous vs. Asynchronous Workflow Design",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L797"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_6_1_synchronous_rest_openapi_flows",
+      "label": "6.1 Synchronous REST/OpenAPI Flows",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L799"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_6_2_asynchronous_bullmq_queue_flows",
+      "label": "6.2 Asynchronous BullMQ Queue Flows",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L821"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_6_3_queue_topology",
+      "label": "6.3 Queue Topology",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L880"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_7_security_isolation_boundaries",
+      "label": "7. Security & Isolation Boundaries",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L896"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_7_1_network_boundary_architecture",
+      "label": "7.1 Network Boundary Architecture",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L898"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_7_2_authentication_authorisation_architecture",
+      "label": "7.2 Authentication & Authorisation Architecture",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L945"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_7_3_encryption_strategy",
+      "label": "7.3 Encryption Strategy",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L973"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_7_4_owasp_top_10_controls",
+      "label": "7.4 OWASP Top 10 Controls",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L986"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_8_infrastructure_deployment_topology",
+      "label": "8. Infrastructure & Deployment Topology",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1003"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_8_1_monorepo_structure",
+      "label": "8.1 Monorepo Structure",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1005"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_8_2_kubernetes_deployment_architecture_production",
+      "label": "8.2 Kubernetes Deployment Architecture (Production)",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1061"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_9_inter_service_communication_contracts",
+      "label": "9. Inter-Service Communication Contracts",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1114"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_9_1_nestjs_to_python_quant_engine_internal_rest",
+      "label": "9.1 NestJS to Python Quant Engine (Internal REST)",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1116"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_9_2_redis_pubsub_price_event_schema",
+      "label": "9.2 Redis PubSub \u2014 Price Event Schema",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1168"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_9_3_bullmq_job_schemas",
+      "label": "9.3 BullMQ Job Schemas",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1189"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_10_observability_architecture",
+      "label": "10. Observability Architecture",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1229"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_11_architecture_decision_records_adr_summary",
+      "label": "11. Architecture Decision Records (ADR) Summary",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1288"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_12_open_questions_resolved",
+      "label": "12. Open Questions Resolved",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1307"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_appendix_a_full_portfolio_sync_sequence_end_to_end",
+      "label": "Appendix A \u2014 Full Portfolio Sync Sequence (End-to-End)",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1321"
+    },
+    {
+      "id": "$graphify-root$_docs_architecture_architecture_appendix_b_quant_engine_openapi_contract_excerpt",
+      "label": "Appendix B \u2014 Quant Engine OpenAPI Contract (Excerpt)",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1395"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_md",
+      "target": "$graphify-root$_docs_architecture_architecture_system_architecture_document",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_system_architecture_document",
+      "target": "$graphify-root$_docs_architecture_architecture_investor_portfolio_monitoring_risk_management_system",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_system_architecture_document",
+      "target": "$graphify-root$_docs_architecture_architecture_table_of_contents",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_system_architecture_document",
+      "target": "$graphify-root$_docs_architecture_architecture_1_system_overview_architectural_philosophy",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_1_system_overview_architectural_philosophy",
+      "target": "$graphify-root$_docs_architecture_architecture_1_1_guiding_principles",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_1_system_overview_architectural_philosophy",
+      "target": "$graphify-root$_docs_architecture_architecture_1_2_architectural_pattern_modular_monolith_quant_microservice",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_system_architecture_document",
+      "target": "$graphify-root$_docs_architecture_architecture_2_technology_stack_decisions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_system_architecture_document",
+      "target": "$graphify-root$_docs_architecture_architecture_3_c4_architecture_diagrams",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L129",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_3_c4_architecture_diagrams",
+      "target": "$graphify-root$_docs_architecture_architecture_3_1_level_1_system_context_diagram",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_3_c4_architecture_diagrams",
+      "target": "$graphify-root$_docs_architecture_architecture_3_2_level_2_container_diagram",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L180",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_3_c4_architecture_diagrams",
+      "target": "$graphify-root$_docs_architecture_architecture_3_3_level_3_component_diagram_nestjs_api_modular_monolith",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L231",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_3_c4_architecture_diagrams",
+      "target": "$graphify-root$_docs_architecture_architecture_3_4_level_3_component_diagram_python_quant_engine",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L290",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_system_architecture_document",
+      "target": "$graphify-root$_docs_architecture_architecture_4_bounded_context_map",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L335",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_4_bounded_context_map",
+      "target": "$graphify-root$_docs_architecture_architecture_4_1_context_relationship_patterns",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L394",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_4_bounded_context_map",
+      "target": "$graphify-root$_docs_architecture_architecture_4_2_anti_corruption_layers",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L406",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_system_architecture_document",
+      "target": "$graphify-root$_docs_architecture_architecture_5_data_flow_pipeline_architecture",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L417",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_5_data_flow_pipeline_architecture",
+      "target": "$graphify-root$_docs_architecture_architecture_5_1_end_to_end_pipeline_overview",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L419",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_5_data_flow_pipeline_architecture",
+      "target": "$graphify-root$_docs_architecture_architecture_5_2_stage_1_raw_data_ingestion",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L504",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_5_data_flow_pipeline_architecture",
+      "target": "$graphify-root$_docs_architecture_architecture_5_3_stage_2_normalisation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L547",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_5_data_flow_pipeline_architecture",
+      "target": "$graphify-root$_docs_architecture_architecture_5_4_stage_3_persistence",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L588",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_5_data_flow_pipeline_architecture",
+      "target": "$graphify-root$_docs_architecture_architecture_5_5_stage_4_calculation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L694",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_5_data_flow_pipeline_architecture",
+      "target": "$graphify-root$_docs_architecture_architecture_5_6_stage_5_analytics",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L737",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_5_data_flow_pipeline_architecture",
+      "target": "$graphify-root$_docs_architecture_architecture_5_7_stage_6_insights_alerting",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L750",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_system_architecture_document",
+      "target": "$graphify-root$_docs_architecture_architecture_6_synchronous_vs_asynchronous_workflow_design",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L797",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_6_synchronous_vs_asynchronous_workflow_design",
+      "target": "$graphify-root$_docs_architecture_architecture_6_1_synchronous_rest_openapi_flows",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L799",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_6_synchronous_vs_asynchronous_workflow_design",
+      "target": "$graphify-root$_docs_architecture_architecture_6_2_asynchronous_bullmq_queue_flows",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L821",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_6_synchronous_vs_asynchronous_workflow_design",
+      "target": "$graphify-root$_docs_architecture_architecture_6_3_queue_topology",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L880",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_system_architecture_document",
+      "target": "$graphify-root$_docs_architecture_architecture_7_security_isolation_boundaries",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L896",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_7_security_isolation_boundaries",
+      "target": "$graphify-root$_docs_architecture_architecture_7_1_network_boundary_architecture",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L898",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_7_security_isolation_boundaries",
+      "target": "$graphify-root$_docs_architecture_architecture_7_2_authentication_authorisation_architecture",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L945",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_7_security_isolation_boundaries",
+      "target": "$graphify-root$_docs_architecture_architecture_7_3_encryption_strategy",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L973",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_7_security_isolation_boundaries",
+      "target": "$graphify-root$_docs_architecture_architecture_7_4_owasp_top_10_controls",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L986",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_system_architecture_document",
+      "target": "$graphify-root$_docs_architecture_architecture_8_infrastructure_deployment_topology",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1003",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_8_infrastructure_deployment_topology",
+      "target": "$graphify-root$_docs_architecture_architecture_8_1_monorepo_structure",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1005",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_8_infrastructure_deployment_topology",
+      "target": "$graphify-root$_docs_architecture_architecture_8_2_kubernetes_deployment_architecture_production",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1061",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_system_architecture_document",
+      "target": "$graphify-root$_docs_architecture_architecture_9_inter_service_communication_contracts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1114",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_9_inter_service_communication_contracts",
+      "target": "$graphify-root$_docs_architecture_architecture_9_1_nestjs_to_python_quant_engine_internal_rest",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1116",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_9_inter_service_communication_contracts",
+      "target": "$graphify-root$_docs_architecture_architecture_9_2_redis_pubsub_price_event_schema",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1168",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_9_inter_service_communication_contracts",
+      "target": "$graphify-root$_docs_architecture_architecture_9_3_bullmq_job_schemas",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1189",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_system_architecture_document",
+      "target": "$graphify-root$_docs_architecture_architecture_10_observability_architecture",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1229",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_system_architecture_document",
+      "target": "$graphify-root$_docs_architecture_architecture_11_architecture_decision_records_adr_summary",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1288",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_system_architecture_document",
+      "target": "$graphify-root$_docs_architecture_architecture_12_open_questions_resolved",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1307",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_system_architecture_document",
+      "target": "$graphify-root$_docs_architecture_architecture_appendix_a_full_portfolio_sync_sequence_end_to_end",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1321",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_architecture_architecture_system_architecture_document",
+      "target": "$graphify-root$_docs_architecture_architecture_appendix_b_quant_engine_openapi_contract_excerpt",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1395",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

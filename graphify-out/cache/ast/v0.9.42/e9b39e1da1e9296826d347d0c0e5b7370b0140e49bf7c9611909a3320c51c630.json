@@ -1,0 +1,1295 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_md",
+      "label": "PRODUCT_DISCOVERY.md",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_product_discovery_document",
+      "label": "Product Discovery Document",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_investor_portfolio_monitoring_risk_management_system",
+      "label": "Investor Portfolio Monitoring & Risk Management System",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_table_of_contents",
+      "label": "Table of Contents",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L18"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_1_problem_statement_solution_vision",
+      "label": "1. Problem Statement & Solution Vision",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L35"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_1_1_the_problem",
+      "label": "1.1 The Problem",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L37"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_1_2_target_problem_scope",
+      "label": "1.2 Target Problem Scope",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L49"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_1_3_solution_vision",
+      "label": "1.3 Solution Vision",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L58"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_1_4_core_value_propositions",
+      "label": "1.4 Core Value Propositions",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L62"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_2_market_context_opportunity",
+      "label": "2. Market Context & Opportunity",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L72"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_2_1_market_size",
+      "label": "2.1 Market Size",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L74"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_2_2_competitive_landscape",
+      "label": "2.2 Competitive Landscape",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L82"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_2_3_differentiation",
+      "label": "2.3 Differentiation",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L92"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_3_user_personas",
+      "label": "3. User Personas",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L102"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_persona_1_alex_the_high_net_worth_wealth_accumulator",
+      "label": "Persona 1 \u2014 Alex: The High-Net-Worth Wealth Accumulator",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L104"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_persona_2_maya_the_active_crypto_equities_trader",
+      "label": "Persona 2 \u2014 Maya: The Active Crypto & Equities Trader",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L137"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_persona_3_raj_the_conservative_fixed_income_real_estate_investor",
+      "label": "Persona 3 \u2014 Raj: The Conservative Fixed-Income & Real Estate Investor",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L170"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_persona_4_priya_the_mutual_fund_sip_accumulator",
+      "label": "Persona 4 \u2014 Priya: The Mutual Fund SIP Accumulator",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L202"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_4_user_journey_map",
+      "label": "4. User Journey Map",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L229"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_4_1_journey_overview",
+      "label": "4.1 Journey Overview",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L231"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_stage_1_onboarding",
+      "label": "Stage 1: Onboarding",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L249"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_stage_2_provider_connection",
+      "label": "Stage 2: Provider Connection",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L266"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_stage_3_portfolio_view",
+      "label": "Stage 3: Portfolio View",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L284"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_stage_4_risk_assessment",
+      "label": "Stage 4: Risk Assessment",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L299"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_stage_5_alert_configuration",
+      "label": "Stage 5: Alert Configuration",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L314"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_stage_6_ongoing_monitoring",
+      "label": "Stage 6: Ongoing Monitoring",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L329"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_5_functional_requirements",
+      "label": "5. Functional Requirements",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L342"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_fr_1_user_authentication_account_management_mvp",
+      "label": "FR-1: User Authentication & Account Management `[MVP]`",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L348"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_fr_2_asset_provider_integration_mvp",
+      "label": "FR-2: Asset Provider Integration `[MVP]`",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L362"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_fr_3_manual_asset_entry_mvp",
+      "label": "FR-3: Manual Asset Entry `[MVP]`",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L377"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_fr_4_unified_portfolio_dashboard_mvp",
+      "label": "FR-4: Unified Portfolio Dashboard `[MVP]`",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L401"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_fr_5_multi_asset_price_feed_mvp",
+      "label": "FR-5: Multi-Asset Price Feed `[MVP]`",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L417"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_fr_6_performance_analytics_mvp",
+      "label": "FR-6: Performance Analytics `[MVP]`",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L440"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_fr_7_risk_analytics_engine_mvp",
+      "label": "FR-7: Risk Analytics Engine `[MVP]`",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L463"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_fr_8_alert_notification_engine_mvp",
+      "label": "FR-8: Alert & Notification Engine `[MVP]`",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L490"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_fr_9_data_export_reporting_mvp",
+      "label": "FR-9: Data Export & Reporting `[MVP]`",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L515"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_fr_10_multi_currency_support_mvp",
+      "label": "FR-10: Multi-Currency Support `[MVP]`",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L537"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_fr_11_rebalancing_advisor_v1_0",
+      "label": "FR-11: Rebalancing Advisor `[V1.0]`",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L550"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_fr_12_tax_optimisation_insights_v1_0",
+      "label": "FR-12: Tax Optimisation Insights `[V1.0]`",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L563"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_fr_13_goal_based_investment_tracking_v1_0",
+      "label": "FR-13: Goal-Based Investment Tracking `[V1.0]`",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L575"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_fr_14_ai_powered_portfolio_insights_v2_0",
+      "label": "FR-14: AI-Powered Portfolio Insights `[V2.0]`",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L587"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_fr_15_collaborative_portfolio_sharing_v2_0",
+      "label": "FR-15: Collaborative Portfolio Sharing `[V2.0]`",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L600"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_6_non_functional_requirements",
+      "label": "6. Non-Functional Requirements",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L612"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_nfr_1_performance_latency",
+      "label": "NFR-1: Performance & Latency",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L614"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_nfr_2_scalability",
+      "label": "NFR-2: Scalability",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L628"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_nfr_3_availability_reliability",
+      "label": "NFR-3: Availability & Reliability",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L643"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_nfr_4_security",
+      "label": "NFR-4: Security",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L656"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_nfr_5_data_privacy_compliance",
+      "label": "NFR-5: Data Privacy & Compliance",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L673"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_nfr_6_observability_monitoring",
+      "label": "NFR-6: Observability & Monitoring",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L686"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_nfr_7_maintainability_code_quality",
+      "label": "NFR-7: Maintainability & Code Quality",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L701"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_nfr_8_accessibility",
+      "label": "NFR-8: Accessibility",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L715"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_nfr_9_internationalisation_i18n",
+      "label": "NFR-9: Internationalisation (i18n)",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L727"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_nfr_10_mobile_responsiveness",
+      "label": "NFR-10: Mobile Responsiveness",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L739"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_7_feature_scope_matrix_mvp_vs_v1_0_vs_v2_0",
+      "label": "7. Feature Scope Matrix \u2014 MVP vs V1.0 vs V2.0",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L751"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_7_1_authentication_user_management",
+      "label": "7.1 Authentication & User Management",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L755"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_7_2_asset_integration",
+      "label": "7.2 Asset Integration",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L769"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_7_3_portfolio_dashboard",
+      "label": "7.3 Portfolio Dashboard",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L791"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_7_4_asset_class_coverage",
+      "label": "7.4 Asset Class Coverage",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L810"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_7_5_performance_analytics",
+      "label": "7.5 Performance Analytics",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L832"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_7_6_risk_analytics",
+      "label": "7.6 Risk Analytics",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L849"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_7_7_alerts_notifications",
+      "label": "7.7 Alerts & Notifications",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L871"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_7_8_tax_compliance",
+      "label": "7.8 Tax & Compliance",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L892"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_7_9_goals_planning",
+      "label": "7.9 Goals & Planning",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L908"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_7_10_ai_intelligence",
+      "label": "7.10 AI & Intelligence",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L921"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_7_11_platform_infrastructure",
+      "label": "7.11 Platform & Infrastructure",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L935"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_8_data_model_overview",
+      "label": "8. Data Model Overview",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L949"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_core_entities",
+      "label": "Core Entities",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L953"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_9_integration_landscape",
+      "label": "9. Integration Landscape",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L991"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_9_1_brokerage_integrations_mvp",
+      "label": "9.1 Brokerage Integrations (MVP)",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L993"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_9_2_crypto_exchange_integrations_mvp",
+      "label": "9.2 Crypto Exchange Integrations (MVP)",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1003"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_9_3_market_data_sources",
+      "label": "9.3 Market Data Sources",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1010"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_10_risk_assumptions_log",
+      "label": "10. Risk & Assumptions Log",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1023"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_10_1_technical_risks",
+      "label": "10.1 Technical Risks",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1025"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_10_2_business_risks",
+      "label": "10.2 Business Risks",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1035"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_10_3_key_assumptions",
+      "label": "10.3 Key Assumptions",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1044"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_11_success_metrics_kpis",
+      "label": "11. Success Metrics & KPIs",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1056"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_11_1_product_metrics",
+      "label": "11.1 Product Metrics",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1058"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_11_2_technical_metrics",
+      "label": "11.2 Technical Metrics",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1071"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_11_3_business_metrics",
+      "label": "11.3 Business Metrics",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1082"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_11_4_risk_safety_metrics",
+      "label": "11.4 Risk & Safety Metrics",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1093"
+    },
+    {
+      "id": "$graphify-root$_docs_product_product_discovery_12_glossary",
+      "label": "12. Glossary",
+      "file_type": "document",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1104"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_md",
+      "target": "$graphify-root$_docs_product_product_discovery_product_discovery_document",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_product_discovery_document",
+      "target": "$graphify-root$_docs_product_product_discovery_investor_portfolio_monitoring_risk_management_system",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_product_discovery_document",
+      "target": "$graphify-root$_docs_product_product_discovery_table_of_contents",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_product_discovery_document",
+      "target": "$graphify-root$_docs_product_product_discovery_1_problem_statement_solution_vision",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_1_problem_statement_solution_vision",
+      "target": "$graphify-root$_docs_product_product_discovery_1_1_the_problem",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_1_problem_statement_solution_vision",
+      "target": "$graphify-root$_docs_product_product_discovery_1_2_target_problem_scope",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_1_problem_statement_solution_vision",
+      "target": "$graphify-root$_docs_product_product_discovery_1_3_solution_vision",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_1_problem_statement_solution_vision",
+      "target": "$graphify-root$_docs_product_product_discovery_1_4_core_value_propositions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_product_discovery_document",
+      "target": "$graphify-root$_docs_product_product_discovery_2_market_context_opportunity",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_2_market_context_opportunity",
+      "target": "$graphify-root$_docs_product_product_discovery_2_1_market_size",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_2_market_context_opportunity",
+      "target": "$graphify-root$_docs_product_product_discovery_2_2_competitive_landscape",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_2_market_context_opportunity",
+      "target": "$graphify-root$_docs_product_product_discovery_2_3_differentiation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L92",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_product_discovery_document",
+      "target": "$graphify-root$_docs_product_product_discovery_3_user_personas",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_3_user_personas",
+      "target": "$graphify-root$_docs_product_product_discovery_persona_1_alex_the_high_net_worth_wealth_accumulator",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_3_user_personas",
+      "target": "$graphify-root$_docs_product_product_discovery_persona_2_maya_the_active_crypto_equities_trader",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L137",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_3_user_personas",
+      "target": "$graphify-root$_docs_product_product_discovery_persona_3_raj_the_conservative_fixed_income_real_estate_investor",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L170",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_3_user_personas",
+      "target": "$graphify-root$_docs_product_product_discovery_persona_4_priya_the_mutual_fund_sip_accumulator",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L202",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_product_discovery_document",
+      "target": "$graphify-root$_docs_product_product_discovery_4_user_journey_map",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L229",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_4_user_journey_map",
+      "target": "$graphify-root$_docs_product_product_discovery_4_1_journey_overview",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L231",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_4_user_journey_map",
+      "target": "$graphify-root$_docs_product_product_discovery_stage_1_onboarding",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L249",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_4_user_journey_map",
+      "target": "$graphify-root$_docs_product_product_discovery_stage_2_provider_connection",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L266",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_4_user_journey_map",
+      "target": "$graphify-root$_docs_product_product_discovery_stage_3_portfolio_view",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L284",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_4_user_journey_map",
+      "target": "$graphify-root$_docs_product_product_discovery_stage_4_risk_assessment",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L299",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_4_user_journey_map",
+      "target": "$graphify-root$_docs_product_product_discovery_stage_5_alert_configuration",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L314",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_4_user_journey_map",
+      "target": "$graphify-root$_docs_product_product_discovery_stage_6_ongoing_monitoring",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L329",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_product_discovery_document",
+      "target": "$graphify-root$_docs_product_product_discovery_5_functional_requirements",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L342",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_5_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_fr_1_user_authentication_account_management_mvp",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L348",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_5_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_fr_2_asset_provider_integration_mvp",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L362",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_5_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_fr_3_manual_asset_entry_mvp",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L377",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_5_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_fr_4_unified_portfolio_dashboard_mvp",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L401",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_5_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_fr_5_multi_asset_price_feed_mvp",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L417",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_5_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_fr_6_performance_analytics_mvp",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L440",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_5_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_fr_7_risk_analytics_engine_mvp",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L463",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_5_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_fr_8_alert_notification_engine_mvp",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L490",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_5_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_fr_9_data_export_reporting_mvp",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L515",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_5_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_fr_10_multi_currency_support_mvp",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L537",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_5_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_fr_11_rebalancing_advisor_v1_0",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L550",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_5_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_fr_12_tax_optimisation_insights_v1_0",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L563",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_5_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_fr_13_goal_based_investment_tracking_v1_0",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L575",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_5_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_fr_14_ai_powered_portfolio_insights_v2_0",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L587",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_5_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_fr_15_collaborative_portfolio_sharing_v2_0",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L600",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_product_discovery_document",
+      "target": "$graphify-root$_docs_product_product_discovery_6_non_functional_requirements",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L612",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_6_non_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_nfr_1_performance_latency",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L614",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_6_non_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_nfr_2_scalability",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L628",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_6_non_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_nfr_3_availability_reliability",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L643",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_6_non_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_nfr_4_security",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L656",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_6_non_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_nfr_5_data_privacy_compliance",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L673",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_6_non_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_nfr_6_observability_monitoring",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L686",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_6_non_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_nfr_7_maintainability_code_quality",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L701",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_6_non_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_nfr_8_accessibility",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L715",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_6_non_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_nfr_9_internationalisation_i18n",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L727",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_6_non_functional_requirements",
+      "target": "$graphify-root$_docs_product_product_discovery_nfr_10_mobile_responsiveness",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L739",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_product_discovery_document",
+      "target": "$graphify-root$_docs_product_product_discovery_7_feature_scope_matrix_mvp_vs_v1_0_vs_v2_0",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L751",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_7_feature_scope_matrix_mvp_vs_v1_0_vs_v2_0",
+      "target": "$graphify-root$_docs_product_product_discovery_7_1_authentication_user_management",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L755",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_7_feature_scope_matrix_mvp_vs_v1_0_vs_v2_0",
+      "target": "$graphify-root$_docs_product_product_discovery_7_2_asset_integration",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L769",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_7_feature_scope_matrix_mvp_vs_v1_0_vs_v2_0",
+      "target": "$graphify-root$_docs_product_product_discovery_7_3_portfolio_dashboard",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L791",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_7_feature_scope_matrix_mvp_vs_v1_0_vs_v2_0",
+      "target": "$graphify-root$_docs_product_product_discovery_7_4_asset_class_coverage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L810",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_7_feature_scope_matrix_mvp_vs_v1_0_vs_v2_0",
+      "target": "$graphify-root$_docs_product_product_discovery_7_5_performance_analytics",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L832",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_7_feature_scope_matrix_mvp_vs_v1_0_vs_v2_0",
+      "target": "$graphify-root$_docs_product_product_discovery_7_6_risk_analytics",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L849",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_7_feature_scope_matrix_mvp_vs_v1_0_vs_v2_0",
+      "target": "$graphify-root$_docs_product_product_discovery_7_7_alerts_notifications",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L871",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_7_feature_scope_matrix_mvp_vs_v1_0_vs_v2_0",
+      "target": "$graphify-root$_docs_product_product_discovery_7_8_tax_compliance",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L892",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_7_feature_scope_matrix_mvp_vs_v1_0_vs_v2_0",
+      "target": "$graphify-root$_docs_product_product_discovery_7_9_goals_planning",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L908",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_7_feature_scope_matrix_mvp_vs_v1_0_vs_v2_0",
+      "target": "$graphify-root$_docs_product_product_discovery_7_10_ai_intelligence",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L921",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_7_feature_scope_matrix_mvp_vs_v1_0_vs_v2_0",
+      "target": "$graphify-root$_docs_product_product_discovery_7_11_platform_infrastructure",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L935",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_product_discovery_document",
+      "target": "$graphify-root$_docs_product_product_discovery_8_data_model_overview",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L949",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_8_data_model_overview",
+      "target": "$graphify-root$_docs_product_product_discovery_core_entities",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L953",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_product_discovery_document",
+      "target": "$graphify-root$_docs_product_product_discovery_9_integration_landscape",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L991",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_9_integration_landscape",
+      "target": "$graphify-root$_docs_product_product_discovery_9_1_brokerage_integrations_mvp",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L993",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_9_integration_landscape",
+      "target": "$graphify-root$_docs_product_product_discovery_9_2_crypto_exchange_integrations_mvp",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1003",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_9_integration_landscape",
+      "target": "$graphify-root$_docs_product_product_discovery_9_3_market_data_sources",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1010",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_product_discovery_document",
+      "target": "$graphify-root$_docs_product_product_discovery_10_risk_assumptions_log",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1023",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_10_risk_assumptions_log",
+      "target": "$graphify-root$_docs_product_product_discovery_10_1_technical_risks",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1025",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_10_risk_assumptions_log",
+      "target": "$graphify-root$_docs_product_product_discovery_10_2_business_risks",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1035",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_10_risk_assumptions_log",
+      "target": "$graphify-root$_docs_product_product_discovery_10_3_key_assumptions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1044",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_product_discovery_document",
+      "target": "$graphify-root$_docs_product_product_discovery_11_success_metrics_kpis",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1056",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_11_success_metrics_kpis",
+      "target": "$graphify-root$_docs_product_product_discovery_11_1_product_metrics",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1058",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_11_success_metrics_kpis",
+      "target": "$graphify-root$_docs_product_product_discovery_11_2_technical_metrics",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1071",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_11_success_metrics_kpis",
+      "target": "$graphify-root$_docs_product_product_discovery_11_3_business_metrics",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1082",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_11_success_metrics_kpis",
+      "target": "$graphify-root$_docs_product_product_discovery_11_4_risk_safety_metrics",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1093",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_product_product_discovery_product_discovery_document",
+      "target": "$graphify-root$_docs_product_product_discovery_12_glossary",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/product/PRODUCT_DISCOVERY.md",
+      "source_location": "L1104",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

@@ -1,0 +1,223 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_docs_adr_0004_database_and_orm_md",
+      "label": "0004-database-and-orm.md",
+      "file_type": "document",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0004_database_and_orm_adr_0004_database_and_orm",
+      "label": "ADR-0004: Database and ORM",
+      "file_type": "document",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0004_database_and_orm_context",
+      "label": "Context",
+      "file_type": "document",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L16"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0004_database_and_orm_technical_and_domain_requirements",
+      "label": "Technical and Domain Requirements",
+      "file_type": "document",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L23"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0004_database_and_orm_decision",
+      "label": "Decision",
+      "file_type": "document",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L35"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0004_database_and_orm_options_considered",
+      "label": "Options Considered",
+      "file_type": "document",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L45"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0004_database_and_orm_option_a_postgresql_16_timescaledb_typeorm_selected",
+      "label": "Option A: PostgreSQL 16 + TimescaleDB + TypeORM (Selected)",
+      "file_type": "document",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L47"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0004_database_and_orm_option_b_mongodb_mongoose_nosql_alternative",
+      "label": "Option B: MongoDB + Mongoose (NoSQL Alternative)",
+      "file_type": "document",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L59"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0004_database_and_orm_option_c_postgresql_prisma_orm",
+      "label": "Option C: PostgreSQL + Prisma ORM",
+      "file_type": "document",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L72"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0004_database_and_orm_option_d_postgresql_raw_sql_knex_js_sql_builder",
+      "label": "Option D: PostgreSQL + Raw SQL / Knex.js (SQL Builder)",
+      "file_type": "document",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L85"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0004_database_and_orm_consequences",
+      "label": "Consequences",
+      "file_type": "document",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L99"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0004_database_and_orm_positive",
+      "label": "Positive",
+      "file_type": "document",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L101"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0004_database_and_orm_negative_trade_offs",
+      "label": "Negative / Trade-offs",
+      "file_type": "document",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L109"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0004_database_and_orm_compliance_check",
+      "label": "Compliance Check",
+      "file_type": "document",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L117"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_docs_adr_0004_database_and_orm_md",
+      "target": "$graphify-root$_docs_adr_0004_database_and_orm_adr_0004_database_and_orm",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0004_database_and_orm_adr_0004_database_and_orm",
+      "target": "$graphify-root$_docs_adr_0004_database_and_orm_context",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0004_database_and_orm_context",
+      "target": "$graphify-root$_docs_adr_0004_database_and_orm_technical_and_domain_requirements",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0004_database_and_orm_adr_0004_database_and_orm",
+      "target": "$graphify-root$_docs_adr_0004_database_and_orm_decision",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0004_database_and_orm_adr_0004_database_and_orm",
+      "target": "$graphify-root$_docs_adr_0004_database_and_orm_options_considered",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0004_database_and_orm_options_considered",
+      "target": "$graphify-root$_docs_adr_0004_database_and_orm_option_a_postgresql_16_timescaledb_typeorm_selected",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0004_database_and_orm_options_considered",
+      "target": "$graphify-root$_docs_adr_0004_database_and_orm_option_b_mongodb_mongoose_nosql_alternative",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0004_database_and_orm_options_considered",
+      "target": "$graphify-root$_docs_adr_0004_database_and_orm_option_c_postgresql_prisma_orm",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0004_database_and_orm_options_considered",
+      "target": "$graphify-root$_docs_adr_0004_database_and_orm_option_d_postgresql_raw_sql_knex_js_sql_builder",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0004_database_and_orm_adr_0004_database_and_orm",
+      "target": "$graphify-root$_docs_adr_0004_database_and_orm_consequences",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L99",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0004_database_and_orm_consequences",
+      "target": "$graphify-root$_docs_adr_0004_database_and_orm_positive",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0004_database_and_orm_consequences",
+      "target": "$graphify-root$_docs_adr_0004_database_and_orm_negative_trade_offs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0004_database_and_orm_adr_0004_database_and_orm",
+      "target": "$graphify-root$_docs_adr_0004_database_and_orm_compliance_check",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": "L117",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

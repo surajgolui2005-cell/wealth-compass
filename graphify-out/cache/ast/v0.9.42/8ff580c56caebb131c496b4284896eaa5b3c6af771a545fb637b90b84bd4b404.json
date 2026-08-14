@@ -1,0 +1,127 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_readme_md",
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_readme_wealth_compass_investor_portfolio_monitoring_risk_management_system",
+      "label": "Wealth Compass: Investor Portfolio Monitoring & Risk Management System",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_readme_overview",
+      "label": "\ud83d\ude80 Overview",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L5"
+    },
+    {
+      "id": "$graphify-root$_readme_key_features",
+      "label": "\u2728 Key Features",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "$graphify-root$_readme_technology_stack",
+      "label": "\ud83d\udee0\ufe0f Technology Stack",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L18"
+    },
+    {
+      "id": "$graphify-root$_readme_project_structure",
+      "label": "\ud83d\udce6 Project Structure",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L27"
+    },
+    {
+      "id": "$graphify-root$_readme_quick_start",
+      "label": "\ud83d\ude80 Quick Start",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L37"
+    },
+    {
+      "id": "$graphify-root$_readme_license",
+      "label": "\ud83d\udcc4 License",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L58"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_readme_md",
+      "target": "$graphify-root$_readme_wealth_compass_investor_portfolio_monitoring_risk_management_system",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_readme_wealth_compass_investor_portfolio_monitoring_risk_management_system",
+      "target": "$graphify-root$_readme_overview",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_readme_wealth_compass_investor_portfolio_monitoring_risk_management_system",
+      "target": "$graphify-root$_readme_key_features",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_readme_wealth_compass_investor_portfolio_monitoring_risk_management_system",
+      "target": "$graphify-root$_readme_technology_stack",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_readme_wealth_compass_investor_portfolio_monitoring_risk_management_system",
+      "target": "$graphify-root$_readme_project_structure",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_readme_wealth_compass_investor_portfolio_monitoring_risk_management_system",
+      "target": "$graphify-root$_readme_quick_start",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_readme_wealth_compass_investor_portfolio_monitoring_risk_management_system",
+      "target": "$graphify-root$_readme_license",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L58",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

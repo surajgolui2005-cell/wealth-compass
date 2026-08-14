@@ -1,0 +1,255 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_docs_adr_0001_monorepo_strategy_md",
+      "label": "0001-monorepo-strategy.md",
+      "file_type": "document",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0001_monorepo_strategy_adr_0001_monorepo_strategy",
+      "label": "ADR-0001: Monorepo Strategy",
+      "file_type": "document",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0001_monorepo_strategy_context",
+      "label": "Context",
+      "file_type": "document",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L16"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0001_monorepo_strategy_constraints",
+      "label": "Constraints",
+      "file_type": "document",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L29"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0001_monorepo_strategy_decision",
+      "label": "Decision",
+      "file_type": "document",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L38"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0001_monorepo_strategy_directory_layout",
+      "label": "Directory Layout",
+      "file_type": "document",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L44"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0001_monorepo_strategy_options_considered",
+      "label": "Options Considered",
+      "file_type": "document",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L64"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0001_monorepo_strategy_option_a_turborepo_pnpm_workspaces_selected",
+      "label": "Option A: Turborepo + pnpm workspaces (Selected)",
+      "file_type": "document",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L66"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0001_monorepo_strategy_option_b_nx_monorepo",
+      "label": "Option B: Nx Monorepo",
+      "file_type": "document",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L79"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0001_monorepo_strategy_option_c_polyrepo_separate_git_repositories_per_service",
+      "label": "Option C: Polyrepo (Separate Git Repositories per Service)",
+      "file_type": "document",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L94"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0001_monorepo_strategy_option_d_lerna_npm_workspaces",
+      "label": "Option D: Lerna + npm workspaces",
+      "file_type": "document",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L109"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0001_monorepo_strategy_consequences",
+      "label": "Consequences",
+      "file_type": "document",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L123"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0001_monorepo_strategy_positive",
+      "label": "Positive",
+      "file_type": "document",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L125"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0001_monorepo_strategy_negative_trade_offs",
+      "label": "Negative / Trade-offs",
+      "file_type": "document",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L133"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0001_monorepo_strategy_neutral",
+      "label": "Neutral",
+      "file_type": "document",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L139"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0001_monorepo_strategy_compliance_check",
+      "label": "Compliance Check",
+      "file_type": "document",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L146"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_docs_adr_0001_monorepo_strategy_md",
+      "target": "$graphify-root$_docs_adr_0001_monorepo_strategy_adr_0001_monorepo_strategy",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0001_monorepo_strategy_adr_0001_monorepo_strategy",
+      "target": "$graphify-root$_docs_adr_0001_monorepo_strategy_context",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0001_monorepo_strategy_context",
+      "target": "$graphify-root$_docs_adr_0001_monorepo_strategy_constraints",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0001_monorepo_strategy_adr_0001_monorepo_strategy",
+      "target": "$graphify-root$_docs_adr_0001_monorepo_strategy_decision",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0001_monorepo_strategy_decision",
+      "target": "$graphify-root$_docs_adr_0001_monorepo_strategy_directory_layout",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0001_monorepo_strategy_adr_0001_monorepo_strategy",
+      "target": "$graphify-root$_docs_adr_0001_monorepo_strategy_options_considered",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0001_monorepo_strategy_options_considered",
+      "target": "$graphify-root$_docs_adr_0001_monorepo_strategy_option_a_turborepo_pnpm_workspaces_selected",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0001_monorepo_strategy_options_considered",
+      "target": "$graphify-root$_docs_adr_0001_monorepo_strategy_option_b_nx_monorepo",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0001_monorepo_strategy_options_considered",
+      "target": "$graphify-root$_docs_adr_0001_monorepo_strategy_option_c_polyrepo_separate_git_repositories_per_service",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0001_monorepo_strategy_options_considered",
+      "target": "$graphify-root$_docs_adr_0001_monorepo_strategy_option_d_lerna_npm_workspaces",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0001_monorepo_strategy_adr_0001_monorepo_strategy",
+      "target": "$graphify-root$_docs_adr_0001_monorepo_strategy_consequences",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0001_monorepo_strategy_consequences",
+      "target": "$graphify-root$_docs_adr_0001_monorepo_strategy_positive",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L125",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0001_monorepo_strategy_consequences",
+      "target": "$graphify-root$_docs_adr_0001_monorepo_strategy_negative_trade_offs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0001_monorepo_strategy_consequences",
+      "target": "$graphify-root$_docs_adr_0001_monorepo_strategy_neutral",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L139",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0001_monorepo_strategy_adr_0001_monorepo_strategy",
+      "target": "$graphify-root$_docs_adr_0001_monorepo_strategy_compliance_check",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": "L146",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

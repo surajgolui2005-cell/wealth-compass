@@ -1,0 +1,80 @@
+{
+  "apps/api/package.json": {
+    "mtime": 1786696313.286178,
+    "seen": 1786698314.1918607,
+    "ast_hash": "1b5a90a1fd8d60ee1d50fff65a72a909",
+    "semantic_hash": "1b5a90a1fd8d60ee1d50fff65a72a909"
+  },
+  "apps/quant-engine/package.json": {
+    "mtime": 1786696344.3906524,
+    "seen": 1786698314.191866,
+    "ast_hash": "89aff3e12d610f16166e46a94287c472",
+    "semantic_hash": "89aff3e12d610f16166e46a94287c472"
+  },
+  "apps/quant-engine/pyproject.toml": {
+    "mtime": 1786696350.5512202,
+    "seen": 1786698314.1918676,
+    "ast_hash": "48c1bbdd0fc008a385e0b3163732fa2c",
+    "semantic_hash": "48c1bbdd0fc008a385e0b3163732fa2c"
+  },
+  "apps/web/package.json": {
+    "mtime": 1786696308.6498172,
+    "seen": 1786698314.191869,
+    "ast_hash": "b8d0fdbfa567e8690929802f85c19054",
+    "semantic_hash": "b8d0fdbfa567e8690929802f85c19054"
+  },
+  "apps/workers/package.json": {
+    "mtime": 1786696317.7312186,
+    "seen": 1786698314.1918697,
+    "ast_hash": "00276058e9d6ef8aa72cd8aee2e2b82e",
+    "semantic_hash": "00276058e9d6ef8aa72cd8aee2e2b82e"
+  },
+  "package.json": {
+    "mtime": 1786696576.1353161,
+    "seen": 1786698314.1918702,
+    "ast_hash": "34395184be888e816e674eae35a5f5f1",
+    "semantic_hash": "34395184be888e816e674eae35a5f5f1"
+  },
+  "packages/config/package.json": {
+    "mtime": 1786696274.676845,
+    "seen": 1786698314.191871,
+    "ast_hash": "f1fcfa18d15ce1aec4a7d45c6fe71ffd",
+    "semantic_hash": "f1fcfa18d15ce1aec4a7d45c6fe71ffd"
+  },
+  "packages/shared-types/package.json": {
+    "mtime": 1786696281.3217149,
+    "seen": 1786698314.191872,
+    "ast_hash": "a84b148ebfe5ec211f7fc9f4706f7f20",
+    "semantic_hash": "a84b148ebfe5ec211f7fc9f4706f7f20"
+  },
+  "packages/shared-types/src/index.ts": {
+    "mtime": 1786696286.5029323,
+    "seen": 1786698314.1918728,
+    "ast_hash": "99bef5180f7b3cc2b5fe4dd4a3c10161",
+    "semantic_hash": "99bef5180f7b3cc2b5fe4dd4a3c10161"
+  },
+  "packages/ui-components/package.json": {
+    "mtime": 1786696292.7288554,
+    "seen": 1786698314.1918733,
+    "ast_hash": "8a33718da23d746946a19b8e824dd079",
+    "semantic_hash": "8a33718da23d746946a19b8e824dd079"
+  },
+  "packages/ui-components/src/index.ts": {
+    "mtime": 1786696298.2634263,
+    "seen": 1786698314.191874,
+    "ast_hash": "261bfdbe682a39b1676bec79bb25d9a6",
+    "semantic_hash": "261bfdbe682a39b1676bec79bb25d9a6"
+  },
+  "tsconfig.json": {
+    "mtime": 1786696255.9204333,
+    "seen": 1786698314.1918747,
+    "ast_hash": "be739db20c5d3f2db240e8ec73d56372",
+    "semantic_hash": "be739db20c5d3f2db240e8ec73d56372"
+  },
+  "turbo.json": {
+    "mtime": 1786696250.2044172,
+    "seen": 1786698314.1918757,
+    "ast_hash": "a1cb6a45c830d10a4cc843f7d0fd60f6",
+    "semantic_hash": "a1cb6a45c830d10a4cc843f7d0fd60f6"
+  }
+}

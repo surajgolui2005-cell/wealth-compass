@@ -1,0 +1,239 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_docs_adr_0003_quant_service_engine_md",
+      "label": "0003-quant-service-engine.md",
+      "file_type": "document",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0003_quant_service_engine_adr_0003_quant_service_engine",
+      "label": "ADR-0003: Quant Service Engine",
+      "file_type": "document",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0003_quant_service_engine_context",
+      "label": "Context",
+      "file_type": "document",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L16"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0003_quant_service_engine_constraints",
+      "label": "Constraints",
+      "file_type": "document",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L32"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0003_quant_service_engine_decision",
+      "label": "Decision",
+      "file_type": "document",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L41"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0003_quant_service_engine_options_considered",
+      "label": "Options Considered",
+      "file_type": "document",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L49"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0003_quant_service_engine_option_a_python_fastapi_microservice_selected",
+      "label": "Option A: Python FastAPI Microservice (Selected)",
+      "file_type": "document",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L51"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0003_quant_service_engine_option_b_in_process_node_js_quant_engine_using_mathjs_simple_npm_libraries",
+      "label": "Option B: In-Process Node.js Quant Engine (using `mathjs`, simple npm libraries)",
+      "file_type": "document",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L64"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0003_quant_service_engine_option_c_go_based_quant_microservice",
+      "label": "Option C: Go-based Quant Microservice",
+      "file_type": "document",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L77"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0003_quant_service_engine_option_d_rust_based_quant_microservice_using_polars_gonum_equivalents",
+      "label": "Option D: Rust-based Quant Microservice (using `polars` / `gonum` equivalents)",
+      "file_type": "document",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L89"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0003_quant_service_engine_consequences",
+      "label": "Consequences",
+      "file_type": "document",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L103"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0003_quant_service_engine_positive",
+      "label": "Positive",
+      "file_type": "document",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L105"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0003_quant_service_engine_negative_trade_offs",
+      "label": "Negative / Trade-offs",
+      "file_type": "document",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L113"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0003_quant_service_engine_neutral",
+      "label": "Neutral",
+      "file_type": "document",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L119"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0003_quant_service_engine_compliance_check",
+      "label": "Compliance Check",
+      "file_type": "document",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L125"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_docs_adr_0003_quant_service_engine_md",
+      "target": "$graphify-root$_docs_adr_0003_quant_service_engine_adr_0003_quant_service_engine",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0003_quant_service_engine_adr_0003_quant_service_engine",
+      "target": "$graphify-root$_docs_adr_0003_quant_service_engine_context",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0003_quant_service_engine_context",
+      "target": "$graphify-root$_docs_adr_0003_quant_service_engine_constraints",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0003_quant_service_engine_adr_0003_quant_service_engine",
+      "target": "$graphify-root$_docs_adr_0003_quant_service_engine_decision",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0003_quant_service_engine_adr_0003_quant_service_engine",
+      "target": "$graphify-root$_docs_adr_0003_quant_service_engine_options_considered",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0003_quant_service_engine_options_considered",
+      "target": "$graphify-root$_docs_adr_0003_quant_service_engine_option_a_python_fastapi_microservice_selected",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0003_quant_service_engine_options_considered",
+      "target": "$graphify-root$_docs_adr_0003_quant_service_engine_option_b_in_process_node_js_quant_engine_using_mathjs_simple_npm_libraries",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0003_quant_service_engine_options_considered",
+      "target": "$graphify-root$_docs_adr_0003_quant_service_engine_option_c_go_based_quant_microservice",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0003_quant_service_engine_options_considered",
+      "target": "$graphify-root$_docs_adr_0003_quant_service_engine_option_d_rust_based_quant_microservice_using_polars_gonum_equivalents",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0003_quant_service_engine_adr_0003_quant_service_engine",
+      "target": "$graphify-root$_docs_adr_0003_quant_service_engine_consequences",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L103",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0003_quant_service_engine_consequences",
+      "target": "$graphify-root$_docs_adr_0003_quant_service_engine_positive",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L105",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0003_quant_service_engine_consequences",
+      "target": "$graphify-root$_docs_adr_0003_quant_service_engine_negative_trade_offs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L113",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0003_quant_service_engine_consequences",
+      "target": "$graphify-root$_docs_adr_0003_quant_service_engine_neutral",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0003_quant_service_engine_adr_0003_quant_service_engine",
+      "target": "$graphify-root$_docs_adr_0003_quant_service_engine_compliance_check",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0003-quant-service-engine.md",
+      "source_location": "L125",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}
