@@ -1,0 +1,11 @@
+{
+  "name": "@investor-pm/quant-engine",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo \"dev quant-engine (Python)\"",
+    "build": "echo \"build quant-engine (Python)\"",
+    "lint": "echo \"lint quant-engine (Python)\"",
+    "test": "echo \"test quant-engine (Python)\""
+  }
+}

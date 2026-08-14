@@ -1,0 +1,15 @@
+{
+  "name": "@investor-pm/workers",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo \"workers dev runner\"",
+    "build": "echo \"workers build runner\"",
+    "lint": "echo \"workers lint runner\"",
+    "test": "echo \"workers test\""
+  },
+  "dependencies": {
+    "@investor-pm/types": "workspace:*",
+    "@investor-pm/api": "workspace:*"
+  }
+}

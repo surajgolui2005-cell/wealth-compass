@@ -1,0 +1,14 @@
+{
+  "name": "@investor-pm/api",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo \"api dev runner\"",
+    "build": "echo \"api build runner\"",
+    "lint": "echo \"api lint runner\"",
+    "test": "echo \"api test\""
+  },
+  "dependencies": {
+    "@investor-pm/types": "workspace:*"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@investor-pm/web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "echo \"web dev runner\"",
+    "build": "echo \"web build runner\"",
+    "lint": "echo \"web lint runner\"",
+    "test": "echo \"web test\""
+  },
+  "dependencies": {
+    "@investor-pm/types": "workspace:*",
+    "@investor-pm/ui": "workspace:*"
+  }
+}
