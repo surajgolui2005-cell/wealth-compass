@@ -23,3 +23,5 @@ target-version = "py312"
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
+# Add the quant-engine root to sys.path so `from src.analytics.X` imports resolve correctly.
+pythonpath = ["."]

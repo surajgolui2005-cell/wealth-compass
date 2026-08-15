@@ -1,0 +1,615 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_xirr_py",
+      "label": "xirr.py",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_xirr_cashflow",
+      "label": "CashFlow",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L97",
+      "_callable": true,
+      "_callable_class": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_xirr_xirrresult",
+      "label": "XirrResult",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L117",
+      "_callable": true,
+      "_callable_class": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_xirr_xirrconvergenceerror",
+      "label": "XirrConvergenceError",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L145",
+      "_callable": true,
+      "_callable_class": true
+    },
+    {
+      "id": "exception",
+      "label": "Exception",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "origin_file": "$graphify-root$/apps/quant-engine/src/analytics/xirr.py"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_xirr_year_fractions",
+      "label": "_year_fractions()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L156",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_xirr_npv",
+      "label": "_npv()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L168",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_xirr_npv_derivative",
+      "label": "_npv_derivative()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L182",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_xirr_newton_raphson",
+      "label": "_newton_raphson()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L196",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_xirr_brent_dekker",
+      "label": "_brent_dekker()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L235",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_xirr_compute_xirr",
+      "label": "compute_xirr()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L267",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_xirr_rationale_1",
+      "label": "Extended Internal Rate of Return (XIRR) \u2014 Numerical Root-Finding Engine\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_xirr_rationale_98",
+      "label": "A single cash flow event in the XIRR calculation. Attributes ---------- date:\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L98"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_xirr_rationale_118",
+      "label": "Output of the XIRR computation. Attributes ---------- xirr: Annualised XIRR as\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L118"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_xirr_rationale_146",
+      "label": "Raised when neither Newton-Raphson nor Brent's method can converge on a real\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L146"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_xirr_rationale_157",
+      "label": "Converts cash flow dates to year fractions relative to the first date. t_i =\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L157"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_xirr_rationale_169",
+      "label": "Net Present Value: \u03a3 CF_i / (1 + r)^t_i Avoids math.pow overflow by checking (1\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L169"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_xirr_rationale_183",
+      "label": "First derivative of NPV w.r.t. rate: -\u03a3 CF_i \u00d7 t_i / (1 + r)^(t_i + 1)",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L183"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_xirr_rationale_203",
+      "label": "Newton-Raphson root-finder for XIRR. Returns (rate, iterations) on convergence,\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L203"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_xirr_rationale_242",
+      "label": "Brent\u2013Dekker root-finder via scipy.optimize.brentq. Probes the bracket [lower,\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L242"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_xirr_rationale_273",
+      "label": "Computes XIRR (Extended IRR) for a sequence of non-periodic cash flows. The\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L273"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_py",
+      "target": "math",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_py",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_py",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_py",
+      "target": "typing",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_py",
+      "target": "scipy_optimize",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_py",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_cashflow",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L97",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_py",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_xirrresult",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L117",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_py",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_xirrconvergenceerror",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_xirrconvergenceerror",
+      "target": "exception",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_py",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_year_fractions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L156",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_year_fractions",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_cashflow",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L156",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_py",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_npv",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L168",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_py",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_npv_derivative",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L182",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_py",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_newton_raphson",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L196",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_py",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_brent_dekker",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L235",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_py",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_compute_xirr",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L267",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_compute_xirr",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_cashflow",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L267",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_compute_xirr",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_xirrresult",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L267",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_newton_raphson",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_npv",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L211",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_newton_raphson",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_npv_derivative",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L215",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_brent_dekker",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_npv",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L249",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_compute_xirr",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_year_fractions",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L336",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_compute_xirr",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_newton_raphson",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L340",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_compute_xirr",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_npv",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L344",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_compute_xirr",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_xirrresult",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L346",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_compute_xirr",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_brent_dekker",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L355",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_compute_xirr",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_xirrconvergenceerror",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L368",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_rationale_1",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_rationale_98",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_cashflow",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L98",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_rationale_118",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_xirrresult",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L118",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_rationale_146",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_xirrconvergenceerror",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L146",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_rationale_157",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_year_fractions",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L157",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_rationale_169",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_npv",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L169",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_rationale_183",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_npv_derivative",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L183",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_rationale_203",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_newton_raphson",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L203",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_rationale_242",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_brent_dekker",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L242",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_xirr_rationale_273",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_xirr_compute_xirr",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L273",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": [
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_xirr_npv",
+      "callee": "pow",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L178",
+      "receiver": "math"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_xirr_npv_derivative",
+      "callee": "pow",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L190",
+      "receiver": "math"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_xirr_newton_raphson",
+      "callee": "isnan",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L216",
+      "receiver": "math"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_xirr_newton_raphson",
+      "callee": "isinf",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L216",
+      "receiver": "math"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_xirr_newton_raphson",
+      "callee": "isnan",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L222",
+      "receiver": "math"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_xirr_newton_raphson",
+      "callee": "isinf",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L222",
+      "receiver": "math"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_xirr_brent_dekker",
+      "callee": "r",
+      "is_member_call": false,
+      "indirect": true,
+      "context": "argument",
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L249"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_xirr_brent_dekker",
+      "callee": "f",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L251",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_xirr_brent_dekker",
+      "callee": "f",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L252",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_xirr_brent_dekker",
+      "callee": "brentq",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L259",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_xirr_compute_xirr",
+      "callee": "ValueError",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L324",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_xirr_compute_xirr",
+      "callee": "ValueError",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/src/analytics/xirr.py",
+      "source_location": "L331",
+      "receiver": null
+    }
+  ]
+}

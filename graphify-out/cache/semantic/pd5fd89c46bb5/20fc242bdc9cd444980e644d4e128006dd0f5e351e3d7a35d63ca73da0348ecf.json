@@ -1,0 +1,752 @@
+{
+  "nodes": [
+    {
+      "id": "database_doc",
+      "label": "DATABASE.md",
+      "file_type": "document",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_database_architecture___schema_specification",
+      "label": "Database Architecture & Schema Specification",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_1__overview___technology_selection",
+      "label": "1. Overview & Technology Selection",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_2__entity_relationship_diagram__erd",
+      "label": "2. Entity-Relationship Diagram (ERD)",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_3__financial_precision_standards",
+      "label": "3. Financial Precision Standards",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_4__audit_fields___soft_deletion_strategy",
+      "label": "4. Audit Fields & Soft Deletion Strategy",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_soft_delete_execution_policy",
+      "label": "Soft Delete Execution Policy",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_5__table_dictionary___indexing_strategy",
+      "label": "5. Table Dictionary & Indexing Strategy",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_5_1_identity___access_domain",
+      "label": "5.1 Identity & Access Domain",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_users__table",
+      "label": "`users` Table",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_user_preferences__table",
+      "label": "`user_preferences` Table",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_5_2_portfolio___ingestion_domain",
+      "label": "5.2 Portfolio & Ingestion Domain",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_portfolios__table",
+      "label": "`portfolios` Table",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_financial_provider_accounts__table",
+      "label": "`financial_provider_accounts` Table",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_5_3_asset___position_domain",
+      "label": "5.3 Asset & Position Domain",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_asset_classes__table",
+      "label": "`asset_classes` Table",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_assets__table",
+      "label": "`assets` Table",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_holdings__table",
+      "label": "`holdings` Table",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_transactions__table",
+      "label": "`transactions` Table",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_5_4_analytics__valuation___alert_domain",
+      "label": "5.4 Analytics, Valuation & Alert Domain",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_market_prices__table",
+      "label": "`market_prices` Table",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_portfolio_snapshots__table",
+      "label": "`portfolio_snapshots` Table",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_risk_metric_snapshots__table",
+      "label": "`risk_metric_snapshots` Table",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_alert_rules_____alert_logs__tables",
+      "label": "`alert_rules` & `alert_logs` Tables",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "database_reports__table",
+      "label": "`reports` Table",
+      "file_type": "concept",
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "database_doc",
+      "target": "database_database_architecture___schema_specification",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_doc",
+      "target": "database_1__overview___technology_selection",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_database_architecture___schema_specification",
+      "target": "database_1__overview___technology_selection",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_doc",
+      "target": "database_2__entity_relationship_diagram__erd",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_1__overview___technology_selection",
+      "target": "database_2__entity_relationship_diagram__erd",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_doc",
+      "target": "database_3__financial_precision_standards",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_2__entity_relationship_diagram__erd",
+      "target": "database_3__financial_precision_standards",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_doc",
+      "target": "database_4__audit_fields___soft_deletion_strategy",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_3__financial_precision_standards",
+      "target": "database_4__audit_fields___soft_deletion_strategy",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_doc",
+      "target": "database_soft_delete_execution_policy",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_4__audit_fields___soft_deletion_strategy",
+      "target": "database_soft_delete_execution_policy",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_doc",
+      "target": "database_5__table_dictionary___indexing_strategy",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_soft_delete_execution_policy",
+      "target": "database_5__table_dictionary___indexing_strategy",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_doc",
+      "target": "database_5_1_identity___access_domain",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_5__table_dictionary___indexing_strategy",
+      "target": "database_5_1_identity___access_domain",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_doc",
+      "target": "database_users__table",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_5_1_identity___access_domain",
+      "target": "database_users__table",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_doc",
+      "target": "database_user_preferences__table",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_users__table",
+      "target": "database_user_preferences__table",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_doc",
+      "target": "database_5_2_portfolio___ingestion_domain",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_user_preferences__table",
+      "target": "database_5_2_portfolio___ingestion_domain",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_doc",
+      "target": "database_portfolios__table",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_5_2_portfolio___ingestion_domain",
+      "target": "database_portfolios__table",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_doc",
+      "target": "database_financial_provider_accounts__table",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_portfolios__table",
+      "target": "database_financial_provider_accounts__table",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_doc",
+      "target": "database_5_3_asset___position_domain",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_financial_provider_accounts__table",
+      "target": "database_5_3_asset___position_domain",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_doc",
+      "target": "database_asset_classes__table",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_5_3_asset___position_domain",
+      "target": "database_asset_classes__table",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_doc",
+      "target": "database_assets__table",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_asset_classes__table",
+      "target": "database_assets__table",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_doc",
+      "target": "database_holdings__table",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_assets__table",
+      "target": "database_holdings__table",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_doc",
+      "target": "database_transactions__table",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_holdings__table",
+      "target": "database_transactions__table",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_doc",
+      "target": "database_5_4_analytics__valuation___alert_domain",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_transactions__table",
+      "target": "database_5_4_analytics__valuation___alert_domain",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_doc",
+      "target": "database_market_prices__table",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_5_4_analytics__valuation___alert_domain",
+      "target": "database_market_prices__table",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_doc",
+      "target": "database_portfolio_snapshots__table",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_market_prices__table",
+      "target": "database_portfolio_snapshots__table",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_doc",
+      "target": "database_risk_metric_snapshots__table",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_portfolio_snapshots__table",
+      "target": "database_risk_metric_snapshots__table",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_doc",
+      "target": "database_alert_rules_____alert_logs__tables",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_risk_metric_snapshots__table",
+      "target": "database_alert_rules_____alert_logs__tables",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_doc",
+      "target": "database_reports__table",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "database_alert_rules_____alert_logs__tables",
+      "target": "database_reports__table",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DATABASE.md",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": []
+}

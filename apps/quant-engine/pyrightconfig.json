@@ -1,0 +1,8 @@
+{
+  "pythonVersion": "3.13",
+  "pythonPlatform": "Windows",
+  "include": ["src", "tests"],
+  "extraPaths": ["."],
+  "reportMissingImports": "warning",
+  "reportMissingModuleSource": "none"
+}

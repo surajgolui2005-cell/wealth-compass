@@ -1,0 +1,13 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_app_routers_init_py",
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/app/routers/__init__.py",
+      "source_location": "L1"
+    }
+  ],
+  "edges": [],
+  "raw_calls": []
+}

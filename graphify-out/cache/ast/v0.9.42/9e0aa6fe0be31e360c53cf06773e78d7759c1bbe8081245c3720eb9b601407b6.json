@@ -1,0 +1,613 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_py",
+      "label": "benchmark.py",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_benchmarkmetrics",
+      "label": "BenchmarkMetrics",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L119",
+      "_callable": true,
+      "_callable_class": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_daily_returns",
+      "label": "_daily_returns()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L167",
+      "_callable": true
+    },
+    {
+      "id": "ndarray",
+      "label": "ndarray",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "origin_file": "$graphify-root$/apps/quant-engine/src/analytics/benchmark.py"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_annualised_std",
+      "label": "_annualised_std()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L195",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_downside_std",
+      "label": "_downside_std()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L202",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "label": "compute_benchmark_metrics()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L215",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_rationale_1",
+      "label": "Benchmark Comparison Analytics =============================== Mathematical\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_rationale_120",
+      "label": "Full set of benchmark-relative performance metrics. All return metrics are\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L120"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_rationale_168",
+      "label": "Converts a price series into a series of daily simple returns. r_t = (P_t -\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L168"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_rationale_196",
+      "label": "Annualised standard deviation of a daily return series.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L196"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_rationale_203",
+      "label": "Downside standard deviation: std of returns strictly below the daily risk-free\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L203"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_rationale_220",
+      "label": "Computes the full suite of benchmark-relative performance metrics. Both price\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L220"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_py",
+      "target": "math",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_py",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L103",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_py",
+      "target": "typing",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_py",
+      "target": "numpy",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L106",
+      "weight": 1.0,
+      "local_alias": "np"
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_py",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_benchmarkmetrics",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_py",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_daily_returns",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L167",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_daily_returns",
+      "target": "ndarray",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L167",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_py",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_annualised_std",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L195",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_annualised_std",
+      "target": "ndarray",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L195",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_py",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_downside_std",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L202",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_downside_std",
+      "target": "ndarray",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L202",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_py",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L215",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_benchmarkmetrics",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L215",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_daily_returns",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L270",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_downside_std",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L325",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_benchmarkmetrics",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L336",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_rationale_1",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_rationale_120",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_benchmarkmetrics",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L120",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_rationale_168",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_daily_returns",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L168",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_rationale_196",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_annualised_std",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L196",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_rationale_203",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_downside_std",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L203",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_rationale_220",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L220",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": [
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_daily_returns",
+      "callee": "asarray",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L187",
+      "receiver": "np"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_daily_returns",
+      "callee": "float",
+      "is_member_call": false,
+      "indirect": true,
+      "context": "argument",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L187"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_daily_returns",
+      "callee": "ValueError",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L189",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_daily_returns",
+      "callee": "ValueError",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L191",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_daily_returns",
+      "callee": "diff",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L192",
+      "receiver": "np"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_annualised_std",
+      "callee": "std",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L199",
+      "receiver": "np"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_annualised_std",
+      "callee": "sqrt",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L199",
+      "receiver": "math"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_downside_std",
+      "callee": "std",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L210",
+      "receiver": "np"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "ValueError",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L260",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "ValueError",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L265",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "pow",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L276",
+      "receiver": "math"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "cov",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L279",
+      "receiver": "np"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "mean",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L285",
+      "receiver": "np"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "mean",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L286",
+      "receiver": "np"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "pow",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L290",
+      "receiver": "math"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "_TRADING_DAYS_PER_YEAR",
+      "is_member_call": false,
+      "indirect": true,
+      "context": "argument",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L290"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "ValueError",
+      "is_member_call": false,
+      "indirect": true,
+      "context": "collection",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L291"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "OverflowError",
+      "is_member_call": false,
+      "indirect": true,
+      "context": "collection",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L291"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "std",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L295",
+      "receiver": "np"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "std",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L296",
+      "receiver": "np"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "isnan",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L299",
+      "receiver": "math"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "std",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L303",
+      "receiver": "np"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "sqrt",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L304",
+      "receiver": "math"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "_TRADING_DAYS_PER_YEAR",
+      "is_member_call": false,
+      "indirect": true,
+      "context": "argument",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L304"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "mean",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L307",
+      "receiver": "np"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "isnan",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L311",
+      "receiver": "math"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "mean",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L317",
+      "receiver": "np"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "sqrt",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L319",
+      "receiver": "math"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "_TRADING_DAYS_PER_YEAR",
+      "is_member_call": false,
+      "indirect": true,
+      "context": "argument",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L319"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "sqrt",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L327",
+      "receiver": "math"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "_TRADING_DAYS_PER_YEAR",
+      "is_member_call": false,
+      "indirect": true,
+      "context": "argument",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L327"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "isnan",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L328",
+      "receiver": "math"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "sqrt",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L333",
+      "receiver": "math"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "_TRADING_DAYS_PER_YEAR",
+      "is_member_call": false,
+      "indirect": true,
+      "context": "argument",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L333"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "sqrt",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L334",
+      "receiver": "math"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_benchmark_compute_benchmark_metrics",
+      "callee": "_TRADING_DAYS_PER_YEAR",
+      "is_member_call": false,
+      "indirect": true,
+      "context": "argument",
+      "source_file": "apps/quant-engine/src/analytics/benchmark.py",
+      "source_location": "L334"
+    }
+  ]
+}

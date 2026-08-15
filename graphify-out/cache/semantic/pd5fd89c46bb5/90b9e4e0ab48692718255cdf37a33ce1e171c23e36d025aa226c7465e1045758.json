@@ -1,0 +1,483 @@
+{
+  "nodes": [
+    {
+      "id": "docs_adr_0001_monorepo_strategy_doc",
+      "label": "0001-monorepo-strategy.md",
+      "file_type": "document",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0001_monorepo_strategy_adr_0001__monorepo_strategy",
+      "label": "ADR-0001: Monorepo Strategy",
+      "file_type": "concept",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0001_monorepo_strategy_context",
+      "label": "Context",
+      "file_type": "concept",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0001_monorepo_strategy_constraints",
+      "label": "Constraints",
+      "file_type": "concept",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0001_monorepo_strategy_decision",
+      "label": "Decision",
+      "file_type": "concept",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0001_monorepo_strategy_directory_layout",
+      "label": "Directory Layout",
+      "file_type": "concept",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0001_monorepo_strategy_options_considered",
+      "label": "Options Considered",
+      "file_type": "concept",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0001_monorepo_strategy_option_a__turborepo___pnpm_workspaces__selected",
+      "label": "Option A: Turborepo + pnpm workspaces (Selected)",
+      "file_type": "concept",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0001_monorepo_strategy_option_b__nx_monorepo",
+      "label": "Option B: Nx Monorepo",
+      "file_type": "concept",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0001_monorepo_strategy_option_c__polyrepo__separate_git_repositories_per_service",
+      "label": "Option C: Polyrepo (Separate Git Repositories per Service)",
+      "file_type": "concept",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0001_monorepo_strategy_option_d__lerna___npm_workspaces",
+      "label": "Option D: Lerna + npm workspaces",
+      "file_type": "concept",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0001_monorepo_strategy_consequences",
+      "label": "Consequences",
+      "file_type": "concept",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0001_monorepo_strategy_positive",
+      "label": "Positive",
+      "file_type": "concept",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0001_monorepo_strategy_negative___trade_offs",
+      "label": "Negative / Trade-offs",
+      "file_type": "concept",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0001_monorepo_strategy_neutral",
+      "label": "Neutral",
+      "file_type": "concept",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0001_monorepo_strategy_compliance_check",
+      "label": "Compliance Check",
+      "file_type": "concept",
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "docs_adr_0001_monorepo_strategy_doc",
+      "target": "docs_adr_0001_monorepo_strategy_adr_0001__monorepo_strategy",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_doc",
+      "target": "docs_adr_0001_monorepo_strategy_context",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_adr_0001__monorepo_strategy",
+      "target": "docs_adr_0001_monorepo_strategy_context",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_doc",
+      "target": "docs_adr_0001_monorepo_strategy_constraints",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_context",
+      "target": "docs_adr_0001_monorepo_strategy_constraints",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_doc",
+      "target": "docs_adr_0001_monorepo_strategy_decision",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_constraints",
+      "target": "docs_adr_0001_monorepo_strategy_decision",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_doc",
+      "target": "docs_adr_0001_monorepo_strategy_directory_layout",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_decision",
+      "target": "docs_adr_0001_monorepo_strategy_directory_layout",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_doc",
+      "target": "docs_adr_0001_monorepo_strategy_options_considered",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_directory_layout",
+      "target": "docs_adr_0001_monorepo_strategy_options_considered",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_doc",
+      "target": "docs_adr_0001_monorepo_strategy_option_a__turborepo___pnpm_workspaces__selected",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_options_considered",
+      "target": "docs_adr_0001_monorepo_strategy_option_a__turborepo___pnpm_workspaces__selected",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_doc",
+      "target": "docs_adr_0001_monorepo_strategy_option_b__nx_monorepo",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_option_a__turborepo___pnpm_workspaces__selected",
+      "target": "docs_adr_0001_monorepo_strategy_option_b__nx_monorepo",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_doc",
+      "target": "docs_adr_0001_monorepo_strategy_option_c__polyrepo__separate_git_repositories_per_service",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_option_b__nx_monorepo",
+      "target": "docs_adr_0001_monorepo_strategy_option_c__polyrepo__separate_git_repositories_per_service",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_doc",
+      "target": "docs_adr_0001_monorepo_strategy_option_d__lerna___npm_workspaces",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_option_c__polyrepo__separate_git_repositories_per_service",
+      "target": "docs_adr_0001_monorepo_strategy_option_d__lerna___npm_workspaces",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_doc",
+      "target": "docs_adr_0001_monorepo_strategy_consequences",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_option_d__lerna___npm_workspaces",
+      "target": "docs_adr_0001_monorepo_strategy_consequences",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_doc",
+      "target": "docs_adr_0001_monorepo_strategy_positive",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_consequences",
+      "target": "docs_adr_0001_monorepo_strategy_positive",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_doc",
+      "target": "docs_adr_0001_monorepo_strategy_negative___trade_offs",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_positive",
+      "target": "docs_adr_0001_monorepo_strategy_negative___trade_offs",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_doc",
+      "target": "docs_adr_0001_monorepo_strategy_neutral",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_negative___trade_offs",
+      "target": "docs_adr_0001_monorepo_strategy_neutral",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_doc",
+      "target": "docs_adr_0001_monorepo_strategy_compliance_check",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_neutral",
+      "target": "docs_adr_0001_monorepo_strategy_compliance_check",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0001_monorepo_strategy_doc",
+      "target": "docs_adr_0001_monorepo_strategy_decision",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0001-monorepo-strategy.md",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": []
+}

@@ -1,0 +1,1162 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_py",
+      "label": "test_twr.py",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz",
+      "label": "TestModifiedDietz",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L24",
+      "_callable": true,
+      "_callable_class": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_no_cash_flows_simple_return",
+      "label": ".test_no_cash_flows_simple_return()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L27",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_single_deposit_midperiod",
+      "label": ".test_single_deposit_midperiod()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L41",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_zero_denominator_returns_zero",
+      "label": ".test_zero_denominator_returns_zero()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L61",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_end_before_start_raises_value_error",
+      "label": ".test_end_before_start_raises_value_error()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L75",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_withdrawal_reduces_denominator",
+      "label": ".test_withdrawal_reduces_denominator()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L86",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr",
+      "label": "TestComputeTwr",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L107",
+      "_callable": true,
+      "_callable_class": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_two_subperiods_no_cash_flows",
+      "label": ".test_two_subperiods_no_cash_flows()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L110",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_twr_neutralises_cash_flow_timing_bias",
+      "label": ".test_twr_neutralises_cash_flow_timing_bias()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L137",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_single_subperiod_annualisation",
+      "label": ".test_single_subperiod_annualisation()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L171",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_negative_return_sub_period",
+      "label": ".test_negative_return_sub_period()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L191",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_empty_subperiods_raises_value_error",
+      "label": ".test_empty_subperiods_raises_value_error()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L214",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_out_of_order_raises_value_error",
+      "label": ".test_out_of_order_raises_value_error()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L219",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_many_subperiods_chain_link_precision",
+      "label": ".test_many_subperiods_chain_link_precision()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L236",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_1",
+      "label": "Unit tests for twr.py \u2014 Time-Weighted Return Engine. Test Vectors ------------\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_25",
+      "label": "Unit tests for the _modified_dietz helper function.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L25"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_28",
+      "label": "Single period, no cash flows. R = (EMV - BMV) / BMV = (110 - 100) / 100 = 10%",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L28"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_42",
+      "label": "BMV = 100, EMV = 215, deposit 100 on day 182 of 365-day period. W = (365 - 182)\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L42"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_62",
+      "label": "When BMV = 0 and no cash flows, denominator = 0. Should return 0.0 instead of\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L62"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_76",
+      "label": "Sub-period with end_date < start_date must raise ValueError.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L76"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_87",
+      "label": "Withdrawal reduces the time-weighted denominator. BMV=100, EMV=45, withdrawal\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L87"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_108",
+      "label": "Integration tests for compute_twr chain-linking.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L108"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_111",
+      "label": "Sub-period 1: 100 \u2192 110 (R1 = 10%) Sub-period 2: 110 \u2192 121 (R2 = 10%) TWR =\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L111"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_138",
+      "label": "Demonstrates that TWR is independent of the timing of external cash flows.\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L138"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_172",
+      "label": "Single sub-period: 100 \u2192 120, exactly 365 days. TWR cumulative = 20% TWR\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L172"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_192",
+      "label": "SP1: Loss period: 100 \u2192 80 (R1 = -20%) SP2: Recovery: 80 \u2192 104 (R2 = 30%) TWR =\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L192"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_215",
+      "label": "Empty sub-period list must raise ValueError.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L215"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_220",
+      "label": "Non-chronological sub-periods must raise ValueError.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L220"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_237",
+      "label": "Chain-link 12 monthly sub-periods each returning exactly 1%. TWR = (1.01)^12 -\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L237"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_py",
+      "target": "math",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_py",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_py",
+      "target": "pytest",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_py",
+      "target": "src_analytics_twr",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_py",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_no_cash_flows_simple_return",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_single_deposit_midperiod",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_zero_denominator_returns_zero",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L61",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_end_before_start_raises_value_error",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_withdrawal_reduces_denominator",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_py",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_two_subperiods_no_cash_flows",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L110",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_twr_neutralises_cash_flow_timing_bias",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L137",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_single_subperiod_annualisation",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L171",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_negative_return_sub_period",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L191",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_empty_subperiods_raises_value_error",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L214",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_out_of_order_raises_value_error",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L219",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_many_subperiods_chain_link_precision",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L236",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_1",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_25",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_28",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_no_cash_flows_simple_return",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_42",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_single_deposit_midperiod",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_62",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_zero_denominator_returns_zero",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_76",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_end_before_start_raises_value_error",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_87",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_withdrawal_reduces_denominator",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_108",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_111",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_two_subperiods_no_cash_flows",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L111",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_138",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_twr_neutralises_cash_flow_timing_bias",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L138",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_172",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_single_subperiod_annualisation",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L172",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_192",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_negative_return_sub_period",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L192",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_215",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_empty_subperiods_raises_value_error",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L215",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_220",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_out_of_order_raises_value_error",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L220",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_twr_rationale_237",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_many_subperiods_chain_link_precision",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L237",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": [
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_no_cash_flows_simple_return",
+      "callee": "_modified_dietz",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L32",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_no_cash_flows_simple_return",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L36",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_no_cash_flows_simple_return",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L37",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_no_cash_flows_simple_return",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L39",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_single_deposit_midperiod",
+      "callee": "CashFlowEvent",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L50",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_single_deposit_midperiod",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L50",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_single_deposit_midperiod",
+      "callee": "_modified_dietz",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L51",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_single_deposit_midperiod",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L55",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_single_deposit_midperiod",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L56",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_single_deposit_midperiod",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L59",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_zero_denominator_returns_zero",
+      "callee": "_modified_dietz",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L66",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_zero_denominator_returns_zero",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L70",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_zero_denominator_returns_zero",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L71",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_end_before_start_raises_value_error",
+      "callee": "raises",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L77",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_end_before_start_raises_value_error",
+      "callee": "ValueError",
+      "is_member_call": false,
+      "indirect": true,
+      "context": "argument",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L77"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_end_before_start_raises_value_error",
+      "callee": "_modified_dietz",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L78",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_end_before_start_raises_value_error",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L82",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_end_before_start_raises_value_error",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L83",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_withdrawal_reduces_denominator",
+      "callee": "CashFlowEvent",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L96",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_withdrawal_reduces_denominator",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L96",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_withdrawal_reduces_denominator",
+      "callee": "_modified_dietz",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L97",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_withdrawal_reduces_denominator",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L101",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_withdrawal_reduces_denominator",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L102",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testmodifieddietz_test_withdrawal_reduces_denominator",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L104",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_two_subperiods_no_cash_flows",
+      "callee": "SubPeriod",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L116",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_two_subperiods_no_cash_flows",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L117",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_two_subperiods_no_cash_flows",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L118",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_two_subperiods_no_cash_flows",
+      "callee": "SubPeriod",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L123",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_two_subperiods_no_cash_flows",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L124",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_two_subperiods_no_cash_flows",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L125",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_two_subperiods_no_cash_flows",
+      "callee": "compute_twr",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L130",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_two_subperiods_no_cash_flows",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L131",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_two_subperiods_no_cash_flows",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L134",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_two_subperiods_no_cash_flows",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L135",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_twr_neutralises_cash_flow_timing_bias",
+      "callee": "SubPeriod",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L152",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_twr_neutralises_cash_flow_timing_bias",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L153",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_twr_neutralises_cash_flow_timing_bias",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L154",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_twr_neutralises_cash_flow_timing_bias",
+      "callee": "SubPeriod",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L159",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_twr_neutralises_cash_flow_timing_bias",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L160",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_twr_neutralises_cash_flow_timing_bias",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L161",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_twr_neutralises_cash_flow_timing_bias",
+      "callee": "compute_twr",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L166",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_twr_neutralises_cash_flow_timing_bias",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L167",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_twr_neutralises_cash_flow_timing_bias",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L168",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_twr_neutralises_cash_flow_timing_bias",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L169",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_single_subperiod_annualisation",
+      "callee": "SubPeriod",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L177",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_single_subperiod_annualisation",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L178",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_single_subperiod_annualisation",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L179",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_single_subperiod_annualisation",
+      "callee": "compute_twr",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L184",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_single_subperiod_annualisation",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L185",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_single_subperiod_annualisation",
+      "callee": "pow",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L188",
+      "receiver": "math"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_single_subperiod_annualisation",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L189",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_negative_return_sub_period",
+      "callee": "SubPeriod",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L197",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_negative_return_sub_period",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L198",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_negative_return_sub_period",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L199",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_negative_return_sub_period",
+      "callee": "SubPeriod",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L204",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_negative_return_sub_period",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L205",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_negative_return_sub_period",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L206",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_negative_return_sub_period",
+      "callee": "compute_twr",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L211",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_negative_return_sub_period",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L212",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_empty_subperiods_raises_value_error",
+      "callee": "raises",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L216",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_empty_subperiods_raises_value_error",
+      "callee": "ValueError",
+      "is_member_call": false,
+      "indirect": true,
+      "context": "argument",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L216"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_empty_subperiods_raises_value_error",
+      "callee": "compute_twr",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L217",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_out_of_order_raises_value_error",
+      "callee": "SubPeriod",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L221",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_out_of_order_raises_value_error",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L222",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_out_of_order_raises_value_error",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L223",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_out_of_order_raises_value_error",
+      "callee": "SubPeriod",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L227",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_out_of_order_raises_value_error",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L228",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_out_of_order_raises_value_error",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L229",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_out_of_order_raises_value_error",
+      "callee": "raises",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L233",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_out_of_order_raises_value_error",
+      "callee": "ValueError",
+      "is_member_call": false,
+      "indirect": true,
+      "context": "argument",
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L233"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_out_of_order_raises_value_error",
+      "callee": "compute_twr",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L234",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_many_subperiods_chain_link_precision",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L242",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_many_subperiods_chain_link_precision",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L242",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_many_subperiods_chain_link_precision",
+      "callee": "date",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L242",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_many_subperiods_chain_link_precision",
+      "callee": "SubPeriod",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L246",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_many_subperiods_chain_link_precision",
+      "callee": "compute_twr",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L255",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_many_subperiods_chain_link_precision",
+      "callee": "pow",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L256",
+      "receiver": "math"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_twr_testcomputetwr_test_many_subperiods_chain_link_precision",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_twr.py",
+      "source_location": "L257",
+      "receiver": "pytest"
+    }
+  ]
+}

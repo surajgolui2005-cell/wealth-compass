@@ -1,0 +1,534 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_py",
+      "label": "performance.py",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_cashflowitem",
+      "label": "CashFlowItem",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L21",
+      "_callable": true,
+      "_callable_class": true
+    },
+    {
+      "id": "basemodel",
+      "label": "BaseModel",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "origin_file": "$graphify-root$/apps/quant-engine/src/app/schemas/performance.py"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_subperioditem",
+      "label": "SubPeriodItem",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L37",
+      "_callable": true,
+      "_callable_class": true
+    },
+    {
+      "id": "model_validator",
+      "label": "model_validator",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "origin_file": "$graphify-root$/apps/quant-engine/src/app/schemas/performance.py"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_subperioditem_validate_dates",
+      "label": ".validate_dates()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L50",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_twrrequest",
+      "label": "TwrRequest",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L58",
+      "_callable": true,
+      "_callable_class": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_twrresponse",
+      "label": "TwrResponse",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L68",
+      "_callable": true,
+      "_callable_class": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_xirrrequest",
+      "label": "XirrRequest",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L94",
+      "_callable": true,
+      "_callable_class": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_xirrresponse",
+      "label": "XirrResponse",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L110",
+      "_callable": true,
+      "_callable_class": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_xirrfallbackresponse",
+      "label": "XirrFallbackResponse",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L130",
+      "_callable": true,
+      "_callable_class": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_benchmarkrequest",
+      "label": "BenchmarkRequest",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L143",
+      "_callable": true,
+      "_callable_class": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_benchmarkrequest_validate_series_lengths",
+      "label": ".validate_series_lengths()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L167",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_benchmarkresponse",
+      "label": "BenchmarkResponse",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L176",
+      "_callable": true,
+      "_callable_class": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_rationale_1",
+      "label": "Pydantic request/response schemas for the performance analytics router. All\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_rationale_22",
+      "label": "A single dated cash flow for XIRR/TWR computation.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L22"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_rationale_38",
+      "label": "One sub-period in the TWR calculation (bounded by cash-flow break points).",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L38"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_rationale_59",
+      "label": "Request body for the TWR computation endpoint.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L59"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_rationale_69",
+      "label": "Time-Weighted Return computation result.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L69"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_rationale_95",
+      "label": "Request body for the XIRR computation endpoint.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L95"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_rationale_111",
+      "label": "XIRR computation result.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L111"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_rationale_131",
+      "label": "Returned when XIRR fails to converge (both solvers exhausted).",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L131"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_rationale_144",
+      "label": "Request body for the benchmark metrics endpoint.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L144"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_rationale_177",
+      "label": "Full benchmark comparison metrics response.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L177"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_py",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_py",
+      "target": "typing",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_py",
+      "target": "pydantic",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_py",
+      "target": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_cashflowitem",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_cashflowitem",
+      "target": "basemodel",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_py",
+      "target": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_subperioditem",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_subperioditem",
+      "target": "basemodel",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_subperioditem_validate_dates",
+      "target": "model_validator",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L49",
+      "weight": 1.0,
+      "context": "decorator"
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_subperioditem",
+      "target": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_subperioditem_validate_dates",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_py",
+      "target": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_twrrequest",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_twrrequest",
+      "target": "basemodel",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L58",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_py",
+      "target": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_twrresponse",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_twrresponse",
+      "target": "basemodel",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_py",
+      "target": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_xirrrequest",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_xirrrequest",
+      "target": "basemodel",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_py",
+      "target": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_xirrresponse",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L110",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_xirrresponse",
+      "target": "basemodel",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L110",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_py",
+      "target": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_xirrfallbackresponse",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L130",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_xirrfallbackresponse",
+      "target": "basemodel",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L130",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_py",
+      "target": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_benchmarkrequest",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L143",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_benchmarkrequest",
+      "target": "basemodel",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L143",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_benchmarkrequest_validate_series_lengths",
+      "target": "model_validator",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L166",
+      "weight": 1.0,
+      "context": "decorator"
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_benchmarkrequest",
+      "target": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_benchmarkrequest_validate_series_lengths",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L167",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_py",
+      "target": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_benchmarkresponse",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L176",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_benchmarkresponse",
+      "target": "basemodel",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L176",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_rationale_1",
+      "target": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_rationale_22",
+      "target": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_cashflowitem",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_rationale_38",
+      "target": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_subperioditem",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_rationale_59",
+      "target": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_twrrequest",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_rationale_69",
+      "target": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_twrresponse",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_rationale_95",
+      "target": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_xirrrequest",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L95",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_rationale_111",
+      "target": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_xirrresponse",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L111",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_rationale_131",
+      "target": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_xirrfallbackresponse",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_rationale_144",
+      "target": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_benchmarkrequest",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L144",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_rationale_177",
+      "target": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_benchmarkresponse",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L177",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": [
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_subperioditem_validate_dates",
+      "callee": "ValueError",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L52",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_app_schemas_performance_benchmarkrequest_validate_series_lengths",
+      "callee": "ValueError",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/src/app/schemas/performance.py",
+      "source_location": "L169",
+      "receiver": null
+    }
+  ]
+}

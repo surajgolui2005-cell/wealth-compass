@@ -1,0 +1,688 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_py",
+      "label": "test_performance_twr.py",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_post",
+      "label": "_post()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L22",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath",
+      "label": "TestTwrRouterHappyPath",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L27",
+      "_callable": true,
+      "_callable_class": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_two_equal_subperiods_21pct",
+      "label": ".test_two_equal_subperiods_21pct()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L30",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_cash_flow_timing_neutralisation",
+      "label": ".test_cash_flow_timing_neutralisation()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L63",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_negative_return_sub_period",
+      "label": ".test_negative_return_sub_period()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L94",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_annualised_twr_returned",
+      "label": ".test_annualised_twr_returned()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L122",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_intraperiod_deposit_weighted_correctly",
+      "label": ".test_intraperiod_deposit_weighted_correctly()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L144",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_response_contains_all_fields",
+      "label": ".test_response_contains_all_fields()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L169",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrroutervalidation",
+      "label": "TestTwrRouterValidation",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L193",
+      "_callable": true,
+      "_callable_class": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrroutervalidation_test_empty_sub_periods_returns_422",
+      "label": ".test_empty_sub_periods_returns_422()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L196",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrroutervalidation_test_end_before_start_returns_400",
+      "label": ".test_end_before_start_returns_400()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L202",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrroutervalidation_test_missing_portfolio_id_returns_422",
+      "label": ".test_missing_portfolio_id_returns_422()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L219",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_1",
+      "label": "Integration tests for POST /api/v1/performance/twr\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_28",
+      "label": "Verify correct TWR computation through the HTTP layer.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L28"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_31",
+      "label": "Two sub-periods each returning 10%. TWR = (1.10 \u00d7 1.10) - 1 = 21%",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L31"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_64",
+      "label": "Deposit absorbed into BMV of second sub-period. SP1: 100 \u2192 150 (50% return)\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L64"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_95",
+      "label": "Loss sub-period followed by recovery: (-20% \u00d7 +30%) = 4% cumulative.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L95"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_123",
+      "label": "twr_annualised must be non-None for multi-day windows.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L123"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_145",
+      "label": "Single sub-period with a mid-period deposit. BMV=100, EMV=215, deposit 100 on\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L145"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_170",
+      "label": "Ensure all expected response fields are present.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L170"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_194",
+      "label": "Verify 400 responses for bad inputs.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L194"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_197",
+      "label": "Pydantic min_length=1 on sub_periods \u2192 422 Unprocessable Entity.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L197"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_203",
+      "label": "Sub-period with end_date < start_date must return 400 or 422.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L203"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_220",
+      "label": "portfolio_id is required.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L220"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_py",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_py",
+      "target": "pytest",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_py",
+      "target": "fastapi_testclient",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_py",
+      "target": "src_main",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_py",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_post",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_py",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_two_equal_subperiods_21pct",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_cash_flow_timing_neutralisation",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_negative_return_sub_period",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_annualised_twr_returned",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L122",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_intraperiod_deposit_weighted_correctly",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L144",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_response_contains_all_fields",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L169",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_py",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrroutervalidation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L193",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrroutervalidation",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrroutervalidation_test_empty_sub_periods_returns_422",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L196",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrroutervalidation",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrroutervalidation_test_end_before_start_returns_400",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L202",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrroutervalidation",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrroutervalidation_test_missing_portfolio_id_returns_422",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L219",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_two_equal_subperiods_21pct",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_cash_flow_timing_neutralisation",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_negative_return_sub_period",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L115",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_annualised_twr_returned",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L136",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_intraperiod_deposit_weighted_correctly",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L164",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_response_contains_all_fields",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L183",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrroutervalidation_test_empty_sub_periods_returns_422",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L199",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrroutervalidation_test_end_before_start_returns_400",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L216",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrroutervalidation_test_missing_portfolio_id_returns_422",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L232",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_1",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_28",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_31",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_two_equal_subperiods_21pct",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_64",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_cash_flow_timing_neutralisation",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_95",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_negative_return_sub_period",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L95",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_123",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_annualised_twr_returned",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_145",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_intraperiod_deposit_weighted_correctly",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_170",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_response_contains_all_fields",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L170",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_194",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrroutervalidation",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L194",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_197",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrroutervalidation_test_empty_sub_periods_returns_422",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L197",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_203",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrroutervalidation_test_end_before_start_returns_400",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L203",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_rationale_220",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrroutervalidation_test_missing_portfolio_id_returns_422",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L220",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": [
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_post",
+      "callee": "post",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L23",
+      "receiver": "client"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_post",
+      "callee": "URL",
+      "is_member_call": false,
+      "indirect": true,
+      "context": "argument",
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L23"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_two_equal_subperiods_21pct",
+      "callee": "json",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L56",
+      "receiver": "resp"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_two_equal_subperiods_21pct",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L58",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_two_equal_subperiods_21pct",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L59",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_cash_flow_timing_neutralisation",
+      "callee": "json",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L91",
+      "receiver": "resp"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_cash_flow_timing_neutralisation",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L92",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_negative_return_sub_period",
+      "callee": "json",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L117",
+      "receiver": "resp"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_negative_return_sub_period",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L118",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_negative_return_sub_period",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L119",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_negative_return_sub_period",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L120",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_annualised_twr_returned",
+      "callee": "json",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L138",
+      "receiver": "resp"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_annualised_twr_returned",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L142",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_intraperiod_deposit_weighted_correctly",
+      "callee": "json",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L166",
+      "receiver": "resp"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_intraperiod_deposit_weighted_correctly",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L167",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_response_contains_all_fields",
+      "callee": "json",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L184",
+      "receiver": "resp"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_response_contains_all_fields",
+      "callee": "issubset",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L190",
+      "receiver": "required_fields"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_twr_testtwrrouterhappypath_test_response_contains_all_fields",
+      "callee": "keys",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_twr.py",
+      "source_location": "L190",
+      "receiver": "data"
+    }
+  ]
+}

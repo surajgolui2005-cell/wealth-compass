@@ -1,0 +1,483 @@
+{
+  "nodes": [
+    {
+      "id": "docs_adr_0006_mobile_framework_doc",
+      "label": "0006-mobile-framework.md",
+      "file_type": "document",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0006_mobile_framework_adr_0006__mobile_framework",
+      "label": "ADR-0006: Mobile Framework",
+      "file_type": "concept",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0006_mobile_framework_context",
+      "label": "Context",
+      "file_type": "concept",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0006_mobile_framework_mobile_feature_requirements",
+      "label": "Mobile Feature Requirements",
+      "file_type": "concept",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0006_mobile_framework_organizational_constraints",
+      "label": "Organizational Constraints",
+      "file_type": "concept",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0006_mobile_framework_decision",
+      "label": "Decision",
+      "file_type": "concept",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0006_mobile_framework_options_considered",
+      "label": "Options Considered",
+      "file_type": "concept",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0006_mobile_framework_option_a__react_native___expo__selected",
+      "label": "Option A: React Native + Expo (Selected)",
+      "file_type": "concept",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0006_mobile_framework_option_b__flutter__dart",
+      "label": "Option B: Flutter (Dart)",
+      "file_type": "concept",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0006_mobile_framework_option_c__swift__ios__and_kotlin__android__dual_native",
+      "label": "Option C: Swift (iOS) and Kotlin (Android) Dual Native",
+      "file_type": "concept",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0006_mobile_framework_option_d__progressive_web_application__pwa__only",
+      "label": "Option D: Progressive Web Application (PWA) Only",
+      "file_type": "concept",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0006_mobile_framework_consequences",
+      "label": "Consequences",
+      "file_type": "concept",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0006_mobile_framework_positive",
+      "label": "Positive",
+      "file_type": "concept",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0006_mobile_framework_negative___trade_offs",
+      "label": "Negative / Trade-offs",
+      "file_type": "concept",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0006_mobile_framework_neutral",
+      "label": "Neutral",
+      "file_type": "concept",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0006_mobile_framework_compliance_check",
+      "label": "Compliance Check",
+      "file_type": "concept",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "docs_adr_0006_mobile_framework_doc",
+      "target": "docs_adr_0006_mobile_framework_adr_0006__mobile_framework",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_doc",
+      "target": "docs_adr_0006_mobile_framework_context",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_adr_0006__mobile_framework",
+      "target": "docs_adr_0006_mobile_framework_context",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_doc",
+      "target": "docs_adr_0006_mobile_framework_mobile_feature_requirements",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_context",
+      "target": "docs_adr_0006_mobile_framework_mobile_feature_requirements",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_doc",
+      "target": "docs_adr_0006_mobile_framework_organizational_constraints",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_mobile_feature_requirements",
+      "target": "docs_adr_0006_mobile_framework_organizational_constraints",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_doc",
+      "target": "docs_adr_0006_mobile_framework_decision",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_organizational_constraints",
+      "target": "docs_adr_0006_mobile_framework_decision",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_doc",
+      "target": "docs_adr_0006_mobile_framework_options_considered",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_decision",
+      "target": "docs_adr_0006_mobile_framework_options_considered",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_doc",
+      "target": "docs_adr_0006_mobile_framework_option_a__react_native___expo__selected",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_options_considered",
+      "target": "docs_adr_0006_mobile_framework_option_a__react_native___expo__selected",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_doc",
+      "target": "docs_adr_0006_mobile_framework_option_b__flutter__dart",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_option_a__react_native___expo__selected",
+      "target": "docs_adr_0006_mobile_framework_option_b__flutter__dart",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_doc",
+      "target": "docs_adr_0006_mobile_framework_option_c__swift__ios__and_kotlin__android__dual_native",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_option_b__flutter__dart",
+      "target": "docs_adr_0006_mobile_framework_option_c__swift__ios__and_kotlin__android__dual_native",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_doc",
+      "target": "docs_adr_0006_mobile_framework_option_d__progressive_web_application__pwa__only",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_option_c__swift__ios__and_kotlin__android__dual_native",
+      "target": "docs_adr_0006_mobile_framework_option_d__progressive_web_application__pwa__only",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_doc",
+      "target": "docs_adr_0006_mobile_framework_consequences",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_option_d__progressive_web_application__pwa__only",
+      "target": "docs_adr_0006_mobile_framework_consequences",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_doc",
+      "target": "docs_adr_0006_mobile_framework_positive",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_consequences",
+      "target": "docs_adr_0006_mobile_framework_positive",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_doc",
+      "target": "docs_adr_0006_mobile_framework_negative___trade_offs",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_positive",
+      "target": "docs_adr_0006_mobile_framework_negative___trade_offs",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_doc",
+      "target": "docs_adr_0006_mobile_framework_neutral",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_negative___trade_offs",
+      "target": "docs_adr_0006_mobile_framework_neutral",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_doc",
+      "target": "docs_adr_0006_mobile_framework_compliance_check",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_neutral",
+      "target": "docs_adr_0006_mobile_framework_compliance_check",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0006_mobile_framework_doc",
+      "target": "docs_adr_0006_mobile_framework_decision",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": []
+}

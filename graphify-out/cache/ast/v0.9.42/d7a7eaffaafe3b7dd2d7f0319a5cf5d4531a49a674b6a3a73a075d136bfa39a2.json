@@ -1,0 +1,121 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_main_py",
+      "label": "main.py",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/main.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "get",
+      "label": "get",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "origin_file": "$graphify-root$/apps/quant-engine/src/main.py"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_main_health_check",
+      "label": "health_check()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/main.py",
+      "source_location": "L49",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_main_rationale_1",
+      "label": "Quant Engine \u2014 FastAPI Application Entry Point\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/main.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_main_rationale_50",
+      "label": "Liveness probe for container orchestration.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/main.py",
+      "source_location": "L50"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_main_py",
+      "target": "logging",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/main.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_main_py",
+      "target": "fastapi",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/main.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_main_py",
+      "target": "fastapi_middleware_cors",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/main.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_main_py",
+      "target": "src_app_routers_performance",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/main.py",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_main_health_check",
+      "target": "get",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/main.py",
+      "source_location": "L48",
+      "weight": 1.0,
+      "context": "decorator"
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_main_py",
+      "target": "$graphify-root$_apps_quant_engine_src_main_health_check",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/main.py",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_main_rationale_1",
+      "target": "$graphify-root$_apps_quant_engine_src_main_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/main.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_main_rationale_50",
+      "target": "$graphify-root$_apps_quant_engine_src_main_health_check",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/main.py",
+      "source_location": "L50",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": []
+}

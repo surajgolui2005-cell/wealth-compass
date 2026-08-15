@@ -1,0 +1,544 @@
+{
+  "nodes": [
+    {
+      "id": "project_state_doc",
+      "label": "PROJECT_STATE.md",
+      "file_type": "document",
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "project_state_project_state___investor_portfolio_monitoring___risk_management_system",
+      "label": "Project State \u2014 Investor Portfolio Monitoring & Risk Management System",
+      "file_type": "concept",
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "project_state_phase_completion_tracker",
+      "label": "Phase Completion Tracker",
+      "file_type": "concept",
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "project_state_phase_1___product_discovery__complete",
+      "label": "Phase 1 \u2014 Product Discovery (COMPLETE)",
+      "file_type": "concept",
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "project_state_summary",
+      "label": "Summary",
+      "file_type": "concept",
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "project_state_deliverables_produced",
+      "label": "Deliverables Produced",
+      "file_type": "concept",
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "project_state_key_decisions_made_in_phase_1",
+      "label": "Key Decisions Made in Phase 1",
+      "file_type": "concept",
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "project_state_phase_2___product_requirements_document__complete",
+      "label": "Phase 2 \u2014 Product Requirements Document (COMPLETE)",
+      "file_type": "concept",
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "project_state_prd_statistics",
+      "label": "PRD Statistics",
+      "file_type": "concept",
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "project_state_story_count_by_epic",
+      "label": "Story Count by Epic",
+      "file_type": "concept",
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "project_state_financial_edge_cases_formally_specified",
+      "label": "Financial Edge Cases Formally Specified",
+      "file_type": "concept",
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "project_state_open_questions_for_phase_3__architecture____all_resolved",
+      "label": "Open Questions for Phase 3 (Architecture) \u2014 ALL RESOLVED",
+      "file_type": "concept",
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "project_state_open_questions_for_phase_2__resolved___carried_forward",
+      "label": "Open Questions for Phase 2 (resolved / carried forward)",
+      "file_type": "concept",
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "project_state_asset_class_tracking",
+      "label": "Asset Class Tracking",
+      "file_type": "concept",
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "project_state_architecture_snapshot__phase_1_assumptions",
+      "label": "Architecture Snapshot (Phase 1 Assumptions)",
+      "file_type": "concept",
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "project_state_document_registry",
+      "label": "Document Registry",
+      "file_type": "concept",
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "project_state_changelog",
+      "label": "Changelog",
+      "file_type": "concept",
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "project_state_doc",
+      "target": "project_state_project_state___investor_portfolio_monitoring___risk_management_system",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_doc",
+      "target": "project_state_phase_completion_tracker",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_project_state___investor_portfolio_monitoring___risk_management_system",
+      "target": "project_state_phase_completion_tracker",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_doc",
+      "target": "project_state_phase_1___product_discovery__complete",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_phase_completion_tracker",
+      "target": "project_state_phase_1___product_discovery__complete",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_doc",
+      "target": "project_state_summary",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_phase_1___product_discovery__complete",
+      "target": "project_state_summary",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_doc",
+      "target": "project_state_deliverables_produced",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_summary",
+      "target": "project_state_deliverables_produced",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_doc",
+      "target": "project_state_key_decisions_made_in_phase_1",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_deliverables_produced",
+      "target": "project_state_key_decisions_made_in_phase_1",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_doc",
+      "target": "project_state_phase_2___product_requirements_document__complete",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_key_decisions_made_in_phase_1",
+      "target": "project_state_phase_2___product_requirements_document__complete",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_doc",
+      "target": "project_state_summary",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_phase_2___product_requirements_document__complete",
+      "target": "project_state_summary",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_doc",
+      "target": "project_state_deliverables_produced",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_summary",
+      "target": "project_state_deliverables_produced",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_doc",
+      "target": "project_state_prd_statistics",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_deliverables_produced",
+      "target": "project_state_prd_statistics",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_doc",
+      "target": "project_state_story_count_by_epic",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_prd_statistics",
+      "target": "project_state_story_count_by_epic",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_doc",
+      "target": "project_state_financial_edge_cases_formally_specified",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_story_count_by_epic",
+      "target": "project_state_financial_edge_cases_formally_specified",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_doc",
+      "target": "project_state_open_questions_for_phase_3__architecture____all_resolved",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_financial_edge_cases_formally_specified",
+      "target": "project_state_open_questions_for_phase_3__architecture____all_resolved",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_doc",
+      "target": "project_state_open_questions_for_phase_2__resolved___carried_forward",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_open_questions_for_phase_3__architecture____all_resolved",
+      "target": "project_state_open_questions_for_phase_2__resolved___carried_forward",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_doc",
+      "target": "project_state_asset_class_tracking",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_open_questions_for_phase_2__resolved___carried_forward",
+      "target": "project_state_asset_class_tracking",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_doc",
+      "target": "project_state_architecture_snapshot__phase_1_assumptions",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_asset_class_tracking",
+      "target": "project_state_architecture_snapshot__phase_1_assumptions",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_doc",
+      "target": "project_state_document_registry",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_architecture_snapshot__phase_1_assumptions",
+      "target": "project_state_document_registry",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_doc",
+      "target": "project_state_changelog",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "project_state_document_registry",
+      "target": "project_state_changelog",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "PROJECT_STATE.md",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": []
+}

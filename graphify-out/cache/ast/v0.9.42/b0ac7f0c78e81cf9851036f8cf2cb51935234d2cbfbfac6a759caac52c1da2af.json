@@ -1,0 +1,375 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_twr_py",
+      "label": "twr.py",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_twr_cashflowevent",
+      "label": "CashFlowEvent",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L59",
+      "_callable": true,
+      "_callable_class": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_twr_subperiod",
+      "label": "SubPeriod",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L76",
+      "_callable": true,
+      "_callable_class": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_twr_twrresult",
+      "label": "TwrResult",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L107",
+      "_callable": true,
+      "_callable_class": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_twr_modified_dietz",
+      "label": "_modified_dietz()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L135",
+      "_callable": true
+    },
+    {
+      "id": "date",
+      "label": "date",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "origin_file": "$graphify-root$/apps/quant-engine/src/analytics/twr.py"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_twr_compute_twr",
+      "label": "compute_twr()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L207",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_twr_rationale_1",
+      "label": "Time-Weighted Return (TWR) \u2014 Sub-Period Compounding Engine\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_twr_rationale_60",
+      "label": "An external cash flow event within a sub-period. Attributes ---------- date:\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L60"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_twr_rationale_77",
+      "label": "A single measurement sub-period bracketed by external cash flow events.\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L77"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_twr_rationale_108",
+      "label": "Output of the TWR computation. Attributes ---------- twr_cumulative: Cumulative\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L108"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_twr_rationale_142",
+      "label": "Computes the Modified Dietz return for a single sub-period. Formula: R = (EMV -\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L142"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_src_analytics_twr_rationale_208",
+      "label": "Computes the Time-Weighted Return (TWR) via sub-period chain-linking. The\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L208"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_twr_py",
+      "target": "math",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_twr_py",
+      "target": "dataclasses",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_twr_py",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_twr_py",
+      "target": "typing",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_twr_py",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_twr_cashflowevent",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_twr_py",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_twr_subperiod",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_twr_py",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_twr_twrresult",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_twr_py",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_twr_modified_dietz",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L135",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_twr_modified_dietz",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_twr_cashflowevent",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L135",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_twr_modified_dietz",
+      "target": "date",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L135",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_twr_modified_dietz",
+      "target": "date",
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L135",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_twr_py",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_twr_compute_twr",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L207",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_twr_compute_twr",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_twr_subperiod",
+      "relation": "references",
+      "context": "generic_arg",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L207",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_twr_compute_twr",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_twr_twrresult",
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L207",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_twr_compute_twr",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_twr_modified_dietz",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L276",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_twr_compute_twr",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_twr_twrresult",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L297",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_twr_rationale_1",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_twr_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_twr_rationale_60",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_twr_cashflowevent",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_twr_rationale_77",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_twr_subperiod",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_twr_rationale_108",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_twr_twrresult",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_twr_rationale_142",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_twr_modified_dietz",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L142",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_src_analytics_twr_rationale_208",
+      "target": "$graphify-root$_apps_quant_engine_src_analytics_twr_compute_twr",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L208",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": [
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_twr_modified_dietz",
+      "callee": "ValueError",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L177",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_twr_compute_twr",
+      "callee": "ValueError",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L260",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_twr_compute_twr",
+      "callee": "ValueError",
+      "is_member_call": false,
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L266",
+      "receiver": null
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_twr_compute_twr",
+      "callee": "append",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L283",
+      "receiver": "sub_period_returns"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_twr_compute_twr",
+      "callee": "pow",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L293",
+      "receiver": "math"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_twr_compute_twr",
+      "callee": "ValueError",
+      "is_member_call": false,
+      "indirect": true,
+      "context": "collection",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L294"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_src_analytics_twr_compute_twr",
+      "callee": "ZeroDivisionError",
+      "is_member_call": false,
+      "indirect": true,
+      "context": "collection",
+      "source_file": "apps/quant-engine/src/analytics/twr.py",
+      "source_location": "L294"
+    }
+  ]
+}

@@ -1,0 +1,421 @@
+{
+  "nodes": [
+    {
+      "id": "docs_adr_0004_database_and_orm_doc",
+      "label": "0004-database-and-orm.md",
+      "file_type": "document",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0004_database_and_orm_adr_0004__database_and_orm",
+      "label": "ADR-0004: Database and ORM",
+      "file_type": "concept",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0004_database_and_orm_context",
+      "label": "Context",
+      "file_type": "concept",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0004_database_and_orm_technical_and_domain_requirements",
+      "label": "Technical and Domain Requirements",
+      "file_type": "concept",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0004_database_and_orm_decision",
+      "label": "Decision",
+      "file_type": "concept",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0004_database_and_orm_options_considered",
+      "label": "Options Considered",
+      "file_type": "concept",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0004_database_and_orm_option_a__postgresql_16___timescaledb___typeorm__selected",
+      "label": "Option A: PostgreSQL 16 + TimescaleDB + TypeORM (Selected)",
+      "file_type": "concept",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0004_database_and_orm_option_b__mongodb___mongoose__nosql_alternative",
+      "label": "Option B: MongoDB + Mongoose (NoSQL Alternative)",
+      "file_type": "concept",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0004_database_and_orm_option_c__postgresql___prisma_orm",
+      "label": "Option C: PostgreSQL + Prisma ORM",
+      "file_type": "concept",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0004_database_and_orm_option_d__postgresql___raw_sql___knex_js__sql_builder",
+      "label": "Option D: PostgreSQL + Raw SQL / Knex.js (SQL Builder)",
+      "file_type": "concept",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0004_database_and_orm_consequences",
+      "label": "Consequences",
+      "file_type": "concept",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0004_database_and_orm_positive",
+      "label": "Positive",
+      "file_type": "concept",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0004_database_and_orm_negative___trade_offs",
+      "label": "Negative / Trade-offs",
+      "file_type": "concept",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0004_database_and_orm_compliance_check",
+      "label": "Compliance Check",
+      "file_type": "concept",
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "docs_adr_0004_database_and_orm_doc",
+      "target": "docs_adr_0004_database_and_orm_adr_0004__database_and_orm",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_doc",
+      "target": "docs_adr_0004_database_and_orm_context",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_adr_0004__database_and_orm",
+      "target": "docs_adr_0004_database_and_orm_context",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_doc",
+      "target": "docs_adr_0004_database_and_orm_technical_and_domain_requirements",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_context",
+      "target": "docs_adr_0004_database_and_orm_technical_and_domain_requirements",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_doc",
+      "target": "docs_adr_0004_database_and_orm_decision",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_technical_and_domain_requirements",
+      "target": "docs_adr_0004_database_and_orm_decision",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_doc",
+      "target": "docs_adr_0004_database_and_orm_options_considered",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_decision",
+      "target": "docs_adr_0004_database_and_orm_options_considered",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_doc",
+      "target": "docs_adr_0004_database_and_orm_option_a__postgresql_16___timescaledb___typeorm__selected",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_options_considered",
+      "target": "docs_adr_0004_database_and_orm_option_a__postgresql_16___timescaledb___typeorm__selected",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_doc",
+      "target": "docs_adr_0004_database_and_orm_option_b__mongodb___mongoose__nosql_alternative",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_option_a__postgresql_16___timescaledb___typeorm__selected",
+      "target": "docs_adr_0004_database_and_orm_option_b__mongodb___mongoose__nosql_alternative",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_doc",
+      "target": "docs_adr_0004_database_and_orm_option_c__postgresql___prisma_orm",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_option_b__mongodb___mongoose__nosql_alternative",
+      "target": "docs_adr_0004_database_and_orm_option_c__postgresql___prisma_orm",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_doc",
+      "target": "docs_adr_0004_database_and_orm_option_d__postgresql___raw_sql___knex_js__sql_builder",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_option_c__postgresql___prisma_orm",
+      "target": "docs_adr_0004_database_and_orm_option_d__postgresql___raw_sql___knex_js__sql_builder",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_doc",
+      "target": "docs_adr_0004_database_and_orm_consequences",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_option_d__postgresql___raw_sql___knex_js__sql_builder",
+      "target": "docs_adr_0004_database_and_orm_consequences",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_doc",
+      "target": "docs_adr_0004_database_and_orm_positive",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_consequences",
+      "target": "docs_adr_0004_database_and_orm_positive",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_doc",
+      "target": "docs_adr_0004_database_and_orm_negative___trade_offs",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_positive",
+      "target": "docs_adr_0004_database_and_orm_negative___trade_offs",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_doc",
+      "target": "docs_adr_0004_database_and_orm_compliance_check",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_negative___trade_offs",
+      "target": "docs_adr_0004_database_and_orm_compliance_check",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0004_database_and_orm_doc",
+      "target": "docs_adr_0004_database_and_orm_decision",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0004-database-and-orm.md",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": []
+}

@@ -1,0 +1,1153 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_py",
+      "label": "test_performance_benchmark.py",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_post",
+      "label": "_post()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L23",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_build_payload",
+      "label": "_build_payload()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L27",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath",
+      "label": "TestBenchmarkRouterHappyPath",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L43",
+      "_callable": true,
+      "_callable_class": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_status_200_on_valid_input",
+      "label": ".test_status_200_on_valid_input()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L50",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_portfolio_id_and_benchmark_id_echoed",
+      "label": ".test_portfolio_id_and_benchmark_id_echoed()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L54",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_beta_greater_than_one_for_higher_vol_portfolio",
+      "label": ".test_beta_greater_than_one_for_higher_vol_portfolio()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L60",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_correlation_in_valid_range",
+      "label": ".test_correlation_in_valid_range()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L65",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_perfectly_correlated_series_beta_one",
+      "label": ".test_perfectly_correlated_series_beta_one()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L70",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_sharpe_positive_for_rising_portfolio",
+      "label": ".test_sharpe_positive_for_rising_portfolio()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L81",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_n_observations_correct",
+      "label": ".test_n_observations_correct()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L88",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_risk_free_rate_echoed_as_pct",
+      "label": ".test_risk_free_rate_echoed_as_pct()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L93",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_volatilities_are_positive",
+      "label": ".test_volatilities_are_positive()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L97",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_beta_matches_numpy_reference",
+      "label": ".test_beta_matches_numpy_reference()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L103",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_pct_fields_are_100x_decimal_fields",
+      "label": ".test_pct_fields_are_100x_decimal_fields()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L118",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_all_response_fields_present",
+      "label": ".test_all_response_fields_present()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L129",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation",
+      "label": "TestBenchmarkRouterValidation",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L143",
+      "_callable": true,
+      "_callable_class": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation_test_mismatched_series_lengths_returns_422",
+      "label": ".test_mismatched_series_lengths_returns_422()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L146",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation_test_too_few_observations_returns_400",
+      "label": ".test_too_few_observations_returns_400()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L156",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation_test_missing_benchmark_id_returns_422",
+      "label": ".test_missing_benchmark_id_returns_422()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L161",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation_test_rf_out_of_range_returns_422",
+      "label": ".test_rf_out_of_range_returns_422()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L170",
+      "_callable": true
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_1",
+      "label": "Integration tests for POST /api/v1/performance/benchmark\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_44",
+      "label": "Verify correct benchmark metrics through the HTTP layer.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L44"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_61",
+      "label": "Portfolio more volatile than benchmark \u2192 \u03b2 > 1.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L61"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_71",
+      "label": "Identical series \u2192 \u03b2=1, \u03c1=1, \u03b1\u22480, TE=0.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L71"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_82",
+      "label": "Monotonically rising portfolio with rf=0 \u2192 positive Sharpe.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L82"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_89",
+      "label": "n_observations = len(price series) - 1.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L89"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_104",
+      "label": "Manual \u03b2 verification: \u03b2 = Cov(r_p, r_b) / Var(r_b) computed via NumPy and\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L104"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_119",
+      "label": "alpha_annualised_pct must equal alpha_annualised \u00d7 100.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L119"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_144",
+      "label": "Verify 400/422 responses for invalid inputs.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L144"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_147",
+      "label": "Unequal length series \u2192 Pydantic model_validator \u2192 422.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L147"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_157",
+      "label": "Two prices (one return) \u2192 insufficient for statistics \u2192 400.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L157"
+    },
+    {
+      "id": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_171",
+      "label": "risk_free_rate_annual must be in [0, 1].",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L171"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_py",
+      "target": "math",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_py",
+      "target": "numpy",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "local_alias": "np"
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_py",
+      "target": "pytest",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_py",
+      "target": "fastapi_testclient",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_py",
+      "target": "src_main",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_py",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_post",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_py",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_build_payload",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_py",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_status_200_on_valid_input",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_portfolio_id_and_benchmark_id_echoed",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_beta_greater_than_one_for_higher_vol_portfolio",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_correlation_in_valid_range",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_perfectly_correlated_series_beta_one",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_sharpe_positive_for_rising_portfolio",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_n_observations_correct",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_risk_free_rate_echoed_as_pct",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L93",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_volatilities_are_positive",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L97",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_beta_matches_numpy_reference",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L103",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_pct_fields_are_100x_decimal_fields",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L118",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_all_response_fields_present",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L129",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_py",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L143",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation_test_mismatched_series_lengths_returns_422",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L146",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation_test_too_few_observations_returns_400",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L156",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation_test_missing_benchmark_id_returns_422",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L161",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation_test_rf_out_of_range_returns_422",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L170",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_status_200_on_valid_input",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_status_200_on_valid_input",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_build_payload",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_portfolio_id_and_benchmark_id_echoed",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_portfolio_id_and_benchmark_id_echoed",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_build_payload",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_beta_greater_than_one_for_higher_vol_portfolio",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_beta_greater_than_one_for_higher_vol_portfolio",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_build_payload",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_correlation_in_valid_range",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_correlation_in_valid_range",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_build_payload",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L66",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_perfectly_correlated_series_beta_one",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_perfectly_correlated_series_beta_one",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_build_payload",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_sharpe_positive_for_rising_portfolio",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_sharpe_positive_for_rising_portfolio",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_build_payload",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_n_observations_correct",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_n_observations_correct",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_build_payload",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_risk_free_rate_echoed_as_pct",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_risk_free_rate_echoed_as_pct",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_build_payload",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_volatilities_are_positive",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L98",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_volatilities_are_positive",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_build_payload",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L98",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_beta_matches_numpy_reference",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L115",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_beta_matches_numpy_reference",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_build_payload",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L115",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_pct_fields_are_100x_decimal_fields",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L120",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_pct_fields_are_100x_decimal_fields",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_build_payload",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L120",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_all_response_fields_present",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L130",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_all_response_fields_present",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_build_payload",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L130",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation_test_mismatched_series_lengths_returns_422",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L148",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation_test_mismatched_series_lengths_returns_422",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_build_payload",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L149",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation_test_too_few_observations_returns_400",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L158",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation_test_too_few_observations_returns_400",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_build_payload",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L158",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation_test_missing_benchmark_id_returns_422",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L167",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation_test_rf_out_of_range_returns_422",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_build_payload",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L172",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation_test_rf_out_of_range_returns_422",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_post",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L173",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_1",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_py",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_44",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_61",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_beta_greater_than_one_for_higher_vol_portfolio",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L61",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_71",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_perfectly_correlated_series_beta_one",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_82",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_sharpe_positive_for_rising_portfolio",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_89",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_n_observations_correct",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_104",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_beta_matches_numpy_reference",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_119",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_pct_fields_are_100x_decimal_fields",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_144",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L144",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_147",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation_test_mismatched_series_lengths_returns_422",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L147",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_157",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation_test_too_few_observations_returns_400",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L157",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_rationale_171",
+      "target": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkroutervalidation_test_rf_out_of_range_returns_422",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L171",
+      "weight": 1.0
+    }
+  ],
+  "raw_calls": [
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_post",
+      "callee": "post",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L24",
+      "receiver": "client"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_post",
+      "callee": "URL",
+      "is_member_call": false,
+      "indirect": true,
+      "context": "argument",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L24"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_portfolio_id_and_benchmark_id_echoed",
+      "callee": "json",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L56",
+      "receiver": "resp"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_beta_greater_than_one_for_higher_vol_portfolio",
+      "callee": "json",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L63",
+      "receiver": "resp"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_correlation_in_valid_range",
+      "callee": "json",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L67",
+      "receiver": "resp"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_perfectly_correlated_series_beta_one",
+      "callee": "json",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L74",
+      "receiver": "resp"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_perfectly_correlated_series_beta_one",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L75",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_perfectly_correlated_series_beta_one",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L76",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_perfectly_correlated_series_beta_one",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L77",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_perfectly_correlated_series_beta_one",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L78",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_sharpe_positive_for_rising_portfolio",
+      "callee": "json",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L86",
+      "receiver": "resp"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_n_observations_correct",
+      "callee": "json",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L91",
+      "receiver": "resp"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_risk_free_rate_echoed_as_pct",
+      "callee": "json",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L95",
+      "receiver": "resp"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_risk_free_rate_echoed_as_pct",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L95",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_volatilities_are_positive",
+      "callee": "json",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L99",
+      "receiver": "resp"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_beta_matches_numpy_reference",
+      "callee": "array",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L108",
+      "receiver": "np"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_beta_matches_numpy_reference",
+      "callee": "float",
+      "is_member_call": false,
+      "indirect": true,
+      "context": "argument",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L108"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_beta_matches_numpy_reference",
+      "callee": "array",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L109",
+      "receiver": "np"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_beta_matches_numpy_reference",
+      "callee": "float",
+      "is_member_call": false,
+      "indirect": true,
+      "context": "argument",
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L109"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_beta_matches_numpy_reference",
+      "callee": "diff",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L110",
+      "receiver": "np"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_beta_matches_numpy_reference",
+      "callee": "diff",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L111",
+      "receiver": "np"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_beta_matches_numpy_reference",
+      "callee": "cov",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L112",
+      "receiver": "np"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_beta_matches_numpy_reference",
+      "callee": "json",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L116",
+      "receiver": "resp"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_beta_matches_numpy_reference",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L116",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_pct_fields_are_100x_decimal_fields",
+      "callee": "json",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L121",
+      "receiver": "resp"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_pct_fields_are_100x_decimal_fields",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L122",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_pct_fields_are_100x_decimal_fields",
+      "callee": "approx",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L125",
+      "receiver": "pytest"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_all_response_fields_present",
+      "callee": "json",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L131",
+      "receiver": "resp"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_all_response_fields_present",
+      "callee": "issubset",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L140",
+      "receiver": "expected_keys"
+    },
+    {
+      "caller_nid": "$graphify-root$_apps_quant_engine_tests_test_performance_benchmark_testbenchmarkrouterhappypath_test_all_response_fields_present",
+      "callee": "keys",
+      "is_member_call": true,
+      "source_file": "apps/quant-engine/tests/test_performance_benchmark.py",
+      "source_location": "L140",
+      "receiver": "data"
+    }
+  ]
+}

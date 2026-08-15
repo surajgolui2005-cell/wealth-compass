@@ -1,0 +1,545 @@
+{
+  "nodes": [
+    {
+      "id": "docs_adr_0002_backend_framework_doc",
+      "label": "0002-backend-framework.md",
+      "file_type": "document",
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0002_backend_framework_adr_0002__backend_framework",
+      "label": "ADR-0002: Backend Framework",
+      "file_type": "concept",
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0002_backend_framework_context",
+      "label": "Context",
+      "file_type": "concept",
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0002_backend_framework_financial_domain_requirements",
+      "label": "Financial Domain Requirements",
+      "file_type": "concept",
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0002_backend_framework_scale_targets",
+      "label": "Scale Targets",
+      "file_type": "concept",
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0002_backend_framework_team_profile",
+      "label": "Team Profile",
+      "file_type": "concept",
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0002_backend_framework_decision",
+      "label": "Decision",
+      "file_type": "concept",
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0002_backend_framework_options_considered",
+      "label": "Options Considered",
+      "file_type": "concept",
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0002_backend_framework_option_a__nestjs_10___modular_monolith__selected",
+      "label": "Option A: NestJS 10 \u2014 Modular Monolith (Selected)",
+      "file_type": "concept",
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0002_backend_framework_option_b__express_js___typescript__custom_structure",
+      "label": "Option B: Express.js + TypeScript (custom structure)",
+      "file_type": "concept",
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0002_backend_framework_option_c__fastify___typescript__bare",
+      "label": "Option C: Fastify + TypeScript (bare)",
+      "file_type": "concept",
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0002_backend_framework_option_d__django_rest_framework__python",
+      "label": "Option D: Django REST Framework (Python)",
+      "file_type": "concept",
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0002_backend_framework_option_e__trpc___node_js__api_less_type_sharing",
+      "label": "Option E: tRPC + Node.js (API-less type sharing)",
+      "file_type": "concept",
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0002_backend_framework_consequences",
+      "label": "Consequences",
+      "file_type": "concept",
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0002_backend_framework_positive",
+      "label": "Positive",
+      "file_type": "concept",
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0002_backend_framework_negative___trade_offs",
+      "label": "Negative / Trade-offs",
+      "file_type": "concept",
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0002_backend_framework_neutral",
+      "label": "Neutral",
+      "file_type": "concept",
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_adr_0002_backend_framework_compliance_check",
+      "label": "Compliance Check",
+      "file_type": "concept",
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "docs_adr_0002_backend_framework_doc",
+      "target": "docs_adr_0002_backend_framework_adr_0002__backend_framework",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_doc",
+      "target": "docs_adr_0002_backend_framework_context",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_adr_0002__backend_framework",
+      "target": "docs_adr_0002_backend_framework_context",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_doc",
+      "target": "docs_adr_0002_backend_framework_financial_domain_requirements",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_context",
+      "target": "docs_adr_0002_backend_framework_financial_domain_requirements",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_doc",
+      "target": "docs_adr_0002_backend_framework_scale_targets",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_financial_domain_requirements",
+      "target": "docs_adr_0002_backend_framework_scale_targets",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_doc",
+      "target": "docs_adr_0002_backend_framework_team_profile",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_scale_targets",
+      "target": "docs_adr_0002_backend_framework_team_profile",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_doc",
+      "target": "docs_adr_0002_backend_framework_decision",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_team_profile",
+      "target": "docs_adr_0002_backend_framework_decision",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_doc",
+      "target": "docs_adr_0002_backend_framework_options_considered",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_decision",
+      "target": "docs_adr_0002_backend_framework_options_considered",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_doc",
+      "target": "docs_adr_0002_backend_framework_option_a__nestjs_10___modular_monolith__selected",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_options_considered",
+      "target": "docs_adr_0002_backend_framework_option_a__nestjs_10___modular_monolith__selected",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_doc",
+      "target": "docs_adr_0002_backend_framework_option_b__express_js___typescript__custom_structure",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_option_a__nestjs_10___modular_monolith__selected",
+      "target": "docs_adr_0002_backend_framework_option_b__express_js___typescript__custom_structure",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_doc",
+      "target": "docs_adr_0002_backend_framework_option_c__fastify___typescript__bare",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_option_b__express_js___typescript__custom_structure",
+      "target": "docs_adr_0002_backend_framework_option_c__fastify___typescript__bare",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_doc",
+      "target": "docs_adr_0002_backend_framework_option_d__django_rest_framework__python",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_option_c__fastify___typescript__bare",
+      "target": "docs_adr_0002_backend_framework_option_d__django_rest_framework__python",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_doc",
+      "target": "docs_adr_0002_backend_framework_option_e__trpc___node_js__api_less_type_sharing",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_option_d__django_rest_framework__python",
+      "target": "docs_adr_0002_backend_framework_option_e__trpc___node_js__api_less_type_sharing",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_doc",
+      "target": "docs_adr_0002_backend_framework_consequences",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_option_e__trpc___node_js__api_less_type_sharing",
+      "target": "docs_adr_0002_backend_framework_consequences",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_doc",
+      "target": "docs_adr_0002_backend_framework_positive",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_consequences",
+      "target": "docs_adr_0002_backend_framework_positive",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_doc",
+      "target": "docs_adr_0002_backend_framework_negative___trade_offs",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_positive",
+      "target": "docs_adr_0002_backend_framework_negative___trade_offs",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_doc",
+      "target": "docs_adr_0002_backend_framework_neutral",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_negative___trade_offs",
+      "target": "docs_adr_0002_backend_framework_neutral",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_doc",
+      "target": "docs_adr_0002_backend_framework_compliance_check",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_neutral",
+      "target": "docs_adr_0002_backend_framework_compliance_check",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "docs_adr_0002_backend_framework_doc",
+      "target": "docs_adr_0002_backend_framework_decision",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/adr/0002-backend-framework.md",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": []
+}

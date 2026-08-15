@@ -18,21 +18,21 @@
     }
   },
   "PROJECT_STATE.md": {
-    "size": 13013,
-    "mtime_ns": 1786701936804688200,
-    "indexed_at_ns": 1786701986054269000,
-    "word_count": 2022,
+    "size": 28313,
+    "mtime_ns": 1786811396072227200,
+    "indexed_at_ns": 1786811402943309800,
+    "word_count": 2973,
     "hashes": {
-      "project_state.md": "52a4809b2d3d273b8b780a690cffb8940741382d89ed3ec537027451cb04defe"
+      "project_state.md": "927dd08b08fceffeb5ea42b143f4e401f56a83aa3aa71c214345e5ae8a266489"
     }
   },
   "apps/api/package.json": {
-    "size": 311,
-    "mtime_ns": 1786696313286178100,
-    "indexed_at_ns": 1786698106504263200,
-    "word_count": 35,
+    "size": 1802,
+    "mtime_ns": 1786781068189477800,
+    "indexed_at_ns": 1786804953388617800,
+    "word_count": 130,
     "hashes": {
-      "apps/api/package.json": "67c2316696f01810e06c3e4d9f16e22e4562874d18928509d7499300c302d077"
+      "apps/api/package.json": "9e2e7d20e36d6b7dc9b004f5debf1dd86511a5b696b3718497d0b94f7223cee5"
     }
   },
   "apps/quant-engine/package.json": {
@@ -45,12 +45,12 @@
     }
   },
   "apps/quant-engine/pyproject.toml": {
-    "size": 512,
-    "mtime_ns": 1786696350551220200,
-    "indexed_at_ns": 1786698106516708300,
-    "word_count": 46,
+    "size": 624,
+    "mtime_ns": 1786809530915423200,
+    "indexed_at_ns": 1786810678189460200,
+    "word_count": 62,
     "hashes": {
-      "apps/quant-engine/pyproject.toml": "3118f03aab3ab5e760eb46b895f5e9b196f5c4d286a07d74904df2a49c88d6a3"
+      "apps/quant-engine/pyproject.toml": "fceff10ad3086aeaa7ff0e80abfcfafdcb19c731aa2ff839c09257f9781c8e00"
     }
   },
   "apps/web/package.json": {
@@ -199,10 +199,10 @@
     "word_count": 19
   },
   "pnpm-workspace.yaml": {
-    "size": 57,
-    "mtime_ns": 1786696245384265900,
-    "indexed_at_ns": 1786698045641910800,
-    "word_count": 7
+    "size": 325,
+    "mtime_ns": 1786779468106381900,
+    "indexed_at_ns": 1786780690722542700,
+    "word_count": 50
   },
   "tsconfig.json": {
     "size": 568,
@@ -230,37 +230,40 @@
   "docker-compose.yml": {
     "size": 1563,
     "mtime_ns": 1786701488292339100,
-    "indexed_at_ns": 1786701985663494500,
-    "word_count": 106
+    "indexed_at_ns": 1786727976331414500,
+    "word_count": 106,
+    "hashes": {
+      "docker-compose.yml": "d8932b91f9584049c3454f2b3bd7f680917fcac287f22d2683650d4433784751"
+    }
   },
   "packages/config/src/env.js": {
-    "size": 3741,
-    "mtime_ns": 1786701592365824300,
-    "indexed_at_ns": 1786701985728986000,
-    "word_count": 261
+    "size": 3714,
+    "mtime_ns": 1786715780856841100,
+    "indexed_at_ns": 1786727953996569300,
+    "word_count": 263
   },
   "packages/config/src/env.ts": {
-    "size": 3377,
-    "mtime_ns": 1786701522249078000,
-    "indexed_at_ns": 1786701985733991000,
-    "word_count": 260
+    "size": 3498,
+    "mtime_ns": 1786715781386999400,
+    "indexed_at_ns": 1786727954060969500,
+    "word_count": 262
   },
   "packages/config/src/index.js": {
-    "size": 798,
-    "mtime_ns": 1786701592372867900,
-    "indexed_at_ns": 1786701985738951700,
-    "word_count": 109
+    "size": 935,
+    "mtime_ns": 1786715781465729900,
+    "indexed_at_ns": 1786727954063927600,
+    "word_count": 113
   },
   "packages/config/src/index.ts": {
     "size": 23,
-    "mtime_ns": 1786701526493161500,
-    "indexed_at_ns": 1786701985743898100,
+    "mtime_ns": 1786715781514841400,
+    "indexed_at_ns": 1786727954121610100,
     "word_count": 4
   },
   "packages/config/src/test-env.ts": {
     "size": 2813,
-    "mtime_ns": 1786701722340132400,
-    "indexed_at_ns": 1786701985748879300,
+    "mtime_ns": 1786715781630677400,
+    "indexed_at_ns": 1786727954124720000,
     "word_count": 254
   },
   "packages/config/tsconfig.json": {
@@ -279,9 +282,9 @@
     "word_count": 8
   },
   "packages/ui-components/src/index.js": {
-    "size": 255,
-    "mtime_ns": 1786701592388389600,
-    "indexed_at_ns": 1786701985779116500,
+    "size": 253,
+    "mtime_ns": 1786715781905534300,
+    "indexed_at_ns": 1786727954143682500,
     "word_count": 21
   },
   "scripts/dev-setup.sh": {
@@ -292,5 +295,672 @@
     "hashes": {
       "scripts/dev-setup.sh": "747756cc600c927cc02b31cb419cb64769fca300d87e97663966d9d770e75d23"
     }
+  },
+  "DATABASE.md": {
+    "size": 11172,
+    "mtime_ns": 1786727881555131600,
+    "indexed_at_ns": 1786727976323598300,
+    "word_count": 1156,
+    "hashes": { "database.md": "20fc242bdc9cd444980e644d4e128006dd0f5e351e3d7a35d63ca73da0348ecf" }
+  },
+  "apps/api/jest.config.js": {
+    "size": 317,
+    "mtime_ns": 1786727881558290800,
+    "indexed_at_ns": 1786727953750075800,
+    "word_count": 27
+  },
+  "apps/api/prisma/migrations/0_init/migration.sql": {
+    "size": 15597,
+    "mtime_ns": 1786727881568003600,
+    "indexed_at_ns": 1786727989626076000,
+    "word_count": 1477,
+    "hashes": {
+      "apps/api/prisma/migrations/0_init/migration.sql": "87ed3dd3040de91ac1098f5ff407d95edaf83a0cc396a6bc0600eb5217a2a195"
+    }
+  },
+  "apps/api/src/app.module.ts": {
+    "size": 1076,
+    "mtime_ns": 1786811230934718700,
+    "indexed_at_ns": 1786811402418907400,
+    "word_count": 93
+  },
+  "apps/api/src/main.ts": {
+    "size": 828,
+    "mtime_ns": 1786727881571237700,
+    "indexed_at_ns": 1786727953768692000,
+    "word_count": 81
+  },
+  "apps/api/src/modules/auth/__tests__/argon.service.spec.ts": {
+    "size": 1284,
+    "mtime_ns": 1786727881574275700,
+    "indexed_at_ns": 1786727953772078000,
+    "word_count": 124
+  },
+  "apps/api/src/modules/auth/__tests__/auth.controller.spec.ts": {
+    "size": 4164,
+    "mtime_ns": 1786727881575247300,
+    "indexed_at_ns": 1786727953776579300,
+    "word_count": 351
+  },
+  "apps/api/src/modules/auth/__tests__/auth.service.spec.ts": {
+    "size": 6956,
+    "mtime_ns": 1786727881576244200,
+    "indexed_at_ns": 1786727953782303700,
+    "word_count": 492
+  },
+  "apps/api/src/modules/auth/argon.service.ts": {
+    "size": 512,
+    "mtime_ns": 1786727881577752600,
+    "indexed_at_ns": 1786727953786266000,
+    "word_count": 56
+  },
+  "apps/api/src/modules/auth/auth.controller.ts": {
+    "size": 2694,
+    "mtime_ns": 1786727881578763500,
+    "indexed_at_ns": 1786727953790154800,
+    "word_count": 261
+  },
+  "apps/api/src/modules/auth/auth.module.ts": {
+    "size": 1207,
+    "mtime_ns": 1786727881579761500,
+    "indexed_at_ns": 1786727953794123000,
+    "word_count": 104
+  },
+  "apps/api/src/modules/auth/auth.service.ts": {
+    "size": 7652,
+    "mtime_ns": 1786727881582121300,
+    "indexed_at_ns": 1786727953797324600,
+    "word_count": 667
+  },
+  "apps/api/src/modules/auth/dto/auth-response.dto.ts": {
+    "size": 207,
+    "mtime_ns": 1786727881584118600,
+    "indexed_at_ns": 1786727953801875100,
+    "word_count": 26
+  },
+  "apps/api/src/modules/auth/dto/login.dto.ts": {
+    "size": 307,
+    "mtime_ns": 1786727881586130800,
+    "indexed_at_ns": 1786727953805187200,
+    "word_count": 37
+  },
+  "apps/api/src/modules/auth/dto/register.dto.ts": {
+    "size": 773,
+    "mtime_ns": 1786727881586130800,
+    "indexed_at_ns": 1786727953809672800,
+    "word_count": 79
+  },
+  "apps/api/src/modules/auth/jwt-auth.guard.ts": {
+    "size": 165,
+    "mtime_ns": 1786727881587119000,
+    "indexed_at_ns": 1786727953812717300,
+    "word_count": 19
+  },
+  "apps/api/src/modules/auth/jwt-refresh-auth.guard.ts": {
+    "size": 180,
+    "mtime_ns": 1786727881588126800,
+    "indexed_at_ns": 1786727953817989000,
+    "word_count": 19
+  },
+  "apps/api/src/modules/auth/jwt-refresh.strategy.ts": {
+    "size": 1331,
+    "mtime_ns": 1786727881588126800,
+    "indexed_at_ns": 1786727953823618600,
+    "word_count": 111
+  },
+  "apps/api/src/modules/auth/jwt.strategy.ts": {
+    "size": 1251,
+    "mtime_ns": 1786727881588126800,
+    "indexed_at_ns": 1786727953827490900,
+    "word_count": 116
+  },
+  "apps/api/src/modules/portfolio/__tests__/portfolio.service.spec.ts": {
+    "size": 4098,
+    "mtime_ns": 1786727881590883300,
+    "indexed_at_ns": 1786727953831579300,
+    "word_count": 332
+  },
+  "apps/api/src/modules/portfolio/__tests__/transaction.service.spec.ts": {
+    "size": 12169,
+    "mtime_ns": 1786727881591508900,
+    "indexed_at_ns": 1786727953835600500,
+    "word_count": 917
+  },
+  "apps/api/src/modules/portfolio/controllers/portfolio.controller.ts": {
+    "size": 1860,
+    "mtime_ns": 1786727881592518400,
+    "indexed_at_ns": 1786727953839365600,
+    "word_count": 176
+  },
+  "apps/api/src/modules/portfolio/controllers/transaction.controller.ts": {
+    "size": 1400,
+    "mtime_ns": 1786727881593892400,
+    "indexed_at_ns": 1786727953844175200,
+    "word_count": 122
+  },
+  "apps/api/src/modules/portfolio/dto/create-portfolio.dto.ts": {
+    "size": 491,
+    "mtime_ns": 1786727881594908200,
+    "indexed_at_ns": 1786727953848370300,
+    "word_count": 48
+  },
+  "apps/api/src/modules/portfolio/dto/create-transaction.dto.ts": {
+    "size": 1615,
+    "mtime_ns": 1786727881594908200,
+    "indexed_at_ns": 1786727953852127100,
+    "word_count": 163
+  },
+  "apps/api/src/modules/portfolio/dto/update-portfolio.dto.ts": {
+    "size": 379,
+    "mtime_ns": 1786727881595904000,
+    "indexed_at_ns": 1786727953855537600,
+    "word_count": 32
+  },
+  "apps/api/src/modules/portfolio/exceptions/insufficient-cash.exception.ts": {
+    "size": 418,
+    "mtime_ns": 1786727881597290200,
+    "indexed_at_ns": 1786727953859802800,
+    "word_count": 44
+  },
+  "apps/api/src/modules/portfolio/exceptions/insufficient-holding.exception.ts": {
+    "size": 412,
+    "mtime_ns": 1786727881597797400,
+    "indexed_at_ns": 1786727953863175600,
+    "word_count": 44
+  },
+  "apps/api/src/modules/portfolio/exceptions/portfolio-not-found.exception.ts": {
+    "size": 253,
+    "mtime_ns": 1786727881598809100,
+    "indexed_at_ns": 1786727953868415300,
+    "word_count": 28
+  },
+  "apps/api/src/modules/portfolio/portfolio.module.ts": {
+    "size": 812,
+    "mtime_ns": 1786727881598809100,
+    "indexed_at_ns": 1786727953871498300,
+    "word_count": 68
+  },
+  "apps/api/src/modules/portfolio/services/holding.service.ts": {
+    "size": 6110,
+    "mtime_ns": 1786727881600268400,
+    "indexed_at_ns": 1786727953877113400,
+    "word_count": 556
+  },
+  "apps/api/src/modules/portfolio/services/portfolio.service.ts": {
+    "size": 3803,
+    "mtime_ns": 1786727881601287100,
+    "indexed_at_ns": 1786727953880883400,
+    "word_count": 360
+  },
+  "apps/api/src/modules/portfolio/services/transaction.service.ts": {
+    "size": 11390,
+    "mtime_ns": 1786727881602283800,
+    "indexed_at_ns": 1786727953885810600,
+    "word_count": 977
+  },
+  "apps/api/src/modules/providers/__tests__/csv-provider.adapter.spec.ts": {
+    "size": 2879,
+    "mtime_ns": 1786727881604810400,
+    "indexed_at_ns": 1786727953891323400,
+    "word_count": 156
+  },
+  "apps/api/src/modules/providers/__tests__/provider-factory.service.spec.ts": {
+    "size": 2954,
+    "mtime_ns": 1786727881604810400,
+    "indexed_at_ns": 1786727953895391200,
+    "word_count": 239
+  },
+  "apps/api/src/modules/providers/__tests__/provider-ingestion.service.spec.ts": {
+    "size": 3003,
+    "mtime_ns": 1786727881605810300,
+    "indexed_at_ns": 1786727953901283800,
+    "word_count": 195
+  },
+  "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts": {
+    "size": 9029,
+    "mtime_ns": 1786727881606807400,
+    "indexed_at_ns": 1786727953905084700,
+    "word_count": 762
+  },
+  "apps/api/src/modules/providers/adapters/manual-entry.adapter.ts": {
+    "size": 995,
+    "mtime_ns": 1786727881607797900,
+    "indexed_at_ns": 1786727953910246400,
+    "word_count": 94
+  },
+  "apps/api/src/modules/providers/adapters/mock-broker.adapter.ts": {
+    "size": 5559,
+    "mtime_ns": 1786727881608302800,
+    "indexed_at_ns": 1786727953913612300,
+    "word_count": 457
+  },
+  "apps/api/src/modules/providers/controllers/provider.controller.ts": {
+    "size": 1850,
+    "mtime_ns": 1786727881609316000,
+    "indexed_at_ns": 1786727953918689500,
+    "word_count": 152
+  },
+  "apps/api/src/modules/providers/interfaces/provider.interface.ts": {
+    "size": 1985,
+    "mtime_ns": 1786727881610791100,
+    "indexed_at_ns": 1786727953922175400,
+    "word_count": 191
+  },
+  "apps/api/src/modules/providers/providers.module.ts": {
+    "size": 992,
+    "mtime_ns": 1786727881610791100,
+    "indexed_at_ns": 1786727953926543400,
+    "word_count": 77
+  },
+  "apps/api/src/modules/providers/services/provider-factory.service.ts": {
+    "size": 2269,
+    "mtime_ns": 1786727881613003000,
+    "indexed_at_ns": 1786727953929837500,
+    "word_count": 190
+  },
+  "apps/api/src/modules/providers/services/provider-ingestion.service.ts": {
+    "size": 4445,
+    "mtime_ns": 1786727881613003000,
+    "indexed_at_ns": 1786727953934182000,
+    "word_count": 380
+  },
+  "apps/api/src/prisma/prisma.module.ts": {
+    "size": 219,
+    "mtime_ns": 1786727881614005000,
+    "indexed_at_ns": 1786727953937189600,
+    "word_count": 24
+  },
+  "apps/api/src/prisma/prisma.service.ts": {
+    "size": 363,
+    "mtime_ns": 1786727881615004000,
+    "indexed_at_ns": 1786727953940801100,
+    "word_count": 37
+  },
+  "apps/api/tsconfig.json": {
+    "size": 697,
+    "mtime_ns": 1786781013964497100,
+    "indexed_at_ns": 1786804953393298300,
+    "word_count": 48,
+    "hashes": {
+      "apps/api/tsconfig.json": "9c563389ed66d6d83ef5944368dde917a72a8f5f1d37078fce819eace6856ff1"
+    }
+  },
+  "apps/api/src/modules/market-data/__tests__/alpha-vantage.provider.spec.ts": {
+    "size": 9266,
+    "mtime_ns": 1786779994758707800,
+    "indexed_at_ns": 1786780690396390100,
+    "word_count": 710
+  },
+  "apps/api/src/modules/market-data/__tests__/coingecko.provider.spec.ts": {
+    "size": 5409,
+    "mtime_ns": 1786780099757635800,
+    "indexed_at_ns": 1786780690399850800,
+    "word_count": 428
+  },
+  "apps/api/src/modules/market-data/__tests__/market-data.service.spec.ts": {
+    "size": 12411,
+    "mtime_ns": 1786779956868279900,
+    "indexed_at_ns": 1786780690403544600,
+    "word_count": 875
+  },
+  "apps/api/src/modules/market-data/__tests__/price-cache.service.spec.ts": {
+    "size": 11068,
+    "mtime_ns": 1786779905469267300,
+    "indexed_at_ns": 1786780690408123200,
+    "word_count": 808
+  },
+  "apps/api/src/modules/market-data/controllers/market-data.controller.ts": {
+    "size": 6335,
+    "mtime_ns": 1786781299500710400,
+    "indexed_at_ns": 1786804953048115900,
+    "word_count": 611
+  },
+  "apps/api/src/modules/market-data/interfaces/market-data-provider.interface.ts": {
+    "size": 3729,
+    "mtime_ns": 1786779298134285800,
+    "indexed_at_ns": 1786780690415650400,
+    "word_count": 497
+  },
+  "apps/api/src/modules/market-data/interfaces/price-cache.interface.ts": {
+    "size": 4675,
+    "mtime_ns": 1786779335652833500,
+    "indexed_at_ns": 1786780690419049000,
+    "word_count": 608
+  },
+  "apps/api/src/modules/market-data/market-data.module.ts": {
+    "size": 3287,
+    "mtime_ns": 1786779859960586300,
+    "indexed_at_ns": 1786780690423632600,
+    "word_count": 347
+  },
+  "apps/api/src/modules/market-data/providers/alpha-vantage.provider.ts": {
+    "size": 9834,
+    "mtime_ns": 1786780467166679200,
+    "indexed_at_ns": 1786780690426832600,
+    "word_count": 960
+  },
+  "apps/api/src/modules/market-data/providers/coingecko.provider.ts": {
+    "size": 9217,
+    "mtime_ns": 1786779634474390600,
+    "indexed_at_ns": 1786780690431923400,
+    "word_count": 905
+  },
+  "apps/api/src/modules/market-data/services/market-data.service.ts": {
+    "size": 13820,
+    "mtime_ns": 1786779738749166900,
+    "indexed_at_ns": 1786780690435378500,
+    "word_count": 1323
+  },
+  "apps/api/src/modules/market-data/services/price-cache.service.ts": {
+    "size": 10864,
+    "mtime_ns": 1786779678820244400,
+    "indexed_at_ns": 1786780690440245200,
+    "word_count": 1067
+  },
+  "apps/api/src/modules/market-data/workers/market-data.processor.ts": {
+    "size": 7772,
+    "mtime_ns": 1786781165897344300,
+    "indexed_at_ns": 1786804953072333300,
+    "word_count": 805
+  },
+  "apps/api/src/modules/market-data/workers/market-data.scheduler.ts": {
+    "size": 5803,
+    "mtime_ns": 1786781332566463100,
+    "indexed_at_ns": 1786804953076034100,
+    "word_count": 684
+  },
+  "apps/api/src/modules/calculator/__tests__/currency-converter.spec.ts": {
+    "size": 1780,
+    "mtime_ns": 1786804382157945400,
+    "indexed_at_ns": 1786804952988840400,
+    "word_count": 183
+  },
+  "apps/api/src/modules/calculator/__tests__/fifo-calculator.spec.ts": {
+    "size": 11567,
+    "mtime_ns": 1786804300924124100,
+    "indexed_at_ns": 1786804952992241600,
+    "word_count": 990
+  },
+  "apps/api/src/modules/calculator/__tests__/valuation.engine.spec.ts": {
+    "size": 11124,
+    "mtime_ns": 1786804800860466200,
+    "indexed_at_ns": 1786804952995549400,
+    "word_count": 894
+  },
+  "apps/api/src/modules/calculator/__tests__/weighted-avg-calculator.spec.ts": {
+    "size": 7306,
+    "mtime_ns": 1786804340795449900,
+    "indexed_at_ns": 1786804952998407200,
+    "word_count": 649
+  },
+  "apps/api/src/modules/calculator/calculator.module.ts": {
+    "size": 1064,
+    "mtime_ns": 1786804135321783300,
+    "indexed_at_ns": 1786804953002609300,
+    "word_count": 102
+  },
+  "apps/api/src/modules/calculator/controllers/valuation.controller.ts": {
+    "size": 2596,
+    "mtime_ns": 1786804068512406200,
+    "indexed_at_ns": 1786804953006070300,
+    "word_count": 245
+  },
+  "apps/api/src/modules/calculator/currency-converter.ts": {
+    "size": 3238,
+    "mtime_ns": 1786803753908446500,
+    "indexed_at_ns": 1786804953010041400,
+    "word_count": 432
+  },
+  "apps/api/src/modules/calculator/dto/portfolio-valuation-summary.dto.ts": {
+    "size": 3462,
+    "mtime_ns": 1786803850375995700,
+    "indexed_at_ns": 1786804953014602900,
+    "word_count": 355
+  },
+  "apps/api/src/modules/calculator/dto/position-valuation.dto.ts": {
+    "size": 4342,
+    "mtime_ns": 1786803782703926500,
+    "indexed_at_ns": 1786804953019212900,
+    "word_count": 485
+  },
+  "apps/api/src/modules/calculator/fifo-calculator.ts": {
+    "size": 7735,
+    "mtime_ns": 1786803696157136300,
+    "indexed_at_ns": 1786804953022047900,
+    "word_count": 810
+  },
+  "apps/api/src/modules/calculator/interfaces/calculator.interface.ts": {
+    "size": 3933,
+    "mtime_ns": 1786803654736134300,
+    "indexed_at_ns": 1786804953025628000,
+    "word_count": 578
+  },
+  "apps/api/src/modules/calculator/valuation.engine.ts": {
+    "size": 10912,
+    "mtime_ns": 1786804716813883700,
+    "indexed_at_ns": 1786804953029167400,
+    "word_count": 950
+  },
+  "apps/api/src/modules/calculator/weighted-avg-calculator.ts": {
+    "size": 4964,
+    "mtime_ns": 1786803730878025000,
+    "indexed_at_ns": 1786804953032013400,
+    "word_count": 535
+  },
+  "apps/quant-engine/src/analytics/__init__.py": {
+    "size": 672,
+    "mtime_ns": 1786807759425593200,
+    "indexed_at_ns": 1786809361768639700,
+    "word_count": 70,
+    "hashes": {
+      "apps/quant-engine/src/analytics/__init__.py": "c297cdd1749d4d9edecdfb6fa9ee658ee2eb22a3252acb7588241e63fc753793"
+    }
+  },
+  "apps/quant-engine/src/analytics/benchmark.py": {
+    "size": 13633,
+    "mtime_ns": 1786807928660099900,
+    "indexed_at_ns": 1786809361769635600,
+    "word_count": 1322,
+    "hashes": {
+      "apps/quant-engine/src/analytics/benchmark.py": "9e0aa6fe0be31e360c53cf06773e78d7759c1bbe8081245c3720eb9b601407b6"
+    }
+  },
+  "apps/quant-engine/src/analytics/twr.py": {
+    "size": 9536,
+    "mtime_ns": 1786807814747504600,
+    "indexed_at_ns": 1786809361770411400,
+    "word_count": 1114,
+    "hashes": {
+      "apps/quant-engine/src/analytics/twr.py": "b0ac7f0c78e81cf9851036f8cf2cb51935234d2cbfbfac6a759caac52c1da2af"
+    }
+  },
+  "apps/quant-engine/src/analytics/xirr.py": {
+    "size": 13196,
+    "mtime_ns": 1786807874624637300,
+    "indexed_at_ns": 1786809361771213800,
+    "word_count": 1460,
+    "hashes": {
+      "apps/quant-engine/src/analytics/xirr.py": "344558326d4d10a72edc8a06c1cf7fe0819302014d483dc321e42449fb047680"
+    }
+  },
+  "apps/quant-engine/tests/__init__.py": {
+    "size": 48,
+    "mtime_ns": 1786807936302039400,
+    "indexed_at_ns": 1786809361771947400,
+    "word_count": 5,
+    "hashes": {
+      "apps/quant-engine/tests/__init__.py": "e4d0a447402ea334d0a0a84e6a469ac65c0f451c606efb9e317a700b1fa2f0fd"
+    }
+  },
+  "apps/quant-engine/tests/test_benchmark.py": {
+    "size": 7050,
+    "mtime_ns": 1786808057581439200,
+    "indexed_at_ns": 1786809361772799800,
+    "word_count": 671,
+    "hashes": {
+      "apps/quant-engine/tests/test_benchmark.py": "ca2e32d0e4c9b6ee080c4d99db5cb4bc923573f68d8797219cb0d47181d9bdc0"
+    }
+  },
+  "apps/quant-engine/tests/test_twr.py": {
+    "size": 8505,
+    "mtime_ns": 1786807979403450900,
+    "indexed_at_ns": 1786809361773697600,
+    "word_count": 857,
+    "hashes": {
+      "apps/quant-engine/tests/test_twr.py": "c0f1a1fe57011752b52b6766fc437092c378df050bcd6426b69483b7316f3e98"
+    }
+  },
+  "apps/quant-engine/tests/test_xirr.py": {
+    "size": 7970,
+    "mtime_ns": 1786809190777947400,
+    "indexed_at_ns": 1786809361774575200,
+    "word_count": 764,
+    "hashes": {
+      "apps/quant-engine/tests/test_xirr.py": "070d8ad2e0248a471f4814664e1d4f4490d27c1687ee391615544f02e87b09aa"
+    }
+  },
+  "docs/analytics/ANALYTICS_METHODOLOGY.md": {
+    "size": 10274,
+    "mtime_ns": 1786809350192832800,
+    "indexed_at_ns": 1786809361813107600,
+    "word_count": 1537,
+    "hashes": {
+      "docs/analytics/analytics_methodology.md": "209b826ec799b39033bb83b12a68e209ff541ea899d3dd731e219f07d6ee5d55"
+    }
+  },
+  "apps/quant-engine/pyrightconfig.json": {
+    "size": 199,
+    "mtime_ns": 1786809542155399900,
+    "indexed_at_ns": 1786810678190386600,
+    "word_count": 17,
+    "hashes": {
+      "apps/quant-engine/pyrightconfig.json": "38ea02dff00d03320d6212c963695f0c788543a856ea0299f77be8e1ff5d68b3"
+    }
+  },
+  "apps/quant-engine/src/__init__.py": {
+    "size": 41,
+    "mtime_ns": 1786809737025503300,
+    "indexed_at_ns": 1786810678191229500,
+    "word_count": 6,
+    "hashes": {
+      "apps/quant-engine/src/__init__.py": "81ea0a3eb6cb811ad2019f1fa4dd036b1c283b8796c39dd8c48b44aff9c88528"
+    }
+  },
+  "apps/quant-engine/src/app/__init__.py": {
+    "size": 64,
+    "mtime_ns": 1786809833230877500,
+    "indexed_at_ns": 1786810678199544400,
+    "word_count": 8,
+    "hashes": {
+      "apps/quant-engine/src/app/__init__.py": "bbda961542130cfa48001c5f5b8b62ae1f217fa974c2aa82385a7d09e94c5824"
+    }
+  },
+  "apps/quant-engine/src/app/routers/__init__.py": {
+    "size": 27,
+    "mtime_ns": 1786809835261574500,
+    "indexed_at_ns": 1786810678200462100,
+    "word_count": 2,
+    "hashes": {
+      "apps/quant-engine/src/app/routers/__init__.py": "04b3bd9da1da8abe390b8dc40a5e5d0eb1dd427ed931d8a914d94e0b5b04590d"
+    }
+  },
+  "apps/quant-engine/src/app/routers/performance.py": {
+    "size": 11077,
+    "mtime_ns": 1786810414805349500,
+    "indexed_at_ns": 1786810678201250800,
+    "word_count": 891,
+    "hashes": {
+      "apps/quant-engine/src/app/routers/performance.py": "34a97ff39a59c7af7a56af3226fabe052bf95ad8d71aba96aacd9e1970f1eb09"
+    }
+  },
+  "apps/quant-engine/src/app/schemas/__init__.py": {
+    "size": 27,
+    "mtime_ns": 1786809837353140700,
+    "indexed_at_ns": 1786810678202128900,
+    "word_count": 2,
+    "hashes": {
+      "apps/quant-engine/src/app/schemas/__init__.py": "e57fe72d60ec904d0bc819b98d75af778e42b46f155d8de9eaa807424123c043"
+    }
+  },
+  "apps/quant-engine/src/app/schemas/performance.py": {
+    "size": 8483,
+    "mtime_ns": 1786810400850329300,
+    "indexed_at_ns": 1786810678202931900,
+    "word_count": 773,
+    "hashes": {
+      "apps/quant-engine/src/app/schemas/performance.py": "b0ac786d7d493e8af966b39320c2282bf329759bc6497d13bf68ec879c9330ee"
+    }
+  },
+  "apps/quant-engine/src/main.py": {
+    "size": 1676,
+    "mtime_ns": 1786810135942797100,
+    "indexed_at_ns": 1786810678203678100,
+    "word_count": 141,
+    "hashes": {
+      "apps/quant-engine/src/main.py": "d7a7eaffaafe3b7dd2d7f0319a5cf5d4531a49a674b6a3a73a075d136bfa39a2"
+    }
+  },
+  "apps/quant-engine/tests/test_performance_benchmark.py": {
+    "size": 6577,
+    "mtime_ns": 1786810256493387600,
+    "indexed_at_ns": 1786810678208460100,
+    "word_count": 567,
+    "hashes": {
+      "apps/quant-engine/tests/test_performance_benchmark.py": "2bcdb8558895d6e387fdccfb1bc056f96973c5c2ebff1e2829cf56660039e438"
+    }
+  },
+  "apps/quant-engine/tests/test_performance_twr.py": {
+    "size": 7968,
+    "mtime_ns": 1786810638913612200,
+    "indexed_at_ns": 1786810678209307200,
+    "word_count": 595,
+    "hashes": {
+      "apps/quant-engine/tests/test_performance_twr.py": "f8394787674e34863c9c48554c72c1665ee00b867bf2bf2ec2123373ffb8e84b"
+    }
+  },
+  "apps/quant-engine/tests/test_performance_xirr.py": {
+    "size": 12025,
+    "mtime_ns": 1786810661166975500,
+    "indexed_at_ns": 1786810678210331300,
+    "word_count": 1064,
+    "hashes": {
+      "apps/quant-engine/tests/test_performance_xirr.py": "e3c06661fe4e5a903040f22712c3d36e4d1828d553efa970db1f026794cb8ffc"
+    }
+  },
+  "apps/api/src/modules/analytics/__tests__/analytics-client.service.spec.ts": {
+    "size": 9016,
+    "mtime_ns": 1786811242377289700,
+    "indexed_at_ns": 1786811402424560300,
+    "word_count": 740
+  },
+  "apps/api/src/modules/analytics/__tests__/analytics.controller.spec.ts": {
+    "size": 3639,
+    "mtime_ns": 1786811248925254500,
+    "indexed_at_ns": 1786811402427876100,
+    "word_count": 277
+  },
+  "apps/api/src/modules/analytics/analytics-client.service.ts": {
+    "size": 8707,
+    "mtime_ns": 1786811333067008100,
+    "indexed_at_ns": 1786811402431611700,
+    "word_count": 836
+  },
+  "apps/api/src/modules/analytics/analytics.module.ts": {
+    "size": 701,
+    "mtime_ns": 1786811215176824200,
+    "indexed_at_ns": 1786811402434137800,
+    "word_count": 75
+  },
+  "apps/api/src/modules/analytics/controllers/analytics.controller.ts": {
+    "size": 1733,
+    "mtime_ns": 1786811206680765900,
+    "indexed_at_ns": 1786811402437163500,
+    "word_count": 152
+  },
+  "apps/api/src/modules/analytics/dto/analytics.dto.ts": {
+    "size": 6939,
+    "mtime_ns": 1786811066072519800,
+    "indexed_at_ns": 1786811402440883800,
+    "word_count": 789
   }
 }
