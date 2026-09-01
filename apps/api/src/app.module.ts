@@ -7,6 +7,7 @@ import { ProvidersModule } from "./modules/providers/providers.module";
 import { MarketDataModule } from "./modules/market-data/market-data.module";
 import { CalculatorModule } from "./modules/calculator/calculator.module";
 import { AnalyticsModule } from "./modules/analytics/analytics.module";
+import { AlertModule } from "./modules/alerts/alert.module";
 import { PrismaModule } from "./prisma/prisma.module";
 
 @Module({
@@ -29,6 +30,7 @@ import { PrismaModule } from "./prisma/prisma.module";
     MarketDataModule,
     CalculatorModule,
     AnalyticsModule,
+    AlertModule,
   ],
 })
 export class AppModule {}

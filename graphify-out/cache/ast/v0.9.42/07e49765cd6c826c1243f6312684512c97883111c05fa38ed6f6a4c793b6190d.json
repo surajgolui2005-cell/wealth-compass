@@ -1,0 +1,527 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_md",
+      "label": "ANALYTICS_METHODOLOGY.md",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_analytics_methodology",
+      "label": "Analytics Methodology",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_table_of_contents",
+      "label": "Table of Contents",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L11"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_1_overview_design_principles",
+      "label": "1. Overview & Design Principles",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L23"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_design_principles",
+      "label": "Design Principles",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L29"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_service_architecture",
+      "label": "Service Architecture",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L39"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_2_time_weighted_return_twr",
+      "label": "2. Time-Weighted Return (TWR)",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L56"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_2_1_purpose",
+      "label": "2.1 Purpose",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L61"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_2_2_sub_period_boundary_rule",
+      "label": "2.2 Sub-Period Boundary Rule",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L72"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_2_3_modified_dietz_sub_period_return",
+      "label": "2.3 Modified Dietz Sub-Period Return",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L86"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_2_4_chain_linking",
+      "label": "2.4 Chain-Linking",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L107"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_2_5_annualisation",
+      "label": "2.5 Annualisation",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L111"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_2_6_twr_vs_mwr_when_to_use_each",
+      "label": "2.6 TWR vs MWR \u2014 When to Use Each",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L117"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_3_extended_internal_rate_of_return_xirr",
+      "label": "3. Extended Internal Rate of Return (XIRR)",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L126"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_3_1_purpose",
+      "label": "3.1 Purpose",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L131"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_3_2_cash_flow_sign_convention",
+      "label": "3.2 Cash Flow Sign Convention",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L136"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_3_3_npv_equation",
+      "label": "3.3 NPV Equation",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L144"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_3_4_primary_solver_newton_raphson",
+      "label": "3.4 Primary Solver: Newton-Raphson",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L154"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_3_5_fallback_solver_brent_dekker_method",
+      "label": "3.5 Fallback Solver: Brent\u2013Dekker Method",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L171"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_3_6_convergence_failure_handling",
+      "label": "3.6 Convergence Failure Handling",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L181"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_4_benchmark_comparison_metrics",
+      "label": "4. Benchmark Comparison Metrics",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L193"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_4_1_daily_returns",
+      "label": "4.1 Daily Returns",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L200"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_4_2_portfolio_beta_\u03b2",
+      "label": "4.2 Portfolio Beta (\u03b2)",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L204"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_4_3_jensen_s_alpha_\u03b1",
+      "label": "4.3 Jensen's Alpha (\u03b1)",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L212"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_4_4_tracking_error_te",
+      "label": "4.4 Tracking Error (TE)",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L226"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_4_5_information_ratio_ir",
+      "label": "4.5 Information Ratio (IR)",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L231"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_4_6_sharpe_ratio",
+      "label": "4.6 Sharpe Ratio",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L237"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_4_7_sortino_ratio",
+      "label": "4.7 Sortino Ratio",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L241"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_4_8_pearson_correlation_\u03c1",
+      "label": "4.8 Pearson Correlation (\u03c1)",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L247"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_4_9_annualisation_convention",
+      "label": "4.9 Annualisation Convention",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L251"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_5_numerical_precision_floating_point_policy",
+      "label": "5. Numerical Precision & Floating-Point Policy",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L258"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_6_edge_cases_failure_modes",
+      "label": "6. Edge Cases & Failure Modes",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L274"
+    },
+    {
+      "id": "$graphify-root$_docs_analytics_analytics_methodology_7_references_standards",
+      "label": "7. References & Standards",
+      "file_type": "document",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L293"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_md",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_analytics_methodology",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_analytics_methodology",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_table_of_contents",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_analytics_methodology",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_1_overview_design_principles",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_1_overview_design_principles",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_design_principles",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_1_overview_design_principles",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_service_architecture",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_analytics_methodology",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_2_time_weighted_return_twr",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_2_time_weighted_return_twr",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_2_1_purpose",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L61",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_2_time_weighted_return_twr",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_2_2_sub_period_boundary_rule",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_2_time_weighted_return_twr",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_2_3_modified_dietz_sub_period_return",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_2_time_weighted_return_twr",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_2_4_chain_linking",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_2_time_weighted_return_twr",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_2_5_annualisation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L111",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_2_time_weighted_return_twr",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_2_6_twr_vs_mwr_when_to_use_each",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L117",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_analytics_methodology",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_3_extended_internal_rate_of_return_xirr",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L126",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_3_extended_internal_rate_of_return_xirr",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_3_1_purpose",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_3_extended_internal_rate_of_return_xirr",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_3_2_cash_flow_sign_convention",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L136",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_3_extended_internal_rate_of_return_xirr",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_3_3_npv_equation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L144",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_3_extended_internal_rate_of_return_xirr",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_3_4_primary_solver_newton_raphson",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L154",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_3_extended_internal_rate_of_return_xirr",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_3_5_fallback_solver_brent_dekker_method",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L171",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_3_extended_internal_rate_of_return_xirr",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_3_6_convergence_failure_handling",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L181",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_analytics_methodology",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_4_benchmark_comparison_metrics",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L193",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_4_benchmark_comparison_metrics",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_4_1_daily_returns",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L200",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_4_benchmark_comparison_metrics",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_4_2_portfolio_beta_\u03b2",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L204",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_4_benchmark_comparison_metrics",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_4_3_jensen_s_alpha_\u03b1",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L212",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_4_benchmark_comparison_metrics",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_4_4_tracking_error_te",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L226",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_4_benchmark_comparison_metrics",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_4_5_information_ratio_ir",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L231",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_4_benchmark_comparison_metrics",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_4_6_sharpe_ratio",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L237",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_4_benchmark_comparison_metrics",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_4_7_sortino_ratio",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L241",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_4_benchmark_comparison_metrics",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_4_8_pearson_correlation_\u03c1",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L247",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_4_benchmark_comparison_metrics",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_4_9_annualisation_convention",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L251",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_analytics_methodology",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_5_numerical_precision_floating_point_policy",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L258",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_analytics_methodology",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_6_edge_cases_failure_modes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L274",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_analytics_analytics_methodology_analytics_methodology",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_7_references_standards",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/analytics/ANALYTICS_METHODOLOGY.md",
+      "source_location": "L293",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

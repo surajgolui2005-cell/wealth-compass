@@ -14,6 +14,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from src.app.routers.performance import router as performance_router
+from src.app.routers.allocation import router as allocation_router
+from src.app.routers.risk import router as risk_router
 
 logging.basicConfig(
     level=logging.INFO,
@@ -24,9 +26,11 @@ app = FastAPI(
     title="Wealth Compass — Quant Engine",
     description=(
         "Internal quantitative risk and performance analytics service. "
-        "Provides TWR, XIRR, VaR, and benchmark comparison metrics."
+        "Provides TWR, XIRR, benchmark comparison, multi-dimensional asset allocation, "
+        "portfolio rebalance calculations, and a full risk engine "
+        "(Volatility, Beta, Sharpe, Sortino, Max Drawdown, VaR, Correlation)."
     ),
-    version="1.0.0",
+    version="1.1.0",
     docs_url="/docs",
     redoc_url="/redoc",
     openapi_url="/openapi.json",
@@ -41,8 +45,10 @@ app.add_middleware(
     allow_headers=["Authorization", "Content-Type"],
 )
 
-# ── Routers ────────────────────────────────────────────────────────────────────
+# ── Routers ───────────────────────────────────────────────────────────────────
 app.include_router(performance_router)
+app.include_router(allocation_router)
+app.include_router(risk_router)
 
 
 @app.get("/health", tags=["Health"])
