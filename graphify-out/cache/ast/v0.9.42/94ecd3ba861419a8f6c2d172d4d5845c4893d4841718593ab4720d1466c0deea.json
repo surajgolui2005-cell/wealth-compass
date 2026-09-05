@@ -1,0 +1,559 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_docs_security_security_audit_md",
+      "label": "SECURITY_AUDIT.md",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_application_security_audit_hardening_report",
+      "label": "Application Security Audit & Hardening Report",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_1_executive_summary",
+      "label": "1. Executive Summary",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L18"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_key_audit_findings_implemented_hardening",
+      "label": "Key Audit Findings & Implemented Hardening",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L24"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_2_threat_model_trust_boundaries",
+      "label": "2. Threat Model & Trust Boundaries",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L33"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_data_classification_matrix",
+      "label": "Data Classification Matrix",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L70"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_3_deep_dive_security_controls_mitigations",
+      "label": "3. Deep-Dive Security Controls & Mitigations",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L81"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_3_1_insecure_direct_object_reference_idor_broken_access_control_owasp_a01",
+      "label": "3.1. Insecure Direct Object Reference (IDOR) & Broken Access Control (OWASP A01)",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L83"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_threat_description",
+      "label": "Threat Description",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L85"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_technical_mitigations_implemented",
+      "label": "Technical Mitigations Implemented",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L88"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_3_2_cryptographic_failures_credential_storage_at_rest_owasp_a02",
+      "label": "3.2. Cryptographic Failures & Credential Storage at Rest (OWASP A02)",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L112"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_threat_description_114",
+      "label": "Threat Description",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L114"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_technical_mitigations_implemented_117",
+      "label": "Technical Mitigations Implemented",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L117"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_3_3_zero_sensitive_logging_observability_pipeline_hardening_owasp_a09",
+      "label": "3.3. Zero-Sensitive Logging & Observability Pipeline Hardening (OWASP A09)",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L141"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_threat_description_143",
+      "label": "Threat Description",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L143"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_technical_mitigations_implemented_146",
+      "label": "Technical Mitigations Implemented",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L146"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_3_4_sql_nosql_command_injection_owasp_a03",
+      "label": "3.4. SQL, NoSQL & Command Injection (OWASP A03)",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L162"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_threat_description_164",
+      "label": "Threat Description",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L164"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_technical_mitigations_implemented_167",
+      "label": "Technical Mitigations Implemented",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L167"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_3_5_cross_site_scripting_xss_content_security_policy_owasp_a03_a05",
+      "label": "3.5. Cross-Site Scripting (XSS) & Content Security Policy (OWASP A03 / A05)",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L179"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_threat_description_181",
+      "label": "Threat Description",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L181"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_technical_mitigations_implemented_184",
+      "label": "Technical Mitigations Implemented",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L184"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_3_6_cross_site_request_forgery_csrf_session_security",
+      "label": "3.6. Cross-Site Request Forgery (CSRF) & Session Security",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L198"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_threat_description_200",
+      "label": "Threat Description",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L200"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_technical_mitigations_implemented_203",
+      "label": "Technical Mitigations Implemented",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L203"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_3_7_rate_limiting_denial_of_service_protection_owasp_a04_a07",
+      "label": "3.7. Rate Limiting & Denial of Service Protection (OWASP A04 / A07)",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L216"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_threat_description_218",
+      "label": "Threat Description",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L218"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_technical_mitigations_implemented_221",
+      "label": "Technical Mitigations Implemented",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L221"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_3_8_server_side_request_forgery_ssrf_owasp_a10",
+      "label": "3.8. Server-Side Request Forgery (SSRF) (OWASP A10)",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L233"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_threat_description_235",
+      "label": "Threat Description",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L235"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_technical_mitigations_implemented_238",
+      "label": "Technical Mitigations Implemented",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L238"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_4_owasp_top_10_2021_compliance_matrix",
+      "label": "4. OWASP Top 10 (2021) Compliance Matrix",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L251"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_5_security_test_suite_verification_results",
+      "label": "5. Security Test Suite & Verification Results",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L268"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_6_residual_risks_recommended_future_roadmap",
+      "label": "6. Residual Risks & Recommended Future Roadmap",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L282"
+    },
+    {
+      "id": "$graphify-root$_docs_security_security_audit_7_sign_off_certification",
+      "label": "7. Sign-Off & Certification",
+      "file_type": "document",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L295"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_docs_security_security_audit_md",
+      "target": "$graphify-root$_docs_security_security_audit_application_security_audit_hardening_report",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_application_security_audit_hardening_report",
+      "target": "$graphify-root$_docs_security_security_audit_1_executive_summary",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_1_executive_summary",
+      "target": "$graphify-root$_docs_security_security_audit_key_audit_findings_implemented_hardening",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_application_security_audit_hardening_report",
+      "target": "$graphify-root$_docs_security_security_audit_2_threat_model_trust_boundaries",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_2_threat_model_trust_boundaries",
+      "target": "$graphify-root$_docs_security_security_audit_data_classification_matrix",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_application_security_audit_hardening_report",
+      "target": "$graphify-root$_docs_security_security_audit_3_deep_dive_security_controls_mitigations",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_deep_dive_security_controls_mitigations",
+      "target": "$graphify-root$_docs_security_security_audit_3_1_insecure_direct_object_reference_idor_broken_access_control_owasp_a01",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L83",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_1_insecure_direct_object_reference_idor_broken_access_control_owasp_a01",
+      "target": "$graphify-root$_docs_security_security_audit_threat_description",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_1_insecure_direct_object_reference_idor_broken_access_control_owasp_a01",
+      "target": "$graphify-root$_docs_security_security_audit_technical_mitigations_implemented",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_deep_dive_security_controls_mitigations",
+      "target": "$graphify-root$_docs_security_security_audit_3_2_cryptographic_failures_credential_storage_at_rest_owasp_a02",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L112",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_2_cryptographic_failures_credential_storage_at_rest_owasp_a02",
+      "target": "$graphify-root$_docs_security_security_audit_threat_description_114",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L114",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_2_cryptographic_failures_credential_storage_at_rest_owasp_a02",
+      "target": "$graphify-root$_docs_security_security_audit_technical_mitigations_implemented_117",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L117",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_deep_dive_security_controls_mitigations",
+      "target": "$graphify-root$_docs_security_security_audit_3_3_zero_sensitive_logging_observability_pipeline_hardening_owasp_a09",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L141",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_3_zero_sensitive_logging_observability_pipeline_hardening_owasp_a09",
+      "target": "$graphify-root$_docs_security_security_audit_threat_description_143",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L143",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_3_zero_sensitive_logging_observability_pipeline_hardening_owasp_a09",
+      "target": "$graphify-root$_docs_security_security_audit_technical_mitigations_implemented_146",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L146",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_deep_dive_security_controls_mitigations",
+      "target": "$graphify-root$_docs_security_security_audit_3_4_sql_nosql_command_injection_owasp_a03",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L162",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_4_sql_nosql_command_injection_owasp_a03",
+      "target": "$graphify-root$_docs_security_security_audit_threat_description_164",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L164",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_4_sql_nosql_command_injection_owasp_a03",
+      "target": "$graphify-root$_docs_security_security_audit_technical_mitigations_implemented_167",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L167",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_deep_dive_security_controls_mitigations",
+      "target": "$graphify-root$_docs_security_security_audit_3_5_cross_site_scripting_xss_content_security_policy_owasp_a03_a05",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L179",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_5_cross_site_scripting_xss_content_security_policy_owasp_a03_a05",
+      "target": "$graphify-root$_docs_security_security_audit_threat_description_181",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L181",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_5_cross_site_scripting_xss_content_security_policy_owasp_a03_a05",
+      "target": "$graphify-root$_docs_security_security_audit_technical_mitigations_implemented_184",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L184",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_deep_dive_security_controls_mitigations",
+      "target": "$graphify-root$_docs_security_security_audit_3_6_cross_site_request_forgery_csrf_session_security",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L198",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_6_cross_site_request_forgery_csrf_session_security",
+      "target": "$graphify-root$_docs_security_security_audit_threat_description_200",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L200",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_6_cross_site_request_forgery_csrf_session_security",
+      "target": "$graphify-root$_docs_security_security_audit_technical_mitigations_implemented_203",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L203",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_deep_dive_security_controls_mitigations",
+      "target": "$graphify-root$_docs_security_security_audit_3_7_rate_limiting_denial_of_service_protection_owasp_a04_a07",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L216",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_7_rate_limiting_denial_of_service_protection_owasp_a04_a07",
+      "target": "$graphify-root$_docs_security_security_audit_threat_description_218",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L218",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_7_rate_limiting_denial_of_service_protection_owasp_a04_a07",
+      "target": "$graphify-root$_docs_security_security_audit_technical_mitigations_implemented_221",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L221",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_deep_dive_security_controls_mitigations",
+      "target": "$graphify-root$_docs_security_security_audit_3_8_server_side_request_forgery_ssrf_owasp_a10",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L233",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_8_server_side_request_forgery_ssrf_owasp_a10",
+      "target": "$graphify-root$_docs_security_security_audit_threat_description_235",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L235",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_3_8_server_side_request_forgery_ssrf_owasp_a10",
+      "target": "$graphify-root$_docs_security_security_audit_technical_mitigations_implemented_238",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L238",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_application_security_audit_hardening_report",
+      "target": "$graphify-root$_docs_security_security_audit_4_owasp_top_10_2021_compliance_matrix",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L251",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_application_security_audit_hardening_report",
+      "target": "$graphify-root$_docs_security_security_audit_5_security_test_suite_verification_results",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L268",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_application_security_audit_hardening_report",
+      "target": "$graphify-root$_docs_security_security_audit_6_residual_risks_recommended_future_roadmap",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L282",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_security_security_audit_application_security_audit_hardening_report",
+      "target": "$graphify-root$_docs_security_security_audit_7_sign_off_certification",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/security/SECURITY_AUDIT.md",
+      "source_location": "L295",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

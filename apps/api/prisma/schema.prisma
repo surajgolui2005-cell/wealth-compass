@@ -176,9 +176,10 @@ model FinancialProviderAccount {
   id               String         @id @default(uuid()) @db.Uuid
   userId           String         @map("user_id") @db.Uuid
   providerCode     ProviderCode   @map("provider_code")
-  accountName      String         @map("account_name") @db.VarChar(128)
-  vaultSecretPath  String?        @map("vault_secret_path") @db.VarChar(255)
-  status           ProviderStatus @default(CONNECTED)
+  accountName          String         @map("account_name") @db.VarChar(128)
+  vaultSecretPath      String?        @map("vault_secret_path") @db.VarChar(255)
+  encryptedCredentials String?        @map("encrypted_credentials") @db.Text
+  status               ProviderStatus @default(CONNECTED)
   lastSyncAt       DateTime?      @map("last_sync_at")
   lastSyncStatus   String?        @map("last_sync_status") @db.VarChar(64)
   syncErrorMessage String?        @map("sync_error_message") @db.Text
@@ -284,6 +285,7 @@ model Transaction {
   holding Holding @relation(fields: [holdingId], references: [id], onDelete: Cascade)
 
   @@index([holdingId, transactedAt])
+  @@index([holdingId, deletedAt, transactedAt])
   @@index([transactedAt])
   @@index([type])
   @@map("transactions")

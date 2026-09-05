@@ -1,0 +1,261 @@
+name: Continuous Integration & Quality Gates
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: "20"
+  PNPM_VERSION: "11.21.0"
+  PYTHON_VERSION: "3.12"
+  CI: "true"
+
+jobs:
+  # ── 1. Code Style & Linting ──────────────────────────────────────────────────
+  lint-and-format:
+    name: Lint & Code Formatting
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Install pnpm Package Manager
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Setup Node.js Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+
+      - name: Install Monorepo Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Verify Prettier Code Formatting
+        run: pnpm exec prettier --check "**/*.{ts,tsx,js,jsx,json,md,yaml,yml}"
+
+      - name: Run ESLint across Monorepo
+        run: pnpm lint
+
+  # ── 2. Static Typing & Schema Generation ────────────────────────────────────
+  typecheck:
+    name: TypeScript Typecheck & Schema Validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Install pnpm Package Manager
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Setup Node.js Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+
+      - name: Install Monorepo Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate Prisma ORM Client
+        run: pnpm --filter @investor-pm/api prisma:generate
+
+      - name: Typecheck Backend API
+        run: pnpm --filter @investor-pm/api build
+
+      - name: Typecheck Web Frontend
+        run: pnpm --filter @investor-pm/web exec tsc --noEmit
+
+      - name: Typecheck Mobile Application
+        run: pnpm --filter @investor-pm/mobile exec tsc --noEmit
+
+  # ── 3. Backend API Test Suite ───────────────────────────────────────────────
+  test-backend-api:
+    name: Test NestJS Backend API (Jest)
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Install pnpm Package Manager
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Setup Node.js Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+
+      - name: Install Monorepo Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate Prisma Client
+        run: pnpm --filter @investor-pm/api prisma:generate
+
+      - name: Run API Unit & Integration Tests with Coverage
+        run: pnpm --filter @investor-pm/api test -- --ci --maxWorkers=2 --coverage
+
+      - name: Archive Backend Test Coverage
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: api-test-coverage
+          path: apps/api/coverage/
+          retention-days: 7
+
+  # ── 4. Web Frontend Test Suite ──────────────────────────────────────────────
+  test-frontend-web:
+    name: Test Next.js Web App (Vitest)
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Install pnpm Package Manager
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Setup Node.js Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+
+      - name: Install Monorepo Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run Web Component & Unit Tests
+        run: pnpm --filter @investor-pm/web test -- --run
+
+  # ── 5. Mobile Application Test Suite ────────────────────────────────────────
+  test-mobile:
+    name: Test React Native Mobile (Jest-Expo)
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Install pnpm Package Manager
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Setup Node.js Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+
+      - name: Install Monorepo Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run Mobile Unit Tests
+        run: pnpm --filter @investor-pm/mobile test -- --ci --passWithNoTests
+
+  # ── 6. Quant Engine Analytics Test Suite ────────────────────────────────────
+  test-quant-engine:
+    name: Test Python Quant Engine (Pytest)
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python Runtime
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: "pip"
+          cache-dependency-path: apps/quant-engine/requirements.txt
+
+      - name: Install Quantitative Engine Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r apps/quant-engine/requirements.txt
+
+      - name: Run Pytest Suite & Financial Benchmarks
+        working-directory: apps/quant-engine
+        run: pytest --maxfail=5 -v
+
+  # ── 7. Dependency Security Vulnerability Audit ───────────────────────────────
+  security-audit:
+    name: Dependency Vulnerability Audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Install pnpm Package Manager
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Audit NPM Package Vulnerabilities
+        run: pnpm audit --audit-level=high --prod
+
+  # ── 8. Consolidated Quality & CI Gate ───────────────────────────────────────
+  ci-gate:
+    name: CI Merge Gate Status Check
+    runs-on: ubuntu-latest
+    needs:
+      - lint-and-format
+      - typecheck
+      - test-backend-api
+      - test-frontend-web
+      - test-mobile
+      - test-quant-engine
+      - security-audit
+    if: always()
+    steps:
+      - name: Evaluate All Upstream Job Statuses
+        run: |
+          echo "Evaluating CI Gate status across all parallel jobs..."
+          LINT="${{ needs.lint-and-format.result }}"
+          TYPECHECK="${{ needs.typecheck.result }}"
+          API="${{ needs.test-backend-api.result }}"
+          WEB="${{ needs.test-frontend-web.result }}"
+          MOBILE="${{ needs.test-mobile.result }}"
+          QUANT="${{ needs.test-quant-engine.result }}"
+          SECURITY="${{ needs.security-audit.result }}"
+
+          echo "Job Summary:"
+          echo "  - lint-and-format: $LINT"
+          echo "  - typecheck:       $TYPECHECK"
+          echo "  - backend-api:     $API"
+          echo "  - frontend-web:    $WEB"
+          echo "  - mobile:          $MOBILE"
+          echo "  - quant-engine:    $QUANT"
+          echo "  - security-audit:  $SECURITY"
+
+          if [ "$LINT" != "success" ] || [ "$TYPECHECK" != "success" ] || \
+             [ "$API" != "success" ] || [ "$WEB" != "success" ] || \
+             [ "$MOBILE" != "success" ] || [ "$QUANT" != "success" ] || \
+             [ "$SECURITY" != "success" ]; then
+            echo "::error::One or more upstream CI jobs failed or were cancelled. Merging is BLOCKED."
+            exit 1
+          fi
+          echo "All CI quality gates successfully passed. Ready for merge."

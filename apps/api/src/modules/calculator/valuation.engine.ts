@@ -1,4 +1,10 @@
-import { Injectable, Logger, NotFoundException, NotImplementedException } from "@nestjs/common";
+import {
+  Injectable,
+  Logger,
+  NotFoundException,
+  NotImplementedException,
+  Optional,
+} from "@nestjs/common";
 import { AssetClassCode, CostBasisMethod } from "@prisma/client";
 import Decimal from "decimal.js";
 import { PrismaService } from "../../prisma/prisma.service";
@@ -6,6 +12,7 @@ import { MarketDataService } from "../market-data/services/market-data.service";
 import { CurrencyConverterService } from "./currency-converter";
 import { FifoCalculator } from "./fifo-calculator";
 import { WeightedAvgCalculator } from "./weighted-avg-calculator";
+import { AnalyticsCacheManager } from "../../common/cache/analytics-cache.manager";
 import {
   CalcMethod,
   CostBasisResult,
@@ -31,6 +38,7 @@ Decimal.set({ precision: 28, rounding: Decimal.ROUND_HALF_UP });
  * - Pure read-only computation on request — never writes to database.
  * - Supports FIFO and Weighted Average cost basis methods.
  * - Integrates with MarketDataService for 3-tier price lookup (Redis -> API -> DB).
+ * - Read-through Redis analytics caching with immediate transaction write invalidation.
  */
 @Injectable()
 export class ValuationEngine {
@@ -42,6 +50,7 @@ export class ValuationEngine {
     private readonly fifoCalculator: FifoCalculator,
     private readonly weightedAvgCalculator: WeightedAvgCalculator,
     private readonly currencyConverter: CurrencyConverterService,
+    @Optional() private readonly cacheManager?: AnalyticsCacheManager,
   ) {}
 
   /**
@@ -52,6 +61,14 @@ export class ValuationEngine {
     holdingId: string,
     method: CalcMethod = CalcMethod.FIFO,
   ): Promise<PositionValuationDto> {
+    const cacheKey = `analytics:holding:${holdingId}:valuation:${method}`;
+    if (this.cacheManager) {
+      const cached = await this.cacheManager.get<PositionValuationDto>(cacheKey);
+      if (cached) {
+        return cached;
+      }
+    }
+
     const holding = await this.prisma.holding.findFirst({
       where: {
         id: holdingId,
@@ -82,13 +99,19 @@ export class ValuationEngine {
     const assetClass = holding.asset.assetClass.code as AssetClassCode;
     const homeCurrency = holding.portfolio.currency || "INR";
 
-    return this.calculatePositionValuation(
+    const result = await this.calculatePositionValuation(
       holding,
       holding.transactions,
       assetClass,
       homeCurrency,
       method,
     );
+
+    if (this.cacheManager) {
+      await this.cacheManager.set(cacheKey, result, 300, holding.portfolioId);
+    }
+
+    return result;
   }
 
   /**
@@ -99,6 +122,14 @@ export class ValuationEngine {
     portfolioId: string,
     method: CalcMethod = CalcMethod.FIFO,
   ): Promise<PortfolioValuationSummaryDto> {
+    const cacheKey = `analytics:portfolio:${portfolioId}:valuation:${method}`;
+    if (this.cacheManager) {
+      const cached = await this.cacheManager.get<PortfolioValuationSummaryDto>(cacheKey);
+      if (cached) {
+        return cached;
+      }
+    }
+
     const portfolio = await this.prisma.portfolio.findFirst({
       where: {
         id: portfolioId,
@@ -194,7 +225,7 @@ export class ValuationEngine {
       new Decimal(b.currentValue).minus(new Decimal(a.currentValue)).toNumber(),
     );
 
-    return {
+    const summary: PortfolioValuationSummaryDto = {
       portfolioId: portfolio.id,
       portfolioName: portfolio.name,
       currency: homeCurrency,
@@ -209,6 +240,12 @@ export class ValuationEngine {
       computedAt,
       costBasisMethod: method,
     };
+
+    if (this.cacheManager) {
+      await this.cacheManager.set(cacheKey, summary, 300, portfolio.id);
+    }
+
+    return summary;
   }
 
   /**

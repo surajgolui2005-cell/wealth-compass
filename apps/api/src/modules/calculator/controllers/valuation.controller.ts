@@ -7,6 +7,7 @@ import {
   Query,
   Req,
   UseGuards,
+  UseInterceptors,
   BadRequestException,
 } from "@nestjs/common";
 import { Request } from "express";
@@ -15,8 +16,13 @@ import { ValuationEngine } from "../valuation.engine";
 import { CalcMethod } from "../interfaces/calculator.interface";
 import { PortfolioValuationSummaryDto } from "../dto/portfolio-valuation-summary.dto";
 import { PositionValuationDto } from "../dto/position-valuation.dto";
+import {
+  AnalyticsCacheInterceptor,
+  CacheableAnalytics,
+} from "../../../common/cache/cache.interceptor";
 
 @UseGuards(JwtAuthGuard)
+@UseInterceptors(AnalyticsCacheInterceptor)
 @Controller("api/v1/portfolios")
 export class ValuationController {
   constructor(private readonly valuationEngine: ValuationEngine) {}
@@ -29,6 +35,7 @@ export class ValuationController {
    * and asset allocation breakdown on-demand without writing to database snapshots.
    */
   @Get(":id/valuation")
+  @CacheableAnalytics("valuation", 300)
   @HttpCode(HttpStatus.OK)
   async getPortfolioValuation(
     @Req() req: Request & { user: { id: string } },
@@ -47,6 +54,7 @@ export class ValuationController {
    * and STCG/LTCG realized gain records.
    */
   @Get(":portfolioId/holdings/:holdingId/valuation")
+  @CacheableAnalytics("holding-valuation", 300)
   @HttpCode(HttpStatus.OK)
   async getHoldingValuation(
     @Req() req: Request & { user: { id: string } },

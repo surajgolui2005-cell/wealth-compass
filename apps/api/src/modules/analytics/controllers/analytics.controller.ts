@@ -1,6 +1,18 @@
-import { Body, Controller, HttpCode, HttpStatus, Post, UseGuards } from "@nestjs/common";
+import {
+  Body,
+  Controller,
+  HttpCode,
+  HttpStatus,
+  Post,
+  UseGuards,
+  UseInterceptors,
+} from "@nestjs/common";
 import { JwtAuthGuard } from "../../auth/jwt-auth.guard";
 import { AnalyticsClientService } from "../analytics-client.service";
+import {
+  AnalyticsCacheInterceptor,
+  CacheableAnalytics,
+} from "../../../common/cache/cache.interceptor";
 import {
   BenchmarkComputeRequest,
   BenchmarkResponseDto,
@@ -22,6 +34,7 @@ import {
  * Exposes REST endpoints for performance and allocation analytics proxying to the Python quant-engine.
  */
 @UseGuards(JwtAuthGuard)
+@UseInterceptors(AnalyticsCacheInterceptor)
 @Controller("api/v1/analytics")
 export class AnalyticsController {
   constructor(private readonly analyticsClientService: AnalyticsClientService) {}
@@ -31,6 +44,7 @@ export class AnalyticsController {
    * Computes Time-Weighted Return (Modified Dietz sub-period chain linking).
    */
   @Post("twr")
+  @CacheableAnalytics("twr", 300)
   @HttpCode(HttpStatus.OK)
   async computeTwr(@Body() body: TwrComputeRequest): Promise<TwrResponseDto> {
     return this.analyticsClientService.computeTwr(body);
@@ -41,6 +55,7 @@ export class AnalyticsController {
    * Computes Extended Internal Rate of Return (Newton-Raphson + Brent fallback).
    */
   @Post("xirr")
+  @CacheableAnalytics("xirr", 300)
   @HttpCode(HttpStatus.OK)
   async computeXirr(@Body() body: XirrComputeRequest): Promise<XirrResultDto> {
     return this.analyticsClientService.computeXirr(body);
@@ -51,6 +66,7 @@ export class AnalyticsController {
    * Computes Beta, Alpha, Sharpe, Sortino, Tracking Error, Information Ratio, and Correlation.
    */
   @Post("benchmark")
+  @CacheableAnalytics("benchmark", 300)
   @HttpCode(HttpStatus.OK)
   async computeBenchmark(@Body() body: BenchmarkComputeRequest): Promise<BenchmarkResponseDto> {
     return this.analyticsClientService.computeBenchmark(body);
@@ -63,6 +79,7 @@ export class AnalyticsController {
    * 100%. Unclassified assets are grouped under 'Unassigned / Other'.
    */
   @Post("allocation")
+  @CacheableAnalytics("allocation", 300)
   @HttpCode(HttpStatus.OK)
   async computeAllocation(@Body() body: AllocationComputeRequest): Promise<AllocationResponseDto> {
     return this.analyticsClientService.computeAllocation(body);
@@ -74,6 +91,7 @@ export class AnalyticsController {
    * amounts (in home currency) required to return to the target allocation.
    */
   @Post("rebalance")
+  @CacheableAnalytics("rebalance", 300)
   @HttpCode(HttpStatus.OK)
   async computeRebalance(@Body() body: RebalanceComputeRequest): Promise<RebalanceResponseDto> {
     return this.analyticsClientService.computeRebalance(body);
@@ -107,6 +125,7 @@ export class AnalyticsController {
    * ```
    */
   @Post("diversification")
+  @CacheableAnalytics("diversification", 300)
   @HttpCode(HttpStatus.OK)
   async computeDiversification(
     @Body() body: DiversificationComputeRequest,

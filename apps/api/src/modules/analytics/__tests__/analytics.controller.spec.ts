@@ -1,6 +1,7 @@
 import { Test, TestingModule } from "@nestjs/testing";
 import { AnalyticsController } from "../controllers/analytics.controller";
 import { AnalyticsClientService } from "../analytics-client.service";
+import { AnalyticsCacheManager } from "../../../common/cache/analytics-cache.manager";
 import {
   BenchmarkComputeRequest,
   TwrComputeRequest,
@@ -21,6 +22,14 @@ describe("AnalyticsController", () => {
             computeTwr: jest.fn(),
             computeXirr: jest.fn(),
             computeBenchmark: jest.fn(),
+          },
+        },
+        {
+          provide: AnalyticsCacheManager,
+          useValue: {
+            get: jest.fn().mockResolvedValue(null),
+            set: jest.fn().mockResolvedValue(undefined),
+            invalidatePortfolio: jest.fn().mockResolvedValue(undefined),
           },
         },
       ],

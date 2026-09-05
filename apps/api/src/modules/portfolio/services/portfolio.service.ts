@@ -1,13 +1,17 @@
-import { Injectable } from '@nestjs/common';
-import Decimal from 'decimal.js';
-import { PrismaService } from '../../../prisma/prisma.service';
-import { CreatePortfolioDto } from '../dto/create-portfolio.dto';
-import { UpdatePortfolioDto } from '../dto/update-portfolio.dto';
-import { PortfolioNotFoundException } from '../exceptions/portfolio-not-found.exception';
+import { Injectable, Optional } from "@nestjs/common";
+import { EventEmitter2 } from "@nestjs/event-emitter";
+import Decimal from "decimal.js";
+import { PrismaService } from "../../../prisma/prisma.service";
+import { CreatePortfolioDto } from "../dto/create-portfolio.dto";
+import { UpdatePortfolioDto } from "../dto/update-portfolio.dto";
+import { PortfolioNotFoundException } from "../exceptions/portfolio-not-found.exception";
 
 @Injectable()
 export class PortfolioService {
-  constructor(private readonly prisma: PrismaService) {}
+  constructor(
+    private readonly prisma: PrismaService,
+    @Optional() private readonly eventEmitter?: EventEmitter2,
+  ) {}
 
   async createPortfolio(userId: string, dto: CreatePortfolioDto) {
     if (dto.isDefault) {
@@ -29,7 +33,7 @@ export class PortfolioService {
         name: dto.name.trim(),
         description: dto.description?.trim() || null,
         isDefault: dto.isDefault ?? isFirstPortfolio,
-        currency: dto.currency?.toUpperCase() || 'INR',
+        currency: dto.currency?.toUpperCase() || "INR",
         totalValue: 0,
       },
     });
@@ -46,7 +50,7 @@ export class PortfolioService {
           select: { holdings: true },
         },
       },
-      orderBy: [{ isDefault: 'desc' }, { createdAt: 'desc' }],
+      orderBy: [{ isDefault: "desc" }, { createdAt: "desc" }],
     });
   }
 
@@ -84,7 +88,7 @@ export class PortfolioService {
       });
     }
 
-    return this.prisma.portfolio.update({
+    const updated = await this.prisma.portfolio.update({
       where: { id: portfolio.id },
       data: {
         name: dto.name !== undefined ? dto.name.trim() : undefined,
@@ -93,6 +97,14 @@ export class PortfolioService {
         currency: dto.currency ? dto.currency.toUpperCase() : undefined,
       },
     });
+
+    if (this.eventEmitter) {
+      this.eventEmitter.emit("portfolio.updated", {
+        portfolioId: portfolio.id,
+      });
+    }
+
+    return updated;
   }
 
   async deletePortfolio(userId: string, portfolioId: string) {
@@ -103,7 +115,13 @@ export class PortfolioService {
       data: { deletedAt: new Date() },
     });
 
-    return { message: 'Portfolio successfully deleted' };
+    if (this.eventEmitter) {
+      this.eventEmitter.emit("portfolio.updated", {
+        portfolioId: portfolio.id,
+      });
+    }
+
+    return { message: "Portfolio successfully deleted" };
   }
 
   /**

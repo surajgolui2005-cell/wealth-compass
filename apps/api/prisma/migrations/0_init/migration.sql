@@ -90,6 +90,7 @@ CREATE TABLE "financial_provider_accounts" (
     "provider_code" "ProviderCode" NOT NULL,
     "account_name" VARCHAR(128) NOT NULL,
     "vault_secret_path" VARCHAR(255),
+    "encrypted_credentials" TEXT,
     "status" "ProviderStatus" NOT NULL DEFAULT 'CONNECTED',
     "last_sync_at" TIMESTAMP(3),
     "last_sync_status" VARCHAR(64),
@@ -317,6 +318,7 @@ CREATE INDEX "holdings_provider_account_id_idx" ON "holdings"("provider_account_
 
 -- CreateIndex
 CREATE INDEX "transactions_holding_id_transacted_at_idx" ON "transactions"("holding_id", "transacted_at");
+CREATE INDEX "transactions_holding_id_deleted_at_transacted_at_idx" ON "transactions"("holding_id", "deleted_at", "transacted_at");
 CREATE INDEX "transactions_transacted_at_idx" ON "transactions"("transacted_at");
 CREATE INDEX "transactions_type_idx" ON "transactions"("type");
 

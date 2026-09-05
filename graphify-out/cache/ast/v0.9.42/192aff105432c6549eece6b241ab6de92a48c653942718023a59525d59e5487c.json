@@ -1,0 +1,287 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_docs_performance_benchmark_results_md",
+      "label": "BENCHMARK_RESULTS.md",
+      "file_type": "document",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_performance_benchmark_results_performance_benchmark_database_optimization_report",
+      "label": "Performance Benchmark & Database Optimization Report",
+      "file_type": "document",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_performance_benchmark_results_1_executive_summary",
+      "label": "1. Executive Summary",
+      "file_type": "document",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L12"
+    },
+    {
+      "id": "$graphify-root$_docs_performance_benchmark_results_key_results_at_a_glance",
+      "label": "Key Results at a Glance",
+      "file_type": "document",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L16"
+    },
+    {
+      "id": "$graphify-root$_docs_performance_benchmark_results_2_optimization_architecture",
+      "label": "2. Optimization Architecture",
+      "file_type": "document",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L31"
+    },
+    {
+      "id": "$graphify-root$_docs_performance_benchmark_results_2_1_analytics_cache_manager_analyticscachemanager",
+      "label": "2.1 Analytics Cache Manager (`AnalyticsCacheManager`)",
+      "file_type": "document",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L75"
+    },
+    {
+      "id": "$graphify-root$_docs_performance_benchmark_results_2_2_declarative_nestjs_cache_interceptor_cacheableanalytics",
+      "label": "2.2 Declarative NestJS Cache Interceptor (`@CacheableAnalytics`)",
+      "file_type": "document",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L87"
+    },
+    {
+      "id": "$graphify-root$_docs_performance_benchmark_results_2_3_postgresql_prisma_query_path_tuning",
+      "label": "2.3 PostgreSQL & Prisma Query Path Tuning",
+      "file_type": "document",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L95"
+    },
+    {
+      "id": "$graphify-root$_docs_performance_benchmark_results_3_load_testing_methodology_scenarios",
+      "label": "3. Load Testing Methodology & Scenarios",
+      "file_type": "document",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L108"
+    },
+    {
+      "id": "$graphify-root$_docs_performance_benchmark_results_3_1_suite_1_1_000_concurrent_vu_stress_test_scripts_k6_portfolio_stress_test_js",
+      "label": "3.1 Suite 1: 1,000 Concurrent VU Stress Test (`scripts/k6/portfolio-stress-test.js`)",
+      "file_type": "document",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L112"
+    },
+    {
+      "id": "$graphify-root$_docs_performance_benchmark_results_3_2_suite_2_analytics_cache_invalidation_acceleration_suite_scripts_k6_analytics_cache_test_js",
+      "label": "3.2 Suite 2: Analytics Cache Invalidation & Acceleration Suite (`scripts/k6/analytics-cache-test.js`)",
+      "file_type": "document",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L126"
+    },
+    {
+      "id": "$graphify-root$_docs_performance_benchmark_results_4_benchmark_results_metric_analysis",
+      "label": "4. Benchmark Results & Metric Analysis",
+      "file_type": "document",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L132"
+    },
+    {
+      "id": "$graphify-root$_docs_performance_benchmark_results_4_1_1_000_vu_load_stress_test_results",
+      "label": "4.1 1,000 VU Load Stress Test Results",
+      "file_type": "document",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L134"
+    },
+    {
+      "id": "$graphify-root$_docs_performance_benchmark_results_latency_percentiles_target_p95_200ms",
+      "label": "Latency Percentiles (Target: p95 < 200ms)",
+      "file_type": "document",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L153"
+    },
+    {
+      "id": "$graphify-root$_docs_performance_benchmark_results_4_2_cache_verification_invalidation_results",
+      "label": "4.2 Cache Verification & Invalidation Results",
+      "file_type": "document",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L164"
+    },
+    {
+      "id": "$graphify-root$_docs_performance_benchmark_results_key_findings_on_invalidation",
+      "label": "Key Findings on Invalidation:",
+      "file_type": "document",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L180"
+    },
+    {
+      "id": "$graphify-root$_docs_performance_benchmark_results_5_production_recommendations_capacity_planning",
+      "label": "5. Production Recommendations & Capacity Planning",
+      "file_type": "document",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L187"
+    },
+    {
+      "id": "$graphify-root$_docs_performance_benchmark_results_6_verification_reproducibility",
+      "label": "6. Verification & Reproducibility",
+      "file_type": "document",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L199"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_docs_performance_benchmark_results_md",
+      "target": "$graphify-root$_docs_performance_benchmark_results_performance_benchmark_database_optimization_report",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_performance_benchmark_results_performance_benchmark_database_optimization_report",
+      "target": "$graphify-root$_docs_performance_benchmark_results_1_executive_summary",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_performance_benchmark_results_1_executive_summary",
+      "target": "$graphify-root$_docs_performance_benchmark_results_key_results_at_a_glance",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_performance_benchmark_results_performance_benchmark_database_optimization_report",
+      "target": "$graphify-root$_docs_performance_benchmark_results_2_optimization_architecture",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_performance_benchmark_results_2_optimization_architecture",
+      "target": "$graphify-root$_docs_performance_benchmark_results_2_1_analytics_cache_manager_analyticscachemanager",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_performance_benchmark_results_2_optimization_architecture",
+      "target": "$graphify-root$_docs_performance_benchmark_results_2_2_declarative_nestjs_cache_interceptor_cacheableanalytics",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_performance_benchmark_results_2_optimization_architecture",
+      "target": "$graphify-root$_docs_performance_benchmark_results_2_3_postgresql_prisma_query_path_tuning",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L95",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_performance_benchmark_results_performance_benchmark_database_optimization_report",
+      "target": "$graphify-root$_docs_performance_benchmark_results_3_load_testing_methodology_scenarios",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_performance_benchmark_results_3_load_testing_methodology_scenarios",
+      "target": "$graphify-root$_docs_performance_benchmark_results_3_1_suite_1_1_000_concurrent_vu_stress_test_scripts_k6_portfolio_stress_test_js",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L112",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_performance_benchmark_results_3_load_testing_methodology_scenarios",
+      "target": "$graphify-root$_docs_performance_benchmark_results_3_2_suite_2_analytics_cache_invalidation_acceleration_suite_scripts_k6_analytics_cache_test_js",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L126",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_performance_benchmark_results_performance_benchmark_database_optimization_report",
+      "target": "$graphify-root$_docs_performance_benchmark_results_4_benchmark_results_metric_analysis",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L132",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_performance_benchmark_results_4_benchmark_results_metric_analysis",
+      "target": "$graphify-root$_docs_performance_benchmark_results_4_1_1_000_vu_load_stress_test_results",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_performance_benchmark_results_4_1_1_000_vu_load_stress_test_results",
+      "target": "$graphify-root$_docs_performance_benchmark_results_latency_percentiles_target_p95_200ms",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L153",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_performance_benchmark_results_4_benchmark_results_metric_analysis",
+      "target": "$graphify-root$_docs_performance_benchmark_results_4_2_cache_verification_invalidation_results",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L164",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_performance_benchmark_results_4_2_cache_verification_invalidation_results",
+      "target": "$graphify-root$_docs_performance_benchmark_results_key_findings_on_invalidation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L180",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_performance_benchmark_results_performance_benchmark_database_optimization_report",
+      "target": "$graphify-root$_docs_performance_benchmark_results_5_production_recommendations_capacity_planning",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L187",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_performance_benchmark_results_performance_benchmark_database_optimization_report",
+      "target": "$graphify-root$_docs_performance_benchmark_results_6_verification_reproducibility",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/performance/BENCHMARK_RESULTS.md",
+      "source_location": "L199",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

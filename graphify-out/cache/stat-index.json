@@ -1,1 +1,2073 @@
-{".agents/rules/graphify.md":{"size":947,"mtime_ns":1786697456135414200,"indexed_at_ns":1786701986040715500,"word_count":127,"hashes":{".agents/rules/graphify.md":"e55792958648fb69255e3ce3f71a8fcead36307c34b2d67feda9ac650ac61803"}},".agents/workflows/graphify.md":{"size":239,"mtime_ns":1786697456139022500,"indexed_at_ns":1786701986045252300,"word_count":37,"hashes":{".agents/workflows/graphify.md":"d92622463299d313da48e2cdbebf79d7ea24ffaf2ae2de2a1714be8ee42b22b3"}},"PROJECT_STATE.md":{"size":62729,"mtime_ns":1788592364234732300,"indexed_at_ns":1788592415687082600,"word_count":5288,"hashes":{"project_state.md":"4ec4831c9d2907f4daf5ce286d6bcd5126e84a593186a47aa33fcfb6b2c02d7d"}},"apps/api/package.json":{"size":1994,"mtime_ns":1788584539745703500,"indexed_at_ns":1788588128475391200,"word_count":138,"hashes":{"apps/api/package.json":"9cc16a834dd4299716317b70693fe980d7f9b0f6c493168bc72a613f23c2b420"}},"apps/quant-engine/package.json":{"size":306,"mtime_ns":1786696344390652500,"indexed_at_ns":1786698106513448700,"word_count":31,"hashes":{"apps/quant-engine/package.json":"ac2c3924ce2294320d5abc705a874de5205e21a701ea3fab2821a6560cc5ccbd"}},"apps/quant-engine/pyproject.toml":{"size":624,"mtime_ns":1786809530915423200,"indexed_at_ns":1786810678189460200,"word_count":62,"hashes":{"apps/quant-engine/pyproject.toml":"fceff10ad3086aeaa7ff0e80abfcfafdcb19c731aa2ff839c09257f9781c8e00"}},"apps/web/package.json":{"size":1708,"mtime_ns":1788589896828548000,"indexed_at_ns":1788592415345756300,"word_count":117,"hashes":{"apps/web/package.json":"c09630f4d189d46843ece310930873ecb623952e340420ba89b16d7952f1c918"}},"apps/workers/package.json":{"size":370,"mtime_ns":1786696317731218600,"indexed_at_ns":1786698106523943900,"word_count":37,"hashes":{"apps/workers/package.json":"4e18468bff6b517ac2d0f1a6e0fd5ff39fdbf580e9737a5808074b7d0c839f7c"}},"docs/adr/0001-monorepo-strategy.md":{"size":9696,"mtime_ns":1786606855605689000,"indexed_at_ns":1786701986062935300,"word_count":1364,"hashes":{"docs/adr/0001-monorepo-strategy.md":"90b9e4e0ab48692718255cdf37a33ce1e171c23e36d025aa226c7465e1045758"}},"docs/adr/0002-backend-framework.md":{"size":11915,"mtime_ns":1786606857638475800,"indexed_at_ns":1786701986066694300,"word_count":1661,"hashes":{"docs/adr/0002-backend-framework.md":"ad4029ece9b718d1f4e7d91e7f5ac5a52f313af54603836f27782905742d92d9"}},"docs/adr/0003-quant-service-engine.md":{"size":11224,"mtime_ns":1786684759353624000,"indexed_at_ns":1786701986069718600,"word_count":1510,"hashes":{"docs/adr/0003-quant-service-engine.md":"413782ac2056a9357bde3d4da6fa89780d833cf60bf5b575c35b707c1ec39a51"}},"docs/adr/0004-database-and-orm.md":{"size":10613,"mtime_ns":1786684783043424700,"indexed_at_ns":1786701986073090900,"word_count":1422,"hashes":{"docs/adr/0004-database-and-orm.md":"ea5bd30fcbba4d681ad2651628b385ab7be044dd7d0c06939f6cd0e9377d3639"}},"docs/adr/0005-cache-and-job-queue.md":{"size":10393,"mtime_ns":1786684794084196700,"indexed_at_ns":1786701986077047000,"word_count":1428,"hashes":{"docs/adr/0005-cache-and-job-queue.md":"a2cee94f7c73d5d1fbad95672e02bbede8c6e9e32804d3733b2bfb96efc73fb1"}},"docs/adr/0006-mobile-framework.md":{"size":9886,"mtime_ns":1786684805080341700,"indexed_at_ns":1786701986080015500,"word_count":1382,"hashes":{"docs/adr/0006-mobile-framework.md":"3ee710758f0c2470f340c9c0a8062132d4450c2f2b16fc5f4724e3ddf42b7565"}},"docs/architecture/ARCHITECTURE.md":{"size":63015,"mtime_ns":1786605788405619500,"indexed_at_ns":1786701986084935000,"word_count":7486,"hashes":{"docs/architecture/architecture.md":"903c7d91bc77b98ccd8c536216b2820f617e073d83f399955fa0ca173442e015"}},"docs/product/PRD.md":{"size":111582,"mtime_ns":1786558929642055400,"indexed_at_ns":1786701986091624400,"word_count":15681,"hashes":{"docs/product/prd.md":"752078fbd3905b7cbf73bbb11bf0f52cc6328034a7343787d510aaddfd92e1be"}},"docs/product/PRODUCT_DISCOVERY.md":{"size":48351,"mtime_ns":1786557859394575800,"indexed_at_ns":1786701986095301100,"word_count":8157,"hashes":{"docs/product/product_discovery.md":"e9b39e1da1e9296826d347d0c0e5b7370b0140e49bf7c9611909a3320c51c630"}},"package.json":{"size":647,"mtime_ns":1788590618422328600,"indexed_at_ns":1788592415402023200,"word_count":63,"hashes":{"package.json":"b0817fce82ffcf236ebaeff433821f4c781081e4e817337e5531a475d2a24bcc"}},"packages/config/package.json":{"size":395,"mtime_ns":1786701601211932300,"indexed_at_ns":1786701986001691000,"word_count":37,"hashes":{"packages/config/package.json":"6898e137b47707b7744153e620a79700635eec25e97fd62f5cac28de17b8a79e"}},"packages/shared-types/package.json":{"size":255,"mtime_ns":1786696281321714800,"indexed_at_ns":1786698106531791400,"word_count":28,"hashes":{"packages/shared-types/package.json":"d1264968ca86dddb64654d218ae2527e2ca764cb62cec48d329591f6daae81a3"}},"packages/shared-types/src/index.ts":{"size":1082,"mtime_ns":1786696286502932400,"indexed_at_ns":1786698045622582800,"word_count":125},"packages/ui-components/package.json":{"size":369,"mtime_ns":1786696292728855300,"indexed_at_ns":1786698106533440600,"word_count":38,"hashes":{"packages/ui-components/package.json":"756e7dc4439bd69aa1754ca9c922b1074d00d695f461d34aefc24d8204abf6a0"}},"packages/ui-components/src/index.ts":{"size":208,"mtime_ns":1786696298263426200,"indexed_at_ns":1786698045634870500,"word_count":19},"pnpm-workspace.yaml":{"size":325,"mtime_ns":1786813023130887300,"indexed_at_ns":1786813129197038400,"word_count":50},"tsconfig.json":{"size":568,"mtime_ns":1786701535211342000,"indexed_at_ns":1786701986029790600,"word_count":35,"hashes":{"tsconfig.json":"d7295efd7564d8f549da63681973a70014d44f56f7cedb26e58970f901d9bbf7"}},"turbo.json":{"size":385,"mtime_ns":1786696250204417300,"indexed_at_ns":1786698106539291500,"word_count":36,"hashes":{"turbo.json":"7eeb23dd0fc18b19f80bc71d59fdd1ba09bec29f99dc116fcccb7a4b7f147b3c"}},"README.md":{"size":2958,"mtime_ns":1786700744927238500,"indexed_at_ns":1786701986059813900,"word_count":366,"hashes":{"readme.md":"8ff580c56caebb131c496b4284896eaa5b3c6af771a545fb637b90b84bd4b404"}},"docker-compose.yml":{"size":1563,"mtime_ns":1786701488292339100,"indexed_at_ns":1786727976331414500,"word_count":106,"hashes":{"docker-compose.yml":"d8932b91f9584049c3454f2b3bd7f680917fcac287f22d2683650d4433784751"}},"packages/config/src/env.js":{"size":3714,"mtime_ns":1786715780856841100,"indexed_at_ns":1786727953996569300,"word_count":263},"packages/config/src/env.ts":{"size":3498,"mtime_ns":1786715781386999400,"indexed_at_ns":1786727954060969500,"word_count":262},"packages/config/src/index.js":{"size":935,"mtime_ns":1786715781465729900,"indexed_at_ns":1786727954063927600,"word_count":113},"packages/config/src/index.ts":{"size":23,"mtime_ns":1786715781514841400,"indexed_at_ns":1786727954121610100,"word_count":4},"packages/config/src/test-env.ts":{"size":2813,"mtime_ns":1786715781630677400,"indexed_at_ns":1786727954124720000,"word_count":254},"packages/config/tsconfig.json":{"size":166,"mtime_ns":1786701595636969300,"indexed_at_ns":1786701986004922400,"word_count":15,"hashes":{"packages/config/tsconfig.json":"f4dac60f671ac49b27482cdb3810dedb25f91c838c89b90cebdb393674f45498"}},"packages/shared-types/src/index.js":{"size":77,"mtime_ns":1786701592382848100,"indexed_at_ns":1786701985762455000,"word_count":8},"packages/ui-components/src/index.js":{"size":253,"mtime_ns":1786715781905534300,"indexed_at_ns":1786727954143682500,"word_count":21},"scripts/dev-setup.sh":{"size":3607,"mtime_ns":1786701552290426900,"indexed_at_ns":1786701986025194900,"word_count":407,"hashes":{"scripts/dev-setup.sh":"747756cc600c927cc02b31cb419cb64769fca300d87e97663966d9d770e75d23"}},"DATABASE.md":{"size":11172,"mtime_ns":1786727881555131600,"indexed_at_ns":1786727976323598300,"word_count":1156,"hashes":{"database.md":"20fc242bdc9cd444980e644d4e128006dd0f5e351e3d7a35d63ca73da0348ecf"}},"apps/api/jest.config.js":{"size":317,"mtime_ns":1786727881558290800,"indexed_at_ns":1786727953750075800,"word_count":27},"apps/api/prisma/migrations/0_init/migration.sql":{"size":15597,"mtime_ns":1786727881568003600,"indexed_at_ns":1786727989626076000,"word_count":1477,"hashes":{"apps/api/prisma/migrations/0_init/migration.sql":"87ed3dd3040de91ac1098f5ff407d95edaf83a0cc396a6bc0600eb5217a2a195"}},"apps/api/src/app.module.ts":{"size":1202,"mtime_ns":1788584803365457200,"indexed_at_ns":1788588121929023900,"word_count":107},"apps/api/src/main.ts":{"size":4902,"mtime_ns":1788583003671299000,"indexed_at_ns":1788588122020660100,"word_count":359},"apps/api/src/modules/auth/__tests__/argon.service.spec.ts":{"size":1284,"mtime_ns":1786727881574275700,"indexed_at_ns":1786727953772078000,"word_count":124},"apps/api/src/modules/auth/__tests__/auth.controller.spec.ts":{"size":4164,"mtime_ns":1786727881575247300,"indexed_at_ns":1786727953776579300,"word_count":351},"apps/api/src/modules/auth/__tests__/auth.service.spec.ts":{"size":6956,"mtime_ns":1786727881576244200,"indexed_at_ns":1786727953782303700,"word_count":492},"apps/api/src/modules/auth/argon.service.ts":{"size":512,"mtime_ns":1786727881577752600,"indexed_at_ns":1786727953786266000,"word_count":56},"apps/api/src/modules/auth/auth.controller.ts":{"size":2694,"mtime_ns":1786727881578763500,"indexed_at_ns":1786727953790154800,"word_count":261},"apps/api/src/modules/auth/auth.module.ts":{"size":1207,"mtime_ns":1786727881579761500,"indexed_at_ns":1786727953794123000,"word_count":104},"apps/api/src/modules/auth/auth.service.ts":{"size":7652,"mtime_ns":1786727881582121300,"indexed_at_ns":1786727953797324600,"word_count":667},"apps/api/src/modules/auth/dto/auth-response.dto.ts":{"size":207,"mtime_ns":1786727881584118600,"indexed_at_ns":1786727953801875100,"word_count":26},"apps/api/src/modules/auth/dto/login.dto.ts":{"size":307,"mtime_ns":1786727881586130800,"indexed_at_ns":1786727953805187200,"word_count":37},"apps/api/src/modules/auth/dto/register.dto.ts":{"size":773,"mtime_ns":1786727881586130800,"indexed_at_ns":1786727953809672800,"word_count":79},"apps/api/src/modules/auth/jwt-auth.guard.ts":{"size":165,"mtime_ns":1786727881587119000,"indexed_at_ns":1786727953812717300,"word_count":19},"apps/api/src/modules/auth/jwt-refresh-auth.guard.ts":{"size":180,"mtime_ns":1786727881588126800,"indexed_at_ns":1786727953817989000,"word_count":19},"apps/api/src/modules/auth/jwt-refresh.strategy.ts":{"size":1331,"mtime_ns":1786727881588126800,"indexed_at_ns":1786727953823618600,"word_count":111},"apps/api/src/modules/auth/jwt.strategy.ts":{"size":1251,"mtime_ns":1786727881588126800,"indexed_at_ns":1786727953827490900,"word_count":116},"apps/api/src/modules/portfolio/__tests__/portfolio.service.spec.ts":{"size":4098,"mtime_ns":1786727881590883300,"indexed_at_ns":1786727953831579300,"word_count":332},"apps/api/src/modules/portfolio/__tests__/transaction.service.spec.ts":{"size":12169,"mtime_ns":1786727881591508900,"indexed_at_ns":1786727953835600500,"word_count":917},"apps/api/src/modules/portfolio/controllers/portfolio.controller.ts":{"size":1860,"mtime_ns":1786727881592518400,"indexed_at_ns":1786727953839365600,"word_count":176},"apps/api/src/modules/portfolio/controllers/transaction.controller.ts":{"size":1400,"mtime_ns":1786727881593892400,"indexed_at_ns":1786727953844175200,"word_count":122},"apps/api/src/modules/portfolio/dto/create-portfolio.dto.ts":{"size":491,"mtime_ns":1786727881594908200,"indexed_at_ns":1786727953848370300,"word_count":48},"apps/api/src/modules/portfolio/dto/create-transaction.dto.ts":{"size":1615,"mtime_ns":1786727881594908200,"indexed_at_ns":1786727953852127100,"word_count":163},"apps/api/src/modules/portfolio/dto/update-portfolio.dto.ts":{"size":379,"mtime_ns":1786727881595904000,"indexed_at_ns":1786727953855537600,"word_count":32},"apps/api/src/modules/portfolio/exceptions/insufficient-cash.exception.ts":{"size":418,"mtime_ns":1786727881597290200,"indexed_at_ns":1786727953859802800,"word_count":44},"apps/api/src/modules/portfolio/exceptions/insufficient-holding.exception.ts":{"size":412,"mtime_ns":1786727881597797400,"indexed_at_ns":1786727953863175600,"word_count":44},"apps/api/src/modules/portfolio/exceptions/portfolio-not-found.exception.ts":{"size":253,"mtime_ns":1786727881598809100,"indexed_at_ns":1786727953868415300,"word_count":28},"apps/api/src/modules/portfolio/portfolio.module.ts":{"size":812,"mtime_ns":1786727881598809100,"indexed_at_ns":1786727953871498300,"word_count":68},"apps/api/src/modules/portfolio/services/holding.service.ts":{"size":6110,"mtime_ns":1786727881600268400,"indexed_at_ns":1786727953877113400,"word_count":556},"apps/api/src/modules/portfolio/services/portfolio.service.ts":{"size":3803,"mtime_ns":1786727881601287100,"indexed_at_ns":1786727953880883400,"word_count":360},"apps/api/src/modules/portfolio/services/transaction.service.ts":{"size":11390,"mtime_ns":1786727881602283800,"indexed_at_ns":1786727953885810600,"word_count":977},"apps/api/src/modules/providers/__tests__/csv-provider.adapter.spec.ts":{"size":2879,"mtime_ns":1786727881604810400,"indexed_at_ns":1786727953891323400,"word_count":156},"apps/api/src/modules/providers/__tests__/provider-factory.service.spec.ts":{"size":2954,"mtime_ns":1786727881604810400,"indexed_at_ns":1786727953895391200,"word_count":239},"apps/api/src/modules/providers/__tests__/provider-ingestion.service.spec.ts":{"size":3003,"mtime_ns":1786727881605810300,"indexed_at_ns":1786727953901283800,"word_count":195},"apps/api/src/modules/providers/adapters/csv-provider.adapter.ts":{"size":9029,"mtime_ns":1786727881606807400,"indexed_at_ns":1786727953905084700,"word_count":762},"apps/api/src/modules/providers/adapters/manual-entry.adapter.ts":{"size":995,"mtime_ns":1786727881607797900,"indexed_at_ns":1786727953910246400,"word_count":94},"apps/api/src/modules/providers/adapters/mock-broker.adapter.ts":{"size":5559,"mtime_ns":1786727881608302800,"indexed_at_ns":1786727953913612300,"word_count":457},"apps/api/src/modules/providers/controllers/provider.controller.ts":{"size":1850,"mtime_ns":1786727881609316000,"indexed_at_ns":1786727953918689500,"word_count":152},"apps/api/src/modules/providers/interfaces/provider.interface.ts":{"size":1985,"mtime_ns":1786727881610791100,"indexed_at_ns":1786727953922175400,"word_count":191},"apps/api/src/modules/providers/providers.module.ts":{"size":992,"mtime_ns":1786727881610791100,"indexed_at_ns":1786727953926543400,"word_count":77},"apps/api/src/modules/providers/services/provider-factory.service.ts":{"size":2269,"mtime_ns":1786727881613003000,"indexed_at_ns":1786727953929837500,"word_count":190},"apps/api/src/modules/providers/services/provider-ingestion.service.ts":{"size":4445,"mtime_ns":1786727881613003000,"indexed_at_ns":1786727953934182000,"word_count":380},"apps/api/src/prisma/prisma.module.ts":{"size":219,"mtime_ns":1786727881614005000,"indexed_at_ns":1786727953937189600,"word_count":24},"apps/api/src/prisma/prisma.service.ts":{"size":363,"mtime_ns":1786727881615004000,"indexed_at_ns":1786727953940801100,"word_count":37},"apps/api/tsconfig.json":{"size":672,"mtime_ns":1786813016981595900,"indexed_at_ns":1786813129499323800,"word_count":48,"hashes":{"apps/api/tsconfig.json":"4d0308a8c98d936087a50a5be0b2f20368edd7dab8dcb13d63187fcf7cde319b"}},"apps/api/src/modules/market-data/__tests__/alpha-vantage.provider.spec.ts":{"size":9427,"mtime_ns":1786813021157917400,"indexed_at_ns":1786813128136160300,"word_count":712},"apps/api/src/modules/market-data/__tests__/coingecko.provider.spec.ts":{"size":5392,"mtime_ns":1786813017470334800,"indexed_at_ns":1786813128145147600,"word_count":426},"apps/api/src/modules/market-data/__tests__/market-data.service.spec.ts":{"size":12628,"mtime_ns":1786813017999487100,"indexed_at_ns":1786813128151067400,"word_count":879},"apps/api/src/modules/market-data/__tests__/price-cache.service.spec.ts":{"size":11140,"mtime_ns":1786813018348083100,"indexed_at_ns":1786813128160327500,"word_count":808},"apps/api/src/modules/market-data/controllers/market-data.controller.ts":{"size":6328,"mtime_ns":1786813018652246000,"indexed_at_ns":1786813128169005400,"word_count":610},"apps/api/src/modules/market-data/interfaces/market-data-provider.interface.ts":{"size":3729,"mtime_ns":1786813018785808400,"indexed_at_ns":1786813128177214300,"word_count":497},"apps/api/src/modules/market-data/interfaces/price-cache.interface.ts":{"size":4680,"mtime_ns":1786813018882221100,"indexed_at_ns":1786813128189474900,"word_count":608},"apps/api/src/modules/market-data/market-data.module.ts":{"size":3274,"mtime_ns":1786813018944424300,"indexed_at_ns":1786813128200944100,"word_count":345},"apps/api/src/modules/market-data/providers/alpha-vantage.provider.ts":{"size":9839,"mtime_ns":1786813019204796700,"indexed_at_ns":1786813128210254800,"word_count":958},"apps/api/src/modules/market-data/providers/coingecko.provider.ts":{"size":9217,"mtime_ns":1786813019413876600,"indexed_at_ns":1786813128221453100,"word_count":905},"apps/api/src/modules/market-data/services/market-data.service.ts":{"size":13821,"mtime_ns":1786813019796934500,"indexed_at_ns":1786813128230482400,"word_count":1323},"apps/api/src/modules/market-data/services/price-cache.service.ts":{"size":10793,"mtime_ns":1786813019956014100,"indexed_at_ns":1786813128244127200,"word_count":1061},"apps/api/src/modules/market-data/workers/market-data.processor.ts":{"size":7714,"mtime_ns":1786813020201431100,"indexed_at_ns":1786813128255061800,"word_count":795},"apps/api/src/modules/market-data/workers/market-data.scheduler.ts":{"size":5774,"mtime_ns":1786813020309993000,"indexed_at_ns":1786813128263735500,"word_count":680},"apps/api/src/modules/calculator/__tests__/currency-converter.spec.ts":{"size":1779,"mtime_ns":1786813019195689100,"indexed_at_ns":1786813128021260800,"word_count":183},"apps/api/src/modules/calculator/__tests__/fifo-calculator.spec.ts":{"size":11567,"mtime_ns":1786813019561051900,"indexed_at_ns":1786813128026128400,"word_count":990},"apps/api/src/modules/calculator/__tests__/valuation.engine.spec.ts":{"size":11124,"mtime_ns":1786813019874425000,"indexed_at_ns":1786813128033381700,"word_count":894},"apps/api/src/modules/calculator/__tests__/weighted-avg-calculator.spec.ts":{"size":7306,"mtime_ns":1786813020061705200,"indexed_at_ns":1786813128042769900,"word_count":649},"apps/api/src/modules/calculator/calculator.module.ts":{"size":1022,"mtime_ns":1786813020221001800,"indexed_at_ns":1786813128055810800,"word_count":98},"apps/api/src/modules/calculator/controllers/valuation.controller.ts":{"size":2596,"mtime_ns":1786813020361693700,"indexed_at_ns":1786813128065579200,"word_count":245},"apps/api/src/modules/calculator/currency-converter.ts":{"size":3217,"mtime_ns":1786813020437104800,"indexed_at_ns":1786813128075212400,"word_count":430},"apps/api/src/modules/calculator/dto/portfolio-valuation-summary.dto.ts":{"size":3462,"mtime_ns":1786813020526501000,"indexed_at_ns":1786813128084157800,"word_count":355},"apps/api/src/modules/calculator/dto/position-valuation.dto.ts":{"size":4326,"mtime_ns":1786813020596700200,"indexed_at_ns":1786813128095380400,"word_count":485},"apps/api/src/modules/calculator/fifo-calculator.ts":{"size":7688,"mtime_ns":1786813020711795600,"indexed_at_ns":1786813128100895400,"word_count":806},"apps/api/src/modules/calculator/interfaces/calculator.interface.ts":{"size":3933,"mtime_ns":1786813020750601600,"indexed_at_ns":1786813128107811800,"word_count":578},"apps/api/src/modules/calculator/valuation.engine.ts":{"size":10966,"mtime_ns":1786813020926626400,"indexed_at_ns":1786813128116931400,"word_count":950},"apps/api/src/modules/calculator/weighted-avg-calculator.ts":{"size":4910,"mtime_ns":1786813020998223200,"indexed_at_ns":1786813128127009300,"word_count":533},"apps/quant-engine/src/analytics/__init__.py":{"size":2304,"mtime_ns":1788272333427598200,"indexed_at_ns":1788588128613769900,"word_count":182,"hashes":{"apps/quant-engine/src/analytics/__init__.py":"426cfec6b7e6a5d7ac44e9b66a5921f1ca5520a83bdd960acf4e76f72b3c0231"}},"apps/quant-engine/src/analytics/benchmark.py":{"size":13633,"mtime_ns":1786807928660099900,"indexed_at_ns":1786809361769635600,"word_count":1322,"hashes":{"apps/quant-engine/src/analytics/benchmark.py":"9e0aa6fe0be31e360c53cf06773e78d7759c1bbe8081245c3720eb9b601407b6"}},"apps/quant-engine/src/analytics/twr.py":{"size":9536,"mtime_ns":1786807814747504600,"indexed_at_ns":1786809361770411400,"word_count":1114,"hashes":{"apps/quant-engine/src/analytics/twr.py":"b0ac7f0c78e81cf9851036f8cf2cb51935234d2cbfbfac6a759caac52c1da2af"}},"apps/quant-engine/src/analytics/xirr.py":{"size":13196,"mtime_ns":1786807874624637300,"indexed_at_ns":1786809361771213800,"word_count":1460,"hashes":{"apps/quant-engine/src/analytics/xirr.py":"344558326d4d10a72edc8a06c1cf7fe0819302014d483dc321e42449fb047680"}},"apps/quant-engine/tests/__init__.py":{"size":48,"mtime_ns":1786807936302039400,"indexed_at_ns":1786809361771947400,"word_count":5,"hashes":{"apps/quant-engine/tests/__init__.py":"e4d0a447402ea334d0a0a84e6a469ac65c0f451c606efb9e317a700b1fa2f0fd"}},"apps/quant-engine/tests/test_benchmark.py":{"size":7050,"mtime_ns":1786808057581439200,"indexed_at_ns":1786809361772799800,"word_count":671,"hashes":{"apps/quant-engine/tests/test_benchmark.py":"ca2e32d0e4c9b6ee080c4d99db5cb4bc923573f68d8797219cb0d47181d9bdc0"}},"apps/quant-engine/tests/test_twr.py":{"size":8505,"mtime_ns":1786807979403450900,"indexed_at_ns":1786809361773697600,"word_count":857,"hashes":{"apps/quant-engine/tests/test_twr.py":"c0f1a1fe57011752b52b6766fc437092c378df050bcd6426b69483b7316f3e98"}},"apps/quant-engine/tests/test_xirr.py":{"size":7970,"mtime_ns":1786809190777947400,"indexed_at_ns":1786809361774575200,"word_count":764,"hashes":{"apps/quant-engine/tests/test_xirr.py":"070d8ad2e0248a471f4814664e1d4f4490d27c1687ee391615544f02e87b09aa"}},"docs/analytics/ANALYTICS_METHODOLOGY.md":{"size":12212,"mtime_ns":1786813017477398700,"indexed_at_ns":1786813130101729200,"word_count":1569,"hashes":{"docs/analytics/analytics_methodology.md":"07e49765cd6c826c1243f6312684512c97883111c05fa38ed6f6a4c793b6190d"}},"apps/quant-engine/pyrightconfig.json":{"size":191,"mtime_ns":1786813017145066800,"indexed_at_ns":1786813129513304900,"word_count":15,"hashes":{"apps/quant-engine/pyrightconfig.json":"cc1f3fbf192b1f8587be41d685395a2e418857c31ccf7b38b76037c93b66185b"}},"apps/quant-engine/src/__init__.py":{"size":41,"mtime_ns":1786809737025503300,"indexed_at_ns":1786810678191229500,"word_count":6,"hashes":{"apps/quant-engine/src/__init__.py":"81ea0a3eb6cb811ad2019f1fa4dd036b1c283b8796c39dd8c48b44aff9c88528"}},"apps/quant-engine/src/app/__init__.py":{"size":64,"mtime_ns":1786809833230877500,"indexed_at_ns":1786810678199544400,"word_count":8,"hashes":{"apps/quant-engine/src/app/__init__.py":"bbda961542130cfa48001c5f5b8b62ae1f217fa974c2aa82385a7d09e94c5824"}},"apps/quant-engine/src/app/routers/__init__.py":{"size":224,"mtime_ns":1787651597502761400,"indexed_at_ns":1788588128763898200,"word_count":26,"hashes":{"apps/quant-engine/src/app/routers/__init__.py":"ffb08fe00ad712e13bd4402211835d2d17bed397583503e1e902be4248d1c2a8"}},"apps/quant-engine/src/app/routers/performance.py":{"size":11077,"mtime_ns":1786810414805349500,"indexed_at_ns":1786810678201250800,"word_count":891,"hashes":{"apps/quant-engine/src/app/routers/performance.py":"34a97ff39a59c7af7a56af3226fabe052bf95ad8d71aba96aacd9e1970f1eb09"}},"apps/quant-engine/src/app/schemas/__init__.py":{"size":27,"mtime_ns":1786809837353140700,"indexed_at_ns":1786810678202128900,"word_count":2,"hashes":{"apps/quant-engine/src/app/schemas/__init__.py":"e57fe72d60ec904d0bc819b98d75af778e42b46f155d8de9eaa807424123c043"}},"apps/quant-engine/src/app/schemas/performance.py":{"size":8483,"mtime_ns":1786810400850329300,"indexed_at_ns":1786810678202931900,"word_count":773,"hashes":{"apps/quant-engine/src/app/schemas/performance.py":"b0ac786d7d493e8af966b39320c2282bf329759bc6497d13bf68ec879c9330ee"}},"apps/quant-engine/src/main.py":{"size":2032,"mtime_ns":1787651596614616100,"indexed_at_ns":1788588128890264600,"word_count":173,"hashes":{"apps/quant-engine/src/main.py":"7e94fe96cca4fb538d708e3051284ad11a16bb119819c136f369e947842aa2dc"}},"apps/quant-engine/tests/test_performance_benchmark.py":{"size":6577,"mtime_ns":1786810256493387600,"indexed_at_ns":1786810678208460100,"word_count":567,"hashes":{"apps/quant-engine/tests/test_performance_benchmark.py":"2bcdb8558895d6e387fdccfb1bc056f96973c5c2ebff1e2829cf56660039e438"}},"apps/quant-engine/tests/test_performance_twr.py":{"size":7968,"mtime_ns":1786810638913612200,"indexed_at_ns":1786810678209307200,"word_count":595,"hashes":{"apps/quant-engine/tests/test_performance_twr.py":"f8394787674e34863c9c48554c72c1665ee00b867bf2bf2ec2123373ffb8e84b"}},"apps/quant-engine/tests/test_performance_xirr.py":{"size":12025,"mtime_ns":1786810661166975500,"indexed_at_ns":1786810678210331300,"word_count":1064,"hashes":{"apps/quant-engine/tests/test_performance_xirr.py":"e3c06661fe4e5a903040f22712c3d36e4d1828d553efa970db1f026794cb8ffc"}},"apps/api/src/modules/analytics/__tests__/analytics-client.service.spec.ts":{"size":9016,"mtime_ns":1786813018223980500,"indexed_at_ns":1786813127872749600,"word_count":740},"apps/api/src/modules/analytics/__tests__/analytics.controller.spec.ts":{"size":3639,"mtime_ns":1786813018385441100,"indexed_at_ns":1786813127882867700,"word_count":277},"apps/api/src/modules/analytics/analytics-client.service.ts":{"size":14524,"mtime_ns":1788280503103306800,"indexed_at_ns":1788588122222860000,"word_count":1305},"apps/api/src/modules/analytics/analytics.module.ts":{"size":701,"mtime_ns":1786813018797690300,"indexed_at_ns":1786813127900609900,"word_count":75},"apps/api/src/modules/analytics/controllers/analytics.controller.ts":{"size":4174,"mtime_ns":1788280503169633200,"indexed_at_ns":1788588122244756200,"word_count":405},"apps/api/src/modules/analytics/dto/analytics.dto.ts":{"size":17999,"mtime_ns":1788280503314757100,"indexed_at_ns":1788588122255523900,"word_count":2068},"API_CONTRACT.md":{"size":8041,"mtime_ns":1788583003617039000,"indexed_at_ns":1788588129459886300,"word_count":1059,"hashes":{"api_contract.md":"69bc33faa9a474b1f25b7306d36ff41cc35fb4e60001e406040c6c939449e245"}},"apps/api/src/common/__tests__/http-exception.filter.spec.ts":{"size":4376,"mtime_ns":1788583003642846300,"indexed_at_ns":1788588121938660500,"word_count":384},"apps/api/src/common/__tests__/transform.interceptor.spec.ts":{"size":2729,"mtime_ns":1788583003643240300,"indexed_at_ns":1788588121949403000,"word_count":257},"apps/api/src/common/decorators/api-paginated-response.decorator.ts":{"size":1355,"mtime_ns":1788583003646827600,"indexed_at_ns":1788588121957953600,"word_count":125},"apps/api/src/common/dto/pagination.dto.ts":{"size":751,"mtime_ns":1788583003646827600,"indexed_at_ns":1788588121966882200,"word_count":86},"apps/api/src/common/filters/http-exception.filter.ts":{"size":2560,"mtime_ns":1788583003652413700,"indexed_at_ns":1788588121979839100,"word_count":247},"apps/api/src/common/index.ts":{"size":250,"mtime_ns":1788583003658814300,"indexed_at_ns":1788588121987460200,"word_count":20},"apps/api/src/common/interceptors/transform.interceptor.ts":{"size":1168,"mtime_ns":1788583003660842700,"indexed_at_ns":1788588122002066100,"word_count":108},"apps/api/src/common/pipes/validation.pipe.ts":{"size":627,"mtime_ns":1788583003666762000,"indexed_at_ns":1788588122010963500,"word_count":77},"apps/api/src/modules/alerts/__tests__/alert-evaluator.spec.ts":{"size":31794,"mtime_ns":1788280500716451800,"indexed_at_ns":1788588122029942600,"word_count":2853},"apps/api/src/modules/alerts/__tests__/alert-integration.spec.ts":{"size":20341,"mtime_ns":1788280501135902100,"indexed_at_ns":1788588122040109900,"word_count":1817},"apps/api/src/modules/alerts/__tests__/notification-processor.spec.ts":{"size":22309,"mtime_ns":1788280501660158800,"indexed_at_ns":1788588122050745200,"word_count":1915},"apps/api/src/modules/alerts/alert-evaluator.engine.ts":{"size":9278,"mtime_ns":1788280501845036300,"indexed_at_ns":1788588122061268200,"word_count":850},"apps/api/src/modules/alerts/alert-event.listener.ts":{"size":6165,"mtime_ns":1788280501936280700,"indexed_at_ns":1788588122070342300,"word_count":675},"apps/api/src/modules/alerts/alert.controller.ts":{"size":5497,"mtime_ns":1788280502043460200,"indexed_at_ns":1788588122080142200,"word_count":571},"apps/api/src/modules/alerts/alert.module.ts":{"size":4670,"mtime_ns":1788280502125129400,"indexed_at_ns":1788588122088707100,"word_count":409},"apps/api/src/modules/alerts/alert.service.ts":{"size":15627,"mtime_ns":1788280502385304100,"indexed_at_ns":1788588122103905900,"word_count":1515},"apps/api/src/modules/alerts/dto/alert.dto.ts":{"size":6532,"mtime_ns":1788280502474993800,"indexed_at_ns":1788588122113669900,"word_count":621},"apps/api/src/modules/alerts/evaluators/concentration-rule.evaluator.ts":{"size":3889,"mtime_ns":1788280502542818000,"indexed_at_ns":1788588122123420700,"word_count":346},"apps/api/src/modules/alerts/evaluators/drawdown-rule.evaluator.ts":{"size":1455,"mtime_ns":1788280502588723700,"indexed_at_ns":1788588122135106600,"word_count":133},"apps/api/src/modules/alerts/evaluators/target-drift-rule.evaluator.ts":{"size":4029,"mtime_ns":1788280502642746000,"indexed_at_ns":1788588122144486600,"word_count":397},"apps/api/src/modules/alerts/evaluators/volatility-rule.evaluator.ts":{"size":1529,"mtime_ns":1788280502680927400,"indexed_at_ns":1788588122157217300,"word_count":139},"apps/api/src/modules/alerts/interfaces/alert-evaluator.interface.ts":{"size":3875,"mtime_ns":1788280502731535400,"indexed_at_ns":1788588122169714000,"word_count":501},"apps/api/src/modules/alerts/interfaces/alert-queue.interface.ts":{"size":2159,"mtime_ns":1788280502761073100,"indexed_at_ns":1788588122181414800,"word_count":248},"apps/api/src/modules/alerts/processors/notification.processor.ts":{"size":16602,"mtime_ns":1788280502948437400,"indexed_at_ns":1788588122192261500,"word_count":1515},"apps/api/src/modules/reports/__tests__/excel-export.service.spec.ts":{"size":16791,"mtime_ns":1788586791313788500,"indexed_at_ns":1788588122918177000,"word_count":1564},"apps/api/src/modules/reports/__tests__/pdf-report.service.spec.ts":{"size":11065,"mtime_ns":1788587262999530100,"indexed_at_ns":1788588122928403900,"word_count":1077},"apps/api/src/modules/reports/__tests__/report-scheduler.processor.spec.ts":{"size":11332,"mtime_ns":1788584946672576200,"indexed_at_ns":1788588122938178200,"word_count":990},"apps/api/src/modules/reports/dto/report.dto.ts":{"size":1334,"mtime_ns":1788584530048995200,"indexed_at_ns":1788588122948876700,"word_count":113},"apps/api/src/modules/reports/interfaces/report-queue.interface.ts":{"size":1646,"mtime_ns":1788584518962733800,"indexed_at_ns":1788588122958369900,"word_count":218},"apps/api/src/modules/reports/processors/report-scheduler.processor.ts":{"size":5708,"mtime_ns":1788584709043653400,"indexed_at_ns":1788588122968891800,"word_count":512},"apps/api/src/modules/reports/report.controller.ts":{"size":4787,"mtime_ns":1788584774750315400,"indexed_at_ns":1788588122977508200,"word_count":442},"apps/api/src/modules/reports/report.module.ts":{"size":3817,"mtime_ns":1788584793882549900,"indexed_at_ns":1788588122986837100,"word_count":320},"apps/api/src/modules/reports/report.service.ts":{"size":10761,"mtime_ns":1788584751106014400,"indexed_at_ns":1788588122996977000,"word_count":978},"apps/api/src/modules/reports/services/excel-export.service.ts":{"size":13978,"mtime_ns":1788584681690965800,"indexed_at_ns":1788588123007289400,"word_count":1250},"apps/api/src/modules/reports/services/pdf-report.service.ts":{"size":29024,"mtime_ns":1788587876922978600,"indexed_at_ns":1788588123017295000,"word_count":2784},"apps/mobile/App.tsx":{"size":879,"mtime_ns":1788583003672835300,"indexed_at_ns":1788588123042814800,"word_count":77},"apps/mobile/app.json":{"size":1258,"mtime_ns":1788583003672835300,"indexed_at_ns":1788588128516952000,"word_count":85,"hashes":{"apps/mobile/app.json":"1b2516dbbd3c11548bfbe536866f76e70d7589a738bed49c5d2129c586b4fd2d"}},"apps/mobile/babel.config.js":{"size":472,"mtime_ns":1788583003677133300,"indexed_at_ns":1788588123113543700,"word_count":62},"apps/mobile/jest.config.js":{"size":550,"mtime_ns":1788583003677133300,"indexed_at_ns":1788588123183259600,"word_count":23},"apps/mobile/package.json":{"size":1260,"mtime_ns":1788583003692910400,"indexed_at_ns":1788588128519592700,"word_count":88,"hashes":{"apps/mobile/package.json":"0c05bde291ffc7413202ae96dfe372583f877491199484d0a2c9e525afc2078a"}},"apps/mobile/src/__tests__/components/EmptyState.test.tsx":{"size":1302,"mtime_ns":1788583003698766200,"indexed_at_ns":1788588123329103800,"word_count":120},"apps/mobile/src/__tests__/components/MetricCard.test.tsx":{"size":1258,"mtime_ns":1788583003698766200,"indexed_at_ns":1788588123360905900,"word_count":116},"apps/mobile/src/__tests__/lib/utils.test.ts":{"size":1863,"mtime_ns":1788583003704331800,"indexed_at_ns":1788588123394112300,"word_count":176},"apps/mobile/src/__tests__/screens/LoginScreen.test.tsx":{"size":1704,"mtime_ns":1788583003706857300,"indexed_at_ns":1788588123436336600,"word_count":160},"apps/mobile/src/components/EmptyState.tsx":{"size":1736,"mtime_ns":1788583003710495100,"indexed_at_ns":1788588123471806100,"word_count":162},"apps/mobile/src/components/MetricCard.tsx":{"size":1910,"mtime_ns":1788583003713578500,"indexed_at_ns":1788588123501558900,"word_count":207},"apps/mobile/src/context/AuthContext.tsx":{"size":2226,"mtime_ns":1788583003716754500,"indexed_at_ns":1788588123560056300,"word_count":256},"apps/mobile/src/lib/api-client.ts":{"size":1391,"mtime_ns":1788583003716754500,"indexed_at_ns":1788588123596498600,"word_count":152},"apps/mobile/src/lib/query-client.ts":{"size":478,"mtime_ns":1788583003721751300,"indexed_at_ns":1788588123657446200,"word_count":53},"apps/mobile/src/lib/secure-storage.ts":{"size":1271,"mtime_ns":1788583003725167000,"indexed_at_ns":1788588123727411900,"word_count":116},"apps/mobile/src/lib/utils.ts":{"size":1462,"mtime_ns":1788583003729290500,"indexed_at_ns":1788588123794279200,"word_count":181},"apps/mobile/src/navigation/AuthStack.tsx":{"size":652,"mtime_ns":1788583003732984400,"indexed_at_ns":1788588123826779100,"word_count":58},"apps/mobile/src/navigation/MainTabs.tsx":{"size":2536,"mtime_ns":1788583003734857500,"indexed_at_ns":1788588123855312200,"word_count":236},"apps/mobile/src/navigation/index.tsx":{"size":911,"mtime_ns":1788583003736881000,"indexed_at_ns":1788588123910485300,"word_count":103},"apps/mobile/src/screens/auth/LoginScreen.tsx":{"size":5615,"mtime_ns":1788583003739972700,"indexed_at_ns":1788588123955967600,"word_count":473},"apps/mobile/src/screens/auth/RegisterScreen.tsx":{"size":5642,"mtime_ns":1788583003742030800,"indexed_at_ns":1788588124005063300,"word_count":521},"apps/mobile/src/screens/main/AlertsScreen.tsx":{"size":5657,"mtime_ns":1788583003745822700,"indexed_at_ns":1788588124041869800,"word_count":533},"apps/mobile/src/screens/main/DashboardScreen.tsx":{"size":3855,"mtime_ns":1788583003746844700,"indexed_at_ns":1788588124097346900,"word_count":391},"apps/mobile/src/screens/main/PortfoliosScreen.tsx":{"size":3705,"mtime_ns":1788583003750212000,"indexed_at_ns":1788588124153579700,"word_count":350},"apps/mobile/src/screens/main/RiskScreen.tsx":{"size":3703,"mtime_ns":1788583003750212000,"indexed_at_ns":1788588124210267000,"word_count":399},"apps/mobile/src/screens/main/SettingsScreen.tsx":{"size":4235,"mtime_ns":1788583003750212000,"indexed_at_ns":1788588124243484200,"word_count":388},"apps/mobile/tailwind.config.js":{"size":501,"mtime_ns":1788583003757031400,"indexed_at_ns":1788588124279893200,"word_count":40},"apps/mobile/tsconfig.json":{"size":222,"mtime_ns":1788583003759122500,"indexed_at_ns":1788588128522022200,"word_count":19,"hashes":{"apps/mobile/tsconfig.json":"d5b3a1f476642686172d761aee8b90009ecfa653f46e7095e9ee4ab0409baf76"}},"apps/quant-engine/src/analytics/allocation.py":{"size":8672,"mtime_ns":1787649455357746800,"indexed_at_ns":1788588128616889100,"word_count":851,"hashes":{"apps/quant-engine/src/analytics/allocation.py":"bc57715c7c0bbadf2d955dfd0a77a1d924b2a7bb5a698de54f4ff1d664e221d0"}},"apps/quant-engine/src/analytics/rebalance.py":{"size":8562,"mtime_ns":1787649456209779100,"indexed_at_ns":1788588128652728600,"word_count":848,"hashes":{"apps/quant-engine/src/analytics/rebalance.py":"69d1026982bd8bb2a7f0d28d7a3c9b1d8de4e8d120800aa12695fc48352e5b4e"}},"apps/quant-engine/src/analytics/risk/__init__.py":{"size":2517,"mtime_ns":1788272317219226200,"indexed_at_ns":1788588128655237500,"word_count":229,"hashes":{"apps/quant-engine/src/analytics/risk/__init__.py":"2155a7a1909f608808a18c955b13724245ff57f8b3cd14583fa703acbef51da0"}},"apps/quant-engine/src/analytics/risk/beta.py":{"size":5381,"mtime_ns":1787650911377350400,"indexed_at_ns":1788588128657928400,"word_count":583,"hashes":{"apps/quant-engine/src/analytics/risk/beta.py":"b2ca7e08898b2f97d3190a419d0e6554ea694fd1487a422e6e1f7ccf906691de"}},"apps/quant-engine/src/analytics/risk/correlation.py":{"size":7830,"mtime_ns":1787651111379808300,"indexed_at_ns":1788588128660441800,"word_count":843,"hashes":{"apps/quant-engine/src/analytics/risk/correlation.py":"9c4b49f88fa3f02f4cfd8d406c78f5fc52fea6842ea7f9499a52c176283b005e"}},"apps/quant-engine/src/analytics/risk/diversification.py":{"size":16653,"mtime_ns":1788272108250562200,"indexed_at_ns":1788588128662712500,"word_count":1644,"hashes":{"apps/quant-engine/src/analytics/risk/diversification.py":"9b1a0dc9b4e1792dca59aa7f01c1d60ed6a65163f1e91004ab1f7222f4709571"}},"apps/quant-engine/src/analytics/risk/drawdown.py":{"size":8183,"mtime_ns":1787651020539183400,"indexed_at_ns":1788588128665791100,"word_count":931,"hashes":{"apps/quant-engine/src/analytics/risk/drawdown.py":"a25ef4a7cd7c578a19cf901a0c8b403710f3d0f53cf6ab8515a29d1fd23df11a"}},"apps/quant-engine/src/analytics/risk/sharpe.py":{"size":6627,"mtime_ns":1787650942668712100,"indexed_at_ns":1788588128668367600,"word_count":674,"hashes":{"apps/quant-engine/src/analytics/risk/sharpe.py":"1a25a6b991ec5acdfee63373e82f42f241dcd54432abec99e5ec34a9ee8db635"}},"apps/quant-engine/src/analytics/risk/sortino.py":{"size":7835,"mtime_ns":1787650980527912400,"indexed_at_ns":1788588128670746900,"word_count":785,"hashes":{"apps/quant-engine/src/analytics/risk/sortino.py":"69f9dd0ded9b3919b85e606b705a3690ce200c6dd2b70dba9a3d57c1fa4ed846"}},"apps/quant-engine/src/analytics/risk/var.py":{"size":12690,"mtime_ns":1787651071568529700,"indexed_at_ns":1788588128673536700,"word_count":1190,"hashes":{"apps/quant-engine/src/analytics/risk/var.py":"4c298726031d00989dcc6ee2b2ee80c080de58e3e234495029cca7c0c7f1b3f9"}},"apps/quant-engine/src/analytics/risk/volatility.py":{"size":4908,"mtime_ns":1787650883385698300,"indexed_at_ns":1788588128676026000,"word_count":472,"hashes":{"apps/quant-engine/src/analytics/risk/volatility.py":"5fee8074b8c737393a69f701776a4154073f1944084b63f6df87c46ac4e616ab"}},"apps/quant-engine/src/app/routers/allocation.py":{"size":7725,"mtime_ns":1787649522204702200,"indexed_at_ns":1788588128767866100,"word_count":560,"hashes":{"apps/quant-engine/src/app/routers/allocation.py":"065d7d93be74684a1af7009ba1ef2e5afe5172433cc6f5279a7c9ff5ed114543"}},"apps/quant-engine/src/app/routers/risk.py":{"size":23886,"mtime_ns":1788272295993808700,"indexed_at_ns":1788588128801844900,"word_count":1994,"hashes":{"apps/quant-engine/src/app/routers/risk.py":"fc95c1407a2005d8daf6d229f5915ca0aac6f411a856c815acef14c4e4513dfe"}},"apps/quant-engine/src/app/schemas/allocation.py":{"size":9513,"mtime_ns":1787649521356110600,"indexed_at_ns":1788588128859973600,"word_count":964,"hashes":{"apps/quant-engine/src/app/schemas/allocation.py":"b627ddafcc4c3aaaffb31509fa92245365cd90e39c11138fe2d90e756c97c23c"}},"apps/quant-engine/src/app/schemas/risk.py":{"size":25746,"mtime_ns":1788272205579090600,"indexed_at_ns":1788588128887677800,"word_count":2548,"hashes":{"apps/quant-engine/src/app/schemas/risk.py":"e0499d084daea8233aebc009966aced1c1865ab97a19e34b52e16e48d4832c52"}},"apps/quant-engine/tests/test_allocation.py":{"size":17236,"mtime_ns":1787649800579256000,"indexed_at_ns":1788588128913988900,"word_count":1299,"hashes":{"apps/quant-engine/tests/test_allocation.py":"b8bfcb33218d00c4dc45ab4ffab0409afc264c76a4cc38d49d8af05f50d494f6"}},"apps/quant-engine/tests/test_diversification.py":{"size":63299,"mtime_ns":1788274438391547300,"indexed_at_ns":1788588128945202000,"word_count":5851,"hashes":{"apps/quant-engine/tests/test_diversification.py":"245303dc896c62f7e472dbe9e8fa5ec1363b4e224a34a4e293ab036efe18ec0e"}},"apps/quant-engine/tests/test_rebalance.py":{"size":18188,"mtime_ns":1787649801419496700,"indexed_at_ns":1788588129035014900,"word_count":1425,"hashes":{"apps/quant-engine/tests/test_rebalance.py":"5a18ee58c82df957167e4fe324cccb9071c1b96075387376a8534423fdde2d7d"}},"apps/quant-engine/tests/test_risk.py":{"size":53369,"mtime_ns":1787654576963672700,"indexed_at_ns":1788588129037335400,"word_count":5153,"hashes":{"apps/quant-engine/tests/test_risk.py":"5ea134a908556136ba1404d4da9b86c938ba72228aecd96c9b50465932714b39"}},"apps/web/postcss.config.js":{"size":89,"mtime_ns":1788583003766688700,"indexed_at_ns":1788588125511758900,"word_count":11},"apps/web/src/__tests__/charts/AllocationDonutChart.test.tsx":{"size":1364,"mtime_ns":1788583003777398800,"indexed_at_ns":1788588125553048900,"word_count":136},"apps/web/src/__tests__/charts/EquityCurveChart.test.tsx":{"size":1516,"mtime_ns":1788583003777398800,"indexed_at_ns":1788588125590618900,"word_count":157},"apps/web/src/__tests__/charts/chart-theme.test.ts":{"size":3094,"mtime_ns":1788583003786965400,"indexed_at_ns":1788588125623583700,"word_count":280},"apps/web/src/__tests__/components/empty-state.test.tsx":{"size":1492,"mtime_ns":1788583003790502100,"indexed_at_ns":1788588125655537400,"word_count":135},"apps/web/src/__tests__/components/stat-card.test.tsx":{"size":1684,"mtime_ns":1788583003792522200,"indexed_at_ns":1788588125687880400,"word_count":148},"apps/web/src/__tests__/lib/utils.test.ts":{"size":1965,"mtime_ns":1788583003796616200,"indexed_at_ns":1788588125725265200,"word_count":195},"apps/web/src/__tests__/setup.ts":{"size":37,"mtime_ns":1788583003796616200,"indexed_at_ns":1788588125796491600,"word_count":2},"apps/web/src/app/(auth)/layout.tsx":{"size":893,"mtime_ns":1788583003802784200,"indexed_at_ns":1788588125852452000,"word_count":85},"apps/web/src/app/(auth)/login/page.tsx":{"size":3253,"mtime_ns":1788590446819723500,"indexed_at_ns":1788592412353097200,"word_count":272},"apps/web/src/app/(auth)/register/page.tsx":{"size":3642,"mtime_ns":1788583003808926000,"indexed_at_ns":1788588125943438000,"word_count":306},"apps/web/src/app/(dashboard)/alerts/page.tsx":{"size":8452,"mtime_ns":1788583003812956300,"indexed_at_ns":1788588126029005200,"word_count":632},"apps/web/src/app/(dashboard)/analytics/page.tsx":{"size":3858,"mtime_ns":1788583003814974400,"indexed_at_ns":1788588126100856200,"word_count":392},"apps/web/src/app/(dashboard)/dashboard/page.tsx":{"size":2924,"mtime_ns":1788583003816995000,"indexed_at_ns":1788588126186069400,"word_count":259},"apps/web/src/app/(dashboard)/layout.tsx":{"size":727,"mtime_ns":1788583003816995000,"indexed_at_ns":1788588126217724400,"word_count":72},"apps/web/src/app/(dashboard)/portfolios/[id]/page.tsx":{"size":5410,"mtime_ns":1788590912418472600,"indexed_at_ns":1788592412416189800,"word_count":424},"apps/web/src/app/(dashboard)/portfolios/page.tsx":{"size":5986,"mtime_ns":1788583003826926400,"indexed_at_ns":1788588126312502300,"word_count":481},"apps/web/src/app/(dashboard)/risk/page.tsx":{"size":4597,"mtime_ns":1788583003829014300,"indexed_at_ns":1788588126384710300,"word_count":476},"apps/web/src/app/layout.tsx":{"size":772,"mtime_ns":1788583003833546100,"indexed_at_ns":1788588126425124200,"word_count":86},"apps/web/src/app/page.tsx":{"size":111,"mtime_ns":1788583003833546100,"indexed_at_ns":1788588126460943600,"word_count":13},"apps/web/src/components/charts/AllocationDonutChart.tsx":{"size":3125,"mtime_ns":1788583003840683100,"indexed_at_ns":1788588126502661900,"word_count":307},"apps/web/src/components/charts/BenchmarkComparisonChart.tsx":{"size":3441,"mtime_ns":1788583003840683100,"indexed_at_ns":1788588126544404600,"word_count":264},"apps/web/src/components/charts/CorrelationHeatmap.tsx":{"size":4533,"mtime_ns":1788583003846821700,"indexed_at_ns":1788588126579488200,"word_count":426},"apps/web/src/components/charts/DrawdownChart.tsx":{"size":3586,"mtime_ns":1788583003846821700,"indexed_at_ns":1788588126620666400,"word_count":279},"apps/web/src/components/charts/EquityCurveChart.tsx":{"size":2910,"mtime_ns":1788583003846821700,"indexed_at_ns":1788588126661924600,"word_count":224},"apps/web/src/components/charts/chart-container.tsx":{"size":1893,"mtime_ns":1788583003846821700,"indexed_at_ns":1788588126706540200,"word_count":196},"apps/web/src/components/charts/chart-theme.ts":{"size":4467,"mtime_ns":1788583003854858700,"indexed_at_ns":1788588126753338200,"word_count":456},"apps/web/src/components/charts/index.ts":{"size":752,"mtime_ns":1788583003859014400,"indexed_at_ns":1788588126786329700,"word_count":77},"apps/web/src/components/common/empty-state.tsx":{"size":854,"mtime_ns":1788583003865128000,"indexed_at_ns":1788588126816766100,"word_count":79},"apps/web/src/components/common/stat-card.tsx":{"size":2151,"mtime_ns":1788583003868749500,"indexed_at_ns":1788588126846042900,"word_count":202},"apps/web/src/components/common/theme-toggle.tsx":{"size":648,"mtime_ns":1788583003870783500,"indexed_at_ns":1788588126885867900,"word_count":71},"apps/web/src/components/layout/header.tsx":{"size":1079,"mtime_ns":1788583003879837700,"indexed_at_ns":1788588126918500400,"word_count":102},"apps/web/src/components/layout/sidebar.tsx":{"size":2778,"mtime_ns":1788583003880869200,"indexed_at_ns":1788588126961701500,"word_count":262},"apps/web/src/components/providers.tsx":{"size":699,"mtime_ns":1788583003887126900,"indexed_at_ns":1788588127000695500,"word_count":58},"apps/web/src/components/ui/badge.tsx":{"size":1127,"mtime_ns":1788583003890922800,"indexed_at_ns":1788588127049316900,"word_count":99},"apps/web/src/components/ui/button.tsx":{"size":2453,"mtime_ns":1788583003892479900,"indexed_at_ns":1788588127086881000,"word_count":212},"apps/web/src/components/ui/card.tsx":{"size":1849,"mtime_ns":1788583003894537000,"indexed_at_ns":1788588127125312900,"word_count":174},"apps/web/src/components/ui/input.tsx":{"size":860,"mtime_ns":1788583003897058400,"indexed_at_ns":1788588127178098500,"word_count":70},"apps/web/src/components/ui/label.tsx":{"size":577,"mtime_ns":1788583003899023200,"indexed_at_ns":1788588127209568200,"word_count":51},"apps/web/src/components/ui/skeleton.tsx":{"size":300,"mtime_ns":1788583003900437300,"indexed_at_ns":1788588127259042700,"word_count":35},"apps/web/src/lib/api-client.ts":{"size":1831,"mtime_ns":1788590438871956000,"indexed_at_ns":1788592412677602200,"word_count":183},"apps/web/src/lib/auth.ts":{"size":702,"mtime_ns":1788583003906700800,"indexed_at_ns":1788588127387321100,"word_count":84},"apps/web/src/lib/query-client.ts":{"size":722,"mtime_ns":1788583003908827100,"indexed_at_ns":1788588127440481400,"word_count":77},"apps/web/src/lib/utils.ts":{"size":1249,"mtime_ns":1788583003910868400,"indexed_at_ns":1788588127482442700,"word_count":159},"apps/web/tailwind.config.ts":{"size":2281,"mtime_ns":1788583003921515600,"indexed_at_ns":1788588127515782200,"word_count":186},"apps/web/tsconfig.json":{"size":599,"mtime_ns":1788583003924055400,"indexed_at_ns":1788588129107694400,"word_count":50,"hashes":{"apps/web/tsconfig.json":"80c13dbc37b8aa10fd5e276ef20eb8001b7eaaf1ebce97fbf1aeb949d0f16132"}},"apps/web/vitest.config.ts":{"size":459,"mtime_ns":1788583003926966600,"indexed_at_ns":1788588127625219700,"word_count":46},"docs/analytics/RISK_METHODOLOGY.md":{"size":37052,"mtime_ns":1788280500422754100,"indexed_at_ns":1788588129696762500,"word_count":4468,"hashes":{"docs/analytics/risk_methodology.md":"a74655bc75c9c2a4eeccb29f29998fb59a04f9a50bf0ef141637de0f4a6a9825"}},"apps/quant-engine/tests/test_quant_benchmarks.py":{"size":15458,"mtime_ns":1788589661968501300,"indexed_at_ns":1788592415178958100,"word_count":1450,"hashes":{"apps/quant-engine/tests/test_quant_benchmarks.py":"3afbc747edd28f7b2bb52ce0e4e084ecc409842a593afeb66c80f6c357da95c7"}},"apps/web/e2e/alerts.spec.ts":{"size":2157,"mtime_ns":1788590494091886400,"indexed_at_ns":1788592411525324500,"word_count":205},"apps/web/e2e/analytics-risk.spec.ts":{"size":2310,"mtime_ns":1788590476243760000,"indexed_at_ns":1788592411532685800,"word_count":185},"apps/web/e2e/auth.spec.ts":{"size":2474,"mtime_ns":1788591054375318100,"indexed_at_ns":1788592411540534600,"word_count":221},"apps/web/e2e/dashboard.spec.ts":{"size":1899,"mtime_ns":1788591064425297300,"indexed_at_ns":1788592411547352400,"word_count":168},"apps/web/e2e/fixtures/mock-api.ts":{"size":12121,"mtime_ns":1788590085667386600,"indexed_at_ns":1788592411554730700,"word_count":908},"apps/web/e2e/fixtures/seed-data.ts":{"size":6889,"mtime_ns":1788589937782683400,"indexed_at_ns":1788592411562315700,"word_count":660},"apps/web/e2e/portfolios.spec.ts":{"size":2343,"mtime_ns":1788590695101119100,"indexed_at_ns":1788592411568986900,"word_count":198},"apps/web/e2e/reports.spec.ts":{"size":2514,"mtime_ns":1788590101674896400,"indexed_at_ns":1788592411575541100,"word_count":219},"apps/web/next-env.d.ts":{"size":233,"mtime_ns":1788590243473935500,"indexed_at_ns":1788592411582182100,"word_count":22},"apps/web/next.config.mjs":{"size":508,"mtime_ns":1788590177324314300,"indexed_at_ns":1788592411587809400,"word_count":49},"apps/web/playwright-report/index.html":{"size":539151,"mtime_ns":1788591906043133700,"indexed_at_ns":1788592412251681600,"word_count":6910},"apps/web/playwright.config.ts":{"size":806,"mtime_ns":1788591044556183300,"indexed_at_ns":1788592412262855900,"word_count":89},"apps/web/test-results/.last-run.json":{"size":45,"mtime_ns":1788591906045144500,"indexed_at_ns":1788592415349765300,"word_count":6,"hashes":{"apps/web/test-results/.last-run.json":"dbaf9ccb76910e6b699fdb7d9d6cf2ebc215057c7bab32385c43cafa3a969d06"}},"scripts/test-runner.js":{"size":8475,"mtime_ns":1788591675623203800,"indexed_at_ns":1788592413618555600,"word_count":877}}
+{
+  ".agents/rules/graphify.md": {
+    "size": 947,
+    "mtime_ns": 1786697456135414200,
+    "indexed_at_ns": 1786701986040715500,
+    "word_count": 127,
+    "hashes": {
+      ".agents/rules/graphify.md": "e55792958648fb69255e3ce3f71a8fcead36307c34b2d67feda9ac650ac61803"
+    }
+  },
+  ".agents/workflows/graphify.md": {
+    "size": 239,
+    "mtime_ns": 1786697456139022500,
+    "indexed_at_ns": 1786701986045252300,
+    "word_count": 37,
+    "hashes": {
+      ".agents/workflows/graphify.md": "d92622463299d313da48e2cdbebf79d7ea24ffaf2ae2de2a1714be8ee42b22b3"
+    }
+  },
+  "PROJECT_STATE.md": {
+    "size": 67661,
+    "mtime_ns": 1788623969677808400,
+    "indexed_at_ns": 1788624005005646700,
+    "word_count": 5824,
+    "hashes": {
+      "project_state.md": "c91b7283bd172173516f35d2a537231ca4ff7f0b065d8fde02b5206c897dd707"
+    }
+  },
+  "apps/api/package.json": {
+    "size": 1994,
+    "mtime_ns": 1788595436450007000,
+    "indexed_at_ns": 1788621097338963300,
+    "word_count": 138,
+    "hashes": {
+      "apps/api/package.json": "9cc16a834dd4299716317b70693fe980d7f9b0f6c493168bc72a613f23c2b420"
+    }
+  },
+  "apps/quant-engine/package.json": {
+    "size": 306,
+    "mtime_ns": 1786696344390652500,
+    "indexed_at_ns": 1786698106513448700,
+    "word_count": 31,
+    "hashes": {
+      "apps/quant-engine/package.json": "ac2c3924ce2294320d5abc705a874de5205e21a701ea3fab2821a6560cc5ccbd"
+    }
+  },
+  "apps/quant-engine/pyproject.toml": {
+    "size": 624,
+    "mtime_ns": 1786809530915423200,
+    "indexed_at_ns": 1786810678189460200,
+    "word_count": 62,
+    "hashes": {
+      "apps/quant-engine/pyproject.toml": "fceff10ad3086aeaa7ff0e80abfcfafdcb19c731aa2ff839c09257f9781c8e00"
+    }
+  },
+  "apps/web/package.json": {
+    "size": 1708,
+    "mtime_ns": 1788595436490630600,
+    "indexed_at_ns": 1788621097670821100,
+    "word_count": 117,
+    "hashes": {
+      "apps/web/package.json": "c09630f4d189d46843ece310930873ecb623952e340420ba89b16d7952f1c918"
+    }
+  },
+  "apps/workers/package.json": {
+    "size": 370,
+    "mtime_ns": 1786696317731218600,
+    "indexed_at_ns": 1786698106523943900,
+    "word_count": 37,
+    "hashes": {
+      "apps/workers/package.json": "4e18468bff6b517ac2d0f1a6e0fd5ff39fdbf580e9737a5808074b7d0c839f7c"
+    }
+  },
+  "docs/adr/0001-monorepo-strategy.md": {
+    "size": 9696,
+    "mtime_ns": 1786606855605689000,
+    "indexed_at_ns": 1786701986062935300,
+    "word_count": 1364,
+    "hashes": {
+      "docs/adr/0001-monorepo-strategy.md": "90b9e4e0ab48692718255cdf37a33ce1e171c23e36d025aa226c7465e1045758"
+    }
+  },
+  "docs/adr/0002-backend-framework.md": {
+    "size": 11915,
+    "mtime_ns": 1786606857638475800,
+    "indexed_at_ns": 1786701986066694300,
+    "word_count": 1661,
+    "hashes": {
+      "docs/adr/0002-backend-framework.md": "ad4029ece9b718d1f4e7d91e7f5ac5a52f313af54603836f27782905742d92d9"
+    }
+  },
+  "docs/adr/0003-quant-service-engine.md": {
+    "size": 11224,
+    "mtime_ns": 1786684759353624000,
+    "indexed_at_ns": 1786701986069718600,
+    "word_count": 1510,
+    "hashes": {
+      "docs/adr/0003-quant-service-engine.md": "413782ac2056a9357bde3d4da6fa89780d833cf60bf5b575c35b707c1ec39a51"
+    }
+  },
+  "docs/adr/0004-database-and-orm.md": {
+    "size": 10613,
+    "mtime_ns": 1786684783043424700,
+    "indexed_at_ns": 1786701986073090900,
+    "word_count": 1422,
+    "hashes": {
+      "docs/adr/0004-database-and-orm.md": "ea5bd30fcbba4d681ad2651628b385ab7be044dd7d0c06939f6cd0e9377d3639"
+    }
+  },
+  "docs/adr/0005-cache-and-job-queue.md": {
+    "size": 10393,
+    "mtime_ns": 1786684794084196700,
+    "indexed_at_ns": 1786701986077047000,
+    "word_count": 1428,
+    "hashes": {
+      "docs/adr/0005-cache-and-job-queue.md": "a2cee94f7c73d5d1fbad95672e02bbede8c6e9e32804d3733b2bfb96efc73fb1"
+    }
+  },
+  "docs/adr/0006-mobile-framework.md": {
+    "size": 9886,
+    "mtime_ns": 1786684805080341700,
+    "indexed_at_ns": 1786701986080015500,
+    "word_count": 1382,
+    "hashes": {
+      "docs/adr/0006-mobile-framework.md": "3ee710758f0c2470f340c9c0a8062132d4450c2f2b16fc5f4724e3ddf42b7565"
+    }
+  },
+  "docs/architecture/ARCHITECTURE.md": {
+    "size": 63015,
+    "mtime_ns": 1786605788405619500,
+    "indexed_at_ns": 1786701986084935000,
+    "word_count": 7486,
+    "hashes": {
+      "docs/architecture/architecture.md": "903c7d91bc77b98ccd8c536216b2820f617e073d83f399955fa0ca173442e015"
+    }
+  },
+  "docs/product/PRD.md": {
+    "size": 111582,
+    "mtime_ns": 1786558929642055400,
+    "indexed_at_ns": 1786701986091624400,
+    "word_count": 15681,
+    "hashes": {
+      "docs/product/prd.md": "752078fbd3905b7cbf73bbb11bf0f52cc6328034a7343787d510aaddfd92e1be"
+    }
+  },
+  "docs/product/PRODUCT_DISCOVERY.md": {
+    "size": 48351,
+    "mtime_ns": 1786557859394575800,
+    "indexed_at_ns": 1786701986095301100,
+    "word_count": 8157,
+    "hashes": {
+      "docs/product/product_discovery.md": "e9b39e1da1e9296826d347d0c0e5b7370b0140e49bf7c9611909a3320c51c630"
+    }
+  },
+  "package.json": {
+    "size": 678,
+    "mtime_ns": 1788595436681835500,
+    "indexed_at_ns": 1788621097689130900,
+    "word_count": 63,
+    "hashes": { "package.json": "872bd7849e0e81e8d64f9f9eb9abb77d8282699a56c1ffbeff7db06001da7fc3" }
+  },
+  "packages/config/package.json": {
+    "size": 395,
+    "mtime_ns": 1786701601211932300,
+    "indexed_at_ns": 1786701986001691000,
+    "word_count": 37,
+    "hashes": {
+      "packages/config/package.json": "6898e137b47707b7744153e620a79700635eec25e97fd62f5cac28de17b8a79e"
+    }
+  },
+  "packages/shared-types/package.json": {
+    "size": 255,
+    "mtime_ns": 1786696281321714800,
+    "indexed_at_ns": 1786698106531791400,
+    "word_count": 28,
+    "hashes": {
+      "packages/shared-types/package.json": "d1264968ca86dddb64654d218ae2527e2ca764cb62cec48d329591f6daae81a3"
+    }
+  },
+  "packages/shared-types/src/index.ts": {
+    "size": 1082,
+    "mtime_ns": 1786696286502932400,
+    "indexed_at_ns": 1786698045622582800,
+    "word_count": 125
+  },
+  "packages/ui-components/package.json": {
+    "size": 369,
+    "mtime_ns": 1786696292728855300,
+    "indexed_at_ns": 1786698106533440600,
+    "word_count": 38,
+    "hashes": {
+      "packages/ui-components/package.json": "756e7dc4439bd69aa1754ca9c922b1074d00d695f461d34aefc24d8204abf6a0"
+    }
+  },
+  "packages/ui-components/src/index.ts": {
+    "size": 208,
+    "mtime_ns": 1786696298263426200,
+    "indexed_at_ns": 1786698045634870500,
+    "word_count": 19
+  },
+  "pnpm-workspace.yaml": {
+    "size": 486,
+    "mtime_ns": 1788595436694878700,
+    "indexed_at_ns": 1788621097209490900,
+    "word_count": 61
+  },
+  "tsconfig.json": {
+    "size": 568,
+    "mtime_ns": 1786701535211342000,
+    "indexed_at_ns": 1786701986029790600,
+    "word_count": 35,
+    "hashes": {
+      "tsconfig.json": "d7295efd7564d8f549da63681973a70014d44f56f7cedb26e58970f901d9bbf7"
+    }
+  },
+  "turbo.json": {
+    "size": 385,
+    "mtime_ns": 1786696250204417300,
+    "indexed_at_ns": 1786698106539291500,
+    "word_count": 36,
+    "hashes": { "turbo.json": "7eeb23dd0fc18b19f80bc71d59fdd1ba09bec29f99dc116fcccb7a4b7f147b3c" }
+  },
+  "README.md": {
+    "size": 7325,
+    "mtime_ns": 1788623934536261000,
+    "indexed_at_ns": 1788624005006427600,
+    "word_count": 863,
+    "hashes": { "readme.md": "734c4c144e4d8850b00d784bb889ace8c7889516713a97cb2c623b10c8bf09c6" }
+  },
+  "docker-compose.yml": {
+    "size": 1563,
+    "mtime_ns": 1786701488292339100,
+    "indexed_at_ns": 1786727976331414500,
+    "word_count": 106,
+    "hashes": {
+      "docker-compose.yml": "d8932b91f9584049c3454f2b3bd7f680917fcac287f22d2683650d4433784751"
+    }
+  },
+  "packages/config/src/env.js": {
+    "size": 3714,
+    "mtime_ns": 1786715780856841100,
+    "indexed_at_ns": 1786727953996569300,
+    "word_count": 263
+  },
+  "packages/config/src/env.ts": {
+    "size": 3498,
+    "mtime_ns": 1786715781386999400,
+    "indexed_at_ns": 1786727954060969500,
+    "word_count": 262
+  },
+  "packages/config/src/index.js": {
+    "size": 935,
+    "mtime_ns": 1786715781465729900,
+    "indexed_at_ns": 1786727954063927600,
+    "word_count": 113
+  },
+  "packages/config/src/index.ts": {
+    "size": 23,
+    "mtime_ns": 1786715781514841400,
+    "indexed_at_ns": 1786727954121610100,
+    "word_count": 4
+  },
+  "packages/config/src/test-env.ts": {
+    "size": 2813,
+    "mtime_ns": 1786715781630677400,
+    "indexed_at_ns": 1786727954124720000,
+    "word_count": 254
+  },
+  "packages/config/tsconfig.json": {
+    "size": 166,
+    "mtime_ns": 1786701595636969300,
+    "indexed_at_ns": 1786701986004922400,
+    "word_count": 15,
+    "hashes": {
+      "packages/config/tsconfig.json": "f4dac60f671ac49b27482cdb3810dedb25f91c838c89b90cebdb393674f45498"
+    }
+  },
+  "packages/shared-types/src/index.js": {
+    "size": 77,
+    "mtime_ns": 1786701592382848100,
+    "indexed_at_ns": 1786701985762455000,
+    "word_count": 8
+  },
+  "packages/ui-components/src/index.js": {
+    "size": 253,
+    "mtime_ns": 1786715781905534300,
+    "indexed_at_ns": 1786727954143682500,
+    "word_count": 21
+  },
+  "scripts/dev-setup.sh": {
+    "size": 3607,
+    "mtime_ns": 1786701552290426900,
+    "indexed_at_ns": 1786701986025194900,
+    "word_count": 407,
+    "hashes": {
+      "scripts/dev-setup.sh": "747756cc600c927cc02b31cb419cb64769fca300d87e97663966d9d770e75d23"
+    }
+  },
+  "DATABASE.md": {
+    "size": 11172,
+    "mtime_ns": 1786727881555131600,
+    "indexed_at_ns": 1786727976323598300,
+    "word_count": 1156,
+    "hashes": { "database.md": "20fc242bdc9cd444980e644d4e128006dd0f5e351e3d7a35d63ca73da0348ecf" }
+  },
+  "apps/api/jest.config.js": {
+    "size": 317,
+    "mtime_ns": 1786727881558290800,
+    "indexed_at_ns": 1786727953750075800,
+    "word_count": 27
+  },
+  "apps/api/prisma/migrations/0_init/migration.sql": {
+    "size": 15765,
+    "mtime_ns": 1788622142821034400,
+    "indexed_at_ns": 1788622907792603400,
+    "word_count": 1486,
+    "hashes": {
+      "apps/api/prisma/migrations/0_init/migration.sql": "72deab603181232820e8f8476d06ab8efe83041d082f68d110dbe8d36ec21684"
+    }
+  },
+  "apps/api/src/app.module.ts": {
+    "size": 1400,
+    "mtime_ns": 1788621794977340400,
+    "indexed_at_ns": 1788622907052824800,
+    "word_count": 121
+  },
+  "apps/api/src/main.ts": {
+    "size": 5002,
+    "mtime_ns": 1788618235720820700,
+    "indexed_at_ns": 1788621096591926900,
+    "word_count": 369
+  },
+  "apps/api/src/modules/auth/__tests__/argon.service.spec.ts": {
+    "size": 1284,
+    "mtime_ns": 1786727881574275700,
+    "indexed_at_ns": 1786727953772078000,
+    "word_count": 124
+  },
+  "apps/api/src/modules/auth/__tests__/auth.controller.spec.ts": {
+    "size": 4164,
+    "mtime_ns": 1786727881575247300,
+    "indexed_at_ns": 1786727953776579300,
+    "word_count": 351
+  },
+  "apps/api/src/modules/auth/__tests__/auth.service.spec.ts": {
+    "size": 6956,
+    "mtime_ns": 1786727881576244200,
+    "indexed_at_ns": 1786727953782303700,
+    "word_count": 492
+  },
+  "apps/api/src/modules/auth/argon.service.ts": {
+    "size": 512,
+    "mtime_ns": 1786727881577752600,
+    "indexed_at_ns": 1786727953786266000,
+    "word_count": 56
+  },
+  "apps/api/src/modules/auth/auth.controller.ts": {
+    "size": 2694,
+    "mtime_ns": 1786727881578763500,
+    "indexed_at_ns": 1786727953790154800,
+    "word_count": 261
+  },
+  "apps/api/src/modules/auth/auth.module.ts": {
+    "size": 1207,
+    "mtime_ns": 1786727881579761500,
+    "indexed_at_ns": 1786727953794123000,
+    "word_count": 104
+  },
+  "apps/api/src/modules/auth/auth.service.ts": {
+    "size": 7652,
+    "mtime_ns": 1786727881582121300,
+    "indexed_at_ns": 1786727953797324600,
+    "word_count": 667
+  },
+  "apps/api/src/modules/auth/dto/auth-response.dto.ts": {
+    "size": 207,
+    "mtime_ns": 1786727881584118600,
+    "indexed_at_ns": 1786727953801875100,
+    "word_count": 26
+  },
+  "apps/api/src/modules/auth/dto/login.dto.ts": {
+    "size": 307,
+    "mtime_ns": 1786727881586130800,
+    "indexed_at_ns": 1786727953805187200,
+    "word_count": 37
+  },
+  "apps/api/src/modules/auth/dto/register.dto.ts": {
+    "size": 773,
+    "mtime_ns": 1786727881586130800,
+    "indexed_at_ns": 1786727953809672800,
+    "word_count": 79
+  },
+  "apps/api/src/modules/auth/jwt-auth.guard.ts": {
+    "size": 165,
+    "mtime_ns": 1786727881587119000,
+    "indexed_at_ns": 1786727953812717300,
+    "word_count": 19
+  },
+  "apps/api/src/modules/auth/jwt-refresh-auth.guard.ts": {
+    "size": 180,
+    "mtime_ns": 1786727881588126800,
+    "indexed_at_ns": 1786727953817989000,
+    "word_count": 19
+  },
+  "apps/api/src/modules/auth/jwt-refresh.strategy.ts": {
+    "size": 1331,
+    "mtime_ns": 1786727881588126800,
+    "indexed_at_ns": 1786727953823618600,
+    "word_count": 111
+  },
+  "apps/api/src/modules/auth/jwt.strategy.ts": {
+    "size": 1251,
+    "mtime_ns": 1786727881588126800,
+    "indexed_at_ns": 1786727953827490900,
+    "word_count": 116
+  },
+  "apps/api/src/modules/portfolio/__tests__/portfolio.service.spec.ts": {
+    "size": 4098,
+    "mtime_ns": 1786727881590883300,
+    "indexed_at_ns": 1786727953831579300,
+    "word_count": 332
+  },
+  "apps/api/src/modules/portfolio/__tests__/transaction.service.spec.ts": {
+    "size": 12169,
+    "mtime_ns": 1786727881591508900,
+    "indexed_at_ns": 1786727953835600500,
+    "word_count": 917
+  },
+  "apps/api/src/modules/portfolio/controllers/portfolio.controller.ts": {
+    "size": 1860,
+    "mtime_ns": 1786727881592518400,
+    "indexed_at_ns": 1786727953839365600,
+    "word_count": 176
+  },
+  "apps/api/src/modules/portfolio/controllers/transaction.controller.ts": {
+    "size": 1400,
+    "mtime_ns": 1786727881593892400,
+    "indexed_at_ns": 1786727953844175200,
+    "word_count": 122
+  },
+  "apps/api/src/modules/portfolio/dto/create-portfolio.dto.ts": {
+    "size": 491,
+    "mtime_ns": 1786727881594908200,
+    "indexed_at_ns": 1786727953848370300,
+    "word_count": 48
+  },
+  "apps/api/src/modules/portfolio/dto/create-transaction.dto.ts": {
+    "size": 1615,
+    "mtime_ns": 1786727881594908200,
+    "indexed_at_ns": 1786727953852127100,
+    "word_count": 163
+  },
+  "apps/api/src/modules/portfolio/dto/update-portfolio.dto.ts": {
+    "size": 379,
+    "mtime_ns": 1786727881595904000,
+    "indexed_at_ns": 1786727953855537600,
+    "word_count": 32
+  },
+  "apps/api/src/modules/portfolio/exceptions/insufficient-cash.exception.ts": {
+    "size": 418,
+    "mtime_ns": 1786727881597290200,
+    "indexed_at_ns": 1786727953859802800,
+    "word_count": 44
+  },
+  "apps/api/src/modules/portfolio/exceptions/insufficient-holding.exception.ts": {
+    "size": 412,
+    "mtime_ns": 1786727881597797400,
+    "indexed_at_ns": 1786727953863175600,
+    "word_count": 44
+  },
+  "apps/api/src/modules/portfolio/exceptions/portfolio-not-found.exception.ts": {
+    "size": 253,
+    "mtime_ns": 1786727881598809100,
+    "indexed_at_ns": 1786727953868415300,
+    "word_count": 28
+  },
+  "apps/api/src/modules/portfolio/portfolio.module.ts": {
+    "size": 812,
+    "mtime_ns": 1786727881598809100,
+    "indexed_at_ns": 1786727953871498300,
+    "word_count": 68
+  },
+  "apps/api/src/modules/portfolio/services/holding.service.ts": {
+    "size": 6110,
+    "mtime_ns": 1786727881600268400,
+    "indexed_at_ns": 1786727953877113400,
+    "word_count": 556
+  },
+  "apps/api/src/modules/portfolio/services/portfolio.service.ts": {
+    "size": 4260,
+    "mtime_ns": 1788622364118407900,
+    "indexed_at_ns": 1788622907289829100,
+    "word_count": 397
+  },
+  "apps/api/src/modules/portfolio/services/transaction.service.ts": {
+    "size": 11390,
+    "mtime_ns": 1786727881602283800,
+    "indexed_at_ns": 1786727953885810600,
+    "word_count": 977
+  },
+  "apps/api/src/modules/providers/__tests__/csv-provider.adapter.spec.ts": {
+    "size": 2879,
+    "mtime_ns": 1786727881604810400,
+    "indexed_at_ns": 1786727953891323400,
+    "word_count": 156
+  },
+  "apps/api/src/modules/providers/__tests__/provider-factory.service.spec.ts": {
+    "size": 2954,
+    "mtime_ns": 1786727881604810400,
+    "indexed_at_ns": 1786727953895391200,
+    "word_count": 239
+  },
+  "apps/api/src/modules/providers/__tests__/provider-ingestion.service.spec.ts": {
+    "size": 3003,
+    "mtime_ns": 1786727881605810300,
+    "indexed_at_ns": 1786727953901283800,
+    "word_count": 195
+  },
+  "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts": {
+    "size": 9029,
+    "mtime_ns": 1786727881606807400,
+    "indexed_at_ns": 1786727953905084700,
+    "word_count": 762
+  },
+  "apps/api/src/modules/providers/adapters/manual-entry.adapter.ts": {
+    "size": 995,
+    "mtime_ns": 1786727881607797900,
+    "indexed_at_ns": 1786727953910246400,
+    "word_count": 94
+  },
+  "apps/api/src/modules/providers/adapters/mock-broker.adapter.ts": {
+    "size": 5559,
+    "mtime_ns": 1786727881608302800,
+    "indexed_at_ns": 1786727953913612300,
+    "word_count": 457
+  },
+  "apps/api/src/modules/providers/controllers/provider.controller.ts": {
+    "size": 2695,
+    "mtime_ns": 1788620914812413300,
+    "indexed_at_ns": 1788621096793869700,
+    "word_count": 242
+  },
+  "apps/api/src/modules/providers/interfaces/provider.interface.ts": {
+    "size": 1985,
+    "mtime_ns": 1786727881610791100,
+    "indexed_at_ns": 1786727953922175400,
+    "word_count": 191
+  },
+  "apps/api/src/modules/providers/providers.module.ts": {
+    "size": 1147,
+    "mtime_ns": 1788620901677585600,
+    "indexed_at_ns": 1788621096799174000,
+    "word_count": 91
+  },
+  "apps/api/src/modules/providers/services/provider-factory.service.ts": {
+    "size": 2269,
+    "mtime_ns": 1786727881613003000,
+    "indexed_at_ns": 1786727953929837500,
+    "word_count": 190
+  },
+  "apps/api/src/modules/providers/services/provider-ingestion.service.ts": {
+    "size": 10025,
+    "mtime_ns": 1788620892516362300,
+    "indexed_at_ns": 1788621096804785000,
+    "word_count": 897
+  },
+  "apps/api/src/prisma/prisma.module.ts": {
+    "size": 219,
+    "mtime_ns": 1786727881614005000,
+    "indexed_at_ns": 1786727953937189600,
+    "word_count": 24
+  },
+  "apps/api/src/prisma/prisma.service.ts": {
+    "size": 363,
+    "mtime_ns": 1786727881615004000,
+    "indexed_at_ns": 1786727953940801100,
+    "word_count": 37
+  },
+  "apps/api/tsconfig.json": {
+    "size": 672,
+    "mtime_ns": 1786813016981595900,
+    "indexed_at_ns": 1786813129499323800,
+    "word_count": 48,
+    "hashes": {
+      "apps/api/tsconfig.json": "4d0308a8c98d936087a50a5be0b2f20368edd7dab8dcb13d63187fcf7cde319b"
+    }
+  },
+  "apps/api/src/modules/market-data/__tests__/alpha-vantage.provider.spec.ts": {
+    "size": 9427,
+    "mtime_ns": 1786813021157917400,
+    "indexed_at_ns": 1786813128136160300,
+    "word_count": 712
+  },
+  "apps/api/src/modules/market-data/__tests__/coingecko.provider.spec.ts": {
+    "size": 5392,
+    "mtime_ns": 1786813017470334800,
+    "indexed_at_ns": 1786813128145147600,
+    "word_count": 426
+  },
+  "apps/api/src/modules/market-data/__tests__/market-data.service.spec.ts": {
+    "size": 12628,
+    "mtime_ns": 1786813017999487100,
+    "indexed_at_ns": 1786813128151067400,
+    "word_count": 879
+  },
+  "apps/api/src/modules/market-data/__tests__/price-cache.service.spec.ts": {
+    "size": 11140,
+    "mtime_ns": 1786813018348083100,
+    "indexed_at_ns": 1786813128160327500,
+    "word_count": 808
+  },
+  "apps/api/src/modules/market-data/controllers/market-data.controller.ts": {
+    "size": 6328,
+    "mtime_ns": 1786813018652246000,
+    "indexed_at_ns": 1786813128169005400,
+    "word_count": 610
+  },
+  "apps/api/src/modules/market-data/interfaces/market-data-provider.interface.ts": {
+    "size": 3729,
+    "mtime_ns": 1786813018785808400,
+    "indexed_at_ns": 1786813128177214300,
+    "word_count": 497
+  },
+  "apps/api/src/modules/market-data/interfaces/price-cache.interface.ts": {
+    "size": 4680,
+    "mtime_ns": 1786813018882221100,
+    "indexed_at_ns": 1786813128189474900,
+    "word_count": 608
+  },
+  "apps/api/src/modules/market-data/market-data.module.ts": {
+    "size": 3274,
+    "mtime_ns": 1786813018944424300,
+    "indexed_at_ns": 1786813128200944100,
+    "word_count": 345
+  },
+  "apps/api/src/modules/market-data/providers/alpha-vantage.provider.ts": {
+    "size": 9839,
+    "mtime_ns": 1786813019204796700,
+    "indexed_at_ns": 1786813128210254800,
+    "word_count": 958
+  },
+  "apps/api/src/modules/market-data/providers/coingecko.provider.ts": {
+    "size": 9217,
+    "mtime_ns": 1786813019413876600,
+    "indexed_at_ns": 1786813128221453100,
+    "word_count": 905
+  },
+  "apps/api/src/modules/market-data/services/market-data.service.ts": {
+    "size": 13821,
+    "mtime_ns": 1786813019796934500,
+    "indexed_at_ns": 1786813128230482400,
+    "word_count": 1323
+  },
+  "apps/api/src/modules/market-data/services/price-cache.service.ts": {
+    "size": 10793,
+    "mtime_ns": 1786813019956014100,
+    "indexed_at_ns": 1786813128244127200,
+    "word_count": 1061
+  },
+  "apps/api/src/modules/market-data/workers/market-data.processor.ts": {
+    "size": 7714,
+    "mtime_ns": 1786813020201431100,
+    "indexed_at_ns": 1786813128255061800,
+    "word_count": 795
+  },
+  "apps/api/src/modules/market-data/workers/market-data.scheduler.ts": {
+    "size": 5774,
+    "mtime_ns": 1786813020309993000,
+    "indexed_at_ns": 1786813128263735500,
+    "word_count": 680
+  },
+  "apps/api/src/modules/calculator/__tests__/currency-converter.spec.ts": {
+    "size": 1779,
+    "mtime_ns": 1786813019195689100,
+    "indexed_at_ns": 1786813128021260800,
+    "word_count": 183
+  },
+  "apps/api/src/modules/calculator/__tests__/fifo-calculator.spec.ts": {
+    "size": 11567,
+    "mtime_ns": 1786813019561051900,
+    "indexed_at_ns": 1786813128026128400,
+    "word_count": 990
+  },
+  "apps/api/src/modules/calculator/__tests__/valuation.engine.spec.ts": {
+    "size": 11124,
+    "mtime_ns": 1786813019874425000,
+    "indexed_at_ns": 1786813128033381700,
+    "word_count": 894
+  },
+  "apps/api/src/modules/calculator/__tests__/weighted-avg-calculator.spec.ts": {
+    "size": 7306,
+    "mtime_ns": 1786813020061705200,
+    "indexed_at_ns": 1786813128042769900,
+    "word_count": 649
+  },
+  "apps/api/src/modules/calculator/calculator.module.ts": {
+    "size": 1022,
+    "mtime_ns": 1786813020221001800,
+    "indexed_at_ns": 1786813128055810800,
+    "word_count": 98
+  },
+  "apps/api/src/modules/calculator/controllers/valuation.controller.ts": {
+    "size": 2857,
+    "mtime_ns": 1788621990703481200,
+    "indexed_at_ns": 1788622907204077100,
+    "word_count": 258
+  },
+  "apps/api/src/modules/calculator/currency-converter.ts": {
+    "size": 3217,
+    "mtime_ns": 1786813020437104800,
+    "indexed_at_ns": 1786813128075212400,
+    "word_count": 430
+  },
+  "apps/api/src/modules/calculator/dto/portfolio-valuation-summary.dto.ts": {
+    "size": 3462,
+    "mtime_ns": 1786813020526501000,
+    "indexed_at_ns": 1786813128084157800,
+    "word_count": 355
+  },
+  "apps/api/src/modules/calculator/dto/position-valuation.dto.ts": {
+    "size": 4326,
+    "mtime_ns": 1786813020596700200,
+    "indexed_at_ns": 1786813128095380400,
+    "word_count": 485
+  },
+  "apps/api/src/modules/calculator/fifo-calculator.ts": {
+    "size": 7688,
+    "mtime_ns": 1786813020711795600,
+    "indexed_at_ns": 1786813128100895400,
+    "word_count": 806
+  },
+  "apps/api/src/modules/calculator/interfaces/calculator.interface.ts": {
+    "size": 3933,
+    "mtime_ns": 1786813020750601600,
+    "indexed_at_ns": 1786813128107811800,
+    "word_count": 578
+  },
+  "apps/api/src/modules/calculator/valuation.engine.ts": {
+    "size": 12038,
+    "mtime_ns": 1788622036189331300,
+    "indexed_at_ns": 1788622907218797700,
+    "word_count": 1039
+  },
+  "apps/api/src/modules/calculator/weighted-avg-calculator.ts": {
+    "size": 4910,
+    "mtime_ns": 1786813020998223200,
+    "indexed_at_ns": 1786813128127009300,
+    "word_count": 533
+  },
+  "apps/quant-engine/src/analytics/__init__.py": {
+    "size": 2304,
+    "mtime_ns": 1788272333427598200,
+    "indexed_at_ns": 1788588128613769900,
+    "word_count": 182,
+    "hashes": {
+      "apps/quant-engine/src/analytics/__init__.py": "426cfec6b7e6a5d7ac44e9b66a5921f1ca5520a83bdd960acf4e76f72b3c0231"
+    }
+  },
+  "apps/quant-engine/src/analytics/benchmark.py": {
+    "size": 13633,
+    "mtime_ns": 1786807928660099900,
+    "indexed_at_ns": 1786809361769635600,
+    "word_count": 1322,
+    "hashes": {
+      "apps/quant-engine/src/analytics/benchmark.py": "9e0aa6fe0be31e360c53cf06773e78d7759c1bbe8081245c3720eb9b601407b6"
+    }
+  },
+  "apps/quant-engine/src/analytics/twr.py": {
+    "size": 9536,
+    "mtime_ns": 1786807814747504600,
+    "indexed_at_ns": 1786809361770411400,
+    "word_count": 1114,
+    "hashes": {
+      "apps/quant-engine/src/analytics/twr.py": "b0ac7f0c78e81cf9851036f8cf2cb51935234d2cbfbfac6a759caac52c1da2af"
+    }
+  },
+  "apps/quant-engine/src/analytics/xirr.py": {
+    "size": 13196,
+    "mtime_ns": 1786807874624637300,
+    "indexed_at_ns": 1786809361771213800,
+    "word_count": 1460,
+    "hashes": {
+      "apps/quant-engine/src/analytics/xirr.py": "344558326d4d10a72edc8a06c1cf7fe0819302014d483dc321e42449fb047680"
+    }
+  },
+  "apps/quant-engine/tests/__init__.py": {
+    "size": 48,
+    "mtime_ns": 1786807936302039400,
+    "indexed_at_ns": 1786809361771947400,
+    "word_count": 5,
+    "hashes": {
+      "apps/quant-engine/tests/__init__.py": "e4d0a447402ea334d0a0a84e6a469ac65c0f451c606efb9e317a700b1fa2f0fd"
+    }
+  },
+  "apps/quant-engine/tests/test_benchmark.py": {
+    "size": 7050,
+    "mtime_ns": 1786808057581439200,
+    "indexed_at_ns": 1786809361772799800,
+    "word_count": 671,
+    "hashes": {
+      "apps/quant-engine/tests/test_benchmark.py": "ca2e32d0e4c9b6ee080c4d99db5cb4bc923573f68d8797219cb0d47181d9bdc0"
+    }
+  },
+  "apps/quant-engine/tests/test_twr.py": {
+    "size": 8505,
+    "mtime_ns": 1786807979403450900,
+    "indexed_at_ns": 1786809361773697600,
+    "word_count": 857,
+    "hashes": {
+      "apps/quant-engine/tests/test_twr.py": "c0f1a1fe57011752b52b6766fc437092c378df050bcd6426b69483b7316f3e98"
+    }
+  },
+  "apps/quant-engine/tests/test_xirr.py": {
+    "size": 7970,
+    "mtime_ns": 1786809190777947400,
+    "indexed_at_ns": 1786809361774575200,
+    "word_count": 764,
+    "hashes": {
+      "apps/quant-engine/tests/test_xirr.py": "070d8ad2e0248a471f4814664e1d4f4490d27c1687ee391615544f02e87b09aa"
+    }
+  },
+  "docs/analytics/ANALYTICS_METHODOLOGY.md": {
+    "size": 12212,
+    "mtime_ns": 1786813017477398700,
+    "indexed_at_ns": 1786813130101729200,
+    "word_count": 1569,
+    "hashes": {
+      "docs/analytics/analytics_methodology.md": "07e49765cd6c826c1243f6312684512c97883111c05fa38ed6f6a4c793b6190d"
+    }
+  },
+  "apps/quant-engine/pyrightconfig.json": {
+    "size": 191,
+    "mtime_ns": 1786813017145066800,
+    "indexed_at_ns": 1786813129513304900,
+    "word_count": 15,
+    "hashes": {
+      "apps/quant-engine/pyrightconfig.json": "cc1f3fbf192b1f8587be41d685395a2e418857c31ccf7b38b76037c93b66185b"
+    }
+  },
+  "apps/quant-engine/src/__init__.py": {
+    "size": 41,
+    "mtime_ns": 1786809737025503300,
+    "indexed_at_ns": 1786810678191229500,
+    "word_count": 6,
+    "hashes": {
+      "apps/quant-engine/src/__init__.py": "81ea0a3eb6cb811ad2019f1fa4dd036b1c283b8796c39dd8c48b44aff9c88528"
+    }
+  },
+  "apps/quant-engine/src/app/__init__.py": {
+    "size": 64,
+    "mtime_ns": 1786809833230877500,
+    "indexed_at_ns": 1786810678199544400,
+    "word_count": 8,
+    "hashes": {
+      "apps/quant-engine/src/app/__init__.py": "bbda961542130cfa48001c5f5b8b62ae1f217fa974c2aa82385a7d09e94c5824"
+    }
+  },
+  "apps/quant-engine/src/app/routers/__init__.py": {
+    "size": 224,
+    "mtime_ns": 1787651597502761400,
+    "indexed_at_ns": 1788588128763898200,
+    "word_count": 26,
+    "hashes": {
+      "apps/quant-engine/src/app/routers/__init__.py": "ffb08fe00ad712e13bd4402211835d2d17bed397583503e1e902be4248d1c2a8"
+    }
+  },
+  "apps/quant-engine/src/app/routers/performance.py": {
+    "size": 11077,
+    "mtime_ns": 1786810414805349500,
+    "indexed_at_ns": 1786810678201250800,
+    "word_count": 891,
+    "hashes": {
+      "apps/quant-engine/src/app/routers/performance.py": "34a97ff39a59c7af7a56af3226fabe052bf95ad8d71aba96aacd9e1970f1eb09"
+    }
+  },
+  "apps/quant-engine/src/app/schemas/__init__.py": {
+    "size": 27,
+    "mtime_ns": 1786809837353140700,
+    "indexed_at_ns": 1786810678202128900,
+    "word_count": 2,
+    "hashes": {
+      "apps/quant-engine/src/app/schemas/__init__.py": "e57fe72d60ec904d0bc819b98d75af778e42b46f155d8de9eaa807424123c043"
+    }
+  },
+  "apps/quant-engine/src/app/schemas/performance.py": {
+    "size": 8483,
+    "mtime_ns": 1786810400850329300,
+    "indexed_at_ns": 1786810678202931900,
+    "word_count": 773,
+    "hashes": {
+      "apps/quant-engine/src/app/schemas/performance.py": "b0ac786d7d493e8af966b39320c2282bf329759bc6497d13bf68ec879c9330ee"
+    }
+  },
+  "apps/quant-engine/src/main.py": {
+    "size": 2032,
+    "mtime_ns": 1787651596614616100,
+    "indexed_at_ns": 1788588128890264600,
+    "word_count": 173,
+    "hashes": {
+      "apps/quant-engine/src/main.py": "7e94fe96cca4fb538d708e3051284ad11a16bb119819c136f369e947842aa2dc"
+    }
+  },
+  "apps/quant-engine/tests/test_performance_benchmark.py": {
+    "size": 6577,
+    "mtime_ns": 1786810256493387600,
+    "indexed_at_ns": 1786810678208460100,
+    "word_count": 567,
+    "hashes": {
+      "apps/quant-engine/tests/test_performance_benchmark.py": "2bcdb8558895d6e387fdccfb1bc056f96973c5c2ebff1e2829cf56660039e438"
+    }
+  },
+  "apps/quant-engine/tests/test_performance_twr.py": {
+    "size": 7968,
+    "mtime_ns": 1786810638913612200,
+    "indexed_at_ns": 1786810678209307200,
+    "word_count": 595,
+    "hashes": {
+      "apps/quant-engine/tests/test_performance_twr.py": "f8394787674e34863c9c48554c72c1665ee00b867bf2bf2ec2123373ffb8e84b"
+    }
+  },
+  "apps/quant-engine/tests/test_performance_xirr.py": {
+    "size": 12025,
+    "mtime_ns": 1786810661166975500,
+    "indexed_at_ns": 1786810678210331300,
+    "word_count": 1064,
+    "hashes": {
+      "apps/quant-engine/tests/test_performance_xirr.py": "e3c06661fe4e5a903040f22712c3d36e4d1828d553efa970db1f026794cb8ffc"
+    }
+  },
+  "apps/api/src/modules/analytics/__tests__/analytics-client.service.spec.ts": {
+    "size": 9016,
+    "mtime_ns": 1786813018223980500,
+    "indexed_at_ns": 1786813127872749600,
+    "word_count": 740
+  },
+  "apps/api/src/modules/analytics/__tests__/analytics.controller.spec.ts": {
+    "size": 4006,
+    "mtime_ns": 1788622288941566500,
+    "indexed_at_ns": 1788622907147566600,
+    "word_count": 296
+  },
+  "apps/api/src/modules/analytics/analytics-client.service.ts": {
+    "size": 14524,
+    "mtime_ns": 1788280503103306800,
+    "indexed_at_ns": 1788588122222860000,
+    "word_count": 1305
+  },
+  "apps/api/src/modules/analytics/analytics.module.ts": {
+    "size": 701,
+    "mtime_ns": 1786813018797690300,
+    "indexed_at_ns": 1786813127900609900,
+    "word_count": 75
+  },
+  "apps/api/src/modules/analytics/controllers/analytics.controller.ts": {
+    "size": 4596,
+    "mtime_ns": 1788622231514404200,
+    "indexed_at_ns": 1788622907154244800,
+    "word_count": 426
+  },
+  "apps/api/src/modules/analytics/dto/analytics.dto.ts": {
+    "size": 17999,
+    "mtime_ns": 1788280503314757100,
+    "indexed_at_ns": 1788588122255523900,
+    "word_count": 2068
+  },
+  "API_CONTRACT.md": {
+    "size": 8041,
+    "mtime_ns": 1788583003617039000,
+    "indexed_at_ns": 1788588129459886300,
+    "word_count": 1059,
+    "hashes": {
+      "api_contract.md": "69bc33faa9a474b1f25b7306d36ff41cc35fb4e60001e406040c6c939449e245"
+    }
+  },
+  "apps/api/src/common/__tests__/http-exception.filter.spec.ts": {
+    "size": 4376,
+    "mtime_ns": 1788583003642846300,
+    "indexed_at_ns": 1788588121938660500,
+    "word_count": 384
+  },
+  "apps/api/src/common/__tests__/transform.interceptor.spec.ts": {
+    "size": 2729,
+    "mtime_ns": 1788583003643240300,
+    "indexed_at_ns": 1788588121949403000,
+    "word_count": 257
+  },
+  "apps/api/src/common/decorators/api-paginated-response.decorator.ts": {
+    "size": 1355,
+    "mtime_ns": 1788583003646827600,
+    "indexed_at_ns": 1788588121957953600,
+    "word_count": 125
+  },
+  "apps/api/src/common/dto/pagination.dto.ts": {
+    "size": 751,
+    "mtime_ns": 1788583003646827600,
+    "indexed_at_ns": 1788588121966882200,
+    "word_count": 86
+  },
+  "apps/api/src/common/filters/http-exception.filter.ts": {
+    "size": 2560,
+    "mtime_ns": 1788583003652413700,
+    "indexed_at_ns": 1788588121979839100,
+    "word_count": 247
+  },
+  "apps/api/src/common/index.ts": {
+    "size": 362,
+    "mtime_ns": 1788621734736228100,
+    "indexed_at_ns": 1788622907094414300,
+    "word_count": 32
+  },
+  "apps/api/src/common/interceptors/transform.interceptor.ts": {
+    "size": 1168,
+    "mtime_ns": 1788583003660842700,
+    "indexed_at_ns": 1788588122002066100,
+    "word_count": 108
+  },
+  "apps/api/src/common/pipes/validation.pipe.ts": {
+    "size": 627,
+    "mtime_ns": 1788583003666762000,
+    "indexed_at_ns": 1788588122010963500,
+    "word_count": 77
+  },
+  "apps/api/src/modules/alerts/__tests__/alert-evaluator.spec.ts": {
+    "size": 31794,
+    "mtime_ns": 1788280500716451800,
+    "indexed_at_ns": 1788588122029942600,
+    "word_count": 2853
+  },
+  "apps/api/src/modules/alerts/__tests__/alert-integration.spec.ts": {
+    "size": 20341,
+    "mtime_ns": 1788280501135902100,
+    "indexed_at_ns": 1788588122040109900,
+    "word_count": 1817
+  },
+  "apps/api/src/modules/alerts/__tests__/notification-processor.spec.ts": {
+    "size": 22309,
+    "mtime_ns": 1788280501660158800,
+    "indexed_at_ns": 1788588122050745200,
+    "word_count": 1915
+  },
+  "apps/api/src/modules/alerts/alert-evaluator.engine.ts": {
+    "size": 9278,
+    "mtime_ns": 1788280501845036300,
+    "indexed_at_ns": 1788588122061268200,
+    "word_count": 850
+  },
+  "apps/api/src/modules/alerts/alert-event.listener.ts": {
+    "size": 6165,
+    "mtime_ns": 1788280501936280700,
+    "indexed_at_ns": 1788588122070342300,
+    "word_count": 675
+  },
+  "apps/api/src/modules/alerts/alert.controller.ts": {
+    "size": 5497,
+    "mtime_ns": 1788280502043460200,
+    "indexed_at_ns": 1788588122080142200,
+    "word_count": 571
+  },
+  "apps/api/src/modules/alerts/alert.module.ts": {
+    "size": 4670,
+    "mtime_ns": 1788280502125129400,
+    "indexed_at_ns": 1788588122088707100,
+    "word_count": 409
+  },
+  "apps/api/src/modules/alerts/alert.service.ts": {
+    "size": 15627,
+    "mtime_ns": 1788280502385304100,
+    "indexed_at_ns": 1788588122103905900,
+    "word_count": 1515
+  },
+  "apps/api/src/modules/alerts/dto/alert.dto.ts": {
+    "size": 6532,
+    "mtime_ns": 1788280502474993800,
+    "indexed_at_ns": 1788588122113669900,
+    "word_count": 621
+  },
+  "apps/api/src/modules/alerts/evaluators/concentration-rule.evaluator.ts": {
+    "size": 3889,
+    "mtime_ns": 1788280502542818000,
+    "indexed_at_ns": 1788588122123420700,
+    "word_count": 346
+  },
+  "apps/api/src/modules/alerts/evaluators/drawdown-rule.evaluator.ts": {
+    "size": 1455,
+    "mtime_ns": 1788280502588723700,
+    "indexed_at_ns": 1788588122135106600,
+    "word_count": 133
+  },
+  "apps/api/src/modules/alerts/evaluators/target-drift-rule.evaluator.ts": {
+    "size": 4029,
+    "mtime_ns": 1788280502642746000,
+    "indexed_at_ns": 1788588122144486600,
+    "word_count": 397
+  },
+  "apps/api/src/modules/alerts/evaluators/volatility-rule.evaluator.ts": {
+    "size": 1529,
+    "mtime_ns": 1788280502680927400,
+    "indexed_at_ns": 1788588122157217300,
+    "word_count": 139
+  },
+  "apps/api/src/modules/alerts/interfaces/alert-evaluator.interface.ts": {
+    "size": 3875,
+    "mtime_ns": 1788280502731535400,
+    "indexed_at_ns": 1788588122169714000,
+    "word_count": 501
+  },
+  "apps/api/src/modules/alerts/interfaces/alert-queue.interface.ts": {
+    "size": 2159,
+    "mtime_ns": 1788280502761073100,
+    "indexed_at_ns": 1788588122181414800,
+    "word_count": 248
+  },
+  "apps/api/src/modules/alerts/processors/notification.processor.ts": {
+    "size": 16602,
+    "mtime_ns": 1788280502948437400,
+    "indexed_at_ns": 1788588122192261500,
+    "word_count": 1515
+  },
+  "apps/api/src/modules/reports/__tests__/excel-export.service.spec.ts": {
+    "size": 17186,
+    "mtime_ns": 1788595436457072000,
+    "indexed_at_ns": 1788621096807987500,
+    "word_count": 1564
+  },
+  "apps/api/src/modules/reports/__tests__/pdf-report.service.spec.ts": {
+    "size": 11339,
+    "mtime_ns": 1788595436457072000,
+    "indexed_at_ns": 1788621096810847000,
+    "word_count": 1077
+  },
+  "apps/api/src/modules/reports/__tests__/report-scheduler.processor.spec.ts": {
+    "size": 11609,
+    "mtime_ns": 1788595436457072000,
+    "indexed_at_ns": 1788621096814042800,
+    "word_count": 990
+  },
+  "apps/api/src/modules/reports/dto/report.dto.ts": {
+    "size": 1385,
+    "mtime_ns": 1788595436462468300,
+    "indexed_at_ns": 1788621096816765400,
+    "word_count": 113
+  },
+  "apps/api/src/modules/reports/interfaces/report-queue.interface.ts": {
+    "size": 1692,
+    "mtime_ns": 1788595436464478700,
+    "indexed_at_ns": 1788621096819328500,
+    "word_count": 218
+  },
+  "apps/api/src/modules/reports/processors/report-scheduler.processor.ts": {
+    "size": 5840,
+    "mtime_ns": 1788595436465841700,
+    "indexed_at_ns": 1788621096822125900,
+    "word_count": 512
+  },
+  "apps/api/src/modules/reports/report.controller.ts": {
+    "size": 4923,
+    "mtime_ns": 1788595436467856700,
+    "indexed_at_ns": 1788621096824672200,
+    "word_count": 442
+  },
+  "apps/api/src/modules/reports/report.module.ts": {
+    "size": 3905,
+    "mtime_ns": 1788595436467856700,
+    "indexed_at_ns": 1788621096827381200,
+    "word_count": 320
+  },
+  "apps/api/src/modules/reports/report.service.ts": {
+    "size": 11080,
+    "mtime_ns": 1788595436470845600,
+    "indexed_at_ns": 1788621096830108100,
+    "word_count": 978
+  },
+  "apps/api/src/modules/reports/services/excel-export.service.ts": {
+    "size": 14347,
+    "mtime_ns": 1788595436470845600,
+    "indexed_at_ns": 1788621096832881200,
+    "word_count": 1250
+  },
+  "apps/api/src/modules/reports/services/pdf-report.service.ts": {
+    "size": 29926,
+    "mtime_ns": 1788595436470845600,
+    "indexed_at_ns": 1788621096835513800,
+    "word_count": 2784
+  },
+  "apps/mobile/App.tsx": {
+    "size": 879,
+    "mtime_ns": 1788583003672835300,
+    "indexed_at_ns": 1788588123042814800,
+    "word_count": 77
+  },
+  "apps/mobile/app.json": {
+    "size": 1258,
+    "mtime_ns": 1788583003672835300,
+    "indexed_at_ns": 1788588128516952000,
+    "word_count": 85,
+    "hashes": {
+      "apps/mobile/app.json": "1b2516dbbd3c11548bfbe536866f76e70d7589a738bed49c5d2129c586b4fd2d"
+    }
+  },
+  "apps/mobile/babel.config.js": {
+    "size": 472,
+    "mtime_ns": 1788583003677133300,
+    "indexed_at_ns": 1788588123113543700,
+    "word_count": 62
+  },
+  "apps/mobile/jest.config.js": {
+    "size": 550,
+    "mtime_ns": 1788583003677133300,
+    "indexed_at_ns": 1788588123183259600,
+    "word_count": 23
+  },
+  "apps/mobile/package.json": {
+    "size": 1260,
+    "mtime_ns": 1788583003692910400,
+    "indexed_at_ns": 1788588128519592700,
+    "word_count": 88,
+    "hashes": {
+      "apps/mobile/package.json": "0c05bde291ffc7413202ae96dfe372583f877491199484d0a2c9e525afc2078a"
+    }
+  },
+  "apps/mobile/src/__tests__/components/EmptyState.test.tsx": {
+    "size": 1302,
+    "mtime_ns": 1788583003698766200,
+    "indexed_at_ns": 1788588123329103800,
+    "word_count": 120
+  },
+  "apps/mobile/src/__tests__/components/MetricCard.test.tsx": {
+    "size": 1258,
+    "mtime_ns": 1788583003698766200,
+    "indexed_at_ns": 1788588123360905900,
+    "word_count": 116
+  },
+  "apps/mobile/src/__tests__/lib/utils.test.ts": {
+    "size": 1863,
+    "mtime_ns": 1788583003704331800,
+    "indexed_at_ns": 1788588123394112300,
+    "word_count": 176
+  },
+  "apps/mobile/src/__tests__/screens/LoginScreen.test.tsx": {
+    "size": 1704,
+    "mtime_ns": 1788583003706857300,
+    "indexed_at_ns": 1788588123436336600,
+    "word_count": 160
+  },
+  "apps/mobile/src/components/EmptyState.tsx": {
+    "size": 1736,
+    "mtime_ns": 1788583003710495100,
+    "indexed_at_ns": 1788588123471806100,
+    "word_count": 162
+  },
+  "apps/mobile/src/components/MetricCard.tsx": {
+    "size": 1910,
+    "mtime_ns": 1788583003713578500,
+    "indexed_at_ns": 1788588123501558900,
+    "word_count": 207
+  },
+  "apps/mobile/src/context/AuthContext.tsx": {
+    "size": 2226,
+    "mtime_ns": 1788583003716754500,
+    "indexed_at_ns": 1788588123560056300,
+    "word_count": 256
+  },
+  "apps/mobile/src/lib/api-client.ts": {
+    "size": 1391,
+    "mtime_ns": 1788583003716754500,
+    "indexed_at_ns": 1788588123596498600,
+    "word_count": 152
+  },
+  "apps/mobile/src/lib/query-client.ts": {
+    "size": 478,
+    "mtime_ns": 1788583003721751300,
+    "indexed_at_ns": 1788588123657446200,
+    "word_count": 53
+  },
+  "apps/mobile/src/lib/secure-storage.ts": {
+    "size": 1271,
+    "mtime_ns": 1788583003725167000,
+    "indexed_at_ns": 1788588123727411900,
+    "word_count": 116
+  },
+  "apps/mobile/src/lib/utils.ts": {
+    "size": 1462,
+    "mtime_ns": 1788583003729290500,
+    "indexed_at_ns": 1788588123794279200,
+    "word_count": 181
+  },
+  "apps/mobile/src/navigation/AuthStack.tsx": {
+    "size": 652,
+    "mtime_ns": 1788583003732984400,
+    "indexed_at_ns": 1788588123826779100,
+    "word_count": 58
+  },
+  "apps/mobile/src/navigation/MainTabs.tsx": {
+    "size": 2536,
+    "mtime_ns": 1788583003734857500,
+    "indexed_at_ns": 1788588123855312200,
+    "word_count": 236
+  },
+  "apps/mobile/src/navigation/index.tsx": {
+    "size": 911,
+    "mtime_ns": 1788583003736881000,
+    "indexed_at_ns": 1788588123910485300,
+    "word_count": 103
+  },
+  "apps/mobile/src/screens/auth/LoginScreen.tsx": {
+    "size": 5615,
+    "mtime_ns": 1788583003739972700,
+    "indexed_at_ns": 1788588123955967600,
+    "word_count": 473
+  },
+  "apps/mobile/src/screens/auth/RegisterScreen.tsx": {
+    "size": 5642,
+    "mtime_ns": 1788583003742030800,
+    "indexed_at_ns": 1788588124005063300,
+    "word_count": 521
+  },
+  "apps/mobile/src/screens/main/AlertsScreen.tsx": {
+    "size": 5657,
+    "mtime_ns": 1788583003745822700,
+    "indexed_at_ns": 1788588124041869800,
+    "word_count": 533
+  },
+  "apps/mobile/src/screens/main/DashboardScreen.tsx": {
+    "size": 3855,
+    "mtime_ns": 1788583003746844700,
+    "indexed_at_ns": 1788588124097346900,
+    "word_count": 391
+  },
+  "apps/mobile/src/screens/main/PortfoliosScreen.tsx": {
+    "size": 3705,
+    "mtime_ns": 1788583003750212000,
+    "indexed_at_ns": 1788588124153579700,
+    "word_count": 350
+  },
+  "apps/mobile/src/screens/main/RiskScreen.tsx": {
+    "size": 3703,
+    "mtime_ns": 1788583003750212000,
+    "indexed_at_ns": 1788588124210267000,
+    "word_count": 399
+  },
+  "apps/mobile/src/screens/main/SettingsScreen.tsx": {
+    "size": 4235,
+    "mtime_ns": 1788583003750212000,
+    "indexed_at_ns": 1788588124243484200,
+    "word_count": 388
+  },
+  "apps/mobile/tailwind.config.js": {
+    "size": 501,
+    "mtime_ns": 1788583003757031400,
+    "indexed_at_ns": 1788588124279893200,
+    "word_count": 40
+  },
+  "apps/mobile/tsconfig.json": {
+    "size": 222,
+    "mtime_ns": 1788583003759122500,
+    "indexed_at_ns": 1788588128522022200,
+    "word_count": 19,
+    "hashes": {
+      "apps/mobile/tsconfig.json": "d5b3a1f476642686172d761aee8b90009ecfa653f46e7095e9ee4ab0409baf76"
+    }
+  },
+  "apps/quant-engine/src/analytics/allocation.py": {
+    "size": 8672,
+    "mtime_ns": 1787649455357746800,
+    "indexed_at_ns": 1788588128616889100,
+    "word_count": 851,
+    "hashes": {
+      "apps/quant-engine/src/analytics/allocation.py": "bc57715c7c0bbadf2d955dfd0a77a1d924b2a7bb5a698de54f4ff1d664e221d0"
+    }
+  },
+  "apps/quant-engine/src/analytics/rebalance.py": {
+    "size": 8562,
+    "mtime_ns": 1787649456209779100,
+    "indexed_at_ns": 1788588128652728600,
+    "word_count": 848,
+    "hashes": {
+      "apps/quant-engine/src/analytics/rebalance.py": "69d1026982bd8bb2a7f0d28d7a3c9b1d8de4e8d120800aa12695fc48352e5b4e"
+    }
+  },
+  "apps/quant-engine/src/analytics/risk/__init__.py": {
+    "size": 2517,
+    "mtime_ns": 1788272317219226200,
+    "indexed_at_ns": 1788588128655237500,
+    "word_count": 229,
+    "hashes": {
+      "apps/quant-engine/src/analytics/risk/__init__.py": "2155a7a1909f608808a18c955b13724245ff57f8b3cd14583fa703acbef51da0"
+    }
+  },
+  "apps/quant-engine/src/analytics/risk/beta.py": {
+    "size": 5381,
+    "mtime_ns": 1787650911377350400,
+    "indexed_at_ns": 1788588128657928400,
+    "word_count": 583,
+    "hashes": {
+      "apps/quant-engine/src/analytics/risk/beta.py": "b2ca7e08898b2f97d3190a419d0e6554ea694fd1487a422e6e1f7ccf906691de"
+    }
+  },
+  "apps/quant-engine/src/analytics/risk/correlation.py": {
+    "size": 7830,
+    "mtime_ns": 1787651111379808300,
+    "indexed_at_ns": 1788588128660441800,
+    "word_count": 843,
+    "hashes": {
+      "apps/quant-engine/src/analytics/risk/correlation.py": "9c4b49f88fa3f02f4cfd8d406c78f5fc52fea6842ea7f9499a52c176283b005e"
+    }
+  },
+  "apps/quant-engine/src/analytics/risk/diversification.py": {
+    "size": 16653,
+    "mtime_ns": 1788272108250562200,
+    "indexed_at_ns": 1788588128662712500,
+    "word_count": 1644,
+    "hashes": {
+      "apps/quant-engine/src/analytics/risk/diversification.py": "9b1a0dc9b4e1792dca59aa7f01c1d60ed6a65163f1e91004ab1f7222f4709571"
+    }
+  },
+  "apps/quant-engine/src/analytics/risk/drawdown.py": {
+    "size": 8183,
+    "mtime_ns": 1787651020539183400,
+    "indexed_at_ns": 1788588128665791100,
+    "word_count": 931,
+    "hashes": {
+      "apps/quant-engine/src/analytics/risk/drawdown.py": "a25ef4a7cd7c578a19cf901a0c8b403710f3d0f53cf6ab8515a29d1fd23df11a"
+    }
+  },
+  "apps/quant-engine/src/analytics/risk/sharpe.py": {
+    "size": 6627,
+    "mtime_ns": 1787650942668712100,
+    "indexed_at_ns": 1788588128668367600,
+    "word_count": 674,
+    "hashes": {
+      "apps/quant-engine/src/analytics/risk/sharpe.py": "1a25a6b991ec5acdfee63373e82f42f241dcd54432abec99e5ec34a9ee8db635"
+    }
+  },
+  "apps/quant-engine/src/analytics/risk/sortino.py": {
+    "size": 7835,
+    "mtime_ns": 1787650980527912400,
+    "indexed_at_ns": 1788588128670746900,
+    "word_count": 785,
+    "hashes": {
+      "apps/quant-engine/src/analytics/risk/sortino.py": "69f9dd0ded9b3919b85e606b705a3690ce200c6dd2b70dba9a3d57c1fa4ed846"
+    }
+  },
+  "apps/quant-engine/src/analytics/risk/var.py": {
+    "size": 12690,
+    "mtime_ns": 1787651071568529700,
+    "indexed_at_ns": 1788588128673536700,
+    "word_count": 1190,
+    "hashes": {
+      "apps/quant-engine/src/analytics/risk/var.py": "4c298726031d00989dcc6ee2b2ee80c080de58e3e234495029cca7c0c7f1b3f9"
+    }
+  },
+  "apps/quant-engine/src/analytics/risk/volatility.py": {
+    "size": 4908,
+    "mtime_ns": 1787650883385698300,
+    "indexed_at_ns": 1788588128676026000,
+    "word_count": 472,
+    "hashes": {
+      "apps/quant-engine/src/analytics/risk/volatility.py": "5fee8074b8c737393a69f701776a4154073f1944084b63f6df87c46ac4e616ab"
+    }
+  },
+  "apps/quant-engine/src/app/routers/allocation.py": {
+    "size": 7725,
+    "mtime_ns": 1787649522204702200,
+    "indexed_at_ns": 1788588128767866100,
+    "word_count": 560,
+    "hashes": {
+      "apps/quant-engine/src/app/routers/allocation.py": "065d7d93be74684a1af7009ba1ef2e5afe5172433cc6f5279a7c9ff5ed114543"
+    }
+  },
+  "apps/quant-engine/src/app/routers/risk.py": {
+    "size": 23886,
+    "mtime_ns": 1788272295993808700,
+    "indexed_at_ns": 1788588128801844900,
+    "word_count": 1994,
+    "hashes": {
+      "apps/quant-engine/src/app/routers/risk.py": "fc95c1407a2005d8daf6d229f5915ca0aac6f411a856c815acef14c4e4513dfe"
+    }
+  },
+  "apps/quant-engine/src/app/schemas/allocation.py": {
+    "size": 9513,
+    "mtime_ns": 1787649521356110600,
+    "indexed_at_ns": 1788588128859973600,
+    "word_count": 964,
+    "hashes": {
+      "apps/quant-engine/src/app/schemas/allocation.py": "b627ddafcc4c3aaaffb31509fa92245365cd90e39c11138fe2d90e756c97c23c"
+    }
+  },
+  "apps/quant-engine/src/app/schemas/risk.py": {
+    "size": 25746,
+    "mtime_ns": 1788272205579090600,
+    "indexed_at_ns": 1788588128887677800,
+    "word_count": 2548,
+    "hashes": {
+      "apps/quant-engine/src/app/schemas/risk.py": "e0499d084daea8233aebc009966aced1c1865ab97a19e34b52e16e48d4832c52"
+    }
+  },
+  "apps/quant-engine/tests/test_allocation.py": {
+    "size": 17236,
+    "mtime_ns": 1787649800579256000,
+    "indexed_at_ns": 1788588128913988900,
+    "word_count": 1299,
+    "hashes": {
+      "apps/quant-engine/tests/test_allocation.py": "b8bfcb33218d00c4dc45ab4ffab0409afc264c76a4cc38d49d8af05f50d494f6"
+    }
+  },
+  "apps/quant-engine/tests/test_diversification.py": {
+    "size": 63299,
+    "mtime_ns": 1788274438391547300,
+    "indexed_at_ns": 1788588128945202000,
+    "word_count": 5851,
+    "hashes": {
+      "apps/quant-engine/tests/test_diversification.py": "245303dc896c62f7e472dbe9e8fa5ec1363b4e224a34a4e293ab036efe18ec0e"
+    }
+  },
+  "apps/quant-engine/tests/test_rebalance.py": {
+    "size": 18188,
+    "mtime_ns": 1787649801419496700,
+    "indexed_at_ns": 1788588129035014900,
+    "word_count": 1425,
+    "hashes": {
+      "apps/quant-engine/tests/test_rebalance.py": "5a18ee58c82df957167e4fe324cccb9071c1b96075387376a8534423fdde2d7d"
+    }
+  },
+  "apps/quant-engine/tests/test_risk.py": {
+    "size": 53369,
+    "mtime_ns": 1787654576963672700,
+    "indexed_at_ns": 1788588129037335400,
+    "word_count": 5153,
+    "hashes": {
+      "apps/quant-engine/tests/test_risk.py": "5ea134a908556136ba1404d4da9b86c938ba72228aecd96c9b50465932714b39"
+    }
+  },
+  "apps/web/postcss.config.js": {
+    "size": 89,
+    "mtime_ns": 1788583003766688700,
+    "indexed_at_ns": 1788588125511758900,
+    "word_count": 11
+  },
+  "apps/web/src/__tests__/charts/AllocationDonutChart.test.tsx": {
+    "size": 1364,
+    "mtime_ns": 1788583003777398800,
+    "indexed_at_ns": 1788588125553048900,
+    "word_count": 136
+  },
+  "apps/web/src/__tests__/charts/EquityCurveChart.test.tsx": {
+    "size": 1516,
+    "mtime_ns": 1788583003777398800,
+    "indexed_at_ns": 1788588125590618900,
+    "word_count": 157
+  },
+  "apps/web/src/__tests__/charts/chart-theme.test.ts": {
+    "size": 3094,
+    "mtime_ns": 1788583003786965400,
+    "indexed_at_ns": 1788588125623583700,
+    "word_count": 280
+  },
+  "apps/web/src/__tests__/components/empty-state.test.tsx": {
+    "size": 1492,
+    "mtime_ns": 1788583003790502100,
+    "indexed_at_ns": 1788588125655537400,
+    "word_count": 135
+  },
+  "apps/web/src/__tests__/components/stat-card.test.tsx": {
+    "size": 1684,
+    "mtime_ns": 1788583003792522200,
+    "indexed_at_ns": 1788588125687880400,
+    "word_count": 148
+  },
+  "apps/web/src/__tests__/lib/utils.test.ts": {
+    "size": 1965,
+    "mtime_ns": 1788583003796616200,
+    "indexed_at_ns": 1788588125725265200,
+    "word_count": 195
+  },
+  "apps/web/src/__tests__/setup.ts": {
+    "size": 37,
+    "mtime_ns": 1788583003796616200,
+    "indexed_at_ns": 1788588125796491600,
+    "word_count": 2
+  },
+  "apps/web/src/app/(auth)/layout.tsx": {
+    "size": 893,
+    "mtime_ns": 1788583003802784200,
+    "indexed_at_ns": 1788588125852452000,
+    "word_count": 85
+  },
+  "apps/web/src/app/(auth)/login/page.tsx": {
+    "size": 3253,
+    "mtime_ns": 1788595436502932100,
+    "indexed_at_ns": 1788621097038735500,
+    "word_count": 272
+  },
+  "apps/web/src/app/(auth)/register/page.tsx": {
+    "size": 3642,
+    "mtime_ns": 1788583003808926000,
+    "indexed_at_ns": 1788588125943438000,
+    "word_count": 306
+  },
+  "apps/web/src/app/(dashboard)/alerts/page.tsx": {
+    "size": 8452,
+    "mtime_ns": 1788583003812956300,
+    "indexed_at_ns": 1788588126029005200,
+    "word_count": 632
+  },
+  "apps/web/src/app/(dashboard)/analytics/page.tsx": {
+    "size": 3858,
+    "mtime_ns": 1788583003814974400,
+    "indexed_at_ns": 1788588126100856200,
+    "word_count": 392
+  },
+  "apps/web/src/app/(dashboard)/dashboard/page.tsx": {
+    "size": 2924,
+    "mtime_ns": 1788583003816995000,
+    "indexed_at_ns": 1788588126186069400,
+    "word_count": 259
+  },
+  "apps/web/src/app/(dashboard)/layout.tsx": {
+    "size": 727,
+    "mtime_ns": 1788583003816995000,
+    "indexed_at_ns": 1788588126217724400,
+    "word_count": 72
+  },
+  "apps/web/src/app/(dashboard)/portfolios/[id]/page.tsx": {
+    "size": 5410,
+    "mtime_ns": 1788595436504949600,
+    "indexed_at_ns": 1788621097054487000,
+    "word_count": 424
+  },
+  "apps/web/src/app/(dashboard)/portfolios/page.tsx": {
+    "size": 5986,
+    "mtime_ns": 1788583003826926400,
+    "indexed_at_ns": 1788588126312502300,
+    "word_count": 481
+  },
+  "apps/web/src/app/(dashboard)/risk/page.tsx": {
+    "size": 4597,
+    "mtime_ns": 1788583003829014300,
+    "indexed_at_ns": 1788588126384710300,
+    "word_count": 476
+  },
+  "apps/web/src/app/layout.tsx": {
+    "size": 772,
+    "mtime_ns": 1788583003833546100,
+    "indexed_at_ns": 1788588126425124200,
+    "word_count": 86
+  },
+  "apps/web/src/app/page.tsx": {
+    "size": 111,
+    "mtime_ns": 1788583003833546100,
+    "indexed_at_ns": 1788588126460943600,
+    "word_count": 13
+  },
+  "apps/web/src/components/charts/AllocationDonutChart.tsx": {
+    "size": 3125,
+    "mtime_ns": 1788583003840683100,
+    "indexed_at_ns": 1788588126502661900,
+    "word_count": 307
+  },
+  "apps/web/src/components/charts/BenchmarkComparisonChart.tsx": {
+    "size": 3441,
+    "mtime_ns": 1788583003840683100,
+    "indexed_at_ns": 1788588126544404600,
+    "word_count": 264
+  },
+  "apps/web/src/components/charts/CorrelationHeatmap.tsx": {
+    "size": 4533,
+    "mtime_ns": 1788583003846821700,
+    "indexed_at_ns": 1788588126579488200,
+    "word_count": 426
+  },
+  "apps/web/src/components/charts/DrawdownChart.tsx": {
+    "size": 3586,
+    "mtime_ns": 1788583003846821700,
+    "indexed_at_ns": 1788588126620666400,
+    "word_count": 279
+  },
+  "apps/web/src/components/charts/EquityCurveChart.tsx": {
+    "size": 2910,
+    "mtime_ns": 1788583003846821700,
+    "indexed_at_ns": 1788588126661924600,
+    "word_count": 224
+  },
+  "apps/web/src/components/charts/chart-container.tsx": {
+    "size": 1893,
+    "mtime_ns": 1788583003846821700,
+    "indexed_at_ns": 1788588126706540200,
+    "word_count": 196
+  },
+  "apps/web/src/components/charts/chart-theme.ts": {
+    "size": 4467,
+    "mtime_ns": 1788583003854858700,
+    "indexed_at_ns": 1788588126753338200,
+    "word_count": 456
+  },
+  "apps/web/src/components/charts/index.ts": {
+    "size": 752,
+    "mtime_ns": 1788583003859014400,
+    "indexed_at_ns": 1788588126786329700,
+    "word_count": 77
+  },
+  "apps/web/src/components/common/empty-state.tsx": {
+    "size": 854,
+    "mtime_ns": 1788583003865128000,
+    "indexed_at_ns": 1788588126816766100,
+    "word_count": 79
+  },
+  "apps/web/src/components/common/stat-card.tsx": {
+    "size": 2151,
+    "mtime_ns": 1788583003868749500,
+    "indexed_at_ns": 1788588126846042900,
+    "word_count": 202
+  },
+  "apps/web/src/components/common/theme-toggle.tsx": {
+    "size": 648,
+    "mtime_ns": 1788583003870783500,
+    "indexed_at_ns": 1788588126885867900,
+    "word_count": 71
+  },
+  "apps/web/src/components/layout/header.tsx": {
+    "size": 1079,
+    "mtime_ns": 1788583003879837700,
+    "indexed_at_ns": 1788588126918500400,
+    "word_count": 102
+  },
+  "apps/web/src/components/layout/sidebar.tsx": {
+    "size": 2778,
+    "mtime_ns": 1788583003880869200,
+    "indexed_at_ns": 1788588126961701500,
+    "word_count": 262
+  },
+  "apps/web/src/components/providers.tsx": {
+    "size": 699,
+    "mtime_ns": 1788583003887126900,
+    "indexed_at_ns": 1788588127000695500,
+    "word_count": 58
+  },
+  "apps/web/src/components/ui/badge.tsx": {
+    "size": 1127,
+    "mtime_ns": 1788583003890922800,
+    "indexed_at_ns": 1788588127049316900,
+    "word_count": 99
+  },
+  "apps/web/src/components/ui/button.tsx": {
+    "size": 2453,
+    "mtime_ns": 1788583003892479900,
+    "indexed_at_ns": 1788588127086881000,
+    "word_count": 212
+  },
+  "apps/web/src/components/ui/card.tsx": {
+    "size": 1849,
+    "mtime_ns": 1788583003894537000,
+    "indexed_at_ns": 1788588127125312900,
+    "word_count": 174
+  },
+  "apps/web/src/components/ui/input.tsx": {
+    "size": 860,
+    "mtime_ns": 1788583003897058400,
+    "indexed_at_ns": 1788588127178098500,
+    "word_count": 70
+  },
+  "apps/web/src/components/ui/label.tsx": {
+    "size": 577,
+    "mtime_ns": 1788583003899023200,
+    "indexed_at_ns": 1788588127209568200,
+    "word_count": 51
+  },
+  "apps/web/src/components/ui/skeleton.tsx": {
+    "size": 300,
+    "mtime_ns": 1788583003900437300,
+    "indexed_at_ns": 1788588127259042700,
+    "word_count": 35
+  },
+  "apps/web/src/lib/api-client.ts": {
+    "size": 1831,
+    "mtime_ns": 1788595436508094800,
+    "indexed_at_ns": 1788621097113648400,
+    "word_count": 183
+  },
+  "apps/web/src/lib/auth.ts": {
+    "size": 702,
+    "mtime_ns": 1788583003906700800,
+    "indexed_at_ns": 1788588127387321100,
+    "word_count": 84
+  },
+  "apps/web/src/lib/query-client.ts": {
+    "size": 722,
+    "mtime_ns": 1788583003908827100,
+    "indexed_at_ns": 1788588127440481400,
+    "word_count": 77
+  },
+  "apps/web/src/lib/utils.ts": {
+    "size": 1249,
+    "mtime_ns": 1788583003910868400,
+    "indexed_at_ns": 1788588127482442700,
+    "word_count": 159
+  },
+  "apps/web/tailwind.config.ts": {
+    "size": 2281,
+    "mtime_ns": 1788583003921515600,
+    "indexed_at_ns": 1788588127515782200,
+    "word_count": 186
+  },
+  "apps/web/tsconfig.json": {
+    "size": 599,
+    "mtime_ns": 1788583003924055400,
+    "indexed_at_ns": 1788588129107694400,
+    "word_count": 50,
+    "hashes": {
+      "apps/web/tsconfig.json": "80c13dbc37b8aa10fd5e276ef20eb8001b7eaaf1ebce97fbf1aeb949d0f16132"
+    }
+  },
+  "apps/web/vitest.config.ts": {
+    "size": 459,
+    "mtime_ns": 1788583003926966600,
+    "indexed_at_ns": 1788588127625219700,
+    "word_count": 46
+  },
+  "docs/analytics/RISK_METHODOLOGY.md": {
+    "size": 37052,
+    "mtime_ns": 1788280500422754100,
+    "indexed_at_ns": 1788588129696762500,
+    "word_count": 4468,
+    "hashes": {
+      "docs/analytics/risk_methodology.md": "a74655bc75c9c2a4eeccb29f29998fb59a04f9a50bf0ef141637de0f4a6a9825"
+    }
+  },
+  "apps/quant-engine/tests/test_quant_benchmarks.py": {
+    "size": 15811,
+    "mtime_ns": 1788595436470845600,
+    "indexed_at_ns": 1788621097636466600,
+    "word_count": 1450,
+    "hashes": {
+      "apps/quant-engine/tests/test_quant_benchmarks.py": "3d2bb22aa7514c6379f282e8dd0260d47a62b3fb0f9d2fecd1837e81bad57777"
+    }
+  },
+  "apps/web/e2e/alerts.spec.ts": {
+    "size": 2216,
+    "mtime_ns": 1788595436470845600,
+    "indexed_at_ns": 1788621096984057200,
+    "word_count": 205
+  },
+  "apps/web/e2e/analytics-risk.spec.ts": {
+    "size": 2362,
+    "mtime_ns": 1788595436470845600,
+    "indexed_at_ns": 1788621096986561500,
+    "word_count": 185
+  },
+  "apps/web/e2e/auth.spec.ts": {
+    "size": 2539,
+    "mtime_ns": 1788595436470845600,
+    "indexed_at_ns": 1788621096990006900,
+    "word_count": 221
+  },
+  "apps/web/e2e/dashboard.spec.ts": {
+    "size": 1954,
+    "mtime_ns": 1788595436482977300,
+    "indexed_at_ns": 1788621096992369300,
+    "word_count": 168
+  },
+  "apps/web/e2e/fixtures/mock-api.ts": {
+    "size": 12489,
+    "mtime_ns": 1788595436484650100,
+    "indexed_at_ns": 1788621096994658700,
+    "word_count": 908
+  },
+  "apps/web/e2e/fixtures/seed-data.ts": {
+    "size": 7141,
+    "mtime_ns": 1788595436484650100,
+    "indexed_at_ns": 1788621096997581300,
+    "word_count": 660
+  },
+  "apps/web/e2e/portfolios.spec.ts": {
+    "size": 2405,
+    "mtime_ns": 1788595436486659600,
+    "indexed_at_ns": 1788621096999894900,
+    "word_count": 198
+  },
+  "apps/web/e2e/reports.spec.ts": {
+    "size": 2589,
+    "mtime_ns": 1788595436486659600,
+    "indexed_at_ns": 1788621097001855300,
+    "word_count": 219
+  },
+  "apps/web/next-env.d.ts": {
+    "size": 233,
+    "mtime_ns": 1788595436486659600,
+    "indexed_at_ns": 1788621097003823000,
+    "word_count": 22
+  },
+  "apps/web/next.config.mjs": {
+    "size": 529,
+    "mtime_ns": 1788595436486659600,
+    "indexed_at_ns": 1788621097005707700,
+    "word_count": 49
+  },
+  "apps/web/playwright-report/index.html": {
+    "size": 539199,
+    "mtime_ns": 1788595436496702800,
+    "indexed_at_ns": 1788621097012339600,
+    "word_count": 6910
+  },
+  "apps/web/playwright.config.ts": {
+    "size": 838,
+    "mtime_ns": 1788595436496702800,
+    "indexed_at_ns": 1788621097016969300,
+    "word_count": 89
+  },
+  "apps/web/test-results/.last-run.json": {
+    "size": 48,
+    "mtime_ns": 1788595436508094800,
+    "indexed_at_ns": 1788621097674589000,
+    "word_count": 6,
+    "hashes": {
+      "apps/web/test-results/.last-run.json": "60056b1b2ce1d150ac5e77e1ddd5e2508776d573121cae690e75a00885407529"
+    }
+  },
+  "scripts/test-runner.js": {
+    "size": 8714,
+    "mtime_ns": 1788595436698209800,
+    "indexed_at_ns": 1788621097212346700,
+    "word_count": 877
+  },
+  "apps/api/src/common/__tests__/logging.interceptor.spec.ts": {
+    "size": 7468,
+    "mtime_ns": 1788618246612484400,
+    "indexed_at_ns": 1788621096561862700,
+    "word_count": 542
+  },
+  "apps/api/src/common/crypto/__tests__/encryption.service.spec.ts": {
+    "size": 8698,
+    "mtime_ns": 1788618152282403400,
+    "indexed_at_ns": 1788621096567051700,
+    "word_count": 770
+  },
+  "apps/api/src/common/crypto/crypto.module.ts": {
+    "size": 300,
+    "mtime_ns": 1788618126682057700,
+    "indexed_at_ns": 1788621096569346900,
+    "word_count": 32
+  },
+  "apps/api/src/common/crypto/encryption.service.ts": {
+    "size": 5732,
+    "mtime_ns": 1788618177457217700,
+    "indexed_at_ns": 1788621096571920500,
+    "word_count": 627
+  },
+  "apps/api/src/common/crypto/index.ts": {
+    "size": 71,
+    "mtime_ns": 1788618134548524400,
+    "indexed_at_ns": 1788621096574362300,
+    "word_count": 8
+  },
+  "apps/api/src/common/interceptors/logging.interceptor.ts": {
+    "size": 4034,
+    "mtime_ns": 1788618211794443400,
+    "indexed_at_ns": 1788621096585275800,
+    "word_count": 397
+  },
+  "apps/api/src/modules/providers/__tests__/provider-security.spec.ts": {
+    "size": 9819,
+    "mtime_ns": 1788620926429238300,
+    "indexed_at_ns": 1788621096783671200,
+    "word_count": 720
+  },
+  "docs/security/SECURITY_AUDIT.md": {
+    "size": 22818,
+    "mtime_ns": 1788620991815743100,
+    "indexed_at_ns": 1788621097947924600,
+    "word_count": 2641,
+    "hashes": {
+      "docs/security/security_audit.md": "94ecd3ba861419a8f6c2d172d4d5845c4893d4841718593ab4720d1466c0deea"
+    }
+  },
+  "apps/api/src/common/cache/__tests__/analytics-cache.manager.spec.ts": {
+    "size": 6426,
+    "mtime_ns": 1788621748733751000,
+    "indexed_at_ns": 1788622907061961300,
+    "word_count": 497
+  },
+  "apps/api/src/common/cache/analytics-cache.manager.ts": {
+    "size": 7563,
+    "mtime_ns": 1788621673606364900,
+    "indexed_at_ns": 1788622907065057900,
+    "word_count": 772
+  },
+  "apps/api/src/common/cache/cache.interceptor.ts": {
+    "size": 2669,
+    "mtime_ns": 1788621691805014800,
+    "indexed_at_ns": 1788622907067414000,
+    "word_count": 269
+  },
+  "apps/api/src/common/cache/cache.module.ts": {
+    "size": 435,
+    "mtime_ns": 1788621702486975300,
+    "indexed_at_ns": 1788622907069601800,
+    "word_count": 40
+  },
+  "apps/api/src/common/cache/index.ts": {
+    "size": 112,
+    "mtime_ns": 1788621713584450400,
+    "indexed_at_ns": 1788622907074097700,
+    "word_count": 12
+  },
+  "docs/performance/BENCHMARK_RESULTS.md": {
+    "size": 10682,
+    "mtime_ns": 1788622770055403900,
+    "indexed_at_ns": 1788622907931593700,
+    "word_count": 1365,
+    "hashes": {
+      "docs/performance/benchmark_results.md": "192aff105432c6549eece6b241ab6de92a48c653942718023a59525d59e5487c"
+    }
+  },
+  "docs/performance/k6-raw-output.txt": {
+    "size": 16573,
+    "mtime_ns": 1788622747272625100,
+    "indexed_at_ns": 1788622907665301300,
+    "word_count": 1925
+  },
+  "scripts/k6/analytics-cache-test.js": {
+    "size": 4428,
+    "mtime_ns": 1788622497374428500,
+    "indexed_at_ns": 1788622907701216100,
+    "word_count": 402
+  },
+  "scripts/k6/mock-benchmark-server.js": {
+    "size": 12182,
+    "mtime_ns": 1788622643901151800,
+    "indexed_at_ns": 1788622907702908500,
+    "word_count": 1260
+  },
+  "scripts/k6/portfolio-stress-test.js": {
+    "size": 4342,
+    "mtime_ns": 1788622653551975300,
+    "indexed_at_ns": 1788622907704911900,
+    "word_count": 444
+  },
+  "scripts/k6/run-benchmarks.js": {
+    "size": 4144,
+    "mtime_ns": 1788622516086012400,
+    "indexed_at_ns": 1788622907706747200,
+    "word_count": 386
+  },
+  ".github/workflows/build-docker.yml": {
+    "size": 5002,
+    "mtime_ns": 1788623883882161900,
+    "indexed_at_ns": 1788624004097392600,
+    "word_count": 439
+  },
+  ".github/workflows/ci.yml": {
+    "size": 8628,
+    "mtime_ns": 1788623784913302700,
+    "indexed_at_ns": 1788624004099610000,
+    "word_count": 806
+  },
+  ".github/workflows/deploy-staging.yml": {
+    "size": 7057,
+    "mtime_ns": 1788623895198328000,
+    "indexed_at_ns": 1788624004101859500,
+    "word_count": 624
+  },
+  "apps/quant-engine/requirements.txt": {
+    "size": 192,
+    "mtime_ns": 1788623348457436900,
+    "indexed_at_ns": 1788624004508165000,
+    "word_count": 12
+  },
+  "scripts/validate-workflows.js": {
+    "size": 4542,
+    "mtime_ns": 1788623905059946200,
+    "indexed_at_ns": 1788624004796849500,
+    "word_count": 472
+  }
+}

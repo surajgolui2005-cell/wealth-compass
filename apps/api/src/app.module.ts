@@ -9,6 +9,8 @@ import { CalculatorModule } from "./modules/calculator/calculator.module";
 import { AnalyticsModule } from "./modules/analytics/analytics.module";
 import { AlertModule } from "./modules/alerts/alert.module";
 import { ReportModule } from "./modules/reports/report.module";
+import { CacheModule } from "./common/cache/cache.module";
+import { CryptoModule } from "./common/crypto/crypto.module";
 import { PrismaModule } from "./prisma/prisma.module";
 
 @Module({
@@ -25,6 +27,8 @@ import { PrismaModule } from "./prisma/prisma.module";
       },
     ]),
     PrismaModule,
+    CryptoModule,
+    CacheModule,
     AuthModule,
     PortfolioModule,
     ProvidersModule,
