@@ -2,7 +2,6 @@
 
 import { useQuery } from '@tanstack/react-query';
 import { apiClient } from '@/lib/api-client';
-import { use } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -30,8 +29,11 @@ interface PortfolioDetail {
   totalPnlPct: number;
 }
 
-export default function PortfolioDetailPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params);
+import { useParams } from 'next/navigation';
+
+export default function PortfolioDetailPage() {
+  const params = useParams();
+  const id = params?.id as string;
 
   const { data: portfolio, isLoading: portfolioLoading } = useQuery<PortfolioDetail>({
     queryKey: ['portfolio', id],
@@ -41,15 +43,16 @@ export default function PortfolioDetailPage({ params }: { params: Promise<{ id: 
     },
   });
 
-  const { data: holdingsData, isLoading: holdingsLoading } = useQuery<{ data: Holding[] }>({
+  const { data: holdingsData, isLoading: holdingsLoading } = useQuery<any>({
     queryKey: ['holdings', id],
     queryFn: async () => {
       const res = await apiClient.get(`/portfolios/${id}/holdings?limit=50`);
-      return res as any;
+      return (res as any).data ?? res.data ?? res;
     },
   });
 
-  const holdings = holdingsData?.data ?? [];
+  const rawHoldings = Array.isArray(holdingsData) ? holdingsData : (holdingsData?.data ?? []);
+  const holdings: Holding[] = Array.isArray(rawHoldings) ? rawHoldings : [];
 
   return (
     <div className="space-y-6">

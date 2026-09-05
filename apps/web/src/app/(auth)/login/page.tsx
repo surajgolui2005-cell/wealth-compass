@@ -50,7 +50,7 @@ export default function LoginPage() {
         <CardTitle>Sign in</CardTitle>
         <CardDescription>Enter your credentials to access your dashboard</CardDescription>
       </CardHeader>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} noValidate>
         <CardContent className="space-y-4">
           {serverError && (
             <div className="rounded-md bg-destructive/10 border border-destructive/30 px-3 py-2 text-sm text-destructive">

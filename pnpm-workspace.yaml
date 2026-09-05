@@ -6,6 +6,12 @@ allowBuilds:
   "@nestjs/core": set this to true or false
   "@prisma/client": set this to true or false
   "@prisma/engines": set this to true or false
+  '@scarf/scarf': true
   argon2: set this to true or false
+  esbuild: true
   msgpackr-extract: set this to true or false
   prisma: set this to true or false
+minimumReleaseAgeExclude:
+  - '@playwright/test@1.63.0'
+  - playwright-core@1.63.0
+  - playwright@1.63.0

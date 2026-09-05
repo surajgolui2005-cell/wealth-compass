@@ -8,6 +8,7 @@ import { MarketDataModule } from "./modules/market-data/market-data.module";
 import { CalculatorModule } from "./modules/calculator/calculator.module";
 import { AnalyticsModule } from "./modules/analytics/analytics.module";
 import { AlertModule } from "./modules/alerts/alert.module";
+import { ReportModule } from "./modules/reports/report.module";
 import { PrismaModule } from "./prisma/prisma.module";
 
 @Module({
@@ -31,6 +32,7 @@ import { PrismaModule } from "./prisma/prisma.module";
     CalculatorModule,
     AnalyticsModule,
     AlertModule,
+    ReportModule,
   ],
 })
 export class AppModule {}
