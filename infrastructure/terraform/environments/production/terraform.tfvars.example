@@ -1,0 +1,29 @@
+# Production Environment Variables Example
+aws_region  = "ap-south-1"
+environment = "production"
+
+# Network
+vpc_cidr                 = "10.0.0.0/16"
+availability_zones       = ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
+public_subnet_cidrs      = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+private_app_subnet_cidrs = ["10.0.11.0/24", "10.0.12.0/24", "10.0.13.0/24"]
+private_db_subnet_cidrs  = ["10.0.21.0/24", "10.0.22.0/24", "10.0.23.0/24"]
+
+# Database & Cache Credentials (store in AWS Secrets Manager or secure CI/CD vault)
+db_username      = "wealth_master"
+db_password      = "CHANGE_ME_PRODUCTION_STRONG_RANDOM_PW_2026!"
+redis_auth_token = "CHANGE_ME_PRODUCTION_REDIS_AUTH_TOKEN_32_CHARS!"
+
+# Container Images
+api_image       = "ghcr.io/wealthcompass/wealthcompass-api:v1.0.0"
+web_image       = "ghcr.io/wealthcompass/wealthcompass-web:v1.0.0"
+analytics_image = "ghcr.io/wealthcompass/wealthcompass-analytics:v1.0.0"
+
+# SSL Certificates (Optional - for custom domain routing)
+# certificate_arn            = "arn:aws:acm:ap-south-1:123456789012:certificate/xxx"
+# cloudfront_certificate_arn = "arn:aws:acm:us-east-1:123456789012:certificate/yyy"
+# domain_aliases             = ["app.wealthcompass.com"]
+
+# Application Security
+jwt_access_secret  = "CHANGE_ME_PRODUCTION_JWT_ACCESS_SECRET_64_CHARS"
+jwt_refresh_secret = "CHANGE_ME_PRODUCTION_JWT_REFRESH_SECRET_64_CHARS"

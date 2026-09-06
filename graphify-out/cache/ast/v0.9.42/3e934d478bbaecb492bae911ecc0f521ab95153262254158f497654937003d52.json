@@ -1,0 +1,319 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_docs_audit_technical_debt_md",
+      "label": "TECHNICAL_DEBT.md",
+      "file_type": "document",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_technical_debt_technical_debt_architectural_backlog_wealth_compass_platform",
+      "label": "Technical Debt & Architectural Backlog \u2014 Wealth Compass Platform",
+      "file_type": "document",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_technical_debt_1_overview_debt_philosophy",
+      "label": "1. Overview & Debt Philosophy",
+      "file_type": "document",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L11"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_technical_debt_2_architectural_service_boundary_debt",
+      "label": "2. Architectural & Service Boundary Debt",
+      "file_type": "document",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L19"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_technical_debt_td_arch_01_co_location_of_background_workers_inside_apps_api",
+      "label": "TD-ARCH-01: Co-Location of Background Workers inside `apps/api`",
+      "file_type": "document",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L21"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_technical_debt_td_arch_02_direct_database_replica_querying_by_python_quant_engine",
+      "label": "TD-ARCH-02: Direct Database Replica Querying by Python Quant Engine",
+      "file_type": "document",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L31"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_technical_debt_3_database_timescaledb_optimization_debt",
+      "label": "3. Database & TimescaleDB Optimization Debt",
+      "file_type": "document",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L41"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_technical_debt_td_data_01_native_timescaledb_hypertable_partitioning_on_market_prices",
+      "label": "TD-DATA-01: Native TimescaleDB Hypertable Partitioning on `market_prices`",
+      "file_type": "document",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L43"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_technical_debt_td_data_02_read_write_connection_splitting_in_prisma_orm",
+      "label": "TD-DATA-02: Read-Write Connection Splitting in Prisma ORM",
+      "file_type": "document",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L53"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_technical_debt_4_financial_quantitative_edge_cases_numerical_limitations",
+      "label": "4. Financial Quantitative Edge Cases & Numerical Limitations",
+      "file_type": "document",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L63"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_technical_debt_td_quant_01_multiple_internal_rates_of_return_irr_in_xirr_solvers",
+      "label": "TD-QUANT-01: Multiple Internal Rates of Return (IRR) in XIRR Solvers",
+      "file_type": "document",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L65"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_technical_debt_td_quant_02_sparse_price_history_handling_for_illiquid_assets",
+      "label": "TD-QUANT-02: Sparse Price History Handling for Illiquid Assets",
+      "file_type": "document",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L75"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_technical_debt_td_quant_03_fixed_deposit_early_withdrawal_penalty_modeling",
+      "label": "TD-QUANT-03: Fixed Deposit Early Withdrawal Penalty Modeling",
+      "file_type": "document",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L85"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_technical_debt_5_frontend_mobile_optimization_debt",
+      "label": "5. Frontend & Mobile Optimization Debt",
+      "file_type": "document",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L95"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_technical_debt_td_front_01_next_js_14_on_demand_cache_revalidation",
+      "label": "TD-FRONT-01: Next.js 14 On-Demand Cache Revalidation",
+      "file_type": "document",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L97"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_technical_debt_td_front_02_native_biometric_authentication_enforcement_on_mobile",
+      "label": "TD-FRONT-02: Native Biometric Authentication Enforcement on Mobile",
+      "file_type": "document",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L107"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_technical_debt_6_operational_security_infrastructure_debt",
+      "label": "6. Operational, Security & Infrastructure Debt",
+      "file_type": "document",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L117"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_technical_debt_td_ops_01_automated_database_secret_rotation",
+      "label": "TD-OPS-01: Automated Database Secret Rotation",
+      "file_type": "document",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L119"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_technical_debt_td_ops_02_daemon_log_forwarding_sidecar",
+      "label": "TD-OPS-02: Daemon Log Forwarding Sidecar",
+      "file_type": "document",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L129"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_technical_debt_7_prioritized_technical_debt_backlog",
+      "label": "7. Prioritized Technical Debt Backlog",
+      "file_type": "document",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L139"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_docs_audit_technical_debt_md",
+      "target": "$graphify-root$_docs_audit_technical_debt_technical_debt_architectural_backlog_wealth_compass_platform",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_technical_debt_technical_debt_architectural_backlog_wealth_compass_platform",
+      "target": "$graphify-root$_docs_audit_technical_debt_1_overview_debt_philosophy",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_technical_debt_technical_debt_architectural_backlog_wealth_compass_platform",
+      "target": "$graphify-root$_docs_audit_technical_debt_2_architectural_service_boundary_debt",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_technical_debt_2_architectural_service_boundary_debt",
+      "target": "$graphify-root$_docs_audit_technical_debt_td_arch_01_co_location_of_background_workers_inside_apps_api",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_technical_debt_2_architectural_service_boundary_debt",
+      "target": "$graphify-root$_docs_audit_technical_debt_td_arch_02_direct_database_replica_querying_by_python_quant_engine",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_technical_debt_technical_debt_architectural_backlog_wealth_compass_platform",
+      "target": "$graphify-root$_docs_audit_technical_debt_3_database_timescaledb_optimization_debt",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_technical_debt_3_database_timescaledb_optimization_debt",
+      "target": "$graphify-root$_docs_audit_technical_debt_td_data_01_native_timescaledb_hypertable_partitioning_on_market_prices",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_technical_debt_3_database_timescaledb_optimization_debt",
+      "target": "$graphify-root$_docs_audit_technical_debt_td_data_02_read_write_connection_splitting_in_prisma_orm",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_technical_debt_technical_debt_architectural_backlog_wealth_compass_platform",
+      "target": "$graphify-root$_docs_audit_technical_debt_4_financial_quantitative_edge_cases_numerical_limitations",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_technical_debt_4_financial_quantitative_edge_cases_numerical_limitations",
+      "target": "$graphify-root$_docs_audit_technical_debt_td_quant_01_multiple_internal_rates_of_return_irr_in_xirr_solvers",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_technical_debt_4_financial_quantitative_edge_cases_numerical_limitations",
+      "target": "$graphify-root$_docs_audit_technical_debt_td_quant_02_sparse_price_history_handling_for_illiquid_assets",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_technical_debt_4_financial_quantitative_edge_cases_numerical_limitations",
+      "target": "$graphify-root$_docs_audit_technical_debt_td_quant_03_fixed_deposit_early_withdrawal_penalty_modeling",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_technical_debt_technical_debt_architectural_backlog_wealth_compass_platform",
+      "target": "$graphify-root$_docs_audit_technical_debt_5_frontend_mobile_optimization_debt",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L95",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_technical_debt_5_frontend_mobile_optimization_debt",
+      "target": "$graphify-root$_docs_audit_technical_debt_td_front_01_next_js_14_on_demand_cache_revalidation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L97",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_technical_debt_5_frontend_mobile_optimization_debt",
+      "target": "$graphify-root$_docs_audit_technical_debt_td_front_02_native_biometric_authentication_enforcement_on_mobile",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_technical_debt_technical_debt_architectural_backlog_wealth_compass_platform",
+      "target": "$graphify-root$_docs_audit_technical_debt_6_operational_security_infrastructure_debt",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L117",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_technical_debt_6_operational_security_infrastructure_debt",
+      "target": "$graphify-root$_docs_audit_technical_debt_td_ops_01_automated_database_secret_rotation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_technical_debt_6_operational_security_infrastructure_debt",
+      "target": "$graphify-root$_docs_audit_technical_debt_td_ops_02_daemon_log_forwarding_sidecar",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L129",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_technical_debt_technical_debt_architectural_backlog_wealth_compass_platform",
+      "target": "$graphify-root$_docs_audit_technical_debt_7_prioritized_technical_debt_backlog",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/TECHNICAL_DEBT.md",
+      "source_location": "L139",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

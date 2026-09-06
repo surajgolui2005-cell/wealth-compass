@@ -11,6 +11,8 @@ import { AlertModule } from "./modules/alerts/alert.module";
 import { ReportModule } from "./modules/reports/report.module";
 import { CacheModule } from "./common/cache/cache.module";
 import { CryptoModule } from "./common/crypto/crypto.module";
+import { ObservabilityModule } from "./common/observability/observability.module";
+import { HealthModule } from "./modules/health/health.module";
 import { PrismaModule } from "./prisma/prisma.module";
 
 @Module({
@@ -29,6 +31,8 @@ import { PrismaModule } from "./prisma/prisma.module";
     PrismaModule,
     CryptoModule,
     CacheModule,
+    ObservabilityModule,
+    HealthModule,
     AuthModule,
     PortfolioModule,
     ProvidersModule,

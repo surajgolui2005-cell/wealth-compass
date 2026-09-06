@@ -1,0 +1,303 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_docs_setup_guide_md",
+      "label": "SETUP_GUIDE.md",
+      "file_type": "document",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_setup_guide_developer_onboarding_setup_guide_wealth_compass_platform",
+      "label": "Developer Onboarding & Setup Guide \u2014 Wealth Compass Platform",
+      "file_type": "document",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_setup_guide_1_system_requirements_prerequisites",
+      "label": "1. System Requirements & Prerequisites",
+      "file_type": "document",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L11"
+    },
+    {
+      "id": "$graphify-root$_docs_setup_guide_2_quick_start_3_command_boot",
+      "label": "2. Quick Start (3-Command Boot)",
+      "file_type": "document",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L29"
+    },
+    {
+      "id": "$graphify-root$_docs_setup_guide_3_comprehensive_step_by_step_setup",
+      "label": "3. Comprehensive Step-by-Step Setup",
+      "file_type": "document",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L52"
+    },
+    {
+      "id": "$graphify-root$_docs_setup_guide_step_3_1_clone_the_repository",
+      "label": "Step 3.1: Clone the Repository",
+      "file_type": "document",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L56"
+    },
+    {
+      "id": "$graphify-root$_docs_setup_guide_step_3_2_environment_variable_configuration",
+      "label": "Step 3.2: Environment Variable Configuration",
+      "file_type": "document",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L63"
+    },
+    {
+      "id": "$graphify-root$_docs_setup_guide_step_3_3_boot_backing_infrastructure_docker",
+      "label": "Step 3.3: Boot Backing Infrastructure (Docker)",
+      "file_type": "document",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L92"
+    },
+    {
+      "id": "$graphify-root$_docs_setup_guide_step_3_4_database_schema_initialization_prisma_generation",
+      "label": "Step 3.4: Database Schema Initialization & Prisma Generation",
+      "file_type": "document",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L116"
+    },
+    {
+      "id": "$graphify-root$_docs_setup_guide_step_3_5_python_quantitative_engine_setup",
+      "label": "Step 3.5: Python Quantitative Engine Setup",
+      "file_type": "document",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L130"
+    },
+    {
+      "id": "$graphify-root$_docs_setup_guide_4_running_the_development_stack",
+      "label": "4. Running the Development Stack",
+      "file_type": "document",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L160"
+    },
+    {
+      "id": "$graphify-root$_docs_setup_guide_option_a_monorepo_full_stack_turborepo",
+      "label": "Option A: Monorepo Full-Stack (Turborepo)",
+      "file_type": "document",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L162"
+    },
+    {
+      "id": "$graphify-root$_docs_setup_guide_option_b_running_individual_workspaces",
+      "label": "Option B: Running Individual Workspaces",
+      "file_type": "document",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L172"
+    },
+    {
+      "id": "$graphify-root$_docs_setup_guide_5_verification_testing",
+      "label": "5. Verification & Testing",
+      "file_type": "document",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L192"
+    },
+    {
+      "id": "$graphify-root$_docs_setup_guide_5_1_run_automated_tests",
+      "label": "5.1 Run Automated Tests",
+      "file_type": "document",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L196"
+    },
+    {
+      "id": "$graphify-root$_docs_setup_guide_5_2_deep_health_readiness_probe",
+      "label": "5.2 Deep Health & Readiness Probe",
+      "file_type": "document",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L212"
+    },
+    {
+      "id": "$graphify-root$_docs_setup_guide_6_recommended_developer_tooling",
+      "label": "6. Recommended Developer Tooling",
+      "file_type": "document",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L234"
+    },
+    {
+      "id": "$graphify-root$_docs_setup_guide_vs_code_extensions",
+      "label": "VS Code Extensions",
+      "file_type": "document",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L236"
+    },
+    {
+      "id": "$graphify-root$_docs_setup_guide_git_hooks_husky_lint_staged",
+      "label": "Git Hooks (Husky & Lint-Staged)",
+      "file_type": "document",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L243"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_docs_setup_guide_md",
+      "target": "$graphify-root$_docs_setup_guide_developer_onboarding_setup_guide_wealth_compass_platform",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_setup_guide_developer_onboarding_setup_guide_wealth_compass_platform",
+      "target": "$graphify-root$_docs_setup_guide_1_system_requirements_prerequisites",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_setup_guide_developer_onboarding_setup_guide_wealth_compass_platform",
+      "target": "$graphify-root$_docs_setup_guide_2_quick_start_3_command_boot",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_setup_guide_developer_onboarding_setup_guide_wealth_compass_platform",
+      "target": "$graphify-root$_docs_setup_guide_3_comprehensive_step_by_step_setup",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L52",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_setup_guide_3_comprehensive_step_by_step_setup",
+      "target": "$graphify-root$_docs_setup_guide_step_3_1_clone_the_repository",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_setup_guide_3_comprehensive_step_by_step_setup",
+      "target": "$graphify-root$_docs_setup_guide_step_3_2_environment_variable_configuration",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_setup_guide_3_comprehensive_step_by_step_setup",
+      "target": "$graphify-root$_docs_setup_guide_step_3_3_boot_backing_infrastructure_docker",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L92",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_setup_guide_3_comprehensive_step_by_step_setup",
+      "target": "$graphify-root$_docs_setup_guide_step_3_4_database_schema_initialization_prisma_generation",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L116",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_setup_guide_3_comprehensive_step_by_step_setup",
+      "target": "$graphify-root$_docs_setup_guide_step_3_5_python_quantitative_engine_setup",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L130",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_setup_guide_developer_onboarding_setup_guide_wealth_compass_platform",
+      "target": "$graphify-root$_docs_setup_guide_4_running_the_development_stack",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L160",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_setup_guide_4_running_the_development_stack",
+      "target": "$graphify-root$_docs_setup_guide_option_a_monorepo_full_stack_turborepo",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L162",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_setup_guide_4_running_the_development_stack",
+      "target": "$graphify-root$_docs_setup_guide_option_b_running_individual_workspaces",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L172",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_setup_guide_developer_onboarding_setup_guide_wealth_compass_platform",
+      "target": "$graphify-root$_docs_setup_guide_5_verification_testing",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L192",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_setup_guide_5_verification_testing",
+      "target": "$graphify-root$_docs_setup_guide_5_1_run_automated_tests",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L196",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_setup_guide_5_verification_testing",
+      "target": "$graphify-root$_docs_setup_guide_5_2_deep_health_readiness_probe",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L212",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_setup_guide_developer_onboarding_setup_guide_wealth_compass_platform",
+      "target": "$graphify-root$_docs_setup_guide_6_recommended_developer_tooling",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L234",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_setup_guide_6_recommended_developer_tooling",
+      "target": "$graphify-root$_docs_setup_guide_vs_code_extensions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L236",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_setup_guide_6_recommended_developer_tooling",
+      "target": "$graphify-root$_docs_setup_guide_git_hooks_husky_lint_staged",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/SETUP_GUIDE.md",
+      "source_location": "L243",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

@@ -1,0 +1,207 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_docs_operations_observability_md",
+      "label": "OBSERVABILITY.md",
+      "file_type": "document",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_operations_observability_wealthcompass_observability_reliability_operations_guide",
+      "label": "WealthCompass Observability & Reliability Operations Guide",
+      "file_type": "document",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_operations_observability_1_observability_architecture_overview",
+      "label": "1. Observability Architecture Overview",
+      "file_type": "document",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L8"
+    },
+    {
+      "id": "$graphify-root$_docs_operations_observability_2_health_check_probes_service_readiness",
+      "label": "2. Health Check Probes & Service Readiness",
+      "file_type": "document",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L67"
+    },
+    {
+      "id": "$graphify-root$_docs_operations_observability_2_1_endpoint_specification",
+      "label": "2.1 Endpoint Specification",
+      "file_type": "document",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L69"
+    },
+    {
+      "id": "$graphify-root$_docs_operations_observability_2_2_deep_readiness_probe_response_contract",
+      "label": "2.2 Deep Readiness Probe Response Contract",
+      "file_type": "document",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L77"
+    },
+    {
+      "id": "$graphify-root$_docs_operations_observability_3_prometheus_metrics_catalog",
+      "label": "3. Prometheus Metrics Catalog",
+      "file_type": "document",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L109"
+    },
+    {
+      "id": "$graphify-root$_docs_operations_observability_4_sensitive_data_redaction_financial_compliance",
+      "label": "4. Sensitive Data Redaction & Financial Compliance",
+      "file_type": "document",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L127"
+    },
+    {
+      "id": "$graphify-root$_docs_operations_observability_5_grafana_dashboard_models",
+      "label": "5. Grafana Dashboard Models",
+      "file_type": "document",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L140"
+    },
+    {
+      "id": "$graphify-root$_docs_operations_observability_6_incident_response_troubleshooting_runbooks",
+      "label": "6. Incident Response & Troubleshooting Runbooks",
+      "file_type": "document",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L163"
+    },
+    {
+      "id": "$graphify-root$_docs_operations_observability_runbook_1_readiness_probe_fails_database_down",
+      "label": "Runbook 1: Readiness Probe Fails (`database: down`)",
+      "file_type": "document",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L165"
+    },
+    {
+      "id": "$graphify-root$_docs_operations_observability_runbook_2_readiness_probe_fails_redis_down",
+      "label": "Runbook 2: Readiness Probe Fails (`redis: down`)",
+      "file_type": "document",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L175"
+    },
+    {
+      "id": "$graphify-root$_docs_operations_observability_runbook_3_readiness_probe_fails_python_analytics_down",
+      "label": "Runbook 3: Readiness Probe Fails (`python_analytics: down`)",
+      "file_type": "document",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L185"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_docs_operations_observability_md",
+      "target": "$graphify-root$_docs_operations_observability_wealthcompass_observability_reliability_operations_guide",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_operations_observability_wealthcompass_observability_reliability_operations_guide",
+      "target": "$graphify-root$_docs_operations_observability_1_observability_architecture_overview",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_operations_observability_wealthcompass_observability_reliability_operations_guide",
+      "target": "$graphify-root$_docs_operations_observability_2_health_check_probes_service_readiness",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_operations_observability_2_health_check_probes_service_readiness",
+      "target": "$graphify-root$_docs_operations_observability_2_1_endpoint_specification",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_operations_observability_2_health_check_probes_service_readiness",
+      "target": "$graphify-root$_docs_operations_observability_2_2_deep_readiness_probe_response_contract",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_operations_observability_wealthcompass_observability_reliability_operations_guide",
+      "target": "$graphify-root$_docs_operations_observability_3_prometheus_metrics_catalog",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L109",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_operations_observability_wealthcompass_observability_reliability_operations_guide",
+      "target": "$graphify-root$_docs_operations_observability_4_sensitive_data_redaction_financial_compliance",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_operations_observability_wealthcompass_observability_reliability_operations_guide",
+      "target": "$graphify-root$_docs_operations_observability_5_grafana_dashboard_models",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L140",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_operations_observability_wealthcompass_observability_reliability_operations_guide",
+      "target": "$graphify-root$_docs_operations_observability_6_incident_response_troubleshooting_runbooks",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L163",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_operations_observability_6_incident_response_troubleshooting_runbooks",
+      "target": "$graphify-root$_docs_operations_observability_runbook_1_readiness_probe_fails_database_down",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L165",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_operations_observability_6_incident_response_troubleshooting_runbooks",
+      "target": "$graphify-root$_docs_operations_observability_runbook_2_readiness_probe_fails_redis_down",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L175",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_operations_observability_6_incident_response_troubleshooting_runbooks",
+      "target": "$graphify-root$_docs_operations_observability_runbook_3_readiness_probe_fails_python_analytics_down",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/operations/OBSERVABILITY.md",
+      "source_location": "L185",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

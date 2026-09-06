@@ -1,15 +1,15 @@
 # ADR-0003: Quant Service Engine
 
-| Field          | Value                                            |
-|----------------|--------------------------------------------------|
-| **ADR ID**     | 0003                                             |
-| **Title**      | Quant Service Engine — Python FastAPI Microservice |
-| **Status**     | Accepted                                         |
-| **Date**       | 2026-08-13                                       |
-| **Deciders**   | Principal Architecture Team                      |
-| **Supersedes** | —                                                |
-| **Superseded by** | —                                             |
-| **Ref**        | [ARCHITECTURE.md](file:///c:/Users/suraj/project/Investor%20Portolio%20Monitoring%20and%20Risk%20Management%20System/docs/architecture/ARCHITECTURE.md#L1.2) §1.2, §2, §3.4, §12 |
+| Field             | Value                                                                  |
+| ----------------- | ---------------------------------------------------------------------- |
+| **ADR ID**        | 0003                                                                   |
+| **Title**         | Quant Service Engine — Python FastAPI Microservice                     |
+| **Status**        | Accepted                                                               |
+| **Date**          | 2026-08-13                                                             |
+| **Deciders**      | Principal Architecture Team                                            |
+| **Supersedes**    | —                                                                      |
+| **Superseded by** | —                                                                      |
+| **Ref**           | [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) §1.2, §2, §3.4, §12 |
 
 ---
 
@@ -23,9 +23,9 @@ The Investor Portfolio Monitoring & Risk Management System (IPMS) requires sophi
 - **Beta & Correlation**: Portfolio Beta relative to a benchmark index (e.g., Nifty 50 or S&P 500) and a Pearson pairwise correlation matrix across all assets to identify concentration risk clusters.
 - **What-If Scenario Simulation**: Applying historic macro stress events (e.g., 2008 Financial Crisis, 2020 COVID Market Crash) to current portfolio allocations.
 
-These operations are highly CPU-bound, rely heavily on matrix operations (vectorised returns), and require high mathematical precision. 
+These operations are highly CPU-bound, rely heavily on matrix operations (vectorised returns), and require high mathematical precision.
 
-Node.js, while excellent for handling asynchronous I/O-bound REST APIs and event-driven orchestration, is single-threaded and lacks a robust, battle-tested ecosystem of numerical computing and quantitative analysis libraries. Running these computations in the primary NestJS process would block the event loop, causing severe latency spikes for all API requests. 
+Node.js, while excellent for handling asynchronous I/O-bound REST APIs and event-driven orchestration, is single-threaded and lacks a robust, battle-tested ecosystem of numerical computing and quantitative analysis libraries. Running these computations in the primary NestJS process would block the event loop, causing severe latency spikes for all API requests.
 
 We need to decide on the architecture and technology stack for the quantitative computation engine to maintain performance isolation, mathematical correctness, and high developer velocity.
 
@@ -52,25 +52,25 @@ The Python microservice is deployed as an internal-only container (`apps/quant-e
 
 **Description:** A lightweight, high-performance web service built with Python 3.12 and FastAPI. It relies on standard data-science packages: NumPy for multi-dimensional array operations, Pandas for time-series alignment, SciPy for statistical distribution modeling, and the QuantLib-Python wrapper for institutional-grade cash flow analytics and numerical root-finding.
 
-| Criteria | Assessment |
-|---|---|
-| Code sharing / Types | ⚠️ Requires schema generation (`Pydantic` models mapped to TypeScript DTOs via automation tools) to sync backend type changes |
-| Performance Isolation | ✅ Excellent — CPU-intensive matrix operations are isolated to the Python process, keeping the API gateway responsive |
-| Math Library Ecosystem | ✅ Exceptional — NumPy, Pandas, and QuantLib-Python are industry-standard, eliminating the need to write custom formulas |
-| Computational Speed | ✅ Highly optimised — NumPy operations execute in vectorised C/Fortran routines, bypassing Python interpreter overhead |
-| Horizontal Scalability | ✅ Easy — Kubernetes Horizontal Pod Autoscaler (HPA) can scale Python pods independently based on CPU utilization |
-| Internal REST Latency | ⚠️ Adds a network hop (< 10ms roundtrip) for synchronous computations |
+| Criteria               | Assessment                                                                                                                    |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Code sharing / Types   | ⚠️ Requires schema generation (`Pydantic` models mapped to TypeScript DTOs via automation tools) to sync backend type changes |
+| Performance Isolation  | ✅ Excellent — CPU-intensive matrix operations are isolated to the Python process, keeping the API gateway responsive         |
+| Math Library Ecosystem | ✅ Exceptional — NumPy, Pandas, and QuantLib-Python are industry-standard, eliminating the need to write custom formulas      |
+| Computational Speed    | ✅ Highly optimised — NumPy operations execute in vectorised C/Fortran routines, bypassing Python interpreter overhead        |
+| Horizontal Scalability | ✅ Easy — Kubernetes Horizontal Pod Autoscaler (HPA) can scale Python pods independently based on CPU utilization             |
+| Internal REST Latency  | ⚠️ Adds a network hop (< 10ms roundtrip) for synchronous computations                                                         |
 
 ### Option B: In-Process Node.js Quant Engine (using `mathjs`, simple npm libraries)
 
 **Description:** Keep calculations in-process within the NestJS modular monolith. Utilize Node.js math libraries (like `mathjs`, `simple-statistics`, and custom JS algorithms) to compute metrics.
 
-| Criteria | Assessment |
-|---|---|
-| Code sharing / Types | ✅ Excellent — Native TypeScript integration with zero serialization overhead or network hops |
-| Performance Isolation | ❌ Terrible — CPU-bound loops for VaR and correlation matrices block the Node.js event loop, degrading API response times |
+| Criteria               | Assessment                                                                                                                        |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Code sharing / Types   | ✅ Excellent — Native TypeScript integration with zero serialization overhead or network hops                                     |
+| Performance Isolation  | ❌ Terrible — CPU-bound loops for VaR and correlation matrices block the Node.js event loop, degrading API response times         |
 | Math Library Ecosystem | ❌ Weak — Node.js lacks professional financial math frameworks like QuantLib or robust time-series alignment toolkits like Pandas |
-| Operational Complexity | ✅ Low — One less runtime language, container, and configuration to maintain |
+| Operational Complexity | ✅ Low — One less runtime language, container, and configuration to maintain                                                      |
 
 **Why not selected:** The lack of professional financial library support would force us to implement and audit our own math algorithms (e.g., custom Newton-Raphson solvers for XIRR, custom historical correlation matrices). This creates high risk for financial precision bugs. Additionally, the event-loop-blocking nature of these math tasks would limit vertical API scaling.
 
@@ -78,11 +78,11 @@ The Python microservice is deployed as an internal-only container (`apps/quant-e
 
 **Description:** Build a microservice using Go (Golang). Write computations using packages like `gonum` for matrix math or custom Go financial packages.
 
-| Criteria | Assessment |
-|---|---|
-| Performance | ✅ Exceptional — Compile-time optimization, native concurrency, and low memory footprint |
-| Math Library Ecosystem | ⚠️ Moderate — Go has the `gonum` package, but it is far less mature for financial time-series analysis compared to Python's Pandas and lacks a native QuantLib binding |
-| Developer Velocity | ❌ Lower — Go requires writing verbose boilerplate code for matrix manipulation; the data science community in Go is small, meaning less documentation and reference examples |
+| Criteria               | Assessment                                                                                                                                                                    |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Performance            | ✅ Exceptional — Compile-time optimization, native concurrency, and low memory footprint                                                                                      |
+| Math Library Ecosystem | ⚠️ Moderate — Go has the `gonum` package, but it is far less mature for financial time-series analysis compared to Python's Pandas and lacks a native QuantLib binding        |
+| Developer Velocity     | ❌ Lower — Go requires writing verbose boilerplate code for matrix manipulation; the data science community in Go is small, meaning less documentation and reference examples |
 
 **Why not selected:** While Go would offer superior runtime performance and lower memory usage, developer velocity would suffer. Building historical simulation VaR and scenario mapping in Go requires significantly more custom code than Python, where a few Pandas operations accomplish the same task safely.
 
@@ -90,10 +90,10 @@ The Python microservice is deployed as an internal-only container (`apps/quant-e
 
 **Description:** Build a highly optimised, memory-safe, compiled microservice using Rust, utilizing `polars` for time-series alignment and numerical crates.
 
-| Criteria | Assessment |
-|---|---|
-| Performance / Safety | ✅ Industry-best — Compile-time memory safety, sub-millisecond latencies, and high performance |
-| Developer Velocity | ❌ Poor — High cognitive load for a small team, steep learning curve, and slower compilation speeds |
+| Criteria               | Assessment                                                                                                    |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Performance / Safety   | ✅ Industry-best — Compile-time memory safety, sub-millisecond latencies, and high performance                |
+| Developer Velocity     | ❌ Poor — High cognitive load for a small team, steep learning curve, and slower compilation speeds           |
 | Math Library Ecosystem | ⚠️ Growing but limited — `polars` is powerful, but financial analytics bindings are sparse compared to Python |
 
 **Why not selected:** Rust is highly attractive for institutional high-frequency trading platforms, but at our scale (retail portfolio tracking), it represents premature optimization. The development overhead of Rust's borrow checker and strict types would slow down the team's ability to ship MVP features.
@@ -124,12 +124,12 @@ The Python microservice is deployed as an internal-only container (`apps/quant-e
 
 ## Compliance Check
 
-| Requirement | Met? | Notes |
-|---|---|---|
-| **Financial precision** | ✅ | Relies on double-precision IEEE 754 floats via NumPy/Pandas and battle-tested QuantLib algorithms, minimizing manual implementation errors. |
-| **Developer velocity** | ✅ | Small Python files leverage high-level expressions (Pandas dataframes) to compute complex metrics like Sharpe, Beta, and Covariance in under 10 lines of code. |
-| **System scalability** | ✅ | Separates CPU-intensive execution from I/O execution, allowing independent scaling of Python pods behind a private internal load balancer. |
+| Requirement             | Met? | Notes                                                                                                                                                          |
+| ----------------------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Financial precision** | ✅   | Relies on double-precision IEEE 754 floats via NumPy/Pandas and battle-tested QuantLib algorithms, minimizing manual implementation errors.                    |
+| **Developer velocity**  | ✅   | Small Python files leverage high-level expressions (Pandas dataframes) to compute complex metrics like Sharpe, Beta, and Covariance in under 10 lines of code. |
+| **System scalability**  | ✅   | Separates CPU-intensive execution from I/O execution, allowing independent scaling of Python pods behind a private internal load balancer.                     |
 
 ---
 
-*ADR-0003 — Accepted 2026-08-13*
+_ADR-0003 — Accepted 2026-08-13_

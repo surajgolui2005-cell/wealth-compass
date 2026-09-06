@@ -1,0 +1,24 @@
+# Staging Environment Variables Example
+aws_region  = "ap-south-1"
+environment = "staging"
+
+# Network
+vpc_cidr                 = "10.10.0.0/16"
+availability_zones       = ["ap-south-1a", "ap-south-1b"]
+public_subnet_cidrs      = ["10.10.1.0/24", "10.10.2.0/24"]
+private_app_subnet_cidrs = ["10.10.11.0/24", "10.10.12.0/24"]
+private_db_subnet_cidrs  = ["10.10.21.0/24", "10.10.22.0/24"]
+
+# Database & Cache Credentials
+db_username      = "staging_admin"
+db_password      = "ChangeMeToAStrongPassword2026!"
+redis_auth_token = "ChangeMeToAtLeast16CharactersRedisToken!"
+
+# Container Images
+api_image       = "ghcr.io/wealthcompass/wealthcompass-api:staging"
+web_image       = "ghcr.io/wealthcompass/wealthcompass-web:staging"
+analytics_image = "ghcr.io/wealthcompass/wealthcompass-analytics:staging"
+
+# Secrets
+jwt_access_secret  = "super_secure_staging_jwt_access_secret_key_32_chars_min"
+jwt_refresh_secret = "super_secure_staging_jwt_refresh_secret_key_32_chars_min"

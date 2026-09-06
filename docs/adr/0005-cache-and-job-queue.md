@@ -1,15 +1,15 @@
 # ADR-0005: Cache and Job Queue
 
-| Field          | Value                                            |
-|----------------|--------------------------------------------------|
-| **ADR ID**     | 0005                                             |
-| **Title**      | Cache and Job Queue Selection                    |
-| **Status**     | Accepted                                         |
-| **Date**       | 2026-08-13                                       |
-| **Deciders**   | Principal Architecture Team                      |
-| **Supersedes** | —                                                |
-| **Superseded by** | —                                             |
-| **Ref**        | [ARCHITECTURE.md](file:///c:/Users/suraj/project/Investor%20Portolio%20Monitoring%20and%20Risk%20Management%20System/docs/architecture/ARCHITECTURE.md#L6.2) §2, §6.2, §6.3, §12 |
+| Field             | Value                                                              |
+| ----------------- | ------------------------------------------------------------------ |
+| **ADR ID**        | 0005                                                               |
+| **Title**         | Cache and Job Queue Selection                                      |
+| **Status**        | Accepted                                                           |
+| **Date**          | 2026-08-13                                                         |
+| **Deciders**      | Principal Architecture Team                                        |
+| **Supersedes**    | —                                                                  |
+| **Superseded by** | —                                                                  |
+| **Ref**           | [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) §6.2, §6.3, §12 |
 
 ---
 
@@ -39,6 +39,7 @@ Running these tasks in the main request-response thread is impossible: they woul
 **We will deploy Redis 7 as our caching, pub/sub, and job queue backing store, and use BullMQ 5.x as the job queuing system within our NestJS application.**
 
 Redis will serve three functions:
+
 1. **Cache**: A high-speed, key-value memory store for live asset prices and FX rates (with a 60-second TTL to balance database load and price freshness).
 2. **Pub/Sub Broker**: Broadcasting real-time price tick events (e.g., `price:tick:crypto`) from price ingestors to the Alert Engine in sub-milliseconds.
 3. **BullMQ Store**: Storing job state and queue lists.
@@ -53,25 +54,25 @@ BullMQ (a Node.js-native distributed queue) will manage our seven named queues: 
 
 **Description:** Redis 7 cluster acts as the in-memory backend. BullMQ (built on top of Redis streams and Lua scripts) manages queues in NestJS using TypeScript decorators.
 
-| Criteria | Assessment |
-|---|---|
-| Caching support | ✅ Native — Redis is the industry standard for caching |
-| Pub/Sub capabilities | ✅ Native — Redis Pub/Sub has sub-millisecond propagation times |
-| Job Management | ✅ High — Supports priority, retries, cron scheduling, rate-limiting, and parent-child execution chains |
-| Operational Footprint | ✅ Low — One service (Redis) handles caching, pub/sub, and queues, reducing infrastructure costs |
-| Type Safety | ✅ Strong — TypeScript annotations and decorators via `@nestjs/bullmq` |
-| Resource efficiency | ✅ High — Scales background workers independently based on queue length using KEDA |
+| Criteria              | Assessment                                                                                              |
+| --------------------- | ------------------------------------------------------------------------------------------------------- |
+| Caching support       | ✅ Native — Redis is the industry standard for caching                                                  |
+| Pub/Sub capabilities  | ✅ Native — Redis Pub/Sub has sub-millisecond propagation times                                         |
+| Job Management        | ✅ High — Supports priority, retries, cron scheduling, rate-limiting, and parent-child execution chains |
+| Operational Footprint | ✅ Low — One service (Redis) handles caching, pub/sub, and queues, reducing infrastructure costs        |
+| Type Safety           | ✅ Strong — TypeScript annotations and decorators via `@nestjs/bullmq`                                  |
+| Resource efficiency   | ✅ High — Scales background workers independently based on queue length using KEDA                      |
 
 ### Option B: RabbitMQ + Custom Node Workers
 
 **Description:** An AMQP-based message broker. The API Gateway publishes messages to exchange routes; independent Node worker processes subscribe to queues.
 
-| Criteria | Assessment |
-|---|---|
-| Routing flexibility | ✅ Exceptional — Advanced routing keys, wildcards, and fan-out patterns |
-| Caching support | ❌ None — Requires deploying a separate Redis instance for live price cache |
+| Criteria              | Assessment                                                                                                            |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Routing flexibility   | ✅ Exceptional — Advanced routing keys, wildcards, and fan-out patterns                                               |
+| Caching support       | ❌ None — Requires deploying a separate Redis instance for live price cache                                           |
 | Operational Footprint | ❌ High — Must maintain both Redis (for cache) and RabbitMQ (for queues), doubling deployment and monitoring overhead |
-| Worker Integration | ⚠️ Higher complexity — Requires writing custom reconnection and channel management boilerplate |
+| Worker Integration    | ⚠️ Higher complexity — Requires writing custom reconnection and channel management boilerplate                        |
 
 **Why not selected:** At our scale, RabbitMQ’s advanced routing patterns are unnecessary. Using BullMQ allows us to fulfill all queuing and caching requirements with a single infrastructure component (Redis), keeping the operations model simple for a small team.
 
@@ -79,11 +80,11 @@ BullMQ (a Node.js-native distributed queue) will manage our seven named queues: 
 
 **Description:** A distributed event streaming platform. Events are published to partition topics, and consumer worker pools process messages sequentially.
 
-| Criteria | Assessment |
-|---|---|
-| Scaling limit | ✅ Unmatched — Millions of events per second with high partition throughput |
-| Caching support | ❌ None — Requires a separate caching store |
-| Job Operations | ❌ Limited — Lacks native support for cron delay queues, job priority, or job deduplication |
+| Criteria             | Assessment                                                                                             |
+| -------------------- | ------------------------------------------------------------------------------------------------------ |
+| Scaling limit        | ✅ Unmatched — Millions of events per second with high partition throughput                            |
+| Caching support      | ❌ None — Requires a separate caching store                                                            |
+| Job Operations       | ❌ Limited — Lacks native support for cron delay queues, job priority, or job deduplication            |
 | Operational Overhead | ❌ Extremely High — Requires ZooKeeper/KRaft cluster, partition rebalancing, and complex configuration |
 
 **Why not selected:** Kafka is built for massive log aggregation and high-throughput events. It lacks key job queue features like scheduling delayed tasks or priority overrides, which are essential for manual portfolio syncs. It is also overly complex to deploy and maintain for an MVP/V1.0 scale.
@@ -92,11 +93,11 @@ BullMQ (a Node.js-native distributed queue) will manage our seven named queues: 
 
 **Description:** Use our existing PostgreSQL database as the job queue backend. SQL tables store job state, and workers poll database tables for work.
 
-| Criteria | Assessment |
-|---|---|
-| Operational Footprint | ✅ Excellent — Zero additional infrastructure; jobs are backed by SQL tables |
-| Transactional Safety | ✅ Maximum — Jobs can be created within the same SQL transaction as database writes |
-| Caching / PubSub | ❌ Weak — Inefficient for fast cache reads and real-time pub/sub broadcasts |
+| Criteria              | Assessment                                                                                              |
+| --------------------- | ------------------------------------------------------------------------------------------------------- |
+| Operational Footprint | ✅ Excellent — Zero additional infrastructure; jobs are backed by SQL tables                            |
+| Transactional Safety  | ✅ Maximum — Jobs can be created within the same SQL transaction as database writes                     |
+| Caching / PubSub      | ❌ Weak — Inefficient for fast cache reads and real-time pub/sub broadcasts                             |
 | Scaling database lock | ❌ Poor — High polling volume causes database CPU spikes and table bloat from rapid write/delete cycles |
 
 **Why not selected:** While transactional queueing is attractive, pg-boss or graphile-worker would introduce heavy write locks on our primary database. At scale (e.g. syncing prices for thousands of users every minute), database performance would degrade, slowing down user queries.
@@ -130,12 +131,12 @@ BullMQ (a Node.js-native distributed queue) will manage our seven named queues: 
 
 ## Compliance Check
 
-| Requirement | Met? | Notes |
-|---|---|---|
-| **Financial precision** | ✅ | Job chaining guarantees that portfolio valuations and risk calculations run in the correct logical sequence, preventing stale computations. |
-| **Developer velocity** | ✅ | `@nestjs/bullmq` provides a familiar decorator-based structure, eliminating queue plumbing code. |
-| **System scalability** | ✅ | High-throughput, low-latency Redis operations keep job dispatching fast; workers scale independently using KEDA. |
+| Requirement             | Met? | Notes                                                                                                                                       |
+| ----------------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Financial precision** | ✅   | Job chaining guarantees that portfolio valuations and risk calculations run in the correct logical sequence, preventing stale computations. |
+| **Developer velocity**  | ✅   | `@nestjs/bullmq` provides a familiar decorator-based structure, eliminating queue plumbing code.                                            |
+| **System scalability**  | ✅   | High-throughput, low-latency Redis operations keep job dispatching fast; workers scale independently using KEDA.                            |
 
 ---
 
-*ADR-0005 — Accepted 2026-08-13*
+_ADR-0005 — Accepted 2026-08-13_

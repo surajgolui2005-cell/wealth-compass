@@ -18,21 +18,21 @@
     }
   },
   "PROJECT_STATE.md": {
-    "size": 67661,
-    "mtime_ns": 1788623969677808400,
-    "indexed_at_ns": 1788624005005646700,
-    "word_count": 5824,
+    "size": 124138,
+    "mtime_ns": 1788679352369738900,
+    "indexed_at_ns": 1788679368032493800,
+    "word_count": 6977,
     "hashes": {
-      "project_state.md": "c91b7283bd172173516f35d2a537231ca4ff7f0b065d8fde02b5206c897dd707"
+      "project_state.md": "4d8ad6359259f6c9796e6449300a2beb60ad0bb22abfe37f14f6da2f89e9c27e"
     }
   },
   "apps/api/package.json": {
-    "size": 1994,
-    "mtime_ns": 1788595436450007000,
-    "indexed_at_ns": 1788621097338963300,
-    "word_count": 138,
+    "size": 2011,
+    "mtime_ns": 1788676178963361900,
+    "indexed_at_ns": 1788677755025952600,
+    "word_count": 144,
     "hashes": {
-      "apps/api/package.json": "9cc16a834dd4299716317b70693fe980d7f9b0f6c493168bc72a613f23c2b420"
+      "apps/api/package.json": "606e9290848a4cac915821cbcf2a7d0020eca6f5d893f30efe323396d2b0af18"
     }
   },
   "apps/quant-engine/package.json": {
@@ -90,49 +90,46 @@
     }
   },
   "docs/adr/0003-quant-service-engine.md": {
-    "size": 11224,
-    "mtime_ns": 1786684759353624000,
-    "indexed_at_ns": 1786701986069718600,
+    "size": 11118,
+    "mtime_ns": 1788678399461629000,
+    "indexed_at_ns": 1788678899226028400,
     "word_count": 1510,
     "hashes": {
-      "docs/adr/0003-quant-service-engine.md": "413782ac2056a9357bde3d4da6fa89780d833cf60bf5b575c35b707c1ec39a51"
+      "docs/adr/0003-quant-service-engine.md": "ac2b1aee168341f957f5becfd90b6f1de520e30db7a131a0d9b67f3e0be226f9"
     }
   },
   "docs/adr/0004-database-and-orm.md": {
-    "size": 10613,
-    "mtime_ns": 1786684783043424700,
-    "indexed_at_ns": 1786701986073090900,
+    "size": 10509,
+    "mtime_ns": 1788678405458203600,
+    "indexed_at_ns": 1788678899227130100,
     "word_count": 1422,
     "hashes": {
-      "docs/adr/0004-database-and-orm.md": "ea5bd30fcbba4d681ad2651628b385ab7be044dd7d0c06939f6cd0e9377d3639"
+      "docs/adr/0004-database-and-orm.md": "ec19fc80cfa413a0f830ae8bd92130f687370df24d77a9152194bb774fe6d28a"
     }
   },
   "docs/adr/0005-cache-and-job-queue.md": {
-    "size": 10393,
-    "mtime_ns": 1786684794084196700,
-    "indexed_at_ns": 1786701986077047000,
-    "word_count": 1428,
+    "size": 10282,
+    "mtime_ns": 1788678416684472500,
+    "indexed_at_ns": 1788678899228082400,
+    "word_count": 1427,
     "hashes": {
-      "docs/adr/0005-cache-and-job-queue.md": "a2cee94f7c73d5d1fbad95672e02bbede8c6e9e32804d3733b2bfb96efc73fb1"
+      "docs/adr/0005-cache-and-job-queue.md": "cd0085a1f69bf6aba85681240e4612820115d2498359bdcec66a861ecb634df9"
     }
   },
   "docs/adr/0006-mobile-framework.md": {
-    "size": 9886,
-    "mtime_ns": 1786684805080341700,
-    "indexed_at_ns": 1786701986080015500,
+    "size": 9782,
+    "mtime_ns": 1788678428109973700,
+    "indexed_at_ns": 1788678899229337600,
     "word_count": 1382,
     "hashes": {
-      "docs/adr/0006-mobile-framework.md": "3ee710758f0c2470f340c9c0a8062132d4450c2f2b16fc5f4724e3ddf42b7565"
+      "docs/adr/0006-mobile-framework.md": "d25d900ee0272cbc61229a32a365f3ec3203ed38f8d345fadfe47154432b7de5"
     }
   },
   "docs/architecture/ARCHITECTURE.md": {
-    "size": 63015,
-    "mtime_ns": 1786605788405619500,
-    "indexed_at_ns": 1786701986084935000,
-    "word_count": 7486,
-    "hashes": {
-      "docs/architecture/architecture.md": "903c7d91bc77b98ccd8c536216b2820f617e073d83f399955fa0ca173442e015"
-    }
+    "size": 64230,
+    "mtime_ns": 1788678267643686800,
+    "indexed_at_ns": 1788678898742976900,
+    "word_count": 7592
   },
   "docs/product/PRD.md": {
     "size": 111582,
@@ -221,11 +218,11 @@
     "hashes": { "turbo.json": "7eeb23dd0fc18b19f80bc71d59fdd1ba09bec29f99dc116fcccb7a4b7f147b3c" }
   },
   "README.md": {
-    "size": 7325,
-    "mtime_ns": 1788623934536261000,
-    "indexed_at_ns": 1788624005006427600,
-    "word_count": 863,
-    "hashes": { "readme.md": "734c4c144e4d8850b00d784bb889ace8c7889516713a97cb2c623b10c8bf09c6" }
+    "size": 14141,
+    "mtime_ns": 1788679303406668600,
+    "indexed_at_ns": 1788679368033299400,
+    "word_count": 1243,
+    "hashes": { "readme.md": "66184285e5983defde32c53c02871405c52c757caccb356378c31525c32615f1" }
   },
   "docker-compose.yml": {
     "size": 1563,
@@ -297,11 +294,10 @@
     }
   },
   "DATABASE.md": {
-    "size": 11172,
-    "mtime_ns": 1786727881555131600,
-    "indexed_at_ns": 1786727976323598300,
-    "word_count": 1156,
-    "hashes": { "database.md": "20fc242bdc9cd444980e644d4e128006dd0f5e351e3d7a35d63ca73da0348ecf" }
+    "size": 11928,
+    "mtime_ns": 1788678242281518400,
+    "indexed_at_ns": 1788678897974883800,
+    "word_count": 1240
   },
   "apps/api/jest.config.js": {
     "size": 317,
@@ -319,16 +315,16 @@
     }
   },
   "apps/api/src/app.module.ts": {
-    "size": 1400,
-    "mtime_ns": 1788621794977340400,
-    "indexed_at_ns": 1788622907052824800,
-    "word_count": 121
+    "size": 1547,
+    "mtime_ns": 1788676547512457500,
+    "indexed_at_ns": 1788677754096331000,
+    "word_count": 135
   },
   "apps/api/src/main.ts": {
-    "size": 5002,
-    "mtime_ns": 1788618235720820700,
-    "indexed_at_ns": 1788621096591926900,
-    "word_count": 369
+    "size": 5266,
+    "mtime_ns": 1788676579108324000,
+    "indexed_at_ns": 1788677754164980500,
+    "word_count": 393
   },
   "apps/api/src/modules/auth/__tests__/argon.service.spec.ts": {
     "size": 1284,
@@ -487,9 +483,9 @@
     "word_count": 556
   },
   "apps/api/src/modules/portfolio/services/portfolio.service.ts": {
-    "size": 4260,
-    "mtime_ns": 1788622364118407900,
-    "indexed_at_ns": 1788622907289829100,
+    "size": 4112,
+    "mtime_ns": 1788624152068685800,
+    "indexed_at_ns": 1788675595333373300,
     "word_count": 397
   },
   "apps/api/src/modules/portfolio/services/transaction.service.ts": {
@@ -535,10 +531,10 @@
     "word_count": 457
   },
   "apps/api/src/modules/providers/controllers/provider.controller.ts": {
-    "size": 2695,
-    "mtime_ns": 1788620914812413300,
-    "indexed_at_ns": 1788621096793869700,
-    "word_count": 242
+    "size": 2669,
+    "mtime_ns": 1788624152183164600,
+    "indexed_at_ns": 1788675595431988000,
+    "word_count": 238
   },
   "apps/api/src/modules/providers/interfaces/provider.interface.ts": {
     "size": 1985,
@@ -547,9 +543,9 @@
     "word_count": 191
   },
   "apps/api/src/modules/providers/providers.module.ts": {
-    "size": 1147,
-    "mtime_ns": 1788620901677585600,
-    "indexed_at_ns": 1788621096799174000,
+    "size": 1122,
+    "mtime_ns": 1788624152204655700,
+    "indexed_at_ns": 1788675595479523800,
     "word_count": 91
   },
   "apps/api/src/modules/providers/services/provider-factory.service.ts": {
@@ -559,9 +555,9 @@
     "word_count": 190
   },
   "apps/api/src/modules/providers/services/provider-ingestion.service.ts": {
-    "size": 10025,
-    "mtime_ns": 1788620892516362300,
-    "indexed_at_ns": 1788621096804785000,
+    "size": 10119,
+    "mtime_ns": 1788624152264504500,
+    "indexed_at_ns": 1788675595510414900,
     "word_count": 897
   },
   "apps/api/src/prisma/prisma.module.ts": {
@@ -736,9 +732,9 @@
     "word_count": 578
   },
   "apps/api/src/modules/calculator/valuation.engine.ts": {
-    "size": 12038,
-    "mtime_ns": 1788622036189331300,
-    "indexed_at_ns": 1788622907218797700,
+    "size": 12049,
+    "mtime_ns": 1788624152034022000,
+    "indexed_at_ns": 1788675595242990000,
     "word_count": 1039
   },
   "apps/api/src/modules/calculator/weighted-avg-calculator.ts": {
@@ -892,12 +888,12 @@
     }
   },
   "apps/quant-engine/src/main.py": {
-    "size": 2032,
-    "mtime_ns": 1787651596614616100,
-    "indexed_at_ns": 1788588128890264600,
-    "word_count": 173,
+    "size": 2915,
+    "mtime_ns": 1788676666732968800,
+    "indexed_at_ns": 1788677755109760600,
+    "word_count": 233,
     "hashes": {
-      "apps/quant-engine/src/main.py": "7e94fe96cca4fb538d708e3051284ad11a16bb119819c136f369e947842aa2dc"
+      "apps/quant-engine/src/main.py": "59c7a967c314077ef82e255493ddebd7910c53375526de5d836d1512319f1e09"
     }
   },
   "apps/quant-engine/tests/test_performance_benchmark.py": {
@@ -964,12 +960,12 @@
     "word_count": 2068
   },
   "API_CONTRACT.md": {
-    "size": 8041,
-    "mtime_ns": 1788583003617039000,
-    "indexed_at_ns": 1788588129459886300,
-    "word_count": 1059,
+    "size": 11120,
+    "mtime_ns": 1788678218548680500,
+    "indexed_at_ns": 1788678899215462000,
+    "word_count": 1442,
     "hashes": {
-      "api_contract.md": "69bc33faa9a474b1f25b7306d36ff41cc35fb4e60001e406040c6c939449e245"
+      "api_contract.md": "f08031282afb98eb138e0a2da231e0e6d56c1c4bf5cbe21b62b4d5a6a6237f79"
     }
   },
   "apps/api/src/common/__tests__/http-exception.filter.spec.ts": {
@@ -1003,9 +999,9 @@
     "word_count": 247
   },
   "apps/api/src/common/index.ts": {
-    "size": 362,
-    "mtime_ns": 1788621734736228100,
-    "indexed_at_ns": 1788622907094414300,
+    "size": 348,
+    "mtime_ns": 1788624151815910100,
+    "indexed_at_ns": 1788675595042195000,
     "word_count": 32
   },
   "apps/api/src/common/interceptors/transform.interceptor.ts": {
@@ -1921,93 +1917,93 @@
     "word_count": 877
   },
   "apps/api/src/common/__tests__/logging.interceptor.spec.ts": {
-    "size": 7468,
-    "mtime_ns": 1788618246612484400,
-    "indexed_at_ns": 1788621096561862700,
-    "word_count": 542
+    "size": 7498,
+    "mtime_ns": 1788624151214842900,
+    "indexed_at_ns": 1788675594742638700,
+    "word_count": 544
   },
   "apps/api/src/common/crypto/__tests__/encryption.service.spec.ts": {
-    "size": 8698,
-    "mtime_ns": 1788618152282403400,
-    "indexed_at_ns": 1788621096567051700,
-    "word_count": 770
+    "size": 8579,
+    "mtime_ns": 1788624151729237600,
+    "indexed_at_ns": 1788675594919080500,
+    "word_count": 756
   },
   "apps/api/src/common/crypto/crypto.module.ts": {
     "size": 300,
-    "mtime_ns": 1788618126682057700,
-    "indexed_at_ns": 1788621096569346900,
+    "mtime_ns": 1788624151751915400,
+    "indexed_at_ns": 1788675594938951600,
     "word_count": 32
   },
   "apps/api/src/common/crypto/encryption.service.ts": {
-    "size": 5732,
-    "mtime_ns": 1788618177457217700,
-    "indexed_at_ns": 1788621096571920500,
+    "size": 5722,
+    "mtime_ns": 1788624151793537300,
+    "indexed_at_ns": 1788675594957655800,
     "word_count": 627
   },
   "apps/api/src/common/crypto/index.ts": {
     "size": 71,
-    "mtime_ns": 1788618134548524400,
-    "indexed_at_ns": 1788621096574362300,
+    "mtime_ns": 1788624151805649000,
+    "indexed_at_ns": 1788675595002750600,
     "word_count": 8
   },
   "apps/api/src/common/interceptors/logging.interceptor.ts": {
-    "size": 4034,
-    "mtime_ns": 1788618211794443400,
-    "indexed_at_ns": 1788621096585275800,
-    "word_count": 397
+    "size": 4043,
+    "mtime_ns": 1788624151846721500,
+    "indexed_at_ns": 1788675595066400400,
+    "word_count": 399
   },
   "apps/api/src/modules/providers/__tests__/provider-security.spec.ts": {
-    "size": 9819,
-    "mtime_ns": 1788620926429238300,
-    "indexed_at_ns": 1788621096783671200,
-    "word_count": 720
+    "size": 9957,
+    "mtime_ns": 1788624152150010000,
+    "indexed_at_ns": 1788675595385131300,
+    "word_count": 728
   },
   "docs/security/SECURITY_AUDIT.md": {
-    "size": 22818,
-    "mtime_ns": 1788620991815743100,
-    "indexed_at_ns": 1788621097947924600,
-    "word_count": 2641,
+    "size": 25244,
+    "mtime_ns": 1788624151729237600,
+    "indexed_at_ns": 1788675600376136000,
+    "word_count": 2669,
     "hashes": {
-      "docs/security/security_audit.md": "94ecd3ba861419a8f6c2d172d4d5845c4893d4841718593ab4720d1466c0deea"
+      "docs/security/security_audit.md": "a7911829a007e30fd51722c53ba91443efe3bf75843aaa4e4a77ad62f8cb32e2"
     }
   },
   "apps/api/src/common/cache/__tests__/analytics-cache.manager.spec.ts": {
     "size": 6426,
-    "mtime_ns": 1788621748733751000,
-    "indexed_at_ns": 1788622907061961300,
+    "mtime_ns": 1788624151357867800,
+    "indexed_at_ns": 1788675594761099300,
     "word_count": 497
   },
   "apps/api/src/common/cache/analytics-cache.manager.ts": {
-    "size": 7563,
-    "mtime_ns": 1788621673606364900,
-    "indexed_at_ns": 1788622907065057900,
-    "word_count": 772
+    "size": 7853,
+    "mtime_ns": 1788676501317501300,
+    "indexed_at_ns": 1788677754109026000,
+    "word_count": 810
   },
   "apps/api/src/common/cache/cache.interceptor.ts": {
-    "size": 2669,
-    "mtime_ns": 1788621691805014800,
-    "indexed_at_ns": 1788622907067414000,
+    "size": 2645,
+    "mtime_ns": 1788624151594478800,
+    "indexed_at_ns": 1788675594821983700,
     "word_count": 269
   },
   "apps/api/src/common/cache/cache.module.ts": {
     "size": 435,
-    "mtime_ns": 1788621702486975300,
-    "indexed_at_ns": 1788622907069601800,
+    "mtime_ns": 1788624151611173800,
+    "indexed_at_ns": 1788675594860951200,
     "word_count": 40
   },
   "apps/api/src/common/cache/index.ts": {
     "size": 112,
-    "mtime_ns": 1788621713584450400,
-    "indexed_at_ns": 1788622907074097700,
+    "mtime_ns": 1788624151632272500,
+    "indexed_at_ns": 1788675594897575500,
     "word_count": 12
   },
   "docs/performance/BENCHMARK_RESULTS.md": {
-    "size": 10682,
-    "mtime_ns": 1788622770055403900,
-    "indexed_at_ns": 1788622907931593700,
+    "size": 11421,
+    "mtime_ns": 1788624151275622600,
+    "indexed_at_ns": 1788675600350474100,
     "word_count": 1365,
     "hashes": {
-      "docs/performance/benchmark_results.md": "192aff105432c6549eece6b241ab6de92a48c653942718023a59525d59e5487c"
+      "docs/performance/benchmark_results.md": "76f316f888c2535ca96f79ec5a649b9e3bc545429a8887bc9423cb17a3b3d28c"
     }
   },
   "docs/performance/k6-raw-output.txt": {
@@ -2017,45 +2013,45 @@
     "word_count": 1925
   },
   "scripts/k6/analytics-cache-test.js": {
-    "size": 4428,
-    "mtime_ns": 1788622497374428500,
-    "indexed_at_ns": 1788622907701216100,
-    "word_count": 402
+    "size": 4480,
+    "mtime_ns": 1788624151102945900,
+    "indexed_at_ns": 1788675598080171800,
+    "word_count": 408
   },
   "scripts/k6/mock-benchmark-server.js": {
-    "size": 12182,
-    "mtime_ns": 1788622643901151800,
-    "indexed_at_ns": 1788622907702908500,
+    "size": 12492,
+    "mtime_ns": 1788624151237037500,
+    "indexed_at_ns": 1788675598143537500,
     "word_count": 1260
   },
   "scripts/k6/portfolio-stress-test.js": {
-    "size": 4342,
-    "mtime_ns": 1788622653551975300,
-    "indexed_at_ns": 1788622907704911900,
+    "size": 4336,
+    "mtime_ns": 1788624151303896800,
+    "indexed_at_ns": 1788675598240254000,
     "word_count": 444
   },
   "scripts/k6/run-benchmarks.js": {
-    "size": 4144,
-    "mtime_ns": 1788622516086012400,
-    "indexed_at_ns": 1788622907706747200,
-    "word_count": 386
+    "size": 4157,
+    "mtime_ns": 1788624151409984700,
+    "indexed_at_ns": 1788675598297976000,
+    "word_count": 388
   },
   ".github/workflows/build-docker.yml": {
-    "size": 5002,
-    "mtime_ns": 1788623883882161900,
-    "indexed_at_ns": 1788624004097392600,
+    "size": 4982,
+    "mtime_ns": 1788624150941533200,
+    "indexed_at_ns": 1788675594485981800,
     "word_count": 439
   },
   ".github/workflows/ci.yml": {
     "size": 8628,
-    "mtime_ns": 1788623784913302700,
-    "indexed_at_ns": 1788624004099610000,
+    "mtime_ns": 1788624151016875100,
+    "indexed_at_ns": 1788675594516119000,
     "word_count": 806
   },
   ".github/workflows/deploy-staging.yml": {
-    "size": 7057,
-    "mtime_ns": 1788623895198328000,
-    "indexed_at_ns": 1788624004101859500,
+    "size": 7037,
+    "mtime_ns": 1788624151069629800,
+    "indexed_at_ns": 1788675594553668900,
     "word_count": 624
   },
   "apps/quant-engine/requirements.txt": {
@@ -2065,9 +2061,555 @@
     "word_count": 12
   },
   "scripts/validate-workflows.js": {
-    "size": 4542,
-    "mtime_ns": 1788623905059946200,
-    "indexed_at_ns": 1788624004796849500,
-    "word_count": 472
+    "size": 4553,
+    "mtime_ns": 1788624151468708300,
+    "indexed_at_ns": 1788675598416763700,
+    "word_count": 474
+  },
+  "docs/deployment/CLOUD_DEPLOYMENT.md": {
+    "size": 12399,
+    "mtime_ns": 1788674023573155700,
+    "indexed_at_ns": 1788675600349464100,
+    "word_count": 1481,
+    "hashes": {
+      "docs/deployment/cloud_deployment.md": "4b8afed8f16b74b03c47f83ca2c09bc4eb8e9122a99b58519703bbad8796822a"
+    }
+  },
+  "infrastructure/terraform/environments/production/.terraform.lock.hcl": {
+    "size": 2559,
+    "mtime_ns": 1788674336800284600,
+    "indexed_at_ns": 1788675599796857600,
+    "word_count": 78,
+    "hashes": {
+      "infrastructure/terraform/environments/production/.terraform.lock.hcl": "c9d3faa04cec84076e9f7f3341ef843827864f751ab7d3e5d61de962565238d4"
+    }
+  },
+  "infrastructure/terraform/environments/production/main.tf": {
+    "size": 4273,
+    "mtime_ns": 1788674435607787300,
+    "indexed_at_ns": 1788675599799458300,
+    "word_count": 334,
+    "hashes": {
+      "infrastructure/terraform/environments/production/main.tf": "2576136e15755bce294f0957b71976b34ce6b62adafe6bdce944020065ba73f8"
+    }
+  },
+  "infrastructure/terraform/environments/production/outputs.tf": {
+    "size": 1166,
+    "mtime_ns": 1788673966501615300,
+    "indexed_at_ns": 1788675599800530000,
+    "word_count": 125,
+    "hashes": {
+      "infrastructure/terraform/environments/production/outputs.tf": "77b74042b67ca2f591662e1e1da894672e636f953d17449cfa7d0e448d8877ce"
+    }
+  },
+  "infrastructure/terraform/environments/production/variables.tf": {
+    "size": 2826,
+    "mtime_ns": 1788673953767059800,
+    "indexed_at_ns": 1788675599801507300,
+    "word_count": 342,
+    "hashes": {
+      "infrastructure/terraform/environments/production/variables.tf": "1c8f756867ba224be4952f16bcb80950d75c9f2801e166f83558b31a42d5f655"
+    }
+  },
+  "infrastructure/terraform/environments/production/versions.tf": {
+    "size": 913,
+    "mtime_ns": 1788674455855524500,
+    "indexed_at_ns": 1788675599802635400,
+    "word_count": 103,
+    "hashes": {
+      "infrastructure/terraform/environments/production/versions.tf": "b2bf5513717b71f6b77d93cd97789e169b806876ab69c775ef08184dc1a15e32"
+    }
+  },
+  "infrastructure/terraform/environments/staging/.terraform.lock.hcl": {
+    "size": 2559,
+    "mtime_ns": 1788674163661860500,
+    "indexed_at_ns": 1788675599804026200,
+    "word_count": 78,
+    "hashes": {
+      "infrastructure/terraform/environments/staging/.terraform.lock.hcl": "6d461a1cb574a94710a668fd10250c6e59c155a4a005f2e8a694d954fd97575c"
+    }
+  },
+  "infrastructure/terraform/environments/staging/main.tf": {
+    "size": 4044,
+    "mtime_ns": 1788674430027284800,
+    "indexed_at_ns": 1788675599805026700,
+    "word_count": 322,
+    "hashes": {
+      "infrastructure/terraform/environments/staging/main.tf": "982f4716b30df00bfe3b32ed5cc98489c60a204435bb6073847da4e149c7bfb4"
+    }
+  },
+  "infrastructure/terraform/environments/staging/outputs.tf": {
+    "size": 1141,
+    "mtime_ns": 1788673936262298400,
+    "indexed_at_ns": 1788675599806033900,
+    "word_count": 123,
+    "hashes": {
+      "infrastructure/terraform/environments/staging/outputs.tf": "72f74c456f7f74c7912aa9d116756f13b5f2f37b10d8ea75c00b986116845b44"
+    }
+  },
+  "infrastructure/terraform/environments/staging/variables.tf": {
+    "size": 2573,
+    "mtime_ns": 1788673921846735000,
+    "indexed_at_ns": 1788675599806990000,
+    "word_count": 288,
+    "hashes": {
+      "infrastructure/terraform/environments/staging/variables.tf": "378b6c86158235001bd6c0b00edb7b94c85fb4bef303b65209277e627f79ac3d"
+    }
+  },
+  "infrastructure/terraform/environments/staging/versions.tf": {
+    "size": 883,
+    "mtime_ns": 1788674386996439200,
+    "indexed_at_ns": 1788675599807969000,
+    "word_count": 101,
+    "hashes": {
+      "infrastructure/terraform/environments/staging/versions.tf": "f401ed53995ff35bef965c082a92300902b26ecf725614049616a695f9ab56ce"
+    }
+  },
+  "infrastructure/terraform/modules/alb/main.tf": {
+    "size": 4347,
+    "mtime_ns": 1788673727213500800,
+    "indexed_at_ns": 1788675599808910300,
+    "word_count": 422,
+    "hashes": {
+      "infrastructure/terraform/modules/alb/main.tf": "ce6f289b0a10b2dd10fe7e0404840a462ef1f1cbaabc8637c0d445c37e1c71c2"
+    }
+  },
+  "infrastructure/terraform/modules/alb/outputs.tf": {
+    "size": 701,
+    "mtime_ns": 1788673734493552800,
+    "indexed_at_ns": 1788675599809883500,
+    "word_count": 95,
+    "hashes": {
+      "infrastructure/terraform/modules/alb/outputs.tf": "323d5768c0b4486be588e3624de0e2c14d760503ddf98eb50fe90acf62265cfa"
+    }
+  },
+  "infrastructure/terraform/modules/alb/variables.tf": {
+    "size": 858,
+    "mtime_ns": 1788673717724177600,
+    "indexed_at_ns": 1788675599810945000,
+    "word_count": 118,
+    "hashes": {
+      "infrastructure/terraform/modules/alb/variables.tf": "7cea410e66a45aef90b00e4366846efce67da964f637f949fd7dad60c773dc2d"
+    }
+  },
+  "infrastructure/terraform/modules/cloudfront/main.tf": {
+    "size": 3609,
+    "mtime_ns": 1788673787410119300,
+    "indexed_at_ns": 1788675599811989300,
+    "word_count": 304,
+    "hashes": {
+      "infrastructure/terraform/modules/cloudfront/main.tf": "8f803470d24aaf936a704f0fb6ab5ebcda9693f468385b5deef911643ca72e8c"
+    }
+  },
+  "infrastructure/terraform/modules/cloudfront/outputs.tf": {
+    "size": 563,
+    "mtime_ns": 1788673793908975400,
+    "indexed_at_ns": 1788675599812989400,
+    "word_count": 59,
+    "hashes": {
+      "infrastructure/terraform/modules/cloudfront/outputs.tf": "835347332211d264d25b8d5677cbd04fa0c902cd9e44414f8b8a9792d255d88e"
+    }
+  },
+  "infrastructure/terraform/modules/cloudfront/variables.tf": {
+    "size": 648,
+    "mtime_ns": 1788673777038604400,
+    "indexed_at_ns": 1788675599813943000,
+    "word_count": 88,
+    "hashes": {
+      "infrastructure/terraform/modules/cloudfront/variables.tf": "20fadf9fc8069582512aca5cf7f4de1bc3cc5f4eaab5b49b66a06d2124f4f073"
+    }
+  },
+  "infrastructure/terraform/modules/ecs/main.tf": {
+    "size": 15791,
+    "mtime_ns": 1788673908325294400,
+    "indexed_at_ns": 1788675599814961400,
+    "word_count": 1280,
+    "hashes": {
+      "infrastructure/terraform/modules/ecs/main.tf": "81fecf8d212a7dc08229b703e8daeb9af0ff6627cdd29840b2b933fcba483020"
+    }
+  },
+  "infrastructure/terraform/modules/ecs/outputs.tf": {
+    "size": 850,
+    "mtime_ns": 1788673768871525300,
+    "indexed_at_ns": 1788675599815975300,
+    "word_count": 109,
+    "hashes": {
+      "infrastructure/terraform/modules/ecs/outputs.tf": "382e9089ac5c0c41f2d52b0143da063ab9bbbac0d3b1060efd086f4549498799"
+    }
+  },
+  "infrastructure/terraform/modules/ecs/variables.tf": {
+    "size": 3147,
+    "mtime_ns": 1788673744194796500,
+    "indexed_at_ns": 1788675599816931800,
+    "word_count": 403,
+    "hashes": {
+      "infrastructure/terraform/modules/ecs/variables.tf": "7180d2fbed8b1f97b4219177454d4253807fbba1db43536f78ca323eb009dcfc"
+    }
+  },
+  "infrastructure/terraform/modules/elasticache/main.tf": {
+    "size": 1803,
+    "mtime_ns": 1788673701771960300,
+    "indexed_at_ns": 1788675599817862300,
+    "word_count": 132,
+    "hashes": {
+      "infrastructure/terraform/modules/elasticache/main.tf": "140f430aab60620e7b1904c567c09980213c0b372a3885797458815497a672c1"
+    }
+  },
+  "infrastructure/terraform/modules/elasticache/outputs.tf": {
+    "size": 725,
+    "mtime_ns": 1788673709332862900,
+    "indexed_at_ns": 1788675599818807300,
+    "word_count": 78,
+    "hashes": {
+      "infrastructure/terraform/modules/elasticache/outputs.tf": "54557a0d479062ba2725b24014c81dd95b11bb1dd0b2f3c1f96f525ef4876f0d"
+    }
+  },
+  "infrastructure/terraform/modules/elasticache/variables.tf": {
+    "size": 1090,
+    "mtime_ns": 1788673692164354300,
+    "indexed_at_ns": 1788675599819854900,
+    "word_count": 145,
+    "hashes": {
+      "infrastructure/terraform/modules/elasticache/variables.tf": "bebc8459dbb0ec572a241be5eadc5a3e95c41ec0d964a80cd25ed687aaa17d10"
+    }
+  },
+  "infrastructure/terraform/modules/rds/main.tf": {
+    "size": 2633,
+    "mtime_ns": 1788673659884250900,
+    "indexed_at_ns": 1788675599820905600,
+    "word_count": 207,
+    "hashes": {
+      "infrastructure/terraform/modules/rds/main.tf": "752e65aa1e47ff36a0c00327393588a57d6ad83df1b658ab3f8a987d6a57ab3a"
+    }
+  },
+  "infrastructure/terraform/modules/rds/outputs.tf": {
+    "size": 674,
+    "mtime_ns": 1788673668694994300,
+    "indexed_at_ns": 1788675599821848100,
+    "word_count": 82,
+    "hashes": {
+      "infrastructure/terraform/modules/rds/outputs.tf": "57d563a8727f5b4f0fe759b3ebeebf4660f5151e1ade1cec23b416646f7fe95f"
+    }
+  },
+  "infrastructure/terraform/modules/rds/variables.tf": {
+    "size": 1555,
+    "mtime_ns": 1788673651100024900,
+    "indexed_at_ns": 1788675599822820300,
+    "word_count": 204,
+    "hashes": {
+      "infrastructure/terraform/modules/rds/variables.tf": "c57189f75ddbbf374b6917d9ab74106f525e2ac157946630e97c2770a3b81877"
+    }
+  },
+  "infrastructure/terraform/modules/s3/main.tf": {
+    "size": 1408,
+    "mtime_ns": 1788673633585133500,
+    "indexed_at_ns": 1788675599823758200,
+    "word_count": 130,
+    "hashes": {
+      "infrastructure/terraform/modules/s3/main.tf": "e9298f8222d2f49fbcb2c2c0f31568c0f9aedd71e8e53cb80a15a4d1eff73d2e"
+    }
+  },
+  "infrastructure/terraform/modules/s3/outputs.tf": {
+    "size": 352,
+    "mtime_ns": 1788673641254285800,
+    "indexed_at_ns": 1788675599824714900,
+    "word_count": 41,
+    "hashes": {
+      "infrastructure/terraform/modules/s3/outputs.tf": "d912fcdd66025735c39811c861e01be4adcaa70e9ac6d92ae30e5b9cbc53b273"
+    }
+  },
+  "infrastructure/terraform/modules/s3/variables.tf": {
+    "size": 503,
+    "mtime_ns": 1788674424090400000,
+    "indexed_at_ns": 1788675599825655300,
+    "word_count": 68,
+    "hashes": {
+      "infrastructure/terraform/modules/s3/variables.tf": "7ca5790154a792eb115bcff2530e5edab54ec411d5f90172bb4e07a29c997285"
+    }
+  },
+  "infrastructure/terraform/modules/security/main.tf": {
+    "size": 4174,
+    "mtime_ns": 1788673610743594200,
+    "indexed_at_ns": 1788675599826620100,
+    "word_count": 467,
+    "hashes": {
+      "infrastructure/terraform/modules/security/main.tf": "59306860bca8b1cc54cf5df5373b114b0a21d22e66c9b98a64256a73f6498adb"
+    }
+  },
+  "infrastructure/terraform/modules/security/outputs.tf": {
+    "size": 620,
+    "mtime_ns": 1788673618305246100,
+    "indexed_at_ns": 1788675599827669100,
+    "word_count": 67,
+    "hashes": {
+      "infrastructure/terraform/modules/security/outputs.tf": "19b0554521e42e584e3c537274c4b3f73ad13d81c5bbe9e15d1fcb8f6b13e42d"
+    }
+  },
+  "infrastructure/terraform/modules/security/variables.tf": {
+    "size": 355,
+    "mtime_ns": 1788673602295218700,
+    "indexed_at_ns": 1788675599828804000,
+    "word_count": 52,
+    "hashes": {
+      "infrastructure/terraform/modules/security/variables.tf": "9b7288b64b208554ad68c750bfdc859ed8d41d4b9ae31032e0412fa4f3a22533"
+    }
+  },
+  "infrastructure/terraform/modules/vpc/main.tf": {
+    "size": 7583,
+    "mtime_ns": 1788673587972286200,
+    "indexed_at_ns": 1788675599829773800,
+    "word_count": 563,
+    "hashes": {
+      "infrastructure/terraform/modules/vpc/main.tf": "f484a1793c8b30aa685384e7a0780e4d0000464f43d2bbd8d4970ee6c8bd23c3"
+    }
+  },
+  "infrastructure/terraform/modules/vpc/outputs.tf": {
+    "size": 762,
+    "mtime_ns": 1788673595267616000,
+    "indexed_at_ns": 1788675599830847900,
+    "word_count": 97,
+    "hashes": {
+      "infrastructure/terraform/modules/vpc/outputs.tf": "e267aa513ed4f50aad7417abeb36a76e003e7d696c27873ce85b021a8b71fe58"
+    }
+  },
+  "infrastructure/terraform/modules/vpc/variables.tf": {
+    "size": 1209,
+    "mtime_ns": 1788673576682058300,
+    "indexed_at_ns": 1788675599831788800,
+    "word_count": 162,
+    "hashes": {
+      "infrastructure/terraform/modules/vpc/variables.tf": "e5a9a3258027dc32353fba6d7781c4aa04f6041e51bc5b10c678289cd08c8181"
+    }
+  },
+  "scripts/terraform-bin/LICENSE.txt": {
+    "size": 4922,
+    "mtime_ns": 1737545664000000000,
+    "indexed_at_ns": 1788675598410527200,
+    "word_count": 657
+  },
+  "apps/api/src/common/observability/__tests__/metrics.service.spec.ts": {
+    "size": 2073,
+    "mtime_ns": 1788676767798180800,
+    "indexed_at_ns": 1788677754140098900,
+    "word_count": 140
+  },
+  "apps/api/src/common/observability/__tests__/pino-logger.service.spec.ts": {
+    "size": 3270,
+    "mtime_ns": 1788676775926816700,
+    "indexed_at_ns": 1788677754142496100,
+    "word_count": 229
+  },
+  "apps/api/src/common/observability/index.ts": {
+    "size": 218,
+    "mtime_ns": 1788676444962445000,
+    "indexed_at_ns": 1788677754145126700,
+    "word_count": 24
+  },
+  "apps/api/src/common/observability/metrics.interceptor.ts": {
+    "size": 2236,
+    "mtime_ns": 1788676433490606300,
+    "indexed_at_ns": 1788677754147492300,
+    "word_count": 216
+  },
+  "apps/api/src/common/observability/metrics.service.ts": {
+    "size": 5244,
+    "mtime_ns": 1788676417483804400,
+    "indexed_at_ns": 1788677754149622100,
+    "word_count": 475
+  },
+  "apps/api/src/common/observability/observability.module.ts": {
+    "size": 540,
+    "mtime_ns": 1788676439202013400,
+    "indexed_at_ns": 1788677754152773800,
+    "word_count": 52
+  },
+  "apps/api/src/common/observability/otel-tracer.ts": {
+    "size": 4536,
+    "mtime_ns": 1788677056244193400,
+    "indexed_at_ns": 1788677754155315400,
+    "word_count": 474
+  },
+  "apps/api/src/common/observability/pino-logger.service.ts": {
+    "size": 3161,
+    "mtime_ns": 1788676396675703300,
+    "indexed_at_ns": 1788677754157674800,
+    "word_count": 323
+  },
+  "apps/api/src/common/observability/sentry.service.ts": {
+    "size": 3714,
+    "mtime_ns": 1788676425527158200,
+    "indexed_at_ns": 1788677754160014900,
+    "word_count": 388
+  },
+  "apps/api/src/modules/health/__tests__/health.controller.spec.ts": {
+    "size": 3665,
+    "mtime_ns": 1788676783934579100,
+    "indexed_at_ns": 1788677754291662600,
+    "word_count": 298
+  },
+  "apps/api/src/modules/health/__tests__/health.service.spec.ts": {
+    "size": 4262,
+    "mtime_ns": 1788676757301341700,
+    "indexed_at_ns": 1788677754294329800,
+    "word_count": 327
+  },
+  "apps/api/src/modules/health/health.controller.ts": {
+    "size": 2081,
+    "mtime_ns": 1788676521672512500,
+    "indexed_at_ns": 1788677754297252300,
+    "word_count": 200
+  },
+  "apps/api/src/modules/health/health.module.ts": {
+    "size": 283,
+    "mtime_ns": 1788676528119600300,
+    "indexed_at_ns": 1788677754299473500,
+    "word_count": 30
+  },
+  "apps/api/src/modules/health/health.service.ts": {
+    "size": 4871,
+    "mtime_ns": 1788676511745874900,
+    "indexed_at_ns": 1788677754301570200,
+    "word_count": 493
+  },
+  "apps/api/src/modules/health/index.ts": {
+    "size": 104,
+    "mtime_ns": 1788676534898340300,
+    "indexed_at_ns": 1788677754304889400,
+    "word_count": 12
+  },
+  "apps/quant-engine/src/observability.py": {
+    "size": 6311,
+    "mtime_ns": 1788676653917119200,
+    "indexed_at_ns": 1788677755110813800,
+    "word_count": 490,
+    "hashes": {
+      "apps/quant-engine/src/observability.py": "1fde65269e115c41902f1038854501cb7adff7f4fa3ea5502808a67c34ecab1a"
+    }
+  },
+  "docs/operations/OBSERVABILITY.md": {
+    "size": 8159,
+    "mtime_ns": 1788676748030207700,
+    "indexed_at_ns": 1788677755255815200,
+    "word_count": 971,
+    "hashes": {
+      "docs/operations/observability.md": "542fcd3eae43f654b3e1e80bf6ebc24bcb1132c7649ff27d5d8dead2c151972a"
+    }
+  },
+  "infrastructure/grafana/dashboards/api-latency.json": {
+    "size": 4068,
+    "mtime_ns": 1788676692011960200,
+    "indexed_at_ns": 1788677755180995700,
+    "word_count": 393,
+    "hashes": {
+      "infrastructure/grafana/dashboards/api-latency.json": "3d2decf3614bc3a7f3956bdcab6ef98feedbd935c8cd54a9809790e152bddc86"
+    }
+  },
+  "infrastructure/grafana/dashboards/db-connections.json": {
+    "size": 3158,
+    "mtime_ns": 1788676709192382400,
+    "indexed_at_ns": 1788677755181741800,
+    "word_count": 317,
+    "hashes": {
+      "infrastructure/grafana/dashboards/db-connections.json": "60ac432ec5d46789fd3f7b20213d7afe58d6fa74029210aba8da20abaaedf210"
+    }
+  },
+  "infrastructure/grafana/dashboards/queue-depth.json": {
+    "size": 3135,
+    "mtime_ns": 1788676699886591900,
+    "indexed_at_ns": 1788677755182372600,
+    "word_count": 327,
+    "hashes": {
+      "infrastructure/grafana/dashboards/queue-depth.json": "d6cb9617b14524eb5f627e01dd5858c8f424a9b7d4be415cbebeda9eeb7dc067"
+    }
+  },
+  "infrastructure/grafana/dashboards/risk-service-latency.json": {
+    "size": 3082,
+    "mtime_ns": 1788676719891136300,
+    "indexed_at_ns": 1788677755183005000,
+    "word_count": 325,
+    "hashes": {
+      "infrastructure/grafana/dashboards/risk-service-latency.json": "45c6230004cfb58171b1222f342efe3a7553f7c7c932353f76d3f1f6c2836de0"
+    }
+  },
+  "infrastructure/grafana/provisioning/dashboards/dashboards.yml": {
+    "size": 227,
+    "mtime_ns": 1788676733904666900,
+    "indexed_at_ns": 1788677754807268500,
+    "word_count": 20
+  },
+  "infrastructure/grafana/provisioning/datasources/prometheus.yml": {
+    "size": 233,
+    "mtime_ns": 1788676726549517400,
+    "indexed_at_ns": 1788677754809650400,
+    "word_count": 23
+  },
+  "services/analytics/__init__.py": {
+    "size": 33,
+    "mtime_ns": 1788676678351756100,
+    "indexed_at_ns": 1788677755215279500,
+    "word_count": 3,
+    "hashes": {
+      "services/analytics/__init__.py": "3f106ea12821b812aabd1c21a5bef16e32492cb287e7392400d6523d157854c2"
+    }
+  },
+  "services/analytics/observability.py": {
+    "size": 851,
+    "mtime_ns": 1788676672175388200,
+    "indexed_at_ns": 1788677755215961200,
+    "word_count": 71,
+    "hashes": {
+      "services/analytics/observability.py": "e1427b42fea39e7ad169a5d0c5b07af85c74f088445af11bc89647fe2acbc4b6"
+    }
+  },
+  "docs/DATA_DICTIONARY.md": {
+    "size": 26488,
+    "mtime_ns": 1788678171065211100,
+    "indexed_at_ns": 1788678899218899700,
+    "word_count": 4071,
+    "hashes": {
+      "docs/data_dictionary.md": "5332bb08ea9e5b4a0cfae7508f2fa9a4465048e61e18b52cef20a60b1244a446"
+    }
+  },
+  "docs/SETUP_GUIDE.md": {
+    "size": 7278,
+    "mtime_ns": 1788678201780420200,
+    "indexed_at_ns": 1788678899219866900,
+    "word_count": 911,
+    "hashes": {
+      "docs/setup_guide.md": "aa37992ef6ca90f973617c0e43d9516ccbda1ba6d6b9621f9851da5cb4ba5f75"
+    }
+  },
+  "docs/TROUBLESHOOTING.md": {
+    "size": 11108,
+    "mtime_ns": 1788678187820094100,
+    "indexed_at_ns": 1788678899220994800,
+    "word_count": 1395,
+    "hashes": {
+      "docs/troubleshooting.md": "ae45e960bd6e410fd86b33ef61b49c6769aa5b41210316f8959209f2459e7cfd"
+    }
+  },
+  "scripts/validate-docs-links.js": {
+    "size": 3136,
+    "mtime_ns": 1788678292071491700,
+    "indexed_at_ns": 1788678898915523400,
+    "word_count": 305
+  },
+  "docs/audit/PRODUCTION_READINESS_REVIEW.md": {
+    "size": 12929,
+    "mtime_ns": 1788679275856085300,
+    "indexed_at_ns": 1788679368054624600,
+    "word_count": 1646,
+    "hashes": {
+      "docs/audit/production_readiness_review.md": "58dbc42a04b4cd09f8e781aa8a5a5ef60b0dcc0aac0ea33e5f78cf034be2e518"
+    }
+  },
+  "docs/audit/TECHNICAL_DEBT.md": {
+    "size": 11271,
+    "mtime_ns": 1788679292980784500,
+    "indexed_at_ns": 1788679368055504700,
+    "word_count": 1563,
+    "hashes": {
+      "docs/audit/technical_debt.md": "3e934d478bbaecb492bae911ecc0f521ab95153262254158f497654937003d52"
+    }
   }
 }

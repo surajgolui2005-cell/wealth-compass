@@ -1,15 +1,15 @@
 # ADR-0004: Database and ORM
 
-| Field          | Value                                            |
-|----------------|--------------------------------------------------|
-| **ADR ID**     | 0004                                             |
-| **Title**      | Database and ORM Selection                        |
-| **Status**     | Accepted                                         |
-| **Date**       | 2026-08-13                                       |
-| **Deciders**   | Principal Architecture Team                      |
-| **Supersedes** | —                                                |
-| **Superseded by** | —                                             |
-| **Ref**        | [ARCHITECTURE.md](file:///c:/Users/suraj/project/Investor%20Portolio%20Monitoring%20and%20Risk%20Management%20System/docs/architecture/ARCHITECTURE.md#L2) §2, §5.4, §11, §12 |
+| Field             | Value                                                                 |
+| ----------------- | --------------------------------------------------------------------- |
+| **ADR ID**        | 0004                                                                  |
+| **Title**         | Database and ORM Selection                                            |
+| **Status**        | Accepted                                                              |
+| **Date**          | 2026-08-13                                                            |
+| **Deciders**      | Principal Architecture Team                                           |
+| **Supersedes**    | —                                                                     |
+| **Superseded by** | —                                                                     |
+| **Ref**           | [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) §2, §5.4, §11, §12 |
 
 ---
 
@@ -36,7 +36,7 @@ We must select the database engine(s) and ORM to meet these criteria.
 
 **We will adopt PostgreSQL 16 with the TimescaleDB extension as our single hybrid database engine, and use TypeORM 0.3.x in the NestJS API layer.**
 
-Relational models will reside in traditional PostgreSQL tables with strict foreign keys and constraints. Time-series data (live price logs, historical currency rates, NAV listings) will reside in TimescaleDB "hypertables" (partitioned automatically by time in 7-day intervals). 
+Relational models will reside in traditional PostgreSQL tables with strict foreign keys and constraints. Time-series data (live price logs, historical currency rates, NAV listings) will reside in TimescaleDB "hypertables" (partitioned automatically by time in 7-day intervals).
 
 TypeORM will map TypeScript classes to database tables. For decimal arithmetic, all numeric fields (e.g. asset quantities, prices, values) will be mapped to PostgreSQL `numeric(20,8)` columns, which TypeORM retrieves as JavaScript string types, to be processed in-memory using the `decimal.js` library.
 
@@ -48,24 +48,24 @@ TypeORM will map TypeScript classes to database tables. For decimal arithmetic, 
 
 **Description:** PostgreSQL 16 serves as the core ACID engine. The TimescaleDB extension runs inside the same database process, allowing time-series data partitions (hypertables) to be queried alongside relational data using standard SQL joins, via a single database connection pool. TypeORM provides TypeScript decorators and handles relational mapping and schema migrations.
 
-| Criteria | Assessment |
-|---|---|
-| ACID Transactions | ✅ Exceptional — Full PostgreSQL isolation levels (Read Committed, Serializable) |
-| Financial Precision | ✅ Excellent — Native `NUMERIC`/`DECIMAL(20,8)` storage; TypeORM exposes strings, avoiding float coercion |
+| Criteria                | Assessment                                                                                                           |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| ACID Transactions       | ✅ Exceptional — Full PostgreSQL isolation levels (Read Committed, Serializable)                                     |
+| Financial Precision     | ✅ Excellent — Native `NUMERIC`/`DECIMAL(20,8)` storage; TypeORM exposes strings, avoiding float coercion            |
 | Time-Series Performance | ✅ High — Hypertables partition data by time; continuous aggregates pre-calculate EOD values; index sizes fit in RAM |
-| Code sharing / DI | ✅ Native — TypeORM integrates with NestJS via `@nestjs/typeorm` modules and decorators |
-| Operational Footprint | ✅ Low — One database process to deploy, back up, and monitor |
+| Code sharing / DI       | ✅ Native — TypeORM integrates with NestJS via `@nestjs/typeorm` modules and decorators                              |
+| Operational Footprint   | ✅ Low — One database process to deploy, back up, and monitor                                                        |
 
 ### Option B: MongoDB + Mongoose (NoSQL Alternative)
 
 **Description:** A document-oriented database. Holdings, portfolios, and transactions are stored as hierarchical JSON documents in collections. Historical price history is stored in a separate collection.
 
-| Criteria | Assessment |
-|---|---|
-| Schema Flexibility | ✅ High — Easy to store arbitrary metadata for different asset classes |
-| ACID Transactions | ⚠️ Limited — Support exists but is slower, lacks structural relational integrity checks (no foreign key constraints) |
-| Financial Precision | ❌ Poor — JavaScript/NoSQL double-precision floats are vulnerable to IEEE 754 rounding errors unless strings or custom `Decimal128` types are strictly enforced at all validation levels |
-| Operational footprint | ⚠️ Moderate — Mongo scales easily but requires maintaining a separate database engine with different backup models |
+| Criteria              | Assessment                                                                                                                                                                               |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Schema Flexibility    | ✅ High — Easy to store arbitrary metadata for different asset classes                                                                                                                   |
+| ACID Transactions     | ⚠️ Limited — Support exists but is slower, lacks structural relational integrity checks (no foreign key constraints)                                                                     |
+| Financial Precision   | ❌ Poor — JavaScript/NoSQL double-precision floats are vulnerable to IEEE 754 rounding errors unless strings or custom `Decimal128` types are strictly enforced at all validation levels |
+| Operational footprint | ⚠️ Moderate — Mongo scales easily but requires maintaining a separate database engine with different backup models                                                                       |
 
 **Why not selected:** Financial monitoring requires absolute transactional integrity. Lacking foreign keys means a bug in the application code can easily orphan transactions or leave holdings out of sync. PostgreSQL's rigid constraints are a feature, not a bug, in this domain.
 
@@ -73,12 +73,12 @@ TypeORM will map TypeScript classes to database tables. For decimal arithmetic, 
 
 **Description:** Use PostgreSQL 16 (with TimescaleDB) but swap TypeORM for Prisma. Prisma uses a custom `.prisma` schema file to generate a rust-based type-safe query client.
 
-| Criteria | Assessment |
-|---|---|
-| Developer Velocity | ✅ High — Auto-generated clients, clean syntax, easy database tooling |
-| Type Safety | ✅ Strongest — Prisma generates static TypeScript types directly matching the database state |
+| Criteria            | Assessment                                                                                                                                                                |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Developer Velocity  | ✅ High — Auto-generated clients, clean syntax, easy database tooling                                                                                                     |
+| Type Safety         | ✅ Strongest — Prisma generates static TypeScript types directly matching the database state                                                                              |
 | TimescaleDB Support | ❌ Weak — Prisma does not support advanced TimescaleDB operations (e.g., continuous aggregates, data compression, hypertable definitions) natively in its schema language |
-| Performance | ⚠️ Prisma's Rust query engine runner adds minor startup overhead and memory cost per container |
+| Performance         | ⚠️ Prisma's Rust query engine runner adds minor startup overhead and memory cost per container                                                                            |
 
 **Why not selected:** Prisma’s schema syntax cannot model TimescaleDB-specific structures like continuous aggregates or hypertables without bypass raw SQL commands. Furthermore, Prisma has historically struggled with custom database extensions. TypeORM allows us to write standard database annotations and execute raw queries via connection runners easily.
 
@@ -86,10 +86,10 @@ TypeORM will map TypeScript classes to database tables. For decimal arithmetic, 
 
 **Description:** Avoid using a full ORM. Write raw SQL queries directly or use Knex.js as a query builder to compose SQL statements programmatically.
 
-| Criteria | Assessment |
-|---|---|
-| Query Performance | ✅ Maximum — No ORM overhead; developers have direct control over indexes and query execution plans |
-| Developer Velocity | ❌ Lower — Writing raw inserts, updates, and type mappings manually introduces significant boilerplate |
+| Criteria               | Assessment                                                                                                 |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------- |
+| Query Performance      | ✅ Maximum — No ORM overhead; developers have direct control over indexes and query execution plans        |
+| Developer Velocity     | ❌ Lower — Writing raw inserts, updates, and type mappings manually introduces significant boilerplate     |
 | TypeScript Integration | ⚠️ Manual — Developers must write and maintain interface types matching SQL rows, creating high drift risk |
 
 **Why not selected:** While raw SQL offers maximum performance, it slows down developer iteration for standard CRUD operations (e.g. Auth, user settings, alert configuration). TypeORM offers the best compromise: CRUD tasks use clean decorator patterns, while complex financial reports fall back to TypeORM's `queryRunner` to run raw SQL.
@@ -116,12 +116,12 @@ TypeORM will map TypeScript classes to database tables. For decimal arithmetic, 
 
 ## Compliance Check
 
-| Requirement | Met? | Notes |
-|---|---|---|
-| **Financial precision** | ✅ | Guaranteed at rest via PostgreSQL `NUMERIC` types, and in transit via TypeORM string mapping + in-memory `decimal.js` validation. |
-| **Developer velocity** | ✅ | TypeORM annotations eliminate basic SQL boilerplates, while auto-migrations keep local development environments aligned. |
-| **System scalability** | ✅ | TimescaleDB partitions historical price tables into manageable 7-day chunks, keeping lookup index sizes small enough to fit in RAM. |
+| Requirement             | Met? | Notes                                                                                                                               |
+| ----------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **Financial precision** | ✅   | Guaranteed at rest via PostgreSQL `NUMERIC` types, and in transit via TypeORM string mapping + in-memory `decimal.js` validation.   |
+| **Developer velocity**  | ✅   | TypeORM annotations eliminate basic SQL boilerplates, while auto-migrations keep local development environments aligned.            |
+| **System scalability**  | ✅   | TimescaleDB partitions historical price tables into manageable 7-day chunks, keeping lookup index sizes small enough to fit in RAM. |
 
 ---
 
-*ADR-0004 — Accepted 2026-08-13*
+_ADR-0004 — Accepted 2026-08-13_

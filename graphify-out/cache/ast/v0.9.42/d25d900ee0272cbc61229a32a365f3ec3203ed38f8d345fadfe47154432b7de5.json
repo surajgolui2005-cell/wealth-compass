@@ -1,0 +1,265 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_docs_adr_0006_mobile_framework_md",
+      "label": "0006-mobile-framework.md",
+      "file_type": "document",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0006_mobile_framework_adr_0006_mobile_framework",
+      "label": "ADR-0006: Mobile Framework",
+      "file_type": "document",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0006_mobile_framework_context",
+      "label": "Context",
+      "file_type": "document",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L16"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0006_mobile_framework_mobile_feature_requirements",
+      "label": "Mobile Feature Requirements",
+      "file_type": "document",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L20"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0006_mobile_framework_organizational_constraints",
+      "label": "Organizational Constraints",
+      "file_type": "document",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L28"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0006_mobile_framework_decision",
+      "label": "Decision",
+      "file_type": "document",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L38"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0006_mobile_framework_options_considered",
+      "label": "Options Considered",
+      "file_type": "document",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L46"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0006_mobile_framework_option_a_react_native_expo_selected",
+      "label": "Option A: React Native + Expo (Selected)",
+      "file_type": "document",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L48"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0006_mobile_framework_option_b_flutter_dart",
+      "label": "Option B: Flutter (Dart)",
+      "file_type": "document",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L60"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0006_mobile_framework_option_c_swift_ios_and_kotlin_android_dual_native",
+      "label": "Option C: Swift (iOS) and Kotlin (Android) Dual Native",
+      "file_type": "document",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L73"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0006_mobile_framework_option_d_progressive_web_application_pwa_only",
+      "label": "Option D: Progressive Web Application (PWA) Only",
+      "file_type": "document",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L87"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0006_mobile_framework_consequences",
+      "label": "Consequences",
+      "file_type": "document",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L103"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0006_mobile_framework_positive",
+      "label": "Positive",
+      "file_type": "document",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L105"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0006_mobile_framework_negative_trade_offs",
+      "label": "Negative / Trade-offs",
+      "file_type": "document",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L113"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0006_mobile_framework_neutral",
+      "label": "Neutral",
+      "file_type": "document",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L119"
+    },
+    {
+      "id": "$graphify-root$_docs_adr_0006_mobile_framework_compliance_check",
+      "label": "Compliance Check",
+      "file_type": "document",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L125"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_docs_adr_0006_mobile_framework_md",
+      "target": "$graphify-root$_docs_adr_0006_mobile_framework_adr_0006_mobile_framework",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0006_mobile_framework_md",
+      "target": "$graphify-root$_docs_architecture_architecture_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "target_file": "$graphify-root$/docs/architecture/ARCHITECTURE.md"
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0006_mobile_framework_adr_0006_mobile_framework",
+      "target": "$graphify-root$_docs_adr_0006_mobile_framework_context",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0006_mobile_framework_context",
+      "target": "$graphify-root$_docs_adr_0006_mobile_framework_mobile_feature_requirements",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0006_mobile_framework_context",
+      "target": "$graphify-root$_docs_adr_0006_mobile_framework_organizational_constraints",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0006_mobile_framework_adr_0006_mobile_framework",
+      "target": "$graphify-root$_docs_adr_0006_mobile_framework_decision",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0006_mobile_framework_adr_0006_mobile_framework",
+      "target": "$graphify-root$_docs_adr_0006_mobile_framework_options_considered",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0006_mobile_framework_options_considered",
+      "target": "$graphify-root$_docs_adr_0006_mobile_framework_option_a_react_native_expo_selected",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0006_mobile_framework_options_considered",
+      "target": "$graphify-root$_docs_adr_0006_mobile_framework_option_b_flutter_dart",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0006_mobile_framework_options_considered",
+      "target": "$graphify-root$_docs_adr_0006_mobile_framework_option_c_swift_ios_and_kotlin_android_dual_native",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0006_mobile_framework_options_considered",
+      "target": "$graphify-root$_docs_adr_0006_mobile_framework_option_d_progressive_web_application_pwa_only",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0006_mobile_framework_adr_0006_mobile_framework",
+      "target": "$graphify-root$_docs_adr_0006_mobile_framework_consequences",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L103",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0006_mobile_framework_consequences",
+      "target": "$graphify-root$_docs_adr_0006_mobile_framework_positive",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L105",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0006_mobile_framework_consequences",
+      "target": "$graphify-root$_docs_adr_0006_mobile_framework_negative_trade_offs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L113",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0006_mobile_framework_consequences",
+      "target": "$graphify-root$_docs_adr_0006_mobile_framework_neutral",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_adr_0006_mobile_framework_adr_0006_mobile_framework",
+      "target": "$graphify-root$_docs_adr_0006_mobile_framework_compliance_check",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/adr/0006-mobile-framework.md",
+      "source_location": "L125",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

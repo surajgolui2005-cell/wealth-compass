@@ -8,19 +8,17 @@ the NestJS API Gateway over the private container network (RS256 JWT auth).
 
 from __future__ import annotations
 
-import logging
-
-from fastapi import FastAPI
+import time
+from fastapi import FastAPI, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 
 from src.app.routers.performance import router as performance_router
 from src.app.routers.allocation import router as allocation_router
 from src.app.routers.risk import router as risk_router
+from src.observability import setup_observability_logging, quant_metrics
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
-)
+# Initialize structured JSON logging
+setup_observability_logging()
 
 app = FastAPI(
     title="Wealth Compass — Quant Engine",
@@ -45,6 +43,15 @@ app.add_middleware(
     allow_headers=["Authorization", "Content-Type"],
 )
 
+# ── Metrics Middleware ────────────────────────────────────────────────────────
+@app.middleware("http")
+async def metrics_middleware(request: Request, call_next):
+    start_time = time.time()
+    response = await call_next(request)
+    duration = time.time() - start_time
+    quant_metrics.record_request(request.method, request.url.path, response.status_code)
+    return response
+
 # ── Routers ───────────────────────────────────────────────────────────────────
 app.include_router(performance_router)
 app.include_router(allocation_router)
@@ -54,4 +61,15 @@ app.include_router(risk_router)
 @app.get("/health", tags=["Health"])
 async def health_check() -> dict[str, str]:
     """Liveness probe for container orchestration."""
-    return {"status": "ok", "service": "quant-engine"}
+    return {"status": "ok", "service": "quant-engine", "version": "1.1.0"}
+
+
+@app.get("/metrics", tags=["Observability"])
+async def metrics_endpoint() -> Response:
+    """Prometheus metrics exporter for the Quant Engine."""
+    content = quant_metrics.generate_prometheus_text()
+    return Response(
+        content=content,
+        media_type="text/plain; version=0.0.4; charset=utf-8",
+    )
+

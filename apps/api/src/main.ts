@@ -8,9 +8,14 @@ import { HttpExceptionFilter } from "./common/filters/http-exception.filter";
 import { ResponseTransformInterceptor } from "./common/interceptors/transform.interceptor";
 import { HttpLoggingInterceptor } from "./common/interceptors/logging.interceptor";
 import { buildValidationPipe } from "./common/pipes/validation.pipe";
+import { PinoLoggerService, MetricsInterceptor } from "./common/observability";
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+
+  // ── Observability & Structured Logging ──────────────────────────────────────
+  const pinoLogger = app.get(PinoLoggerService);
+  app.useLogger(pinoLogger);
 
   // ── Security middleware ─────────────────────────────────────────────────────
   app.use(
@@ -38,9 +43,11 @@ async function bootstrap() {
   // ── Global validation pipe ──────────────────────────────────────────────────
   app.useGlobalPipes(buildValidationPipe());
 
-  // ── Global response transform + logging + serializer ────────────────────────
+  // ── Global response transform + logging + serializer + metrics ─────────────
   const reflector = app.get(Reflector);
+  const metricsInterceptor = app.get(MetricsInterceptor);
   app.useGlobalInterceptors(
+    metricsInterceptor,
     new HttpLoggingInterceptor(),
     new ResponseTransformInterceptor(),
     new ClassSerializerInterceptor(reflector),

@@ -1,0 +1,287 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_docs_audit_production_readiness_review_md",
+      "label": "PRODUCTION_READINESS_REVIEW.md",
+      "file_type": "document",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_production_readiness_review_production_readiness_review_final_sign_off_wealth_compass_platform",
+      "label": "Production Readiness Review & Final Sign-Off \u2014 Wealth Compass Platform",
+      "file_type": "document",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_production_readiness_review_executive_summary_production_sign_off_certification",
+      "label": "Executive Summary & Production Sign-Off Certification",
+      "file_type": "document",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L14"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_production_readiness_review_1_architecture_code_quality_audit",
+      "label": "1. Architecture & Code Quality Audit",
+      "file_type": "document",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L37"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_production_readiness_review_1_1_structural_modularization_monorepo_topology",
+      "label": "1.1 Structural Modularization & Monorepo Topology",
+      "file_type": "document",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L39"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_production_readiness_review_1_2_type_safety_static_analysis",
+      "label": "1.2 Type Safety & Static Analysis",
+      "file_type": "document",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L47"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_production_readiness_review_2_security_cryptography_compliance_certification",
+      "label": "2. Security, Cryptography & Compliance Certification",
+      "file_type": "document",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L54"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_production_readiness_review_2_1_cryptographic_storage_encryption_at_rest",
+      "label": "2.1 Cryptographic Storage & Encryption at Rest",
+      "file_type": "document",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L56"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_production_readiness_review_2_2_owasp_top_10_2021_compliance_matrix",
+      "label": "2.2 OWASP Top 10 (2021) Compliance Matrix",
+      "file_type": "document",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L60"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_production_readiness_review_3_quantitative_analytics_financial_correctness_audit",
+      "label": "3. Quantitative Analytics & Financial Correctness Audit",
+      "file_type": "document",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L77"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_production_readiness_review_3_1_mathematical_soundness_precision_standards",
+      "label": "3.1 Mathematical Soundness & Precision Standards",
+      "file_type": "document",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L79"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_production_readiness_review_4_test_coverage_quality_gates_audit",
+      "label": "4. Test Coverage & Quality Gates Audit",
+      "file_type": "document",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L89"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_production_readiness_review_5_observability_telemetry_sre_readiness",
+      "label": "5. Observability, Telemetry & SRE Readiness",
+      "file_type": "document",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L102"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_production_readiness_review_6_performance_scalability_cloud_infrastructure",
+      "label": "6. Performance, Scalability & Cloud Infrastructure",
+      "file_type": "document",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L120"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_production_readiness_review_6_1_k6_load_stress_test_results",
+      "label": "6.1 K6 Load Stress Test Results",
+      "file_type": "document",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L122"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_production_readiness_review_6_2_aws_cloud_infrastructure_as_code_terraform",
+      "label": "6.2 AWS Cloud Infrastructure as Code (Terraform)",
+      "file_type": "document",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L130"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_production_readiness_review_7_risk_mitigation_sign_off_matrix",
+      "label": "7. Risk Mitigation Sign-Off Matrix",
+      "file_type": "document",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L139"
+    },
+    {
+      "id": "$graphify-root$_docs_audit_production_readiness_review_8_final_authorization_commercial_sign_off",
+      "label": "8. Final Authorization & Commercial Sign-Off",
+      "file_type": "document",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L151"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_docs_audit_production_readiness_review_md",
+      "target": "$graphify-root$_docs_audit_production_readiness_review_production_readiness_review_final_sign_off_wealth_compass_platform",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_production_readiness_review_production_readiness_review_final_sign_off_wealth_compass_platform",
+      "target": "$graphify-root$_docs_audit_production_readiness_review_executive_summary_production_sign_off_certification",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_production_readiness_review_production_readiness_review_final_sign_off_wealth_compass_platform",
+      "target": "$graphify-root$_docs_audit_production_readiness_review_1_architecture_code_quality_audit",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_production_readiness_review_1_architecture_code_quality_audit",
+      "target": "$graphify-root$_docs_audit_production_readiness_review_1_1_structural_modularization_monorepo_topology",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_production_readiness_review_1_architecture_code_quality_audit",
+      "target": "$graphify-root$_docs_audit_production_readiness_review_1_2_type_safety_static_analysis",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_production_readiness_review_production_readiness_review_final_sign_off_wealth_compass_platform",
+      "target": "$graphify-root$_docs_audit_production_readiness_review_2_security_cryptography_compliance_certification",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_production_readiness_review_2_security_cryptography_compliance_certification",
+      "target": "$graphify-root$_docs_audit_production_readiness_review_2_1_cryptographic_storage_encryption_at_rest",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_production_readiness_review_2_security_cryptography_compliance_certification",
+      "target": "$graphify-root$_docs_audit_production_readiness_review_2_2_owasp_top_10_2021_compliance_matrix",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_production_readiness_review_production_readiness_review_final_sign_off_wealth_compass_platform",
+      "target": "$graphify-root$_docs_audit_production_readiness_review_3_quantitative_analytics_financial_correctness_audit",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_production_readiness_review_3_quantitative_analytics_financial_correctness_audit",
+      "target": "$graphify-root$_docs_audit_production_readiness_review_3_1_mathematical_soundness_precision_standards",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_production_readiness_review_production_readiness_review_final_sign_off_wealth_compass_platform",
+      "target": "$graphify-root$_docs_audit_production_readiness_review_4_test_coverage_quality_gates_audit",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_production_readiness_review_production_readiness_review_final_sign_off_wealth_compass_platform",
+      "target": "$graphify-root$_docs_audit_production_readiness_review_5_observability_telemetry_sre_readiness",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_production_readiness_review_production_readiness_review_final_sign_off_wealth_compass_platform",
+      "target": "$graphify-root$_docs_audit_production_readiness_review_6_performance_scalability_cloud_infrastructure",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L120",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_production_readiness_review_6_performance_scalability_cloud_infrastructure",
+      "target": "$graphify-root$_docs_audit_production_readiness_review_6_1_k6_load_stress_test_results",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L122",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_production_readiness_review_6_performance_scalability_cloud_infrastructure",
+      "target": "$graphify-root$_docs_audit_production_readiness_review_6_2_aws_cloud_infrastructure_as_code_terraform",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L130",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_production_readiness_review_production_readiness_review_final_sign_off_wealth_compass_platform",
+      "target": "$graphify-root$_docs_audit_production_readiness_review_7_risk_mitigation_sign_off_matrix",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L139",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_audit_production_readiness_review_production_readiness_review_final_sign_off_wealth_compass_platform",
+      "target": "$graphify-root$_docs_audit_production_readiness_review_8_final_authorization_commercial_sign_off",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/audit/PRODUCTION_READINESS_REVIEW.md",
+      "source_location": "L151",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

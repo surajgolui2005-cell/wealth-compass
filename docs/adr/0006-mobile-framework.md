@@ -1,15 +1,15 @@
 # ADR-0006: Mobile Framework
 
-| Field          | Value                                            |
-|----------------|--------------------------------------------------|
-| **ADR ID**     | 0006                                             |
-| **Title**      | Mobile Application Framework                     |
-| **Status**     | Accepted                                         |
-| **Date**       | 2026-08-13                                       |
-| **Deciders**   | Principal Architecture Team                      |
-| **Supersedes** | —                                                |
-| **Superseded by** | —                                             |
-| **Ref**        | [ARCHITECTURE.md](file:///c:/Users/suraj/project/Investor%20Portolio%20Monitoring%20and%20Risk%20Management%20System/docs/architecture/ARCHITECTURE.md#L2) §2, §8.1, D-006 |
+| Field             | Value                                                              |
+| ----------------- | ------------------------------------------------------------------ |
+| **ADR ID**        | 0006                                                               |
+| **Title**         | Mobile Application Framework                                       |
+| **Status**        | Accepted                                                           |
+| **Date**          | 2026-08-13                                                         |
+| **Deciders**      | Principal Architecture Team                                        |
+| **Supersedes**    | —                                                                  |
+| **Superseded by** | —                                                                  |
+| **Ref**           | [ARCHITECTURE.md](../architecture/ARCHITECTURE.md) §2, §8.1, D-006 |
 
 ---
 
@@ -49,24 +49,24 @@ The mobile codebase will reside in `apps/mobile` within the Turborepo monorepo. 
 
 **Description:** An open-source framework by Meta that allows writing JavaScript/TypeScript code to render native platform UI components. Expo provides a layer of pre-configured libraries, builders, and OTA (Over-The-Air) update tooling to simplify native API interactions.
 
-| Criteria | Assessment |
-|---|---|
-| Code Sharing / Types | ✅ Excellent — Native TypeScript support; imports types directly from `packages/shared-types` |
-| Developer Velocity | ✅ High — Frontend web engineers can contribute immediately; single language (TS) for Web, Backend, and Mobile |
-| Performance | ✅ High — Compiles to native UI components; supports hardware acceleration for animations and charts |
-| Native API Access | ✅ Rich — Expo ecosystem provides unified, tested APIs for biometrics, push notifications, and secure storage |
-| OTA Updates | ✅ Native support — EAS Update allows pushing hotfixes and UI tweaks without waiting for App Store approval |
+| Criteria             | Assessment                                                                                                     |
+| -------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Code Sharing / Types | ✅ Excellent — Native TypeScript support; imports types directly from `packages/shared-types`                  |
+| Developer Velocity   | ✅ High — Frontend web engineers can contribute immediately; single language (TS) for Web, Backend, and Mobile |
+| Performance          | ✅ High — Compiles to native UI components; supports hardware acceleration for animations and charts           |
+| Native API Access    | ✅ Rich — Expo ecosystem provides unified, tested APIs for biometrics, push notifications, and secure storage  |
+| OTA Updates          | ✅ Native support — EAS Update allows pushing hotfixes and UI tweaks without waiting for App Store approval    |
 
 ### Option B: Flutter (Dart)
 
 **Description:** Google’s cross-platform UI framework. Apps are written in the Dart language, and UI components are rendered using Flutter’s custom Skia/Impeller graphics engine, bypassing native platform wrappers.
 
-| Criteria | Assessment |
-|---|---|
-| UI Fidelity | ✅ High — Identical layout representation across all platforms; excellent animation performance |
-| Developer Velocity | ⚠️ Moderate — Requires learning the Dart programming language and widget lifecycle concepts |
+| Criteria             | Assessment                                                                                                               |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| UI Fidelity          | ✅ High — Identical layout representation across all platforms; excellent animation performance                          |
+| Developer Velocity   | ⚠️ Moderate — Requires learning the Dart programming language and widget lifecycle concepts                              |
 | Code Sharing / Types | ❌ Weak — Mobile cannot share code or types directly with the Next.js web app; requires compiling OpenAPI models to Dart |
-| Native Integrations | ✅ High — Rich library plugins for biometrics and push notifications |
+| Native Integrations  | ✅ High — Rich library plugins for biometrics and push notifications                                                     |
 
 **Why not selected:** Flutter requires writing code in Dart, which isolates the mobile codebase from our TypeScript-centric monorepo. We would lose the ability to share type contracts directly (`packages/shared-types`), introducing API contract drift risk and forcing us to run custom code-generation pipelines.
 
@@ -74,13 +74,13 @@ The mobile codebase will reside in `apps/mobile` within the Turborepo monorepo. 
 
 **Description:** Developing two completely separate native applications. Swift and SwiftUI are used for iOS; Kotlin and Jetpack Compose are used for Android.
 
-| Criteria | Assessment |
-|---|---|
-| Application Performance | ✅ Maximum — Zero bridge overhead; direct access to native OS optimizations and layouts |
-| App Size | ✅ Smallest — No cross-platform runtime bundles required |
-| Developer Velocity | ❌ Lowest — Requires building, testing, and debugging every feature twice |
-| Team Footprint | ❌ High — Requires hiring distinct Swift and Kotlin engineers, doubling the team's operational costs |
-| Code Sharing | ❌ Zero — No logic or code sharing between iOS, Android, and Web platforms |
+| Criteria                | Assessment                                                                                           |
+| ----------------------- | ---------------------------------------------------------------------------------------------------- |
+| Application Performance | ✅ Maximum — Zero bridge overhead; direct access to native OS optimizations and layouts              |
+| App Size                | ✅ Smallest — No cross-platform runtime bundles required                                             |
+| Developer Velocity      | ❌ Lowest — Requires building, testing, and debugging every feature twice                            |
+| Team Footprint          | ❌ High — Requires hiring distinct Swift and Kotlin engineers, doubling the team's operational costs |
+| Code Sharing            | ❌ Zero — No logic or code sharing between iOS, Android, and Web platforms                           |
 
 **Why not selected:** While native development offers the best performance, the cost of maintaining two separate mobile repositories—in addition to our web app—is too high for a startup scale. React Native provides 95% of native performance at a fraction of the operational cost.
 
@@ -88,13 +88,13 @@ The mobile codebase will reside in `apps/mobile` within the Turborepo monorepo. 
 
 **Description:** Do not build native mobile apps. Optimize the Next.js 14 web application for mobile web browsers, and make it installable on iOS and Android home screens as a PWA.
 
-| Criteria | Assessment |
-|---|---|
-| Deployment Cost | ✅ Zero — Single codebase deployed to a web server; no App Store review processes |
-| Code Sharing | ✅ 100% — Web and mobile are the exact same application code |
-| Push Notifications | ❌ Poor — Weak support on iOS Safari; notifications are unreliable compared to native push channels |
-| Biometric Security | ❌ Weak — WebAuthn is complex to configure and lacks native FaceID prompt customization |
-| Performance | ❌ Limited — Browser engines struggle to render large, scrollable financial lists and charts smoothly |
+| Criteria           | Assessment                                                                                            |
+| ------------------ | ----------------------------------------------------------------------------------------------------- |
+| Deployment Cost    | ✅ Zero — Single codebase deployed to a web server; no App Store review processes                     |
+| Code Sharing       | ✅ 100% — Web and mobile are the exact same application code                                          |
+| Push Notifications | ❌ Poor — Weak support on iOS Safari; notifications are unreliable compared to native push channels   |
+| Biometric Security | ❌ Weak — WebAuthn is complex to configure and lacks native FaceID prompt customization               |
+| Performance        | ❌ Limited — Browser engines struggle to render large, scrollable financial lists and charts smoothly |
 
 **Why not selected:** A financial monitoring application requires strong user retention, which depends on reliable push notifications (e.g. alert breaches) and seamless security (e.g. instant biometric login). PWAs cannot deliver the robust system integration and smooth UX that users expect from a premium financial product.
 
@@ -124,12 +124,12 @@ The mobile codebase will reside in `apps/mobile` within the Turborepo monorepo. 
 
 ## Compliance Check
 
-| Requirement | Met? | Notes |
-|---|---|---|
-| **Financial precision** | ✅ | Utilizes the same decimal validation utilities and shared types as the Web interface, preventing calculation drift. |
-| **Developer velocity** | ✅ | Shared language (TypeScript) and shared component structure allow developers to build mobile screens in parallel with web views. |
-| **System scalability** | ✅ | Offloads calculations to the backend; mobile app acts as a lean display client running on native OS threads. |
+| Requirement             | Met? | Notes                                                                                                                            |
+| ----------------------- | ---- | -------------------------------------------------------------------------------------------------------------------------------- |
+| **Financial precision** | ✅   | Utilizes the same decimal validation utilities and shared types as the Web interface, preventing calculation drift.              |
+| **Developer velocity**  | ✅   | Shared language (TypeScript) and shared component structure allow developers to build mobile screens in parallel with web views. |
+| **System scalability**  | ✅   | Offloads calculations to the backend; mobile app acts as a lean display client running on native OS threads.                     |
 
 ---
 
-*ADR-0006 — Accepted 2026-08-13*
+_ADR-0006 — Accepted 2026-08-13_

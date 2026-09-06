@@ -1,0 +1,304 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_readme_md",
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_readme_wealth_compass_investor_portfolio_monitoring_risk_management_system",
+      "label": "Wealth Compass \u2014 Investor Portfolio Monitoring & Risk Management System",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_readme_overview",
+      "label": "\ud83d\ude80 Overview",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L15"
+    },
+    {
+      "id": "$graphify-root$_readme_key_platform_capabilities",
+      "label": "\u2728 Key Platform Capabilities",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L51"
+    },
+    {
+      "id": "$graphify-root$_readme_technology_matrix",
+      "label": "\ud83d\udee0\ufe0f Technology Matrix",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L64"
+    },
+    {
+      "id": "$graphify-root$_readme_quick_start_3_command_boot",
+      "label": "\ud83d\ude80 Quick Start (3-Command Boot)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L80"
+    },
+    {
+      "id": "$graphify-root$_readme_accessing_running_services",
+      "label": "Accessing Running Services",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L95"
+    },
+    {
+      "id": "$graphify-root$_readme_living_documentation_suite",
+      "label": "\ud83d\udcda Living Documentation Suite",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L107"
+    },
+    {
+      "id": "$graphify-root$_readme_automated_testing_verification",
+      "label": "\ud83e\uddea Automated Testing & Verification",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L128"
+    },
+    {
+      "id": "$graphify-root$_readme_ci_cd_automation_build_pipelines",
+      "label": "\ud83d\udd04 CI/CD Automation & Build Pipelines",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L151"
+    },
+    {
+      "id": "$graphify-root$_readme_license",
+      "label": "\ud83d\udcc4 License",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L199"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_readme_md",
+      "target": "$graphify-root$_readme_wealth_compass_investor_portfolio_monitoring_risk_management_system",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_readme_wealth_compass_investor_portfolio_monitoring_risk_management_system",
+      "target": "$graphify-root$_readme_overview",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_readme_wealth_compass_investor_portfolio_monitoring_risk_management_system",
+      "target": "$graphify-root$_readme_key_platform_capabilities",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_readme_wealth_compass_investor_portfolio_monitoring_risk_management_system",
+      "target": "$graphify-root$_readme_technology_matrix",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_readme_wealth_compass_investor_portfolio_monitoring_risk_management_system",
+      "target": "$graphify-root$_readme_quick_start_3_command_boot",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_readme_quick_start_3_command_boot",
+      "target": "$graphify-root$_readme_accessing_running_services",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L95",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_readme_md",
+      "target": "$graphify-root$_docs_setup_guide_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L103",
+      "weight": 1.0,
+      "target_file": "$graphify-root$/docs/SETUP_GUIDE.md"
+    },
+    {
+      "source": "$graphify-root$_readme_wealth_compass_investor_portfolio_monitoring_risk_management_system",
+      "target": "$graphify-root$_readme_living_documentation_suite",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_readme_md",
+      "target": "$graphify-root$_docs_troubleshooting_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L114",
+      "weight": 1.0,
+      "target_file": "$graphify-root$/docs/TROUBLESHOOTING.md"
+    },
+    {
+      "source": "$graphify-root$_readme_md",
+      "target": "$graphify-root$_docs_data_dictionary_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L115",
+      "weight": 1.0,
+      "target_file": "$graphify-root$/docs/DATA_DICTIONARY.md"
+    },
+    {
+      "source": "$graphify-root$_readme_md",
+      "target": "$graphify-root$_docs_architecture_architecture_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L116",
+      "weight": 1.0,
+      "target_file": "$graphify-root$/docs/architecture/ARCHITECTURE.md"
+    },
+    {
+      "source": "$graphify-root$_readme_md",
+      "target": "$graphify-root$_api_contract_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L117",
+      "weight": 1.0,
+      "target_file": "$graphify-root$/API_CONTRACT.md"
+    },
+    {
+      "source": "$graphify-root$_readme_md",
+      "target": "$graphify-root$_database_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L118",
+      "weight": 1.0,
+      "target_file": "$graphify-root$/DATABASE.md"
+    },
+    {
+      "source": "$graphify-root$_readme_md",
+      "target": "$graphify-root$_docs_deployment_cloud_deployment_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L119",
+      "weight": 1.0,
+      "target_file": "$graphify-root$/docs/deployment/CLOUD_DEPLOYMENT.md"
+    },
+    {
+      "source": "$graphify-root$_readme_md",
+      "target": "$graphify-root$_docs_operations_observability_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L120",
+      "weight": 1.0,
+      "target_file": "$graphify-root$/docs/operations/OBSERVABILITY.md"
+    },
+    {
+      "source": "$graphify-root$_readme_md",
+      "target": "$graphify-root$_docs_security_security_audit_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L121",
+      "weight": 1.0,
+      "target_file": "$graphify-root$/docs/security/SECURITY_AUDIT.md"
+    },
+    {
+      "source": "$graphify-root$_readme_md",
+      "target": "$graphify-root$_docs_performance_benchmark_results_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L122",
+      "weight": 1.0,
+      "target_file": "$graphify-root$/docs/performance/BENCHMARK_RESULTS.md"
+    },
+    {
+      "source": "$graphify-root$_readme_md",
+      "target": "$graphify-root$_docs_analytics_analytics_methodology_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L123",
+      "weight": 1.0,
+      "target_file": "$graphify-root$/docs/analytics/ANALYTICS_METHODOLOGY.md"
+    },
+    {
+      "source": "$graphify-root$_readme_md",
+      "target": "$graphify-root$_docs_analytics_risk_methodology_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L124",
+      "weight": 1.0,
+      "target_file": "$graphify-root$/docs/analytics/RISK_METHODOLOGY.md"
+    },
+    {
+      "source": "$graphify-root$_readme_wealth_compass_investor_portfolio_monitoring_risk_management_system",
+      "target": "$graphify-root$_readme_automated_testing_verification",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L128",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_readme_wealth_compass_investor_portfolio_monitoring_risk_management_system",
+      "target": "$graphify-root$_readme_ci_cd_automation_build_pipelines",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L151",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_readme_wealth_compass_investor_portfolio_monitoring_risk_management_system",
+      "target": "$graphify-root$_readme_license",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L199",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_readme_md",
+      "target": "$graphify-root$_license_md",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L201",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

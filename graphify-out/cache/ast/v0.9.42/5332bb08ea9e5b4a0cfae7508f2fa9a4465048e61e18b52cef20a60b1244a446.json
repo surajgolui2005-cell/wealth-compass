@@ -1,0 +1,415 @@
+{
+  "nodes": [
+    {
+      "id": "$graphify-root$_docs_data_dictionary_md",
+      "label": "DATA_DICTIONARY.md",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_data_dictionary_wealth_compass_platform",
+      "label": "Data Dictionary \u2014 Wealth Compass Platform",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_1_overview_financial_precision_standards",
+      "label": "1. Overview & Financial Precision Standards",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L12"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_1_1_precision_tiers",
+      "label": "1.1 Precision Tiers",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L16"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_1_2_system_audit_conventions",
+      "label": "1.2 System Audit Conventions",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L25"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_2_entity_model_catalog",
+      "label": "2. Entity Model Catalog",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L34"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_3_detailed_table_specifications",
+      "label": "3. Detailed Table Specifications",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L45"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_3_1_users",
+      "label": "3.1 `users`",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L47"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_3_2_user_preferences",
+      "label": "3.2 `user_preferences`",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L69"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_3_3_portfolios",
+      "label": "3.3 `portfolios`",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L86"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_3_4_financial_provider_accounts",
+      "label": "3.4 `financial_provider_accounts`",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L107"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_3_5_asset_classes",
+      "label": "3.5 `asset_classes`",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L132"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_3_6_assets",
+      "label": "3.6 `assets`",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L147"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_3_7_holdings",
+      "label": "3.7 `holdings`",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L173"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_3_8_transactions",
+      "label": "3.8 `transactions`",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L204"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_3_9_market_prices",
+      "label": "3.9 `market_prices`",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L233"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_3_10_portfolio_snapshots",
+      "label": "3.10 `portfolio_snapshots`",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L257"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_3_11_risk_metric_snapshots",
+      "label": "3.11 `risk_metric_snapshots`",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L280"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_3_12_alert_rules",
+      "label": "3.12 `alert_rules`",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L306"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_3_13_alert_logs",
+      "label": "3.13 `alert_logs`",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L330"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_3_14_reports",
+      "label": "3.14 `reports`",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L350"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_4_enumeration_reference_guide",
+      "label": "4. Enumeration Reference Guide",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L375"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_5_domain_event_schema_catalog",
+      "label": "5. Domain Event Schema Catalog",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L395"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_5_1_transaction_recorded",
+      "label": "5.1 `transaction.recorded`",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L399"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_5_2_holding_updated",
+      "label": "5.2 `holding.updated`",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L418"
+    },
+    {
+      "id": "$graphify-root$_docs_data_dictionary_5_3_portfolio_updated",
+      "label": "5.3 `portfolio.updated`",
+      "file_type": "document",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L435"
+    }
+  ],
+  "edges": [
+    {
+      "source": "$graphify-root$_docs_data_dictionary_md",
+      "target": "$graphify-root$_docs_data_dictionary_data_dictionary_wealth_compass_platform",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_data_dictionary_wealth_compass_platform",
+      "target": "$graphify-root$_docs_data_dictionary_1_overview_financial_precision_standards",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_1_overview_financial_precision_standards",
+      "target": "$graphify-root$_docs_data_dictionary_1_1_precision_tiers",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_1_overview_financial_precision_standards",
+      "target": "$graphify-root$_docs_data_dictionary_1_2_system_audit_conventions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_data_dictionary_wealth_compass_platform",
+      "target": "$graphify-root$_docs_data_dictionary_2_entity_model_catalog",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_data_dictionary_wealth_compass_platform",
+      "target": "$graphify-root$_docs_data_dictionary_3_detailed_table_specifications",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_3_detailed_table_specifications",
+      "target": "$graphify-root$_docs_data_dictionary_3_1_users",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_3_detailed_table_specifications",
+      "target": "$graphify-root$_docs_data_dictionary_3_2_user_preferences",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_3_detailed_table_specifications",
+      "target": "$graphify-root$_docs_data_dictionary_3_3_portfolios",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_3_detailed_table_specifications",
+      "target": "$graphify-root$_docs_data_dictionary_3_4_financial_provider_accounts",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_3_detailed_table_specifications",
+      "target": "$graphify-root$_docs_data_dictionary_3_5_asset_classes",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L132",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_3_detailed_table_specifications",
+      "target": "$graphify-root$_docs_data_dictionary_3_6_assets",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L147",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_3_detailed_table_specifications",
+      "target": "$graphify-root$_docs_data_dictionary_3_7_holdings",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L173",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_3_detailed_table_specifications",
+      "target": "$graphify-root$_docs_data_dictionary_3_8_transactions",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L204",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_3_detailed_table_specifications",
+      "target": "$graphify-root$_docs_data_dictionary_3_9_market_prices",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L233",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_3_detailed_table_specifications",
+      "target": "$graphify-root$_docs_data_dictionary_3_10_portfolio_snapshots",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L257",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_3_detailed_table_specifications",
+      "target": "$graphify-root$_docs_data_dictionary_3_11_risk_metric_snapshots",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L280",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_3_detailed_table_specifications",
+      "target": "$graphify-root$_docs_data_dictionary_3_12_alert_rules",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L306",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_3_detailed_table_specifications",
+      "target": "$graphify-root$_docs_data_dictionary_3_13_alert_logs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L330",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_3_detailed_table_specifications",
+      "target": "$graphify-root$_docs_data_dictionary_3_14_reports",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L350",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_data_dictionary_wealth_compass_platform",
+      "target": "$graphify-root$_docs_data_dictionary_4_enumeration_reference_guide",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L375",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_data_dictionary_wealth_compass_platform",
+      "target": "$graphify-root$_docs_data_dictionary_5_domain_event_schema_catalog",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L395",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_5_domain_event_schema_catalog",
+      "target": "$graphify-root$_docs_data_dictionary_5_1_transaction_recorded",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L399",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_5_domain_event_schema_catalog",
+      "target": "$graphify-root$_docs_data_dictionary_5_2_holding_updated",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L418",
+      "weight": 1.0
+    },
+    {
+      "source": "$graphify-root$_docs_data_dictionary_5_domain_event_schema_catalog",
+      "target": "$graphify-root$_docs_data_dictionary_5_3_portfolio_updated",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/DATA_DICTIONARY.md",
+      "source_location": "L435",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

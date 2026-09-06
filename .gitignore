@@ -58,3 +58,26 @@ __pycache__/
 .ipynb_checkpoints/
 pip-log.txt
 pip-delete-this-directory.txt
+
+# Terraform
+**/.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfvars
+!*.tfvars.example
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+scripts/terraform-bin/
+
+# Executables & binaries
+*.exe
+*.dll
+*.so
+*.dylib
+

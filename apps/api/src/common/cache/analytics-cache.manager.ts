@@ -261,6 +261,19 @@ export class AnalyticsCacheManager implements OnModuleInit, OnModuleDestroy {
   }
 
   /**
+   * Pings the Redis instance to verify connectivity.
+   */
+  async ping(): Promise<boolean> {
+    if (!this.redis) return false;
+    try {
+      const pong = await this.redis.ping();
+      return pong === "PONG";
+    } catch {
+      return false;
+    }
+  }
+
+  /**
    * Returns cache metrics and hit ratio.
    */
   getStats(): CacheStats {
