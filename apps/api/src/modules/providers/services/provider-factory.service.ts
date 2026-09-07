@@ -1,9 +1,11 @@
-import { BadRequestException, Injectable, OnModuleInit } from '@nestjs/common';
-import { ProviderCode } from '@prisma/client';
-import { CsvProviderAdapter } from '../adapters/csv-provider.adapter';
-import { ManualEntryAdapter } from '../adapters/manual-entry.adapter';
-import { MockBrokerProviderAdapter } from '../adapters/mock-broker.adapter';
-import { FinancialDataProvider } from '../interfaces/provider.interface';
+import { BadRequestException, Injectable, OnModuleInit } from "@nestjs/common";
+import { ProviderCode } from "@prisma/client";
+import { CsvProviderAdapter } from "../adapters/csv-provider.adapter";
+import { CamsCasPdfAdapter } from "../adapters/cams-cas-pdf.adapter";
+import { ManualEntryAdapter } from "../adapters/manual-entry.adapter";
+import { MockBrokerProviderAdapter } from "../adapters/mock-broker.adapter";
+import { RbiAccountAggregatorAdapter } from "../adapters/rbi-account-aggregator.adapter";
+import { FinancialDataProvider } from "../interfaces/provider.interface";
 
 @Injectable()
 export class ProviderFactoryService implements OnModuleInit {
@@ -13,11 +15,15 @@ export class ProviderFactoryService implements OnModuleInit {
     private readonly manualAdapter: ManualEntryAdapter,
     private readonly csvAdapter: CsvProviderAdapter,
     private readonly mockBrokerAdapter: MockBrokerProviderAdapter,
+    private readonly rbiAaAdapter: RbiAccountAggregatorAdapter,
+    private readonly camsCasAdapter: CamsCasPdfAdapter,
   ) {}
 
   onModuleInit() {
     this.registerProvider(this.manualAdapter);
     this.registerProvider(this.csvAdapter);
+    this.registerProvider(this.rbiAaAdapter);
+    this.registerProvider(this.camsCasAdapter);
 
     // Register mock broker adapter for all supported broker codes
     const brokers = [
@@ -46,7 +52,7 @@ export class ProviderFactoryService implements OnModuleInit {
    */
   getProvider(providerCode: ProviderCode | string): FinancialDataProvider {
     if (!providerCode) {
-      throw new BadRequestException('Provider code is required');
+      throw new BadRequestException("Provider code is required");
     }
 
     const key = providerCode.toString().toUpperCase();

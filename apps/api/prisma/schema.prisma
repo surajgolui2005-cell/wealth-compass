@@ -31,6 +31,8 @@ enum ProviderCode {
   WAZIRX
   MANUAL
   CSV
+  RBI_AA
+  CAMS_CAS
 }
 
 enum ProviderStatus {

@@ -2,7 +2,7 @@
   "pythonVersion": "3.13",
   "pythonPlatform": "Windows",
   "include": ["src", "tests"],
-  "extraPaths": ["."],
+  "extraPaths": [".", "C:/Users/suraj/AppData/Local/Programs/Python/Python313/Lib/site-packages"],
   "reportMissingImports": "warning",
   "reportMissingModuleSource": "none"
 }

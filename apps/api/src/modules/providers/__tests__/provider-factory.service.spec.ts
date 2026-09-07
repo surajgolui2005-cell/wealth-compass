@@ -1,14 +1,21 @@
-import { BadRequestException } from '@nestjs/common';
-import { ProviderCode } from '@prisma/client';
-import { CsvProviderAdapter } from '../adapters/csv-provider.adapter';
-import { ManualEntryAdapter } from '../adapters/manual-entry.adapter';
-import { MockBrokerProviderAdapter } from '../adapters/mock-broker.adapter';
-import { FinancialDataProvider, RawExternalHolding, RawExternalTransaction } from '../interfaces/provider.interface';
-import { ProviderFactoryService } from '../services/provider-factory.service';
+import { BadRequestException } from "@nestjs/common";
+import { ProviderCode } from "@prisma/client";
+import { EncryptionService } from "../../../common/crypto/encryption.service";
+import { CsvProviderAdapter } from "../adapters/csv-provider.adapter";
+import { CamsCasPdfAdapter } from "../adapters/cams-cas-pdf.adapter";
+import { ManualEntryAdapter } from "../adapters/manual-entry.adapter";
+import { MockBrokerProviderAdapter } from "../adapters/mock-broker.adapter";
+import { RbiAccountAggregatorAdapter } from "../adapters/rbi-account-aggregator.adapter";
+import {
+  FinancialDataProvider,
+  RawExternalHolding,
+  RawExternalTransaction,
+} from "../interfaces/provider.interface";
+import { ProviderFactoryService } from "../services/provider-factory.service";
 
 class CustomDummyBrokerAdapter implements FinancialDataProvider {
   getProviderCode(): string {
-    return 'INTERACTIVE_BROKERS';
+    return "INTERACTIVE_BROKERS";
   }
 
   validateConfig(): boolean {
@@ -20,7 +27,7 @@ class CustomDummyBrokerAdapter implements FinancialDataProvider {
   }
 
   async fetchHoldings(): Promise<RawExternalHolding[]> {
-    return [{ symbol: 'AAPL', quantity: 10, currentPrice: 180 }];
+    return [{ symbol: "AAPL", quantity: 10, currentPrice: 180 }];
   }
 
   async fetchTransactions(): Promise<RawExternalTransaction[]> {
@@ -28,31 +35,42 @@ class CustomDummyBrokerAdapter implements FinancialDataProvider {
   }
 }
 
-describe('ProviderFactoryService', () => {
+describe("ProviderFactoryService", () => {
   let factory: ProviderFactoryService;
   let manualAdapter: ManualEntryAdapter;
   let csvAdapter: CsvProviderAdapter;
   let mockBrokerAdapter: MockBrokerProviderAdapter;
+  let rbiAaAdapter: RbiAccountAggregatorAdapter;
+  let camsCasAdapter: CamsCasPdfAdapter;
 
   beforeEach(() => {
     manualAdapter = new ManualEntryAdapter();
     csvAdapter = new CsvProviderAdapter();
     mockBrokerAdapter = new MockBrokerProviderAdapter();
-    factory = new ProviderFactoryService(manualAdapter, csvAdapter, mockBrokerAdapter);
+    const enc = new EncryptionService(undefined, "test_key_for_factory_spec_32byte");
+    rbiAaAdapter = new RbiAccountAggregatorAdapter(enc);
+    camsCasAdapter = new CamsCasPdfAdapter();
+    factory = new ProviderFactoryService(
+      manualAdapter,
+      csvAdapter,
+      mockBrokerAdapter,
+      rbiAaAdapter,
+      camsCasAdapter,
+    );
     factory.onModuleInit();
   });
 
-  it('should resolve MANUAL adapter correctly', () => {
+  it("should resolve MANUAL adapter correctly", () => {
     const provider = factory.getProvider(ProviderCode.MANUAL);
     expect(provider.getProviderCode()).toBe(ProviderCode.MANUAL);
   });
 
-  it('should resolve CSV adapter correctly', () => {
+  it("should resolve CSV adapter correctly", () => {
     const provider = factory.getProvider(ProviderCode.CSV);
     expect(provider.getProviderCode()).toBe(ProviderCode.CSV);
   });
 
-  it('should resolve broker adapters (ZERODHA, BINANCE, GROWW) to MockBrokerProviderAdapter', () => {
+  it("should resolve broker adapters (ZERODHA, BINANCE, GROWW) to MockBrokerProviderAdapter", () => {
     const zerodha = factory.getProvider(ProviderCode.ZERODHA);
     const binance = factory.getProvider(ProviderCode.BINANCE);
 
@@ -60,19 +78,19 @@ describe('ProviderFactoryService', () => {
     expect(binance).toBe(mockBrokerAdapter);
   });
 
-  it('should throw BadRequestException when requesting an unsupported provider code', () => {
-    expect(() => factory.getProvider('UNKNOWN_BROKER')).toThrow(BadRequestException);
+  it("should throw BadRequestException when requesting an unsupported provider code", () => {
+    expect(() => factory.getProvider("UNKNOWN_BROKER")).toThrow(BadRequestException);
   });
 
-  it('should allow registering a new custom adapter without modifying core code', async () => {
+  it("should allow registering a new custom adapter without modifying core code", async () => {
     const customAdapter = new CustomDummyBrokerAdapter();
     factory.registerProvider(customAdapter);
 
-    const resolved = factory.getProvider('INTERACTIVE_BROKERS');
+    const resolved = factory.getProvider("INTERACTIVE_BROKERS");
     expect(resolved).toBe(customAdapter);
 
     const holdings = await resolved.fetchHoldings({});
     expect(holdings).toHaveLength(1);
-    expect(holdings[0].symbol).toBe('AAPL');
+    expect(holdings[0].symbol).toBe("AAPL");
   });
 });
