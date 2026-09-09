@@ -1,12 +1,8 @@
-'use client';
+"use client";
 
-import { PieChart, Pie, Cell, Tooltip, Legend, type TooltipProps } from 'recharts';
-import { ChartContainer } from './chart-container';
-import {
-  COLOR_SEQUENCE,
-  TOOLTIP_STYLE,
-  formatTooltipCurrency,
-} from './chart-theme';
+import { PieChart, Pie, Cell, Tooltip, Legend, type TooltipProps } from "recharts";
+import { ChartContainer } from "./chart-container";
+import { COLOR_SEQUENCE, TOOLTIP_STYLE, formatTooltipCurrency } from "./chart-theme";
 
 export interface AllocationSlice {
   name: string;
@@ -22,14 +18,14 @@ interface AllocationDonutChartProps {
   isLoading?: boolean;
 }
 
-function CustomTooltip({ active, payload }: TooltipProps<number, string>) {
+function CustomTooltip({ active, payload }: any) {
   if (!active || !payload?.length) return null;
   const item = payload[0];
   const pct = item?.payload?.pct as number;
   return (
     <div style={TOOLTIP_STYLE}>
       <p className="font-medium">{item?.name}</p>
-      <p style={{ color: item?.payload?.color ?? '#3b82f6' }}>
+      <p style={{ color: item?.payload?.color ?? "#3b82f6" }}>
         {formatTooltipCurrency(item?.value ?? 0)}
       </p>
       <p className="text-muted-foreground text-xs">{pct?.toFixed(1)}% of portfolio</p>
@@ -42,10 +38,21 @@ function CenterLabel({ viewBox, total, currency }: any) {
   const { cx, cy } = viewBox;
   return (
     <g>
-      <text x={cx} y={cy - 6} textAnchor="middle" className="fill-foreground" style={{ fontSize: 13, fontWeight: 600 }}>
+      <text
+        x={cx}
+        y={cy - 6}
+        textAnchor="middle"
+        className="fill-foreground"
+        style={{ fontSize: 13, fontWeight: 600 }}
+      >
         {formatTooltipCurrency(total, currency)}
       </text>
-      <text x={cx} y={cy + 12} textAnchor="middle" style={{ fontSize: 11, fill: 'hsl(var(--muted-foreground))' }}>
+      <text
+        x={cx}
+        y={cy + 12}
+        textAnchor="middle"
+        style={{ fontSize: 11, fill: "hsl(var(--muted-foreground))" }}
+      >
         Total
       </text>
     </g>
@@ -55,7 +62,7 @@ function CenterLabel({ viewBox, total, currency }: any) {
 export function AllocationDonutChart({
   data,
   totalValue,
-  currency = 'INR',
+  currency = "INR",
   height = 300,
   isLoading = false,
 }: AllocationDonutChartProps) {
@@ -87,7 +94,7 @@ export function AllocationDonutChart({
           dataKey="value"
           isAnimationActive
           animationDuration={500}
-          label={({ name, pct }) => `${name} ${pct.toFixed(0)}%`}
+          label={({ name, pct }: any) => `${name} ${(pct ?? 0).toFixed(0)}%`}
           labelLine={false}
         >
           {enriched.map((entry, i) => (

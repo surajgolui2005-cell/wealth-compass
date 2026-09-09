@@ -26,6 +26,8 @@ enum RiskTolerance {
 enum ProviderCode {
   ZERODHA
   GROWW
+  ANGEL_ONE
+  UPSTOX
   BINANCE
   ICICI_DIRECT
   WAZIRX

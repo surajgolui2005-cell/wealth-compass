@@ -29,6 +29,8 @@ export class ProviderFactoryService implements OnModuleInit {
     const brokers = [
       ProviderCode.ZERODHA,
       ProviderCode.GROWW,
+      ProviderCode.ANGEL_ONE,
+      ProviderCode.UPSTOX,
       ProviderCode.BINANCE,
       ProviderCode.ICICI_DIRECT,
       ProviderCode.WAZIRX,

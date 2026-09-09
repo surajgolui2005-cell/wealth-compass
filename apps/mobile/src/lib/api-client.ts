@@ -1,13 +1,18 @@
-import axios, { AxiosError } from 'axios';
-import Constants from 'expo-constants';
+import axios, { AxiosError } from "axios";
+import Constants from "expo-constants";
 
+// Auto-detect host IP so physical phones running Expo Go on the same Wi-Fi can connect to PC backend
+const hostUri = Constants.expoConfig?.hostUri;
+const hostIp = hostUri ? hostUri.split(":")[0] : "localhost";
+const configuredBase = Constants.expoConfig?.extra?.apiBaseUrl as string;
 const API_BASE =
-  (Constants.expoConfig?.extra?.apiBaseUrl as string) ?? 'http://localhost:3000';
+  process.env.EXPO_PUBLIC_API_URL ||
+  (configuredBase ? configuredBase.replace("localhost", hostIp) : `http://${hostIp}:3000`);
 
 export const apiClient = axios.create({
   baseURL: `${API_BASE}/api/v1`,
   withCredentials: true,
-  headers: { 'Content-Type': 'application/json' },
+  headers: { "Content-Type": "application/json" },
   timeout: 15_000,
 });
 
@@ -31,9 +36,7 @@ apiClient.interceptors.response.use(
     }
     const apiError = (error.response?.data as any)?.error;
     return Promise.reject(
-      apiError
-        ? new ApiError(apiError.code, apiError.message, apiError.details)
-        : error,
+      apiError ? new ApiError(apiError.code, apiError.message, apiError.details) : error,
     );
   },
 );
@@ -45,6 +48,6 @@ export class ApiError extends Error {
     public readonly details?: any,
   ) {
     super(message);
-    this.name = 'ApiError';
+    this.name = "ApiError";
   }
 }

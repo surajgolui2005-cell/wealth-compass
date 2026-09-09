@@ -1,8 +1,9 @@
-import { Injectable, UnauthorizedException } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
-import { PassportStrategy } from '@nestjs/passport';
-import { ExtractJwt, Strategy } from 'passport-jwt';
-import { PrismaService } from '../../prisma/prisma.service';
+import { Injectable, UnauthorizedException } from "@nestjs/common";
+import { ConfigService } from "@nestjs/config";
+import { PassportStrategy } from "@nestjs/passport";
+import { Request } from "express";
+import { ExtractJwt, Strategy } from "passport-jwt";
+import { PrismaService } from "../../prisma/prisma.service";
 
 export interface JwtPayload {
   sub: string;
@@ -10,15 +11,22 @@ export interface JwtPayload {
 }
 
 @Injectable()
-export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
+export class JwtStrategy extends PassportStrategy(Strategy, "jwt") {
   constructor(
     private readonly configService: ConfigService,
     private readonly prisma: PrismaService,
   ) {
     super({
-      jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
+      jwtFromRequest: ExtractJwt.fromExtractors([
+        (request: Request) => {
+          return request?.cookies?.access_token || null;
+        },
+        ExtractJwt.fromAuthHeaderAsBearerToken(),
+      ]),
       ignoreExpiration: false,
-      secretOrKey: configService.get<string>('JWT_SECRET') || 'dev_jwt_secret_key_must_be_at_least_32_characters_long_for_security',
+      secretOrKey:
+        configService.get<string>("JWT_SECRET") ||
+        "dev_jwt_secret_key_must_be_at_least_32_characters_long_for_security",
     });
   }
 
@@ -27,8 +35,8 @@ export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
       where: { id: payload.sub },
     });
 
-    if (!user || user.deletedAt || user.status !== 'ACTIVE') {
-      throw new UnauthorizedException('User is inactive or unauthorized');
+    if (!user || user.deletedAt || user.status !== "ACTIVE") {
+      throw new UnauthorizedException("User is inactive or unauthorized");
     }
 
     return {

@@ -7,7 +7,11 @@ import { CsvProviderAdapter } from "./adapters/csv-provider.adapter";
 import { CamsCasPdfAdapter } from "./adapters/cams-cas-pdf.adapter";
 import { ManualEntryAdapter } from "./adapters/manual-entry.adapter";
 import { MockBrokerProviderAdapter } from "./adapters/mock-broker.adapter";
-import { RbiAccountAggregatorAdapter } from "./adapters/rbi-account-aggregator.adapter";
+import {
+  RbiAccountAggregatorAdapter,
+  DefaultAaHttpClient,
+} from "./adapters/rbi-account-aggregator.adapter";
+import { EncryptionService } from "../../common/crypto/encryption.service";
 import { ProviderController } from "./controllers/provider.controller";
 import { ProviderFactoryService } from "./services/provider-factory.service";
 import { ProviderIngestionService } from "./services/provider-ingestion.service";
@@ -20,7 +24,12 @@ import { ProviderIngestionService } from "./services/provider-ingestion.service"
     CsvProviderAdapter,
     CamsCasPdfAdapter,
     MockBrokerProviderAdapter,
-    RbiAccountAggregatorAdapter,
+    {
+      provide: RbiAccountAggregatorAdapter,
+      useFactory: (enc: EncryptionService) =>
+        new RbiAccountAggregatorAdapter(enc, new DefaultAaHttpClient()),
+      inject: [EncryptionService],
+    },
     ProviderFactoryService,
     ProviderIngestionService,
   ],

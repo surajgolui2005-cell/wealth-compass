@@ -1,11 +1,17 @@
 import { Global, Module } from "@nestjs/common";
-import { ConfigModule } from "@nestjs/config";
+import { ConfigModule, ConfigService } from "@nestjs/config";
 import { EncryptionService } from "./encryption.service";
 
 @Global()
 @Module({
   imports: [ConfigModule],
-  providers: [EncryptionService],
+  providers: [
+    {
+      provide: EncryptionService,
+      useFactory: (config: ConfigService) => new EncryptionService(config),
+      inject: [ConfigService],
+    },
+  ],
   exports: [EncryptionService],
 })
 export class CryptoModule {}

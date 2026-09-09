@@ -1,12 +1,12 @@
-import { Injectable, Optional } from '@nestjs/common';
-import { EventEmitter2 } from '@nestjs/event-emitter';
-import { AssetClassCode, TransactionType } from '@prisma/client';
-import Decimal from 'decimal.js';
-import { PrismaService } from '../../../prisma/prisma.service';
-import { CreateTransactionDto } from '../dto/create-transaction.dto';
-import { InsufficientCashException } from '../exceptions/insufficient-cash.exception';
-import { HoldingService } from './holding.service';
-import { PortfolioService } from './portfolio.service';
+import { Injectable, Optional } from "@nestjs/common";
+import { EventEmitter2 } from "@nestjs/event-emitter";
+import { AssetClassCode, TransactionType } from "@prisma/client";
+import Decimal from "decimal.js";
+import { PrismaService } from "../../../prisma/prisma.service";
+import { CreateTransactionDto } from "../dto/create-transaction.dto";
+import { InsufficientCashException } from "../exceptions/insufficient-cash.exception";
+import { HoldingService } from "./holding.service";
+import { PortfolioService } from "./portfolio.service";
 
 @Injectable()
 export class TransactionService {
@@ -25,7 +25,8 @@ export class TransactionService {
     const portfolio = await this.portfolioService.getPortfolioById(userId, dto.portfolioId);
 
     const symbolUpper = dto.symbol.trim().toUpperCase();
-    const assetClassCode = dto.assetClassCode || (symbolUpper === 'CASH' ? AssetClassCode.CASH : AssetClassCode.STOCKS);
+    const assetClassCode =
+      dto.assetClassCode || (symbolUpper === "CASH" ? AssetClassCode.CASH : AssetClassCode.STOCKS);
 
     return this.prisma.$transaction(async (tx) => {
       // 1. Ensure target AssetClass exists
@@ -37,8 +38,13 @@ export class TransactionService {
         assetClass = await tx.assetClass.create({
           data: {
             code: assetClassCode,
-            name: assetClassCode.replace('_', ' '),
-            category: assetClassCode === AssetClassCode.CRYPTO ? 'ALTERNATIVE' : assetClassCode === AssetClassCode.CASH ? 'CASH_EQUIVALENT' : 'EQUITY',
+            name: assetClassCode.replace("_", " "),
+            category:
+              assetClassCode === AssetClassCode.CRYPTO
+                ? "ALTERNATIVE"
+                : assetClassCode === AssetClassCode.CASH
+                  ? "CASH_EQUIVALENT"
+                  : "EQUITY",
           },
         });
       }
@@ -52,9 +58,9 @@ export class TransactionService {
         asset = await tx.asset.create({
           data: {
             symbol: symbolUpper,
-            name: symbolUpper === 'CASH' ? 'Cash & Liquid Balance' : symbolUpper,
+            name: symbolUpper === "CASH" ? "Cash & Liquid Balance" : symbolUpper,
             assetClassId: assetClass.id,
-            currency: dto.currency?.toUpperCase() || portfolio.currency || 'INR',
+            currency: dto.currency?.toUpperCase() || portfolio.currency || "INR",
           },
         });
       }
@@ -73,14 +79,15 @@ export class TransactionService {
           data: {
             portfolioId: portfolio.id,
             assetId: asset.id,
+            providerAccountId: dto.providerAccountId || null,
             symbol: symbolUpper,
             quantity: 0,
-            avgCostBasis: symbolUpper === 'CASH' ? 1.0 : 0,
-            currentPrice: symbolUpper === 'CASH' ? 1.0 : dto.pricePerUnit,
+            avgCostBasis: symbolUpper === "CASH" ? 1.0 : 0,
+            currentPrice: symbolUpper === "CASH" ? 1.0 : dto.pricePerUnit,
             currentValue: 0,
             unrealizedPnL: 0,
             unrealizedPnLPct: 0,
-            costCurrency: dto.currency?.toUpperCase() || portfolio.currency || 'INR',
+            costCurrency: dto.currency?.toUpperCase() || portfolio.currency || "INR",
             isManual: true,
           },
         });
@@ -123,6 +130,7 @@ export class TransactionService {
           currentValue: newState.currentValue,
           unrealizedPnL: newState.unrealizedPnL,
           unrealizedPnLPct: newState.unrealizedPnLPct,
+          ...(dto.providerAccountId ? { providerAccountId: dto.providerAccountId } : {}),
         },
       });
 
@@ -135,7 +143,7 @@ export class TransactionService {
           pricePerUnit: dto.pricePerUnit,
           fees: dto.fees || 0,
           totalAmount: totalAmountDec.toFixed(4),
-          currency: dto.currency?.toUpperCase() || portfolio.currency || 'INR',
+          currency: dto.currency?.toUpperCase() || portfolio.currency || "INR",
           fxRateToHome: dto.fxRateToHome || 1.0,
           transactedAt: dto.transactedAt || new Date(),
           notes: dto.notes?.trim() || null,
@@ -144,11 +152,16 @@ export class TransactionService {
 
       // 8. Update CASH account balance if transaction affects cash (and target asset is not CASH itself)
       let cashHoldingUpdated = null;
-      if (symbolUpper !== 'CASH') {
+      if (symbolUpper !== "CASH") {
         const cashDelta = this.calculateCashDelta(dto.type, qDec, pDec, feeDec, totalAmountDec);
 
         if (!cashDelta.equals(0)) {
-          cashHoldingUpdated = await this.updateCashBalance(tx, portfolio.id, portfolio.currency, cashDelta);
+          cashHoldingUpdated = await this.updateCashBalance(
+            tx,
+            portfolio.id,
+            portfolio.currency,
+            cashDelta,
+          );
         }
       }
 
@@ -157,7 +170,7 @@ export class TransactionService {
 
       // 10. Emit domain events if EventEmitter is present
       if (this.eventEmitter) {
-        this.eventEmitter.emit('transaction.recorded', {
+        this.eventEmitter.emit("transaction.recorded", {
           transactionId: transactionRecord.id,
           portfolioId: portfolio.id,
           holdingId: holding.id,
@@ -167,7 +180,7 @@ export class TransactionService {
           transactedAt: transactionRecord.transactedAt,
         });
 
-        this.eventEmitter.emit('holding.updated', {
+        this.eventEmitter.emit("holding.updated", {
           holdingId: updatedHolding.id,
           portfolioId: portfolio.id,
           symbol: symbolUpper,
@@ -175,7 +188,7 @@ export class TransactionService {
           currentValue: updatedHolding.currentValue,
         });
 
-        this.eventEmitter.emit('portfolio.updated', {
+        this.eventEmitter.emit("portfolio.updated", {
           portfolioId: portfolio.id,
           totalValue: newTotalValue.toFixed(4),
         });
@@ -207,7 +220,7 @@ export class TransactionService {
           },
         },
       },
-      orderBy: { transactedAt: 'desc' },
+      orderBy: { transactedAt: "desc" },
     });
   }
 
@@ -219,7 +232,7 @@ export class TransactionService {
         holdingId,
         deletedAt: null,
       },
-      orderBy: { transactedAt: 'desc' },
+      orderBy: { transactedAt: "desc" },
     });
   }
 
@@ -283,23 +296,23 @@ export class TransactionService {
       cashAssetClass = await tx.assetClass.create({
         data: {
           code: AssetClassCode.CASH,
-          name: 'Cash',
-          category: 'CASH_EQUIVALENT',
+          name: "Cash",
+          category: "CASH_EQUIVALENT",
         },
       });
     }
 
     let cashAsset = await tx.asset.findFirst({
-      where: { symbol: 'CASH', deletedAt: null },
+      where: { symbol: "CASH", deletedAt: null },
     });
 
     if (!cashAsset) {
       cashAsset = await tx.asset.create({
         data: {
-          symbol: 'CASH',
-          name: 'Cash & Liquid Balance',
+          symbol: "CASH",
+          name: "Cash & Liquid Balance",
           assetClassId: cashAssetClass.id,
-          currency: currency || 'INR',
+          currency: currency || "INR",
         },
       });
     }
@@ -317,14 +330,14 @@ export class TransactionService {
         data: {
           portfolioId,
           assetId: cashAsset.id,
-          symbol: 'CASH',
+          symbol: "CASH",
           quantity: 0,
           avgCostBasis: 1.0,
           currentPrice: 1.0,
           currentValue: 0,
           unrealizedPnL: 0,
           unrealizedPnLPct: 0,
-          costCurrency: currency || 'INR',
+          costCurrency: currency || "INR",
           isManual: true,
         },
       });
@@ -334,18 +347,22 @@ export class TransactionService {
     const newCashQty = currentCashQty.plus(cashDelta);
 
     if (newCashQty.lt(0)) {
-      throw new InsufficientCashException(portfolioId, cashDelta.abs().toFixed(2), currentCashQty.toFixed(2));
+      throw new InsufficientCashException(
+        portfolioId,
+        cashDelta.abs().toFixed(2),
+        currentCashQty.toFixed(2),
+      );
     }
 
     return tx.holding.update({
       where: { id: cashHolding.id },
       data: {
         quantity: newCashQty.toFixed(8),
-        avgCostBasis: '1.00000000',
-        currentPrice: '1.00000000',
+        avgCostBasis: "1.00000000",
+        currentPrice: "1.00000000",
         currentValue: newCashQty.toFixed(4),
-        unrealizedPnL: '0.0000',
-        unrealizedPnLPct: '0.0000',
+        unrealizedPnL: "0.0000",
+        unrealizedPnLPct: "0.0000",
       },
     });
   }

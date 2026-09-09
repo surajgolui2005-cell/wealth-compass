@@ -7,8 +7,8 @@ import { CopilotDrawer } from "@/components/copilot/CopilotDrawer";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   const cookieStore = cookies();
-  const hasRefreshToken = cookieStore.has("refresh_token");
-  if (!hasRefreshToken) {
+  const hasAuth = cookieStore.has("refresh_token") || cookieStore.has("access_token");
+  if (!hasAuth) {
     redirect("/login");
   }
 

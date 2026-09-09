@@ -1,16 +1,12 @@
-import {
-  ConflictException,
-  Injectable,
-  UnauthorizedException,
-} from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
-import { JwtService } from '@nestjs/jwt';
-import * as crypto from 'crypto';
-import { PrismaService } from '../../prisma/prisma.service';
-import { ArgonService } from './argon.service';
-import { AuthResponseDto } from './dto/auth-response.dto';
-import { LoginDto } from './dto/login.dto';
-import { RegisterDto } from './dto/register.dto';
+import { ConflictException, Injectable, UnauthorizedException } from "@nestjs/common";
+import { ConfigService } from "@nestjs/config";
+import { JwtService } from "@nestjs/jwt";
+import * as crypto from "crypto";
+import { PrismaService } from "../../prisma/prisma.service";
+import { ArgonService } from "./argon.service";
+import { AuthResponseDto } from "./dto/auth-response.dto";
+import { LoginDto } from "./dto/login.dto";
+import { RegisterDto } from "./dto/register.dto";
 
 @Injectable()
 export class AuthService {
@@ -25,7 +21,7 @@ export class AuthService {
    * Computes SHA-256 hash of a plain refresh token string
    */
   private hashRefreshToken(token: string): string {
-    return crypto.createHash('sha256').update(token).digest('hex');
+    return crypto.createHash("sha256").update(token).digest("hex");
   }
 
   /**
@@ -35,16 +31,14 @@ export class AuthService {
     const payload = { sub: userId, email };
 
     const accessSecret =
-      this.configService.get<string>('JWT_SECRET') ||
-      'dev_jwt_secret_key_must_be_at_least_32_characters_long_for_security';
+      this.configService.get<string>("JWT_SECRET") ||
+      "dev_jwt_secret_key_must_be_at_least_32_characters_long_for_security";
     const refreshSecret =
-      this.configService.get<string>('JWT_REFRESH_SECRET') ||
-      'dev_jwt_refresh_secret_key_must_be_at_least_32_characters_long';
+      this.configService.get<string>("JWT_REFRESH_SECRET") ||
+      "dev_jwt_refresh_secret_key_must_be_at_least_32_characters_long";
 
-    const accessExpiresIn =
-      this.configService.get<string>('JWT_EXPIRES_IN') || '1d';
-    const refreshExpiresIn =
-      this.configService.get<string>('JWT_REFRESH_EXPIRES_IN') || '7d';
+    const accessExpiresIn = this.configService.get<string>("JWT_EXPIRES_IN") || "1d";
+    const refreshExpiresIn = this.configService.get<string>("JWT_REFRESH_EXPIRES_IN") || "7d";
 
     const [accessToken, refreshToken] = await Promise.all([
       this.jwtService.signAsync(payload, {
@@ -71,7 +65,7 @@ export class AuthService {
     });
 
     const currentSettings =
-      typeof existingPref?.notificationSettings === 'object' &&
+      typeof existingPref?.notificationSettings === "object" &&
       existingPref?.notificationSettings !== null
         ? (existingPref.notificationSettings as Record<string, any>)
         : {};
@@ -90,9 +84,9 @@ export class AuthService {
       await this.prisma.userPreferences.create({
         data: {
           userId,
-          homeCurrency: 'INR',
-          riskTolerance: 'MODERATE',
-          timezone: 'Asia/Kolkata',
+          homeCurrency: "INR",
+          riskTolerance: "MODERATE",
+          timezone: "Asia/Kolkata",
           notificationSettings: updatedSettings,
         },
       });
@@ -105,7 +99,7 @@ export class AuthService {
     });
 
     if (existingUser) {
-      throw new ConflictException('Email already registered');
+      throw new ConflictException("Email already registered");
     }
 
     const passwordHash = await this.argonService.hash(registerDto.password);
@@ -114,13 +108,13 @@ export class AuthService {
       data: {
         email: registerDto.email.toLowerCase().trim(),
         passwordHash,
-        fullName: registerDto.fullName?.trim() || null,
-        status: 'ACTIVE',
+        fullName: (registerDto.fullName || registerDto.name)?.trim() || null,
+        status: "ACTIVE",
         preferences: {
           create: {
-            homeCurrency: 'INR',
-            riskTolerance: 'MODERATE',
-            timezone: 'Asia/Kolkata',
+            homeCurrency: "INR",
+            riskTolerance: "MODERATE",
+            timezone: "Asia/Kolkata",
             notificationSettings: {},
           },
         },
@@ -148,13 +142,13 @@ export class AuthService {
       where: { email: loginDto.email.toLowerCase().trim() },
     });
 
-    if (!user || user.deletedAt || user.status !== 'ACTIVE') {
-      throw new UnauthorizedException('Invalid email or password');
+    if (!user || user.deletedAt || user.status !== "ACTIVE") {
+      throw new UnauthorizedException("Invalid email or password");
     }
 
     const isPasswordValid = await this.argonService.verify(user.passwordHash, loginDto.password);
     if (!isPasswordValid) {
-      throw new UnauthorizedException('Invalid email or password');
+      throw new UnauthorizedException("Invalid email or password");
     }
 
     const { accessToken, refreshToken } = await this.generateTokens(user.id, user.email);
@@ -173,31 +167,37 @@ export class AuthService {
     };
   }
 
-  async refreshTokens(userId: string, refreshToken: string): Promise<AuthResponseDto & { refreshToken: string }> {
+  async refreshTokens(
+    userId: string,
+    refreshToken: string,
+  ): Promise<AuthResponseDto & { refreshToken: string }> {
     const user = await this.prisma.user.findUnique({
       where: { id: userId },
       include: { preferences: true },
     });
 
-    if (!user || user.deletedAt || user.status !== 'ACTIVE') {
-      throw new UnauthorizedException('User not found or inactive');
+    if (!user || user.deletedAt || user.status !== "ACTIVE") {
+      throw new UnauthorizedException("User not found or inactive");
     }
 
     const settings = user.preferences?.notificationSettings as Record<string, any> | null;
     const storedHash = settings?.refreshTokenHash;
 
     if (!storedHash) {
-      throw new UnauthorizedException('Access Denied - Refresh token revoked');
+      throw new UnauthorizedException("Access Denied - Refresh token revoked");
     }
 
     const incomingHash = this.hashRefreshToken(refreshToken);
     if (storedHash !== incomingHash) {
       // Invalidate stored refresh token on hash mismatch (token reuse detection)
       await this.updateRefreshTokenHash(user.id, null);
-      throw new UnauthorizedException('Access Denied - Invalid refresh token signature');
+      throw new UnauthorizedException("Access Denied - Invalid refresh token signature");
     }
 
-    const { accessToken, refreshToken: newRefreshToken } = await this.generateTokens(user.id, user.email);
+    const { accessToken, refreshToken: newRefreshToken } = await this.generateTokens(
+      user.id,
+      user.email,
+    );
     await this.updateRefreshTokenHash(user.id, newRefreshToken);
 
     return {
@@ -215,7 +215,7 @@ export class AuthService {
 
   async logout(userId: string): Promise<{ message: string }> {
     await this.updateRefreshTokenHash(userId, null);
-    return { message: 'Successfully logged out' };
+    return { message: "Successfully logged out" };
   }
 
   async getMe(userId: string) {
@@ -238,7 +238,7 @@ export class AuthService {
     });
 
     if (!user) {
-      throw new UnauthorizedException('User not found');
+      throw new UnauthorizedException("User not found");
     }
 
     return user;

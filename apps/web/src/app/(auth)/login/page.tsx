@@ -1,21 +1,28 @@
-'use client';
+"use client";
 
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { apiClient, ApiError } from '@/lib/api-client';
-import { useQueryClient } from '@tanstack/react-query';
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardFooter,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { apiClient, ApiError } from "@/lib/api-client";
+import { useQueryClient } from "@tanstack/react-query";
 
 const loginSchema = z.object({
-  email: z.string().email('Enter a valid email address'),
-  password: z.string().min(1, 'Password is required'),
+  email: z.string().email("Enter a valid email address"),
+  password: z.string().min(1, "Password is required"),
 });
 
 type LoginForm = z.infer<typeof loginSchema>;
@@ -34,13 +41,24 @@ export default function LoginPage() {
   async function onSubmit(data: LoginForm) {
     setServerError(null);
     try {
-      await apiClient.post('/auth/login', data);
-      await queryClient.invalidateQueries({ queryKey: ['auth', 'me'] });
-      router.push('/dashboard');
-    } catch (err) {
-      setServerError(
-        err instanceof ApiError ? err.message : 'Login failed. Please try again.',
-      );
+      await apiClient.post("/auth/login", data);
+      await queryClient.invalidateQueries({ queryKey: ["auth", "me"] });
+      window.location.href = "/dashboard";
+    } catch (err: any) {
+      if (err instanceof ApiError) {
+        if (Array.isArray(err.details)) {
+          setServerError(err.details.join("; "));
+        } else {
+          setServerError(err.message);
+        }
+      } else {
+        const fallback =
+          err?.response?.data?.error?.message ||
+          err?.response?.data?.message ||
+          err?.message ||
+          "Login failed. Please try again.";
+        setServerError(fallback);
+      }
     }
   }
 
@@ -59,13 +77,15 @@ export default function LoginPage() {
           )}
           <div className="space-y-1.5">
             <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" placeholder="you@example.com" {...register('email')} />
+            <Input id="email" type="email" placeholder="you@example.com" {...register("email")} />
             {errors.email && <p className="text-xs text-destructive">{errors.email.message}</p>}
           </div>
           <div className="space-y-1.5">
             <Label htmlFor="password">Password</Label>
-            <Input id="password" type="password" placeholder="••••••••" {...register('password')} />
-            {errors.password && <p className="text-xs text-destructive">{errors.password.message}</p>}
+            <Input id="password" type="password" placeholder="••••••••" {...register("password")} />
+            {errors.password && (
+              <p className="text-xs text-destructive">{errors.password.message}</p>
+            )}
           </div>
         </CardContent>
         <CardFooter className="flex flex-col gap-3">
@@ -73,7 +93,7 @@ export default function LoginPage() {
             Sign in
           </Button>
           <p className="text-sm text-muted-foreground text-center">
-            Don&apos;t have an account?{' '}
+            Don&apos;t have an account?{" "}
             <Link href="/register" className="text-primary hover:underline font-medium">
               Create one
             </Link>
