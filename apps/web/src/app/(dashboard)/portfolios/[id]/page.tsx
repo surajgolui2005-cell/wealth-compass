@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { useParams } from "next/navigation";
-import { useQuery } from "@tanstack/react-query";
+import { useParams, useRouter } from "next/navigation";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiClient } from "@/lib/api-client";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -27,6 +27,7 @@ import {
   Layers,
   PieChart as PieIcon,
   ShieldCheck,
+  Trash2,
 } from "lucide-react";
 
 interface Holding {
@@ -86,12 +87,23 @@ interface PortfolioSummary {
 
 export default function PortfolioDetailPage() {
   const params = useParams();
+  const router = useRouter();
+  const queryClient = useQueryClient();
   const id = params?.id as string;
 
   // Modals state
   const [addTxOpen, setAddTxOpen] = useState(false);
   const [importCsvOpen, setImportCsvOpen] = useState(false);
   const [connectBrokerOpen, setConnectBrokerOpen] = useState(false);
+  const [showConfirmDelete, setShowConfirmDelete] = useState(false);
+
+  const deleteMutation = useMutation({
+    mutationFn: () => apiClient.delete(`/portfolios/${id}`),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["portfolios"] });
+      router.push("/portfolios");
+    },
+  });
 
   // Live Chart modal state
   const [selectedStockForChart, setSelectedStockForChart] = useState<{
@@ -173,8 +185,43 @@ export default function PortfolioDetailPage() {
             <Link2 className="h-4 w-4 text-muted-foreground" />
             Connect Broker
           </Button>
+
+          <Button
+            variant="outline"
+            onClick={() => setShowConfirmDelete(true)}
+            className="gap-1.5 text-rose-600 border-rose-200 dark:border-rose-900/50 hover:bg-rose-50 dark:hover:bg-rose-950/30"
+          >
+            <Trash2 className="h-4 w-4" />
+            Delete Portfolio
+          </Button>
         </div>
       </div>
+
+      {showConfirmDelete && (
+        <div className="p-4 bg-rose-500/10 border border-rose-500/20 rounded-xl flex items-center justify-between">
+          <div>
+            <p className="font-semibold text-rose-500 text-sm">
+              Are you sure you want to delete this portfolio?
+            </p>
+            <p className="text-xs text-muted-foreground">
+              All holdings and transactions in this portfolio will be removed.
+            </p>
+          </div>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="destructive"
+              size="sm"
+              isLoading={deleteMutation.isPending}
+              onClick={() => deleteMutation.mutate()}
+            >
+              Confirm Delete
+            </Button>
+            <Button variant="outline" size="sm" onClick={() => setShowConfirmDelete(false)}>
+              Cancel
+            </Button>
+          </div>
+        </div>
+      )}
 
       {/* Stats Row */}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

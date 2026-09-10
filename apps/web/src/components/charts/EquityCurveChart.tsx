@@ -1,16 +1,7 @@
-'use client';
+"use client";
 
-import {
-  AreaChart,
-  Area,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ReferenceLine,
-  type TooltipProps,
-} from 'recharts';
-import { ChartContainer } from './chart-container';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceLine } from "recharts";
+import { ChartContainer } from "./chart-container";
 import {
   CHART_COLORS,
   TOOLTIP_STYLE,
@@ -20,7 +11,7 @@ import {
   formatAxisDate,
   formatTooltipCurrency,
   formatTooltipDate,
-} from './chart-theme';
+} from "./chart-theme";
 
 export interface EquityCurveDataPoint {
   date: string;
@@ -34,12 +25,20 @@ interface EquityCurveChartProps {
   isLoading?: boolean;
 }
 
-function CustomTooltip({ active, payload, label }: TooltipProps<number, string>) {
+function CustomTooltip({
+  active,
+  payload,
+  label,
+}: {
+  active?: boolean;
+  payload?: Array<{ value?: number }>;
+  label?: string;
+}) {
   if (!active || !payload?.length) return null;
   const value = payload[0]?.value ?? 0;
   return (
     <div style={TOOLTIP_STYLE}>
-      <p className="font-medium text-foreground">{formatTooltipDate(label)}</p>
+      <p className="font-medium text-foreground">{formatTooltipDate(label ?? "")}</p>
       <p className="mt-0.5" style={{ color: CHART_COLORS.primary }}>
         {formatTooltipCurrency(value)}
       </p>
@@ -49,12 +48,12 @@ function CustomTooltip({ active, payload, label }: TooltipProps<number, string>)
 
 export function EquityCurveChart({
   data,
-  currency = 'INR',
+  currency = "INR",
   height = 300,
   isLoading = false,
 }: EquityCurveChartProps) {
   const isEmpty = !data || data.length === 0;
-  const gradientId = 'equity-gradient';
+  const gradientId = "equity-gradient";
 
   return (
     <ChartContainer
@@ -70,7 +69,11 @@ export function EquityCurveChart({
             <stop offset="95%" stopColor={CHART_COLORS.primary} stopOpacity={0.02} />
           </linearGradient>
         </defs>
-        <CartesianGrid strokeDasharray={GRID_STYLE.strokeDasharray} stroke={GRID_STYLE.stroke} vertical={false} />
+        <CartesianGrid
+          strokeDasharray={GRID_STYLE.strokeDasharray}
+          stroke={GRID_STYLE.stroke}
+          vertical={false}
+        />
         <XAxis
           dataKey="date"
           tickFormatter={formatAxisDate}
@@ -86,7 +89,10 @@ export function EquityCurveChart({
           axisLine={false}
           width={64}
         />
-        <Tooltip content={<CustomTooltip />} cursor={{ stroke: CHART_COLORS.muted, strokeWidth: 1 }} />
+        <Tooltip
+          content={<CustomTooltip />}
+          cursor={{ stroke: CHART_COLORS.muted, strokeWidth: 1 }}
+        />
         <Area
           type="monotone"
           dataKey="value"

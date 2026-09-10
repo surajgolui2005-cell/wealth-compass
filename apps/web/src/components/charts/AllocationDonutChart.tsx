@@ -1,6 +1,6 @@
 "use client";
 
-import { PieChart, Pie, Cell, Tooltip, Legend, type TooltipProps } from "recharts";
+import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
 import { ChartContainer } from "./chart-container";
 import { COLOR_SEQUENCE, TOOLTIP_STYLE, formatTooltipCurrency } from "./chart-theme";
 

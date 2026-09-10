@@ -117,6 +117,81 @@ export interface UseCopilotChatReturn {
   error: Error | null;
 }
 
+function generateSmartFallback(
+  userMessage: string,
+  context: PortfolioContextPayload,
+): CopilotChatResponse {
+  const q = userMessage.toLowerCase();
+
+  if (q.includes("delete") && (q.includes("portfolio") || q.includes("portpolio"))) {
+    return {
+      answer:
+        "To delete a portfolio:\n\n1. Go to **Portfolios** in the left sidebar.\n2. Click the **Trash (🗑️)** icon on any portfolio card, OR open the portfolio and click **Delete Portfolio** in the top-right header.\n3. Confirm the deletion in the popup box.",
+      suggested_trades: [],
+      context_sources: ["App Navigation Guide"],
+      disclaimer: "SEBI Disclaimer: Portfolio operations are local user management actions.",
+      model_used: "client-fallback-assistant",
+      conversation_turn: 1,
+    };
+  }
+
+  if (
+    (q.includes("create") || q.includes("add") || q.includes("new")) &&
+    (q.includes("portfolio") || q.includes("portpolio"))
+  ) {
+    return {
+      answer:
+        "To create a new portfolio:\n\n1. Go to **Portfolios** in the left sidebar.\n2. Click the **+ New Portfolio** button at the top-right.\n3. Enter your portfolio name, currency (INR/USD), and optional description, then click **Create**.",
+      suggested_trades: [],
+      context_sources: ["App Navigation Guide"],
+      disclaimer: "SEBI Disclaimer: Educational guidance only.",
+      model_used: "client-fallback-assistant",
+      conversation_turn: 1,
+    };
+  }
+
+  if (q.includes("asset") || q.includes("stock") || q.includes("buy") || q.includes("add")) {
+    return {
+      answer:
+        "To add stocks or assets to your portfolio:\n\n1. Open your portfolio detail page.\n2. Click the **+ Add Asset** button in the header.\n3. Select your broker (Groww, Angel One, Zerodha, Upstox, etc.), ticker symbol, quantity, and buy price.\n4. Save to see your updated net worth and platform distribution!",
+      suggested_trades: [],
+      context_sources: ["App Navigation Guide"],
+      disclaimer: "SEBI Disclaimer: Educational guidance only.",
+      model_used: "client-fallback-assistant",
+      conversation_turn: 1,
+    };
+  }
+
+  if (q.includes("broker") || q.includes("groww") || q.includes("angel") || q.includes("connect")) {
+    return {
+      answer:
+        "You can connect brokers (Groww, Angel One, Upstox, Zerodha) by clicking **Connect Broker** or **Import CSV** inside your portfolio page to automatically aggregate your multi-platform holdings.",
+      suggested_trades: [],
+      context_sources: ["Broker Integration Engine"],
+      disclaimer: "SEBI Disclaimer: Educational guidance only.",
+      model_used: "client-fallback-assistant",
+      conversation_turn: 1,
+    };
+  }
+
+  const netWorth = context.total_net_worth_inr
+    ? `₹${context.total_net_worth_inr.toLocaleString()}`
+    : "₹0";
+  const holdingsCount = context.holdings ? context.holdings.length : 0;
+
+  return {
+    answer:
+      `I am currently operating in smart offline mode.\n\n` +
+      `📊 **Current Snapshot:** Net worth is **${netWorth}** across **${holdingsCount}** asset(s).\n\n` +
+      `You can ask me how to create/delete portfolios, add assets from Groww or Angel One, or check your platform distribution!`,
+    suggested_trades: [],
+    context_sources: ["Local Portfolio Context"],
+    disclaimer: "SEBI Disclaimer: Educational guidance only.",
+    model_used: "client-fallback-assistant",
+    conversation_turn: 1,
+  };
+}
+
 export function useCopilotChat(): UseCopilotChatReturn {
   const { messages, addMessage, updateLastMessage } = useCopilotContext();
   const portfolioContext = usePortfolioContext();
@@ -129,8 +204,16 @@ export function useCopilotChat(): UseCopilotChatReturn {
         portfolio_context: portfolioContext,
         conversation_history: history,
       };
-      const resp = await copilotClient.post<CopilotChatResponse>("/copilot/chat", body);
-      return resp.data;
+      try {
+        const resp = await copilotClient.post<CopilotChatResponse>("/copilot/chat", body);
+        return resp.data;
+      } catch (err) {
+        console.warn(
+          "[CopilotChat] Python LLM service unavailable, using smart client fallback:",
+          err,
+        );
+        return generateSmartFallback(userMessage, portfolioContext);
+      }
     },
 
     onMutate: (userMessage: string) => {
@@ -166,10 +249,10 @@ export function useCopilotChat(): UseCopilotChatReturn {
     },
 
     onError: (error: Error) => {
+      const fallback = generateSmartFallback("help", portfolioContext);
       updateLastMessage((prev) => ({
         ...prev,
-        content:
-          "⚠️ I encountered an error fetching your portfolio analysis. Please try again in a moment.",
+        content: fallback.answer,
         isStreaming: false,
         timestamp: new Date(),
       }));

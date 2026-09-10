@@ -1,16 +1,7 @@
-'use client';
+"use client";
 
-import {
-  AreaChart,
-  Area,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ReferenceLine,
-  type TooltipProps,
-} from 'recharts';
-import { ChartContainer } from './chart-container';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ReferenceLine } from "recharts";
+import { ChartContainer } from "./chart-container";
 import {
   CHART_COLORS,
   TOOLTIP_STYLE,
@@ -19,7 +10,7 @@ import {
   formatAxisPercent,
   formatAxisDate,
   formatTooltipDate,
-} from './chart-theme';
+} from "./chart-theme";
 
 export interface DrawdownDataPoint {
   date: string;
@@ -32,13 +23,21 @@ interface DrawdownChartProps {
   isLoading?: boolean;
 }
 
-function CustomTooltip({ active, payload, label }: TooltipProps<number, string>) {
+function CustomTooltip({
+  active,
+  payload,
+  label,
+}: {
+  active?: boolean;
+  payload?: Array<{ value?: number }>;
+  label?: string;
+}) {
   if (!active || !payload?.length) return null;
   const value = payload[0]?.value ?? 0;
   const isNegative = value < 0;
   return (
     <div style={TOOLTIP_STYLE}>
-      <p className="font-medium">{formatTooltipDate(label)}</p>
+      <p className="font-medium">{formatTooltipDate(label ?? "")}</p>
       <p style={{ color: isNegative ? CHART_COLORS.destructive : CHART_COLORS.success }}>
         Drawdown: {formatAxisPercent(value, 2)}
       </p>
@@ -50,9 +49,7 @@ export function DrawdownChart({ data, height = 280, isLoading = false }: Drawdow
   const isEmpty = !data || data.length === 0;
 
   // Find max drawdown for annotation
-  const maxDrawdown = data.length
-    ? Math.min(...data.map((d) => d.drawdownPct))
-    : 0;
+  const maxDrawdown = data.length ? Math.min(...data.map((d) => d.drawdownPct)) : 0;
 
   return (
     <ChartContainer
@@ -68,7 +65,11 @@ export function DrawdownChart({ data, height = 280, isLoading = false }: Drawdow
             <stop offset="95%" stopColor={CHART_COLORS.destructive} stopOpacity={0.02} />
           </linearGradient>
         </defs>
-        <CartesianGrid strokeDasharray={GRID_STYLE.strokeDasharray} stroke={GRID_STYLE.stroke} vertical={false} />
+        <CartesianGrid
+          strokeDasharray={GRID_STYLE.strokeDasharray}
+          stroke={GRID_STYLE.stroke}
+          vertical={false}
+        />
         <XAxis
           dataKey="date"
           tickFormatter={formatAxisDate}
@@ -83,9 +84,12 @@ export function DrawdownChart({ data, height = 280, isLoading = false }: Drawdow
           tickLine={false}
           axisLine={false}
           width={52}
-          domain={['auto', 0]}
+          domain={["auto", 0]}
         />
-        <Tooltip content={<CustomTooltip />} cursor={{ stroke: CHART_COLORS.muted, strokeWidth: 1 }} />
+        <Tooltip
+          content={<CustomTooltip />}
+          cursor={{ stroke: CHART_COLORS.muted, strokeWidth: 1 }}
+        />
         {/* Zero reference line */}
         <ReferenceLine y={0} stroke={CHART_COLORS.muted} strokeDasharray="4 2" />
         {/* Max drawdown annotation */}
@@ -96,7 +100,7 @@ export function DrawdownChart({ data, height = 280, isLoading = false }: Drawdow
             strokeDasharray="4 2"
             label={{
               value: `Max: ${formatAxisPercent(maxDrawdown, 1)}`,
-              position: 'insideBottomLeft',
+              position: "insideBottomLeft",
               fontSize: 11,
               fill: CHART_COLORS.destructive,
             }}

@@ -1,21 +1,21 @@
-'use client';
+"use client";
 
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { apiClient } from '@/lib/api-client';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { useState } from 'react';
-import Link from 'next/link';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Badge } from '@/components/ui/badge';
-import { Skeleton } from '@/components/ui/skeleton';
-import { EmptyState } from '@/components/common/empty-state';
-import { formatCurrency } from '@/lib/utils';
-import { Plus, ArrowRight, RefreshCw } from 'lucide-react';
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { apiClient } from "@/lib/api-client";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { useState } from "react";
+import Link from "next/link";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
+import { Skeleton } from "@/components/ui/skeleton";
+import { EmptyState } from "@/components/common/empty-state";
+import { formatCurrency } from "@/lib/utils";
+import { Plus, ArrowRight, RefreshCw, Trash2 } from "lucide-react";
 
 interface Portfolio {
   id: string;
@@ -27,8 +27,8 @@ interface Portfolio {
 }
 
 const createSchema = z.object({
-  name: z.string().min(2, 'Name must be at least 2 characters'),
-  currency: z.string().length(3, 'Must be a 3-letter currency code').toUpperCase(),
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  currency: z.string().length(3, "Must be a 3-letter currency code").toUpperCase(),
   description: z.string().optional(),
 });
 type CreateForm = z.infer<typeof createSchema>;
@@ -36,26 +36,40 @@ type CreateForm = z.infer<typeof createSchema>;
 export default function PortfoliosPage() {
   const queryClient = useQueryClient();
   const [showForm, setShowForm] = useState(false);
+  const [deletingId, setDeletingId] = useState<string | null>(null);
 
   const { data: portfolios = [], isLoading } = useQuery<Portfolio[]>({
-    queryKey: ['portfolios'],
+    queryKey: ["portfolios"],
     queryFn: async () => {
-      const res = await apiClient.get('/portfolios');
+      const res = await apiClient.get("/portfolios");
       return (res as any).data ?? res.data;
     },
   });
 
-  const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm<CreateForm>({
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<CreateForm>({
     resolver: zodResolver(createSchema),
-    defaultValues: { currency: 'INR' },
+    defaultValues: { currency: "INR" },
   });
 
   const createMutation = useMutation({
-    mutationFn: (data: CreateForm) => apiClient.post('/portfolios', data),
+    mutationFn: (data: CreateForm) => apiClient.post("/portfolios", data),
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['portfolios'] });
+      queryClient.invalidateQueries({ queryKey: ["portfolios"] });
       reset();
       setShowForm(false);
+    },
+  });
+
+  const deleteMutation = useMutation({
+    mutationFn: (id: string) => apiClient.delete(`/portfolios/${id}`),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["portfolios"] });
+      setDeletingId(null);
     },
   });
 
@@ -75,28 +89,45 @@ export default function PortfoliosPage() {
       {/* Create form */}
       {showForm && (
         <Card>
-          <CardHeader><CardTitle className="text-base">Create Portfolio</CardTitle></CardHeader>
+          <CardHeader>
+            <CardTitle className="text-base">Create Portfolio</CardTitle>
+          </CardHeader>
           <form onSubmit={handleSubmit((d) => createMutation.mutate(d))}>
             <CardContent className="space-y-4">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
                   <Label>Name</Label>
-                  <Input placeholder="My Growth Portfolio" {...register('name')} />
+                  <Input placeholder="My Growth Portfolio" {...register("name")} />
                   {errors.name && <p className="text-xs text-destructive">{errors.name.message}</p>}
                 </div>
                 <div className="space-y-1.5">
                   <Label>Currency</Label>
-                  <Input placeholder="INR" maxLength={3} {...register('currency')} />
-                  {errors.currency && <p className="text-xs text-destructive">{errors.currency.message}</p>}
+                  <Input placeholder="INR" maxLength={3} {...register("currency")} />
+                  {errors.currency && (
+                    <p className="text-xs text-destructive">{errors.currency.message}</p>
+                  )}
                 </div>
               </div>
               <div className="space-y-1.5">
                 <Label>Description (optional)</Label>
-                <Input placeholder="Long-term equity investments" {...register('description')} />
+                <Input placeholder="Long-term equity investments" {...register("description")} />
               </div>
               <div className="flex gap-2">
-                <Button type="submit" size="sm" isLoading={isSubmitting || createMutation.isPending}>Create</Button>
-                <Button type="button" variant="outline" size="sm" onClick={() => setShowForm(false)}>Cancel</Button>
+                <Button
+                  type="submit"
+                  size="sm"
+                  isLoading={isSubmitting || createMutation.isPending}
+                >
+                  Create
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setShowForm(false)}
+                >
+                  Cancel
+                </Button>
               </div>
             </CardContent>
           </form>
@@ -107,7 +138,11 @@ export default function PortfoliosPage() {
       {isLoading ? (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {Array.from({ length: 3 }).map((_, i) => (
-            <Card key={i} className="p-6"><Skeleton className="h-5 w-32 mb-2" /><Skeleton className="h-8 w-24 mb-1" /><Skeleton className="h-3 w-16" /></Card>
+            <Card key={i} className="p-6">
+              <Skeleton className="h-5 w-32 mb-2" />
+              <Skeleton className="h-8 w-24 mb-1" />
+              <Skeleton className="h-3 w-16" />
+            </Card>
           ))}
         </div>
       ) : portfolios.length === 0 ? (
@@ -120,22 +155,69 @@ export default function PortfoliosPage() {
       ) : (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {portfolios.map((p) => (
-            <Link key={p.id} href={`/portfolios/${p.id}`}>
-              <Card className="p-6 hover:shadow-md transition-shadow cursor-pointer group">
-                <div className="flex items-start justify-between mb-3">
-                  <div>
-                    <p className="font-semibold">{p.name}</p>
-                    {p.description && <p className="text-xs text-muted-foreground mt-0.5">{p.description}</p>}
-                  </div>
+            <Card key={p.id} className="p-6 hover:shadow-md transition-shadow relative group">
+              <div className="flex items-start justify-between mb-3">
+                <Link href={`/portfolios/${p.id}`} className="flex-1 pr-2">
+                  <p className="font-semibold group-hover:text-blue-600 transition-colors">
+                    {p.name}
+                  </p>
+                  {p.description && (
+                    <p className="text-xs text-muted-foreground mt-0.5">{p.description}</p>
+                  )}
+                </Link>
+                <div className="flex items-center gap-2">
                   <Badge variant="secondary">{p.currency}</Badge>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="h-7 w-7 p-0 text-muted-foreground hover:text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/30"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setDeletingId(p.id);
+                    }}
+                    title="Delete portfolio"
+                  >
+                    <Trash2 className="h-3.5 w-3.5" />
+                  </Button>
                 </div>
-                <p className="text-2xl font-bold">{formatCurrency(p.totalValue ?? 0, p.currency, true)}</p>
-                <div className="flex items-center justify-between mt-3">
-                  <p className="text-xs text-muted-foreground">Total value</p>
-                  <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-foreground transition-colors" />
+              </div>
+
+              {deletingId === p.id ? (
+                <div className="mt-4 p-3 bg-rose-500/10 border border-rose-500/20 rounded-lg text-xs space-y-2">
+                  <p className="font-medium text-rose-500">Delete &apos;{p.name}&apos;?</p>
+                  <div className="flex gap-2">
+                    <Button
+                      variant="destructive"
+                      size="sm"
+                      className="h-7 text-xs px-2.5"
+                      isLoading={deleteMutation.isPending}
+                      onClick={() => deleteMutation.mutate(p.id)}
+                    >
+                      Confirm Delete
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="h-7 text-xs px-2.5"
+                      onClick={() => setDeletingId(null)}
+                    >
+                      Cancel
+                    </Button>
+                  </div>
                 </div>
-              </Card>
-            </Link>
+              ) : (
+                <Link href={`/portfolios/${p.id}`}>
+                  <p className="text-2xl font-bold">
+                    {formatCurrency(p.totalValue ?? 0, p.currency, true)}
+                  </p>
+                  <div className="flex items-center justify-between mt-3">
+                    <p className="text-xs text-muted-foreground">Total value</p>
+                    <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-foreground transition-colors" />
+                  </div>
+                </Link>
+              )}
+            </Card>
           ))}
         </div>
       )}

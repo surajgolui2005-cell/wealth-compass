@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   LineChart,
@@ -9,9 +9,8 @@ import {
   Tooltip,
   Legend,
   ReferenceLine,
-  type TooltipProps,
-} from 'recharts';
-import { ChartContainer } from './chart-container';
+} from "recharts";
+import { ChartContainer } from "./chart-container";
 import {
   CHART_COLORS,
   TOOLTIP_STYLE,
@@ -20,12 +19,12 @@ import {
   formatAxisPercent,
   formatAxisDate,
   formatTooltipDate,
-} from './chart-theme';
+} from "./chart-theme";
 
 export interface BenchmarkDataPoint {
   date: string;
-  portfolio: number;  // cumulative return %
-  benchmark: number;  // cumulative return %
+  portfolio: number; // cumulative return %
+  benchmark: number; // cumulative return %
 }
 
 interface BenchmarkComparisonChartProps {
@@ -36,13 +35,21 @@ interface BenchmarkComparisonChartProps {
   isLoading?: boolean;
 }
 
-function CustomTooltip({ active, payload, label }: TooltipProps<number, string>) {
+function CustomTooltip({
+  active,
+  payload,
+  label,
+}: {
+  active?: boolean;
+  payload?: Array<{ dataKey?: string | number; name?: string; value?: number; color?: string }>;
+  label?: string;
+}) {
   if (!active || !payload?.length) return null;
   return (
     <div style={TOOLTIP_STYLE}>
-      <p className="font-medium mb-1">{formatTooltipDate(label)}</p>
+      <p className="font-medium mb-1">{formatTooltipDate(label ?? "")}</p>
       {payload.map((entry) => (
-        <p key={entry.dataKey} style={{ color: entry.color }} className="text-xs">
+        <p key={String(entry.dataKey)} style={{ color: entry.color }} className="text-xs">
           {entry.name}: {formatAxisPercent(entry.value as number, 2)}
         </p>
       ))}
@@ -52,8 +59,8 @@ function CustomTooltip({ active, payload, label }: TooltipProps<number, string>)
 
 export function BenchmarkComparisonChart({
   data,
-  portfolioLabel = 'Portfolio',
-  benchmarkLabel = 'NIFTY 50',
+  portfolioLabel = "Portfolio",
+  benchmarkLabel = "NIFTY 50",
   height = 300,
   isLoading = false,
 }: BenchmarkComparisonChartProps) {
@@ -67,7 +74,11 @@ export function BenchmarkComparisonChart({
       emptyMessage="Historical data needed for benchmark comparison."
     >
       <LineChart data={data} margin={{ top: 8, right: 8, left: 8, bottom: 0 }}>
-        <CartesianGrid strokeDasharray={GRID_STYLE.strokeDasharray} stroke={GRID_STYLE.stroke} vertical={false} />
+        <CartesianGrid
+          strokeDasharray={GRID_STYLE.strokeDasharray}
+          stroke={GRID_STYLE.stroke}
+          vertical={false}
+        />
         <XAxis
           dataKey="date"
           tickFormatter={formatAxisDate}
@@ -83,7 +94,10 @@ export function BenchmarkComparisonChart({
           axisLine={false}
           width={52}
         />
-        <Tooltip content={<CustomTooltip />} cursor={{ stroke: CHART_COLORS.muted, strokeWidth: 1 }} />
+        <Tooltip
+          content={<CustomTooltip />}
+          cursor={{ stroke: CHART_COLORS.muted, strokeWidth: 1 }}
+        />
         <Legend
           iconType="plainline"
           iconSize={16}
