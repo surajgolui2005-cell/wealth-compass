@@ -64,16 +64,48 @@ export function AddTransactionModal({ open, onClose, portfolioId }: AddTransacti
         }
       }
 
-      // 2. Record transaction
-      return apiClient.post("/transactions", {
-        portfolioId,
-        symbol: symbol.trim().toUpperCase(),
-        type,
-        quantity: parseFloat(quantity),
-        pricePerUnit: parseFloat(pricePerUnit),
-        transactedAt: new Date(transactedAt).toISOString(),
-        providerAccountId,
-      });
+      // 2. Record transaction (with auto-funding for initial asset import)
+      try {
+        return await apiClient.post("/transactions", {
+          portfolioId,
+          symbol: symbol.trim().toUpperCase(),
+          type,
+          quantity: parseFloat(quantity),
+          pricePerUnit: parseFloat(pricePerUnit),
+          transactedAt: new Date(transactedAt).toISOString(),
+          providerAccountId,
+        });
+      } catch (err: any) {
+        const errorMsg =
+          err?.response?.data?.error?.message || err?.response?.data?.message || err?.message || "";
+        if (
+          typeof errorMsg === "string" &&
+          (errorMsg.toLowerCase().includes("insufficient cash") ||
+            errorMsg.toLowerCase().includes("cash balance"))
+        ) {
+          // Auto-deposit external funding needed for this broker holding
+          const totalCost = parseFloat(quantity) * parseFloat(pricePerUnit);
+          await apiClient.post("/transactions", {
+            portfolioId,
+            symbol: "CASH",
+            type: "DEPOSIT",
+            quantity: totalCost,
+            pricePerUnit: 1,
+            transactedAt: new Date(transactedAt).toISOString(),
+          });
+          // Re-attempt recording the asset position
+          return await apiClient.post("/transactions", {
+            portfolioId,
+            symbol: symbol.trim().toUpperCase(),
+            type,
+            quantity: parseFloat(quantity),
+            pricePerUnit: parseFloat(pricePerUnit),
+            transactedAt: new Date(transactedAt).toISOString(),
+            providerAccountId,
+          });
+        }
+        throw err;
+      }
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["portfolio", portfolioId] });
@@ -131,21 +163,27 @@ export function AddTransactionModal({ open, onClose, portfolioId }: AddTransacti
               {CONNECTABLE_BROKERS.map((code) => {
                 const cfg = getBrokerConfig(code);
                 const active = selectedBroker === code;
+                const isConnected = (accountsData || []).some((a: any) => a.providerCode === code);
                 return (
                   <button
                     key={code}
                     type="button"
                     onClick={() => setSelectedBroker(code)}
                     className={cn(
-                      "flex items-center gap-2 p-2 rounded-lg border text-left transition-all text-xs font-medium",
+                      "flex items-center gap-1.5 p-2 rounded-lg border text-left transition-all text-xs cursor-pointer",
                       active
-                        ? "border-blue-600 bg-blue-50 text-blue-900 shadow-sm font-semibold"
-                        : "border-border hover:bg-muted/40 text-foreground",
+                        ? "border-primary bg-primary/15 text-primary shadow-xs font-semibold ring-1 ring-primary"
+                        : "border-border hover:border-primary/40 hover:bg-muted/40 text-foreground",
                     )}
                   >
                     <span>{cfg.emoji}</span>
-                    <span className="truncate">{cfg.shortLabel}</span>
-                    {active && <Check className="h-3 w-3 ml-auto text-blue-600" />}
+                    <span className="truncate flex-1">{cfg.shortLabel}</span>
+                    {isConnected && (
+                      <span className="text-[9px] px-1 py-0.2 rounded bg-emerald-500/10 text-emerald-500 font-semibold">
+                        Linked
+                      </span>
+                    )}
+                    {active && <Check className="h-3 w-3 ml-auto text-primary shrink-0" />}
                   </button>
                 );
               })}

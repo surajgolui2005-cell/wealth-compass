@@ -126,7 +126,7 @@ export function StockChartModal({
                 className={cn(
                   "flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-colors",
                   chartType === "candlestick"
-                    ? "bg-white shadow-sm text-foreground"
+                    ? "bg-background shadow-xs text-foreground font-semibold"
                     : "text-muted-foreground hover:text-foreground",
                 )}
               >
@@ -138,7 +138,7 @@ export function StockChartModal({
                 className={cn(
                   "flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-colors",
                   chartType === "line"
-                    ? "bg-white shadow-sm text-foreground"
+                    ? "bg-background shadow-xs text-foreground font-semibold"
                     : "text-muted-foreground hover:text-foreground",
                 )}
               >

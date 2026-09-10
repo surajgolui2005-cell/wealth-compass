@@ -20,6 +20,11 @@ from __future__ import annotations
 import time
 import logging
 
+from dotenv import load_dotenv
+
+# Load environment variables from .env file if present
+load_dotenv()
+
 from fastapi import FastAPI, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -50,16 +55,21 @@ app = FastAPI(
     openapi_url="/openapi.json",
 )
 
-# ── CORS: locked to internal container network ─────────────────────────────────
+# ── CORS ───────────────────────────────────────────────────────────────────────
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:3000",   # NestJS dev server
-        "http://api:3000",         # NestJS container
-        "http://localhost:8001",   # Self (local dev)
+        "http://localhost:3000",
+        "http://localhost:3001",
+        "http://127.0.0.1:3000",
+        "http://127.0.0.1:3001",
+        "http://localhost:8001",
+        "http://api:3000",
+        "*",
     ],
-    allow_methods=["POST", "GET"],
-    allow_headers=["Authorization", "Content-Type"],
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # ── Request latency middleware ─────────────────────────────────────────────────

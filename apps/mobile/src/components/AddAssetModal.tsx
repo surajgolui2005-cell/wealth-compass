@@ -56,16 +56,46 @@ export function AddAssetModal({ visible, onClose, portfolioId }: AddAssetModalPr
         // Continue if provider account check fails
       }
 
-      // 2. Post transaction
-      return apiClient.post("/transactions", {
-        portfolioId,
-        symbol: symbol.trim().toUpperCase(),
-        type,
-        quantity: parseFloat(quantity),
-        pricePerUnit: parseFloat(price),
-        transactedAt: new Date().toISOString(),
-        providerAccountId,
-      });
+      // 2. Post transaction (with auto-funding fallback)
+      try {
+        return await apiClient.post("/transactions", {
+          portfolioId,
+          symbol: symbol.trim().toUpperCase(),
+          type,
+          quantity: parseFloat(quantity),
+          pricePerUnit: parseFloat(price),
+          transactedAt: new Date().toISOString(),
+          providerAccountId,
+        });
+      } catch (err: any) {
+        const errorMsg =
+          err?.response?.data?.error?.message || err?.response?.data?.message || err?.message || "";
+        if (
+          typeof errorMsg === "string" &&
+          (errorMsg.toLowerCase().includes("insufficient cash") ||
+            errorMsg.toLowerCase().includes("cash balance"))
+        ) {
+          const totalCost = parseFloat(quantity) * parseFloat(price);
+          await apiClient.post("/transactions", {
+            portfolioId,
+            symbol: "CASH",
+            type: "DEPOSIT",
+            quantity: totalCost,
+            pricePerUnit: 1,
+            transactedAt: new Date().toISOString(),
+          });
+          return await apiClient.post("/transactions", {
+            portfolioId,
+            symbol: symbol.trim().toUpperCase(),
+            type,
+            quantity: parseFloat(quantity),
+            pricePerUnit: parseFloat(price),
+            transactedAt: new Date().toISOString(),
+            providerAccountId,
+          });
+        }
+        throw err;
+      }
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["portfolio", portfolioId] });

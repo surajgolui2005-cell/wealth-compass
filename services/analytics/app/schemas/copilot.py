@@ -136,7 +136,7 @@ class PortfolioContext(BaseModel):
     portfolio_id: str = Field(..., description="UUID of the portfolio being analysed.")
     total_net_worth_inr: float = Field(
         ...,
-        gt=0,
+        ge=0.0,
         description="Total portfolio market value in INR across all brokers.",
     )
     holdings: Annotated[
@@ -175,7 +175,7 @@ class PortfolioContext(BaseModel):
         if v is None:
             return v
         total = sum(v.values())
-        if abs(total - 100.0) > 0.5:
+        if total > 0 and abs(total - 100.0) > 0.5:
             raise ValueError(
                 f"Allocation weights must sum to 100.0 (±0.5). Got {total:.4f}."
             )

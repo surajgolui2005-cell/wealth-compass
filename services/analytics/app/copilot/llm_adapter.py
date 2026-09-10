@@ -27,6 +27,9 @@ import os
 import re
 
 import httpx
+from dotenv import load_dotenv
+
+load_dotenv()
 
 logger = logging.getLogger(__name__)
 
@@ -36,7 +39,7 @@ _DEFAULT_BASE_URL = (
     "https://generativelanguage.googleapis.com/v1beta/openai"
 )
 _DEFAULT_MODEL = "gemini-1.5-flash"
-_REQUEST_TIMEOUT_S = 20.0
+_REQUEST_TIMEOUT_S = 60.0
 _RULE_BASED_MODEL_NAME = "rule-based-fallback"
 
 
@@ -94,7 +97,15 @@ class LLMAdapter:
         if not self.api_key:
             return self._rule_based_response(system_prompt, user_message)
 
-        return await self._call_llm_api(messages)
+        try:
+            return await self._call_llm_api(messages)
+        except Exception as exc:
+            logger.warning(
+                "LLM API call failed (%s: %s) — falling back to deterministic rule-based engine",
+                type(exc).__name__,
+                exc,
+            )
+            return self._rule_based_response(system_prompt, user_message)
 
     async def _call_llm_api(self, messages: list[dict]) -> str:
         """Call the OpenAI-compatible /chat/completions endpoint."""
@@ -106,7 +117,7 @@ class LLMAdapter:
         payload = {
             "model": self.model,
             "messages": messages,
-            "max_tokens": 1024,
+            "max_tokens": 2048,
             "temperature": 0.1,  # Low temperature → more deterministic, fewer hallucinations
         }
 

@@ -6,7 +6,16 @@ import { StatCard } from "@/components/common/stat-card";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Activity, Plus, TrendingUp, Layers, ShieldCheck, Bell } from "lucide-react";
+import {
+  ArrowRight,
+  Activity,
+  Plus,
+  TrendingUp,
+  Layers,
+  ShieldCheck,
+  Bell,
+  ExternalLink,
+} from "lucide-react";
 import Link from "next/link";
 import { formatCurrency } from "@/lib/utils";
 import { getBrokerConfig, CONNECTABLE_BROKERS } from "@/lib/broker-config";
@@ -102,26 +111,35 @@ export default function DashboardPage() {
       </div>
 
       {/* Supported Platforms Banner */}
-      <Card className="border-border bg-gradient-to-r from-blue-50/50 via-card to-indigo-50/30">
+      <Card className="border-border bg-card/80 shadow-xs">
         <CardHeader className="pb-2.5">
           <CardTitle className="text-sm font-semibold text-muted-foreground uppercase tracking-wider flex items-center gap-2">
-            <Layers className="h-4 w-4 text-blue-600" />
+            <Layers className="h-4 w-4 text-primary" />
             Connected & Supported Broker Integrations
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2.5">
             {CONNECTABLE_BROKERS.map((code) => {
               const cfg = getBrokerConfig(code);
               return (
-                <div
+                <a
                   key={code}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border bg-white shadow-xs text-xs font-medium"
-                  style={{ borderColor: cfg.textColor + "33" }}
+                  href={cfg.webUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={`Open ${cfg.label} in new tab`}
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border text-xs font-medium shadow-xs transition-all duration-200 hover:scale-105 hover:shadow-md cursor-pointer group"
+                  style={{
+                    backgroundColor: cfg.color,
+                    color: cfg.textColor,
+                    borderColor: cfg.textColor + "4D",
+                  }}
                 >
-                  <span>{cfg.emoji}</span>
-                  <span className="font-semibold text-foreground">{cfg.label}</span>
-                </div>
+                  <span className="text-sm">{cfg.emoji}</span>
+                  <span className="font-semibold">{cfg.label}</span>
+                  <ExternalLink className="h-3 w-3 opacity-60 group-hover:opacity-100 transition-opacity" />
+                </a>
               );
             })}
           </div>

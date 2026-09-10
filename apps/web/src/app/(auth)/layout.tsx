@@ -1,14 +1,4 @@
-import { redirect } from "next/navigation";
-import { cookies } from "next/headers";
-
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
-  // If an auth cookie exists, user may already be authenticated
-  const cookieStore = cookies();
-  const hasAuth = cookieStore.has("refresh_token") || cookieStore.has("access_token");
-  if (hasAuth) {
-    redirect("/dashboard");
-  }
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background via-muted/30 to-background p-4">
       <div className="w-full max-w-md">

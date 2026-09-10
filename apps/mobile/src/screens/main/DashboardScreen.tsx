@@ -1,5 +1,14 @@
 import React, { useState, useCallback } from "react";
-import { ScrollView, RefreshControl, View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import {
+  ScrollView,
+  RefreshControl,
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  Linking,
+  Alert,
+} from "react-native";
 import { useQuery } from "@tanstack/react-query";
 import { apiClient } from "@/lib/api-client";
 import { useAuth } from "@/context/AuthContext";
@@ -112,11 +121,37 @@ export function DashboardScreen() {
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.brokersScroll}>
         {CONNECTABLE_BROKERS.map((code) => {
           const cfg = getBrokerConfig(code);
+          const handleOpen = async () => {
+            try {
+              if (cfg.webUrl && cfg.webUrl !== "#") {
+                await Linking.openURL(cfg.webUrl);
+              }
+            } catch {
+              Alert.alert("Unable to open link", `Could not open ${cfg.label}.`);
+            }
+          };
+
           return (
-            <View key={code} style={[styles.brokerChip, { borderColor: cfg.textColor + "33" }]}>
+            <TouchableOpacity
+              key={code}
+              onPress={handleOpen}
+              activeOpacity={0.7}
+              style={[
+                styles.brokerChip,
+                { backgroundColor: cfg.bgColor, borderColor: cfg.textColor + "40" },
+              ]}
+            >
               <Text style={styles.brokerChipEmoji}>{cfg.emoji}</Text>
-              <Text style={styles.brokerChipText}>{cfg.label}</Text>
-            </View>
+              <Text style={[styles.brokerChipText, { color: cfg.textColor, fontWeight: "700" }]}>
+                {cfg.label}
+              </Text>
+              <Ionicons
+                name="open-outline"
+                size={11}
+                color={cfg.textColor}
+                style={{ marginLeft: 3, opacity: 0.7 }}
+              />
+            </TouchableOpacity>
           );
         })}
       </ScrollView>

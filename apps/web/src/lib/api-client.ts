@@ -19,7 +19,7 @@ export const copilotClient = axios.create({
   baseURL: `${COPILOT_BASE}`,
   withCredentials: false,
   headers: { "Content-Type": "application/json" },
-  timeout: 30_000,
+  timeout: 60_000,
 });
 
 // ── Response interceptor: unwrap success envelope & handle 401 ──────────────
@@ -33,8 +33,12 @@ apiClient.interceptors.response.use(
   },
   async (error: AxiosError) => {
     if (error.response?.status === 401 && !error.config?.url?.includes("/auth/login")) {
-      if (typeof window !== "undefined" && window.location.pathname !== "/login") {
-        window.location.href = "/login";
+      if (typeof window !== "undefined") {
+        document.cookie = "access_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        document.cookie = "refresh_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        if (window.location.pathname !== "/login") {
+          window.location.href = "/login";
+        }
       }
     }
     // Re-shape error for consumers

@@ -39,7 +39,12 @@ export function ConnectPlatformModal({ open, onClose, portfolioId }: ConnectPlat
       setAccountName("");
     },
     onError: (e: any) => {
-      setError(e?.response?.data?.message ?? "Failed to connect. Try again.");
+      const msg =
+        e?.response?.data?.error?.message ||
+        e?.response?.data?.message ||
+        e?.message ||
+        "Failed to connect. Try again.";
+      setError(Array.isArray(msg) ? msg.join("; ") : msg);
     },
   });
 
@@ -68,20 +73,28 @@ export function ConnectPlatformModal({ open, onClose, portfolioId }: ConnectPlat
               return (
                 <button
                   key={code}
+                  type="button"
                   onClick={() => {
                     setSelectedBroker(code);
                     setAccountName("");
                   }}
                   className={cn(
-                    "flex items-center gap-2.5 rounded-xl border p-3 text-left transition-all",
+                    "flex items-center gap-2.5 rounded-xl border p-3 text-left transition-all cursor-pointer",
                     active
-                      ? "border-blue-500 bg-blue-50 shadow-sm"
-                      : "hover:border-muted-foreground/40 hover:bg-muted/40",
+                      ? "border-primary bg-primary/10 shadow-xs ring-1 ring-primary"
+                      : "border-border hover:border-primary/40 hover:bg-muted/40",
                   )}
                 >
                   <span className="text-xl">{cfg.emoji}</span>
                   <div>
-                    <p className="text-sm font-semibold text-foreground">{cfg.label}</p>
+                    <p
+                      className={cn(
+                        "text-sm font-semibold",
+                        active ? "text-primary" : "text-foreground",
+                      )}
+                    >
+                      {cfg.label}
+                    </p>
                   </div>
                 </button>
               );

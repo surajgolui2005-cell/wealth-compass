@@ -12,25 +12,58 @@ import {
 } from "@nestjs/common";
 import { Request } from "express";
 import { JwtAuthGuard } from "../../auth/jwt-auth.guard";
+import { IsNotEmpty, IsOptional, IsString, IsObject } from "class-validator";
 import { CsvColumnMapping } from "../interfaces/provider.interface";
 import { ProviderFactoryService } from "../services/provider-factory.service";
 import { ProviderIngestionService } from "../services/provider-ingestion.service";
 
 class ImportCsvDto {
+  @IsString()
+  @IsNotEmpty()
   portfolioId: string;
+
+  @IsString()
+  @IsNotEmpty()
   csvContent: string;
+
+  @IsOptional()
+  @IsObject()
   customMapping?: CsvColumnMapping;
 }
 
 class SyncProviderDto {
+  @IsString()
+  @IsNotEmpty()
   providerCode: string;
+
+  @IsOptional()
+  @IsObject()
   credentials?: Record<string, any>;
+
+  @IsOptional()
+  @IsString()
   accountId?: string;
 }
 
 class ConnectAccountDto {
+  @IsString()
+  @IsNotEmpty()
   providerCode: string;
+
+  @IsString()
+  @IsNotEmpty()
   accountName: string;
+
+  @IsOptional()
+  @IsString()
+  portfolioId?: string;
+
+  @IsOptional()
+  @IsString()
+  status?: string;
+
+  @IsOptional()
+  @IsObject()
   credentials?: Record<string, any>;
 }
 
