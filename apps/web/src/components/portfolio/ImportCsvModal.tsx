@@ -3,10 +3,13 @@
 import { useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiClient } from "@/lib/api-client";
+import { CONNECTABLE_BROKERS, getBrokerConfig } from "@/lib/broker-config";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { UploadCloud, FileText } from "lucide-react";
+import { Label } from "@/components/ui/label";
+import { UploadCloud, FileText, Check } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface ImportCsvModalProps {
   open: boolean;
@@ -14,19 +17,27 @@ interface ImportCsvModalProps {
   portfolioId: string;
 }
 
-const SAMPLE_CSV = `symbol,quantity,price,type,date
-RELIANCE,15,2910.50,BUY,2026-01-10
-INFY,30,1850.00,BUY,2026-02-15
-TCS,10,3920.00,BUY,2026-03-01
-HDFCBANK,25,1640.20,BUY,2026-03-05`;
-
 export function ImportCsvModal({ open, onClose, portfolioId }: ImportCsvModalProps) {
   const queryClient = useQueryClient();
+  const [selectedBroker, setSelectedBroker] = useState<string>("GROWW");
   const [csvContent, setCsvContent] = useState("");
   const [error, setError] = useState("");
 
   const { mutate: importCsv, isPending } = useMutation({
     mutationFn: async () => {
+      // Ensure provider account exists for this broker
+      try {
+        const cfg = getBrokerConfig(selectedBroker);
+        await apiClient.post("/providers/accounts", {
+          portfolioId,
+          providerCode: selectedBroker,
+          accountName: `${cfg.label} Import`,
+          status: "CONNECTED",
+        });
+      } catch {
+        // Proceed if account already exists
+      }
+
       return apiClient.post("/providers/csv/import", {
         portfolioId,
         csvContent: csvContent.trim(),
@@ -36,13 +47,16 @@ export function ImportCsvModal({ open, onClose, portfolioId }: ImportCsvModalPro
       queryClient.invalidateQueries({ queryKey: ["portfolio", portfolioId] });
       queryClient.invalidateQueries({ queryKey: ["holdings", portfolioId] });
       queryClient.invalidateQueries({ queryKey: ["portfolios"] });
+      queryClient.invalidateQueries({ queryKey: ["provider-accounts"] });
       onClose();
       setCsvContent("");
       setError("");
     },
     onError: (e: any) => {
       setError(
-        e?.response?.data?.message || "Failed to import CSV. Please ensure column headers match.",
+        e?.response?.data?.error?.message ||
+          e?.response?.data?.message ||
+          "Failed to import CSV. Please ensure column headers match.",
       );
     },
   });
@@ -59,11 +73,6 @@ export function ImportCsvModal({ open, onClose, portfolioId }: ImportCsvModalPro
     reader.readAsText(file);
   };
 
-  const handleUseSample = () => {
-    setCsvContent(SAMPLE_CSV);
-    setError("");
-  };
-
   return (
     <Dialog open={open} onOpenChange={(v: boolean) => !v && onClose()}>
       <DialogContent className="max-w-xl">
@@ -78,6 +87,36 @@ export function ImportCsvModal({ open, onClose, portfolioId }: ImportCsvModalPro
         </DialogHeader>
 
         <div className="space-y-4 mt-2">
+          {/* Select Broker Platform */}
+          <div>
+            <Label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              Select Broker Source
+            </Label>
+            <div className="grid grid-cols-4 gap-1.5 mt-1.5">
+              {CONNECTABLE_BROKERS.map((code) => {
+                const cfg = getBrokerConfig(code);
+                const active = selectedBroker === code;
+                return (
+                  <button
+                    key={code}
+                    type="button"
+                    onClick={() => setSelectedBroker(code)}
+                    className={cn(
+                      "flex items-center gap-1.5 p-2 rounded-lg border text-left transition-all text-xs cursor-pointer",
+                      active
+                        ? "border-primary bg-primary/15 text-primary shadow-xs font-semibold ring-1 ring-primary"
+                        : "border-border hover:border-primary/40 hover:bg-muted/40 text-foreground",
+                    )}
+                  >
+                    <span>{cfg.emoji}</span>
+                    <span className="truncate flex-1">{cfg.shortLabel}</span>
+                    {active && <Check className="h-3 w-3 ml-auto text-primary shrink-0" />}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
           {/* File upload input */}
           <div className="border-2 border-dashed border-border rounded-xl p-4 text-center hover:bg-muted/30 transition-colors">
             <input
@@ -97,17 +136,10 @@ export function ImportCsvModal({ open, onClose, portfolioId }: ImportCsvModalPro
             </label>
           </div>
 
-          <div className="flex items-center justify-between">
-            <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+          <div>
+            <Label className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
               Or Paste CSV Data Directly:
-            </span>
-            <button
-              type="button"
-              onClick={handleUseSample}
-              className="text-xs text-blue-600 hover:underline font-medium"
-            >
-              Load Sample Data
-            </button>
+            </Label>
           </div>
 
           <Textarea
