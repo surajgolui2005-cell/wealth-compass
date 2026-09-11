@@ -17,6 +17,7 @@ import { formatCurrency } from "@/lib/utils";
 import { CONNECTABLE_BROKERS, getBrokerConfig } from "@/lib/broker-config";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import { AaConnectSheet } from "@/components/AaConnectSheet";
 
 interface DashboardSummary {
   totalValue: number;
@@ -25,12 +26,14 @@ interface DashboardSummary {
   totalHoldings: number;
   portfoliosCount: number;
   currency: string;
+  defaultPortfolioId?: string;
 }
 
 export function DashboardScreen() {
   const { user } = useAuth();
   const navigation = useNavigation<any>();
   const [refreshing, setRefreshing] = useState(false);
+  const [aaSheetVisible, setAaSheetVisible] = useState(false);
 
   const {
     data: summary,
@@ -41,6 +44,7 @@ export function DashboardScreen() {
     queryFn: async () => {
       const res = await apiClient.get("/portfolios");
       const portfolios: any[] = (res as any).data ?? [];
+      const defaultPort = portfolios.find((p: any) => p.isDefault) || portfolios[0];
       const total = portfolios.reduce(
         (sum: number, p: any) => sum + (Number(p.totalValue) || 0),
         0,
@@ -56,6 +60,7 @@ export function DashboardScreen() {
         totalHoldings: holdingsCount,
         portfoliosCount: portfolios.length,
         currency: "INR",
+        defaultPortfolioId: defaultPort?.id,
       };
     },
     retry: false,
@@ -87,7 +92,7 @@ export function DashboardScreen() {
     },
     {
       label: "Broker Integrations",
-      value: "Groww & Angel One",
+      value: "RBI AA Connected",
       delta: undefined,
     },
   ];
@@ -100,8 +105,26 @@ export function DashboardScreen() {
         <RefreshControl refreshing={refreshing} onRefresh={onRefresh} tintColor="#3b82f6" />
       }
     >
-      <Text style={styles.greeting}>{greeting}</Text>
-      <Text style={styles.subheading}>Multi-broker portfolio tracking & live risk</Text>
+      <View style={styles.headerRow}>
+        <View>
+          <Text style={styles.greeting}>{greeting}</Text>
+          <Text style={styles.subheading}>Multi-broker portfolio tracking & live risk</Text>
+        </View>
+
+        <TouchableOpacity
+          style={styles.aaBtn}
+          onPress={() => {
+            if (summary?.defaultPortfolioId) {
+              setAaSheetVisible(true);
+            } else {
+              Alert.alert("Portfolio Needed", "Please create a portfolio first.");
+            }
+          }}
+        >
+          <Ionicons name="account-balance" size={16} color="#fff" />
+          <Text style={styles.aaBtnText}>Sync AA 🔗</Text>
+        </TouchableOpacity>
+      </View>
 
       {/* Metric Cards Grid */}
       <View style={styles.grid}>
@@ -117,150 +140,190 @@ export function DashboardScreen() {
       </View>
 
       {/* Supported / Integrated Brokers Strip */}
-      <Text style={styles.sectionTitle}>Connected Brokers</Text>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.brokersScroll}>
+      <View style={styles.sectionHeaderRow}>
+        <Text style={styles.sectionTitle}>Connected Broker Platforms</Text>
+        <TouchableOpacity onPress={() => setAaSheetVisible(true)}>
+          <Text style={styles.linkText}>1-Click AA Sync →</Text>
+        </TouchableOpacity>
+      </View>
+
+      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.brokerScroll}>
         {CONNECTABLE_BROKERS.map((code) => {
           const cfg = getBrokerConfig(code);
-          const handleOpen = async () => {
-            try {
-              if (cfg.webUrl && cfg.webUrl !== "#") {
-                await Linking.openURL(cfg.webUrl);
-              }
-            } catch {
-              Alert.alert("Unable to open link", `Could not open ${cfg.label}.`);
-            }
-          };
-
           return (
             <TouchableOpacity
               key={code}
-              onPress={handleOpen}
-              activeOpacity={0.7}
               style={[
                 styles.brokerChip,
-                { backgroundColor: cfg.bgColor, borderColor: cfg.textColor + "40" },
+                { backgroundColor: cfg.color, borderColor: cfg.textColor + "4D" },
               ]}
+              onPress={() => setAaSheetVisible(true)}
             >
-              <Text style={styles.brokerChipEmoji}>{cfg.emoji}</Text>
-              <Text style={[styles.brokerChipText, { color: cfg.textColor, fontWeight: "700" }]}>
-                {cfg.label}
-              </Text>
+              <Text style={styles.brokerEmoji}>{cfg.emoji}</Text>
+              <Text style={[styles.brokerLabel, { color: cfg.textColor }]}>{cfg.label}</Text>
               <Ionicons
                 name="open-outline"
-                size={11}
+                size={12}
                 color={cfg.textColor}
-                style={{ marginLeft: 3, opacity: 0.7 }}
+                style={{ opacity: 0.7 }}
               />
             </TouchableOpacity>
           );
         })}
       </ScrollView>
 
-      {/* Quick Navigation Actions */}
-      <Text style={[styles.sectionTitle, { marginTop: 24 }]}>Quick Navigation</Text>
-      <View style={styles.quickActions}>
-        <TouchableOpacity
-          style={styles.quickActionCard}
-          onPress={() => navigation.navigate("Portfolios")}
-          activeOpacity={0.7}
-        >
-          <View style={styles.actionLeft}>
-            <View style={[styles.actionIcon, { backgroundColor: "#eff6ff" }]}>
-              <Ionicons name="briefcase" size={20} color="#2563eb" />
-            </View>
-            <View>
-              <Text style={styles.quickActionText}>View Holdings & Platforms</Text>
-              <Text style={styles.quickActionSub}>Manage Groww, Angel One & Zerodha stocks</Text>
-            </View>
-          </View>
-          <Ionicons name="chevron-forward" size={18} color="#94a3b8" />
-        </TouchableOpacity>
+      {/* Quick Action Navigation */}
+      <Text style={[styles.sectionTitle, { marginTop: 20 }]}>Quick Navigation</Text>
 
-        <TouchableOpacity
-          style={styles.quickActionCard}
-          onPress={() => navigation.navigate("Risk")}
-          activeOpacity={0.7}
-        >
-          <View style={styles.actionLeft}>
-            <View style={[styles.actionIcon, { backgroundColor: "#f0fdf4" }]}>
-              <Ionicons name="shield-checkmark" size={20} color="#16a34a" />
-            </View>
-            <View>
-              <Text style={styles.quickActionText}>Risk & Diversification Center</Text>
-              <Text style={styles.quickActionSub}>VaR, portfolio beta & max drawdown</Text>
-            </View>
-          </View>
-          <Ionicons name="chevron-forward" size={18} color="#94a3b8" />
-        </TouchableOpacity>
+      <TouchableOpacity style={styles.navCard} onPress={() => navigation.navigate("PortfoliosTab")}>
+        <View style={styles.navIconBg}>
+          <Ionicons name="layers" size={20} color="#3b82f6" />
+        </View>
+        <View style={styles.navContent}>
+          <Text style={styles.navTitle}>Portfolio Holdings</Text>
 
-        <TouchableOpacity
-          style={styles.quickActionCard}
-          onPress={() => navigation.navigate("Alerts")}
-          activeOpacity={0.7}
-        >
-          <View style={styles.actionLeft}>
-            <View style={[styles.actionIcon, { backgroundColor: "#fffbeb" }]}>
-              <Ionicons name="notifications" size={20} color="#d97706" />
-            </View>
-            <View>
-              <Text style={styles.quickActionText}>Price & Volatility Alerts</Text>
-              <Text style={styles.quickActionSub}>Real-time notification rules</Text>
-            </View>
-          </View>
-          <Ionicons name="chevron-forward" size={18} color="#94a3b8" />
-        </TouchableOpacity>
-      </View>
+          <Text style={styles.navSub}>View assets tagged by Groww, Angel One & Zerodha</Text>
+        </View>
+        <Ionicons name="chevron-forward" size={18} color="#64748b" />
+      </TouchableOpacity>
+
+      <TouchableOpacity style={styles.navCard} onPress={() => navigation.navigate("AnalyticsTab")}>
+        <View style={styles.navIconBg}>
+          <Ionicons name="trending-up" size={20} color="#3b82f6" />
+        </View>
+        <View style={styles.navContent}>
+          <Text style={styles.navTitle}>Performance Analytics</Text>
+          <Text style={styles.navSub}>Track XIRR, Sharpe ratio & benchmark comparison</Text>
+        </View>
+        <Ionicons name="chevron-forward" size={18} color="#64748b" />
+      </TouchableOpacity>
+
+      {summary?.defaultPortfolioId && (
+        <AaConnectSheet
+          visible={aaSheetVisible}
+          onClose={() => setAaSheetVisible(false)}
+          portfolioId={summary.defaultPortfolioId}
+        />
+      )}
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#f8fafc" },
-  content: { padding: 16, paddingBottom: 32 },
-  greeting: { fontSize: 22, fontWeight: "700", color: "#0f172a", marginBottom: 4 },
-  subheading: { fontSize: 13, color: "#64748b", marginBottom: 18 },
-  grid: { flexDirection: "row", flexWrap: "wrap", gap: 12, marginBottom: 20 },
-  sectionTitle: { fontSize: 15, fontWeight: "700", color: "#0f172a", marginBottom: 10 },
-  brokersScroll: { flexDirection: "row", marginBottom: 10 },
+  container: {
+    flex: 1,
+    backgroundColor: "#020617",
+  },
+  content: {
+    padding: 16,
+    paddingBottom: 32,
+  },
+  headerRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 16,
+  },
+  greeting: {
+    fontSize: 22,
+    fontWeight: "bold",
+    color: "#f8fafc",
+  },
+  subheading: {
+    fontSize: 13,
+    color: "#94a3b8",
+    marginTop: 2,
+  },
+  aaBtn: {
+    backgroundColor: "#2563eb",
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    borderRadius: 10,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+    shadowColor: "#3b82f6",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  aaBtnText: {
+    color: "#fff",
+    fontSize: 12,
+    fontWeight: "600",
+  },
+  grid: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 10,
+    marginBottom: 20,
+  },
+  sectionHeaderRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 10,
+  },
+  sectionTitle: {
+    fontSize: 14,
+    fontWeight: "600",
+    color: "#cbd5e1",
+    textTransform: "uppercase",
+    letterSpacing: 0.5,
+  },
+  linkText: {
+    color: "#60a5fa",
+    fontSize: 12,
+    fontWeight: "600",
+  },
+  brokerScroll: {
+    marginBottom: 16,
+  },
   brokerChip: {
     flexDirection: "row",
     alignItems: "center",
+    gap: 6,
     paddingHorizontal: 12,
     paddingVertical: 8,
     borderRadius: 20,
-    backgroundColor: "#ffffff",
     borderWidth: 1,
     marginRight: 8,
-    gap: 6,
-    shadowColor: "#000",
-    shadowOpacity: 0.03,
-    shadowRadius: 2,
-    elevation: 1,
   },
-  brokerChipEmoji: { fontSize: 13 },
-  brokerChipText: { fontSize: 13, fontWeight: "600", color: "#334155" },
-  quickActions: { gap: 10 },
-  quickActionCard: {
-    backgroundColor: "#fff",
+  brokerEmoji: {
+    fontSize: 14,
+  },
+  brokerLabel: {
+    fontSize: 12,
+    fontWeight: "600",
+  },
+  navCard: {
+    backgroundColor: "#0f172a",
+    borderColor: "#1e293b",
+    borderWidth: 1,
     borderRadius: 14,
     padding: 14,
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.05,
-    shadowRadius: 4,
-    elevation: 2,
+    marginBottom: 10,
   },
-  actionLeft: { flexDirection: "row", alignItems: "center", gap: 12 },
-  actionIcon: {
-    width: 40,
-    height: 40,
+  navIconBg: {
+    backgroundColor: "rgba(59, 130, 246, 0.1)",
+    padding: 10,
     borderRadius: 10,
-    justifyContent: "center",
-    alignItems: "center",
+    marginRight: 12,
   },
-  quickActionText: { fontSize: 15, fontWeight: "600", color: "#0f172a" },
-  quickActionSub: { fontSize: 12, color: "#64748b", marginTop: 1 },
+  navContent: {
+    flex: 1,
+  },
+  navTitle: {
+    color: "#f8fafc",
+    fontSize: 15,
+    fontWeight: "600",
+  },
+  navSub: {
+    color: "#94a3b8",
+    fontSize: 12,
+    marginTop: 2,
+  },
 });

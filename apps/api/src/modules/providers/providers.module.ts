@@ -13,17 +13,20 @@ import {
 } from "./adapters/rbi-account-aggregator.adapter";
 import { EncryptionService } from "../../common/crypto/encryption.service";
 import { ProviderController } from "./controllers/provider.controller";
+import { AaController } from "./controllers/aa.controller";
 import { ProviderFactoryService } from "./services/provider-factory.service";
 import { ProviderIngestionService } from "./services/provider-ingestion.service";
+import { SetuAaService } from "./services/setu-aa.service";
 
 @Module({
   imports: [AuthModule, PortfolioModule, PrismaModule, CryptoModule],
-  controllers: [ProviderController],
+  controllers: [ProviderController, AaController],
   providers: [
     ManualEntryAdapter,
     CsvProviderAdapter,
     CamsCasPdfAdapter,
     MockBrokerProviderAdapter,
+    SetuAaService,
     {
       provide: RbiAccountAggregatorAdapter,
       useFactory: (enc: EncryptionService) =>
@@ -39,6 +42,7 @@ import { ProviderIngestionService } from "./services/provider-ingestion.service"
     CsvProviderAdapter,
     CamsCasPdfAdapter,
     RbiAccountAggregatorAdapter,
+    SetuAaService,
   ],
 })
 export class ProvidersModule {}

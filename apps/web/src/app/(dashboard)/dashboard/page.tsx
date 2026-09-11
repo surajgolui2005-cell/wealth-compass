@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { apiClient } from "@/lib/api-client";
 import { StatCard } from "@/components/common/stat-card";
@@ -15,10 +16,13 @@ import {
   ShieldCheck,
   Bell,
   ExternalLink,
+  Building2,
+  Sparkles,
 } from "lucide-react";
 import Link from "next/link";
 import { formatCurrency } from "@/lib/utils";
 import { getBrokerConfig, CONNECTABLE_BROKERS } from "@/lib/broker-config";
+import { ConnectPlatformModal } from "@/components/portfolio/ConnectPlatformModal";
 
 interface Portfolio {
   id: string;
@@ -30,6 +34,8 @@ interface Portfolio {
 }
 
 export default function DashboardPage() {
+  const [connectModalOpen, setConnectModalOpen] = useState(false);
+
   const { data: portfolios = [], isLoading } = useQuery<Portfolio[]>({
     queryKey: ["portfolios"],
     queryFn: async () => {
@@ -39,9 +45,7 @@ export default function DashboardPage() {
   });
 
   const totalValue = portfolios.reduce((sum, p) => sum + Number(p.totalValue || 0), 0);
-
   const totalHoldings = portfolios.reduce((sum, p) => sum + Number(p._count?.holdings || 0), 0);
-
   const defaultPortfolio = portfolios.find((p) => p.isDefault) || portfolios[0];
 
   const quickLinks = [
@@ -74,22 +78,42 @@ export default function DashboardPage() {
   return (
     <div className="space-y-6 pb-12">
       {/* Header */}
-      <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
-          <h2 className="text-2xl font-bold tracking-tight">Unified Investment Dashboard</h2>
+          <h2 className="text-2xl font-bold tracking-tight flex items-center gap-2">
+            Unified Investment Dashboard
+            <Badge
+              variant="outline"
+              className="bg-emerald-500/10 text-emerald-600 border-emerald-500/30 text-xs"
+            >
+              RBI AA Connected
+            </Badge>
+          </h2>
           <p className="text-sm text-muted-foreground mt-0.5">
-            Aggregated real-time monitoring across all your broker accounts.
+            Aggregated real-time monitoring across all your broker demat accounts.
           </p>
         </div>
 
-        {defaultPortfolio && (
-          <Link href={`/portfolios/${defaultPortfolio.id}`}>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white gap-1.5 shadow-sm">
-              <Plus className="h-4 w-4" />
-              Manage Assets
+        <div className="flex items-center gap-2">
+          {defaultPortfolio && (
+            <Button
+              onClick={() => setConnectModalOpen(true)}
+              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white gap-1.5 shadow-md shadow-blue-500/10"
+            >
+              <Building2 className="h-4 w-4" />
+              Connect Broker 🔗
             </Button>
-          </Link>
-        )}
+          )}
+
+          {defaultPortfolio && (
+            <Link href={`/portfolios/${defaultPortfolio.id}`}>
+              <Button variant="outline" className="gap-1.5">
+                <Plus className="h-4 w-4" />
+                Manage Assets
+              </Button>
+            </Link>
+          )}
+        </div>
       </div>
 
       {/* Stat Cards */}
@@ -113,22 +137,31 @@ export default function DashboardPage() {
       {/* Supported Platforms Banner */}
       <Card className="border-border bg-card/80 shadow-xs">
         <CardHeader className="pb-2.5">
-          <CardTitle className="text-sm font-semibold text-muted-foreground uppercase tracking-wider flex items-center gap-2">
-            <Layers className="h-4 w-4 text-primary" />
-            Connected & Supported Broker Integrations
-          </CardTitle>
+          <div className="flex items-center justify-between">
+            <CardTitle className="text-sm font-semibold text-muted-foreground uppercase tracking-wider flex items-center gap-2">
+              <Layers className="h-4 w-4 text-primary" />
+              Connected Broker Platforms (RBI Account Aggregator Enabled)
+            </CardTitle>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setConnectModalOpen(true)}
+              className="text-xs text-blue-600 hover:text-blue-700 font-semibold gap-1"
+            >
+              <Sparkles className="w-3.5 h-3.5" /> 1-Click AA Sync →
+            </Button>
+          </div>
         </CardHeader>
         <CardContent>
           <div className="flex flex-wrap items-center gap-2.5">
             {CONNECTABLE_BROKERS.map((code) => {
               const cfg = getBrokerConfig(code);
               return (
-                <a
+                <button
                   key={code}
-                  href={cfg.webUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title={`Open ${cfg.label} in new tab`}
+                  type="button"
+                  onClick={() => setConnectModalOpen(true)}
+                  title={`Sync ${cfg.label} via AA`}
                   className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border text-xs font-medium shadow-xs transition-all duration-200 hover:scale-105 hover:shadow-md cursor-pointer group"
                   style={{
                     backgroundColor: cfg.color,
@@ -139,7 +172,7 @@ export default function DashboardPage() {
                   <span className="text-sm">{cfg.emoji}</span>
                   <span className="font-semibold">{cfg.label}</span>
                   <ExternalLink className="h-3 w-3 opacity-60 group-hover:opacity-100 transition-opacity" />
-                </a>
+                </button>
               );
             })}
           </div>
@@ -177,16 +210,25 @@ export default function DashboardPage() {
             variant="secondary"
             className="ml-auto bg-emerald-50 text-emerald-700 border-emerald-200"
           >
-            Real-Time Connected
+            RBI AA Real-Time Connected
           </Badge>
         </CardHeader>
         <CardContent>
           <p className="text-sm text-muted-foreground">
-            Multi-platform asset aggregation active. Stock prices are dynamically updated and
-            TradingView live candlestick charts are available on every holding row.
+            Multi-platform asset aggregation active. Setu Account Aggregator syncs stock demat
+            holdings across Groww, AngelOne & Zerodha via CDSL/NSDL depositories.
           </p>
         </CardContent>
       </Card>
+
+      {/* Broker Connection Modal */}
+      {defaultPortfolio && (
+        <ConnectPlatformModal
+          open={connectModalOpen}
+          onClose={() => setConnectModalOpen(false)}
+          portfolioId={defaultPortfolio.id}
+        />
+      )}
     </div>
   );
 }

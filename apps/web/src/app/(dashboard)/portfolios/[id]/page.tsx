@@ -16,6 +16,10 @@ import { AddTransactionModal } from "@/components/portfolio/AddTransactionModal"
 import { ConnectPlatformModal } from "@/components/portfolio/ConnectPlatformModal";
 import { ImportCsvModal } from "@/components/portfolio/ImportCsvModal";
 import { AllocationDonutChart, AllocationSlice } from "@/components/charts/AllocationDonutChart";
+import { EquityCurveChart } from "@/components/charts/EquityCurveChart";
+import { BenchmarkComparisonChart } from "@/components/charts/BenchmarkComparisonChart";
+import { DrawdownChart } from "@/components/charts/DrawdownChart";
+import { CorrelationHeatmap } from "@/components/charts/CorrelationHeatmap";
 import { getBrokerConfig } from "@/lib/broker-config";
 import { formatCurrency, formatPercent, classifyDelta, cn } from "@/lib/utils";
 import {
@@ -23,11 +27,18 @@ import {
   UploadCloud,
   Link2,
   TrendingUp,
+  TrendingDown,
   BarChart2,
   Layers,
   PieChart as PieIcon,
   ShieldCheck,
+  ShieldAlert,
   Trash2,
+  X,
+  AlertTriangle,
+  Info,
+  ArrowUpRight,
+  ArrowDownRight,
 } from "lucide-react";
 
 interface Holding {
@@ -67,6 +78,7 @@ interface PortfolioSummary {
   totalPnlPct: number;
   holdingsCount: number;
   platformBreakdown: Array<{
+    providerAccountId: string | null;
     providerCode: string;
     accountName: string;
     totalValue: number;
@@ -96,6 +108,21 @@ export default function PortfolioDetailPage() {
   const [importCsvOpen, setImportCsvOpen] = useState(false);
   const [connectBrokerOpen, setConnectBrokerOpen] = useState(false);
   const [showConfirmDelete, setShowConfirmDelete] = useState(false);
+  // Track which platform account is pending removal confirmation
+  const [confirmRemoveAccountId, setConfirmRemoveAccountId] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState<"holdings" | "analytics" | "risk">("holdings");
+
+  const removePlatformMutation = useMutation({
+    mutationFn: (accountId: string) => apiClient.delete(`/providers/accounts/${accountId}`),
+    onSuccess: () => {
+      setConfirmRemoveAccountId(null);
+      queryClient.invalidateQueries({ queryKey: ["portfolio-summary"] });
+      queryClient.invalidateQueries({ queryKey: ["holdings"] });
+      queryClient.invalidateQueries({ queryKey: ["portfolio-analytics"] });
+      queryClient.invalidateQueries({ queryKey: ["portfolio-risk"] });
+      queryClient.invalidateQueries({ queryKey: ["portfolios"] });
+    },
+  });
 
   const deleteMutation = useMutation({
     mutationFn: () => apiClient.delete(`/portfolios/${id}`),
@@ -121,6 +148,24 @@ export default function PortfolioDetailPage() {
     },
   });
 
+  // Fetch live analytics for this portfolio
+  const { data: analytics, isLoading: analyticsLoading } = useQuery<any>({
+    queryKey: ["portfolio-analytics", id],
+    queryFn: async () => {
+      const res = await apiClient.get(`/portfolios/${id}/analytics`);
+      return (res as any).data ?? res.data;
+    },
+  });
+
+  // Fetch live risk for this portfolio
+  const { data: riskData, isLoading: riskLoading } = useQuery<any>({
+    queryKey: ["portfolio-risk", id],
+    queryFn: async () => {
+      const res = await apiClient.get(`/portfolios/${id}/risk`);
+      return (res as any).data ?? res.data;
+    },
+  });
+
   // Fetch holdings
   const { data: holdingsData, isLoading: holdingsLoading } = useQuery<Holding[]>({
     queryKey: ["holdings", id],
@@ -132,9 +177,31 @@ export default function PortfolioDetailPage() {
 
   const holdings: Holding[] = Array.isArray(holdingsData) ? holdingsData : [];
 
+  // Helper: resolve the display config from accountName when providerCode is RBI_AA
+  // e.g. accountName="Groww (via RBI AA)" → resolves to Groww's config
+  const resolvePlatformConfig = (providerCode: string, accountName: string) => {
+    if (providerCode === "RBI_AA" && accountName) {
+      // Extract broker name: "Groww (via RBI AA)" → "Groww"
+      const brokerPrefix = accountName.split(" (via ")[0].split(" (")[0].trim();
+      const brokerKey = brokerPrefix.toUpperCase().replace(/ /g, "_") as any;
+      const brokerCfg = getBrokerConfig(brokerKey);
+      // If we found a real broker config (not MANUAL fallback), use it
+      if (brokerKey !== "MANUAL" && brokerCfg.label !== "Manual Entry") {
+        return { ...brokerCfg, label: brokerPrefix, shortLabel: brokerPrefix };
+      }
+      // Otherwise show the accountName directly with RBI AA styling
+      return {
+        ...getBrokerConfig("RBI_AA"),
+        label: brokerPrefix || accountName,
+        shortLabel: brokerPrefix || "RBI AA",
+      };
+    }
+    return getBrokerConfig(providerCode);
+  };
+
   // Prepare Donut chart data for Platform Breakdown
   const platformDonutSlices: AllocationSlice[] = (summary?.platformBreakdown || []).map((p) => {
-    const cfg = getBrokerConfig(p.providerCode);
+    const cfg = resolvePlatformConfig(p.providerCode, p.accountName);
     return {
       name: cfg.shortLabel,
       value: p.totalValue,
@@ -250,262 +317,748 @@ export default function PortfolioDetailPage() {
         />
       </div>
 
-      {/* Multi-Platform Breakdown Bar / Cards */}
-      {summary?.platformBreakdown && summary.platformBreakdown.length > 0 && (
-        <Card className="border-border">
-          <CardHeader className="pb-3">
-            <CardTitle className="text-sm font-semibold uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-              <Layers className="h-4 w-4 text-blue-600" />
-              Platform Balances & Aggregation
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              {summary.platformBreakdown.map((plat) => {
-                const cfg = getBrokerConfig(plat.providerCode);
-                const dir = classifyDelta(plat.pnlPct);
-                return (
-                  <div
-                    key={plat.providerCode}
-                    className="p-3.5 rounded-xl border bg-card/60 flex flex-col justify-between hover:shadow-sm transition-shadow"
-                    style={{ borderColor: cfg.textColor + "40" }}
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="font-semibold text-sm flex items-center gap-1.5">
-                        <span>{cfg.emoji}</span>
-                        <span>{cfg.label}</span>
-                      </span>
-                      <span
-                        className="text-xs px-2 py-0.5 rounded-full font-medium"
-                        style={{ backgroundColor: cfg.color, color: cfg.textColor }}
+      {/* Portfolio Views Sub-tabs */}
+      <div className="flex items-center gap-2 border-b border-border/60 pb-1">
+        <button
+          onClick={() => setActiveTab("holdings")}
+          className={cn(
+            "flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-t-lg border-b-2 transition-all cursor-pointer",
+            activeTab === "holdings"
+              ? "border-primary text-primary bg-primary/5"
+              : "border-transparent text-muted-foreground hover:text-foreground hover:bg-muted/40",
+          )}
+        >
+          <Layers className="h-4 w-4" />
+          Holdings & Platforms ({holdings.length})
+        </button>
+
+        <button
+          onClick={() => setActiveTab("analytics")}
+          className={cn(
+            "flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-t-lg border-b-2 transition-all cursor-pointer",
+            activeTab === "analytics"
+              ? "border-primary text-primary bg-primary/5"
+              : "border-transparent text-muted-foreground hover:text-foreground hover:bg-muted/40",
+          )}
+        >
+          <BarChart2 className="h-4 w-4" />
+          Performance & Analytics
+        </button>
+
+        <button
+          onClick={() => setActiveTab("risk")}
+          className={cn(
+            "flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-t-lg border-b-2 transition-all cursor-pointer",
+            activeTab === "risk"
+              ? "border-primary text-primary bg-primary/5"
+              : "border-transparent text-muted-foreground hover:text-foreground hover:bg-muted/40",
+          )}
+        >
+          <ShieldCheck className="h-4 w-4" />
+          Risk Center
+        </button>
+      </div>
+
+      {/* ── TAB 1: HOLDINGS & PLATFORMS ─────────────────────── */}
+      {activeTab === "holdings" && (
+        <div className="space-y-6">
+          {/* Multi-Platform Breakdown Bar / Cards */}
+          {summary?.platformBreakdown && summary.platformBreakdown.length > 0 && (
+            <Card className="border-border">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-sm font-semibold uppercase tracking-wider text-muted-foreground flex items-center gap-2">
+                  <Layers className="h-4 w-4 text-blue-600" />
+                  Platform Balances & Aggregation
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                  {summary.platformBreakdown.map((plat) => {
+                    const cfg = resolvePlatformConfig(plat.providerCode, plat.accountName);
+                    const dir = classifyDelta(plat.pnlPct);
+                    const isConfirming = confirmRemoveAccountId === plat.providerAccountId;
+                    const isRemoving =
+                      removePlatformMutation.isPending &&
+                      confirmRemoveAccountId === plat.providerAccountId;
+                    return (
+                      <div
+                        key={plat.accountName || plat.providerCode}
+                        className="p-3.5 rounded-xl border bg-card/60 flex flex-col justify-between hover:shadow-sm transition-shadow relative group"
+                        style={{ borderColor: isConfirming ? "#e63946" : cfg.textColor + "40" }}
                       >
-                        {plat.percentage.toFixed(1)}%
-                      </span>
-                    </div>
+                        {/* Header row: broker name + % badge + remove X button */}
+                        <div className="flex items-center justify-between">
+                          <span className="font-semibold text-sm flex items-center gap-1.5">
+                            <span>{cfg.emoji}</span>
+                            <span>{cfg.label}</span>
+                          </span>
+                          <div className="flex items-center gap-1.5">
+                            <span
+                              className="text-xs px-2 py-0.5 rounded-full font-medium"
+                              style={{ backgroundColor: cfg.color, color: cfg.textColor }}
+                            >
+                              {plat.percentage.toFixed(1)}%
+                            </span>
+                            {plat.providerAccountId && !isConfirming && (
+                              <button
+                                onClick={() => setConfirmRemoveAccountId(plat.providerAccountId)}
+                                className="opacity-0 group-hover:opacity-100 transition-opacity p-0.5 rounded hover:bg-rose-100 dark:hover:bg-rose-950/40 text-muted-foreground hover:text-rose-600"
+                                title={`Remove ${cfg.label} and all its assets`}
+                              >
+                                <X className="w-3.5 h-3.5" />
+                              </button>
+                            )}
+                          </div>
+                        </div>
 
-                    <div className="mt-2.5">
-                      <p className="text-lg font-bold tabular-nums">
-                        {formatCurrency(plat.totalValue, summary.currency)}
-                      </p>
-                      <div className="flex items-center justify-between text-xs mt-0.5">
-                        <span className="text-muted-foreground">
-                          {plat.count} {plat.count === 1 ? "asset" : "assets"}
-                        </span>
-                        <span
-                          className={cn(
-                            "font-medium tabular-nums",
-                            dir === "positive"
-                              ? "text-emerald-600"
-                              : dir === "negative"
-                                ? "text-rose-600"
-                                : "",
-                          )}
-                        >
-                          {plat.pnl >= 0 ? "+" : ""}
-                          {formatCurrency(plat.pnl)} ({formatPercent(plat.pnlPct)})
-                        </span>
+                        {/* Inline confirm removal */}
+                        {isConfirming && (
+                          <div className="mt-2 p-2 rounded-lg bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800/40">
+                            <div className="flex items-center gap-1.5 text-rose-600 text-xs font-medium mb-2">
+                              <AlertTriangle className="w-3.5 h-3.5 flex-shrink-0" />
+                              Remove {cfg.label} and all {plat.count} asset(s)?
+                            </div>
+                            <div className="flex gap-1.5">
+                              <button
+                                onClick={() =>
+                                  removePlatformMutation.mutate(plat.providerAccountId!)
+                                }
+                                disabled={isRemoving}
+                                className="flex-1 text-xs py-1 px-2 rounded bg-rose-600 hover:bg-rose-700 text-white font-medium disabled:opacity-60 transition-colors"
+                              >
+                                {isRemoving ? "Removing…" : "Confirm"}
+                              </button>
+                              <button
+                                onClick={() => setConfirmRemoveAccountId(null)}
+                                disabled={isRemoving}
+                                className="flex-1 text-xs py-1 px-2 rounded border border-border hover:bg-muted text-muted-foreground font-medium disabled:opacity-60 transition-colors"
+                              >
+                                Cancel
+                              </button>
+                            </div>
+                          </div>
+                        )}
+
+                        <div className="mt-2.5">
+                          <p className="text-lg font-bold tabular-nums">
+                            {formatCurrency(plat.totalValue, summary.currency)}
+                          </p>
+                          <div className="flex items-center justify-between text-xs mt-0.5">
+                            <span className="text-muted-foreground">
+                              {plat.count} {plat.count === 1 ? "asset" : "assets"}
+                            </span>
+                            <span
+                              className={cn(
+                                "font-medium tabular-nums",
+                                dir === "positive"
+                                  ? "text-emerald-600"
+                                  : dir === "negative"
+                                    ? "text-rose-600"
+                                    : "",
+                              )}
+                            >
+                              {plat.pnl >= 0 ? "+" : ""}
+                              {formatCurrency(plat.pnl)} ({formatPercent(plat.pnlPct)})
+                            </span>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                );
-              })}
+                    );
+                  })}
+                </div>
+              </CardContent>
+            </Card>
+          )}
+
+          {/* Allocation Charts Section */}
+          {holdings.length > 0 && (
+            <div className="grid gap-4 md:grid-cols-2">
+              {/* Platform Breakdown Donut */}
+              <Card>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-base flex items-center gap-2">
+                    <PieIcon className="h-4 w-4 text-blue-600" />
+                    Broker / Platform Allocation
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <AllocationDonutChart
+                    data={platformDonutSlices}
+                    totalValue={summary?.totalValue}
+                    currency={summary?.currency || "INR"}
+                    height={260}
+                    isLoading={summaryLoading}
+                  />
+                </CardContent>
+              </Card>
+
+              {/* Asset Class Breakdown Donut */}
+              <Card>
+                <CardHeader className="pb-2">
+                  <CardTitle className="text-base flex items-center gap-2">
+                    <Layers className="h-4 w-4 text-indigo-600" />
+                    Asset Class Allocation
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <AllocationDonutChart
+                    data={
+                      assetClassDonutSlices.length > 0
+                        ? assetClassDonutSlices
+                        : [{ name: "Equities", value: summary?.totalValue || 100 }]
+                    }
+                    totalValue={summary?.totalValue}
+                    currency={summary?.currency || "INR"}
+                    height={260}
+                    isLoading={summaryLoading}
+                  />
+                </CardContent>
+              </Card>
             </div>
-          </CardContent>
-        </Card>
-      )}
+          )}
 
-      {/* Allocation Charts Section */}
-      {holdings.length > 0 && (
-        <div className="grid gap-4 md:grid-cols-2">
-          {/* Platform Breakdown Donut */}
+          {/* Unified Holdings Table */}
           <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-base flex items-center gap-2">
-                <PieIcon className="h-4 w-4 text-blue-600" />
-                Broker / Platform Allocation
-              </CardTitle>
+            <CardHeader className="flex flex-row items-center justify-between pb-3">
+              <div>
+                <CardTitle className="text-base">All Assets Across Platforms</CardTitle>
+                <p className="text-xs text-muted-foreground mt-0.5">
+                  Click any broker badge to open your position on that broker&apos;s site. Click the
+                  chart icon for real-time TradingView charts.
+                </p>
+              </div>
+              <Badge variant="outline" className="font-mono text-xs">
+                {holdings.length} {holdings.length === 1 ? "Holding" : "Holdings"}
+              </Badge>
             </CardHeader>
             <CardContent>
-              <AllocationDonutChart
-                data={platformDonutSlices}
-                totalValue={summary?.totalValue}
-                currency={summary?.currency || "INR"}
-                height={260}
-                isLoading={summaryLoading}
-              />
-            </CardContent>
-          </Card>
+              {holdingsLoading ? (
+                <div className="space-y-3">
+                  {Array.from({ length: 4 }).map((_, i) => (
+                    <Skeleton key={i} className="h-12 w-full rounded-lg" />
+                  ))}
+                </div>
+              ) : holdings.length === 0 ? (
+                <EmptyState
+                  title="No assets added yet"
+                  description="Click '+ Add Asset' to record a stock you bought on Groww, Angel One, or Zerodha."
+                />
+              ) : (
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                    <thead>
+                      <tr className="border-b text-muted-foreground text-xs uppercase tracking-wide">
+                        <th className="pb-3 text-left font-medium">Asset / Ticker</th>
+                        <th className="pb-3 text-left font-medium">Platform</th>
+                        <th className="pb-3 text-right font-medium">Qty</th>
+                        <th className="pb-3 text-right font-medium">Avg Buy Price</th>
+                        <th className="pb-3 text-right font-medium">Live Price</th>
+                        <th className="pb-3 text-right font-medium">Current Value</th>
+                        <th className="pb-3 text-right font-medium">Unrealised P&L</th>
+                        <th className="pb-3 text-center font-medium">Live Chart</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-border">
+                      {holdings.map((h) => {
+                        const symbol = h.symbol || h.asset?.symbol || "UNKNOWN";
+                        const name = h.asset?.name || symbol;
+                        const exchange = h.asset?.exchange || "NSE";
+                        const qty = Number(h.quantity || 0);
+                        const avgCost = Number(h.avgCostBasis || 0);
+                        const curPrice = Number(h.currentPrice || avgCost || 0);
+                        const curValue = Number(h.currentValue || qty * curPrice);
+                        const pnl = Number(h.unrealizedPnL || curValue - qty * avgCost);
+                        const pnlPct = Number(
+                          h.unrealizedPnLPct || (avgCost > 0 ? (pnl / (qty * avgCost)) * 100 : 0),
+                        );
+                        const dir = classifyDelta(pnlPct);
+                        const providerCode =
+                          h.providerAccount?.providerCode ||
+                          (h.providerAccountId ? "GROWW" : "MANUAL");
+                        const accountName = h.providerAccount?.accountName || "";
+                        // For RBI AA accounts, extract the broker name from accountName
+                        const displayCode = (() => {
+                          if (providerCode === "RBI_AA" && accountName) {
+                            const prefix = accountName
+                              .split(" (via ")[0]
+                              .trim()
+                              .toUpperCase()
+                              .replace(/ /g, "_");
+                            const knownBrokers = [
+                              "GROWW",
+                              "ZERODHA",
+                              "ANGEL_ONE",
+                              "UPSTOX",
+                              "ICICI_DIRECT",
+                            ];
+                            if (knownBrokers.includes(prefix)) return prefix;
+                          }
+                          return providerCode;
+                        })();
 
-          {/* Asset Class Breakdown Donut */}
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-base flex items-center gap-2">
-                <Layers className="h-4 w-4 text-indigo-600" />
-                Asset Class Allocation
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <AllocationDonutChart
-                data={
-                  assetClassDonutSlices.length > 0
-                    ? assetClassDonutSlices
-                    : [{ name: "Equities", value: summary?.totalValue || 100 }]
-                }
-                totalValue={summary?.totalValue}
-                currency={summary?.currency || "INR"}
-                height={260}
-                isLoading={summaryLoading}
-              />
+                        return (
+                          <tr key={h.id} className="hover:bg-muted/30 transition-colors group">
+                            {/* Stock name & ticker */}
+                            <td className="py-3.5 font-medium">
+                              <div>
+                                <span className="font-bold text-foreground">
+                                  {symbol.startsWith("INE") || symbol.startsWith("INF")
+                                    ? name !== symbol
+                                      ? name
+                                      : symbol
+                                    : symbol}
+                                </span>
+                                <span className="text-xs text-muted-foreground block truncate max-w-[180px]">
+                                  {symbol.startsWith("INE") || symbol.startsWith("INF")
+                                    ? symbol
+                                    : name !== symbol
+                                      ? name
+                                      : exchange}
+                                </span>
+                              </div>
+                            </td>
+
+                            {/* Platform Badge (Click opens broker) */}
+                            <td className="py-3.5">
+                              <PlatformBadge providerCode={displayCode} symbol={symbol} size="md" />
+                            </td>
+
+                            {/* Quantity */}
+                            <td className="py-3.5 text-right tabular-nums text-foreground">
+                              {qty.toLocaleString()}
+                            </td>
+
+                            {/* Avg Cost */}
+                            <td className="py-3.5 text-right tabular-nums text-muted-foreground">
+                              {formatCurrency(avgCost)}
+                            </td>
+
+                            {/* Current Live Price */}
+                            <td className="py-3.5 text-right tabular-nums font-semibold text-foreground">
+                              {formatCurrency(curPrice)}
+                            </td>
+
+                            {/* Current Value */}
+                            <td className="py-3.5 text-right tabular-nums font-bold text-foreground">
+                              {formatCurrency(curValue)}
+                            </td>
+
+                            {/* P&L */}
+                            <td className="py-3.5 text-right tabular-nums">
+                              <div
+                                className={cn(
+                                  "font-semibold",
+                                  dir === "positive"
+                                    ? "text-emerald-600"
+                                    : dir === "negative"
+                                      ? "text-rose-600"
+                                      : "text-muted-foreground",
+                                )}
+                              >
+                                {pnl >= 0 ? "+" : ""}
+                                {formatCurrency(pnl)}
+                              </div>
+                              <div
+                                className={cn(
+                                  "text-xs font-medium",
+                                  dir === "positive"
+                                    ? "text-emerald-600"
+                                    : dir === "negative"
+                                      ? "text-rose-600"
+                                      : "text-muted-foreground",
+                                )}
+                              >
+                                {formatPercent(pnlPct)}
+                              </div>
+                            </td>
+
+                            {/* Live Chart Button */}
+                            <td className="py-3.5 text-center">
+                              <Button
+                                variant="ghost"
+                                size="sm"
+                                className="h-8 w-8 p-0 rounded-full hover:bg-blue-50 hover:text-blue-600"
+                                onClick={() => setSelectedStockForChart({ symbol, name, exchange })}
+                                title="Open TradingView Live Chart"
+                              >
+                                <TrendingUp className="h-4 w-4 text-blue-600" />
+                              </Button>
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              )}
             </CardContent>
           </Card>
         </div>
       )}
 
-      {/* Unified Holdings Table */}
-      <Card>
-        <CardHeader className="flex flex-row items-center justify-between pb-3">
-          <div>
-            <CardTitle className="text-base">All Assets Across Platforms</CardTitle>
-            <p className="text-xs text-muted-foreground mt-0.5">
-              Click any broker badge to open your position on that broker&apos;s site. Click the
-              chart icon for real-time TradingView charts.
-            </p>
-          </div>
-          <Badge variant="outline" className="font-mono text-xs">
-            {holdings.length} {holdings.length === 1 ? "Holding" : "Holdings"}
-          </Badge>
-        </CardHeader>
-        <CardContent>
-          {holdingsLoading ? (
-            <div className="space-y-3">
-              {Array.from({ length: 4 }).map((_, i) => (
-                <Skeleton key={i} className="h-12 w-full rounded-lg" />
+      {/* ── TAB 2: PERFORMANCE & ANALYTICS ────────────────── */}
+      {activeTab === "analytics" && (
+        <div className="space-y-6">
+          {/* Performance metric cards */}
+          {analyticsLoading ? (
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {[...Array(6)].map((_, i) => (
+                <Card key={i} className="p-5">
+                  <Skeleton className="h-4 w-28 mb-2" />
+                  <Skeleton className="h-8 w-36" />
+                </Card>
               ))}
             </div>
-          ) : holdings.length === 0 ? (
-            <EmptyState
-              title="No assets added yet"
-              description="Click '+ Add Asset' to record a stock you bought on Groww, Angel One, or Zerodha."
-            />
-          ) : (
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b text-muted-foreground text-xs uppercase tracking-wide">
-                    <th className="pb-3 text-left font-medium">Asset / Ticker</th>
-                    <th className="pb-3 text-left font-medium">Platform</th>
-                    <th className="pb-3 text-right font-medium">Qty</th>
-                    <th className="pb-3 text-right font-medium">Avg Buy Price</th>
-                    <th className="pb-3 text-right font-medium">Live Price</th>
-                    <th className="pb-3 text-right font-medium">Current Value</th>
-                    <th className="pb-3 text-right font-medium">Unrealised P&L</th>
-                    <th className="pb-3 text-center font-medium">Live Chart</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-border">
-                  {holdings.map((h) => {
-                    const symbol = h.symbol || h.asset?.symbol || "UNKNOWN";
-                    const name = h.asset?.name || symbol;
-                    const exchange = h.asset?.exchange || "NSE";
-                    const qty = Number(h.quantity || 0);
-                    const avgCost = Number(h.avgCostBasis || 0);
-                    const curPrice = Number(h.currentPrice || avgCost || 0);
-                    const curValue = Number(h.currentValue || qty * curPrice);
-                    const pnl = Number(h.unrealizedPnL || curValue - qty * avgCost);
-                    const pnlPct = Number(
-                      h.unrealizedPnLPct || (avgCost > 0 ? (pnl / (qty * avgCost)) * 100 : 0),
-                    );
-                    const dir = classifyDelta(pnlPct);
-                    const providerCode =
-                      h.providerAccount?.providerCode || (h.providerAccountId ? "GROWW" : "MANUAL");
+          ) : analytics?.metrics ? (
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {analytics.metrics.map(({ label, value, description }: any) => (
+                <Card key={label} className="p-5 shadow-sm hover:shadow transition-shadow">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">
+                    {label}
+                  </p>
+                  <p
+                    className={`text-2xl font-bold tracking-tight ${
+                      value.startsWith("+")
+                        ? "text-emerald-500"
+                        : value.startsWith("-")
+                          ? "text-rose-500"
+                          : "text-foreground"
+                    }`}
+                  >
+                    {value}
+                  </p>
+                  <p className="text-xs text-muted-foreground mt-1">{description}</p>
+                </Card>
+              ))}
+            </div>
+          ) : null}
 
-                    return (
-                      <tr key={h.id} className="hover:bg-muted/30 transition-colors group">
-                        {/* Stock name & ticker */}
-                        <td className="py-3.5 font-medium">
-                          <div>
-                            <span className="font-bold text-foreground">{symbol}</span>
-                            <span className="text-xs text-muted-foreground block truncate max-w-[180px]">
-                              {name !== symbol ? name : exchange}
-                            </span>
-                          </div>
-                        </td>
+          {/* Equity curve */}
+          <Card className="shadow-sm">
+            <CardHeader className="flex flex-row items-center justify-between pb-2">
+              <div>
+                <CardTitle className="text-base font-semibold">
+                  Portfolio Equity Curve (INR)
+                </CardTitle>
+                <p className="text-xs text-muted-foreground mt-0.5">
+                  Live valuation trajectory scaled to your current portfolio value
+                </p>
+              </div>
+              <Badge variant="secondary" className="font-mono text-xs">
+                Current: {formatCurrency(summary?.totalValue ?? 0)}
+              </Badge>
+            </CardHeader>
+            <CardContent>
+              <EquityCurveChart
+                data={analytics?.equityCurve || []}
+                currency="INR"
+                height={260}
+                isLoading={analyticsLoading}
+              />
+            </CardContent>
+          </Card>
 
-                        {/* Platform Badge (Click opens broker) */}
-                        <td className="py-3.5">
-                          <PlatformBadge providerCode={providerCode} symbol={symbol} size="md" />
-                        </td>
+          {/* Benchmark comparison */}
+          <Card className="shadow-sm">
+            <CardHeader className="flex flex-row items-center justify-between pb-2">
+              <div>
+                <CardTitle className="text-base font-semibold">
+                  Portfolio vs NIFTY 50 (Cumulative Return %)
+                </CardTitle>
+                <p className="text-xs text-muted-foreground mt-0.5">
+                  Benchmark-relative return comparison against market indices
+                </p>
+              </div>
+              <div className="flex items-center gap-3 text-xs">
+                <span className="flex items-center gap-1.5 font-medium text-blue-500">
+                  <span className="h-2.5 w-2.5 rounded-full bg-blue-500" />
+                  Portfolio ({(summary?.totalPnlPct ?? 0).toFixed(1)}%)
+                </span>
+                <span className="flex items-center gap-1.5 font-medium text-amber-500">
+                  <span className="h-2.5 w-2.5 rounded-full bg-amber-500" />
+                  NIFTY 50 (+12.5%)
+                </span>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <BenchmarkComparisonChart
+                data={analytics?.benchmarkComparison || []}
+                portfolioLabel={summary?.name || "My Portfolio"}
+                benchmarkLabel="NIFTY 50"
+                height={260}
+                isLoading={analyticsLoading}
+              />
+            </CardContent>
+          </Card>
 
-                        {/* Quantity */}
-                        <td className="py-3.5 text-right tabular-nums text-foreground">
-                          {qty.toLocaleString()}
-                        </td>
+          {/* Top Gainers & Losers */}
+          {analytics && (
+            <div className="grid gap-6 md:grid-cols-2">
+              <Card className="shadow-sm">
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-base font-semibold flex items-center gap-2 text-emerald-500">
+                    <TrendingUp className="h-4 w-4" />
+                    Top Performing Holdings
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  {(analytics.topGainers || []).length === 0 ? (
+                    <p className="text-xs text-muted-foreground">No gainers recorded yet.</p>
+                  ) : (
+                    (analytics.topGainers || []).map((item: any) => (
+                      <div
+                        key={item.id}
+                        className="flex items-center justify-between border-b pb-2.5 last:border-0 last:pb-0"
+                      >
+                        <div>
+                          <p className="text-sm font-semibold">{item.name || item.symbol}</p>
+                          <p className="text-xs text-muted-foreground">
+                            {item.broker} • {item.weightPct}% of portfolio
+                          </p>
+                        </div>
+                        <div className="text-right">
+                          <p className="text-sm font-semibold text-emerald-500">
+                            +{item.pnlPct.toFixed(2)}%
+                          </p>
+                          <p className="text-xs text-muted-foreground">
+                            {formatCurrency(item.value)}
+                          </p>
+                        </div>
+                      </div>
+                    ))
+                  )}
+                </CardContent>
+              </Card>
 
-                        {/* Avg Cost */}
-                        <td className="py-3.5 text-right tabular-nums text-muted-foreground">
-                          {formatCurrency(avgCost)}
-                        </td>
-
-                        {/* Current Live Price */}
-                        <td className="py-3.5 text-right tabular-nums font-semibold text-foreground">
-                          {formatCurrency(curPrice)}
-                        </td>
-
-                        {/* Current Value */}
-                        <td className="py-3.5 text-right tabular-nums font-bold text-foreground">
-                          {formatCurrency(curValue)}
-                        </td>
-
-                        {/* P&L */}
-                        <td className="py-3.5 text-right tabular-nums">
-                          <div
-                            className={cn(
-                              "font-semibold",
-                              dir === "positive"
-                                ? "text-emerald-600"
-                                : dir === "negative"
-                                  ? "text-rose-600"
-                                  : "text-muted-foreground",
-                            )}
+              <Card className="shadow-sm">
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-base font-semibold flex items-center gap-2 text-rose-500">
+                    <TrendingDown className="h-4 w-4" />
+                    Holdings Lagging or Drawdown
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  {(analytics.topLosers || []).length === 0 ? (
+                    <p className="text-xs text-muted-foreground">No holdings in loss.</p>
+                  ) : (
+                    (analytics.topLosers || []).map((item: any) => (
+                      <div
+                        key={item.id}
+                        className="flex items-center justify-between border-b pb-2.5 last:border-0 last:pb-0"
+                      >
+                        <div>
+                          <p className="text-sm font-semibold">{item.name || item.symbol}</p>
+                          <p className="text-xs text-muted-foreground">
+                            {item.broker} • {item.weightPct}% of portfolio
+                          </p>
+                        </div>
+                        <div className="text-right">
+                          <p
+                            className={`text-sm font-semibold ${
+                              item.pnlPct >= 0 ? "text-emerald-500" : "text-rose-500"
+                            }`}
                           >
-                            {pnl >= 0 ? "+" : ""}
-                            {formatCurrency(pnl)}
-                          </div>
-                          <div
-                            className={cn(
-                              "text-xs font-medium",
-                              dir === "positive"
-                                ? "text-emerald-600"
-                                : dir === "negative"
-                                  ? "text-rose-600"
-                                  : "text-muted-foreground",
-                            )}
-                          >
-                            {formatPercent(pnlPct)}
-                          </div>
-                        </td>
-
-                        {/* Live Chart Button */}
-                        <td className="py-3.5 text-center">
-                          <Button
-                            variant="ghost"
-                            size="sm"
-                            className="h-8 w-8 p-0 rounded-full hover:bg-blue-50 hover:text-blue-600"
-                            onClick={() => setSelectedStockForChart({ symbol, name, exchange })}
-                            title="Open TradingView Live Chart"
-                          >
-                            <TrendingUp className="h-4 w-4 text-blue-600" />
-                          </Button>
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
+                            {item.pnlPct >= 0 ? "+" : ""}
+                            {item.pnlPct.toFixed(2)}%
+                          </p>
+                          <p className="text-xs text-muted-foreground">
+                            {formatCurrency(item.value)}
+                          </p>
+                        </div>
+                      </div>
+                    ))
+                  )}
+                </CardContent>
+              </Card>
             </div>
           )}
-        </CardContent>
-      </Card>
+        </div>
+      )}
+
+      {/* ── TAB 3: RISK CENTER ─────────────────────────────── */}
+      {activeTab === "risk" && (
+        <div className="space-y-6">
+          {/* Risk metric summary cards */}
+          {riskLoading ? (
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {[...Array(6)].map((_, i) => (
+                <Card key={i} className="p-5">
+                  <Skeleton className="h-4 w-28 mb-2" />
+                  <Skeleton className="h-8 w-36" />
+                </Card>
+              ))}
+            </div>
+          ) : riskData?.riskMetrics ? (
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {riskData.riskMetrics.map(({ label, value, severity }: any) => {
+                const badgeVariant =
+                  severity === "high"
+                    ? "destructive"
+                    : severity === "medium"
+                      ? "warning"
+                      : "success";
+                const badgeLabel =
+                  severity === "high"
+                    ? "High Risk"
+                    : severity === "medium"
+                      ? "Moderate"
+                      : "Low Risk";
+                return (
+                  <Card key={label} className="p-5 shadow-sm hover:shadow transition-shadow">
+                    <div className="flex items-start justify-between mb-2">
+                      <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                        {label}
+                      </p>
+                      <Badge variant={badgeVariant as any}>{badgeLabel}</Badge>
+                    </div>
+                    <p className="text-2xl font-bold tracking-tight">{value}</p>
+                  </Card>
+                );
+              })}
+            </div>
+          ) : null}
+
+          {/* Charts Row */}
+          <div className="grid gap-6 lg:grid-cols-2">
+            {/* Drawdown chart */}
+            <Card className="shadow-sm">
+              <CardHeader className="pb-2">
+                <CardTitle className="text-base font-semibold flex items-center justify-between">
+                  <span>Historical Drawdown Profile</span>
+                  <Badge variant="outline" className="font-mono text-xs">
+                    Max: {(riskData?.maxDrawdownPct ?? 0).toFixed(2)}%
+                  </Badge>
+                </CardTitle>
+                <p className="text-xs text-muted-foreground">
+                  Underwater peak-to-trough decline over time
+                </p>
+              </CardHeader>
+              <CardContent>
+                <DrawdownChart
+                  data={riskData?.drawdownSeries || []}
+                  height={240}
+                  isLoading={riskLoading}
+                />
+              </CardContent>
+            </Card>
+
+            {/* Asset Allocation Donut */}
+            <Card className="shadow-sm">
+              <CardHeader className="pb-2">
+                <CardTitle className="text-base font-semibold flex items-center justify-between">
+                  <span>Asset Allocation Split</span>
+                  <Badge variant="secondary" className="font-mono text-xs">
+                    {(riskData?.allocationSlices || []).length} Asset Classes
+                  </Badge>
+                </CardTitle>
+                <p className="text-xs text-muted-foreground">
+                  Capital distribution across asset classes
+                </p>
+              </CardHeader>
+              <CardContent>
+                <AllocationDonutChart
+                  data={riskData?.allocationSlices || []}
+                  totalValue={summary?.totalValue}
+                  currency="INR"
+                  height={240}
+                  isLoading={riskLoading}
+                />
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Correlation Heatmap */}
+          {riskData?.correlation && (
+            <Card className="shadow-sm">
+              <CardHeader className="pb-2">
+                <CardTitle className="text-base font-semibold flex items-center justify-between">
+                  <span>Asset Correlation Matrix</span>
+                  <Badge variant="outline" className="text-xs">
+                    {riskData.correlation.assets?.length ?? 0} Top Holdings
+                  </Badge>
+                </CardTitle>
+                <p className="text-xs text-muted-foreground">
+                  Pairwise return correlation between your largest distinct positions
+                </p>
+              </CardHeader>
+              <CardContent>
+                <CorrelationHeatmap
+                  data={riskData.correlation || { assets: [], matrix: [] }}
+                  height={280}
+                  isLoading={riskLoading}
+                />
+              </CardContent>
+            </Card>
+          )}
+
+          {/* Concentration Risk Analysis */}
+          {riskData?.topHoldingsConcentration && (
+            <Card className="shadow-sm">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-base font-semibold flex items-center gap-2">
+                  <PieIcon className="h-4 w-4 text-primary" />
+                  Concentration & Diversification Profile
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                  <div className="rounded-lg border p-4 bg-card/50">
+                    <p className="text-xs text-muted-foreground font-semibold uppercase tracking-wider">
+                      Top 1 Asset
+                    </p>
+                    <p className="text-xl font-bold mt-1">
+                      {riskData.topHoldingsConcentration.top1Pct}%
+                    </p>
+                    <p className="text-xs text-muted-foreground mt-0.5">
+                      {riskData.topHoldingsConcentration.top1Pct > 25
+                        ? "High single-stock exposure"
+                        : "Balanced single-asset weight"}
+                    </p>
+                  </div>
+                  <div className="rounded-lg border p-4 bg-card/50">
+                    <p className="text-xs text-muted-foreground font-semibold uppercase tracking-wider">
+                      Top 3 Assets
+                    </p>
+                    <p className="text-xl font-bold mt-1">
+                      {riskData.topHoldingsConcentration.top3Pct}%
+                    </p>
+                    <p className="text-xs text-muted-foreground mt-0.5">Cumulative Top-3 weight</p>
+                  </div>
+                  <div className="rounded-lg border p-4 bg-card/50">
+                    <p className="text-xs text-muted-foreground font-semibold uppercase tracking-wider">
+                      Effective N
+                    </p>
+                    <p className="text-xl font-bold mt-1 text-primary">{riskData.effectiveN}</p>
+                    <p className="text-xs text-muted-foreground mt-0.5">
+                      Equal-weight equivalent size
+                    </p>
+                  </div>
+                  <div className="rounded-lg border p-4 bg-card/50">
+                    <p className="text-xs text-muted-foreground font-semibold uppercase tracking-wider">
+                      HHI Index
+                    </p>
+                    <p className="text-xl font-bold mt-1">{riskData.hhi}</p>
+                    <p className="text-xs text-muted-foreground mt-0.5">
+                      {riskData.hhi > 2500 ? "Concentrated (>2,500)" : "Diversified (<2,500)"}
+                    </p>
+                  </div>
+                </div>
+
+                {riskData.topHoldingsConcentration.top1Pct > 20 && (
+                  <div className="mt-4 flex items-start gap-2.5 rounded-lg border border-amber-500/30 bg-amber-500/5 p-3 text-xs text-amber-700 dark:text-amber-400">
+                    <Info className="h-4 w-4 shrink-0 mt-0.5" />
+                    <p>
+                      <strong>Concentration Alert:</strong> Your largest position accounts for{" "}
+                      {riskData.topHoldingsConcentration.top1Pct}% of this portfolio. Keeping
+                      individual stock exposures under 15–20% reduces unsystematic risk.
+                    </p>
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+          )}
+        </div>
+      )}
 
       {/* Modals */}
       <AddTransactionModal open={addTxOpen} onClose={() => setAddTxOpen(false)} portfolioId={id} />

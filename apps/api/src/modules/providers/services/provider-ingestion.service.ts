@@ -110,10 +110,20 @@ export class ProviderIngestionService {
       throw new NotFoundException(`Provider account with ID "${accountId}" not found`);
     }
 
-    return this.prisma.financialProviderAccount.update({
-      where: { id: accountId },
-      data: { deletedAt: new Date(), status: "DISCONNECTED" },
-    });
+    // Soft-delete the account AND all its linked holdings in a single transaction
+    const now = new Date();
+    const [deletedAccount] = await this.prisma.$transaction([
+      this.prisma.financialProviderAccount.update({
+        where: { id: accountId },
+        data: { deletedAt: now, status: "DISCONNECTED" },
+      }),
+      this.prisma.holding.updateMany({
+        where: { providerAccountId: accountId, deletedAt: null },
+        data: { deletedAt: now },
+      }),
+    ]);
+
+    return deletedAccount;
   }
 
   /**

@@ -44,6 +44,24 @@ export class PortfolioController {
     return this.holdingService.getPortfolioSummary(req.user.id, portfolioId);
   }
 
+  @Get(":id/analytics")
+  @HttpCode(HttpStatus.OK)
+  async getPortfolioAnalytics(
+    @Req() req: Request & { user: { id: string } },
+    @Param("id") portfolioId: string,
+  ) {
+    return this.holdingService.getPortfolioAnalytics(req.user.id, portfolioId);
+  }
+
+  @Get(":id/risk")
+  @HttpCode(HttpStatus.OK)
+  async getPortfolioRisk(
+    @Req() req: Request & { user: { id: string } },
+    @Param("id") portfolioId: string,
+  ) {
+    return this.holdingService.getPortfolioRisk(req.user.id, portfolioId);
+  }
+
   @Post()
   @HttpCode(HttpStatus.CREATED)
   async createPortfolio(
