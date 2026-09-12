@@ -169,6 +169,8 @@ export class CsvProviderAdapter implements FinancialDataProvider {
       "NOTE",
       "NOTES",
       "PORTFOLIO",
+      "ALL STOCKS",
+      "ALL ASSETS",
     ]);
 
     for (let index = 0; index < dataRows.length; index++) {
@@ -204,7 +206,9 @@ export class CsvProviderAdapter implements FinancialDataProvider {
         if (
           IGNORED_SYMBOLS.has(cleanSymbol) ||
           cleanSymbol.startsWith("TOTAL") ||
-          cleanSymbol.startsWith("DISCLAIMER")
+          cleanSymbol.startsWith("GRAND TOTAL") ||
+          cleanSymbol.startsWith("DISCLAIMER") ||
+          /^\d+\s+(STOCKS?|HOLDINGS?|ASSETS?|ITEMS?)$/i.test(cleanSymbol)
         ) {
           skippedRowsCount++;
           continue;
@@ -227,14 +231,68 @@ export class CsvProviderAdapter implements FinancialDataProvider {
         const priceVal = this.getFieldValue(rowObj, headerMap.priceHeader);
         let pricePerUnit = this.cleanNumeric(priceVal);
 
-        // If price is 0, check LTP column or Cur Value / Qty
+        // Fallback 1: If price is 0, check LTP / Market Price columns
         if (pricePerUnit <= 0) {
           const ltpHeader = headers.find((h) => {
             const clean = h.toLowerCase().replace(/[^a-z0-9]/g, "");
-            return ["ltp", "closeprice", "curprice", "currentprice"].includes(clean);
+            return [
+              "ltp",
+              "ltprs",
+              "closeprice",
+              "curprice",
+              "currentprice",
+              "marketprice",
+              "closingprice",
+              "lastprice",
+            ].includes(clean);
           });
           if (ltpHeader) {
             pricePerUnit = this.cleanNumeric(this.getFieldValue(rowObj, ltpHeader));
+          }
+        }
+
+        // Fallback 2: If price is still 0, derive from Invested Value / Total Cost / Qty
+        if (pricePerUnit <= 0 && quantity > 0) {
+          const investedHeader = headers.find((h) => {
+            const clean = h.toLowerCase().replace(/[^a-z0-9]/g, "");
+            return [
+              "invested",
+              "investedvalue",
+              "investedamount",
+              "totalinvested",
+              "totalinvestment",
+              "totalcost",
+              "costvalue",
+              "totalamount",
+              "cost",
+            ].includes(clean);
+          });
+          if (investedHeader) {
+            const investedVal = this.cleanNumeric(this.getFieldValue(rowObj, investedHeader));
+            if (investedVal > 0) {
+              pricePerUnit = investedVal / quantity;
+            }
+          }
+        }
+
+        // Fallback 3: If price is still 0, derive from Current Value / Qty
+        if (pricePerUnit <= 0 && quantity > 0) {
+          const curValHeader = headers.find((h) => {
+            const clean = h.toLowerCase().replace(/[^a-z0-9]/g, "");
+            return [
+              "currentvalue",
+              "curvalue",
+              "marketvalue",
+              "totalvalue",
+              "holdingvalue",
+              "value",
+            ].includes(clean);
+          });
+          if (curValHeader) {
+            const curVal = this.cleanNumeric(this.getFieldValue(rowObj, curValHeader));
+            if (curVal > 0) {
+              pricePerUnit = curVal / quantity;
+            }
           }
         }
 
@@ -256,7 +314,7 @@ export class CsvProviderAdapter implements FinancialDataProvider {
           symbol: finalSymbol,
           type: transactionType,
           quantity,
-          pricePerUnit,
+          pricePerUnit: Number(pricePerUnit.toFixed(4)),
           fees,
           transactedAt,
           notes: notesVal || undefined,
@@ -277,14 +335,22 @@ export class CsvProviderAdapter implements FinancialDataProvider {
     };
   }
 
-  private cleanNumeric(val?: string): number {
-    if (!val) return 0;
-    // Remove currency symbols (₹, $, €), commas, and spaces
-    const cleaned = String(val)
-      .replace(/[₹$,\s]/g, "")
-      .trim();
+  private cleanNumeric(val?: string | number): number {
+    if (val === null || val === undefined) return 0;
+    if (typeof val === "number") return isNaN(val) ? 0 : val;
+    const str = String(val).trim();
+    if (!str) return 0;
+
+    // Detect negative numbers in parentheses e.g. (1,450.50)
+    const isNegativeParen = /^\(.*\)$/.test(str);
+
+    // Strip currency symbols (₹, $, €, £), "Rs", "INR", commas, slashes, and spaces
+    const cleaned = str.replace(/[^\d.-]/g, "");
+    if (!cleaned || cleaned === "-" || cleaned === ".") return 0;
+
     const num = parseFloat(cleaned);
-    return isNaN(num) ? 0 : num;
+    if (isNaN(num)) return 0;
+    return isNegativeParen && num > 0 ? -num : num;
   }
 
   private resolveHeaderMap(
@@ -364,14 +430,22 @@ export class CsvProviderAdapter implements FinancialDataProvider {
           "balance",
           "volume",
           "amountunits",
+          "holdingquantity",
+          "totalshares",
         ]) || "",
       priceHeader:
         findMatch(customMapping?.priceHeader, [
           "avgcostprice",
           "avgcost",
           "avgprice",
+          "avgpricers",
+          "avgbuyprice",
+          "avgbuypricers",
           "averagecost",
           "averageprice",
+          "averagebuyprice",
+          "averagepurchaseprice",
+          "avgpurchaseprice",
           "buyprice",
           "buyavg",
           "purchaseprice",
@@ -380,10 +454,14 @@ export class CsvProviderAdapter implements FinancialDataProvider {
           "unitprice",
           "rate",
           "executionprice",
+          "costprice",
           "ltp",
+          "ltprs",
           "closeprice",
           "marketprice",
-          "value",
+          "currentprice",
+          "closingprice",
+          "curprice",
         ]) || "",
       feesHeader:
         findMatch(customMapping?.feesHeader, [
