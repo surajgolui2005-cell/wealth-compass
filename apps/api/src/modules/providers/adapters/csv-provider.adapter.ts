@@ -151,10 +151,26 @@ export class CsvProviderAdapter implements FinancialDataProvider {
 
     // 3. Extract headers and data rows
     const headerRow = rawRows[headerRowIndex];
-    const dataRows = rawRows.slice(headerRowIndex + 1);
+    const rawDataRows = rawRows.slice(headerRowIndex + 1);
 
     const headers = headerRow.map((h, i) => (h ? h.trim() : `col_${i}`));
     const headerMap = this.resolveHeaderMap(headers, customMapping);
+
+    // Auto-heal broken multiline rows (e.g. "JAIPRAKASH POWER VEN.\nLTD")
+    const dataRows: string[][] = [];
+    for (let i = 0; i < rawDataRows.length; i++) {
+      const cur = rawDataRows[i];
+      const next = rawDataRows[i + 1];
+
+      // If current row has fewer columns than header (e.g. just 1 cell) and next row has the rest
+      if (cur.length === 1 && cur[0] && next && next.length >= Math.max(2, headers.length - 1)) {
+        const mergedFirst = `${cur[0]} ${next[0]}`.trim();
+        dataRows.push([mergedFirst, ...next.slice(1)]);
+        i++; // skip next row
+      } else {
+        dataRows.push(cur);
+      }
+    }
 
     const transactions: RawExternalTransaction[] = [];
     const errors: string[] = [];

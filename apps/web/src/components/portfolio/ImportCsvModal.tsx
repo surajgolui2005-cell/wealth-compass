@@ -80,6 +80,7 @@ export function ImportCsvModal({ open, onClose, portfolioId }: ImportCsvModalPro
       setError(
         e?.response?.data?.error?.message ||
           e?.response?.data?.message ||
+          e?.message ||
           "Failed to import file. Please ensure column headers match expected format (e.g., symbol, quantity, price).",
       );
     },
@@ -119,18 +120,45 @@ export function ImportCsvModal({ open, onClose, portfolioId }: ImportCsvModalPro
           }
 
           const worksheet = workbook.Sheets[firstSheetName];
-          const csvText = XLSX.utils.sheet_to_csv(worksheet);
+          const rawGrid = XLSX.utils.sheet_to_json<any[]>(worksheet, {
+            header: 1,
+            defval: "",
+          });
 
-          if (!csvText || !csvText.trim()) {
+          if (!rawGrid || rawGrid.length === 0) {
             throw new Error("The first sheet in this Excel file appears to be empty.");
           }
 
-          setCsvContent(csvText);
-          const rowCount = csvText
-            .trim()
-            .split("\n")
-            .filter((l) => l.trim()).length;
-          setParsedRowsCount(Math.max(0, rowCount - 1)); // excluding header
+          // Clean embedded cell newlines (e.g., "JAIPRAKASH POWER VEN.\nLTD") and build well-formed CSV
+          const csvLines: string[] = [];
+          for (const row of rawGrid) {
+            if (!Array.isArray(row)) continue;
+            const hasContent = row.some(
+              (cell) => cell !== null && cell !== undefined && String(cell).trim().length > 0,
+            );
+            if (!hasContent) continue;
+
+            const rowFormatted = row.map((cell) => {
+              if (cell === null || cell === undefined) return "";
+              const str = String(cell)
+                .replace(/[\r\n]+/g, " ")
+                .trim();
+              if (str.includes(",") || str.includes('"')) {
+                return `"${str.replace(/"/g, '""')}"`;
+              }
+              return str;
+            });
+
+            csvLines.push(rowFormatted.join(","));
+          }
+
+          const cleanCsvText = csvLines.join("\n");
+          if (!cleanCsvText.trim()) {
+            throw new Error("The first sheet in this Excel file appears to be empty.");
+          }
+
+          setCsvContent(cleanCsvText);
+          setParsedRowsCount(Math.max(0, csvLines.length - 1));
         } catch (err: any) {
           setError(
             err?.message ||

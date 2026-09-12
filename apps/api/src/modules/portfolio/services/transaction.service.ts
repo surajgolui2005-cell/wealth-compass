@@ -152,7 +152,11 @@ export class TransactionService {
 
       // 8. Update CASH account balance if transaction affects cash (and target asset is not CASH itself)
       let cashHoldingUpdated = null;
-      if (symbolUpper !== "CASH") {
+      const isExternalImport = Boolean(
+        dto.providerAccountId || dto.notes?.includes("Imported") || dto.notes?.includes("External"),
+      );
+
+      if (symbolUpper !== "CASH" && !isExternalImport) {
         const cashDelta = this.calculateCashDelta(dto.type, qDec, pDec, feeDec, totalAmountDec);
 
         if (!cashDelta.equals(0)) {
@@ -161,6 +165,7 @@ export class TransactionService {
             portfolio.id,
             portfolio.currency,
             cashDelta,
+            false,
           );
         }
       }
@@ -287,6 +292,7 @@ export class TransactionService {
     portfolioId: string,
     currency: string,
     cashDelta: Decimal,
+    isExternalImport: boolean = false,
   ) {
     let cashAssetClass = await tx.assetClass.findUnique({
       where: { code: AssetClassCode.CASH },
@@ -347,6 +353,9 @@ export class TransactionService {
     const newCashQty = currentCashQty.plus(cashDelta);
 
     if (newCashQty.lt(0)) {
+      if (isExternalImport) {
+        return cashHolding;
+      }
       throw new InsufficientCashException(
         portfolioId,
         cashDelta.abs().toFixed(2),
