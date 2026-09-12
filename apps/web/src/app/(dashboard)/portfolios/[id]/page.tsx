@@ -108,14 +108,19 @@ export default function PortfolioDetailPage() {
   const [importCsvOpen, setImportCsvOpen] = useState(false);
   const [connectBrokerOpen, setConnectBrokerOpen] = useState(false);
   const [showConfirmDelete, setShowConfirmDelete] = useState(false);
-  // Track which platform account is pending removal confirmation
-  const [confirmRemoveAccountId, setConfirmRemoveAccountId] = useState<string | null>(null);
+  // Track which platform account (account ID or 'MANUAL') is pending removal confirmation
+  const [confirmRemoveKey, setConfirmRemoveKey] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<"holdings" | "analytics" | "risk">("holdings");
 
   const removePlatformMutation = useMutation({
-    mutationFn: (accountId: string) => apiClient.delete(`/providers/accounts/${accountId}`),
+    mutationFn: (platformKey: string) => {
+      if (platformKey === "MANUAL") {
+        return apiClient.delete(`/portfolios/${id}/manual-holdings`);
+      }
+      return apiClient.delete(`/providers/accounts/${platformKey}`);
+    },
     onSuccess: () => {
-      setConfirmRemoveAccountId(null);
+      setConfirmRemoveKey(null);
       queryClient.invalidateQueries({ queryKey: ["portfolio-summary"] });
       queryClient.invalidateQueries({ queryKey: ["holdings"] });
       queryClient.invalidateQueries({ queryKey: ["portfolio-analytics"] });
@@ -146,6 +151,8 @@ export default function PortfolioDetailPage() {
       const res = await apiClient.get(`/portfolios/${id}/summary`);
       return (res as any).data ?? res.data ?? res;
     },
+    enabled: Boolean(id),
+    gcTime: 0,
   });
 
   // Fetch live analytics for this portfolio
@@ -155,6 +162,8 @@ export default function PortfolioDetailPage() {
       const res = await apiClient.get(`/portfolios/${id}/analytics`);
       return (res as any).data ?? res.data;
     },
+    enabled: Boolean(id),
+    gcTime: 0,
   });
 
   // Fetch live risk for this portfolio
@@ -164,6 +173,8 @@ export default function PortfolioDetailPage() {
       const res = await apiClient.get(`/portfolios/${id}/risk`);
       return (res as any).data ?? res.data;
     },
+    enabled: Boolean(id),
+    gcTime: 0,
   });
 
   // Fetch holdings
@@ -173,6 +184,8 @@ export default function PortfolioDetailPage() {
       const res = await apiClient.get(`/portfolios/${id}/holdings`);
       return (res as any).data ?? res.data ?? (Array.isArray(res) ? res : []);
     },
+    enabled: Boolean(id),
+    gcTime: 0,
   });
 
   const holdings: Holding[] = Array.isArray(holdingsData) ? holdingsData : [];
@@ -245,7 +258,7 @@ export default function PortfolioDetailPage() {
 
           <Button variant="outline" onClick={() => setImportCsvOpen(true)} className="gap-1.5">
             <UploadCloud className="h-4 w-4 text-muted-foreground" />
-            Import CSV
+            Import CSV / Excel
           </Button>
 
           <Button variant="outline" onClick={() => setConnectBrokerOpen(true)} className="gap-1.5">
@@ -376,13 +389,13 @@ export default function PortfolioDetailPage() {
                   {summary.platformBreakdown.map((plat) => {
                     const cfg = resolvePlatformConfig(plat.providerCode, plat.accountName);
                     const dir = classifyDelta(plat.pnlPct);
-                    const isConfirming = confirmRemoveAccountId === plat.providerAccountId;
-                    const isRemoving =
-                      removePlatformMutation.isPending &&
-                      confirmRemoveAccountId === plat.providerAccountId;
+                    const platformKey = plat.providerAccountId || "MANUAL";
+                    const isConfirming =
+                      Boolean(confirmRemoveKey) && confirmRemoveKey === platformKey;
+                    const isRemoving = removePlatformMutation.isPending && isConfirming;
                     return (
                       <div
-                        key={plat.accountName || plat.providerCode}
+                        key={plat.accountName || plat.providerCode || platformKey}
                         className="p-3.5 rounded-xl border bg-card/60 flex flex-col justify-between hover:shadow-sm transition-shadow relative group"
                         style={{ borderColor: isConfirming ? "#e63946" : cfg.textColor + "40" }}
                       >
@@ -399,10 +412,10 @@ export default function PortfolioDetailPage() {
                             >
                               {plat.percentage.toFixed(1)}%
                             </span>
-                            {plat.providerAccountId && !isConfirming && (
+                            {!isConfirming && (
                               <button
-                                onClick={() => setConfirmRemoveAccountId(plat.providerAccountId)}
-                                className="opacity-0 group-hover:opacity-100 transition-opacity p-0.5 rounded hover:bg-rose-100 dark:hover:bg-rose-950/40 text-muted-foreground hover:text-rose-600"
+                                onClick={() => setConfirmRemoveKey(platformKey)}
+                                className="opacity-0 group-hover:opacity-100 transition-opacity p-0.5 rounded hover:bg-rose-100 dark:hover:bg-rose-950/40 text-muted-foreground hover:text-rose-600 cursor-pointer"
                                 title={`Remove ${cfg.label} and all its assets`}
                               >
                                 <X className="w-3.5 h-3.5" />
@@ -420,18 +433,16 @@ export default function PortfolioDetailPage() {
                             </div>
                             <div className="flex gap-1.5">
                               <button
-                                onClick={() =>
-                                  removePlatformMutation.mutate(plat.providerAccountId!)
-                                }
+                                onClick={() => removePlatformMutation.mutate(platformKey)}
                                 disabled={isRemoving}
-                                className="flex-1 text-xs py-1 px-2 rounded bg-rose-600 hover:bg-rose-700 text-white font-medium disabled:opacity-60 transition-colors"
+                                className="flex-1 text-xs py-1 px-2 rounded bg-rose-600 hover:bg-rose-700 text-white font-medium disabled:opacity-60 transition-colors cursor-pointer"
                               >
                                 {isRemoving ? "Removing…" : "Confirm"}
                               </button>
                               <button
-                                onClick={() => setConfirmRemoveAccountId(null)}
+                                onClick={() => setConfirmRemoveKey(null)}
                                 disabled={isRemoving}
-                                className="flex-1 text-xs py-1 px-2 rounded border border-border hover:bg-muted text-muted-foreground font-medium disabled:opacity-60 transition-colors"
+                                className="flex-1 text-xs py-1 px-2 rounded border border-border hover:bg-muted text-muted-foreground font-medium disabled:opacity-60 transition-colors cursor-pointer"
                               >
                                 Cancel
                               </button>
@@ -563,14 +574,30 @@ export default function PortfolioDetailPage() {
                         const symbol = h.symbol || h.asset?.symbol || "UNKNOWN";
                         const name = h.asset?.name || symbol;
                         const exchange = h.asset?.exchange || "NSE";
-                        const qty = Number(h.quantity || 0);
-                        const avgCost = Number(h.avgCostBasis || 0);
-                        const curPrice = Number(h.currentPrice || avgCost || 0);
-                        const curValue = Number(h.currentValue || qty * curPrice);
-                        const pnl = Number(h.unrealizedPnL || curValue - qty * avgCost);
-                        const pnlPct = Number(
-                          h.unrealizedPnLPct || (avgCost > 0 ? (pnl / (qty * avgCost)) * 100 : 0),
-                        );
+                        const qty =
+                          !h.quantity || isNaN(Number(h.quantity)) ? 0 : Number(h.quantity);
+                        const avgCost =
+                          !h.avgCostBasis || isNaN(Number(h.avgCostBasis))
+                            ? 0
+                            : Number(h.avgCostBasis);
+                        const curPrice =
+                          !h.currentPrice || isNaN(Number(h.currentPrice))
+                            ? avgCost
+                            : Number(h.currentPrice);
+                        const curValue =
+                          !h.currentValue || isNaN(Number(h.currentValue))
+                            ? qty * curPrice
+                            : Number(h.currentValue);
+                        const pnl =
+                          !h.unrealizedPnL || isNaN(Number(h.unrealizedPnL))
+                            ? curValue - qty * avgCost
+                            : Number(h.unrealizedPnL);
+                        const pnlPct =
+                          !h.unrealizedPnLPct || isNaN(Number(h.unrealizedPnLPct))
+                            ? qty * avgCost > 0
+                              ? (pnl / (qty * avgCost)) * 100
+                              : 0
+                            : Number(h.unrealizedPnLPct);
                         const dir = classifyDelta(pnlPct);
                         const providerCode =
                           h.providerAccount?.providerCode ||
@@ -625,7 +652,7 @@ export default function PortfolioDetailPage() {
 
                             {/* Quantity */}
                             <td className="py-3.5 text-right tabular-nums text-foreground">
-                              {qty.toLocaleString()}
+                              {qty > 0 ? qty.toLocaleString() : "—"}
                             </td>
 
                             {/* Avg Cost */}
@@ -772,11 +799,39 @@ export default function PortfolioDetailPage() {
               <div className="flex items-center gap-3 text-xs">
                 <span className="flex items-center gap-1.5 font-medium text-blue-500">
                   <span className="h-2.5 w-2.5 rounded-full bg-blue-500" />
-                  Portfolio ({(summary?.totalPnlPct ?? 0).toFixed(1)}%)
+                  {summary?.name || "Portfolio"} (
+                  {(analytics?.benchmarkComparison?.length
+                    ? (analytics.benchmarkComparison[analytics.benchmarkComparison.length - 1]
+                        ?.portfolio ??
+                      summary?.totalPnlPct ??
+                      0)
+                    : (summary?.totalPnlPct ?? 0)) >= 0
+                    ? "+"
+                    : ""}
+                  {(analytics?.benchmarkComparison?.length
+                    ? (analytics.benchmarkComparison[analytics.benchmarkComparison.length - 1]
+                        ?.portfolio ??
+                      summary?.totalPnlPct ??
+                      0)
+                    : (summary?.totalPnlPct ?? 0)
+                  ).toFixed(1)}
+                  %)
                 </span>
                 <span className="flex items-center gap-1.5 font-medium text-amber-500">
                   <span className="h-2.5 w-2.5 rounded-full bg-amber-500" />
-                  NIFTY 50 (+12.5%)
+                  NIFTY 50 (
+                  {(analytics?.benchmarkComparison?.length
+                    ? (analytics.benchmarkComparison[analytics.benchmarkComparison.length - 1]
+                        ?.benchmark ?? 3.4)
+                    : 3.4) >= 0
+                    ? "+"
+                    : ""}
+                  {(analytics?.benchmarkComparison?.length
+                    ? (analytics.benchmarkComparison[analytics.benchmarkComparison.length - 1]
+                        ?.benchmark ?? 3.4)
+                    : 3.4
+                  ).toFixed(1)}
+                  %)
                 </span>
               </div>
             </CardHeader>

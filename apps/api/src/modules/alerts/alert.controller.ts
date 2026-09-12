@@ -51,6 +51,7 @@ export class AlertController {
 
   /** POST /api/v1/alerts — Create a new alert rule */
   @Post()
+  @Post("rules")
   @HttpCode(HttpStatus.CREATED)
   async createAlertRule(@Req() req: AuthRequest, @Body() dto: CreateAlertRuleDto) {
     return this.alertService.createAlertRule(req.user.id, dto);
@@ -58,6 +59,7 @@ export class AlertController {
 
   /** GET /api/v1/alerts — List all alert rules belonging to the user */
   @Get()
+  @Get("rules")
   @HttpCode(HttpStatus.OK)
   async getUserAlertRules(@Req() req: AuthRequest) {
     return this.alertService.getUserAlertRules(req.user.id);
@@ -119,6 +121,7 @@ export class AlertController {
 
   /** PUT /api/v1/alerts/:id — Update an existing alert rule */
   @Put(":id")
+  @Put("rules/:id")
   @HttpCode(HttpStatus.OK)
   async updateAlertRule(
     @Req() req: AuthRequest,
@@ -130,6 +133,7 @@ export class AlertController {
 
   /** DELETE /api/v1/alerts/:id — Soft-delete an alert rule */
   @Delete(":id")
+  @Delete("rules/:id")
   @HttpCode(HttpStatus.OK)
   async deleteAlertRule(@Req() req: AuthRequest, @Param("id", ParseUUIDPipe) ruleId: string) {
     return this.alertService.deleteAlertRule(req.user.id, ruleId);

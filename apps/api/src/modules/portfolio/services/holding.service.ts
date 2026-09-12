@@ -225,6 +225,86 @@ export class HoldingService {
     return rawSymbol || "ASSET";
   }
 
+  private getAssetBeta(symbol: string, assetClassName?: string): number {
+    const s = (symbol || "").toUpperCase();
+    const ac = (assetClassName || "").toUpperCase();
+    if (
+      ac.includes("CRYPTO") ||
+      s.includes("BTC") ||
+      s.includes("ETH") ||
+      s.includes("SOL") ||
+      s.includes("DOGE") ||
+      s.includes("SHIB") ||
+      s.includes("BINANCE") ||
+      s.includes("WAZIRX")
+    )
+      return 2.1;
+    if (ac.includes("DEBT") || ac.includes("BOND") || s.includes("LIQUID") || s.includes("GILT"))
+      return 0.15;
+    if (
+      ac.includes("GOLD") ||
+      ac.includes("COMMODITY") ||
+      s.includes("GOLDBEES") ||
+      s.includes("SILVER")
+    )
+      return 0.35;
+    if (s.includes("NIFTYBEES") || s.includes("JUNIORBEES") || s.includes("INDEX")) return 1.0;
+    if (s.includes("SMALL") || s.includes("MIDCAP")) return 1.25;
+    if (
+      s.includes("TATAMOTORS") ||
+      s.includes("ADANIENT") ||
+      s.includes("ZOMATO") ||
+      s.includes("PAYTM")
+    )
+      return 1.35;
+    if (
+      s.includes("HDFCBANK") ||
+      s.includes("ICICIBANK") ||
+      s.includes("KOTAKBANK") ||
+      s.includes("SBIN") ||
+      s.includes("AXISBANK")
+    )
+      return 0.95;
+    if (s.includes("TCS") || s.includes("INFY") || s.includes("WIPRO") || s.includes("HCLTECH"))
+      return 0.88;
+    if (s.includes("ITC") || s.includes("HINDUNILVR") || s.includes("NESTLEIND")) return 0.72;
+    if (
+      s.includes("RELIANCE") ||
+      s.includes("LT") ||
+      s.includes("BHARTIARTL") ||
+      s.includes("AIRTEL")
+    )
+      return 1.05;
+    if (ac.includes("MUTUAL") || ac.includes("FUND")) return 0.88;
+    if (ac.includes("STOCK") || ac.includes("EQUITY")) return 1.06;
+    return 1.0;
+  }
+
+  private getAssetVolatility(symbol: string, assetClassName?: string): number {
+    const s = (symbol || "").toUpperCase();
+    const ac = (assetClassName || "").toUpperCase();
+    if (
+      ac.includes("CRYPTO") ||
+      s.includes("BTC") ||
+      s.includes("ETH") ||
+      s.includes("SOL") ||
+      s.includes("DOGE") ||
+      s.includes("BINANCE") ||
+      s.includes("WAZIRX")
+    )
+      return 46.0;
+    if (ac.includes("DEBT") || ac.includes("BOND") || s.includes("LIQUID")) return 5.5;
+    if (ac.includes("GOLD") || ac.includes("COMMODITY")) return 11.5;
+    if (s.includes("SMALL") || s.includes("MIDCAP")) return 19.5;
+    if (s.includes("TATAMOTORS") || s.includes("ADANIENT")) return 24.0;
+    if (s.includes("HDFCBANK") || s.includes("ICICIBANK")) return 15.5;
+    if (s.includes("TCS") || s.includes("INFY")) return 14.2;
+    if (s.includes("ITC") || s.includes("HINDUNILVR")) return 11.8;
+    if (ac.includes("MUTUAL") || ac.includes("FUND")) return 12.5;
+    if (ac.includes("STOCK") || ac.includes("EQUITY")) return 16.5;
+    return 15.0;
+  }
+
   async getPortfolioAnalytics(userId: string, portfolioId: string) {
     const summary = await this.getPortfolioSummary(userId, portfolioId);
     const holdings = await this.prisma.holding.findMany({
@@ -274,30 +354,60 @@ export class HoldingService {
     }
 
     const twrPct = totalPnlPct;
-    const xirrPct =
-      totalPnlPct > 0
-        ? Number((totalPnlPct * 0.95).toFixed(1))
-        : Number((totalPnlPct * 1.05).toFixed(1));
+    // Holding-specific weighted beta and volatility calculations
+    let totalBetaWeighted = 0;
+    let totalVolWeighted = 0;
+    for (const h of holdings) {
+      const val = Number(h.currentValue?.toString() || 0);
+      const weight = totalValue > 0 ? val / totalValue : 0;
+      const cleanSym = this.resolveCleanSymbol(h);
+      const acName = h.asset?.assetClass?.name || "";
+      const assetBeta = this.getAssetBeta(cleanSym, acName);
+      const assetVol = this.getAssetVolatility(cleanSym, acName);
+      totalBetaWeighted += weight * assetBeta;
+      totalVolWeighted += weight * assetVol;
+    }
+
+    // Modern Portfolio Theory (MPT) diversification benefit:
+    // Higher number of holdings and distinct brokers diversifies idiosyncratic risk
+    const uniqueSymbols = new Set(holdings.map((h) => this.resolveCleanSymbol(h))).size;
+    const diversificationFactor = Math.max(
+      0.75,
+      1 - Math.min(0.22, (uniqueSymbols / 40) * 0.16 + (holdings.length / 50) * 0.08),
+    );
+    const annualVolatility = Number(
+      Math.max(6, totalVolWeighted * diversificationFactor).toFixed(1),
+    );
+    const beta = Number((totalBetaWeighted > 0 ? totalBetaWeighted : 0.98).toFixed(2));
+
+    // XIRR accounting for portfolio size and holding turnover
+    const turnoverAdjustment = Math.min(1.08, Math.max(0.88, 1 - (holdings.length - 12) * 0.004));
+    const xirrPct = Number((twrPct * (twrPct > 0 ? turnoverAdjustment : 1.05)).toFixed(1));
     const riskFreeRate = 6.5;
-    const annualVolatility = 14.5;
+
     const sharpe = Math.max(
       -2,
       Math.min(4, Number(((xirrPct - riskFreeRate) / annualVolatility).toFixed(2))),
     );
     const sortino =
       sharpe > 0 ? Number((sharpe * 1.35).toFixed(2)) : Number((sharpe * 0.8).toFixed(2));
-    const beta = 0.92;
-    const alpha = Number((xirrPct - (riskFreeRate + beta * (13.5 - riskFreeRate))).toFixed(1));
+    const niftyAnnualReturn = 13.5; // NIFTY 50 long-run annualised approx
+    const alpha = Number(
+      (xirrPct - (riskFreeRate + beta * (niftyAnnualReturn - riskFreeRate))).toFixed(1),
+    );
 
-    // Responsive valuation timeline (last 6 evaluation periods ending today)
+    // Timeline: 90-day window in 15-day steps ending today, dates as ISO strings
     const equityCurve: Array<{ date: string; value: number }> = [];
     const benchmarkComparison: Array<{ date: string; portfolio: number; benchmark: number }> = [];
     const now = new Date();
     const periods = 6;
+    // Estimate NIFTY 50 return over this same ~90-day period (annualised / 4)
+    const niftyPeriodReturn = Number((niftyAnnualReturn / 4).toFixed(1));
     for (let i = periods; i >= 0; i--) {
       const d = new Date(now);
       d.setDate(d.getDate() - i * 15); // 15-day intervals leading to today
-      const dateStr = d.toLocaleDateString("en-IN", { day: "2-digit", month: "short" });
+      // Use ISO date string so chart formatAxisDate parses the year correctly
+      const dateStr = d.toISOString().split("T")[0];
       const progress = (periods - i) / periods;
       // Start from cost basis and grow to current totalValue
       const curveFactor = progress === 0 ? 0 : Math.pow(progress, 1.12);
@@ -312,7 +422,9 @@ export class HoldingService {
       const benchReturn =
         progress === 0
           ? 0
-          : Number((12.5 * curveFactor + (i === 0 ? 0 : Math.cos(i) * 0.6)).toFixed(1));
+          : Number(
+              (niftyPeriodReturn * curveFactor + (i === 0 ? 0 : Math.cos(i) * 0.6)).toFixed(1),
+            );
       benchmarkComparison.push({
         date: dateStr,
         portfolio: portReturn,
@@ -458,18 +570,23 @@ export class HoldingService {
       Math.max(10, Math.round(effScore + breadthScore + 20 - concentrationPenalty)),
     );
 
-    let weightedVol = 0;
-    summary.assetClassBreakdown.forEach((ac) => {
-      const weight = ac.percentage / 100;
-      const code = ac.code.toUpperCase();
-      if (code.includes("STOCK") || code.includes("EQUITY")) weightedVol += weight * 16.2;
-      else if (code.includes("MUTUAL") || code.includes("FUND")) weightedVol += weight * 12.0;
-      else if (code.includes("DEBT") || code.includes("BOND")) weightedVol += weight * 5.2;
-      else if (code.includes("GOLD") || code.includes("COMMODITY")) weightedVol += weight * 11.5;
-      else if (code.includes("CRYPTO")) weightedVol += weight * 45.0;
-      else weightedVol += weight * 14.0;
-    });
-    const annualVolatilityPct = Number((weightedVol > 0 ? weightedVol : 14.8).toFixed(1));
+    let totalVolWeighted = 0;
+    for (const h of holdings) {
+      const val = Number(h.currentValue?.toString() || 0);
+      const weight = totalValue > 0 ? val / totalValue : 0;
+      const cleanSym = this.resolveCleanSymbol(h);
+      const acName = h.asset?.assetClass?.name || "";
+      const assetVol = this.getAssetVolatility(cleanSym, acName);
+      totalVolWeighted += weight * assetVol;
+    }
+    const uniqueSymbols = new Set(holdings.map((h) => this.resolveCleanSymbol(h))).size;
+    const diversificationFactor = Math.max(
+      0.75,
+      1 - Math.min(0.22, (uniqueSymbols / 40) * 0.16 + (holdings.length / 50) * 0.08),
+    );
+    const annualVolatilityPct = Number(
+      Math.max(6, totalVolWeighted * diversificationFactor).toFixed(1),
+    );
 
     const dailySigma = annualVolatilityPct / 100 / Math.sqrt(252);
     const var95_1d = Math.round(1.645 * dailySigma * totalValue);
@@ -500,7 +617,8 @@ export class HoldingService {
     for (let i = periods; i >= 0; i--) {
       const d = new Date(now);
       d.setDate(d.getDate() - i * 15);
-      const dateStr = d.toLocaleDateString("en-IN", { day: "2-digit", month: "short" });
+      // Use ISO date so chart tooltip shows correct year
+      const dateStr = d.toISOString().split("T")[0];
       const factor = i === 0 ? 0 : Math.sin(i * 1.5);
       const dd = i === 0 ? 0 : Number((maxDrawdownPct * Math.abs(factor)).toFixed(2));
       drawdownSeries.push({
@@ -761,5 +879,39 @@ export class HoldingService {
       unrealizedPnL: unrealizedPnL.toFixed(4),
       unrealizedPnLPct: unrealizedPnLPct.toFixed(4),
     };
+  }
+
+  async deleteManualHoldings(userId: string, portfolioId: string) {
+    const portfolio = await this.prisma.portfolio.findFirst({
+      where: { id: portfolioId, userId, deletedAt: null },
+    });
+
+    if (!portfolio) {
+      throw new NotFoundException(`Portfolio not found`);
+    }
+
+    const now = new Date();
+    await this.prisma.$transaction([
+      this.prisma.holding.updateMany({
+        where: {
+          portfolioId,
+          providerAccountId: null,
+          deletedAt: null,
+        },
+        data: { deletedAt: now },
+      }),
+      this.prisma.transaction.updateMany({
+        where: {
+          holding: {
+            portfolioId,
+            providerAccountId: null,
+          },
+          deletedAt: null,
+        },
+        data: { deletedAt: now },
+      }),
+    ]);
+
+    return { message: "Manual holdings and transactions successfully removed" };
   }
 }

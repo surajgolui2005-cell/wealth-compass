@@ -104,4 +104,13 @@ export class PortfolioController {
   ) {
     return this.portfolioService.deletePortfolio(req.user.id, portfolioId);
   }
+
+  @Delete(":id/manual-holdings")
+  @HttpCode(HttpStatus.OK)
+  async deleteManualHoldings(
+    @Req() req: Request & { user: { id: string } },
+    @Param("id") portfolioId: string,
+  ) {
+    return this.holdingService.deleteManualHoldings(req.user.id, portfolioId);
+  }
 }

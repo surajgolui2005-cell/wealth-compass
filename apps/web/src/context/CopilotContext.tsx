@@ -118,5 +118,10 @@ export function useCopilotContext(): CopilotContextValue {
 
 /** Convert client-side ChatMessage[] to the API-expected ConversationTurn[]. */
 export function toConversationHistory(messages: ChatMessage[]): ConversationTurn[] {
-  return messages.filter((m) => !m.isStreaming).map((m) => ({ role: m.role, content: m.content }));
+  return (messages || [])
+    .filter((m) => !m.isStreaming && typeof m.content === "string" && m.content.trim().length > 0)
+    .map((m) => ({
+      role: m.role as "user" | "assistant",
+      content: m.content.trim(),
+    }));
 }

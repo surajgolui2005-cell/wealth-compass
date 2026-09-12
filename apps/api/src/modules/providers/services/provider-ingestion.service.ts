@@ -45,6 +45,30 @@ export class ProviderIngestionService {
       encryptedCredentials = this.crypto.encryptCredentials(dto.credentials);
     }
 
+    // Find-or-create: return existing account if one already exists for this user+provider
+    const existing = await this.prisma.financialProviderAccount.findFirst({
+      where: { userId, providerCode: dto.providerCode as ProviderCode, deletedAt: null },
+      orderBy: { updatedAt: "desc" },
+    });
+
+    if (existing) {
+      // Update status back to CONNECTED if it was disconnected
+      const updated = await this.prisma.financialProviderAccount.update({
+        where: { id: existing.id },
+        data: { status: "CONNECTED", lastSyncAt: new Date() },
+      });
+      return {
+        id: updated.id,
+        userId: updated.userId,
+        providerCode: updated.providerCode,
+        accountName: updated.accountName,
+        status: updated.status,
+        hasCredentials: Boolean(updated.encryptedCredentials),
+        createdAt: updated.createdAt,
+        updatedAt: updated.updatedAt,
+      };
+    }
+
     const account = await this.prisma.financialProviderAccount.create({
       data: {
         userId,
@@ -135,6 +159,7 @@ export class ProviderIngestionService {
     portfolioId: string,
     csvContent: string,
     customMapping?: CsvColumnMapping,
+    providerAccountId?: string,
   ) {
     // IDOR Prevention: Assert requesting user owns the portfolio
     if (this.portfolioService) {
@@ -157,7 +182,7 @@ export class ProviderIngestionService {
 
     for (const rawTx of parseResult.transactions) {
       try {
-        const dto = this.mapToCreateTransactionDto(portfolioId, rawTx);
+        const dto = this.mapToCreateTransactionDto(portfolioId, rawTx, providerAccountId);
         const result = await this.transactionService.recordTransaction(userId, dto);
         importedTransactions.push(result.transaction);
       } catch (err: any) {
@@ -284,6 +309,7 @@ export class ProviderIngestionService {
   mapToCreateTransactionDto(
     portfolioId: string,
     raw: RawExternalTransaction,
+    providerAccountId?: string,
   ): CreateTransactionDto {
     return {
       portfolioId,
@@ -306,6 +332,7 @@ export class ProviderIngestionService {
           : new Date(),
       notes:
         raw.notes || `Imported via Integration Layer (${raw.providerRefId || "External Provider"})`,
+      ...(providerAccountId ? { providerAccountId } : {}),
     };
   }
 }

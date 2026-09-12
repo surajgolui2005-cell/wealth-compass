@@ -30,6 +30,8 @@ interface PortfolioOption {
   name: string;
   currency: string;
   totalValue: number;
+  totalPnlPct: number;
+  holdingsCount: number;
   isDefault: boolean;
 }
 
@@ -124,6 +126,7 @@ export default function RiskPage() {
     },
     enabled: !!selectedPortfolioId,
     staleTime: 0,
+    gcTime: 0, // Don't reuse cache when switching portfolios
     refetchOnMount: "always",
   });
 
@@ -164,11 +167,19 @@ export default function RiskPage() {
                 onChange={(e) => setSelectedPortfolioId(e.target.value)}
                 className="h-10 appearance-none rounded-lg border bg-card pl-9 pr-9 text-sm font-medium shadow-sm transition-colors hover:bg-accent/50 focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer"
               >
-                {portfolios.map((p) => (
-                  <option key={p.id} value={p.id}>
-                    {p.name} {p.isDefault ? "★" : ""} ({formatCurrency(Number(p.totalValue || 0))})
-                  </option>
-                ))}
+                {portfolios.map((p) => {
+                  const pnlSign = (p.totalPnlPct ?? 0) >= 0 ? "+" : "";
+                  const pnlLabel =
+                    p.holdingsCount > 0
+                      ? ` · ${pnlSign}${(p.totalPnlPct ?? 0).toFixed(1)}%`
+                      : " · Empty";
+                  return (
+                    <option key={p.id} value={p.id}>
+                      {p.name} {p.isDefault ? "★" : ""} ({formatCurrency(Number(p.totalValue || 0))}
+                      {pnlLabel})
+                    </option>
+                  );
+                })}
               </select>
               <div className="pointer-events-none absolute right-3 flex items-center text-muted-foreground">
                 <ChevronDown className="h-4 w-4" />

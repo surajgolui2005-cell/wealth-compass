@@ -1,20 +1,20 @@
-'use client';
+"use client";
 
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { apiClient, ApiError } from '@/lib/api-client';
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Badge } from '@/components/ui/badge';
-import { Skeleton } from '@/components/ui/skeleton';
-import { EmptyState } from '@/components/common/empty-state';
-import { formatDate } from '@/lib/utils';
-import { Plus, Trash2, Bell, Clock } from 'lucide-react';
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { apiClient, ApiError } from "@/lib/api-client";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Badge } from "@/components/ui/badge";
+import { Skeleton } from "@/components/ui/skeleton";
+import { EmptyState } from "@/components/common/empty-state";
+import { formatDate } from "@/lib/utils";
+import { Plus, Trash2, Bell, Clock } from "lucide-react";
 
 interface AlertRule {
   id: string;
@@ -30,19 +30,19 @@ interface AlertRule {
 
 const alertSchema = z.object({
   name: z.string().min(2),
-  alertType: z.enum(['DRAWDOWN_LIMIT', 'PORTFOLIO_REBALANCE', 'RISK_SCORE_SPIKE']),
+  alertType: z.enum(["DRAWDOWN_LIMIT", "PORTFOLIO_REBALANCE", "RISK_SCORE_SPIKE"]),
   thresholdPct: z.coerce.number().min(1).max(100),
   cooldownDurationMinutes: z.coerce.number().min(30).default(1440),
 });
 type AlertForm = z.infer<typeof alertSchema>;
 
 const alertTypeLabels: Record<string, string> = {
-  DRAWDOWN_LIMIT: 'Drawdown Limit',
-  PORTFOLIO_REBALANCE: 'Portfolio Rebalance',
-  RISK_SCORE_SPIKE: 'Volatility Spike',
-  PRICE_THRESHOLD: 'Price Threshold',
-  FD_MATURITY: 'FD Maturity',
-  SYNC_FAILURE: 'Sync Failure',
+  DRAWDOWN_LIMIT: "Drawdown Limit",
+  PORTFOLIO_REBALANCE: "Portfolio Rebalance",
+  RISK_SCORE_SPIKE: "Volatility Spike",
+  PRICE_THRESHOLD: "Price Threshold",
+  FD_MATURITY: "FD Maturity",
+  SYNC_FAILURE: "Sync Failure",
 };
 
 export default function AlertsPage() {
@@ -51,41 +51,46 @@ export default function AlertsPage() {
   const [error, setError] = useState<string | null>(null);
 
   const { data: rules = [], isLoading } = useQuery<AlertRule[]>({
-    queryKey: ['alerts', 'rules'],
+    queryKey: ["alerts", "rules"],
     queryFn: async () => {
-      const res = await apiClient.get('/alerts/rules');
-      return (res as any).data ?? res.data;
+      const res = await apiClient.get("/alerts");
+      return (res as any).data ?? res.data ?? (Array.isArray(res) ? res : []);
     },
   });
 
-  const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm<AlertForm>({
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<AlertForm>({
     resolver: zodResolver(alertSchema),
-    defaultValues: { alertType: 'DRAWDOWN_LIMIT', cooldownDurationMinutes: 1440 },
+    defaultValues: { alertType: "DRAWDOWN_LIMIT", cooldownDurationMinutes: 1440 },
   });
 
   const createMutation = useMutation({
     mutationFn: (data: AlertForm) =>
-      apiClient.post('/alerts/rules', {
+      apiClient.post("/alerts", {
         name: data.name,
         alertType: data.alertType,
         condition: { thresholdPct: data.thresholdPct },
-        channels: ['IN_APP'],
-        cooldownDurationMinutes: data.cooldownDurationMinutes,
+        channels: { in_app: true, email: true },
+        cooldownDurationMinutes: Number(data.cooldownDurationMinutes || 1440),
       }),
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['alerts', 'rules'] });
+      queryClient.invalidateQueries({ queryKey: ["alerts", "rules"] });
       reset();
       setShowForm(false);
       setError(null);
     },
     onError: (err) => {
-      setError(err instanceof ApiError ? err.message : 'Failed to create alert rule');
+      setError(err instanceof ApiError ? err.message : "Failed to create alert rule");
     },
   });
 
   const deleteMutation = useMutation({
-    mutationFn: (id: string) => apiClient.delete(`/alerts/rules/${id}`),
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: ['alerts', 'rules'] }),
+    mutationFn: (id: string) => apiClient.delete(`/alerts/${id}`),
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ["alerts", "rules"] }),
   });
 
   return (
@@ -104,21 +109,28 @@ export default function AlertsPage() {
       {/* Create form */}
       {showForm && (
         <Card>
-          <CardHeader><CardTitle className="text-base">Create Alert Rule</CardTitle></CardHeader>
+          <CardHeader>
+            <CardTitle className="text-base">Create Alert Rule</CardTitle>
+          </CardHeader>
           <form onSubmit={handleSubmit((d) => createMutation.mutate(d))}>
             <CardContent className="space-y-4">
               {error && (
-                <div className="rounded-md bg-destructive/10 border border-destructive/30 px-3 py-2 text-sm text-destructive">{error}</div>
+                <div className="rounded-md bg-destructive/10 border border-destructive/30 px-3 py-2 text-sm text-destructive">
+                  {error}
+                </div>
               )}
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
                   <Label>Rule Name</Label>
-                  <Input placeholder="Large Drawdown Alert" {...register('name')} />
+                  <Input placeholder="Large Drawdown Alert" {...register("name")} />
                   {errors.name && <p className="text-xs text-destructive">{errors.name.message}</p>}
                 </div>
                 <div className="space-y-1.5">
                   <Label>Alert Type</Label>
-                  <select {...register('alertType')} className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm">
+                  <select
+                    {...register("alertType")}
+                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+                  >
                     <option value="DRAWDOWN_LIMIT">Drawdown Limit</option>
                     <option value="PORTFOLIO_REBALANCE">Portfolio Rebalance</option>
                     <option value="RISK_SCORE_SPIKE">Volatility Spike</option>
@@ -126,17 +138,36 @@ export default function AlertsPage() {
                 </div>
                 <div className="space-y-1.5">
                   <Label>Threshold (%)</Label>
-                  <Input type="number" placeholder="15" {...register('thresholdPct')} />
-                  {errors.thresholdPct && <p className="text-xs text-destructive">{errors.thresholdPct.message}</p>}
+                  <Input type="number" placeholder="15" {...register("thresholdPct")} />
+                  {errors.thresholdPct && (
+                    <p className="text-xs text-destructive">{errors.thresholdPct.message}</p>
+                  )}
                 </div>
                 <div className="space-y-1.5">
                   <Label>Cooldown (minutes)</Label>
-                  <Input type="number" placeholder="1440" {...register('cooldownDurationMinutes')} />
+                  <Input
+                    type="number"
+                    placeholder="1440"
+                    {...register("cooldownDurationMinutes")}
+                  />
                 </div>
               </div>
               <div className="flex gap-2">
-                <Button type="submit" size="sm" isLoading={isSubmitting || createMutation.isPending}>Create</Button>
-                <Button type="button" variant="outline" size="sm" onClick={() => setShowForm(false)}>Cancel</Button>
+                <Button
+                  type="submit"
+                  size="sm"
+                  isLoading={isSubmitting || createMutation.isPending}
+                >
+                  Create
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setShowForm(false)}
+                >
+                  Cancel
+                </Button>
               </div>
             </CardContent>
           </form>
@@ -146,7 +177,9 @@ export default function AlertsPage() {
       {/* Rules list */}
       {isLoading ? (
         <div className="space-y-3">
-          {Array.from({ length: 3 }).map((_, i) => <Skeleton key={i} className="h-20 w-full rounded-lg" />)}
+          {Array.from({ length: 3 }).map((_, i) => (
+            <Skeleton key={i} className="h-20 w-full rounded-lg" />
+          ))}
         </div>
       ) : rules.length === 0 ? (
         <EmptyState
@@ -167,10 +200,12 @@ export default function AlertsPage() {
                   <div>
                     <div className="flex items-center gap-2">
                       <p className="font-medium">{rule.name}</p>
-                      <Badge variant={rule.isActive ? 'default' : 'secondary'}>
-                        {rule.isActive ? 'Active' : 'Paused'}
+                      <Badge variant={rule.isActive ? "default" : "secondary"}>
+                        {rule.isActive ? "Active" : "Paused"}
                       </Badge>
-                      <Badge variant="outline">{alertTypeLabels[rule.alertType] ?? rule.alertType}</Badge>
+                      <Badge variant="outline">
+                        {alertTypeLabels[rule.alertType] ?? rule.alertType}
+                      </Badge>
                     </div>
                     <div className="flex items-center gap-3 mt-1 text-xs text-muted-foreground">
                       <span className="flex items-center gap-1">

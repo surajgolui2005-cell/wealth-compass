@@ -40,17 +40,41 @@ export class PortfolioService {
   }
 
   async getUserPortfolios(userId: string) {
-    return this.prisma.portfolio.findMany({
-      where: {
-        userId,
-        deletedAt: null,
-      },
+    const portfolios = await this.prisma.portfolio.findMany({
+      where: { userId, deletedAt: null },
       include: {
-        _count: {
-          select: { holdings: true },
+        _count: { select: { holdings: { where: { deletedAt: null } } } },
+        holdings: {
+          where: { deletedAt: null },
+          select: { currentValue: true, avgCostBasis: true, quantity: true },
         },
       },
       orderBy: [{ isDefault: "desc" }, { createdAt: "desc" }],
+    });
+
+    // Compute live totals from holdings instead of relying on the stale cached column
+    return portfolios.map((p) => {
+      let liveTotal = 0;
+      let liveCost = 0;
+      for (const h of p.holdings) {
+        liveTotal += Number(h.currentValue?.toString() || 0);
+        liveCost += Number(h.quantity?.toString() || 0) * Number(h.avgCostBasis?.toString() || 0);
+      }
+      const pnl = liveTotal - liveCost;
+      const pnlPct = liveCost > 0 ? (pnl / liveCost) * 100 : 0;
+      return {
+        id: p.id,
+        name: p.name,
+        description: p.description,
+        currency: p.currency,
+        isDefault: p.isDefault,
+        createdAt: p.createdAt,
+        totalValue: liveTotal,
+        totalCost: liveCost,
+        totalPnl: pnl,
+        totalPnlPct: Number(pnlPct.toFixed(2)),
+        holdingsCount: p._count.holdings,
+      };
     });
   }
 

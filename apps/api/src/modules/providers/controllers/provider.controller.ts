@@ -29,6 +29,10 @@ class ImportCsvDto {
   @IsOptional()
   @IsObject()
   customMapping?: CsvColumnMapping;
+
+  @IsOptional()
+  @IsString()
+  providerAccountId?: string;
 }
 
 class SyncProviderDto {
@@ -113,6 +117,7 @@ export class ProviderController {
       dto.portfolioId,
       dto.csvContent,
       dto.customMapping,
+      dto.providerAccountId,
     );
   }
 
