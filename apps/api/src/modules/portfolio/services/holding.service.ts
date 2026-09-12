@@ -17,7 +17,7 @@ export class HoldingService {
       throw new NotFoundException(`Portfolio not found`);
     }
 
-    return this.prisma.holding.findMany({
+    const rawHoldings = await this.prisma.holding.findMany({
       where: {
         portfolioId,
         deletedAt: null,
@@ -40,6 +40,27 @@ export class HoldingService {
         },
       },
       orderBy: { currentValue: "desc" },
+    });
+
+    return rawHoldings.map((h) => {
+      const q = Number(h.quantity?.toString() || 0);
+      const avg = Number(h.avgCostBasis?.toString() || 0);
+      const cp = Number(h.currentPrice?.toString() || avg || 0);
+      const cv = Number(h.currentValue?.toString() || q * cp);
+      const pnl = Number(h.unrealizedPnL?.toString() || cv - q * avg);
+      const pnlPct = Number(
+        h.unrealizedPnLPct?.toString() || (q * avg > 0 ? (pnl / (q * avg)) * 100 : 0),
+      );
+
+      return {
+        ...h,
+        quantity: q,
+        avgCostBasis: avg,
+        currentPrice: cp,
+        currentValue: cv,
+        unrealizedPnL: pnl,
+        unrealizedPnLPct: pnlPct,
+      };
     });
   }
 

@@ -152,7 +152,8 @@ export default function PortfolioDetailPage() {
       return (res as any).data ?? res.data ?? res;
     },
     enabled: Boolean(id),
-    gcTime: 0,
+    staleTime: 0,
+    refetchOnMount: "always",
   });
 
   // Fetch live analytics for this portfolio
@@ -163,7 +164,8 @@ export default function PortfolioDetailPage() {
       return (res as any).data ?? res.data;
     },
     enabled: Boolean(id),
-    gcTime: 0,
+    staleTime: 0,
+    refetchOnMount: "always",
   });
 
   // Fetch live risk for this portfolio
@@ -174,7 +176,8 @@ export default function PortfolioDetailPage() {
       return (res as any).data ?? res.data;
     },
     enabled: Boolean(id),
-    gcTime: 0,
+    staleTime: 0,
+    refetchOnMount: "always",
   });
 
   // Fetch holdings
@@ -185,7 +188,8 @@ export default function PortfolioDetailPage() {
       return (res as any).data ?? res.data ?? (Array.isArray(res) ? res : []);
     },
     enabled: Boolean(id),
-    gcTime: 0,
+    staleTime: 0,
+    refetchOnMount: "always",
   });
 
   const holdings: Holding[] = Array.isArray(holdingsData) ? holdingsData : [];
@@ -570,34 +574,32 @@ export default function PortfolioDetailPage() {
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-border">
-                      {holdings.map((h) => {
+                      {holdings.map((h: any) => {
                         const symbol = h.symbol || h.asset?.symbol || "UNKNOWN";
                         const name = h.asset?.name || symbol;
                         const exchange = h.asset?.exchange || "NSE";
-                        const qty =
-                          !h.quantity || isNaN(Number(h.quantity)) ? 0 : Number(h.quantity);
-                        const avgCost =
-                          !h.avgCostBasis || isNaN(Number(h.avgCostBasis))
-                            ? 0
-                            : Number(h.avgCostBasis);
-                        const curPrice =
-                          !h.currentPrice || isNaN(Number(h.currentPrice))
-                            ? avgCost
-                            : Number(h.currentPrice);
-                        const curValue =
-                          !h.currentValue || isNaN(Number(h.currentValue))
-                            ? qty * curPrice
-                            : Number(h.currentValue);
-                        const pnl =
-                          !h.unrealizedPnL || isNaN(Number(h.unrealizedPnL))
-                            ? curValue - qty * avgCost
-                            : Number(h.unrealizedPnL);
-                        const pnlPct =
-                          !h.unrealizedPnLPct || isNaN(Number(h.unrealizedPnLPct))
-                            ? qty * avgCost > 0
-                              ? (pnl / (qty * avgCost)) * 100
-                              : 0
-                            : Number(h.unrealizedPnLPct);
+                        const rawQty = h.quantity ?? h.qty ?? h.units ?? 0;
+                        const qty = Number(rawQty) || 0;
+                        const rawAvg =
+                          h.avgCostBasis ?? h.avg_cost_basis ?? h.avgPrice ?? h.buyPrice ?? 0;
+                        const avgCost = Number(rawAvg) || 0;
+                        const rawPrice =
+                          h.currentPrice ??
+                          h.current_price ??
+                          h.livePrice ??
+                          h.price ??
+                          (avgCost || 0);
+                        const curPrice = Number(rawPrice) || avgCost;
+                        const rawVal = h.currentValue ?? h.current_value ?? qty * curPrice;
+                        const curValue = Number(rawVal) || qty * curPrice;
+                        const rawPnl =
+                          h.unrealizedPnL ?? h.unrealized_pnl ?? curValue - qty * avgCost;
+                        const pnl = Number(rawPnl) || 0;
+                        const rawPnlPct =
+                          h.unrealizedPnLPct ??
+                          h.unrealized_pnl_pct ??
+                          (qty * avgCost > 0 ? (pnl / (qty * avgCost)) * 100 : 0);
+                        const pnlPct = Number(rawPnlPct) || 0;
                         const dir = classifyDelta(pnlPct);
                         const providerCode =
                           h.providerAccount?.providerCode ||

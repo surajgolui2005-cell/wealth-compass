@@ -1,16 +1,16 @@
 # Graph Report - Investor Portolio Monitoring and Risk Management System  (2026-09-12)
 
 ## Corpus Check
-- 415 files · ~272,725 words
+- 415 files · ~273,221 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 4150 nodes · 7716 edges · 260 communities (186 shown, 74 thin omitted)
+- 4150 nodes · 7716 edges · 259 communities (185 shown, 74 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 500 edges (avg confidence: 0.75)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `cbbf6794`
+- Built from commit: `aad7cd14`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -60,10 +60,10 @@
 - workflows/graphify.md
 - TestDiversificationEndpointSmoke
 - GroupBy
-- web/src/lib/utils.ts
+- portfolios/page.tsx
 - test_diversification.py
 - src/analytics/__init__.py
-- charts/index.ts
+- risk/page.tsx
 - @nestjs/jwt
 - compute_allocation
 - @nestjs/throttler
@@ -113,7 +113,7 @@
 - app.module.ts
 - Endpoints
 - TestDiversificationEndpointValidation
-- System Architecture Document
+- alerts/page.tsx
 - dependencies
 - report.module.ts
 - AlertController
@@ -141,7 +141,7 @@
 - AlertEvaluatorEngine
 - health.service.ts
 - PortfolioDetailScreen.tsx
-- src/components/copilot/TradeActionCard.tsx
+- 5. Data Flow Pipeline Architecture
 - 7. Pairwise Asset Correlation Matrix
 - Production Readiness Review & Final Sign-Off — Wealth Compass Platform
 - TestDiversificationScoringThresholds
@@ -175,7 +175,7 @@
 - @react-navigation/native-stack
 - CustomDummyBrokerAdapter
 - zod
-- 7. Security & Isolation Boundaries
+- class-transformer
 - run-benchmarks.js
 - TestEffectiveNBenchmark
 - @radix-ui/react-avatar
@@ -237,7 +237,6 @@
 - pdfmake
 - @pdfsmaller/pdf-decrypt
 - @prisma/client
-- argon2
 - prom-client
 - CopilotSheet.tsx
 - build_portfolio_summary
@@ -285,7 +284,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (260 total, 74 thin omitted)
+## Communities (259 total, 74 thin omitted)
 
 ### Community 0 - "providers.module.ts"
 Cohesion: 0.08
@@ -308,8 +307,8 @@ Cohesion: 0.05
 Nodes (87): ADR-0001: Monorepo Strategy, Compliance Check, Consequences, Constraints, Context, Decision, Directory Layout, Negative / Trade-offs (+79 more)
 
 ### Community 5 - "ARCHITECTURE.md"
-Cohesion: 0.24
-Nodes (20): 3.1 Level 1 — System Context Diagram, 3.2 Level 2 — Container Diagram, 3.3 Level 3 — Component Diagram (NestJS API Modular Monolith), 3.4 Level 3 — Component Diagram (Python Quant Engine), 3. C4 Architecture Diagrams, 4.1 Context Relationship Patterns, 4.2 Anti-Corruption Layers, 4. Bounded Context Map (+12 more)
+Cohesion: 0.17
+Nodes (29): 10. Observability Architecture, 11. Architecture Decision Records (ADR) Summary, 12. Open Questions Resolved, 1.1 Guiding Principles, 1.2 Architectural Pattern: Modular Monolith + Quant Microservice, 1. System Overview & Architectural Philosophy, 2. Technology Stack Decisions, 3.1 Level 1 — System Context Diagram (+21 more)
 
 ### Community 6 - "compilerOptions"
 Cohesion: 0.07
@@ -451,9 +450,9 @@ Nodes (13): HTTP smoke tests for POST /api/v1/risk/diversification., Minimal val
 Cohesion: 0.11
 Nodes (30): GroupBy, Supported portfolio allocation breakdown dimensions., compute_allocation_endpoint(), compute_rebalance_endpoint(), post, Allocation analytics router. Exposes two computation endpoints: POST…, POST /api/v1/allocation/rebalance Accepts current allocation percentages and…, POST /api/v1/allocation/breakdown Accepts a list of portfolio positions with… (+22 more)
 
-### Community 45 - "web/src/lib/utils.ts"
-Cohesion: 0.09
-Nodes (38): LoginForm, loginSchema, RegisterForm, registerSchema, AlertForm, AlertRule, alertSchema, AlertsPage() (+30 more)
+### Community 45 - "portfolios/page.tsx"
+Cohesion: 0.12
+Nodes (23): LoginForm, loginSchema, RegisterForm, registerSchema, AnalyticsData, AnalyticsPage(), PortfolioOption, Portfolio (+15 more)
 
 ### Community 46 - "test_diversification.py"
 Cohesion: 0.07
@@ -463,9 +462,9 @@ Nodes (31): _component_a(), _component_b(), _compute_hhi(), ConcentrationRatio, 
 Cohesion: 0.04
 Nodes (84): Analytics math package for the Wealth Compass Quant Engine. Public API: twr —…, BetaResult, compute_beta(), Beta Calculator =============== Pure-math module for computing the systematic…, Beta computation output. Attributes ---------- asset_id : Portfolio or security…, Compute the portfolio beta against a benchmark. Algorithm --------- 1.…, compute_correlation(), _compute_stats() (+76 more)
 
-### Community 48 - "charts/index.ts"
-Cohesion: 0.11
-Nodes (36): AllocationDonutChart(), AllocationDonutChartProps, AllocationSlice, CenterLabel(), CustomTooltip(), BenchmarkComparisonChart(), BenchmarkComparisonChartProps, BenchmarkDataPoint (+28 more)
+### Community 48 - "risk/page.tsx"
+Cohesion: 0.09
+Nodes (41): PortfolioOption, RiskData, RiskMetricItem, AllocationDonutChart(), AllocationDonutChartProps, AllocationSlice, CenterLabel(), CustomTooltip() (+33 more)
 
 ### Community 50 - "compute_allocation"
 Cohesion: 0.08
@@ -477,7 +476,7 @@ Nodes (10): CacheableAnalytics(), Controller, Get, HttpCode, Param, Query, Req, 
 
 ### Community 53 - "dependencies"
 Cohesion: 0.07
-Nodes (29): dependencies, axios, bullmq, class-transformer, class-validator, @investor-pm/types, papaparse, passport (+21 more)
+Nodes (29): dependencies, argon2, axios, bullmq, class-validator, @investor-pm/types, papaparse, passport (+21 more)
 
 ### Community 54 - "src/main.py"
 Cohesion: 0.08
@@ -564,8 +563,8 @@ Cohesion: 0.08
 Nodes (22): TransactionController, Body, Controller, Get, HttpCode, Param, Post, Req (+14 more)
 
 ### Community 86 - "src/hooks/useCopilotChat.ts"
-Cohesion: 0.07
-Nodes (36): CopilotDrawer(), CopilotTrigger(), CopilotTriggerProps, StarterChips(), StarterChipsProps, CopilotMessage(), CopilotMessageProps, renderInline() (+28 more)
+Cohesion: 0.06
+Nodes (41): CopilotDrawer(), CopilotTrigger(), CopilotTriggerProps, StarterChips(), StarterChipsProps, CopilotMessage(), CopilotMessageProps, renderInline() (+33 more)
 
 ### Community 89 - "TestBetaBenchmark"
 Cohesion: 0.14
@@ -573,7 +572,7 @@ Nodes (8): Beta = Cov(portfolio, benchmark) / Var(benchmark). Dataset A vs Datas
 
 ### Community 91 - "cn"
 Cohesion: 0.11
-Nodes (37): DashboardPage(), Holding, PortfolioSummary, AaConnectModal(), AaConnectModalProps, AddTransactionModal(), AddTransactionModalProps, ConnectPlatformModal() (+29 more)
+Nodes (40): DashboardPage(), Holding, PortfolioDetailPage(), PortfolioSummary, AaConnectModal(), AaConnectModalProps, AddTransactionModal(), AddTransactionModalProps (+32 more)
 
 ### Community 92 - "setu-aa.service.ts"
 Cohesion: 0.11
@@ -623,9 +622,9 @@ Nodes (30): Alerts `/api/v1/alerts`, Analytics `/api/v1/analytics`, API Contract
 Cohesion: 0.10
 Nodes (11): Request validation (422) and business-logic validation (400) tests., Request without portfolio_id → HTTP 422., Request without asset_weights → HTTP 422., Empty asset_weights list → HTTP 422 (min_length=1 constraint)., Negative weight (gt=0 Pydantic constraint) → HTTP 422., Zero weight (gt=0 Pydantic constraint) → HTTP 422., correlation_matrix without correlation_asset_ids → HTTP 422., correlation_asset_ids without correlation_matrix → HTTP 422. (+3 more)
 
-### Community 104 - "System Architecture Document"
-Cohesion: 0.27
-Nodes (12): 10. Observability Architecture, 11. Architecture Decision Records (ADR) Summary, 12. Open Questions Resolved, 1.1 Guiding Principles, 1.2 Architectural Pattern: Modular Monolith + Quant Microservice, 1. System Overview & Architectural Philosophy, 2. Technology Stack Decisions, Appendix A — Full Portfolio Sync Sequence (End-to-End) (+4 more)
+### Community 104 - "alerts/page.tsx"
+Cohesion: 0.24
+Nodes (8): AlertForm, AlertRule, alertSchema, AlertsPage(), alertTypeLabels, EmptyState(), EmptyStateProps, formatDate()
 
 ### Community 105 - "dependencies"
 Cohesion: 0.08
@@ -735,9 +734,9 @@ Nodes (7): HealthModule, Module, ComponentHealth, HealthService, LivenessResult,
 Cohesion: 0.13
 Nodes (18): AddAssetModal(), AddAssetModalProps, styles, PlatformBadge(), PlatformBadgeProps, styles, StockChartModal(), StockChartModalProps (+10 more)
 
-### Community 132 - "src/components/copilot/TradeActionCard.tsx"
-Cohesion: 0.22
-Nodes (8): ACTION_STYLES, BrokerButtonProps, formatInrCompact(), QUICK_BROKERS, TradeActionCard(), TradeActionCardProps, BROKER_DEEP_LINKS, SuggestedTradeAction
+### Community 132 - "5. Data Flow Pipeline Architecture"
+Cohesion: 0.46
+Nodes (8): 5.1 End-to-End Pipeline Overview, 5.2 Stage 1 — Raw Data Ingestion, 5.3 Stage 2 — Normalisation, 5.4 Stage 3 — Persistence, 5.5 Stage 4 — Calculation, 5.6 Stage 5 — Analytics, 5.7 Stage 6 — Insights & Alerting, 5. Data Flow Pipeline Architecture
 
 ### Community 133 - "7. Pairwise Asset Correlation Matrix"
 Cohesion: 0.25
@@ -843,10 +842,6 @@ Nodes (12): Verify Top-N Concentration Ratios (CR_N) against hand-computed value
 Cohesion: 0.36
 Nodes (8): 8.1 Monorepo Structure, 8.2 Kubernetes Deployment Architecture (Production), 8. Infrastructure & Deployment Topology, 9.1 NestJS to Python Quant Engine (Internal REST), 9.2 Redis PubSub — Price Event Schema, 9.3 BullMQ Job Schemas, 9. Inter-Service Communication Contracts, Response — Python Quant Engine returns:
 
-### Community 166 - "7. Security & Isolation Boundaries"
-Cohesion: 0.70
-Nodes (5): 7.1 Network Boundary Architecture, 7.2 Authentication & Authorisation Architecture, 7.3 Encryption Strategy, 7.4 OWASP Top 10 Controls, 7. Security & Isolation Boundaries
-
 ### Community 167 - "run-benchmarks.js"
 Cohesion: 0.24
 Nodes (9): fs, http, K6_BIN, main(), path, runK6(), SERVER_SCRIPT, { spawn } (+1 more)
@@ -860,8 +855,8 @@ Cohesion: 0.26
 Nodes (10): errorEnvelope(), setupMockApi(), successEnvelope(), SEED_ALERTS, SEED_ANALYTICS, SEED_HOLDINGS, SEED_PORTFOLIOS, SEED_REPORTS (+2 more)
 
 ### Community 172 - "button.tsx"
-Cohesion: 0.16
-Nodes (10): EmptyState(), EmptyStateProps, ThemeToggle(), HeaderProps, Button, ButtonProps, buttonVariants, AuthUser (+2 more)
+Cohesion: 0.15
+Nodes (12): ThemeToggle(), Header(), HeaderProps, navItems, Sidebar(), Button, ButtonProps, buttonVariants (+4 more)
 
 ### Community 177 - "ObservabilityModule"
 Cohesion: 0.67

@@ -277,6 +277,45 @@
       "norm_label": "testdiversificationendpointvalidation"
     },
     {
+      "label": "AlertForm",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
+      "source_location": "L37",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_web_src_app_dashboard_alerts_page_alertform",
+      "community": 104,
+      "community_name": "alerts/page.tsx",
+      "norm_label": "alertform"
+    },
+    {
+      "label": "AlertRule",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
+      "source_location": "L19",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_web_src_app_dashboard_alerts_page_alertrule",
+      "community": 104,
+      "community_name": "alerts/page.tsx",
+      "norm_label": "alertrule"
+    },
+    {
+      "label": "EmptyStateProps",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/common/empty-state.tsx",
+      "source_location": "L4",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_web_src_components_common_empty_state_emptystateprops",
+      "community": 104,
+      "community_name": "alerts/page.tsx",
+      "norm_label": "emptystateprops"
+    },
+    {
       "label": "GenerateReportPayload",
       "file_type": "code",
       "source_file": "apps/api/src/modules/reports/interfaces/report-queue.interface.ts",
@@ -1070,45 +1109,6 @@
       "norm_label": "portfoliodetailscreenprops"
     },
     {
-      "label": "BrokerButtonProps",
-      "file_type": "code",
-      "source_file": "apps/web/src/components/copilot/TradeActionCard.tsx",
-      "source_location": "L49",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_web_src_components_copilot_tradeactioncard_brokerbuttonprops",
-      "community": 132,
-      "community_name": "src/components/copilot/TradeActionCard.tsx",
-      "norm_label": "brokerbuttonprops"
-    },
-    {
-      "label": "TradeActionCardProps",
-      "file_type": "code",
-      "source_file": "apps/web/src/components/copilot/TradeActionCard.tsx",
-      "source_location": "L80",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_web_src_components_copilot_tradeactioncard_tradeactioncardprops",
-      "community": 132,
-      "community_name": "src/components/copilot/TradeActionCard.tsx",
-      "norm_label": "tradeactioncardprops"
-    },
-    {
-      "label": "SuggestedTradeAction",
-      "file_type": "code",
-      "source_file": "apps/web/src/types/copilot.ts",
-      "source_location": "L75",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_web_src_types_copilot_suggestedtradeaction",
-      "community": 132,
-      "community_name": "src/components/copilot/TradeActionCard.tsx",
-      "norm_label": "suggestedtradeaction"
-    },
-    {
       "label": "TestDiversificationScoringThresholds",
       "file_type": "code",
       "source_file": "apps/quant-engine/tests/test_diversification.py",
@@ -1627,19 +1627,6 @@
       "community": 171,
       "community_name": "PinoLoggerService",
       "norm_label": "pinologgerservice"
-    },
-    {
-      "label": "EmptyStateProps",
-      "file_type": "code",
-      "source_file": "apps/web/src/components/common/empty-state.tsx",
-      "source_location": "L4",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_web_src_components_common_empty_state_emptystateprops",
-      "community": 172,
-      "community_name": "button.tsx",
-      "norm_label": "emptystateprops"
     },
     {
       "label": "HeaderProps",
@@ -2925,7 +2912,7 @@
       "_origin": "ast",
       "id": "apps_web_src_app_auth_login_page_loginform",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "loginform"
     },
     {
@@ -2938,34 +2925,8 @@
       "_origin": "ast",
       "id": "apps_web_src_app_auth_register_page_registerform",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "registerform"
-    },
-    {
-      "label": "AlertForm",
-      "file_type": "code",
-      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
-      "source_location": "L37",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_web_src_app_dashboard_alerts_page_alertform",
-      "community": 45,
-      "community_name": "web/src/lib/utils.ts",
-      "norm_label": "alertform"
-    },
-    {
-      "label": "AlertRule",
-      "file_type": "code",
-      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
-      "source_location": "L19",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_web_src_app_dashboard_alerts_page_alertrule",
-      "community": 45,
-      "community_name": "web/src/lib/utils.ts",
-      "norm_label": "alertrule"
     },
     {
       "label": "AnalyticsData",
@@ -2977,7 +2938,7 @@
       "_origin": "ast",
       "id": "apps_web_src_app_dashboard_analytics_page_analyticsdata",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "analyticsdata"
     },
     {
@@ -2990,7 +2951,7 @@
       "_origin": "ast",
       "id": "apps_web_src_app_dashboard_analytics_page_portfoliooption",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "portfoliooption"
     },
     {
@@ -3003,7 +2964,7 @@
       "_origin": "ast",
       "id": "apps_web_src_app_dashboard_dashboard_page_portfolio",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "portfolio"
     },
     {
@@ -3016,7 +2977,7 @@
       "_origin": "ast",
       "id": "apps_web_src_app_dashboard_portfolios_page_createform",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "createform"
     },
     {
@@ -3029,47 +2990,8 @@
       "_origin": "ast",
       "id": "apps_web_src_app_dashboard_portfolios_page_portfolio",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "portfolio"
-    },
-    {
-      "label": "PortfolioOption",
-      "file_type": "code",
-      "source_file": "apps/web/src/app/(dashboard)/risk/page.tsx",
-      "source_location": "L28",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_web_src_app_dashboard_risk_page_portfoliooption",
-      "community": 45,
-      "community_name": "web/src/lib/utils.ts",
-      "norm_label": "portfoliooption"
-    },
-    {
-      "label": "RiskData",
-      "file_type": "code",
-      "source_file": "apps/web/src/app/(dashboard)/risk/page.tsx",
-      "source_location": "L44",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_web_src_app_dashboard_risk_page_riskdata",
-      "community": 45,
-      "community_name": "web/src/lib/utils.ts",
-      "norm_label": "riskdata"
-    },
-    {
-      "label": "RiskMetricItem",
-      "file_type": "code",
-      "source_file": "apps/web/src/app/(dashboard)/risk/page.tsx",
-      "source_location": "L38",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_web_src_app_dashboard_risk_page_riskmetricitem",
-      "community": 45,
-      "community_name": "web/src/lib/utils.ts",
-      "norm_label": "riskmetricitem"
     },
     {
       "label": "StatCardProps",
@@ -3081,7 +3003,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_common_stat_card_statcardprops",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "statcardprops"
     },
     {
@@ -3094,7 +3016,7 @@
       "_origin": "ast",
       "id": "apps_web_src_lib_api_client_apierror",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "apierror"
     },
     {
@@ -3436,6 +3358,45 @@
       "norm_label": "varestimatedto"
     },
     {
+      "label": "PortfolioOption",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/risk/page.tsx",
+      "source_location": "L28",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_web_src_app_dashboard_risk_page_portfoliooption",
+      "community": 48,
+      "community_name": "risk/page.tsx",
+      "norm_label": "portfoliooption"
+    },
+    {
+      "label": "RiskData",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/risk/page.tsx",
+      "source_location": "L44",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_web_src_app_dashboard_risk_page_riskdata",
+      "community": 48,
+      "community_name": "risk/page.tsx",
+      "norm_label": "riskdata"
+    },
+    {
+      "label": "RiskMetricItem",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/risk/page.tsx",
+      "source_location": "L38",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_web_src_app_dashboard_risk_page_riskmetricitem",
+      "community": 48,
+      "community_name": "risk/page.tsx",
+      "norm_label": "riskmetricitem"
+    },
+    {
       "label": "AllocationDonutChartProps",
       "file_type": "code",
       "source_file": "apps/web/src/components/charts/AllocationDonutChart.tsx",
@@ -3445,7 +3406,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_allocationdonutchart_allocationdonutchartprops",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "allocationdonutchartprops"
     },
     {
@@ -3458,7 +3419,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_allocationdonutchart_allocationslice",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "allocationslice"
     },
     {
@@ -3471,7 +3432,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_benchmarkcomparisonchart_benchmarkcomparisonchartprops",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "benchmarkcomparisonchartprops"
     },
     {
@@ -3484,7 +3445,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_benchmarkcomparisonchart_benchmarkdatapoint",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "benchmarkdatapoint"
     },
     {
@@ -3497,7 +3458,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_chart_container_chartcontainerprops",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "chartcontainerprops"
     },
     {
@@ -3510,7 +3471,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_correlationheatmap_correlationheatmapdata",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "correlationheatmapdata"
     },
     {
@@ -3523,7 +3484,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_correlationheatmap_correlationheatmapprops",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "correlationheatmapprops"
     },
     {
@@ -3536,7 +3497,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_drawdownchart_drawdownchartprops",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "drawdownchartprops"
     },
     {
@@ -3549,7 +3510,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_drawdownchart_drawdowndatapoint",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "drawdowndatapoint"
     },
     {
@@ -3562,7 +3523,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_equitycurvechart_equitycurvechartprops",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "equitycurvechartprops"
     },
     {
@@ -3575,7 +3536,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_equitycurvechart_equitycurvedatapoint",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "equitycurvedatapoint"
     },
     {
@@ -5178,6 +5139,32 @@
       "norm_label": "copilotmessageprops"
     },
     {
+      "label": "BrokerButtonProps",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/copilot/TradeActionCard.tsx",
+      "source_location": "L49",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_web_src_components_copilot_tradeactioncard_brokerbuttonprops",
+      "community": 86,
+      "community_name": "src/hooks/useCopilotChat.ts",
+      "norm_label": "brokerbuttonprops"
+    },
+    {
+      "label": "TradeActionCardProps",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/copilot/TradeActionCard.tsx",
+      "source_location": "L80",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_web_src_components_copilot_tradeactioncard_tradeactioncardprops",
+      "community": 86,
+      "community_name": "src/hooks/useCopilotChat.ts",
+      "norm_label": "tradeactioncardprops"
+    },
+    {
       "label": "CopilotContextValue",
       "file_type": "code",
       "source_file": "apps/web/src/context/CopilotContext.tsx",
@@ -5194,7 +5181,7 @@
       "label": "UseCopilotChatReturn",
       "file_type": "code",
       "source_file": "apps/web/src/hooks/useCopilotChat.ts",
-      "source_location": "L186",
+      "source_location": "L189",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
@@ -5332,6 +5319,19 @@
       "community": 86,
       "community_name": "src/hooks/useCopilotChat.ts",
       "norm_label": "starterprompt"
+    },
+    {
+      "label": "SuggestedTradeAction",
+      "file_type": "code",
+      "source_file": "apps/web/src/types/copilot.ts",
+      "source_location": "L75",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_web_src_types_copilot_suggestedtradeaction",
+      "community": 86,
+      "community_name": "src/hooks/useCopilotChat.ts",
+      "norm_label": "suggestedtradeaction"
     },
     {
       "label": "TradeAction",
@@ -5896,7 +5896,7 @@
       "label": ".cleanNumeric()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L274",
+      "source_location": "L359",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_cleannumeric",
@@ -5920,7 +5920,7 @@
       "label": ".fetchHoldings()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L29",
+      "source_location": "L31",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_fetchholdings",
@@ -5932,7 +5932,7 @@
       "label": ".fetchTransactions()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L33",
+      "source_location": "L35",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_fetchtransactions",
@@ -5944,7 +5944,7 @@
       "label": ".getFieldValue()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L399",
+      "source_location": "L505",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_getfieldvalue",
@@ -5968,7 +5968,7 @@
       "label": ".normalizeAssetClassCode()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L446",
+      "source_location": "L553",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_normalizeassetclasscode",
@@ -5980,7 +5980,7 @@
       "label": ".normalizeDate()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L422",
+      "source_location": "L529",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_normalizedate",
@@ -5992,7 +5992,7 @@
       "label": ".normalizeTransactionType()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L406",
+      "source_location": "L512",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_normalizetransactiontype",
@@ -6004,7 +6004,7 @@
       "label": ".parseCsvContent()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L48",
+      "source_location": "L50",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_parsecsvcontent",
@@ -6016,7 +6016,7 @@
       "label": ".resolveHeaderMap()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L282",
+      "source_location": "L377",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_resolveheadermap",
@@ -6527,6 +6527,42 @@
       "community": 103,
       "community_name": "TestDiversificationEndpointValidation",
       "norm_label": ".test_zero_weight_returns_422()"
+    },
+    {
+      "label": "AlertsPage()",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
+      "source_location": "L48",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_web_src_app_dashboard_alerts_page_alertspage",
+      "community": 104,
+      "community_name": "alerts/page.tsx",
+      "norm_label": "alertspage()"
+    },
+    {
+      "label": "EmptyState()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/common/empty-state.tsx",
+      "source_location": "L11",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_web_src_components_common_empty_state_emptystate",
+      "community": 104,
+      "community_name": "alerts/page.tsx",
+      "norm_label": "emptystate()"
+    },
+    {
+      "label": "formatDate()",
+      "file_type": "code",
+      "source_file": "apps/web/src/lib/utils.ts",
+      "source_location": "L30",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_web_src_lib_utils_formatdate",
+      "community": 104,
+      "community_name": "alerts/page.tsx",
+      "norm_label": "formatdate()"
     },
     {
       "label": ".constructor()",
@@ -7204,7 +7240,7 @@
       "label": ".deleteManualHoldings()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L832",
+      "source_location": "L884",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_deletemanualholdings",
@@ -7228,7 +7264,7 @@
       "label": ".getAssetVolatility()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L246",
+      "source_location": "L283",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getassetvolatility",
@@ -7252,7 +7288,7 @@
       "label": ".getPortfolioAnalytics()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L262",
+      "source_location": "L308",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfolioanalytics",
@@ -7264,7 +7300,7 @@
       "label": ".getPortfolioRisk()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L458",
+      "source_location": "L510",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfoliorisk",
@@ -8711,42 +8747,6 @@
       "community": 131,
       "community_name": "PortfolioDetailScreen.tsx",
       "norm_label": "portfoliodetailscreen()"
-    },
-    {
-      "label": "BrokerButton()",
-      "file_type": "code",
-      "source_file": "apps/web/src/components/copilot/TradeActionCard.tsx",
-      "source_location": "L54",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_web_src_components_copilot_tradeactioncard_brokerbutton",
-      "community": 132,
-      "community_name": "src/components/copilot/TradeActionCard.tsx",
-      "norm_label": "brokerbutton()"
-    },
-    {
-      "label": "formatInrCompact()",
-      "file_type": "code",
-      "source_file": "apps/web/src/components/copilot/TradeActionCard.tsx",
-      "source_location": "L72",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_web_src_components_copilot_tradeactioncard_formatinrcompact",
-      "community": 132,
-      "community_name": "src/components/copilot/TradeActionCard.tsx",
-      "norm_label": "formatinrcompact()"
-    },
-    {
-      "label": "TradeActionCard()",
-      "file_type": "code",
-      "source_file": "apps/web/src/components/copilot/TradeActionCard.tsx",
-      "source_location": "L84",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_web_src_components_copilot_tradeactioncard_tradeactioncard",
-      "community": 132,
-      "community_name": "src/components/copilot/TradeActionCard.tsx",
-      "norm_label": "tradeactioncard()"
     },
     {
       "label": ".test_TASK_REQ_broad_multi_asset_score_above_85()",
@@ -10813,16 +10813,16 @@
       "norm_label": "aacallbackpage()"
     },
     {
-      "label": "EmptyState()",
+      "label": "DashboardLayout()",
       "file_type": "code",
-      "source_file": "apps/web/src/components/common/empty-state.tsx",
-      "source_location": "L11",
+      "source_file": "apps/web/src/app/(dashboard)/layout.tsx",
+      "source_location": "L8",
       "_callable": true,
       "_origin": "ast",
-      "id": "apps_web_src_components_common_empty_state_emptystate",
+      "id": "apps_web_src_app_dashboard_layout_dashboardlayout",
       "community": 172,
       "community_name": "button.tsx",
-      "norm_label": "emptystate()"
+      "norm_label": "dashboardlayout()"
     },
     {
       "label": "ThemeToggle()",
@@ -10835,6 +10835,42 @@
       "community": 172,
       "community_name": "button.tsx",
       "norm_label": "themetoggle()"
+    },
+    {
+      "label": "Header()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/layout/header.tsx",
+      "source_location": "L12",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_web_src_components_layout_header_header",
+      "community": 172,
+      "community_name": "button.tsx",
+      "norm_label": "header()"
+    },
+    {
+      "label": "Sidebar()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/layout/sidebar.tsx",
+      "source_location": "L28",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_web_src_components_layout_sidebar_sidebar",
+      "community": 172,
+      "community_name": "button.tsx",
+      "norm_label": "sidebar()"
+    },
+    {
+      "label": "CopilotProvider()",
+      "file_type": "code",
+      "source_file": "apps/web/src/context/CopilotContext.tsx",
+      "source_location": "L47",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_web_src_context_copilotcontext_copilotprovider",
+      "community": 172,
+      "community_name": "button.tsx",
+      "norm_label": "copilotprovider()"
     },
     {
       "label": "fetchMe()",
@@ -12484,7 +12520,7 @@
       "label": "POST()",
       "file_type": "code",
       "source_file": "apps/web/src/app/api/copilot/chat/route.ts",
-      "source_location": "L11",
+      "source_location": "L8",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_web_src_app_api_copilot_chat_route_post",
@@ -14205,7 +14241,7 @@
       "_origin": "ast",
       "id": "apps_web_src_app_auth_login_page_loginpage",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "loginpage()"
     },
     {
@@ -14217,20 +14253,8 @@
       "_origin": "ast",
       "id": "apps_web_src_app_auth_register_page_registerpage",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "registerpage()"
-    },
-    {
-      "label": "AlertsPage()",
-      "file_type": "code",
-      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
-      "source_location": "L48",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_web_src_app_dashboard_alerts_page_alertspage",
-      "community": 45,
-      "community_name": "web/src/lib/utils.ts",
-      "norm_label": "alertspage()"
     },
     {
       "label": "AnalyticsPage()",
@@ -14241,20 +14265,8 @@
       "_origin": "ast",
       "id": "apps_web_src_app_dashboard_analytics_page_analyticspage",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "analyticspage()"
-    },
-    {
-      "label": "PortfolioDetailPage()",
-      "file_type": "code",
-      "source_file": "apps/web/src/app/(dashboard)/portfolios/[id]/page.tsx",
-      "source_location": "L100",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_web_src_app_dashboard_portfolios_id_page_portfoliodetailpage",
-      "community": 45,
-      "community_name": "web/src/lib/utils.ts",
-      "norm_label": "portfoliodetailpage()"
     },
     {
       "label": "PortfoliosPage()",
@@ -14265,7 +14277,7 @@
       "_origin": "ast",
       "id": "apps_web_src_app_dashboard_portfolios_page_portfoliospage",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "portfoliospage()"
     },
     {
@@ -14277,32 +14289,8 @@
       "_origin": "ast",
       "id": "apps_web_src_app_dashboard_risk_page_riskpage",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "riskpage()"
-    },
-    {
-      "label": "SeverityBadge()",
-      "file_type": "code",
-      "source_file": "apps/web/src/app/(dashboard)/risk/page.tsx",
-      "source_location": "L78",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_web_src_app_dashboard_risk_page_severitybadge",
-      "community": 45,
-      "community_name": "web/src/lib/utils.ts",
-      "norm_label": "severitybadge()"
-    },
-    {
-      "label": "DrawdownChart()",
-      "file_type": "code",
-      "source_file": "apps/web/src/components/charts/DrawdownChart.tsx",
-      "source_location": "L48",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_web_src_components_charts_drawdownchart_drawdownchart",
-      "community": 45,
-      "community_name": "web/src/lib/utils.ts",
-      "norm_label": "drawdownchart()"
     },
     {
       "label": "StatCard()",
@@ -14313,20 +14301,8 @@
       "_origin": "ast",
       "id": "apps_web_src_components_common_stat_card_statcard",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "statcard()"
-    },
-    {
-      "label": "Skeleton()",
-      "file_type": "code",
-      "source_file": "apps/web/src/components/ui/skeleton.tsx",
-      "source_location": "L4",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_web_src_components_ui_skeleton_skeleton",
-      "community": 45,
-      "community_name": "web/src/lib/utils.ts",
-      "norm_label": "skeleton()"
     },
     {
       "label": ".constructor()",
@@ -14337,20 +14313,8 @@
       "_origin": "ast",
       "id": "apps_web_src_lib_api_client_apierror_constructor",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": ".constructor()"
-    },
-    {
-      "label": "classifyDelta()",
-      "file_type": "code",
-      "source_file": "apps/web/src/lib/utils.ts",
-      "source_location": "L38",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_web_src_lib_utils_classifydelta",
-      "community": 45,
-      "community_name": "web/src/lib/utils.ts",
-      "norm_label": "classifydelta()"
     },
     {
       "label": "formatCurrency()",
@@ -14361,32 +14325,8 @@
       "_origin": "ast",
       "id": "apps_web_src_lib_utils_formatcurrency",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "formatcurrency()"
-    },
-    {
-      "label": "formatDate()",
-      "file_type": "code",
-      "source_file": "apps/web/src/lib/utils.ts",
-      "source_location": "L30",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_web_src_lib_utils_formatdate",
-      "community": 45,
-      "community_name": "web/src/lib/utils.ts",
-      "norm_label": "formatdate()"
-    },
-    {
-      "label": "formatPercent()",
-      "file_type": "code",
-      "source_file": "apps/web/src/lib/utils.ts",
-      "source_location": "L23",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_web_src_lib_utils_formatpercent",
-      "community": 45,
-      "community_name": "web/src/lib/utils.ts",
-      "norm_label": "formatpercent()"
     },
     {
       "label": "_component_a()",
@@ -14773,6 +14713,18 @@
       "norm_label": ".no_nan_or_inf()"
     },
     {
+      "label": "SeverityBadge()",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/risk/page.tsx",
+      "source_location": "L78",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_web_src_app_dashboard_risk_page_severitybadge",
+      "community": 48,
+      "community_name": "risk/page.tsx",
+      "norm_label": "severitybadge()"
+    },
+    {
       "label": "AllocationDonutChart()",
       "file_type": "code",
       "source_file": "apps/web/src/components/charts/AllocationDonutChart.tsx",
@@ -14781,7 +14733,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_allocationdonutchart_allocationdonutchart",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "allocationdonutchart()"
     },
     {
@@ -14793,7 +14745,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_allocationdonutchart_centerlabel",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "centerlabel()"
     },
     {
@@ -14805,7 +14757,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_allocationdonutchart_customtooltip",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "customtooltip()"
     },
     {
@@ -14817,7 +14769,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_benchmarkcomparisonchart_benchmarkcomparisonchart",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "benchmarkcomparisonchart()"
     },
     {
@@ -14829,7 +14781,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_benchmarkcomparisonchart_customtooltip",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "customtooltip()"
     },
     {
@@ -14841,7 +14793,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_chart_container_chartcontainer",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "chartcontainer()"
     },
     {
@@ -14853,7 +14805,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_chart_container_chartempty",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "chartempty()"
     },
     {
@@ -14865,7 +14817,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_chart_container_chartskeleton",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "chartskeleton()"
     },
     {
@@ -14877,7 +14829,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_chart_theme_correlationtocolor",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "correlationtocolor()"
     },
     {
@@ -14889,7 +14841,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_chart_theme_formataxiscurrency",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "formataxiscurrency()"
     },
     {
@@ -14901,7 +14853,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_chart_theme_formataxisdate",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "formataxisdate()"
     },
     {
@@ -14913,7 +14865,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_chart_theme_formataxispercent",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "formataxispercent()"
     },
     {
@@ -14925,7 +14877,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_chart_theme_formattooltipcurrency",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "formattooltipcurrency()"
     },
     {
@@ -14937,7 +14889,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_chart_theme_formattooltipdate",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "formattooltipdate()"
     },
     {
@@ -14949,7 +14901,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_correlationheatmap_correlationheatmap",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "correlationheatmap()"
     },
     {
@@ -14961,8 +14913,20 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_drawdownchart_customtooltip",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "customtooltip()"
+    },
+    {
+      "label": "DrawdownChart()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/charts/DrawdownChart.tsx",
+      "source_location": "L48",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_web_src_components_charts_drawdownchart_drawdownchart",
+      "community": 48,
+      "community_name": "risk/page.tsx",
+      "norm_label": "drawdownchart()"
     },
     {
       "label": "CustomTooltip()",
@@ -14973,7 +14937,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_equitycurvechart_customtooltip",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "customtooltip()"
     },
     {
@@ -14985,8 +14949,20 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_equitycurvechart_equitycurvechart",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "equitycurvechart()"
+    },
+    {
+      "label": "Skeleton()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/ui/skeleton.tsx",
+      "source_location": "L4",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_web_src_components_ui_skeleton_skeleton",
+      "community": 48,
+      "community_name": "risk/page.tsx",
+      "norm_label": "skeleton()"
     },
     {
       "label": "compute_allocation()",
@@ -18004,7 +17980,7 @@
       "label": ".calculateNewHoldingState()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L703",
+      "source_location": "L755",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_calculatenewholdingstate",
@@ -18016,7 +17992,7 @@
       "label": ".getHoldingById()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L673",
+      "source_location": "L725",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getholdingbyid",
@@ -18040,7 +18016,7 @@
       "label": ".calculateCashDelta()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/portfolio/services/transaction.service.ts",
-      "source_location": "L242",
+      "source_location": "L249",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_portfolio_services_transaction_service_transactionservice_calculatecashdelta",
@@ -18052,7 +18028,7 @@
       "label": ".getTransactionsByHolding()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/portfolio/services/transaction.service.ts",
-      "source_location": "L227",
+      "source_location": "L234",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_portfolio_services_transaction_service_transactionservice_gettransactionsbyholding",
@@ -18064,7 +18040,7 @@
       "label": ".getTransactionsByPortfolio()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/portfolio/services/transaction.service.ts",
-      "source_location": "L205",
+      "source_location": "L212",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_portfolio_services_transaction_service_transactionservice_gettransactionsbyportfolio",
@@ -18088,25 +18064,13 @@
       "label": ".updateCashBalance()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/portfolio/services/transaction.service.ts",
-      "source_location": "L285",
+      "source_location": "L292",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_portfolio_services_transaction_service_transactionservice_updatecashbalance",
       "community": 85,
       "community_name": "CreateTransactionDto",
       "norm_label": ".updatecashbalance()"
-    },
-    {
-      "label": "DashboardLayout()",
-      "file_type": "code",
-      "source_file": "apps/web/src/app/(dashboard)/layout.tsx",
-      "source_location": "L8",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_web_src_app_dashboard_layout_dashboardlayout",
-      "community": 86,
-      "community_name": "src/hooks/useCopilotChat.ts",
-      "norm_label": "dashboardlayout()"
     },
     {
       "label": "CopilotDrawer()",
@@ -18193,40 +18157,40 @@
       "norm_label": "typingindicator()"
     },
     {
-      "label": "Header()",
+      "label": "BrokerButton()",
       "file_type": "code",
-      "source_file": "apps/web/src/components/layout/header.tsx",
-      "source_location": "L12",
+      "source_file": "apps/web/src/components/copilot/TradeActionCard.tsx",
+      "source_location": "L54",
       "_callable": true,
       "_origin": "ast",
-      "id": "apps_web_src_components_layout_header_header",
+      "id": "apps_web_src_components_copilot_tradeactioncard_brokerbutton",
       "community": 86,
       "community_name": "src/hooks/useCopilotChat.ts",
-      "norm_label": "header()"
+      "norm_label": "brokerbutton()"
     },
     {
-      "label": "Sidebar()",
+      "label": "formatInrCompact()",
       "file_type": "code",
-      "source_file": "apps/web/src/components/layout/sidebar.tsx",
-      "source_location": "L28",
+      "source_file": "apps/web/src/components/copilot/TradeActionCard.tsx",
+      "source_location": "L72",
       "_callable": true,
       "_origin": "ast",
-      "id": "apps_web_src_components_layout_sidebar_sidebar",
+      "id": "apps_web_src_components_copilot_tradeactioncard_formatinrcompact",
       "community": 86,
       "community_name": "src/hooks/useCopilotChat.ts",
-      "norm_label": "sidebar()"
+      "norm_label": "formatinrcompact()"
     },
     {
-      "label": "CopilotProvider()",
+      "label": "TradeActionCard()",
       "file_type": "code",
-      "source_file": "apps/web/src/context/CopilotContext.tsx",
-      "source_location": "L47",
+      "source_file": "apps/web/src/components/copilot/TradeActionCard.tsx",
+      "source_location": "L84",
       "_callable": true,
       "_origin": "ast",
-      "id": "apps_web_src_context_copilotcontext_copilotprovider",
+      "id": "apps_web_src_components_copilot_tradeactioncard_tradeactioncard",
       "community": 86,
       "community_name": "src/hooks/useCopilotChat.ts",
-      "norm_label": "copilotprovider()"
+      "norm_label": "tradeactioncard()"
     },
     {
       "label": "toConversationHistory()",
@@ -18268,7 +18232,7 @@
       "label": "generateSmartFallback()",
       "file_type": "code",
       "source_file": "apps/web/src/hooks/useCopilotChat.ts",
-      "source_location": "L192",
+      "source_location": "L195",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_web_src_hooks_usecopilotchat_generatesmartfallback",
@@ -18292,7 +18256,7 @@
       "label": "useCopilotChat()",
       "file_type": "code",
       "source_file": "apps/web/src/hooks/useCopilotChat.ts",
-      "source_location": "L267",
+      "source_location": "L271",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_web_src_hooks_usecopilotchat_usecopilotchat",
@@ -18469,6 +18433,18 @@
       "norm_label": "dashboardpage()"
     },
     {
+      "label": "PortfolioDetailPage()",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/portfolios/[id]/page.tsx",
+      "source_location": "L100",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_web_src_app_dashboard_portfolios_id_page_portfoliodetailpage",
+      "community": 91,
+      "community_name": "cn",
+      "norm_label": "portfoliodetailpage()"
+    },
+    {
       "label": "AaConnectModal()",
       "file_type": "code",
       "source_file": "apps/web/src/components/portfolio/AaConnectModal.tsx",
@@ -18589,6 +18565,18 @@
       "norm_label": "getbrokerconfig()"
     },
     {
+      "label": "classifyDelta()",
+      "file_type": "code",
+      "source_file": "apps/web/src/lib/utils.ts",
+      "source_location": "L38",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_web_src_lib_utils_classifydelta",
+      "community": 91,
+      "community_name": "cn",
+      "norm_label": "classifydelta()"
+    },
+    {
       "label": "cn()",
       "file_type": "code",
       "source_file": "apps/web/src/lib/utils.ts",
@@ -18599,6 +18587,18 @@
       "community": 91,
       "community_name": "cn",
       "norm_label": "cn()"
+    },
+    {
+      "label": "formatPercent()",
+      "file_type": "code",
+      "source_file": "apps/web/src/lib/utils.ts",
+      "source_location": "L23",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_web_src_lib_utils_formatpercent",
+      "community": 91,
+      "community_name": "cn",
+      "norm_label": "formatpercent()"
     },
     {
       "label": "getSetuAaConfig()",
@@ -21320,136 +21320,59 @@
       "norm_label": "get on diversification endpoint \u2192 http 405."
     },
     {
-      "label": "10. Observability Architecture",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L1229",
-      "_origin": "ast",
-      "community": 104,
-      "community_name": "System Architecture Document",
-      "norm_label": "10. observability architecture",
-      "id": "docs_architecture_architecture_10_observability_architecture"
-    },
-    {
-      "label": "11. Architecture Decision Records (ADR) Summary",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L1288",
-      "_origin": "ast",
-      "community": 104,
-      "community_name": "System Architecture Document",
-      "norm_label": "11. architecture decision records (adr) summary",
-      "id": "docs_architecture_architecture_11_architecture_decision_records_adr_summary"
-    },
-    {
-      "label": "12. Open Questions Resolved",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L1307",
-      "_origin": "ast",
-      "community": 104,
-      "community_name": "System Architecture Document",
-      "norm_label": "12. open questions resolved",
-      "id": "docs_architecture_architecture_12_open_questions_resolved"
-    },
-    {
-      "label": "1.1 Guiding Principles",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L52",
-      "_origin": "ast",
-      "community": 104,
-      "community_name": "System Architecture Document",
-      "norm_label": "1.1 guiding principles",
-      "id": "docs_architecture_architecture_1_1_guiding_principles"
-    },
-    {
-      "label": "1.2 Architectural Pattern: Modular Monolith + Quant Microservice",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L64",
-      "_origin": "ast",
-      "community": 104,
-      "community_name": "System Architecture Document",
-      "norm_label": "1.2 architectural pattern: modular monolith + quant microservice",
-      "id": "docs_architecture_architecture_1_2_architectural_pattern_modular_monolith_quant_microservice"
-    },
-    {
-      "label": "1. System Overview & Architectural Philosophy",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L50",
-      "_origin": "ast",
-      "community": 104,
-      "community_name": "System Architecture Document",
-      "norm_label": "1. system overview & architectural philosophy",
-      "id": "docs_architecture_architecture_1_system_overview_architectural_philosophy"
-    },
-    {
-      "label": "2. Technology Stack Decisions",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L102",
-      "_origin": "ast",
-      "community": 104,
-      "community_name": "System Architecture Document",
-      "norm_label": "2. technology stack decisions",
-      "id": "docs_architecture_architecture_2_technology_stack_decisions"
-    },
-    {
-      "label": "Appendix A \u2014 Full Portfolio Sync Sequence (End-to-End)",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L1321",
-      "_origin": "ast",
-      "community": 104,
-      "community_name": "System Architecture Document",
-      "norm_label": "appendix a \u2014 full portfolio sync sequence (end-to-end)",
-      "id": "docs_architecture_architecture_appendix_a_full_portfolio_sync_sequence_end_to_end"
-    },
-    {
-      "label": "Appendix B \u2014 Quant Engine OpenAPI Contract (Excerpt)",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L1395",
-      "_origin": "ast",
-      "community": 104,
-      "community_name": "System Architecture Document",
-      "norm_label": "appendix b \u2014 quant engine openapi contract (excerpt)",
-      "id": "docs_architecture_architecture_appendix_b_quant_engine_openapi_contract_excerpt"
-    },
-    {
-      "label": "Investor Portfolio Monitoring & Risk Management System",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L2",
-      "_origin": "ast",
-      "community": 104,
-      "community_name": "System Architecture Document",
-      "norm_label": "investor portfolio monitoring & risk management system",
-      "id": "docs_architecture_architecture_investor_portfolio_monitoring_risk_management_system"
-    },
-    {
-      "label": "System Architecture Document",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "label": "alerts/page.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
       "source_location": "L1",
       "_origin": "ast",
+      "id": "apps_web_src_app_dashboard_alerts_page",
       "community": 104,
-      "community_name": "System Architecture Document",
-      "norm_label": "system architecture document",
-      "id": "docs_architecture_architecture_system_architecture_document"
+      "community_name": "alerts/page.tsx",
+      "norm_label": "alerts/page.tsx"
     },
     {
-      "label": "Table of Contents",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L19",
+      "label": "alertSchema",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
+      "source_location": "L31",
       "_origin": "ast",
+      "id": "apps_web_src_app_dashboard_alerts_page_alertschema",
       "community": 104,
-      "community_name": "System Architecture Document",
-      "norm_label": "table of contents",
-      "id": "docs_architecture_architecture_table_of_contents"
+      "community_name": "alerts/page.tsx",
+      "norm_label": "alertschema"
+    },
+    {
+      "label": "alertTypeLabels",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "apps_web_src_app_dashboard_alerts_page_alerttypelabels",
+      "community": 104,
+      "community_name": "alerts/page.tsx",
+      "norm_label": "alerttypelabels"
+    },
+    {
+      "label": "empty-state.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/common/empty-state.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_web_src_components_common_empty_state",
+      "community": 104,
+      "community_name": "alerts/page.tsx",
+      "norm_label": "empty-state.tsx"
+    },
+    {
+      "label": "empty-state.test.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/__tests__/components/empty-state.test.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_web_src_tests_components_empty_state_test",
+      "community": 104,
+      "community_name": "alerts/page.tsx",
+      "norm_label": "empty-state.test.tsx"
     },
     {
       "label": "dependencies",
@@ -25148,59 +25071,92 @@
       "norm_label": "styles"
     },
     {
-      "label": "web/components/copilot/TradeActionCard.tsx",
-      "file_type": "code",
-      "source_file": "apps/web/components/copilot/TradeActionCard.tsx",
-      "source_location": "L1",
+      "label": "5.1 End-to-End Pipeline Overview",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L419",
       "_origin": "ast",
-      "id": "apps_web_components_copilot_tradeactioncard",
       "community": 132,
-      "community_name": "src/components/copilot/TradeActionCard.tsx",
-      "norm_label": "web/components/copilot/tradeactioncard.tsx"
+      "community_name": "5. Data Flow Pipeline Architecture",
+      "norm_label": "5.1 end-to-end pipeline overview",
+      "id": "docs_architecture_architecture_5_1_end_to_end_pipeline_overview"
     },
     {
-      "label": "src/components/copilot/TradeActionCard.tsx",
-      "file_type": "code",
-      "source_file": "apps/web/src/components/copilot/TradeActionCard.tsx",
-      "source_location": "L1",
+      "label": "5.2 Stage 1 \u2014 Raw Data Ingestion",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L504",
       "_origin": "ast",
-      "id": "apps_web_src_components_copilot_tradeactioncard",
       "community": 132,
-      "community_name": "src/components/copilot/TradeActionCard.tsx",
-      "norm_label": "src/components/copilot/tradeactioncard.tsx"
+      "community_name": "5. Data Flow Pipeline Architecture",
+      "norm_label": "5.2 stage 1 \u2014 raw data ingestion",
+      "id": "docs_architecture_architecture_5_2_stage_1_raw_data_ingestion"
     },
     {
-      "label": "ACTION_STYLES",
-      "file_type": "code",
-      "source_file": "apps/web/src/components/copilot/TradeActionCard.tsx",
-      "source_location": "L22",
+      "label": "5.3 Stage 2 \u2014 Normalisation",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L547",
       "_origin": "ast",
-      "id": "apps_web_src_components_copilot_tradeactioncard_action_styles",
       "community": 132,
-      "community_name": "src/components/copilot/TradeActionCard.tsx",
-      "norm_label": "action_styles"
+      "community_name": "5. Data Flow Pipeline Architecture",
+      "norm_label": "5.3 stage 2 \u2014 normalisation",
+      "id": "docs_architecture_architecture_5_3_stage_2_normalisation"
     },
     {
-      "label": "QUICK_BROKERS",
-      "file_type": "code",
-      "source_file": "apps/web/src/components/copilot/TradeActionCard.tsx",
-      "source_location": "L47",
+      "label": "5.4 Stage 3 \u2014 Persistence",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L588",
       "_origin": "ast",
-      "id": "apps_web_src_components_copilot_tradeactioncard_quick_brokers",
       "community": 132,
-      "community_name": "src/components/copilot/TradeActionCard.tsx",
-      "norm_label": "quick_brokers"
+      "community_name": "5. Data Flow Pipeline Architecture",
+      "norm_label": "5.4 stage 3 \u2014 persistence",
+      "id": "docs_architecture_architecture_5_4_stage_3_persistence"
     },
     {
-      "label": "BROKER_DEEP_LINKS",
-      "file_type": "code",
-      "source_file": "apps/web/src/types/copilot.ts",
-      "source_location": "L139",
+      "label": "5.5 Stage 4 \u2014 Calculation",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L694",
       "_origin": "ast",
-      "id": "apps_web_src_types_copilot_broker_deep_links",
       "community": 132,
-      "community_name": "src/components/copilot/TradeActionCard.tsx",
-      "norm_label": "broker_deep_links"
+      "community_name": "5. Data Flow Pipeline Architecture",
+      "norm_label": "5.5 stage 4 \u2014 calculation",
+      "id": "docs_architecture_architecture_5_5_stage_4_calculation"
+    },
+    {
+      "label": "5.6 Stage 5 \u2014 Analytics",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L737",
+      "_origin": "ast",
+      "community": 132,
+      "community_name": "5. Data Flow Pipeline Architecture",
+      "norm_label": "5.6 stage 5 \u2014 analytics",
+      "id": "docs_architecture_architecture_5_6_stage_5_analytics"
+    },
+    {
+      "label": "5.7 Stage 6 \u2014 Insights & Alerting",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L750",
+      "_origin": "ast",
+      "community": 132,
+      "community_name": "5. Data Flow Pipeline Architecture",
+      "norm_label": "5.7 stage 6 \u2014 insights & alerting",
+      "id": "docs_architecture_architecture_5_7_stage_6_insights_alerting"
+    },
+    {
+      "label": "5. Data Flow Pipeline Architecture",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L417",
+      "_origin": "ast",
+      "community": 132,
+      "community_name": "5. Data Flow Pipeline Architecture",
+      "norm_label": "5. data flow pipeline architecture",
+      "id": "docs_architecture_architecture_5_data_flow_pipeline_architecture"
     },
     {
       "label": "7.1 Definition",
@@ -28426,59 +28382,26 @@
       "norm_label": "zod"
     },
     {
-      "label": "7.1 Network Boundary Architecture",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L898",
+      "label": "class-transformer",
+      "file_type": "code",
+      "source_file": "apps/api/package.json",
+      "source_location": "L35",
       "_origin": "ast",
+      "id": "apps_api_package_dependencies_class_transformer",
       "community": 166,
-      "community_name": "7. Security & Isolation Boundaries",
-      "norm_label": "7.1 network boundary architecture",
-      "id": "docs_architecture_architecture_7_1_network_boundary_architecture"
+      "community_name": "class-transformer",
+      "norm_label": "class-transformer"
     },
     {
-      "label": "7.2 Authentication & Authorisation Architecture",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L945",
+      "label": "class-transformer",
+      "file_type": "concept",
+      "source_file": "apps/api/package.json",
+      "source_location": "L35",
       "_origin": "ast",
+      "id": "class_transformer",
       "community": 166,
-      "community_name": "7. Security & Isolation Boundaries",
-      "norm_label": "7.2 authentication & authorisation architecture",
-      "id": "docs_architecture_architecture_7_2_authentication_authorisation_architecture"
-    },
-    {
-      "label": "7.3 Encryption Strategy",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L973",
-      "_origin": "ast",
-      "community": 166,
-      "community_name": "7. Security & Isolation Boundaries",
-      "norm_label": "7.3 encryption strategy",
-      "id": "docs_architecture_architecture_7_3_encryption_strategy"
-    },
-    {
-      "label": "7.4 OWASP Top 10 Controls",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L986",
-      "_origin": "ast",
-      "community": 166,
-      "community_name": "7. Security & Isolation Boundaries",
-      "norm_label": "7.4 owasp top 10 controls",
-      "id": "docs_architecture_architecture_7_4_owasp_top_10_controls"
-    },
-    {
-      "label": "7. Security & Isolation Boundaries",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L896",
-      "_origin": "ast",
-      "community": 166,
-      "community_name": "7. Security & Isolation Boundaries",
-      "norm_label": "7. security & isolation boundaries",
-      "id": "docs_architecture_architecture_7_security_isolation_boundaries"
+      "community_name": "class-transformer",
+      "norm_label": "class-transformer"
     },
     {
       "label": "run-benchmarks.js",
@@ -29075,15 +28998,15 @@
       "norm_label": "callback/page.tsx"
     },
     {
-      "label": "empty-state.tsx",
+      "label": "(dashboard)/layout.tsx",
       "file_type": "code",
-      "source_file": "apps/web/src/components/common/empty-state.tsx",
+      "source_file": "apps/web/src/app/(dashboard)/layout.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "apps_web_src_components_common_empty_state",
+      "id": "apps_web_src_app_dashboard_layout",
       "community": 172,
       "community_name": "button.tsx",
-      "norm_label": "empty-state.tsx"
+      "norm_label": "(dashboard)/layout.tsx"
     },
     {
       "label": "theme-toggle.tsx",
@@ -29106,6 +29029,28 @@
       "community": 172,
       "community_name": "button.tsx",
       "norm_label": "header.tsx"
+    },
+    {
+      "label": "sidebar.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/layout/sidebar.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_web_src_components_layout_sidebar",
+      "community": 172,
+      "community_name": "button.tsx",
+      "norm_label": "sidebar.tsx"
+    },
+    {
+      "label": "navItems",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/layout/sidebar.tsx",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "apps_web_src_components_layout_sidebar_navitems",
+      "community": 172,
+      "community_name": "button.tsx",
+      "norm_label": "navitems"
     },
     {
       "label": "button.tsx",
@@ -29150,17 +29095,6 @@
       "community": 172,
       "community_name": "button.tsx",
       "norm_label": "auth.ts"
-    },
-    {
-      "label": "empty-state.test.tsx",
-      "file_type": "code",
-      "source_file": "apps/web/src/__tests__/components/empty-state.test.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_web_src_tests_components_empty_state_test",
-      "community": 172,
-      "community_name": "button.tsx",
-      "norm_label": "empty-state.test.tsx"
     },
     {
       "label": "@radix-ui/react-tooltip",
@@ -33561,28 +33495,6 @@
       "community": 241,
       "community_name": "@prisma/client",
       "norm_label": "@prisma/client"
-    },
-    {
-      "label": "argon2",
-      "file_type": "code",
-      "source_file": "apps/api/package.json",
-      "source_location": "L32",
-      "_origin": "ast",
-      "id": "apps_api_package_dependencies_argon2",
-      "community": 242,
-      "community_name": "argon2",
-      "norm_label": "argon2"
-    },
-    {
-      "label": "argon2",
-      "file_type": "concept",
-      "source_file": "apps/api/package.json",
-      "source_location": "L32",
-      "_origin": "ast",
-      "id": "argon2",
-      "community": 242,
-      "community_name": "argon2",
-      "norm_label": "argon2"
     },
     {
       "label": "prom-client",
@@ -37993,7 +37905,7 @@
       "_origin": "ast",
       "id": "apps_web_src_app_auth_login_page",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "login/page.tsx"
     },
     {
@@ -38004,7 +37916,7 @@
       "_origin": "ast",
       "id": "apps_web_src_app_auth_login_page_loginschema",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "loginschema"
     },
     {
@@ -38015,7 +37927,7 @@
       "_origin": "ast",
       "id": "apps_web_src_app_auth_register_page",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "register/page.tsx"
     },
     {
@@ -38026,41 +37938,8 @@
       "_origin": "ast",
       "id": "apps_web_src_app_auth_register_page_registerschema",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "registerschema"
-    },
-    {
-      "label": "alerts/page.tsx",
-      "file_type": "code",
-      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_web_src_app_dashboard_alerts_page",
-      "community": 45,
-      "community_name": "web/src/lib/utils.ts",
-      "norm_label": "alerts/page.tsx"
-    },
-    {
-      "label": "alertSchema",
-      "file_type": "code",
-      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
-      "source_location": "L31",
-      "_origin": "ast",
-      "id": "apps_web_src_app_dashboard_alerts_page_alertschema",
-      "community": 45,
-      "community_name": "web/src/lib/utils.ts",
-      "norm_label": "alertschema"
-    },
-    {
-      "label": "alertTypeLabels",
-      "file_type": "code",
-      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
-      "source_location": "L39",
-      "_origin": "ast",
-      "id": "apps_web_src_app_dashboard_alerts_page_alerttypelabels",
-      "community": 45,
-      "community_name": "web/src/lib/utils.ts",
-      "norm_label": "alerttypelabels"
     },
     {
       "label": "analytics/page.tsx",
@@ -38070,7 +37949,7 @@
       "_origin": "ast",
       "id": "apps_web_src_app_dashboard_analytics_page",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "analytics/page.tsx"
     },
     {
@@ -38081,7 +37960,7 @@
       "_origin": "ast",
       "id": "apps_web_src_app_dashboard_dashboard_page",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "dashboard/page.tsx"
     },
     {
@@ -38092,7 +37971,7 @@
       "_origin": "ast",
       "id": "apps_web_src_app_dashboard_portfolios_page",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "portfolios/page.tsx"
     },
     {
@@ -38103,19 +37982,8 @@
       "_origin": "ast",
       "id": "apps_web_src_app_dashboard_portfolios_page_createschema",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "createschema"
-    },
-    {
-      "label": "risk/page.tsx",
-      "file_type": "code",
-      "source_file": "apps/web/src/app/(dashboard)/risk/page.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_web_src_app_dashboard_risk_page",
-      "community": 45,
-      "community_name": "web/src/lib/utils.ts",
-      "norm_label": "risk/page.tsx"
     },
     {
       "label": "stat-card.tsx",
@@ -38125,7 +37993,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_common_stat_card",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "stat-card.tsx"
     },
     {
@@ -38136,7 +38004,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_ui_card",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "card.tsx"
     },
     {
@@ -38147,7 +38015,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_ui_card_card",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "card"
     },
     {
@@ -38158,7 +38026,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_ui_card_cardcontent",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "cardcontent"
     },
     {
@@ -38169,7 +38037,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_ui_card_carddescription",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "carddescription"
     },
     {
@@ -38180,7 +38048,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_ui_card_cardfooter",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "cardfooter"
     },
     {
@@ -38191,7 +38059,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_ui_card_cardheader",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "cardheader"
     },
     {
@@ -38202,41 +38070,8 @@
       "_origin": "ast",
       "id": "apps_web_src_components_ui_card_cardtitle",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "cardtitle"
-    },
-    {
-      "label": "skeleton.tsx",
-      "file_type": "code",
-      "source_file": "apps/web/src/components/ui/skeleton.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_web_src_components_ui_skeleton",
-      "community": 45,
-      "community_name": "web/src/lib/utils.ts",
-      "norm_label": "skeleton.tsx"
-    },
-    {
-      "label": "apiClient",
-      "file_type": "code",
-      "source_file": "apps/web/src/lib/api-client.ts",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "apps_web_src_lib_api_client_apiclient",
-      "community": 45,
-      "community_name": "web/src/lib/utils.ts",
-      "norm_label": "apiclient"
-    },
-    {
-      "label": "web/src/lib/utils.ts",
-      "file_type": "code",
-      "source_file": "apps/web/src/lib/utils.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_web_src_lib_utils",
-      "community": 45,
-      "community_name": "web/src/lib/utils.ts",
-      "norm_label": "web/src/lib/utils.ts"
     },
     {
       "label": "stat-card.test.tsx",
@@ -38246,19 +38081,8 @@
       "_origin": "ast",
       "id": "apps_web_src_tests_components_stat_card_test",
       "community": 45,
-      "community_name": "web/src/lib/utils.ts",
+      "community_name": "portfolios/page.tsx",
       "norm_label": "stat-card.test.tsx"
-    },
-    {
-      "label": "web/src/__tests__/lib/utils.test.ts",
-      "file_type": "code",
-      "source_file": "apps/web/src/__tests__/lib/utils.test.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_web_src_tests_lib_utils_test",
-      "community": 45,
-      "community_name": "web/src/lib/utils.ts",
-      "norm_label": "web/src/__tests__/lib/utils.test.ts"
     },
     {
       "label": "diversification.py",
@@ -39196,6 +39020,17 @@
       "norm_label": "request body for post /api/v1/risk/summary. computes the full suite of risk..."
     },
     {
+      "label": "risk/page.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/risk/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_web_src_app_dashboard_risk_page",
+      "community": 48,
+      "community_name": "risk/page.tsx",
+      "norm_label": "risk/page.tsx"
+    },
+    {
       "label": "AllocationDonutChart.tsx",
       "file_type": "code",
       "source_file": "apps/web/src/components/charts/AllocationDonutChart.tsx",
@@ -39203,7 +39038,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_allocationdonutchart",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "allocationdonutchart.tsx"
     },
     {
@@ -39214,7 +39049,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_benchmarkcomparisonchart",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "benchmarkcomparisonchart.tsx"
     },
     {
@@ -39225,7 +39060,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_chart_container",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "chart-container.tsx"
     },
     {
@@ -39236,7 +39071,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_chart_theme",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "chart-theme.ts"
     },
     {
@@ -39247,7 +39082,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_chart_theme_axis_style",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "axis_style"
     },
     {
@@ -39258,7 +39093,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_chart_theme_chart_colors",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "chart_colors"
     },
     {
@@ -39269,7 +39104,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_chart_theme_color_sequence",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "color_sequence"
     },
     {
@@ -39280,7 +39115,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_chart_theme_grid_style",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "grid_style"
     },
     {
@@ -39291,7 +39126,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_chart_theme_tooltip_style",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "tooltip_style"
     },
     {
@@ -39302,7 +39137,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_correlationheatmap",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "correlationheatmap.tsx"
     },
     {
@@ -39313,7 +39148,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_drawdownchart",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "drawdownchart.tsx"
     },
     {
@@ -39324,7 +39159,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_equitycurvechart",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "equitycurvechart.tsx"
     },
     {
@@ -39335,8 +39170,19 @@
       "_origin": "ast",
       "id": "apps_web_src_components_charts_index",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "charts/index.ts"
+    },
+    {
+      "label": "skeleton.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/ui/skeleton.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_web_src_components_ui_skeleton",
+      "community": 48,
+      "community_name": "risk/page.tsx",
+      "norm_label": "skeleton.tsx"
     },
     {
       "label": "AllocationDonutChart.test.tsx",
@@ -39346,7 +39192,7 @@
       "_origin": "ast",
       "id": "apps_web_src_tests_charts_allocationdonutchart_test",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "allocationdonutchart.test.tsx"
     },
     {
@@ -39357,7 +39203,7 @@
       "_origin": "ast",
       "id": "apps_web_src_tests_charts_allocationdonutchart_test_sampledata",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "sampledata"
     },
     {
@@ -39368,7 +39214,7 @@
       "_origin": "ast",
       "id": "apps_web_src_tests_charts_chart_theme_test",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "chart-theme.test.ts"
     },
     {
@@ -39379,7 +39225,7 @@
       "_origin": "ast",
       "id": "apps_web_src_tests_charts_equitycurvechart_test",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "equitycurvechart.test.tsx"
     },
     {
@@ -39390,7 +39236,7 @@
       "_origin": "ast",
       "id": "apps_web_src_tests_charts_equitycurvechart_test_sampledata",
       "community": 48,
-      "community_name": "charts/index.ts",
+      "community_name": "risk/page.tsx",
       "norm_label": "sampledata"
     },
     {
@@ -39425,6 +39271,83 @@
       "community_name": "ARCHITECTURE.md",
       "norm_label": "architecture.md",
       "id": "docs_architecture_architecture"
+    },
+    {
+      "label": "10. Observability Architecture",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1229",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "ARCHITECTURE.md",
+      "norm_label": "10. observability architecture",
+      "id": "docs_architecture_architecture_10_observability_architecture"
+    },
+    {
+      "label": "11. Architecture Decision Records (ADR) Summary",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1288",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "ARCHITECTURE.md",
+      "norm_label": "11. architecture decision records (adr) summary",
+      "id": "docs_architecture_architecture_11_architecture_decision_records_adr_summary"
+    },
+    {
+      "label": "12. Open Questions Resolved",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1307",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "ARCHITECTURE.md",
+      "norm_label": "12. open questions resolved",
+      "id": "docs_architecture_architecture_12_open_questions_resolved"
+    },
+    {
+      "label": "1.1 Guiding Principles",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L52",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "ARCHITECTURE.md",
+      "norm_label": "1.1 guiding principles",
+      "id": "docs_architecture_architecture_1_1_guiding_principles"
+    },
+    {
+      "label": "1.2 Architectural Pattern: Modular Monolith + Quant Microservice",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L64",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "ARCHITECTURE.md",
+      "norm_label": "1.2 architectural pattern: modular monolith + quant microservice",
+      "id": "docs_architecture_architecture_1_2_architectural_pattern_modular_monolith_quant_microservice"
+    },
+    {
+      "label": "1. System Overview & Architectural Philosophy",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L50",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "ARCHITECTURE.md",
+      "norm_label": "1. system overview & architectural philosophy",
+      "id": "docs_architecture_architecture_1_system_overview_architectural_philosophy"
+    },
+    {
+      "label": "2. Technology Stack Decisions",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L102",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "ARCHITECTURE.md",
+      "norm_label": "2. technology stack decisions",
+      "id": "docs_architecture_architecture_2_technology_stack_decisions"
     },
     {
       "label": "3.1 Level 1 \u2014 System Context Diagram",
@@ -39515,94 +39438,6 @@
       "id": "docs_architecture_architecture_4_bounded_context_map"
     },
     {
-      "label": "5.1 End-to-End Pipeline Overview",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L419",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCHITECTURE.md",
-      "norm_label": "5.1 end-to-end pipeline overview",
-      "id": "docs_architecture_architecture_5_1_end_to_end_pipeline_overview"
-    },
-    {
-      "label": "5.2 Stage 1 \u2014 Raw Data Ingestion",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L504",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCHITECTURE.md",
-      "norm_label": "5.2 stage 1 \u2014 raw data ingestion",
-      "id": "docs_architecture_architecture_5_2_stage_1_raw_data_ingestion"
-    },
-    {
-      "label": "5.3 Stage 2 \u2014 Normalisation",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L547",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCHITECTURE.md",
-      "norm_label": "5.3 stage 2 \u2014 normalisation",
-      "id": "docs_architecture_architecture_5_3_stage_2_normalisation"
-    },
-    {
-      "label": "5.4 Stage 3 \u2014 Persistence",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L588",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCHITECTURE.md",
-      "norm_label": "5.4 stage 3 \u2014 persistence",
-      "id": "docs_architecture_architecture_5_4_stage_3_persistence"
-    },
-    {
-      "label": "5.5 Stage 4 \u2014 Calculation",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L694",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCHITECTURE.md",
-      "norm_label": "5.5 stage 4 \u2014 calculation",
-      "id": "docs_architecture_architecture_5_5_stage_4_calculation"
-    },
-    {
-      "label": "5.6 Stage 5 \u2014 Analytics",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L737",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCHITECTURE.md",
-      "norm_label": "5.6 stage 5 \u2014 analytics",
-      "id": "docs_architecture_architecture_5_6_stage_5_analytics"
-    },
-    {
-      "label": "5.7 Stage 6 \u2014 Insights & Alerting",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L750",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCHITECTURE.md",
-      "norm_label": "5.7 stage 6 \u2014 insights & alerting",
-      "id": "docs_architecture_architecture_5_7_stage_6_insights_alerting"
-    },
-    {
-      "label": "5. Data Flow Pipeline Architecture",
-      "file_type": "document",
-      "source_file": "docs/architecture/ARCHITECTURE.md",
-      "source_location": "L417",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "ARCHITECTURE.md",
-      "norm_label": "5. data flow pipeline architecture",
-      "id": "docs_architecture_architecture_5_data_flow_pipeline_architecture"
-    },
-    {
       "label": "6.1 Synchronous REST/OpenAPI Flows",
       "file_type": "document",
       "source_file": "docs/architecture/ARCHITECTURE.md",
@@ -39645,6 +39480,116 @@
       "community_name": "ARCHITECTURE.md",
       "norm_label": "6. synchronous vs. asynchronous workflow design",
       "id": "docs_architecture_architecture_6_synchronous_vs_asynchronous_workflow_design"
+    },
+    {
+      "label": "7.1 Network Boundary Architecture",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L898",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "ARCHITECTURE.md",
+      "norm_label": "7.1 network boundary architecture",
+      "id": "docs_architecture_architecture_7_1_network_boundary_architecture"
+    },
+    {
+      "label": "7.2 Authentication & Authorisation Architecture",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L945",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "ARCHITECTURE.md",
+      "norm_label": "7.2 authentication & authorisation architecture",
+      "id": "docs_architecture_architecture_7_2_authentication_authorisation_architecture"
+    },
+    {
+      "label": "7.3 Encryption Strategy",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L973",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "ARCHITECTURE.md",
+      "norm_label": "7.3 encryption strategy",
+      "id": "docs_architecture_architecture_7_3_encryption_strategy"
+    },
+    {
+      "label": "7.4 OWASP Top 10 Controls",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L986",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "ARCHITECTURE.md",
+      "norm_label": "7.4 owasp top 10 controls",
+      "id": "docs_architecture_architecture_7_4_owasp_top_10_controls"
+    },
+    {
+      "label": "7. Security & Isolation Boundaries",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L896",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "ARCHITECTURE.md",
+      "norm_label": "7. security & isolation boundaries",
+      "id": "docs_architecture_architecture_7_security_isolation_boundaries"
+    },
+    {
+      "label": "Appendix A \u2014 Full Portfolio Sync Sequence (End-to-End)",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1321",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "ARCHITECTURE.md",
+      "norm_label": "appendix a \u2014 full portfolio sync sequence (end-to-end)",
+      "id": "docs_architecture_architecture_appendix_a_full_portfolio_sync_sequence_end_to_end"
+    },
+    {
+      "label": "Appendix B \u2014 Quant Engine OpenAPI Contract (Excerpt)",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1395",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "ARCHITECTURE.md",
+      "norm_label": "appendix b \u2014 quant engine openapi contract (excerpt)",
+      "id": "docs_architecture_architecture_appendix_b_quant_engine_openapi_contract_excerpt"
+    },
+    {
+      "label": "Investor Portfolio Monitoring & Risk Management System",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "ARCHITECTURE.md",
+      "norm_label": "investor portfolio monitoring & risk management system",
+      "id": "docs_architecture_architecture_investor_portfolio_monitoring_risk_management_system"
+    },
+    {
+      "label": "System Architecture Document",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "ARCHITECTURE.md",
+      "norm_label": "system architecture document",
+      "id": "docs_architecture_architecture_system_architecture_document"
+    },
+    {
+      "label": "Table of Contents",
+      "file_type": "document",
+      "source_file": "docs/architecture/ARCHITECTURE.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "ARCHITECTURE.md",
+      "norm_label": "table of contents",
+      "id": "docs_architecture_architecture_table_of_contents"
     },
     {
       "label": "analytics/allocation.py",
@@ -40021,6 +39966,17 @@
       "norm_label": "dependencies"
     },
     {
+      "label": "argon2",
+      "file_type": "code",
+      "source_file": "apps/api/package.json",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "apps_api_package_dependencies_argon2",
+      "community": 53,
+      "community_name": "dependencies",
+      "norm_label": "argon2"
+    },
+    {
       "label": "axios",
       "file_type": "code",
       "source_file": "apps/api/package.json",
@@ -40041,17 +39997,6 @@
       "community": 53,
       "community_name": "dependencies",
       "norm_label": "bullmq"
-    },
-    {
-      "label": "class-transformer",
-      "file_type": "code",
-      "source_file": "apps/api/package.json",
-      "source_location": "L35",
-      "_origin": "ast",
-      "id": "apps_api_package_dependencies_class_transformer",
-      "community": 53,
-      "community_name": "dependencies",
-      "norm_label": "class-transformer"
     },
     {
       "label": "class-validator",
@@ -40208,6 +40153,17 @@
       "norm_label": "zod"
     },
     {
+      "label": "argon2",
+      "file_type": "concept",
+      "source_file": "apps/api/package.json",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "argon2",
+      "community": 53,
+      "community_name": "dependencies",
+      "norm_label": "argon2"
+    },
+    {
       "label": "bullmq",
       "file_type": "concept",
       "source_file": "apps/api/package.json",
@@ -40217,17 +40173,6 @@
       "community": 53,
       "community_name": "dependencies",
       "norm_label": "bullmq"
-    },
-    {
-      "label": "class-transformer",
-      "file_type": "concept",
-      "source_file": "apps/api/package.json",
-      "source_location": "L35",
-      "_origin": "ast",
-      "id": "class_transformer",
-      "community": 53,
-      "community_name": "dependencies",
-      "norm_label": "class-transformer"
     },
     {
       "label": "class-validator",
@@ -45062,6 +45007,17 @@
       "norm_label": "web/components/copilot/copilotmessage.tsx"
     },
     {
+      "label": "web/components/copilot/TradeActionCard.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/components/copilot/TradeActionCard.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_web_components_copilot_tradeactioncard",
+      "community": 86,
+      "community_name": "src/hooks/useCopilotChat.ts",
+      "norm_label": "web/components/copilot/tradeactioncard.tsx"
+    },
+    {
       "label": "web/hooks/useCopilotChat.ts",
       "file_type": "code",
       "source_file": "apps/web/hooks/useCopilotChat.ts",
@@ -45071,17 +45027,6 @@
       "community": 86,
       "community_name": "src/hooks/useCopilotChat.ts",
       "norm_label": "web/hooks/usecopilotchat.ts"
-    },
-    {
-      "label": "(dashboard)/layout.tsx",
-      "file_type": "code",
-      "source_file": "apps/web/src/app/(dashboard)/layout.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_web_src_app_dashboard_layout",
-      "community": 86,
-      "community_name": "src/hooks/useCopilotChat.ts",
-      "norm_label": "(dashboard)/layout.tsx"
     },
     {
       "label": "src/components/copilot/CopilotDrawer.tsx",
@@ -45106,26 +45051,37 @@
       "norm_label": "src/components/copilot/copilotmessage.tsx"
     },
     {
-      "label": "sidebar.tsx",
+      "label": "src/components/copilot/TradeActionCard.tsx",
       "file_type": "code",
-      "source_file": "apps/web/src/components/layout/sidebar.tsx",
+      "source_file": "apps/web/src/components/copilot/TradeActionCard.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "apps_web_src_components_layout_sidebar",
+      "id": "apps_web_src_components_copilot_tradeactioncard",
       "community": 86,
       "community_name": "src/hooks/useCopilotChat.ts",
-      "norm_label": "sidebar.tsx"
+      "norm_label": "src/components/copilot/tradeactioncard.tsx"
     },
     {
-      "label": "navItems",
+      "label": "ACTION_STYLES",
       "file_type": "code",
-      "source_file": "apps/web/src/components/layout/sidebar.tsx",
-      "source_location": "L20",
+      "source_file": "apps/web/src/components/copilot/TradeActionCard.tsx",
+      "source_location": "L22",
       "_origin": "ast",
-      "id": "apps_web_src_components_layout_sidebar_navitems",
+      "id": "apps_web_src_components_copilot_tradeactioncard_action_styles",
       "community": 86,
       "community_name": "src/hooks/useCopilotChat.ts",
-      "norm_label": "navitems"
+      "norm_label": "action_styles"
+    },
+    {
+      "label": "QUICK_BROKERS",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/copilot/TradeActionCard.tsx",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "apps_web_src_components_copilot_tradeactioncard_quick_brokers",
+      "community": 86,
+      "community_name": "src/hooks/useCopilotChat.ts",
+      "norm_label": "quick_brokers"
     },
     {
       "label": "CopilotContext.tsx",
@@ -45194,6 +45150,17 @@
       "norm_label": "web/src/lib/api-client.ts"
     },
     {
+      "label": "apiClient",
+      "file_type": "code",
+      "source_file": "apps/web/src/lib/api-client.ts",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "apps_web_src_lib_api_client_apiclient",
+      "community": 86,
+      "community_name": "src/hooks/useCopilotChat.ts",
+      "norm_label": "apiclient"
+    },
+    {
       "label": "copilotClient",
       "file_type": "code",
       "source_file": "apps/web/src/lib/api-client.ts",
@@ -45214,6 +45181,17 @@
       "community": 86,
       "community_name": "src/hooks/useCopilotChat.ts",
       "norm_label": "copilot.ts"
+    },
+    {
+      "label": "BROKER_DEEP_LINKS",
+      "file_type": "code",
+      "source_file": "apps/web/src/types/copilot.ts",
+      "source_location": "L139",
+      "_origin": "ast",
+      "id": "apps_web_src_types_copilot_broker_deep_links",
+      "community": 86,
+      "community_name": "src/hooks/useCopilotChat.ts",
+      "norm_label": "broker_deep_links"
     },
     {
       "label": "STARTER_PROMPTS",
@@ -45687,6 +45665,28 @@
       "community": 91,
       "community_name": "cn",
       "norm_label": "connectable_brokers"
+    },
+    {
+      "label": "web/src/lib/utils.ts",
+      "file_type": "code",
+      "source_file": "apps/web/src/lib/utils.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_web_src_lib_utils",
+      "community": 91,
+      "community_name": "cn",
+      "norm_label": "web/src/lib/utils.ts"
+    },
+    {
+      "label": "web/src/__tests__/lib/utils.test.ts",
+      "file_type": "code",
+      "source_file": "apps/web/src/__tests__/lib/utils.test.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_web_src_tests_lib_utils_test",
+      "community": 91,
+      "community_name": "cn",
+      "norm_label": "web/src/__tests__/lib/utils.test.ts"
     },
     {
       "label": "setu-aa.config.ts",
@@ -49277,7 +49277,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L263",
+      "source_location": "L309",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfolioanalytics",
@@ -49289,7 +49289,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L317",
+      "source_location": "L363",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfolioanalytics",
@@ -49301,7 +49301,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L319",
+      "source_location": "L365",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfolioanalytics",
@@ -49313,7 +49313,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L320",
+      "source_location": "L366",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfolioanalytics",
@@ -49325,7 +49325,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L459",
+      "source_location": "L511",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfoliorisk",
@@ -49337,7 +49337,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L525",
+      "source_location": "L577",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfoliorisk",
@@ -49349,7 +49349,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L527",
+      "source_location": "L579",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfoliorisk",
@@ -49385,7 +49385,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/transaction.service.ts",
-      "source_location": "L156",
+      "source_location": "L162",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_transaction_service_transactionservice_recordtransaction",
@@ -49397,7 +49397,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/transaction.service.ts",
-      "source_location": "L159",
+      "source_location": "L165",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_transaction_service_transactionservice_recordtransaction",
@@ -49589,7 +49589,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L40",
+      "source_location": "L42",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_fetchtransactions",
@@ -49601,7 +49601,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L155",
+      "source_location": "L157",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_parsecsvcontent",
@@ -49613,7 +49613,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L183",
+      "source_location": "L208",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_parsecsvcontent",
@@ -49625,7 +49625,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L208",
+      "source_location": "L239",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_parsecsvcontent",
@@ -49637,7 +49637,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L211",
+      "source_location": "L242",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_parsecsvcontent",
@@ -49649,7 +49649,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L214",
+      "source_location": "L245",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_parsecsvcontent",
@@ -49661,7 +49661,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L241",
+      "source_location": "L326",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_parsecsvcontent",
@@ -56430,7 +56430,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
-      "source_location": "L181",
+      "source_location": "L216",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_app_dashboard_alerts_page_alertspage",
@@ -56442,7 +56442,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "apps/web/src/app/(dashboard)/analytics/page.tsx",
-      "source_location": "L171",
+      "source_location": "L172",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_app_dashboard_analytics_page_analyticspage",
@@ -56514,7 +56514,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "apps/web/src/app/(dashboard)/portfolios/[id]/page.tsx",
-      "source_location": "L475",
+      "source_location": "L472",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_app_dashboard_portfolios_id_page_portfoliodetailpage",
@@ -56538,7 +56538,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "apps/web/src/app/(dashboard)/risk/page.tsx",
-      "source_location": "L177",
+      "source_location": "L178",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_app_dashboard_risk_page_riskpage",
@@ -56946,7 +56946,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "apps/web/src/components/portfolio/ImportCsvModal.tsx",
-      "source_location": "L184",
+      "source_location": "L224",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_components_portfolio_importcsvmodal_importcsvmodal",
@@ -57258,7 +57258,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "apps/web/src/hooks/useCopilotChat.ts",
-      "source_location": "L268",
+      "source_location": "L272",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_hooks_usecopilotchat_usecopilotchat",
@@ -57269,7 +57269,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/web/src/hooks/useCopilotChat.ts",
-      "source_location": "L274",
+      "source_location": "L278",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_hooks_usecopilotchat_usecopilotchat",
@@ -57282,7 +57282,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "apps/web/src/hooks/useCopilotChat.ts",
-      "source_location": "L275",
+      "source_location": "L279",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_hooks_usecopilotchat_usecopilotchat",
@@ -57293,7 +57293,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/web/src/hooks/useCopilotChat.ts",
-      "source_location": "L300",
+      "source_location": "L301",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_hooks_usecopilotchat_usecopilotchat",
@@ -57306,7 +57306,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "apps/web/src/hooks/useCopilotChat.ts",
-      "source_location": "L307",
+      "source_location": "L308",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_hooks_usecopilotchat_usecopilotchat",
@@ -64769,7 +64769,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L29",
+      "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_fetchholdings",
@@ -64781,7 +64781,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L33",
+      "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_fetchtransactions",
@@ -64793,7 +64793,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L282",
+      "source_location": "L377",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_resolveheadermap",
@@ -87977,7 +87977,7 @@
       "context": "parameter_type",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L48",
+      "source_location": "L50",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_parsecsvcontent",
@@ -89105,7 +89105,7 @@
       "context": "return_type",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L48",
+      "source_location": "L50",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_parsecsvcontent",
@@ -99239,7 +99239,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/web/src/app/api/copilot/chat/route.ts",
-      "source_location": "L11",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_app_api_copilot_chat_route",
@@ -100790,7 +100790,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/web/src/hooks/useCopilotChat.ts",
-      "source_location": "L186",
+      "source_location": "L189",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_hooks_usecopilotchat",
@@ -100801,7 +100801,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/web/src/hooks/useCopilotChat.ts",
-      "source_location": "L192",
+      "source_location": "L195",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_hooks_usecopilotchat",
@@ -100812,7 +100812,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/web/src/hooks/useCopilotChat.ts",
-      "source_location": "L267",
+      "source_location": "L271",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_hooks_usecopilotchat",
@@ -113891,7 +113891,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L246",
+      "source_location": "L283",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice",
@@ -113902,22 +113902,11 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L262",
+      "source_location": "L308",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice",
       "target": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfolioanalytics",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L458",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice",
-      "target": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfoliorisk",
       "confidence_score": 1.0
     },
     {
@@ -113935,7 +113924,18 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L673",
+      "source_location": "L510",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice",
+      "target": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfoliorisk",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
+      "source_location": "L725",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice",
@@ -113946,7 +113946,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L703",
+      "source_location": "L755",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice",
@@ -113957,7 +113957,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L832",
+      "source_location": "L884",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice",
@@ -114067,7 +114067,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/transaction.service.ts",
-      "source_location": "L205",
+      "source_location": "L212",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_transaction_service_transactionservice",
@@ -114078,7 +114078,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/transaction.service.ts",
-      "source_location": "L227",
+      "source_location": "L234",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_transaction_service_transactionservice",
@@ -114100,7 +114100,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/transaction.service.ts",
-      "source_location": "L242",
+      "source_location": "L249",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_transaction_service_transactionservice",
@@ -114111,7 +114111,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/transaction.service.ts",
-      "source_location": "L285",
+      "source_location": "L292",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_transaction_service_transactionservice",
@@ -114331,29 +114331,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L274",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter",
-      "target": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_cleannumeric",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L282",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter",
-      "target": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_resolveheadermap",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L29",
+      "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter",
@@ -114364,7 +114342,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L33",
+      "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter",
@@ -114375,7 +114353,40 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L399",
+      "source_location": "L359",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter",
+      "target": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_cleannumeric",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
+      "source_location": "L377",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter",
+      "target": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_resolveheadermap",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter",
+      "target": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_parsecsvcontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
+      "source_location": "L505",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter",
@@ -114386,7 +114397,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L406",
+      "source_location": "L512",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter",
@@ -114397,7 +114408,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L422",
+      "source_location": "L529",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter",
@@ -114408,22 +114419,11 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L446",
+      "source_location": "L553",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter",
       "target": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_normalizeassetclasscode",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/api/src/modules/providers/adapters/csv-provider.adapter.ts",
-      "source_location": "L48",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter",
-      "target": "apps_api_src_modules_providers_adapters_csv_provider_adapter_csvprovideradapter_parsecsvcontent",
       "confidence_score": 1.0
     },
     {
@@ -129471,7 +129471,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "apps/api/src/modules/portfolio/services/transaction.service.ts",
-      "source_location": "L228",
+      "source_location": "L235",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_transaction_service_transactionservice_gettransactionsbyholding",
@@ -129483,7 +129483,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "apps/api/src/modules/portfolio/services/transaction.service.ts",
-      "source_location": "L206",
+      "source_location": "L213",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_transaction_service_transactionservice_gettransactionsbyportfolio",
@@ -129495,7 +129495,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "apps/api/src/modules/portfolio/services/transaction.service.ts",
-      "source_location": "L169",
+      "source_location": "L176",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_transaction_service_transactionservice_recordtransaction",
@@ -136386,5 +136386,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "cbbf67949a99e83a36df8352c837016be0670ea6"
+  "built_at_commit": "aad7cd14128c81b5d01d0928a36b19ea2fe7fb9f"
 }
