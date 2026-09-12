@@ -277,43 +277,17 @@
       "norm_label": "testdiversificationendpointvalidation"
     },
     {
-      "label": "AlertForm",
+      "label": "TestRiskSummaryEndpoint",
       "file_type": "code",
-      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
-      "source_location": "L37",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L944",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "id": "apps_web_src_app_dashboard_alerts_page_alertform",
+      "id": "apps_quant_engine_tests_test_risk_testrisksummaryendpoint",
       "community": 104,
-      "community_name": "alerts/page.tsx",
-      "norm_label": "alertform"
-    },
-    {
-      "label": "AlertRule",
-      "file_type": "code",
-      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
-      "source_location": "L19",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_web_src_app_dashboard_alerts_page_alertrule",
-      "community": 104,
-      "community_name": "alerts/page.tsx",
-      "norm_label": "alertrule"
-    },
-    {
-      "label": "EmptyStateProps",
-      "file_type": "code",
-      "source_file": "apps/web/src/components/common/empty-state.tsx",
-      "source_location": "L4",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_web_src_components_common_empty_state_emptystateprops",
-      "community": 104,
-      "community_name": "alerts/page.tsx",
-      "norm_label": "emptystateprops"
+      "community_name": "TestRiskSummaryEndpoint",
+      "norm_label": "testrisksummaryendpoint"
     },
     {
       "label": "GenerateReportPayload",
@@ -511,56 +485,121 @@
       "norm_label": "updatealertruledto"
     },
     {
-      "label": "TestPerfectlyInversePair",
+      "label": "BetaResult",
       "file_type": "code",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L859",
+      "source_file": "apps/quant-engine/src/analytics/risk/beta.py",
+      "source_location": "L46",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testperfectlyinversepair",
+      "id": "apps_quant_engine_src_analytics_risk_beta_betaresult",
       "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": "testperfectlyinversepair"
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "betaresult"
     },
     {
-      "label": "TestRiskSummaryEndpoint",
+      "label": "CorrelationResult",
       "file_type": "code",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L944",
+      "source_file": "apps/quant-engine/src/analytics/risk/correlation.py",
+      "source_location": "L63",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testrisksummaryendpoint",
+      "id": "apps_quant_engine_src_analytics_risk_correlation_correlationresult",
       "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": "testrisksummaryendpoint"
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "correlationresult"
     },
     {
-      "label": "TestSharpeBenchmark",
+      "label": "DrawdownResult",
       "file_type": "code",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L252",
+      "source_file": "apps/quant-engine/src/analytics/risk/drawdown.py",
+      "source_location": "L66",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testsharpebenchmark",
+      "id": "apps_quant_engine_src_analytics_risk_drawdown_drawdownresult",
       "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": "testsharpebenchmark"
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "drawdownresult"
     },
     {
-      "label": "TestSingleSecurityPortfolio",
+      "label": "SharpeResult",
       "file_type": "code",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L807",
+      "source_file": "apps/quant-engine/src/analytics/risk/sharpe.py",
+      "source_location": "L60",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testsinglesecurityportfolio",
+      "id": "apps_quant_engine_src_analytics_risk_sharpe_sharperesult",
       "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": "testsinglesecurityportfolio"
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "sharperesult"
+    },
+    {
+      "label": "SortinoResult",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/risk/sortino.py",
+      "source_location": "L71",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_sortino_sortinoresult",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "sortinoresult"
+    },
+    {
+      "label": "VaREstimate",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/risk/var.py",
+      "source_location": "L97",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_var_varestimate",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "varestimate"
+    },
+    {
+      "label": "VaRResult",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/risk/var.py",
+      "source_location": "L116",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_var_varresult",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "varresult"
+    },
+    {
+      "label": "VolatilityResult",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/risk/volatility.py",
+      "source_location": "L48",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_volatility_volatilityresult",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "volatilityresult"
+    },
+    {
+      "label": "TestHighVolatilityCrypto",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L908",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_tests_test_risk_testhighvolatilitycrypto",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "testhighvolatilitycrypto"
     },
     {
       "label": "TestSortinoBenchmark",
@@ -572,8 +611,21 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_testsortinobenchmark",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": "testsortinobenchmark"
+    },
+    {
+      "label": "TestVolatilityBenchmark",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L127",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_tests_test_risk_testvolatilitybenchmark",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "testvolatilitybenchmark"
     },
     {
       "label": "SimpleSpan",
@@ -1616,6 +1668,45 @@
       "norm_label": "pinologgerservice"
     },
     {
+      "label": "AlertForm",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
+      "source_location": "L37",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_web_src_app_dashboard_alerts_page_alertform",
+      "community": 172,
+      "community_name": "alerts/page.tsx",
+      "norm_label": "alertform"
+    },
+    {
+      "label": "AlertRule",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
+      "source_location": "L19",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_web_src_app_dashboard_alerts_page_alertrule",
+      "community": 172,
+      "community_name": "alerts/page.tsx",
+      "norm_label": "alertrule"
+    },
+    {
+      "label": "EmptyStateProps",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/common/empty-state.tsx",
+      "source_location": "L4",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_web_src_components_common_empty_state_emptystateprops",
+      "community": 172,
+      "community_name": "alerts/page.tsx",
+      "norm_label": "emptystateprops"
+    },
+    {
       "label": "HeaderProps",
       "file_type": "code",
       "source_file": "apps/web/src/components/layout/header.tsx",
@@ -1625,7 +1716,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_layout_header_headerprops",
       "community": 172,
-      "community_name": "button.tsx",
+      "community_name": "alerts/page.tsx",
       "norm_label": "headerprops"
     },
     {
@@ -1638,7 +1729,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_ui_button_buttonprops",
       "community": 172,
-      "community_name": "button.tsx",
+      "community_name": "alerts/page.tsx",
       "norm_label": "buttonprops"
     },
     {
@@ -1651,7 +1742,7 @@
       "_origin": "ast",
       "id": "apps_web_src_lib_auth_authuser",
       "community": 172,
-      "community_name": "button.tsx",
+      "community_name": "alerts/page.tsx",
       "norm_label": "authuser"
     },
     {
@@ -3059,110 +3150,6 @@
       "norm_label": "testinternalhelpers"
     },
     {
-      "label": "BetaResult",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/analytics/risk/beta.py",
-      "source_location": "L46",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_beta_betaresult",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "betaresult"
-    },
-    {
-      "label": "CorrelationResult",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/analytics/risk/correlation.py",
-      "source_location": "L63",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_correlation_correlationresult",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "correlationresult"
-    },
-    {
-      "label": "DrawdownResult",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/analytics/risk/drawdown.py",
-      "source_location": "L66",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_drawdown_drawdownresult",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "drawdownresult"
-    },
-    {
-      "label": "SharpeResult",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/analytics/risk/sharpe.py",
-      "source_location": "L60",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_sharpe_sharperesult",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "sharperesult"
-    },
-    {
-      "label": "SortinoResult",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/analytics/risk/sortino.py",
-      "source_location": "L71",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_sortino_sortinoresult",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "sortinoresult"
-    },
-    {
-      "label": "VaREstimate",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/analytics/risk/var.py",
-      "source_location": "L97",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_var_varestimate",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "varestimate"
-    },
-    {
-      "label": "VaRResult",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/analytics/risk/var.py",
-      "source_location": "L116",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_var_varresult",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "varresult"
-    },
-    {
-      "label": "VolatilityResult",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/analytics/risk/volatility.py",
-      "source_location": "L48",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_volatility_volatilityresult",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "volatilityresult"
-    },
-    {
       "label": "AssetReturnSeries",
       "file_type": "code",
       "source_file": "apps/quant-engine/src/app/schemas/risk.py",
@@ -3172,7 +3159,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_assetreturnseries",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "assetreturnseries"
     },
     {
@@ -3185,7 +3172,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_betadto",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "betadto"
     },
     {
@@ -3198,7 +3185,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_concentrationratiodto",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "concentrationratiodto"
     },
     {
@@ -3211,7 +3198,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_correlationrequest",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "correlationrequest"
     },
     {
@@ -3224,7 +3211,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_correlationresponse",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "correlationresponse"
     },
     {
@@ -3237,7 +3224,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_diversificationassetweight",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "diversificationassetweight"
     },
     {
@@ -3250,7 +3237,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_diversificationrequest",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "diversificationrequest"
     },
     {
@@ -3263,7 +3250,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_diversificationresponse",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "diversificationresponse"
     },
     {
@@ -3276,7 +3263,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_drawdowndto",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "drawdowndto"
     },
     {
@@ -3289,7 +3276,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_drawdownseriesrequest",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "drawdownseriesrequest"
     },
     {
@@ -3302,7 +3289,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_drawdownseriesresponse",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "drawdownseriesresponse"
     },
     {
@@ -3315,7 +3302,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_risksummaryrequest",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "risksummaryrequest"
     },
     {
@@ -3328,7 +3315,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_risksummaryresponse",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "risksummaryresponse"
     },
     {
@@ -3341,7 +3328,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_vardto",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "vardto"
     },
     {
@@ -3354,7 +3341,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_varestimatedto",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "varestimatedto"
     },
     {
@@ -4762,6 +4749,19 @@
       "norm_label": "xirrresult"
     },
     {
+      "label": "TestDojHhiConcentrationBenchmarks",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_quant_benchmarks.py",
+      "source_location": "L273",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_tests_test_quant_benchmarks_testdojhhiconcentrationbenchmarks",
+      "community": 78,
+      "community_name": "CashFlow",
+      "norm_label": "testdojhhiconcentrationbenchmarks"
+    },
+    {
       "label": "TestExcelXirrBenchmarks",
       "file_type": "code",
       "source_file": "apps/quant-engine/tests/test_quant_benchmarks.py",
@@ -4836,8 +4836,34 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_testcorrelationbenchmark",
       "community": 80,
-      "community_name": "TestCorrelationBenchmark",
+      "community_name": "compute_correlation",
       "norm_label": "testcorrelationbenchmark"
+    },
+    {
+      "label": "TestPerfectlyInversePair",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L859",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_tests_test_risk_testperfectlyinversepair",
+      "community": 80,
+      "community_name": "compute_correlation",
+      "norm_label": "testperfectlyinversepair"
+    },
+    {
+      "label": "TestSingleSecurityPortfolio",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L807",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_tests_test_risk_testsinglesecurityportfolio",
+      "community": 80,
+      "community_name": "compute_correlation",
+      "norm_label": "testsinglesecurityportfolio"
     },
     {
       "label": "CashFlowEvent",
@@ -4994,19 +5020,6 @@
       "community": 81,
       "community_name": "date",
       "norm_label": "xirrresponse"
-    },
-    {
-      "label": "TestDojHhiConcentrationBenchmarks",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/tests/test_quant_benchmarks.py",
-      "source_location": "L273",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_quant_benchmarks_testdojhhiconcentrationbenchmarks",
-      "community": 81,
-      "community_name": "date",
-      "norm_label": "testdojhhiconcentrationbenchmarks"
     },
     {
       "label": "TestGipsTwrBenchmarks",
@@ -5360,17 +5373,17 @@
       "norm_label": "testbetabenchmark"
     },
     {
-      "label": "TestVolatilityBenchmark",
+      "label": "TestSharpeBenchmark",
       "file_type": "code",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L127",
+      "source_location": "L252",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testvolatilitybenchmark",
+      "id": "apps_quant_engine_tests_test_risk_testsharpebenchmark",
       "community": 9,
-      "community_name": "TestVolatilityBenchmark",
-      "norm_label": "testvolatilitybenchmark"
+      "community_name": "TestSharpeBenchmark",
+      "norm_label": "testsharpebenchmark"
     },
     {
       "label": "Holding",
@@ -5464,23 +5477,10 @@
       "norm_label": "platformbadgeprops"
     },
     {
-      "label": "ChartType",
-      "file_type": "code",
-      "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
-      "source_location": "L26",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_web_src_components_portfolio_stockchartmodal_charttype",
-      "community": 91,
-      "community_name": "cn",
-      "norm_label": "charttype"
-    },
-    {
       "label": "StockChartModalProps",
       "file_type": "code",
       "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
-      "source_location": "L9",
+      "source_location": "L11",
       "_callable": true,
       "_callable_class": true,
       "_origin": "ast",
@@ -5774,19 +5774,6 @@
       "community": 95,
       "community_name": "compute_var",
       "norm_label": "testcashportfolio"
-    },
-    {
-      "label": "TestHighVolatilityCrypto",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L908",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testhighvolatilitycrypto",
-      "community": 95,
-      "community_name": "compute_var",
-      "norm_label": "testhighvolatilitycrypto"
     },
     {
       "label": "TestVaRBenchmark",
@@ -6529,40 +6516,52 @@
       "norm_label": ".test_zero_weight_returns_422()"
     },
     {
-      "label": "AlertsPage()",
+      "label": ".test_full_summary_with_benchmark_returns_200()",
       "file_type": "code",
-      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
-      "source_location": "L48",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L947",
       "_callable": true,
       "_origin": "ast",
-      "id": "apps_web_src_app_dashboard_alerts_page_alertspage",
+      "id": "apps_quant_engine_tests_test_risk_testrisksummaryendpoint_test_full_summary_with_benchmark_returns_200",
       "community": 104,
-      "community_name": "alerts/page.tsx",
-      "norm_label": "alertspage()"
+      "community_name": "TestRiskSummaryEndpoint",
+      "norm_label": ".test_full_summary_with_benchmark_returns_200()"
     },
     {
-      "label": "EmptyState()",
+      "label": ".test_sortino_sentinel_when_no_downside()",
       "file_type": "code",
-      "source_file": "apps/web/src/components/common/empty-state.tsx",
-      "source_location": "L11",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L1070",
       "_callable": true,
       "_origin": "ast",
-      "id": "apps_web_src_components_common_empty_state_emptystate",
+      "id": "apps_quant_engine_tests_test_risk_testrisksummaryendpoint_test_sortino_sentinel_when_no_downside",
       "community": 104,
-      "community_name": "alerts/page.tsx",
-      "norm_label": "emptystate()"
+      "community_name": "TestRiskSummaryEndpoint",
+      "norm_label": ".test_sortino_sentinel_when_no_downside()"
     },
     {
-      "label": "formatDate()",
+      "label": ".test_summary_without_benchmark_has_null_beta()",
       "file_type": "code",
-      "source_file": "apps/web/src/lib/utils.ts",
-      "source_location": "L30",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L997",
       "_callable": true,
       "_origin": "ast",
-      "id": "apps_web_src_lib_utils_formatdate",
+      "id": "apps_quant_engine_tests_test_risk_testrisksummaryendpoint_test_summary_without_benchmark_has_null_beta",
       "community": 104,
-      "community_name": "alerts/page.tsx",
-      "norm_label": "formatdate()"
+      "community_name": "TestRiskSummaryEndpoint",
+      "norm_label": ".test_summary_without_benchmark_has_null_beta()"
+    },
+    {
+      "label": ".test_validation_errors()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L1036",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_tests_test_risk_testrisksummaryendpoint_test_validation_errors",
+      "community": 104,
+      "community_name": "TestRiskSummaryEndpoint",
+      "norm_label": ".test_validation_errors()"
     },
     {
       "label": ".constructor()",
@@ -7240,7 +7239,7 @@
       "label": ".deleteManualHoldings()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L903",
+      "source_location": "L905",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_deletemanualholdings",
@@ -7252,7 +7251,7 @@
       "label": ".getAssetBeta()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L247",
+      "source_location": "L249",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getassetbeta",
@@ -7264,7 +7263,7 @@
       "label": ".getAssetVolatility()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L302",
+      "source_location": "L304",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getassetvolatility",
@@ -7288,7 +7287,7 @@
       "label": ".getPortfolioAnalytics()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L327",
+      "source_location": "L329",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfolioanalytics",
@@ -7300,7 +7299,7 @@
       "label": ".getPortfolioRisk()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L529",
+      "source_location": "L531",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfoliorisk",
@@ -7312,7 +7311,7 @@
       "label": ".getPortfolioSummary()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L65",
+      "source_location": "L67",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfoliosummary",
@@ -7324,7 +7323,7 @@
       "label": ".resolveCleanSymbol()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L215",
+      "source_location": "L217",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_resolvecleansymbol",
@@ -7345,6 +7344,18 @@
       "norm_label": ".evaluateportfolio()"
     },
     {
+      "label": "compute_beta()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/risk/beta.py",
+      "source_location": "L71",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_beta_compute_beta",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "compute_beta()"
+    },
+    {
       "label": "compute_sharpe()",
       "file_type": "code",
       "source_file": "apps/quant-engine/src/analytics/risk/sharpe.py",
@@ -7353,7 +7364,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_analytics_risk_sharpe_compute_sharpe",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": "compute_sharpe()"
     },
     {
@@ -7365,8 +7376,32 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_analytics_risk_sortino_compute_sortino",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": "compute_sortino()"
+    },
+    {
+      "label": "_quantile()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/risk/var.py",
+      "source_location": "L147",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_var_quantile",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "_quantile()"
+    },
+    {
+      "label": "compute_volatility()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/risk/volatility.py",
+      "source_location": "L71",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_volatility_compute_volatility",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "compute_volatility()"
     },
     {
       "label": ".test_r_annualized_sortino_ratio()",
@@ -7377,56 +7412,32 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_quant_benchmarks_testrperformanceanalyticsbenchmarks_test_r_annualized_sortino_ratio",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": ".test_r_annualized_sortino_ratio()"
     },
     {
-      "label": ".test_inverse_pair_correlation_minus_one()",
+      "label": ".test_crypto_high_annual_volatility()",
       "file_type": "code",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L865",
+      "source_location": "L919",
       "_callable": true,
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testperfectlyinversepair_test_inverse_pair_correlation_minus_one",
+      "id": "apps_quant_engine_tests_test_risk_testhighvolatilitycrypto_test_crypto_high_annual_volatility",
       "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": ".test_inverse_pair_correlation_minus_one()"
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": ".test_crypto_high_annual_volatility()"
     },
     {
-      "label": ".test_short_portfolio_negative_beta()",
+      "label": ".test_crypto_no_numerical_overflow()",
       "file_type": "code",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L869",
+      "source_location": "L929",
       "_callable": true,
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testperfectlyinversepair_test_short_portfolio_negative_beta",
+      "id": "apps_quant_engine_tests_test_risk_testhighvolatilitycrypto_test_crypto_no_numerical_overflow",
       "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": ".test_short_portfolio_negative_beta()"
-    },
-    {
-      "label": ".test_full_summary_with_benchmark_returns_200()",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L947",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testrisksummaryendpoint_test_full_summary_with_benchmark_returns_200",
-      "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": ".test_full_summary_with_benchmark_returns_200()"
-    },
-    {
-      "label": ".test_sortino_sentinel_when_no_downside()",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L1070",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testrisksummaryendpoint_test_sortino_sentinel_when_no_downside",
-      "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": ".test_sortino_sentinel_when_no_downside()"
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": ".test_crypto_no_numerical_overflow()"
     },
     {
       "label": ".test_summary_values_match_standalone_modules()",
@@ -7437,116 +7448,8 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_testrisksummaryendpoint_test_summary_values_match_standalone_modules",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": ".test_summary_values_match_standalone_modules()"
-    },
-    {
-      "label": ".test_summary_without_benchmark_has_null_beta()",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L997",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testrisksummaryendpoint_test_summary_without_benchmark_has_null_beta",
-      "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": ".test_summary_without_benchmark_has_null_beta()"
-    },
-    {
-      "label": ".test_validation_errors()",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L1036",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testrisksummaryendpoint_test_validation_errors",
-      "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": ".test_validation_errors()"
-    },
-    {
-      "label": "._expected_sharpe()",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L268",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testsharpebenchmark_expected_sharpe",
-      "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": "._expected_sharpe()"
-    },
-    {
-      "label": ".test_annual_vol_stored_correctly()",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L297",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testsharpebenchmark_test_annual_vol_stored_correctly",
-      "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": ".test_annual_vol_stored_correctly()"
-    },
-    {
-      "label": ".test_annualised_excess_return_stored_correctly()",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L289",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testsharpebenchmark_test_annualised_excess_return_stored_correctly",
-      "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": ".test_annualised_excess_return_stored_correctly()"
-    },
-    {
-      "label": ".test_dataset_a_sharpe_is_positive()",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L284",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testsharpebenchmark_test_dataset_a_sharpe_is_positive",
-      "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": ".test_dataset_a_sharpe_is_positive()"
-    },
-    {
-      "label": ".test_dataset_a_sharpe_matches_formula()",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L279",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testsharpebenchmark_test_dataset_a_sharpe_matches_formula",
-      "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": ".test_dataset_a_sharpe_matches_formula()"
-    },
-    {
-      "label": ".test_sharpe_decreases_as_rf_increases()",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L306",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testsharpebenchmark_test_sharpe_decreases_as_rf_increases",
-      "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": ".test_sharpe_decreases_as_rf_increases()"
-    },
-    {
-      "label": ".test_sharpe_rf_zero_vs_positive()",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L312",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testsharpebenchmark_test_sharpe_rf_zero_vs_positive",
-      "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": ".test_sharpe_rf_zero_vs_positive()"
     },
     {
       "label": ".test_single_security_all_risk_metrics_compute()",
@@ -7557,20 +7460,8 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_testsinglesecurityportfolio_test_single_security_all_risk_metrics_compute",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": ".test_single_security_all_risk_metrics_compute()"
-    },
-    {
-      "label": ".test_single_security_correlation_matrix_is_1x1()",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L812",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testsinglesecurityportfolio_test_single_security_correlation_matrix_is_1x1",
-      "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": ".test_single_security_correlation_matrix_is_1x1()"
     },
     {
       "label": "._expected_sortino()",
@@ -7581,7 +7472,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_testsortinobenchmark_expected_sortino",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": "._expected_sortino()"
     },
     {
@@ -7593,7 +7484,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_testsortinobenchmark_test_dataset_a_downside_deviation_annual_positive",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": ".test_dataset_a_downside_deviation_annual_positive()"
     },
     {
@@ -7605,7 +7496,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_testsortinobenchmark_test_dataset_a_n_downside_observations",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": ".test_dataset_a_n_downside_observations()"
     },
     {
@@ -7617,7 +7508,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_testsortinobenchmark_test_dataset_a_sortino_matches_formula",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": ".test_dataset_a_sortino_matches_formula()"
     },
     {
@@ -7629,7 +7520,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_testsortinobenchmark_test_sortino_denominator_uses_full_n_not_n_minus_1",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": ".test_sortino_denominator_uses_full_n_not_n_minus_1()"
     },
     {
@@ -7641,7 +7532,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_testsortinobenchmark_test_sortino_greater_than_sharpe_for_upside_skewed_returns",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": ".test_sortino_greater_than_sharpe_for_upside_skewed_returns()"
     },
     {
@@ -7653,8 +7544,80 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_testsortinobenchmark_test_sortino_rf_field_echoed",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": ".test_sortino_rf_field_echoed()"
+    },
+    {
+      "label": ".test_annual_vol_is_in_reasonable_equity_range()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L169",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_tests_test_risk_testvolatilitybenchmark_test_annual_vol_is_in_reasonable_equity_range",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": ".test_annual_vol_is_in_reasonable_equity_range()"
+    },
+    {
+      "label": ".test_dataset_a_annual_volatility_pct_conversion()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L162",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_tests_test_risk_testvolatilitybenchmark_test_dataset_a_annual_volatility_pct_conversion",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": ".test_dataset_a_annual_volatility_pct_conversion()"
+    },
+    {
+      "label": ".test_dataset_a_annual_volatility_sqrt252()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L156",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_tests_test_risk_testvolatilitybenchmark_test_dataset_a_annual_volatility_sqrt252",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": ".test_dataset_a_annual_volatility_sqrt252()"
+    },
+    {
+      "label": ".test_dataset_a_daily_volatility()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L147",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_tests_test_risk_testvolatilitybenchmark_test_dataset_a_daily_volatility",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": ".test_dataset_a_daily_volatility()"
+    },
+    {
+      "label": ".test_n_observations_equals_input_length()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L183",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_tests_test_risk_testvolatilitybenchmark_test_n_observations_equals_input_length",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": ".test_n_observations_equals_input_length()"
+    },
+    {
+      "label": ".test_two_element_minimum_case()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L174",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_tests_test_risk_testvolatilitybenchmark_test_two_element_minimum_case",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": ".test_two_element_minimum_case()"
     },
     {
       "label": "sanitizeAttributes()",
@@ -10749,7 +10712,7 @@
       "_origin": "ast",
       "id": "apps_web_src_app_aa_callback_page_aacallbackcontent",
       "community": 172,
-      "community_name": "button.tsx",
+      "community_name": "alerts/page.tsx",
       "norm_label": "aacallbackcontent()"
     },
     {
@@ -10761,7 +10724,7 @@
       "_origin": "ast",
       "id": "apps_web_src_app_aa_callback_page_aacallbackpage",
       "community": 172,
-      "community_name": "button.tsx",
+      "community_name": "alerts/page.tsx",
       "norm_label": "aacallbackpage()"
     },
     {
@@ -10773,8 +10736,20 @@
       "_origin": "ast",
       "id": "apps_web_src_app_dashboard_layout_dashboardlayout",
       "community": 172,
-      "community_name": "button.tsx",
+      "community_name": "alerts/page.tsx",
       "norm_label": "dashboardlayout()"
+    },
+    {
+      "label": "EmptyState()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/common/empty-state.tsx",
+      "source_location": "L11",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_web_src_components_common_empty_state_emptystate",
+      "community": 172,
+      "community_name": "alerts/page.tsx",
+      "norm_label": "emptystate()"
     },
     {
       "label": "ThemeToggle()",
@@ -10785,7 +10760,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_common_theme_toggle_themetoggle",
       "community": 172,
-      "community_name": "button.tsx",
+      "community_name": "alerts/page.tsx",
       "norm_label": "themetoggle()"
     },
     {
@@ -10797,7 +10772,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_layout_header_header",
       "community": 172,
-      "community_name": "button.tsx",
+      "community_name": "alerts/page.tsx",
       "norm_label": "header()"
     },
     {
@@ -10809,7 +10784,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_layout_sidebar_sidebar",
       "community": 172,
-      "community_name": "button.tsx",
+      "community_name": "alerts/page.tsx",
       "norm_label": "sidebar()"
     },
     {
@@ -10821,7 +10796,7 @@
       "_origin": "ast",
       "id": "apps_web_src_context_copilotcontext_copilotprovider",
       "community": 172,
-      "community_name": "button.tsx",
+      "community_name": "alerts/page.tsx",
       "norm_label": "copilotprovider()"
     },
     {
@@ -10833,7 +10808,7 @@
       "_origin": "ast",
       "id": "apps_web_src_lib_auth_fetchme",
       "community": 172,
-      "community_name": "button.tsx",
+      "community_name": "alerts/page.tsx",
       "norm_label": "fetchme()"
     },
     {
@@ -10845,7 +10820,7 @@
       "_origin": "ast",
       "id": "apps_web_src_lib_auth_useauth",
       "community": 172,
-      "community_name": "button.tsx",
+      "community_name": "alerts/page.tsx",
       "norm_label": "useauth()"
     },
     {
@@ -11027,18 +11002,6 @@
       "community": 18,
       "community_name": "compute_drawdown",
       "norm_label": ".test_sortino_reflects_crash_downside()"
-    },
-    {
-      "label": ".test_var_dominated_by_crash_returns()",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L896",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testcrashrecoveryregime_test_var_dominated_by_crash_returns",
-      "community": 18,
-      "community_name": "compute_drawdown",
-      "norm_label": ".test_var_dominated_by_crash_returns()"
     },
     {
       "label": ".test_dataset_c_drawdown_duration()",
@@ -12431,42 +12394,6 @@
       "community": 220,
       "community_name": "PaginationQueryDto",
       "norm_label": "buildpaginationmeta()"
-    },
-    {
-      "label": ".validate_aligned_lengths()",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/app/schemas/risk.py",
-      "source_location": "L405",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_app_schemas_risk_correlationrequest_validate_aligned_lengths",
-      "community": 222,
-      "community_name": ".validate_aligned_lengths",
-      "norm_label": ".validate_aligned_lengths()"
-    },
-    {
-      "label": ".validate_correlation_consistency()",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/app/schemas/risk.py",
-      "source_location": "L524",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_app_schemas_risk_diversificationrequest_validate_correlation_consistency",
-      "community": 222,
-      "community_name": ".validate_aligned_lengths",
-      "norm_label": ".validate_correlation_consistency()"
-    },
-    {
-      "label": ".validate_benchmark_alignment()",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/app/schemas/risk.py",
-      "source_location": "L116",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_app_schemas_risk_risksummaryrequest_validate_benchmark_alignment",
-      "community": 222,
-      "community_name": ".validate_aligned_lengths",
-      "norm_label": ".validate_benchmark_alignment()"
     },
     {
       "label": "POST()",
@@ -14545,54 +14472,6 @@
       "norm_label": ".test_weighted_avg_correlation_two_asset_symmetric()"
     },
     {
-      "label": "compute_beta()",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/analytics/risk/beta.py",
-      "source_location": "L71",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_beta_compute_beta",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "compute_beta()"
-    },
-    {
-      "label": "compute_correlation()",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/analytics/risk/correlation.py",
-      "source_location": "L120",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_correlation_compute_correlation",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "compute_correlation()"
-    },
-    {
-      "label": "_compute_stats()",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/analytics/risk/correlation.py",
-      "source_location": "L85",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_correlation_compute_stats",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "_compute_stats()"
-    },
-    {
-      "label": "_pearson()",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/analytics/risk/correlation.py",
-      "source_location": "L93",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_correlation_pearson",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "_pearson()"
-    },
-    {
       "label": "_returns_to_nav()",
       "file_type": "code",
       "source_file": "apps/quant-engine/src/analytics/risk/drawdown.py",
@@ -14601,32 +14480,8 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_analytics_risk_drawdown_returns_to_nav",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "_returns_to_nav()"
-    },
-    {
-      "label": "_quantile()",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/analytics/risk/var.py",
-      "source_location": "L147",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_var_quantile",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "_quantile()"
-    },
-    {
-      "label": "compute_volatility()",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/analytics/risk/volatility.py",
-      "source_location": "L71",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_volatility_compute_volatility",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "compute_volatility()"
     },
     {
       "label": "compute_correlation_matrix()",
@@ -14637,7 +14492,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_routers_risk_compute_correlation_matrix",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "compute_correlation_matrix()"
     },
     {
@@ -14649,7 +14504,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_routers_risk_compute_diversification_analytics",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "compute_diversification_analytics()"
     },
     {
@@ -14661,7 +14516,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_routers_risk_compute_drawdown_series",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "compute_drawdown_series()"
     },
     {
@@ -14673,7 +14528,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_routers_risk_compute_risk_summary",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "compute_risk_summary()"
     },
     {
@@ -14685,8 +14540,32 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_routers_risk_map_var_estimate",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "_map_var_estimate()"
+    },
+    {
+      "label": ".validate_aligned_lengths()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/app/schemas/risk.py",
+      "source_location": "L405",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_app_schemas_risk_correlationrequest_validate_aligned_lengths",
+      "community": 47,
+      "community_name": "routers/risk.py",
+      "norm_label": ".validate_aligned_lengths()"
+    },
+    {
+      "label": ".validate_correlation_consistency()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/app/schemas/risk.py",
+      "source_location": "L524",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_app_schemas_risk_diversificationrequest_validate_correlation_consistency",
+      "community": 47,
+      "community_name": "routers/risk.py",
+      "norm_label": ".validate_correlation_consistency()"
     },
     {
       "label": ".no_nan_or_inf()",
@@ -14697,7 +14576,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_drawdownseriesrequest_no_nan_or_inf",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": ".no_nan_or_inf()"
     },
     {
@@ -14709,8 +14588,20 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_risksummaryrequest_no_nan_or_inf",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": ".no_nan_or_inf()"
+    },
+    {
+      "label": ".validate_benchmark_alignment()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/app/schemas/risk.py",
+      "source_location": "L116",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_app_schemas_risk_risksummaryrequest_validate_benchmark_alignment",
+      "community": 47,
+      "community_name": "routers/risk.py",
+      "norm_label": ".validate_benchmark_alignment()"
     },
     {
       "label": "SeverityBadge()",
@@ -17461,6 +17352,42 @@
       "norm_label": ".test_missing_portfolio_id_returns_422()"
     },
     {
+      "label": "compute_correlation()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/risk/correlation.py",
+      "source_location": "L120",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_correlation_compute_correlation",
+      "community": 80,
+      "community_name": "compute_correlation",
+      "norm_label": "compute_correlation()"
+    },
+    {
+      "label": "_compute_stats()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/risk/correlation.py",
+      "source_location": "L85",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_correlation_compute_stats",
+      "community": 80,
+      "community_name": "compute_correlation",
+      "norm_label": "_compute_stats()"
+    },
+    {
+      "label": "_pearson()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/risk/correlation.py",
+      "source_location": "L93",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_correlation_pearson",
+      "community": 80,
+      "community_name": "compute_correlation",
+      "norm_label": "_pearson()"
+    },
+    {
       "label": "._manual_pearson()",
       "file_type": "code",
       "source_file": "apps/quant-engine/tests/test_risk.py",
@@ -17469,7 +17396,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_testcorrelationbenchmark_manual_pearson",
       "community": 80,
-      "community_name": "TestCorrelationBenchmark",
+      "community_name": "compute_correlation",
       "norm_label": "._manual_pearson()"
     },
     {
@@ -17481,7 +17408,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_testcorrelationbenchmark_test_asset_id_ordering_preserved",
       "community": 80,
-      "community_name": "TestCorrelationBenchmark",
+      "community_name": "compute_correlation",
       "norm_label": ".test_asset_id_ordering_preserved()"
     },
     {
@@ -17493,7 +17420,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_testcorrelationbenchmark_test_bounds_all_values_in_minus1_to_plus1",
       "community": 80,
-      "community_name": "TestCorrelationBenchmark",
+      "community_name": "compute_correlation",
       "norm_label": ".test_bounds_all_values_in_minus1_to_plus1()"
     },
     {
@@ -17505,7 +17432,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_testcorrelationbenchmark_test_cash_correlation_zero_for_all_assets",
       "community": 80,
-      "community_name": "TestCorrelationBenchmark",
+      "community_name": "compute_correlation",
       "norm_label": ".test_cash_correlation_zero_for_all_assets()"
     },
     {
@@ -17517,7 +17444,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_testcorrelationbenchmark_test_eq_bond_perfect_negative_correlation",
       "community": 80,
-      "community_name": "TestCorrelationBenchmark",
+      "community_name": "compute_correlation",
       "norm_label": ".test_eq_bond_perfect_negative_correlation()"
     },
     {
@@ -17529,7 +17456,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_testcorrelationbenchmark_test_gold_correlation_matches_manual_formula",
       "community": 80,
-      "community_name": "TestCorrelationBenchmark",
+      "community_name": "compute_correlation",
       "norm_label": ".test_gold_correlation_matches_manual_formula()"
     },
     {
@@ -17541,7 +17468,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_testcorrelationbenchmark_test_n_assets_and_matrix_dimensions",
       "community": 80,
-      "community_name": "TestCorrelationBenchmark",
+      "community_name": "compute_correlation",
       "norm_label": ".test_n_assets_and_matrix_dimensions()"
     },
     {
@@ -17553,7 +17480,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_testcorrelationbenchmark_test_symmetry_all_pairs",
       "community": 80,
-      "community_name": "TestCorrelationBenchmark",
+      "community_name": "compute_correlation",
       "norm_label": ".test_symmetry_all_pairs()"
     },
     {
@@ -17565,8 +17492,44 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_testcorrelationbenchmark_test_unit_diagonal_all_assets",
       "community": 80,
-      "community_name": "TestCorrelationBenchmark",
+      "community_name": "compute_correlation",
       "norm_label": ".test_unit_diagonal_all_assets()"
+    },
+    {
+      "label": ".test_inverse_pair_correlation_minus_one()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L865",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_tests_test_risk_testperfectlyinversepair_test_inverse_pair_correlation_minus_one",
+      "community": 80,
+      "community_name": "compute_correlation",
+      "norm_label": ".test_inverse_pair_correlation_minus_one()"
+    },
+    {
+      "label": ".test_short_portfolio_negative_beta()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L869",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_tests_test_risk_testperfectlyinversepair_test_short_portfolio_negative_beta",
+      "community": 80,
+      "community_name": "compute_correlation",
+      "norm_label": ".test_short_portfolio_negative_beta()"
+    },
+    {
+      "label": ".test_single_security_correlation_matrix_is_1x1()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L812",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_tests_test_risk_testsinglesecurityportfolio_test_single_security_correlation_matrix_is_1x1",
+      "community": 80,
+      "community_name": "compute_correlation",
+      "norm_label": ".test_single_security_correlation_matrix_is_1x1()"
     },
     {
       "label": "compute_twr()",
@@ -17980,7 +17943,7 @@
       "label": ".calculateNewHoldingState()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L774",
+      "source_location": "L776",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_calculatenewholdingstate",
@@ -17992,7 +17955,7 @@
       "label": ".getHoldingById()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L744",
+      "source_location": "L746",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getholdingbyid",
@@ -18349,76 +18312,100 @@
       "norm_label": ".test_dataset_ab_beta_matches_formula()"
     },
     {
-      "label": ".test_annual_vol_is_in_reasonable_equity_range()",
+      "label": "._expected_sharpe()",
       "file_type": "code",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L169",
+      "source_location": "L268",
       "_callable": true,
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testvolatilitybenchmark_test_annual_vol_is_in_reasonable_equity_range",
+      "id": "apps_quant_engine_tests_test_risk_testsharpebenchmark_expected_sharpe",
       "community": 9,
-      "community_name": "TestVolatilityBenchmark",
-      "norm_label": ".test_annual_vol_is_in_reasonable_equity_range()"
+      "community_name": "TestSharpeBenchmark",
+      "norm_label": "._expected_sharpe()"
     },
     {
-      "label": ".test_dataset_a_annual_volatility_pct_conversion()",
+      "label": ".test_annual_vol_stored_correctly()",
       "file_type": "code",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L162",
+      "source_location": "L297",
       "_callable": true,
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testvolatilitybenchmark_test_dataset_a_annual_volatility_pct_conversion",
+      "id": "apps_quant_engine_tests_test_risk_testsharpebenchmark_test_annual_vol_stored_correctly",
       "community": 9,
-      "community_name": "TestVolatilityBenchmark",
-      "norm_label": ".test_dataset_a_annual_volatility_pct_conversion()"
+      "community_name": "TestSharpeBenchmark",
+      "norm_label": ".test_annual_vol_stored_correctly()"
     },
     {
-      "label": ".test_dataset_a_annual_volatility_sqrt252()",
+      "label": ".test_annualised_excess_return_stored_correctly()",
       "file_type": "code",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L156",
+      "source_location": "L289",
       "_callable": true,
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testvolatilitybenchmark_test_dataset_a_annual_volatility_sqrt252",
+      "id": "apps_quant_engine_tests_test_risk_testsharpebenchmark_test_annualised_excess_return_stored_correctly",
       "community": 9,
-      "community_name": "TestVolatilityBenchmark",
-      "norm_label": ".test_dataset_a_annual_volatility_sqrt252()"
+      "community_name": "TestSharpeBenchmark",
+      "norm_label": ".test_annualised_excess_return_stored_correctly()"
     },
     {
-      "label": ".test_dataset_a_daily_volatility()",
+      "label": ".test_dataset_a_sharpe_is_positive()",
       "file_type": "code",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L147",
+      "source_location": "L284",
       "_callable": true,
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testvolatilitybenchmark_test_dataset_a_daily_volatility",
+      "id": "apps_quant_engine_tests_test_risk_testsharpebenchmark_test_dataset_a_sharpe_is_positive",
       "community": 9,
-      "community_name": "TestVolatilityBenchmark",
-      "norm_label": ".test_dataset_a_daily_volatility()"
+      "community_name": "TestSharpeBenchmark",
+      "norm_label": ".test_dataset_a_sharpe_is_positive()"
     },
     {
-      "label": ".test_n_observations_equals_input_length()",
+      "label": ".test_dataset_a_sharpe_matches_formula()",
       "file_type": "code",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L183",
+      "source_location": "L279",
       "_callable": true,
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testvolatilitybenchmark_test_n_observations_equals_input_length",
+      "id": "apps_quant_engine_tests_test_risk_testsharpebenchmark_test_dataset_a_sharpe_matches_formula",
       "community": 9,
-      "community_name": "TestVolatilityBenchmark",
-      "norm_label": ".test_n_observations_equals_input_length()"
+      "community_name": "TestSharpeBenchmark",
+      "norm_label": ".test_dataset_a_sharpe_matches_formula()"
     },
     {
-      "label": ".test_two_element_minimum_case()",
+      "label": ".test_sharpe_decreases_as_rf_increases()",
       "file_type": "code",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L174",
+      "source_location": "L306",
       "_callable": true,
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testvolatilitybenchmark_test_two_element_minimum_case",
+      "id": "apps_quant_engine_tests_test_risk_testsharpebenchmark_test_sharpe_decreases_as_rf_increases",
       "community": 9,
-      "community_name": "TestVolatilityBenchmark",
-      "norm_label": ".test_two_element_minimum_case()"
+      "community_name": "TestSharpeBenchmark",
+      "norm_label": ".test_sharpe_decreases_as_rf_increases()"
+    },
+    {
+      "label": ".test_sharpe_rf_zero_vs_positive()",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L312",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_quant_engine_tests_test_risk_testsharpebenchmark_test_sharpe_rf_zero_vs_positive",
+      "community": 9,
+      "community_name": "TestSharpeBenchmark",
+      "norm_label": ".test_sharpe_rf_zero_vs_positive()"
+    },
+    {
+      "label": "AlertsPage()",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
+      "source_location": "L48",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_web_src_app_dashboard_alerts_page_alertspage",
+      "community": 91,
+      "community_name": "cn",
+      "norm_label": "alertspage()"
     },
     {
       "label": "DashboardPage()",
@@ -18505,10 +18492,22 @@
       "norm_label": "platformbadge()"
     },
     {
+      "label": "resolveTradingViewSymbol()",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
+      "source_location": "L92",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_web_src_components_portfolio_stockchartmodal_resolvetradingviewsymbol",
+      "community": 91,
+      "community_name": "cn",
+      "norm_label": "resolvetradingviewsymbol()"
+    },
+    {
       "label": "StockChartModal()",
       "file_type": "code",
       "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
-      "source_location": "L28",
+      "source_location": "L149",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_web_src_components_portfolio_stockchartmodal_stockchartmodal",
@@ -18587,6 +18586,18 @@
       "community": 91,
       "community_name": "cn",
       "norm_label": "cn()"
+    },
+    {
+      "label": "formatDate()",
+      "file_type": "code",
+      "source_file": "apps/web/src/lib/utils.ts",
+      "source_location": "L30",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_web_src_lib_utils_formatdate",
+      "community": 91,
+      "community_name": "cn",
+      "norm_label": "formatdate()"
     },
     {
       "label": "formatPercent()",
@@ -18913,28 +18924,16 @@
       "norm_label": ".test_cash_portfolio_zero_volatility()"
     },
     {
-      "label": ".test_crypto_high_annual_volatility()",
+      "label": ".test_var_dominated_by_crash_returns()",
       "file_type": "code",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L919",
+      "source_location": "L896",
       "_callable": true,
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testhighvolatilitycrypto_test_crypto_high_annual_volatility",
+      "id": "apps_quant_engine_tests_test_risk_testcrashrecoveryregime_test_var_dominated_by_crash_returns",
       "community": 95,
       "community_name": "compute_var",
-      "norm_label": ".test_crypto_high_annual_volatility()"
-    },
-    {
-      "label": ".test_crypto_no_numerical_overflow()",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L929",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_testhighvolatilitycrypto_test_crypto_no_numerical_overflow",
-      "community": 95,
-      "community_name": "compute_var",
-      "norm_label": ".test_crypto_no_numerical_overflow()"
+      "norm_label": ".test_var_dominated_by_crash_returns()"
     },
     {
       "label": ".test_crypto_var_large_loss_amount()",
@@ -21320,59 +21319,26 @@
       "norm_label": "get on diversification endpoint \u2192 http 405."
     },
     {
-      "label": "alerts/page.tsx",
-      "file_type": "code",
-      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
-      "source_location": "L1",
+      "label": "When all returns exceed the MAR, Sortino = +inf \u2192 router normalises to 9999.0.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L1071",
       "_origin": "ast",
-      "id": "apps_web_src_app_dashboard_alerts_page",
+      "id": "apps_quant_engine_tests_test_risk_rationale_1071",
       "community": 104,
-      "community_name": "alerts/page.tsx",
-      "norm_label": "alerts/page.tsx"
+      "community_name": "TestRiskSummaryEndpoint",
+      "norm_label": "when all returns exceed the mar, sortino = +inf \u2192 router normalises to 9999.0."
     },
     {
-      "label": "alertSchema",
-      "file_type": "code",
-      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
-      "source_location": "L31",
+      "label": "Integration tests for POST /api/v1/risk/summary.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L945",
       "_origin": "ast",
-      "id": "apps_web_src_app_dashboard_alerts_page_alertschema",
+      "id": "apps_quant_engine_tests_test_risk_rationale_945",
       "community": 104,
-      "community_name": "alerts/page.tsx",
-      "norm_label": "alertschema"
-    },
-    {
-      "label": "alertTypeLabels",
-      "file_type": "code",
-      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
-      "source_location": "L39",
-      "_origin": "ast",
-      "id": "apps_web_src_app_dashboard_alerts_page_alerttypelabels",
-      "community": 104,
-      "community_name": "alerts/page.tsx",
-      "norm_label": "alerttypelabels"
-    },
-    {
-      "label": "empty-state.tsx",
-      "file_type": "code",
-      "source_file": "apps/web/src/components/common/empty-state.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_web_src_components_common_empty_state",
-      "community": 104,
-      "community_name": "alerts/page.tsx",
-      "norm_label": "empty-state.tsx"
-    },
-    {
-      "label": "empty-state.test.tsx",
-      "file_type": "code",
-      "source_file": "apps/web/src/__tests__/components/empty-state.test.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_web_src_tests_components_empty_state_test",
-      "community": 104,
-      "community_name": "alerts/page.tsx",
-      "norm_label": "empty-state.test.tsx"
+      "community_name": "TestRiskSummaryEndpoint",
+      "norm_label": "integration tests for post /api/v1/risk/summary."
     },
     {
       "label": "dependencies",
@@ -22035,6 +22001,17 @@
       "norm_label": "axios"
     },
     {
+      "label": "expo-constants",
+      "file_type": "code",
+      "source_file": "apps/mobile/package.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "apps_mobile_package_dependencies_expo_constants",
+      "community": 110,
+      "community_name": "dependencies",
+      "norm_label": "expo-constants"
+    },
+    {
       "label": "expo-secure-store",
       "file_type": "code",
       "source_file": "apps/mobile/package.json",
@@ -22055,17 +22032,6 @@
       "community": 110,
       "community_name": "dependencies",
       "norm_label": "react"
-    },
-    {
-      "label": "react-native-gesture-handler",
-      "file_type": "code",
-      "source_file": "apps/mobile/package.json",
-      "source_location": "L28",
-      "_origin": "ast",
-      "id": "apps_mobile_package_dependencies_react_native_gesture_handler",
-      "community": 110,
-      "community_name": "dependencies",
-      "norm_label": "react-native-gesture-handler"
     },
     {
       "label": "react-native-safe-area-context",
@@ -22145,6 +22111,17 @@
       "norm_label": "tailwindcss"
     },
     {
+      "label": "expo-constants",
+      "file_type": "concept",
+      "source_file": "apps/mobile/package.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "expo_constants",
+      "community": 110,
+      "community_name": "dependencies",
+      "norm_label": "expo-constants"
+    },
+    {
       "label": "expo-secure-store",
       "file_type": "concept",
       "source_file": "apps/mobile/package.json",
@@ -22154,17 +22131,6 @@
       "community": 110,
       "community_name": "dependencies",
       "norm_label": "expo-secure-store"
-    },
-    {
-      "label": "react-native-gesture-handler",
-      "file_type": "concept",
-      "source_file": "apps/mobile/package.json",
-      "source_location": "L28",
-      "_origin": "ast",
-      "id": "react_native_gesture_handler",
-      "community": 110,
-      "community_name": "dependencies",
-      "norm_label": "react-native-gesture-handler"
     },
     {
       "label": "react-native-safe-area-context",
@@ -22376,6 +22342,105 @@
       "norm_label": "type"
     },
     {
+      "label": "src/analytics/__init__.py",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_init",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "src/analytics/__init__.py"
+    },
+    {
+      "label": "beta.py",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/risk/beta.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_beta",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "beta.py"
+    },
+    {
+      "label": "drawdown.py",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/risk/drawdown.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_drawdown",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "drawdown.py"
+    },
+    {
+      "label": "risk/__init__.py",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/risk/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_init",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "risk/__init__.py"
+    },
+    {
+      "label": "sharpe.py",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/risk/sharpe.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_sharpe",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "sharpe.py"
+    },
+    {
+      "label": "sortino.py",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/risk/sortino.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_sortino",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "sortino.py"
+    },
+    {
+      "label": "var.py",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/risk/var.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_var",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "var.py"
+    },
+    {
+      "label": "volatility.py",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/risk/volatility.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_volatility",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "volatility.py"
+    },
+    {
+      "label": "test_quant_benchmarks.py",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/tests/test_quant_benchmarks.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_quant_engine_tests_test_quant_benchmarks",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "test_quant_benchmarks.py"
+    },
+    {
       "label": "test_risk.py",
       "file_type": "code",
       "source_file": "apps/quant-engine/tests/test_risk.py",
@@ -22383,8 +22448,118 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": "test_risk.py"
+    },
+    {
+      "label": "Analytics math package for the Wealth Compass Quant Engine. Public API: twr \u2014\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_init_rationale_1",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "analytics math package for the wealth compass quant engine. public api: twr \u2014..."
+    },
+    {
+      "label": "Beta Calculator =============== Pure-math module for computing the systematic\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/risk/beta.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_beta_rationale_1",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "beta calculator =============== pure-math module for computing the systematic..."
+    },
+    {
+      "label": "Beta computation output. Attributes ---------- asset_id : Portfolio or security\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/risk/beta.py",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_beta_rationale_47",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "beta computation output. attributes ---------- asset_id : portfolio or security..."
+    },
+    {
+      "label": "Compute the portfolio beta against a benchmark. Algorithm --------- 1.\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/risk/beta.py",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_beta_rationale_77",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "compute the portfolio beta against a benchmark. algorithm --------- 1...."
+    },
+    {
+      "label": "Pairwise Pearson correlation matrix output. Attributes ---------- asset_ids :\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/risk/correlation.py",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_correlation_rationale_64",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "pairwise pearson correlation matrix output. attributes ---------- asset_ids :..."
+    },
+    {
+      "label": "Maximum Drawdown Calculator ============================= Pure-math module for\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/risk/drawdown.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_drawdown_rationale_1",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "maximum drawdown calculator ============================= pure-math module for..."
+    },
+    {
+      "label": "Maximum Drawdown computation output. Attributes ---------- asset_id : Portfolio\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/risk/drawdown.py",
+      "source_location": "L67",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_drawdown_rationale_67",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "maximum drawdown computation output. attributes ---------- asset_id : portfolio..."
+    },
+    {
+      "label": "Risk Analytics Sub-Package for the Wealth Compass Quant Engine. This package\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/risk/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_init_rationale_1",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "risk analytics sub-package for the wealth compass quant engine. this package..."
+    },
+    {
+      "label": "Sharpe Ratio Calculator ======================== Pure-math module for computing\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/risk/sharpe.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_sharpe_rationale_1",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "sharpe ratio calculator ======================== pure-math module for computing..."
+    },
+    {
+      "label": "Sharpe Ratio computation output. Attributes ---------- asset_id : Portfolio or\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/risk/sharpe.py",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_sharpe_rationale_61",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "sharpe ratio computation output. attributes ---------- asset_id : portfolio or..."
     },
     {
       "label": "Compute the annualised Sharpe Ratio from a series of daily returns. Algorithm\u2026",
@@ -22394,8 +22569,19 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_analytics_risk_sharpe_rationale_90",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": "compute the annualised sharpe ratio from a series of daily returns. algorithm..."
+    },
+    {
+      "label": "Sortino Ratio Calculator ========================= Pure-math module for\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/risk/sortino.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_sortino_rationale_1",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "sortino ratio calculator ========================= pure-math module for..."
     },
     {
       "label": "Compute the annualised Sortino Ratio from a series of daily returns. Algorithm\u2026",
@@ -22405,8 +22591,107 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_analytics_risk_sortino_rationale_103",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": "compute the annualised sortino ratio from a series of daily returns. algorithm..."
+    },
+    {
+      "label": "Sortino Ratio computation output. Attributes ---------- asset_id : Portfolio or\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/risk/sortino.py",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_sortino_rationale_72",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "sortino ratio computation output. attributes ---------- asset_id : portfolio or..."
+    },
+    {
+      "label": "Value at Risk (VaR) Calculator ================================ Pure-math\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/risk/var.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_var_rationale_1",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "value at risk (var) calculator ================================ pure-math..."
+    },
+    {
+      "label": "Full VaR computation output covering both methods and both confidence levels.\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/risk/var.py",
+      "source_location": "L117",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_var_rationale_117",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "full var computation output covering both methods and both confidence levels...."
+    },
+    {
+      "label": "Compute the p-th quantile of a pre-sorted list using linear interpolation\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/risk/var.py",
+      "source_location": "L148",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_var_rationale_148",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "compute the p-th quantile of a pre-sorted list using linear interpolation..."
+    },
+    {
+      "label": "A single VaR estimate at one confidence level using one method. Attributes\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/risk/var.py",
+      "source_location": "L98",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_var_rationale_98",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "a single var estimate at one confidence level using one method. attributes..."
+    },
+    {
+      "label": "Annualised Volatility Calculator ================================== Pure-math\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/risk/volatility.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_volatility_rationale_1",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "annualised volatility calculator ================================== pure-math..."
+    },
+    {
+      "label": "Annualised volatility output. Attributes ---------- asset_id : Identifier\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/risk/volatility.py",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_volatility_rationale_49",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "annualised volatility output. attributes ---------- asset_id : identifier..."
+    },
+    {
+      "label": "Compute annualised volatility from a series of daily periodic returns.\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/risk/volatility.py",
+      "source_location": "L75",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_volatility_rationale_75",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "compute annualised volatility from a series of daily periodic returns...."
+    },
+    {
+      "label": "Quantitative Analytics Benchmark Verification Suite\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_quant_benchmarks.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_quant_engine_tests_test_quant_benchmarks_rationale_1",
+      "community": 112,
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "quantitative analytics benchmark verification suite..."
     },
     {
       "label": "Benchmark: R PerformanceAnalytics::SortinoRatio(R, MAR=0.04) Sortino ratio\u2026",
@@ -22416,7 +22701,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_quant_benchmarks_rationale_230",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": "benchmark: r performanceanalytics::sortinoratio(r, mar=0.04) sortino ratio..."
     },
     {
@@ -22427,7 +22712,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_rationale_1",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": "comprehensive quantitative risk engine test suite..."
     },
     {
@@ -22438,74 +22723,74 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_rationale_1008",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": "integration endpoint must produce identical results to standalone modules."
     },
     {
-      "label": "When all returns exceed the MAR, Sortino = +inf \u2192 router normalises to 9999.0.",
+      "label": "Verify annualised volatility against hand-computed reference values. Dataset A\u2026",
       "file_type": "rationale",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L1071",
+      "source_location": "L128",
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_rationale_1071",
+      "id": "apps_quant_engine_tests_test_risk_rationale_128",
       "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": "when all returns exceed the mar, sortino = +inf \u2192 router normalises to 9999.0."
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "verify annualised volatility against hand-computed reference values. dataset a..."
     },
     {
-      "label": "Sharpe Ratio = (mean_daily_excess \u00d7 252) / (daily_vol \u00d7 \u221a252) =\u2026",
+      "label": "Daily volatility must match hand-computed Bessel-corrected std dev.",
       "file_type": "rationale",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L253",
+      "source_location": "L148",
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_rationale_253",
+      "id": "apps_quant_engine_tests_test_risk_rationale_148",
       "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": "sharpe ratio = (mean_daily_excess \u00d7 252) / (daily_vol \u00d7 \u221a252) =..."
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "daily volatility must match hand-computed bessel-corrected std dev."
     },
     {
-      "label": "Dataset A mean return > rf daily \u2192 Sharpe must be positive.",
+      "label": "Annual volatility = daily_vol \u00d7 \u221a252 with strict tolerance.",
       "file_type": "rationale",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L285",
+      "source_location": "L157",
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_rationale_285",
+      "id": "apps_quant_engine_tests_test_risk_rationale_157",
       "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": "dataset a mean return > rf daily \u2192 sharpe must be positive."
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "annual volatility = daily_vol \u00d7 \u221a252 with strict tolerance."
     },
     {
-      "label": "The annual_volatility field must match the direct formula.",
+      "label": "annual_volatility_pct must be exactly annual_volatility \u00d7 100.",
       "file_type": "rationale",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L298",
+      "source_location": "L163",
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_rationale_298",
+      "id": "apps_quant_engine_tests_test_risk_rationale_163",
       "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": "the annual_volatility field must match the direct formula."
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "annual_volatility_pct must be exactly annual_volatility \u00d7 100."
     },
     {
-      "label": "Higher risk-free rate \u2192 lower Sharpe (smaller numerator, same denom).",
+      "label": "Dataset A represents typical equity returns; annual vol should be 15\u201335%.",
       "file_type": "rationale",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L307",
+      "source_location": "L170",
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_rationale_307",
+      "id": "apps_quant_engine_tests_test_risk_rationale_170",
       "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": "higher risk-free rate \u2192 lower sharpe (smaller numerator, same denom)."
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "dataset a represents typical equity returns; annual vol should be 15\u201335%."
     },
     {
-      "label": "Sharpe with rf=0 > Sharpe with rf>0 for a portfolio with positive mean return.",
+      "label": "Minimum viable input (N=2) uses N-1=1 denominator.",
       "file_type": "rationale",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L313",
+      "source_location": "L175",
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_rationale_313",
+      "id": "apps_quant_engine_tests_test_risk_rationale_175",
       "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": "sharpe with rf=0 > sharpe with rf>0 for a portfolio with positive mean return."
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "minimum viable input (n=2) uses n-1=1 denominator."
     },
     {
       "label": "Sortino Ratio = (R_a - rf_annual) / \u03c3_DD_a \u03c3_DD\u00b2 = \u03a3[min(r_i - MAR_daily, 0)\u00b2]\u2026",
@@ -22515,7 +22800,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_rationale_320",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": "sortino ratio = (r_a - rf_annual) / \u03c3_dd_a \u03c3_dd2 = \u03c3[min(r_i - mar_daily, 0)2]..."
     },
     {
@@ -22526,7 +22811,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_rationale_369",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": "dataset a has 3 days below the mar (days 3, 4, 8)."
     },
     {
@@ -22537,7 +22822,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_rationale_378",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": "when upside volatility is high, sortino > sharpe because sharpe penalises both..."
     },
     {
@@ -22548,19 +22833,8 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_rationale_389",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": "per sortino & price (1994), the downside deviation uses n, not n-1. verify by..."
-    },
-    {
-      "label": "Single security portfolio: only one asset in the correlation matrix.",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L808",
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_rationale_808",
-      "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": "single security portfolio: only one asset in the correlation matrix."
     },
     {
       "label": "All 5 standalone risk metrics should compute successfully for a single asset.",
@@ -22570,41 +22844,41 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_rationale_820",
       "community": 112,
-      "community_name": "test_risk.py",
+      "community_name": "src/analytics/__init__.py",
       "norm_label": "all 5 standalone risk metrics should compute successfully for a single asset."
     },
     {
-      "label": "Two assets with \u03c1 = -1.0: natural hedge scenario (e.g. Long equity / Short\u2026",
+      "label": "Crypto-style portfolio: \u00b15\u201315% daily returns. Validates that the engine handles\u2026",
       "file_type": "rationale",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L860",
+      "source_location": "L909",
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_rationale_860",
+      "id": "apps_quant_engine_tests_test_risk_rationale_909",
       "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": "two assets with \u03c1 = -1.0: natural hedge scenario (e.g. long equity / short..."
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "crypto-style portfolio: \u00b15\u201315% daily returns. validates that the engine handles..."
     },
     {
-      "label": "Short portfolio (all-negative returns when benchmark rises) \u2192 \u03b2 < 0.",
+      "label": "Crypto returns should produce annual volatility well above 50%.",
       "file_type": "rationale",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L870",
+      "source_location": "L920",
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_rationale_870",
+      "id": "apps_quant_engine_tests_test_risk_rationale_920",
       "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": "short portfolio (all-negative returns when benchmark rises) \u2192 \u03b2 < 0."
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "crypto returns should produce annual volatility well above 50%."
     },
     {
-      "label": "Integration tests for POST /api/v1/risk/summary.",
+      "label": "All risk metrics must complete without error for extreme returns.",
       "file_type": "rationale",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L945",
+      "source_location": "L930",
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_rationale_945",
+      "id": "apps_quant_engine_tests_test_risk_rationale_930",
       "community": 112,
-      "community_name": "test_risk.py",
-      "norm_label": "integration tests for post /api/v1/risk/summary."
+      "community_name": "src/analytics/__init__.py",
+      "norm_label": "all risk metrics must complete without error for extreme returns."
     },
     {
       "label": "1. System Requirements & Prerequisites",
@@ -28983,8 +29257,41 @@
       "_origin": "ast",
       "id": "apps_web_src_app_aa_callback_page",
       "community": 172,
-      "community_name": "button.tsx",
+      "community_name": "alerts/page.tsx",
       "norm_label": "callback/page.tsx"
+    },
+    {
+      "label": "alerts/page.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_web_src_app_dashboard_alerts_page",
+      "community": 172,
+      "community_name": "alerts/page.tsx",
+      "norm_label": "alerts/page.tsx"
+    },
+    {
+      "label": "alertSchema",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "apps_web_src_app_dashboard_alerts_page_alertschema",
+      "community": 172,
+      "community_name": "alerts/page.tsx",
+      "norm_label": "alertschema"
+    },
+    {
+      "label": "alertTypeLabels",
+      "file_type": "code",
+      "source_file": "apps/web/src/app/(dashboard)/alerts/page.tsx",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "apps_web_src_app_dashboard_alerts_page_alerttypelabels",
+      "community": 172,
+      "community_name": "alerts/page.tsx",
+      "norm_label": "alerttypelabels"
     },
     {
       "label": "(dashboard)/layout.tsx",
@@ -28994,8 +29301,19 @@
       "_origin": "ast",
       "id": "apps_web_src_app_dashboard_layout",
       "community": 172,
-      "community_name": "button.tsx",
+      "community_name": "alerts/page.tsx",
       "norm_label": "(dashboard)/layout.tsx"
+    },
+    {
+      "label": "empty-state.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/components/common/empty-state.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_web_src_components_common_empty_state",
+      "community": 172,
+      "community_name": "alerts/page.tsx",
+      "norm_label": "empty-state.tsx"
     },
     {
       "label": "theme-toggle.tsx",
@@ -29005,7 +29323,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_common_theme_toggle",
       "community": 172,
-      "community_name": "button.tsx",
+      "community_name": "alerts/page.tsx",
       "norm_label": "theme-toggle.tsx"
     },
     {
@@ -29016,7 +29334,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_layout_header",
       "community": 172,
-      "community_name": "button.tsx",
+      "community_name": "alerts/page.tsx",
       "norm_label": "header.tsx"
     },
     {
@@ -29027,7 +29345,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_layout_sidebar",
       "community": 172,
-      "community_name": "button.tsx",
+      "community_name": "alerts/page.tsx",
       "norm_label": "sidebar.tsx"
     },
     {
@@ -29038,7 +29356,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_layout_sidebar_navitems",
       "community": 172,
-      "community_name": "button.tsx",
+      "community_name": "alerts/page.tsx",
       "norm_label": "navitems"
     },
     {
@@ -29049,7 +29367,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_ui_button",
       "community": 172,
-      "community_name": "button.tsx",
+      "community_name": "alerts/page.tsx",
       "norm_label": "button.tsx"
     },
     {
@@ -29060,7 +29378,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_ui_button_button",
       "community": 172,
-      "community_name": "button.tsx",
+      "community_name": "alerts/page.tsx",
       "norm_label": "button"
     },
     {
@@ -29071,7 +29389,7 @@
       "_origin": "ast",
       "id": "apps_web_src_components_ui_button_buttonvariants",
       "community": 172,
-      "community_name": "button.tsx",
+      "community_name": "alerts/page.tsx",
       "norm_label": "buttonvariants"
     },
     {
@@ -29082,8 +29400,19 @@
       "_origin": "ast",
       "id": "apps_web_src_lib_auth",
       "community": 172,
-      "community_name": "button.tsx",
+      "community_name": "alerts/page.tsx",
       "norm_label": "auth.ts"
+    },
+    {
+      "label": "empty-state.test.tsx",
+      "file_type": "code",
+      "source_file": "apps/web/src/__tests__/components/empty-state.test.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_web_src_tests_components_empty_state_test",
+      "community": 172,
+      "community_name": "alerts/page.tsx",
+      "norm_label": "empty-state.test.tsx"
     },
     {
       "label": "@radix-ui/react-tooltip",
@@ -29359,17 +29688,6 @@
       "community": 18,
       "community_name": "compute_drawdown",
       "norm_label": "peak must occur in the bull period (indices 0-5 of nav = 1+5 = 6 points)."
-    },
-    {
-      "label": "Historical VaR should reflect the crash returns in the tail.",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L897",
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_rationale_897",
-      "community": 18,
-      "community_name": "compute_drawdown",
-      "norm_label": "historical var should reflect the crash returns in the tail."
     },
     {
       "label": "Crash days dominate the downside deviation \u2192 Sortino < 1.",
@@ -32760,48 +33078,26 @@
       "norm_label": "@investor-pm/config"
     },
     {
-      "label": "model_validator",
+      "label": "react-native-gesture-handler",
       "file_type": "code",
-      "source_file": "",
-      "source_location": "",
+      "source_file": "apps/mobile/package.json",
+      "source_location": "L28",
       "_origin": "ast",
-      "id": "apps_quant_engine_src_app_schemas_risk_py_model_validator",
+      "id": "apps_mobile_package_dependencies_react_native_gesture_handler",
       "community": 222,
-      "community_name": ".validate_aligned_lengths",
-      "norm_label": "model_validator"
+      "community_name": "react-native-gesture-handler",
+      "norm_label": "react-native-gesture-handler"
     },
     {
-      "label": "Benchmark returns must be aligned (same length) with portfolio returns.",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/app/schemas/risk.py",
-      "source_location": "L117",
+      "label": "react-native-gesture-handler",
+      "file_type": "concept",
+      "source_file": "apps/mobile/package.json",
+      "source_location": "L28",
       "_origin": "ast",
-      "id": "apps_quant_engine_src_app_schemas_risk_rationale_117",
+      "id": "react_native_gesture_handler",
       "community": 222,
-      "community_name": ".validate_aligned_lengths",
-      "norm_label": "benchmark returns must be aligned (same length) with portfolio returns."
-    },
-    {
-      "label": "All asset return series must have the same length.",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/app/schemas/risk.py",
-      "source_location": "L406",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_app_schemas_risk_rationale_406",
-      "community": 222,
-      "community_name": ".validate_aligned_lengths",
-      "norm_label": "all asset return series must have the same length."
-    },
-    {
-      "label": "correlation_matrix and correlation_asset_ids must be both provided or both\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/app/schemas/risk.py",
-      "source_location": "L525",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_app_schemas_risk_rationale_525",
-      "community": 222,
-      "community_name": ".validate_aligned_lengths",
-      "norm_label": "correlation_matrix and correlation_asset_ids must be both provided or both..."
+      "community_name": "react-native-gesture-handler",
+      "norm_label": "react-native-gesture-handler"
     },
     {
       "label": "route.ts",
@@ -33297,28 +33593,6 @@
       "community": 235,
       "community_name": "pdf2json",
       "norm_label": "pdf2json"
-    },
-    {
-      "label": "expo-constants",
-      "file_type": "code",
-      "source_file": "apps/mobile/package.json",
-      "source_location": "L21",
-      "_origin": "ast",
-      "id": "apps_mobile_package_dependencies_expo_constants",
-      "community": 236,
-      "community_name": "expo-constants",
-      "norm_label": "expo-constants"
-    },
-    {
-      "label": "expo-constants",
-      "file_type": "concept",
-      "source_file": "apps/mobile/package.json",
-      "source_location": "L21",
-      "_origin": "ast",
-      "id": "expo_constants",
-      "community": 236,
-      "community_name": "expo-constants",
-      "norm_label": "expo-constants"
     },
     {
       "label": "excel-export.service.spec.ts",
@@ -37777,17 +38051,6 @@
       "norm_label": "post"
     },
     {
-      "label": "src/app/routers/__init__.py",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/app/routers/__init__.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_app_routers_init",
-      "community": 44,
-      "community_name": "GroupBy",
-      "norm_label": "src/app/routers/__init__.py"
-    },
-    {
       "label": "schemas/allocation.py",
       "file_type": "code",
       "source_file": "apps/quant-engine/src/app/schemas/allocation.py",
@@ -37874,17 +38137,6 @@
       "community": 44,
       "community_name": "GroupBy",
       "norm_label": "post /api/v1/allocation/breakdown accepts a list of portfolio positions with..."
-    },
-    {
-      "label": "Routers sub-package \u2014 FastAPI router modules for all analytics endpoints.",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/app/routers/__init__.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_app_routers_init_rationale_1",
-      "community": 44,
-      "community_name": "GroupBy",
-      "norm_label": "routers sub-package \u2014 fastapi router modules for all analytics endpoints."
     },
     {
       "label": "Pydantic request/response schemas for the allocation analytics router. All\u2026",
@@ -38459,103 +38711,15 @@
       "norm_label": "_top_n_ratios with n > assets clips actual_n to len(weights)."
     },
     {
-      "label": "src/analytics/__init__.py",
+      "label": "src/app/routers/__init__.py",
       "file_type": "code",
-      "source_file": "apps/quant-engine/src/analytics/__init__.py",
+      "source_file": "apps/quant-engine/src/app/routers/__init__.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_init",
+      "id": "apps_quant_engine_src_app_routers_init",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "src/analytics/__init__.py"
-    },
-    {
-      "label": "beta.py",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/analytics/risk/beta.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_beta",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "beta.py"
-    },
-    {
-      "label": "correlation.py",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/analytics/risk/correlation.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_correlation",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "correlation.py"
-    },
-    {
-      "label": "drawdown.py",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/analytics/risk/drawdown.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_drawdown",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "drawdown.py"
-    },
-    {
-      "label": "risk/__init__.py",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/analytics/risk/__init__.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_init",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "risk/__init__.py"
-    },
-    {
-      "label": "sharpe.py",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/analytics/risk/sharpe.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_sharpe",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "sharpe.py"
-    },
-    {
-      "label": "sortino.py",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/analytics/risk/sortino.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_sortino",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "sortino.py"
-    },
-    {
-      "label": "var.py",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/analytics/risk/var.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_var",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "var.py"
-    },
-    {
-      "label": "volatility.py",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/src/analytics/risk/volatility.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_volatility",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "volatility.py"
+      "community_name": "routers/risk.py",
+      "norm_label": "src/app/routers/__init__.py"
     },
     {
       "label": "routers/risk.py",
@@ -38565,7 +38729,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_routers_risk",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "routers/risk.py"
     },
     {
@@ -38576,7 +38740,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_routers_risk_py_post",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "post"
     },
     {
@@ -38587,7 +38751,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "schemas/risk.py"
     },
     {
@@ -38598,7 +38762,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_py_basemodel",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "basemodel"
     },
     {
@@ -38609,129 +38773,19 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_py_field_validator",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "field_validator"
     },
     {
-      "label": "Analytics math package for the Wealth Compass Quant Engine. Public API: twr \u2014\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/analytics/__init__.py",
-      "source_location": "L1",
+      "label": "model_validator",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
       "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_init_rationale_1",
+      "id": "apps_quant_engine_src_app_schemas_risk_py_model_validator",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "analytics math package for the wealth compass quant engine. public api: twr \u2014..."
-    },
-    {
-      "label": "Beta Calculator =============== Pure-math module for computing the systematic\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/analytics/risk/beta.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_beta_rationale_1",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "beta calculator =============== pure-math module for computing the systematic..."
-    },
-    {
-      "label": "Beta computation output. Attributes ---------- asset_id : Portfolio or security\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/analytics/risk/beta.py",
-      "source_location": "L47",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_beta_rationale_47",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "beta computation output. attributes ---------- asset_id : portfolio or security..."
-    },
-    {
-      "label": "Compute the portfolio beta against a benchmark. Algorithm --------- 1.\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/analytics/risk/beta.py",
-      "source_location": "L77",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_beta_rationale_77",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "compute the portfolio beta against a benchmark. algorithm --------- 1...."
-    },
-    {
-      "label": "Pairwise Asset Correlation Matrix Calculator\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/analytics/risk/correlation.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_correlation_rationale_1",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "pairwise asset correlation matrix calculator..."
-    },
-    {
-      "label": "Compute Pearson correlation coefficient between two aligned return series.\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/analytics/risk/correlation.py",
-      "source_location": "L101",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_correlation_rationale_101",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "compute pearson correlation coefficient between two aligned return series...."
-    },
-    {
-      "label": "Compute the pairwise Pearson correlation matrix for a set of assets. Algorithm\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/analytics/risk/correlation.py",
-      "source_location": "L123",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_correlation_rationale_123",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "compute the pairwise pearson correlation matrix for a set of assets. algorithm..."
-    },
-    {
-      "label": "Pairwise Pearson correlation matrix output. Attributes ---------- asset_ids :\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/analytics/risk/correlation.py",
-      "source_location": "L64",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_correlation_rationale_64",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "pairwise pearson correlation matrix output. attributes ---------- asset_ids :..."
-    },
-    {
-      "label": "Compute (mean, sample_std) for a return series. std=0 if all identical.",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/analytics/risk/correlation.py",
-      "source_location": "L86",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_correlation_rationale_86",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "compute (mean, sample_std) for a return series. std=0 if all identical."
-    },
-    {
-      "label": "Maximum Drawdown Calculator ============================= Pure-math module for\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/analytics/risk/drawdown.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_drawdown_rationale_1",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "maximum drawdown calculator ============================= pure-math module for..."
-    },
-    {
-      "label": "Maximum Drawdown computation output. Attributes ---------- asset_id : Portfolio\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/analytics/risk/drawdown.py",
-      "source_location": "L67",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_drawdown_rationale_67",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "maximum drawdown computation output. attributes ---------- asset_id : portfolio..."
+      "community_name": "routers/risk.py",
+      "norm_label": "model_validator"
     },
     {
       "label": "Convert a series of simple daily returns to a cumulative NAV curve.",
@@ -38741,140 +38795,19 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_analytics_risk_drawdown_rationale_98",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "convert a series of simple daily returns to a cumulative nav curve."
     },
     {
-      "label": "Risk Analytics Sub-Package for the Wealth Compass Quant Engine. This package\u2026",
+      "label": "Routers sub-package \u2014 FastAPI router modules for all analytics endpoints.",
       "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/analytics/risk/__init__.py",
+      "source_file": "apps/quant-engine/src/app/routers/__init__.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_init_rationale_1",
+      "id": "apps_quant_engine_src_app_routers_init_rationale_1",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "risk analytics sub-package for the wealth compass quant engine. this package..."
-    },
-    {
-      "label": "Sharpe Ratio Calculator ======================== Pure-math module for computing\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/analytics/risk/sharpe.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_sharpe_rationale_1",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "sharpe ratio calculator ======================== pure-math module for computing..."
-    },
-    {
-      "label": "Sharpe Ratio computation output. Attributes ---------- asset_id : Portfolio or\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/analytics/risk/sharpe.py",
-      "source_location": "L61",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_sharpe_rationale_61",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "sharpe ratio computation output. attributes ---------- asset_id : portfolio or..."
-    },
-    {
-      "label": "Sortino Ratio Calculator ========================= Pure-math module for\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/analytics/risk/sortino.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_sortino_rationale_1",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "sortino ratio calculator ========================= pure-math module for..."
-    },
-    {
-      "label": "Sortino Ratio computation output. Attributes ---------- asset_id : Portfolio or\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/analytics/risk/sortino.py",
-      "source_location": "L72",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_sortino_rationale_72",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "sortino ratio computation output. attributes ---------- asset_id : portfolio or..."
-    },
-    {
-      "label": "Value at Risk (VaR) Calculator ================================ Pure-math\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/analytics/risk/var.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_var_rationale_1",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "value at risk (var) calculator ================================ pure-math..."
-    },
-    {
-      "label": "Full VaR computation output covering both methods and both confidence levels.\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/analytics/risk/var.py",
-      "source_location": "L117",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_var_rationale_117",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "full var computation output covering both methods and both confidence levels...."
-    },
-    {
-      "label": "Compute the p-th quantile of a pre-sorted list using linear interpolation\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/analytics/risk/var.py",
-      "source_location": "L148",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_var_rationale_148",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "compute the p-th quantile of a pre-sorted list using linear interpolation..."
-    },
-    {
-      "label": "A single VaR estimate at one confidence level using one method. Attributes\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/analytics/risk/var.py",
-      "source_location": "L98",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_var_rationale_98",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "a single var estimate at one confidence level using one method. attributes..."
-    },
-    {
-      "label": "Annualised Volatility Calculator ================================== Pure-math\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/analytics/risk/volatility.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_volatility_rationale_1",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "annualised volatility calculator ================================== pure-math..."
-    },
-    {
-      "label": "Annualised volatility output. Attributes ---------- asset_id : Identifier\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/analytics/risk/volatility.py",
-      "source_location": "L49",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_volatility_rationale_49",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "annualised volatility output. attributes ---------- asset_id : identifier..."
-    },
-    {
-      "label": "Compute annualised volatility from a series of daily periodic returns.\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/src/analytics/risk/volatility.py",
-      "source_location": "L75",
-      "_origin": "ast",
-      "id": "apps_quant_engine_src_analytics_risk_volatility_rationale_75",
-      "community": 47,
-      "community_name": "src/analytics/__init__.py",
-      "norm_label": "compute annualised volatility from a series of daily periodic returns...."
+      "community_name": "routers/risk.py",
+      "norm_label": "routers sub-package \u2014 fastapi router modules for all analytics endpoints."
     },
     {
       "label": "Risk Analytics Router ===================== Exposes four computation endpoints:\u2026",
@@ -38884,7 +38817,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_routers_risk_rationale_1",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "risk analytics router ===================== exposes four computation endpoints:..."
     },
     {
@@ -38895,7 +38828,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_routers_risk_rationale_120",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "post /api/v1/risk/summary accepts a daily return series for a portfolio and..."
     },
     {
@@ -38906,7 +38839,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_routers_risk_rationale_294",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "post /api/v1/risk/drawdown-series returns the complete drawdown time series for..."
     },
     {
@@ -38917,7 +38850,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_routers_risk_rationale_384",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "post /api/v1/risk/correlation accepts a list of named asset return series (all..."
     },
     {
@@ -38928,7 +38861,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_routers_risk_rationale_468",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "post /api/v1/risk/diversification accepts asset weights and optional..."
     },
     {
@@ -38939,8 +38872,19 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_rationale_1",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "pydantic request/response schemas for the risk analytics router. all monetary..."
+    },
+    {
+      "label": "Benchmark returns must be aligned (same length) with portfolio returns.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/app/schemas/risk.py",
+      "source_location": "L117",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_app_schemas_risk_rationale_117",
+      "community": 47,
+      "community_name": "routers/risk.py",
+      "norm_label": "benchmark returns must be aligned (same length) with portfolio returns."
     },
     {
       "label": "Reject NaN or infinite return values \u2014 they produce undefined risk metrics.",
@@ -38950,7 +38894,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_rationale_129",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "reject nan or infinite return values \u2014 they produce undefined risk metrics."
     },
     {
@@ -38961,7 +38905,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_rationale_145",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "a single value at risk estimate for one method and one confidence level."
     },
     {
@@ -38972,7 +38916,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_rationale_173",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "all four value at risk estimates (2 methods \u00d7 2 confidence levels)."
     },
     {
@@ -38983,7 +38927,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_rationale_182",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "maximum drawdown metrics."
     },
     {
@@ -38994,7 +38938,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_rationale_224",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "beta (systematic risk) metrics against the benchmark."
     },
     {
@@ -39005,7 +38949,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_rationale_245",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "full risk summary response for post /api/v1/risk/summary. aggregates all seven..."
     },
     {
@@ -39016,7 +38960,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_rationale_327",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "request body for post /api/v1/risk/drawdown-series. returns the full time..."
     },
     {
@@ -39027,7 +38971,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_rationale_358",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "drawdown time series response for post /api/v1/risk/drawdown-series. each value..."
     },
     {
@@ -39038,7 +38982,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_rationale_37",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "a named daily return series for a single asset."
     },
     {
@@ -39049,8 +38993,19 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_rationale_385",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "request body for post /api/v1/risk/correlation. computes the pairwise pearson..."
+    },
+    {
+      "label": "All asset return series must have the same length.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/app/schemas/risk.py",
+      "source_location": "L406",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_app_schemas_risk_rationale_406",
+      "community": 47,
+      "community_name": "routers/risk.py",
+      "norm_label": "all asset return series must have the same length."
     },
     {
       "label": "Pairwise Pearson correlation matrix response for POST /api/v1/risk/correlation.\u2026",
@@ -39060,7 +39015,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_rationale_418",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "pairwise pearson correlation matrix response for post /api/v1/risk/correlation...."
     },
     {
@@ -39071,7 +39026,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_rationale_449",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "a single asset weight entry for the diversification request."
     },
     {
@@ -39082,8 +39037,19 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_rationale_467",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "request body for post /api/v1/risk/diversification. computes hhi, effective n,..."
+    },
+    {
+      "label": "correlation_matrix and correlation_asset_ids must be both provided or both\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/app/schemas/risk.py",
+      "source_location": "L525",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_app_schemas_risk_rationale_525",
+      "community": 47,
+      "community_name": "routers/risk.py",
+      "norm_label": "correlation_matrix and correlation_asset_ids must be both provided or both..."
     },
     {
       "label": "A single Top-N concentration ratio result.",
@@ -39093,7 +39059,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_rationale_548",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "a single top-n concentration ratio result."
     },
     {
@@ -39104,7 +39070,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_rationale_572",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "full diversification and concentration analytics response for post..."
     },
     {
@@ -39115,7 +39081,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_src_app_schemas_risk_rationale_59",
       "community": 47,
-      "community_name": "src/analytics/__init__.py",
+      "community_name": "routers/risk.py",
       "norm_label": "request body for post /api/v1/risk/summary. computes the full suite of risk..."
     },
     {
@@ -43456,6 +43422,17 @@
       "norm_label": "a single cash flow event in the xirr calculation. attributes ---------- date:..."
     },
     {
+      "label": "Validates diversification and concentration metrics against the official US\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_quant_benchmarks.py",
+      "source_location": "L274",
+      "_origin": "ast",
+      "id": "apps_quant_engine_tests_test_quant_benchmarks_rationale_274",
+      "community": 78,
+      "community_name": "CashFlow",
+      "norm_label": "validates diversification and concentration metrics against the official us..."
+    },
+    {
       "label": "Validates compute_xirr against Microsoft Excel's =XIRR(values, dates) formula.\u2026",
       "file_type": "rationale",
       "source_file": "apps/quant-engine/tests/test_quant_benchmarks.py",
@@ -43830,6 +43807,61 @@
       "norm_label": "loss sub-period followed by recovery: (-20% \u00d7 +30%) = 4% cumulative."
     },
     {
+      "label": "correlation.py",
+      "file_type": "code",
+      "source_file": "apps/quant-engine/src/analytics/risk/correlation.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_correlation",
+      "community": 80,
+      "community_name": "compute_correlation",
+      "norm_label": "correlation.py"
+    },
+    {
+      "label": "Pairwise Asset Correlation Matrix Calculator\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/risk/correlation.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_correlation_rationale_1",
+      "community": 80,
+      "community_name": "compute_correlation",
+      "norm_label": "pairwise asset correlation matrix calculator..."
+    },
+    {
+      "label": "Compute Pearson correlation coefficient between two aligned return series.\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/risk/correlation.py",
+      "source_location": "L101",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_correlation_rationale_101",
+      "community": 80,
+      "community_name": "compute_correlation",
+      "norm_label": "compute pearson correlation coefficient between two aligned return series...."
+    },
+    {
+      "label": "Compute the pairwise Pearson correlation matrix for a set of assets. Algorithm\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/risk/correlation.py",
+      "source_location": "L123",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_correlation_rationale_123",
+      "community": 80,
+      "community_name": "compute_correlation",
+      "norm_label": "compute the pairwise pearson correlation matrix for a set of assets. algorithm..."
+    },
+    {
+      "label": "Compute (mean, sample_std) for a return series. std=0 if all identical.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/src/analytics/risk/correlation.py",
+      "source_location": "L86",
+      "_origin": "ast",
+      "id": "apps_quant_engine_src_analytics_risk_correlation_rationale_86",
+      "community": 80,
+      "community_name": "compute_correlation",
+      "norm_label": "compute (mean, sample_std) for a return series. std=0 if all identical."
+    },
+    {
       "label": "Pearson correlation \u03c1_ij = Cov(i,j) / (\u03c3_i \u00d7 \u03c3_j) Dataset E: EQ: [ 0.015,\u2026",
       "file_type": "rationale",
       "source_file": "apps/quant-engine/tests/test_risk.py",
@@ -43837,7 +43869,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_rationale_611",
       "community": 80,
-      "community_name": "TestCorrelationBenchmark",
+      "community_name": "compute_correlation",
       "norm_label": "pearson correlation \u03c1_ij = cov(i,j) / (\u03c3_i \u00d7 \u03c3_j) dataset e: eq: [ 0.015,..."
     },
     {
@@ -43848,7 +43880,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_rationale_646",
       "community": 80,
-      "community_name": "TestCorrelationBenchmark",
+      "community_name": "compute_correlation",
       "norm_label": "eq and bond in dataset e are constructed to be perfectly anti-correlated (\u03c1 =..."
     },
     {
@@ -43859,7 +43891,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_rationale_653",
       "community": 80,
-      "community_name": "TestCorrelationBenchmark",
+      "community_name": "compute_correlation",
       "norm_label": "cash has zero variance \u2192 correlation with all other assets = 0.0."
     },
     {
@@ -43870,7 +43902,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_rationale_663",
       "community": 80,
-      "community_name": "TestCorrelationBenchmark",
+      "community_name": "compute_correlation",
       "norm_label": "every asset is perfectly correlated with itself \u2192 diagonal = 1.0."
     },
     {
@@ -43881,7 +43913,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_rationale_669",
       "community": 80,
-      "community_name": "TestCorrelationBenchmark",
+      "community_name": "compute_correlation",
       "norm_label": "\u03c1_ij = \u03c1_ji for all (i, j) pairs."
     },
     {
@@ -43892,7 +43924,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_rationale_677",
       "community": 80,
-      "community_name": "TestCorrelationBenchmark",
+      "community_name": "compute_correlation",
       "norm_label": "all off-diagonal correlation values must be in [-1.0, 1.0]."
     },
     {
@@ -43903,7 +43935,7 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_rationale_684",
       "community": 80,
-      "community_name": "TestCorrelationBenchmark",
+      "community_name": "compute_correlation",
       "norm_label": "eq-gold correlation must match manual pearson computation."
     },
     {
@@ -43914,8 +43946,41 @@
       "_origin": "ast",
       "id": "apps_quant_engine_tests_test_risk_rationale_692",
       "community": 80,
-      "community_name": "TestCorrelationBenchmark",
+      "community_name": "compute_correlation",
       "norm_label": "the output asset_ids list must preserve the dict insertion order."
+    },
+    {
+      "label": "Single security portfolio: only one asset in the correlation matrix.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L808",
+      "_origin": "ast",
+      "id": "apps_quant_engine_tests_test_risk_rationale_808",
+      "community": 80,
+      "community_name": "compute_correlation",
+      "norm_label": "single security portfolio: only one asset in the correlation matrix."
+    },
+    {
+      "label": "Two assets with \u03c1 = -1.0: natural hedge scenario (e.g. Long equity / Short\u2026",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L860",
+      "_origin": "ast",
+      "id": "apps_quant_engine_tests_test_risk_rationale_860",
+      "community": 80,
+      "community_name": "compute_correlation",
+      "norm_label": "two assets with \u03c1 = -1.0: natural hedge scenario (e.g. long equity / short..."
+    },
+    {
+      "label": "Short portfolio (all-negative returns when benchmark rises) \u2192 \u03b2 < 0.",
+      "file_type": "rationale",
+      "source_file": "apps/quant-engine/tests/test_risk.py",
+      "source_location": "L870",
+      "_origin": "ast",
+      "id": "apps_quant_engine_tests_test_risk_rationale_870",
+      "community": 80,
+      "community_name": "compute_correlation",
+      "norm_label": "short portfolio (all-negative returns when benchmark rises) \u2192 \u03b2 < 0."
     },
     {
       "label": "twr.py",
@@ -43982,17 +44047,6 @@
       "community": 81,
       "community_name": "date",
       "norm_label": "model_validator"
-    },
-    {
-      "label": "test_quant_benchmarks.py",
-      "file_type": "code",
-      "source_file": "apps/quant-engine/tests/test_quant_benchmarks.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_quant_benchmarks",
-      "community": 81,
-      "community_name": "date",
-      "norm_label": "test_quant_benchmarks.py"
     },
     {
       "label": "test_twr.py",
@@ -44259,17 +44313,6 @@
       "norm_label": "request body for the xirr computation endpoint."
     },
     {
-      "label": "Quantitative Analytics Benchmark Verification Suite\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/tests/test_quant_benchmarks.py",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_quant_benchmarks_rationale_1",
-      "community": 81,
-      "community_name": "date",
-      "norm_label": "quantitative analytics benchmark verification suite..."
-    },
-    {
       "label": "Validates compute_twr against the Global Investment Performance Standards\u2026",
       "file_type": "rationale",
       "source_file": "apps/quant-engine/tests/test_quant_benchmarks.py",
@@ -44290,17 +44333,6 @@
       "community": 81,
       "community_name": "date",
       "norm_label": "benchmark: cfa gips standard sample problem: period 1 (jan 1 - mar 31): bmv =..."
-    },
-    {
-      "label": "Validates diversification and concentration metrics against the official US\u2026",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/tests/test_quant_benchmarks.py",
-      "source_location": "L274",
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_quant_benchmarks_rationale_274",
-      "community": 81,
-      "community_name": "date",
-      "norm_label": "validates diversification and concentration metrics against the official us..."
     },
     {
       "label": "Unit tests for twr.py \u2014 Time-Weighted Return Engine. Test Vectors ------------\u2026",
@@ -45326,70 +45358,59 @@
       "norm_label": "when asset and benchmark are identical except for sign on all deviations, the..."
     },
     {
-      "label": "Verify annualised volatility against hand-computed reference values. Dataset A\u2026",
+      "label": "Sharpe Ratio = (mean_daily_excess \u00d7 252) / (daily_vol \u00d7 \u221a252) =\u2026",
       "file_type": "rationale",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L128",
+      "source_location": "L253",
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_rationale_128",
+      "id": "apps_quant_engine_tests_test_risk_rationale_253",
       "community": 9,
-      "community_name": "TestVolatilityBenchmark",
-      "norm_label": "verify annualised volatility against hand-computed reference values. dataset a..."
+      "community_name": "TestSharpeBenchmark",
+      "norm_label": "sharpe ratio = (mean_daily_excess \u00d7 252) / (daily_vol \u00d7 \u221a252) =..."
     },
     {
-      "label": "Daily volatility must match hand-computed Bessel-corrected std dev.",
+      "label": "Dataset A mean return > rf daily \u2192 Sharpe must be positive.",
       "file_type": "rationale",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L148",
+      "source_location": "L285",
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_rationale_148",
+      "id": "apps_quant_engine_tests_test_risk_rationale_285",
       "community": 9,
-      "community_name": "TestVolatilityBenchmark",
-      "norm_label": "daily volatility must match hand-computed bessel-corrected std dev."
+      "community_name": "TestSharpeBenchmark",
+      "norm_label": "dataset a mean return > rf daily \u2192 sharpe must be positive."
     },
     {
-      "label": "Annual volatility = daily_vol \u00d7 \u221a252 with strict tolerance.",
+      "label": "The annual_volatility field must match the direct formula.",
       "file_type": "rationale",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L157",
+      "source_location": "L298",
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_rationale_157",
+      "id": "apps_quant_engine_tests_test_risk_rationale_298",
       "community": 9,
-      "community_name": "TestVolatilityBenchmark",
-      "norm_label": "annual volatility = daily_vol \u00d7 \u221a252 with strict tolerance."
+      "community_name": "TestSharpeBenchmark",
+      "norm_label": "the annual_volatility field must match the direct formula."
     },
     {
-      "label": "annual_volatility_pct must be exactly annual_volatility \u00d7 100.",
+      "label": "Higher risk-free rate \u2192 lower Sharpe (smaller numerator, same denom).",
       "file_type": "rationale",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L163",
+      "source_location": "L307",
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_rationale_163",
+      "id": "apps_quant_engine_tests_test_risk_rationale_307",
       "community": 9,
-      "community_name": "TestVolatilityBenchmark",
-      "norm_label": "annual_volatility_pct must be exactly annual_volatility \u00d7 100."
+      "community_name": "TestSharpeBenchmark",
+      "norm_label": "higher risk-free rate \u2192 lower sharpe (smaller numerator, same denom)."
     },
     {
-      "label": "Dataset A represents typical equity returns; annual vol should be 15\u201335%.",
+      "label": "Sharpe with rf=0 > Sharpe with rf>0 for a portfolio with positive mean return.",
       "file_type": "rationale",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L170",
+      "source_location": "L313",
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_rationale_170",
+      "id": "apps_quant_engine_tests_test_risk_rationale_313",
       "community": 9,
-      "community_name": "TestVolatilityBenchmark",
-      "norm_label": "dataset a represents typical equity returns; annual vol should be 15\u201335%."
-    },
-    {
-      "label": "Minimum viable input (N=2) uses N-1=1 denominator.",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L175",
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_rationale_175",
-      "community": 9,
-      "community_name": "TestVolatilityBenchmark",
-      "norm_label": "minimum viable input (n=2) uses n-1=1 denominator."
+      "community_name": "TestSharpeBenchmark",
+      "norm_label": "sharpe with rf=0 > sharpe with rf>0 for a portfolio with positive mean return."
     },
     {
       "label": "src/app/schemas/__init__.py",
@@ -45480,15 +45501,15 @@
       "norm_label": "portfolio/stockchartmodal.tsx"
     },
     {
-      "label": "TIMEFRAMES",
+      "label": "KNOWN_SYMBOL_RESOLUTIONS",
       "file_type": "code",
       "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
-      "source_location": "L17",
+      "source_location": "L20",
       "_origin": "ast",
-      "id": "apps_web_src_components_portfolio_stockchartmodal_timeframes",
+      "id": "apps_web_src_components_portfolio_stockchartmodal_known_symbol_resolutions",
       "community": 91,
       "community_name": "cn",
-      "norm_label": "timeframes"
+      "norm_label": "known_symbol_resolutions"
     },
     {
       "label": "badge.tsx",
@@ -46437,26 +46458,15 @@
       "norm_label": "a flat portfolio has zero var on both methods when mean=0, std=0."
     },
     {
-      "label": "Crypto-style portfolio: \u00b15\u201315% daily returns. Validates that the engine handles\u2026",
+      "label": "Historical VaR should reflect the crash returns in the tail.",
       "file_type": "rationale",
       "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L909",
+      "source_location": "L897",
       "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_rationale_909",
+      "id": "apps_quant_engine_tests_test_risk_rationale_897",
       "community": 95,
       "community_name": "compute_var",
-      "norm_label": "crypto-style portfolio: \u00b15\u201315% daily returns. validates that the engine handles..."
-    },
-    {
-      "label": "Crypto returns should produce annual volatility well above 50%.",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L920",
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_rationale_920",
-      "community": 95,
-      "community_name": "compute_var",
-      "norm_label": "crypto returns should produce annual volatility well above 50%."
+      "norm_label": "historical var should reflect the crash returns in the tail."
     },
     {
       "label": "Crypto VaR should be substantial (> 5% for a high-volatility asset).",
@@ -46468,17 +46478,6 @@
       "community": 95,
       "community_name": "compute_var",
       "norm_label": "crypto var should be substantial (> 5% for a high-volatility asset)."
-    },
-    {
-      "label": "All risk metrics must complete without error for extreme returns.",
-      "file_type": "rationale",
-      "source_file": "apps/quant-engine/tests/test_risk.py",
-      "source_location": "L930",
-      "_origin": "ast",
-      "id": "apps_quant_engine_tests_test_risk_rationale_930",
-      "community": 95,
-      "community_name": "compute_var",
-      "norm_label": "all risk metrics must complete without error for extreme returns."
     },
     {
       "label": "pdf-report.service.ts",
@@ -49277,23 +49276,11 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L328",
+      "source_location": "L330",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfolioanalytics",
       "target": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfoliosummary",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L382",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfolioanalytics",
-      "target": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_resolvecleansymbol",
       "confidence_score": 1.0
     },
     {
@@ -49305,6 +49292,18 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfolioanalytics",
+      "target": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_resolvecleansymbol",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
+      "source_location": "L386",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfolioanalytics",
       "target": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getassetbeta",
       "confidence_score": 1.0
     },
@@ -49313,7 +49312,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L385",
+      "source_location": "L387",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfolioanalytics",
@@ -49325,7 +49324,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L530",
+      "source_location": "L532",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfoliorisk",
@@ -49337,7 +49336,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L596",
+      "source_location": "L598",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfoliorisk",
@@ -49349,7 +49348,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L598",
+      "source_location": "L600",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice_getportfoliorisk",
@@ -56992,13 +56991,13 @@
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
       "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
-      "source_location": "L126",
+      "source_location": "L161",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_components_portfolio_stockchartmodal_stockchartmodal",
-      "target": "apps_web_src_lib_utils_cn"
+      "target": "apps_web_src_components_portfolio_stockchartmodal_resolvetradingviewsymbol",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -78597,6 +78596,30 @@
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_components_portfolio_stockchartmodal",
+      "target": "apps_web_src_components_ui_input_input",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_web_src_components_portfolio_stockchartmodal",
+      "target": "apps_web_src_components_ui_badge_badge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_web_src_components_portfolio_stockchartmodal",
       "target": "apps_web_src_lib_utils_cn",
       "confidence_score": 1.0
     },
@@ -86502,6 +86525,30 @@
       "confidence": "EXTRACTED",
       "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
       "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_web_src_components_portfolio_stockchartmodal",
+      "target": "apps_web_src_components_ui_input",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_web_src_components_portfolio_stockchartmodal",
+      "target": "apps_web_src_components_ui_badge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_components_portfolio_stockchartmodal",
@@ -100405,29 +100452,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
-      "source_location": "L17",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_components_portfolio_stockchartmodal",
-      "target": "apps_web_src_components_portfolio_stockchartmodal_timeframes",
+      "target": "apps_web_src_components_portfolio_stockchartmodal_stockchartmodalprops",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
-      "source_location": "L26",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "apps_web_src_components_portfolio_stockchartmodal",
-      "target": "apps_web_src_components_portfolio_stockchartmodal_charttype",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
-      "source_location": "L28",
+      "source_location": "L149",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_components_portfolio_stockchartmodal",
@@ -100438,11 +100474,22 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
-      "source_location": "L9",
+      "source_location": "L20",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_components_portfolio_stockchartmodal",
-      "target": "apps_web_src_components_portfolio_stockchartmodal_stockchartmodalprops",
+      "target": "apps_web_src_components_portfolio_stockchartmodal_known_symbol_resolutions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
+      "source_location": "L92",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "apps_web_src_components_portfolio_stockchartmodal",
+      "target": "apps_web_src_components_portfolio_stockchartmodal_resolvetradingviewsymbol",
       "confidence_score": 1.0
     },
     {
@@ -113869,7 +113916,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L215",
+      "source_location": "L217",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice",
@@ -113880,7 +113927,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L247",
+      "source_location": "L249",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice",
@@ -113891,7 +113938,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L302",
+      "source_location": "L304",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice",
@@ -113902,7 +113949,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L327",
+      "source_location": "L329",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice",
@@ -113913,7 +113960,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L529",
+      "source_location": "L531",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice",
@@ -113924,7 +113971,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L65",
+      "source_location": "L67",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice",
@@ -113935,7 +113982,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L744",
+      "source_location": "L746",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice",
@@ -113946,7 +113993,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L774",
+      "source_location": "L776",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice",
@@ -113968,7 +114015,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/portfolio/services/holding.service.ts",
-      "source_location": "L903",
+      "source_location": "L905",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_portfolio_services_holding_service_holdingservice",
@@ -136386,5 +136433,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ebb78ee19cdbaabcfeb68b2461274e7fab3d251d"
+  "built_at_commit": "c85f5c02c71a0aa28f09dca914793428983ff373"
 }

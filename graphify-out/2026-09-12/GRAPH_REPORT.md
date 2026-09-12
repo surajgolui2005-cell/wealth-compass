@@ -1,16 +1,16 @@
 # Graph Report - Investor Portolio Monitoring and Risk Management System  (2026-09-12)
 
 ## Corpus Check
-- 415 files · ~273,221 words
+- 415 files · ~273,350 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 4150 nodes · 7716 edges · 259 communities (185 shown, 74 thin omitted)
+- 4150 nodes · 7716 edges · 261 communities (187 shown, 74 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 500 edges (avg confidence: 0.75)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `aad7cd14`
+- Built from commit: `ebb78ee1`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -141,7 +141,7 @@
 - AlertEvaluatorEngine
 - health.service.ts
 - PortfolioDetailScreen.tsx
-- 5. Data Flow Pipeline Architecture
+- System Architecture Document
 - 7. Pairwise Asset Correlation Matrix
 - Production Readiness Review & Final Sign-Off — Wealth Compass Platform
 - TestDiversificationScoringThresholds
@@ -221,6 +221,7 @@
 - PaginationQueryDto
 - @investor-pm/config
 - .validate_aligned_lengths
+- TestEffectiveNInvariants
 - helmet
 - pino
 - @nestjs/event-emitter
@@ -236,6 +237,7 @@
 - excel-export.service.spec.ts
 - pdfmake
 - @pdfsmaller/pdf-decrypt
+- 7. Security & Isolation Boundaries
 - @prisma/client
 - prom-client
 - CopilotSheet.tsx
@@ -284,7 +286,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (259 total, 74 thin omitted)
+## Communities (261 total, 74 thin omitted)
 
 ### Community 0 - "providers.module.ts"
 Cohesion: 0.08
@@ -307,8 +309,8 @@ Cohesion: 0.05
 Nodes (87): ADR-0001: Monorepo Strategy, Compliance Check, Consequences, Constraints, Context, Decision, Directory Layout, Negative / Trade-offs (+79 more)
 
 ### Community 5 - "ARCHITECTURE.md"
-Cohesion: 0.17
-Nodes (29): 10. Observability Architecture, 11. Architecture Decision Records (ADR) Summary, 12. Open Questions Resolved, 1.1 Guiding Principles, 1.2 Architectural Pattern: Modular Monolith + Quant Microservice, 1. System Overview & Architectural Philosophy, 2. Technology Stack Decisions, 3.1 Level 1 — System Context Diagram (+21 more)
+Cohesion: 0.24
+Nodes (20): 3.1 Level 1 — System Context Diagram, 3.2 Level 2 — Container Diagram, 3.3 Level 3 — Component Diagram (NestJS API Modular Monolith), 3.4 Level 3 — Component Diagram (Python Quant Engine), 3. C4 Architecture Diagrams, 4.1 Context Relationship Patterns, 4.2 Anti-Corruption Layers, 4. Bounded Context Map (+12 more)
 
 ### Community 6 - "compilerOptions"
 Cohesion: 0.07
@@ -734,9 +736,9 @@ Nodes (7): HealthModule, Module, ComponentHealth, HealthService, LivenessResult,
 Cohesion: 0.13
 Nodes (18): AddAssetModal(), AddAssetModalProps, styles, PlatformBadge(), PlatformBadgeProps, styles, StockChartModal(), StockChartModalProps (+10 more)
 
-### Community 132 - "5. Data Flow Pipeline Architecture"
-Cohesion: 0.46
-Nodes (8): 5.1 End-to-End Pipeline Overview, 5.2 Stage 1 — Raw Data Ingestion, 5.3 Stage 2 — Normalisation, 5.4 Stage 3 — Persistence, 5.5 Stage 4 — Calculation, 5.6 Stage 5 — Analytics, 5.7 Stage 6 — Insights & Alerting, 5. Data Flow Pipeline Architecture
+### Community 132 - "System Architecture Document"
+Cohesion: 0.27
+Nodes (12): 10. Observability Architecture, 11. Architecture Decision Records (ADR) Summary, 12. Open Questions Resolved, 1.1 Guiding Principles, 1.2 Architectural Pattern: Modular Monolith + Quant Microservice, 1. System Overview & Architectural Philosophy, 2. Technology Stack Decisions, Appendix A — Full Portfolio Sync Sequence (End-to-End) (+4 more)
 
 ### Community 133 - "7. Pairwise Asset Correlation Matrix"
 Cohesion: 0.25
@@ -747,8 +749,8 @@ Cohesion: 0.11
 Nodes (17): 1.1 Structural Modularization & Monorepo Topology, 1.2 Type Safety & Static Analysis, 1. Architecture & Code Quality Audit, 2.1 Cryptographic Storage & Encryption at Rest, 2.2 OWASP Top 10 (2021) Compliance Matrix, 2. Security, Cryptography & Compliance Certification, 3.1 Mathematical Soundness & Precision Standards, 3. Quantitative Analytics & Financial Correctness Audit (+9 more)
 
 ### Community 135 - "TestDiversificationScoringThresholds"
-Cohesion: 0.09
-Nodes (12): Enforces the three task-specification validation requirements: 1. single-stock…, VALIDATION REQUIREMENT 1: 'Verify single-stock portfolio yields near-zero…, VALIDATION REQUIREMENT 2: 'Concentrated portfolios receive appropriately low…, VALIDATION REQUIREMENT 3: 'Diverse multi-asset portfolios receive high scores.'…, Structural validation: concentrated score must be materially lower than…, Effective N must satisfy its mathematical relationships., Neff ≥ 1 for all portfolios (single-stock lower bound)., Neff ≤ N_assets for all portfolios (equal-weight upper bound). (+4 more)
+Cohesion: 0.20
+Nodes (6): Enforces the three task-specification validation requirements: 1. single-stock…, VALIDATION REQUIREMENT 1: 'Verify single-stock portfolio yields near-zero…, VALIDATION REQUIREMENT 2: 'Concentrated portfolios receive appropriately low…, VALIDATION REQUIREMENT 3: 'Diverse multi-asset portfolios receive high scores.'…, Structural validation: concentrated score must be materially lower than…, TestDiversificationScoringThresholds
 
 ### Community 137 - "TestDrawdownSeriesEndpoint"
 Cohesion: 0.29
@@ -930,6 +932,10 @@ Nodes (9): PaginationQueryDto, SortOrder, IsEnum, IsInt, IsOptional, IsString, M
 Cohesion: 0.29
 Nodes (4): model_validator, Benchmark returns must be aligned (same length) with portfolio returns., All asset return series must have the same length., correlation_matrix and correlation_asset_ids must be both provided or both…
 
+### Community 224 - "TestEffectiveNInvariants"
+Cohesion: 0.20
+Nodes (6): Effective N must satisfy its mathematical relationships., Neff ≥ 1 for all portfolios (single-stock lower bound)., Neff ≤ N_assets for all portfolios (equal-weight upper bound)., Effective N % ∈ [0, 100]., Neff % = 100 iff portfolio is exactly equal-weight., TestEffectiveNInvariants
+
 ### Community 233 - "TestFormatInr"
 Cohesion: 0.22
 Nodes (7): format_inr(), Format an INR monetary value using Indian numbering (Lakhs / Crores). Examples:…, ₹1,23,45,678 → '₹1.23 Cr, ₹45,23,00,000 → '₹45.23 Cr, Negative crore values get minus prefix., Negative lakh values get minus prefix., TestFormatInr
@@ -941,6 +947,10 @@ Nodes (3): InjectQueue, ExcelExportService, Injectable
 ### Community 237 - "excel-export.service.spec.ts"
 Cohesion: 0.40
 Nodes (3): buildMockPrisma(), defaultMockPrisma(), RFC-4180
+
+### Community 240 - "7. Security & Isolation Boundaries"
+Cohesion: 0.70
+Nodes (5): 7.1 Network Boundary Architecture, 7.2 Authentication & Authorisation Architecture, 7.3 Encryption Strategy, 7.4 OWASP Top 10 Controls, 7. Security & Isolation Boundaries
 
 ### Community 244 - "CopilotSheet.tsx"
 Cohesion: 0.15
@@ -962,7 +972,7 @@ Nodes (15): build_messages(), build_system_prompt(), get_context_sources(), Conv
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `compute_diversification()` connect `compute_diversification` to `TestConcentrationRatioBenchmark`, `TestComponentScoresBenchmark`, `TestDiversificationScoringThresholds`, `TestEffectiveNBenchmark`, `TestConcentrationRatioInvariants`, `TestDiversificationEndpointSmoke`, `TestHhiBenchmark`, `test_diversification.py`, `src/analytics/__init__.py`, `date`, `TestCompositeScoreInvariants`, `TestEdgeCasesAndErrorHandling`, `TestHhiInvariants`, `TestSectorHhiInvariants`?**
+- **Why does `compute_diversification()` connect `compute_diversification` to `TestEffectiveNInvariants`, `TestConcentrationRatioBenchmark`, `TestComponentScoresBenchmark`, `TestEffectiveNBenchmark`, `TestConcentrationRatioInvariants`, `TestDiversificationEndpointSmoke`, `TestHhiBenchmark`, `test_diversification.py`, `src/analytics/__init__.py`, `date`, `TestCompositeScoreInvariants`, `TestEdgeCasesAndErrorHandling`, `TestHhiInvariants`, `TestSectorHhiInvariants`?**
   _High betweenness centrality (0.031) - this node is a cross-community bridge._
 - **Why does `PrismaService` connect `PrismaService` to `providers.module.ts`, `AlertEvaluatorEngine`, `health.service.ts`, `auth.module.ts`, `alert-evaluator.engine.ts`, `valuation.engine.ts`, `pdf-report.service.ts`, `app.module.ts`, `report.module.ts`, `ExcelExportService`, `PdfReportService`, `alert.service.ts`, `EncryptionService`, `market-data.service.spec.ts`, `AnalyticsCacheManager`, `MarketDataService`, `market-data.module.ts`, `alert.module.ts`?**
   _High betweenness centrality (0.015) - this node is a cross-community bridge._

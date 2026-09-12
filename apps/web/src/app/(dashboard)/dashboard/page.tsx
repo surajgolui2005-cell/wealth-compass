@@ -50,7 +50,7 @@ export default function DashboardPage() {
 
   const quickLinks = [
     {
-      href: defaultPortfolio ? `/portfolios/${defaultPortfolio.id}` : "/portfolios",
+      href: "/portfolios",
       label: "Portfolio Holdings",
       description: "View assets tagged by Groww, Angel One & Zerodha",
       icon: Layers,
