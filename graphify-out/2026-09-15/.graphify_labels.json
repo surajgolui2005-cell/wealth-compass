@@ -55,7 +55,7 @@
   "53": "dependencies",
   "54": "src/main.py",
   "55": "analytics.dto.ts",
-  "56": "ProviderController",
+  "56": "ProviderIngestionService",
   "57": "AlphaVantageProvider",
   "58": "market-data.module.ts",
   "59": "config/tsconfig.json",

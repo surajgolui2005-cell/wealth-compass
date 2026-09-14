@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiClient } from "@/lib/api-client";
+import { useLivePrices } from "@/hooks/useLivePrices";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -46,6 +47,7 @@ interface Holding {
   symbol: string;
   quantity: string | number;
   avgCostBasis: string | number;
+  buyValue?: string | number;
   currentPrice: string | number;
   currentValue: string | number;
   unrealizedPnL: string | number;
@@ -194,23 +196,30 @@ export default function PortfolioDetailPage() {
 
   const holdings: Holding[] = Array.isArray(holdingsData) ? holdingsData : [];
 
-  // Helper: resolve the display config from accountName when providerCode is RBI_AA
-  // e.g. accountName="Groww (via RBI AA)" → resolves to Groww's config
+  // Extract all asset tickers / symbols to poll live prices
+  const holdingSymbols = useMemo(() => {
+    return holdings.map((h: any) => h.asset?.symbol || h.symbol || h.asset?.name).filter(Boolean);
+  }, [holdings]);
+
+  // Real-time live prices polling hook (every 5s during active tab view)
+  const { getQuoteForSymbol, isMarketOpen, isLive, lastUpdated, ticks } = useLivePrices(
+    holdingSymbols,
+    { intervalMs: 5000, enabled: holdings.length > 0 },
+  );
+
+  // Helper: resolve the display config from accountName or providerCode
   const resolvePlatformConfig = (providerCode: string, accountName: string) => {
-    if (providerCode === "RBI_AA" && accountName) {
-      // Extract broker name: "Groww (via RBI AA)" → "Groww"
-      const brokerPrefix = accountName.split(" (via ")[0].split(" (")[0].trim();
-      const brokerKey = brokerPrefix.toUpperCase().replace(/ /g, "_") as any;
-      const brokerCfg = getBrokerConfig(brokerKey);
-      // If we found a real broker config (not MANUAL fallback), use it
-      if (brokerKey !== "MANUAL" && brokerCfg.label !== "Manual Entry") {
-        return { ...brokerCfg, label: brokerPrefix, shortLabel: brokerPrefix };
-      }
-      // Otherwise show the accountName directly with RBI AA styling
+    const prefix = accountName ? accountName.split(" (via ")[0].split(" (")[0].trim() : "";
+    const candidate = prefix || providerCode;
+    const cfg = getBrokerConfig(candidate);
+    if (cfg.label !== "Manual Entry" && cfg.label !== "RBI AA") {
+      return { ...cfg, label: prefix || cfg.label, shortLabel: prefix || cfg.shortLabel };
+    }
+    if (providerCode === "RBI_AA") {
       return {
         ...getBrokerConfig("RBI_AA"),
-        label: brokerPrefix || accountName,
-        shortLabel: brokerPrefix || "RBI AA",
+        label: prefix || accountName || "RBI AA",
+        shortLabel: prefix || "RBI AA",
       };
     }
     return getBrokerConfig(providerCode);
@@ -536,10 +545,35 @@ export default function PortfolioDetailPage() {
           <Card>
             <CardHeader className="flex flex-row items-center justify-between pb-3">
               <div>
-                <CardTitle className="text-base">All Assets Across Platforms</CardTitle>
+                <div className="flex items-center gap-2">
+                  <CardTitle className="text-base">All Assets Across Platforms</CardTitle>
+                  {isLive && (
+                    <span
+                      className={cn(
+                        "inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wide border shadow-xs transition-all",
+                        isMarketOpen
+                          ? "bg-emerald-50 text-emerald-700 border-emerald-300"
+                          : "bg-slate-100 text-slate-700 border-slate-300",
+                      )}
+                    >
+                      <span
+                        className={cn(
+                          "w-2 h-2 rounded-full",
+                          isMarketOpen ? "bg-emerald-500 animate-pulse" : "bg-slate-400",
+                        )}
+                      />
+                      {isMarketOpen ? "LIVE FEED (NSE/BSE)" : "MARKET CLOSED (LTP)"}
+                    </span>
+                  )}
+                </div>
                 <p className="text-xs text-muted-foreground mt-0.5">
                   Click any broker badge to open your position on that broker&apos;s site. Click the
                   chart icon for real-time TradingView charts.
+                  {lastUpdated && (
+                    <span className="ml-1 text-muted-foreground/80 font-mono">
+                      • Ticks active ({lastUpdated.toLocaleTimeString()})
+                    </span>
+                  )}
                 </p>
               </div>
               <Badge variant="outline" className="font-mono text-xs">
@@ -567,6 +601,7 @@ export default function PortfolioDetailPage() {
                         <th className="pb-3 text-left font-medium">Platform</th>
                         <th className="pb-3 text-right font-medium">Qty</th>
                         <th className="pb-3 text-right font-medium">Avg Buy Price</th>
+                        <th className="pb-3 text-right font-medium">Buy value</th>
                         <th className="pb-3 text-right font-medium">Live Price</th>
                         <th className="pb-3 text-right font-medium">Current Value</th>
                         <th className="pb-3 text-right font-medium">Unrealised P&L</th>
@@ -583,44 +618,52 @@ export default function PortfolioDetailPage() {
                         const rawAvg =
                           h.avgCostBasis ?? h.avg_cost_basis ?? h.avgPrice ?? h.buyPrice ?? 0;
                         const avgCost = Number(rawAvg) || 0;
+                        const rawBuyVal = h.buyValue ?? h.buy_value ?? qty * avgCost;
+                        const buyValue = Number(rawBuyVal) || qty * avgCost;
+
+                        // Real-time live quote matching via Yahoo Finance adapter
+                        const liveQuote =
+                          getQuoteForSymbol(symbol) ||
+                          getQuoteForSymbol(name) ||
+                          getQuoteForSymbol(h.asset?.symbol || "");
+
                         const rawPrice =
-                          h.currentPrice ??
-                          h.current_price ??
-                          h.livePrice ??
-                          h.price ??
-                          (avgCost || 0);
+                          liveQuote && liveQuote.price > 0
+                            ? liveQuote.price
+                            : (h.currentPrice ??
+                              h.current_price ??
+                              h.livePrice ??
+                              h.price ??
+                              (avgCost || 0));
                         const curPrice = Number(rawPrice) || avgCost;
-                        const rawVal = h.currentValue ?? h.current_value ?? qty * curPrice;
+
+                        const tick = liveQuote?.symbol
+                          ? ticks[liveQuote.symbol.toUpperCase()]
+                          : ticks[symbol.toUpperCase()] || null;
+
+                        const rawVal =
+                          liveQuote && liveQuote.price > 0
+                            ? qty * curPrice
+                            : (h.currentValue ?? h.current_value ?? qty * curPrice);
                         const curValue = Number(rawVal) || qty * curPrice;
+
                         const rawPnl =
-                          h.unrealizedPnL ?? h.unrealized_pnl ?? curValue - qty * avgCost;
+                          liveQuote && liveQuote.price > 0
+                            ? curValue - buyValue
+                            : (h.unrealizedPnL ?? h.unrealized_pnl ?? curValue - buyValue);
                         const pnl = Number(rawPnl) || 0;
-                        const rawPnlPct =
-                          h.unrealizedPnLPct ??
-                          h.unrealized_pnl_pct ??
-                          (qty * avgCost > 0 ? (pnl / (qty * avgCost)) * 100 : 0);
+                        const rawPnlPct = buyValue > 0 ? (pnl / buyValue) * 100 : 0;
                         const pnlPct = Number(rawPnlPct) || 0;
                         const dir = classifyDelta(pnlPct);
                         const providerCode =
                           h.providerAccount?.providerCode ||
-                          (h.providerAccountId ? "GROWW" : "MANUAL");
+                          (h.providerAccountId ? "OTHER" : "MANUAL");
                         const accountName = h.providerAccount?.accountName || "";
-                        // For RBI AA accounts, extract the broker name from accountName
+                        // Extract specific broker code/alias from accountName or providerCode
                         const displayCode = (() => {
-                          if (providerCode === "RBI_AA" && accountName) {
-                            const prefix = accountName
-                              .split(" (via ")[0]
-                              .trim()
-                              .toUpperCase()
-                              .replace(/ /g, "_");
-                            const knownBrokers = [
-                              "GROWW",
-                              "ZERODHA",
-                              "ANGEL_ONE",
-                              "UPSTOX",
-                              "ICICI_DIRECT",
-                            ];
-                            if (knownBrokers.includes(prefix)) return prefix;
+                          if (accountName) {
+                            const prefix = accountName.split(" (via ")[0].split(" (")[0].trim();
+                            if (prefix) return prefix;
                           }
                           return providerCode;
                         })();
@@ -662,9 +705,33 @@ export default function PortfolioDetailPage() {
                               {formatCurrency(avgCost)}
                             </td>
 
-                            {/* Current Live Price */}
-                            <td className="py-3.5 text-right tabular-nums font-semibold text-foreground">
-                              {formatCurrency(curPrice)}
+                            {/* Buy Value */}
+                            <td className="py-3.5 text-right tabular-nums text-muted-foreground">
+                              {formatCurrency(buyValue)}
+                            </td>
+
+                            {/* Current Live Price with Dynamic Tick Animation */}
+                            <td className="py-3.5 text-right tabular-nums font-semibold">
+                              <div className="flex items-center justify-end gap-1.5">
+                                {tick === "up" && (
+                                  <span className="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+                                )}
+                                {tick === "down" && (
+                                  <span className="inline-block w-2 h-2 rounded-full bg-rose-500 animate-ping" />
+                                )}
+                                <span
+                                  className={cn(
+                                    "transition-colors duration-500 text-foreground",
+                                    tick === "up"
+                                      ? "text-emerald-600 font-bold bg-emerald-50 px-1.5 py-0.5 rounded-sm"
+                                      : tick === "down"
+                                        ? "text-rose-600 font-bold bg-rose-50 px-1.5 py-0.5 rounded-sm"
+                                        : "",
+                                  )}
+                                >
+                                  {formatCurrency(curPrice)}
+                                </span>
+                              </div>
                             </td>
 
                             {/* Current Value */}

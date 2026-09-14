@@ -90,6 +90,7 @@ export class PortfolioService {
           where: { deletedAt: null },
           include: {
             asset: true,
+            providerAccount: true,
           },
         },
       },

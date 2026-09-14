@@ -180,14 +180,80 @@ export class ProviderIngestionService {
     const importedTransactions = [];
     const importErrors = [...parseResult.errors];
 
+    // If importing for a specific broker account, cleanly clear prior holdings for THIS broker in THIS portfolio
+    // so importing or re-importing updates this broker without affecting holdings from other brokers (Groww, Angel One, Zerodha, etc.)
+    if (providerAccountId && this.prisma) {
+      await this.prisma.holding.updateMany({
+        where: {
+          portfolioId,
+          providerAccountId,
+          deletedAt: null,
+        },
+        data: {
+          deletedAt: new Date(),
+        },
+      });
+    }
+
     for (const rawTx of parseResult.transactions) {
       try {
         const dto = this.mapToCreateTransactionDto(portfolioId, rawTx, providerAccountId);
         const result = await this.transactionService.recordTransaction(userId, dto);
         importedTransactions.push(result.transaction);
+
+        // If statement provided closing price / market valuation, sync holding to exact statement values
+        if (
+          this.prisma &&
+          (rawTx.currentPrice !== undefined ||
+            rawTx.currentValue !== undefined ||
+            rawTx.unrealizedPnL !== undefined)
+        ) {
+          const holdingId = result.transaction.holdingId;
+          const holding = await this.prisma.holding.findUnique({ where: { id: holdingId } });
+          if (holding) {
+            const holdingQty = Number(holding.quantity.toString());
+            const holdingAvg = Number(holding.avgCostBasis.toString());
+            const newCurPrice =
+              rawTx.currentPrice !== undefined
+                ? rawTx.currentPrice
+                : holdingQty > 0 && rawTx.currentValue !== undefined
+                  ? Number((rawTx.currentValue / holdingQty).toFixed(4))
+                  : Number(holding.currentPrice.toString());
+            const newCurValue =
+              rawTx.currentValue !== undefined
+                ? rawTx.currentValue
+                : Number((holdingQty * newCurPrice).toFixed(2));
+            const newPnl =
+              rawTx.unrealizedPnL !== undefined
+                ? rawTx.unrealizedPnL
+                : Number((newCurValue - holdingQty * holdingAvg).toFixed(2));
+            const totalCost = holdingQty * holdingAvg;
+            const newPnlPct =
+              rawTx.unrealizedPnLPct !== undefined
+                ? rawTx.unrealizedPnLPct
+                : totalCost > 0
+                  ? Number(((newPnl / totalCost) * 100).toFixed(4))
+                  : 0;
+
+            await this.prisma.holding.update({
+              where: { id: holdingId },
+              data: {
+                currentPrice: newCurPrice,
+                currentValue: newCurValue,
+                unrealizedPnL: newPnl,
+                unrealizedPnLPct: newPnlPct,
+              },
+            });
+          }
+        }
       } catch (err: any) {
         importErrors.push(`Failed to import transaction for ${rawTx.symbol}: ${err.message}`);
       }
+    }
+
+    // Recalculate portfolio total net worth across all updated holdings
+    if (this.portfolioService && this.prisma) {
+      await this.portfolioService.recalculatePortfolioTotal(this.prisma, portfolioId);
     }
 
     return {

@@ -1,4 +1,4 @@
-import { AssetClassCode, ProviderCode, TransactionType } from '@prisma/client';
+import { AssetClassCode, ProviderCode, TransactionType } from "@prisma/client";
 
 export interface RawExternalHolding {
   symbol: string;
@@ -23,6 +23,11 @@ export interface RawExternalTransaction {
   providerRefId?: string;
   assetClassCode?: AssetClassCode;
   splitRatio?: number;
+  buyValue?: number;
+  currentPrice?: number;
+  currentValue?: number;
+  unrealizedPnL?: number;
+  unrealizedPnLPct?: number;
 }
 
 export interface CsvColumnMapping {
@@ -34,6 +39,10 @@ export interface CsvColumnMapping {
   feesHeader?: string;
   assetClassHeader?: string;
   notesHeader?: string;
+  buyValueHeader?: string;
+  currentPriceHeader?: string;
+  currentValueHeader?: string;
+  unrealizedPnLHeader?: string;
 }
 
 export interface CsvParseResult {

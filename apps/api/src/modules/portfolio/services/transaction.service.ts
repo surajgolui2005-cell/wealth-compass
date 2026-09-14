@@ -65,11 +65,14 @@ export class TransactionService {
         });
       }
 
-      // 3. Retrieve or create Holding for target asset
+      // 3. Retrieve or create Holding for target asset and specific broker account
+      const providerAccountId = dto.providerAccountId || null;
+
       let holding = await tx.holding.findFirst({
         where: {
           portfolioId: portfolio.id,
           assetId: asset.id,
+          providerAccountId,
           deletedAt: null,
         },
       });
@@ -79,7 +82,7 @@ export class TransactionService {
           data: {
             portfolioId: portfolio.id,
             assetId: asset.id,
-            providerAccountId: dto.providerAccountId || null,
+            providerAccountId,
             symbol: symbolUpper,
             quantity: 0,
             avgCostBasis: symbolUpper === "CASH" ? 1.0 : 0,
@@ -88,7 +91,7 @@ export class TransactionService {
             unrealizedPnL: 0,
             unrealizedPnLPct: 0,
             costCurrency: dto.currency?.toUpperCase() || portfolio.currency || "INR",
-            isManual: true,
+            isManual: !providerAccountId,
           },
         });
       }
@@ -130,7 +133,6 @@ export class TransactionService {
           currentValue: newState.currentValue,
           unrealizedPnL: newState.unrealizedPnL,
           unrealizedPnLPct: newState.unrealizedPnLPct,
-          ...(dto.providerAccountId ? { providerAccountId: dto.providerAccountId } : {}),
         },
       });
 

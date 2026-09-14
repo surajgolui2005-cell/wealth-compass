@@ -3,6 +3,7 @@ import { ConfigService } from "@nestjs/config";
 import { PrismaService } from "../../../prisma/prisma.service";
 import { AssetClassCode } from "@prisma/client";
 import { PriceCacheService } from "./price-cache.service";
+import { YahooFinanceProvider } from "../providers/yahoo-finance.provider";
 import { AlphaVantageProvider } from "../providers/alpha-vantage.provider";
 import { CoinGeckoProvider } from "../providers/coingecko.provider";
 import {
@@ -19,11 +20,6 @@ import {
  *  Tier 1 — Redis cache hit  →  Return immediately (~1ms)
  *  Tier 2 — Cache miss       →  Fetch from external provider, cache + persist (~200–500ms)
  *  Tier 3 — Provider down    →  Return latest DB row with isStale: true flag (~10–50ms)
- *
- * This guarantees:
- *  - The system always returns a price (graceful degradation)
- *  - Callers can distinguish fresh vs. stale prices via the `isStale` flag
- *  - Historical prices are NEVER overwritten — only new rows are INSERTed
  */
 @Injectable()
 export class MarketDataService {
@@ -35,14 +31,14 @@ export class MarketDataService {
   constructor(
     private readonly prisma: PrismaService,
     private readonly cache: PriceCacheService,
+    private readonly yahooFinance: YahooFinanceProvider,
     private readonly alphaVantage: AlphaVantageProvider,
     private readonly coinGecko: CoinGeckoProvider,
     private readonly config: ConfigService,
   ) {
-    this.providerMap[AssetClassCode.STOCKS] = [this.alphaVantage];
-    this.providerMap[AssetClassCode.ETFS] = [this.alphaVantage];
+    this.providerMap[AssetClassCode.STOCKS] = [this.yahooFinance, this.alphaVantage];
+    this.providerMap[AssetClassCode.ETFS] = [this.yahooFinance, this.alphaVantage];
     this.providerMap[AssetClassCode.CRYPTO] = [this.coinGecko];
-    // MUTUAL_FUNDS, BONDS, FIXED_DEPOSITS → no external provider yet; DB/manual only
   }
 
   // ── Public API ─────────────────────────────────────────────────────────────
@@ -369,5 +365,64 @@ export class MarketDataService {
     const ist = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Kolkata" }));
     const day = ist.getDay();
     return day === 0 || day === 6;
+  }
+
+  /**
+   * Fetches real-time live quotes for an array of symbols using Yahoo Finance.
+   */
+  async getLiveQuotes(symbols: string[]): Promise<{
+    isMarketOpen: boolean;
+    lastUpdated: Date;
+    quotes: Record<string, any>;
+  }> {
+    const isMarketOpen = this.yahooFinance.isMarketOpen();
+    const quoteMap = await this.yahooFinance.fetchBatchPrices(symbols);
+    const quotes: Record<string, any> = {};
+
+    quoteMap.forEach((q, sym) => {
+      quotes[sym] = {
+        symbol: q.symbol,
+        price: q.price,
+        closePrice: q.closePrice,
+        openPrice: q.openPrice,
+        highPrice: q.highPrice,
+        lowPrice: q.lowPrice,
+        volume: q.volume,
+        currency: q.currency,
+        isMarketOpen,
+        timestamp: q.priceTimestamp,
+      };
+    });
+
+    return {
+      isMarketOpen,
+      lastUpdated: new Date(),
+      quotes,
+    };
+  }
+
+  /**
+   * Fetches real-time live quotes for all active holdings in a portfolio.
+   */
+  async getLivePortfolioQuotes(portfolioId: string): Promise<{
+    isMarketOpen: boolean;
+    lastUpdated: Date;
+    quotes: Record<string, any>;
+  }> {
+    const holdings = await this.prisma.holding.findMany({
+      where: { portfolioId, deletedAt: null },
+      include: { asset: true },
+    });
+
+    const symbols = holdings.map((h) => h.asset?.symbol || h.symbol).filter(Boolean);
+
+    return this.getLiveQuotes(symbols);
+  }
+
+  /**
+   * Fetches historical OHLCV chart data for stock charts.
+   */
+  async getHistoricalChartData(symbol: string, range = "1mo", interval = "1d") {
+    return this.yahooFinance.fetchHistoricalData(symbol, range, interval);
   }
 }

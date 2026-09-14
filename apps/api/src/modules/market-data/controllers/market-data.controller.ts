@@ -209,4 +209,51 @@ export class MarketDataController {
       checkedAt: new Date().toISOString(),
     };
   }
+
+  /**
+   * GET /api/v1/market-data/live-quotes?symbols=WIPRO,JPPOWER,RELIANCE
+   *
+   * Real-time live quotes via Yahoo Finance without requiring API keys.
+   */
+  @Get("live-quotes")
+  async getLiveQuotes(@Query("symbols") symbolsParam: string) {
+    if (!symbolsParam) {
+      throw new BadRequestException("symbols query param is required");
+    }
+
+    const symbols = symbolsParam
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean);
+
+    return this.marketDataService.getLiveQuotes(symbols);
+  }
+
+  /**
+   * GET /api/v1/market-data/portfolio/:portfolioId/live
+   *
+   * Real-time live quotes for all active holdings in a specific portfolio.
+   */
+  @Get("portfolio/:portfolioId/live")
+  async getLivePortfolioQuotes(@Param("portfolioId") portfolioId: string) {
+    return this.marketDataService.getLivePortfolioQuotes(portfolioId);
+  }
+
+  /**
+   * GET /api/v1/market-data/history?symbol=WIPRO&range=1mo&interval=1d
+   *
+   * Historical OHLCV chart data for stock charts.
+   */
+  @Get("history")
+  async getHistoricalChart(
+    @Query("symbol") symbol: string,
+    @Query("range") range = "1mo",
+    @Query("interval") interval = "1d",
+  ) {
+    if (!symbol) {
+      throw new BadRequestException("symbol query param is required");
+    }
+
+    return this.marketDataService.getHistoricalChartData(symbol, range, interval);
+  }
 }

@@ -45,6 +45,7 @@ export class HoldingService {
     return rawHoldings.map((h) => {
       const q = Number(h.quantity?.toString() || 0);
       const avg = Number(h.avgCostBasis?.toString() || 0);
+      const buyVal = Number((q * avg).toFixed(2));
       const cp = Number(h.currentPrice?.toString() || avg || 0);
       const cv = Number(h.currentValue?.toString() || q * cp);
       const pnl = Number(h.unrealizedPnL?.toString() || cv - q * avg);
@@ -56,6 +57,7 @@ export class HoldingService {
         ...h,
         quantity: q,
         avgCostBasis: avg,
+        buyValue: buyVal,
         currentPrice: cp,
         currentValue: cv,
         unrealizedPnL: pnl,

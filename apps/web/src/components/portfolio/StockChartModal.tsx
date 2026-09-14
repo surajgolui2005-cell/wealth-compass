@@ -1,11 +1,37 @@
 "use client";
 
-import { useEffect, useRef, useState, useMemo } from "react";
-import { X, TrendingUp, BarChart2, Search, Info, Check, RefreshCw } from "lucide-react";
+import { useEffect, useState, useMemo } from "react";
+import {
+  TrendingUp,
+  TrendingDown,
+  BarChart2,
+  Search,
+  Info,
+  RefreshCw,
+  ExternalLink,
+  Activity,
+  Layers,
+  Clock,
+  ArrowUpRight,
+  ArrowDownRight,
+} from "lucide-react";
+import {
+  ResponsiveContainer,
+  AreaChart,
+  Area,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  CartesianGrid,
+  ReferenceLine,
+} from "recharts";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { apiClient } from "@/lib/api-client";
 import { cn } from "@/lib/utils";
 
 interface StockChartModalProps {
@@ -16,147 +42,107 @@ interface StockChartModalProps {
   name?: string;
 }
 
-// Known ISIN & Statement Name to TradingView Symbol mappings
-const KNOWN_SYMBOL_RESOLUTIONS: Record<
-  string,
-  { tvSymbol: string; isMutualFund?: boolean; note?: string }
-> = {
-  // Common Equities by ISIN
-  INE002A01018: { tvSymbol: "NSE:RELIANCE" },
-  INE009A01021: { tvSymbol: "NSE:INFY" },
-  INE090A01021: { tvSymbol: "NSE:ICICIBANK" },
-  INE467B01029: { tvSymbol: "NSE:TCS" },
-  INE040A01034: { tvSymbol: "NSE:HDFCBANK" },
-  INE062A01020: { tvSymbol: "NSE:SBIN" },
-  INE238A01034: { tvSymbol: "NSE:AXISBANK" },
-  INE081A01012: { tvSymbol: "NSE:TATAMOTORS" },
-  INE155A01022: { tvSymbol: "NSE:TATAPOWER" },
-  INE075A01022: { tvSymbol: "NSE:WIPRO" },
-  INE216A01030: { tvSymbol: "NSE:BAJFINANCE" },
-  INE918I01018: { tvSymbol: "NSE:BAJAJFINSV" },
-  INE522F01014: { tvSymbol: "NSE:COALINDIA" },
-  INE121A01024: { tvSymbol: "NSE:BHARTIARTL" },
-  INE018A01030: { tvSymbol: "NSE:LT" },
-  INE158A01026: { tvSymbol: "NSE:HEROMOTOCO" },
-  INE860A01027: { tvSymbol: "NSE:HCLTECH" },
-  INE752E01010: { tvSymbol: "NSE:POWERGRID" },
-  INE351I01018: { tvSymbol: "NSE:JPPOWER" },
+interface ChartPoint {
+  time: string;
+  timestamp: number;
+  open: number;
+  high: number;
+  low: number;
+  close: number;
+  volume: number;
+}
 
-  // Mutual Fund ISINs (Mapping to respective benchmark index/ETF)
+interface HistoryResponse {
+  symbol: string;
+  resolvedSymbol: string;
+  currency: string;
+  currentPrice: number;
+  previousClose: number;
+  change: number;
+  changePercent: number;
+  fiftyTwoWeekHigh?: number;
+  fiftyTwoWeekLow?: number;
+  regularMarketDayHigh?: number;
+  regularMarketDayLow?: number;
+  regularMarketVolume?: number;
+  range: string;
+  interval: string;
+  points: ChartPoint[];
+}
+
+const TIMEFRAMES = [
+  { label: "5D", range: "5d", interval: "15m" },
+  { label: "1M", range: "1mo", interval: "1d" },
+  { label: "6M", range: "6mo", interval: "1d" },
+  { label: "1Y", range: "1y", interval: "1d" },
+  { label: "5Y", range: "5y", interval: "1wk" },
+];
+
+// Known ISIN & Statement Name to TradingView Symbol mappings
+const KNOWN_BENCHMARK_MAPPINGS: Record<string, { displaySym: string; note?: string }> = {
   INF174K01LS2: {
-    tvSymbol: "NSE:NIFTY_MID_SELECT",
-    isMutualFund: true,
-    note: "Mutual Funds trade at daily NAV. Displaying Smallcap/Midcap benchmark.",
+    displaySym: "NIFTY_MIDCAP",
+    note: "Mutual Funds trade at daily NAV. Showing Midcap benchmark.",
   },
   INF209K01157: {
-    tvSymbol: "NSE:NIFTY",
-    isMutualFund: true,
-    note: "Mutual Funds trade at daily NAV. Displaying Nifty 50 benchmark.",
+    displaySym: "NIFTY 50",
+    note: "Mutual Funds trade at daily NAV. Showing Nifty 50 benchmark.",
   },
   INF769K01HG5: {
-    tvSymbol: "NSE:NIFTY",
-    isMutualFund: true,
-    note: "Mutual Funds trade at daily NAV. Displaying Nifty 50 benchmark.",
+    displaySym: "NIFTY 50",
+    note: "Mutual Funds trade at daily NAV. Showing Nifty 50 benchmark.",
   },
   INF846K01EW2: {
-    tvSymbol: "NSE:NIFTY",
-    isMutualFund: true,
-    note: "Mutual Funds trade at daily NAV. Displaying Nifty 50 benchmark.",
+    displaySym: "NIFTY 50",
+    note: "Mutual Funds trade at daily NAV. Showing Nifty 50 benchmark.",
   },
   INF109K01Y60: {
-    tvSymbol: "NSE:NIFTY",
-    isMutualFund: true,
-    note: "Mutual Funds trade at daily NAV. Displaying Nifty 50 benchmark.",
+    displaySym: "NIFTY 50",
+    note: "Mutual Funds trade at daily NAV. Showing Nifty 50 benchmark.",
   },
   INF200K01UT4: {
-    tvSymbol: "NSE:NIFTY_MID_SELECT",
-    isMutualFund: true,
-    note: "Mutual Funds trade at daily NAV. Displaying Smallcap benchmark.",
+    displaySym: "NIFTY_SMALLCAP",
+    note: "Mutual Funds trade at daily NAV. Showing Smallcap benchmark.",
   },
-
-  // Raw Statement & Broker Names
-  "WIPRO LTD": { tvSymbol: "NSE:WIPRO" },
-  "WIPRO LIMITED": { tvSymbol: "NSE:WIPRO" },
-  "JAIPRAKASH POWER VEN. LTD": { tvSymbol: "NSE:JPPOWER" },
-  "JAIPRAKASH POWER": { tvSymbol: "NSE:JPPOWER" },
-  JPPOWER: { tvSymbol: "NSE:JPPOWER" },
-  "TATAAML-TATAGOLD": { tvSymbol: "NSE:GOLDBEES", note: "Showing Gold ETF (GOLDBEES) live chart." },
-  TATAGOLD: { tvSymbol: "NSE:GOLDBEES", note: "Showing Gold ETF (GOLDBEES) live chart." },
+  "TATAAML-TATAGOLD": {
+    displaySym: "GOLDBEES",
+    note: "Showing Gold ETF (GOLDBEES) chart.",
+  },
+  TATAGOLD: { displaySym: "GOLDBEES", note: "Showing Gold ETF (GOLDBEES) chart." },
   "TATAAML-TATSILV": {
-    tvSymbol: "NSE:SILVERBEES",
-    note: "Showing Silver ETF (SILVERBEES) live chart.",
+    displaySym: "SILVERBEES",
+    note: "Showing Silver ETF (SILVERBEES) chart.",
   },
-  TATSILV: { tvSymbol: "NSE:SILVERBEES", note: "Showing Silver ETF (SILVERBEES) live chart." },
+  TATSILV: { displaySym: "SILVERBEES", note: "Showing Silver ETF (SILVERBEES) chart." },
   "BILLIONBRAINS GARAGE VN L": {
-    tvSymbol: "NSE:NIFTY",
-    note: "Unlisted broker parent. Displaying Nifty 50 benchmark.",
+    displaySym: "NIFTY 50",
+    note: "Unlisted private entity (Groww parent). Displaying Nifty 50 benchmark chart.",
   },
-  "RELIANCE INDUSTRIES LTD": { tvSymbol: "NSE:RELIANCE" },
-  "INFOSYS LIMITED": { tvSymbol: "NSE:INFY" },
-  "ICICI BANK LTD": { tvSymbol: "NSE:ICICIBANK" },
-  "TCS LTD": { tvSymbol: "NSE:TCS" },
-  "HDFC BANK LTD": { tvSymbol: "NSE:HDFCBANK" },
+  BILLIONBRAINS: {
+    displaySym: "NIFTY 50",
+    note: "Unlisted private entity (Groww parent). Displaying Nifty 50 benchmark chart.",
+  },
+  GROWW: {
+    displaySym: "NIFTY 50",
+    note: "Unlisted private entity (Groww parent). Displaying Nifty 50 benchmark chart.",
+  },
 };
 
-function resolveTradingViewSymbol(rawSymbol: string, rawName?: string, defaultExchange = "NSE") {
-  const symClean = (rawSymbol || "").trim().toUpperCase();
-  const nameClean = (rawName || "").trim().toUpperCase();
+function formatCurrency(val: number | undefined, currency = "INR") {
+  if (val === undefined || val === null || isNaN(val)) return "—";
+  return new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: currency === "INR" ? "INR" : "USD",
+    maximumFractionDigits: 2,
+  }).format(val);
+}
 
-  // 1. Direct dictionary match
-  if (KNOWN_SYMBOL_RESOLUTIONS[symClean]) {
-    return KNOWN_SYMBOL_RESOLUTIONS[symClean];
-  }
-  if (KNOWN_SYMBOL_RESOLUTIONS[nameClean]) {
-    return KNOWN_SYMBOL_RESOLUTIONS[nameClean];
-  }
-
-  // 2. Generic Mutual Fund detection (ISIN starts with INF or name has FUND / DIRECT / GROWTH)
-  if (
-    symClean.startsWith("INF") ||
-    nameClean.includes("FUND") ||
-    nameClean.includes("DIRECT GROWTH")
-  ) {
-    if (nameClean.includes("SMALL CAP") || nameClean.includes("SMALLCAP")) {
-      return {
-        tvSymbol: "NSE:NIFTY_MID_SELECT",
-        isMutualFund: true,
-        note: "Mutual Funds trade at daily NAV. Displaying Smallcap benchmark chart.",
-      };
-    }
-    if (nameClean.includes("MID CAP") || nameClean.includes("MIDCAP")) {
-      return {
-        tvSymbol: "NSE:NIFTY_MID_SELECT",
-        isMutualFund: true,
-        note: "Mutual Funds trade at daily NAV. Displaying Midcap benchmark chart.",
-      };
-    }
-    return {
-      tvSymbol: "NSE:NIFTY",
-      isMutualFund: true,
-      note: "Mutual Funds trade at daily NAV. Displaying Nifty 50 benchmark chart.",
-    };
-  }
-
-  // 3. Gold / Silver ETF heuristics
-  if (symClean.includes("GOLD") || nameClean.includes("GOLD")) {
-    return { tvSymbol: "NSE:GOLDBEES", note: "Showing Gold ETF (GOLDBEES) chart." };
-  }
-  if (symClean.includes("SILV") || nameClean.includes("SILVER")) {
-    return { tvSymbol: "NSE:SILVERBEES", note: "Showing Silver ETF (SILVERBEES) chart." };
-  }
-
-  // 4. Clean standard ticker (strip "LTD", "LIMITED", "-EQ", etc.)
-  let cleaned = symClean
-    .replace(/\s+LTD\.?$/i, "")
-    .replace(/\s+LIMITED$/i, "")
-    .replace(/-EQ$/i, "")
-    .replace(/[^A-Z0-9_-]/g, "");
-
-  if (cleaned.includes(":")) {
-    return { tvSymbol: cleaned };
-  }
-
-  return { tvSymbol: `${defaultExchange}:${cleaned || "NIFTY"}` };
+function formatVolume(val: number | undefined) {
+  if (!val) return "0";
+  if (val >= 10000000) return `${(val / 10000000).toFixed(2)} Cr`;
+  if (val >= 100000) return `${(val / 100000).toFixed(2)} L`;
+  if (val >= 1000) return `${(val / 1000).toFixed(1)} K`;
+  return val.toLocaleString("en-IN");
 }
 
 export function StockChartModal({
@@ -166,115 +152,166 @@ export function StockChartModal({
   exchange = "NSE",
   name,
 }: StockChartModalProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [loaded, setLoaded] = useState(false);
-
-  // Smart resolved symbol
-  const initialResolution = useMemo(
-    () => resolveTradingViewSymbol(symbol, name, exchange),
-    [symbol, name, exchange],
-  );
-
-  const [activeTvSymbol, setActiveTvSymbol] = useState(initialResolution.tvSymbol);
+  const [activeSymbol, setActiveSymbol] = useState(symbol || "");
+  const [activeTimeframe, setActiveTimeframe] = useState(TIMEFRAMES[1]); // Default 1M (index 1)
+  const [chartMode, setChartMode] = useState<"area" | "candle">("area");
   const [searchQuery, setSearchQuery] = useState("");
-  const [activeNote, setActiveNote] = useState(initialResolution.note || "");
-  const [isMf, setIsMf] = useState(Boolean(initialResolution.isMutualFund));
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [chartData, setChartData] = useState<HistoryResponse | null>(null);
 
-  // Update symbol when prop changes
+  // Benchmarking notes
+  const note = useMemo(() => {
+    const cleanSym = (activeSymbol || "").toUpperCase();
+    const cleanName = (name || "").toUpperCase();
+    if (KNOWN_BENCHMARK_MAPPINGS[cleanSym]?.note) return KNOWN_BENCHMARK_MAPPINGS[cleanSym].note;
+    if (KNOWN_BENCHMARK_MAPPINGS[cleanName]?.note) return KNOWN_BENCHMARK_MAPPINGS[cleanName].note;
+    for (const [key, val] of Object.entries(KNOWN_BENCHMARK_MAPPINGS)) {
+      if (cleanSym.includes(key) || cleanName.includes(key)) {
+        return val.note;
+      }
+    }
+    return undefined;
+  }, [activeSymbol, name]);
+
+  // Sync state when props change
   useEffect(() => {
-    const res = resolveTradingViewSymbol(symbol, name, exchange);
-    setActiveTvSymbol(res.tvSymbol);
-    setActiveNote(res.note || "");
-    setIsMf(Boolean(res.isMutualFund));
-    setSearchQuery("");
-  }, [symbol, name, exchange]);
+    if (symbol) {
+      setActiveSymbol(symbol);
+      setSearchQuery("");
+    }
+  }, [symbol]);
 
+  // Fetch Historical Chart Data
   useEffect(() => {
-    if (!open || !containerRef.current) return;
-    setLoaded(false);
+    if (!open || !activeSymbol) return;
 
-    // Clear previous widget
-    containerRef.current.innerHTML = "";
+    let isMounted = true;
+    setLoading(true);
+    setError(null);
 
-    const script = document.createElement("script");
-    script.src = "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
-    script.type = "text/javascript";
-    script.async = true;
-    script.onload = () => setLoaded(true);
-    script.innerHTML = JSON.stringify({
-      autosize: true,
-      symbol: activeTvSymbol,
-      interval: "D",
-      timezone: "Asia/Kolkata",
-      theme: "light",
-      style: "1",
-      locale: "en",
-      enable_publishing: false,
-      hide_legend: false,
-      hide_top_toolbar: false,
-      hide_side_toolbar: false,
-      allow_symbol_change: true,
-      save_image: false,
-      calendar: false,
-      support_host: "https://www.tradingview.com",
-    });
-
-    const wrapper = document.createElement("div");
-    wrapper.className = "tradingview-widget-container";
-    wrapper.style.height = "100%";
-    wrapper.style.width = "100%";
-
-    const inner = document.createElement("div");
-    inner.className = "tradingview-widget-container__widget";
-    inner.style.height = "calc(100% - 32px)";
-    inner.style.width = "100%";
-
-    wrapper.appendChild(inner);
-    wrapper.appendChild(script);
-    containerRef.current.appendChild(wrapper);
+    apiClient
+      .get<HistoryResponse>(
+        `/market-data/history?symbol=${encodeURIComponent(activeSymbol)}&range=${activeTimeframe.range}&interval=${activeTimeframe.interval}`,
+      )
+      .then((res) => {
+        if (isMounted) {
+          setChartData(res.data);
+          setLoading(false);
+        }
+      })
+      .catch((err) => {
+        if (isMounted) {
+          setError(
+            err.response?.data?.message ||
+              `Failed to load chart data for ${activeSymbol}. Try searching another ticker.`,
+          );
+          setLoading(false);
+        }
+      });
 
     return () => {
-      if (containerRef.current) containerRef.current.innerHTML = "";
+      isMounted = false;
     };
-  }, [open, activeTvSymbol]);
+  }, [open, activeSymbol, activeTimeframe]);
 
   const handleCustomSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (!searchQuery.trim()) return;
-    let query = searchQuery.trim().toUpperCase();
-    if (!query.includes(":")) {
-      query = `${exchange}:${query}`;
-    }
-    setActiveTvSymbol(query);
-    setActiveNote("");
-    setIsMf(false);
+    setActiveSymbol(searchQuery.trim().toUpperCase());
   };
 
-  const handleSelectQuickSymbol = (sym: string, note?: string) => {
-    setActiveTvSymbol(sym);
-    setActiveNote(note || "");
+  const handleSelectQuickSymbol = (sym: string) => {
+    setActiveSymbol(sym);
   };
+
+  const isPositive = (chartData?.change ?? 0) >= 0;
+  const strokeColor = isPositive ? "#10b981" : "#ef4444";
+  const fillColor = isPositive ? "#10b981" : "#ef4444";
+
+  // Calculate min & max for better chart scaling
+  const { minPrice, maxPrice } = useMemo(() => {
+    if (!chartData?.points || chartData.points.length === 0) {
+      return { minPrice: 0, maxPrice: 100 };
+    }
+    const prices = chartData.points.map((p) => p.close);
+    const min = Math.min(...prices);
+    const max = Math.max(...prices);
+    const padding = (max - min) * 0.05 || max * 0.02;
+    return {
+      minPrice: Math.max(0, Math.floor(min - padding)),
+      maxPrice: Math.ceil(max + padding),
+    };
+  }, [chartData]);
+
+  // TradingView Symbol for external platform redirection
+  const tvExternalSymbol = useMemo(() => {
+    let s = (activeSymbol || "").toUpperCase();
+    if (s.endsWith(".NS")) s = `NSE:${s.replace(".NS", "")}`;
+    else if (s.endsWith(".BO")) s = `BSE:${s.replace(".BO", "")}`;
+    else if (!s.includes(":")) s = `NSE:${s}`;
+    return s;
+  }, [activeSymbol]);
 
   return (
     <Dialog open={open} onOpenChange={(v: boolean) => !v && onClose()}>
-      <DialogContent className="max-w-5xl w-full p-0 overflow-hidden rounded-xl bg-card">
-        <DialogHeader className="px-4 pt-4 pb-0">
-          <div className="flex flex-wrap items-center justify-between gap-2">
+      <DialogContent className="max-w-5xl w-full p-0 overflow-hidden rounded-2xl bg-card border border-border/60 shadow-2xl">
+        <DialogHeader className="p-4 sm:p-5 border-b border-border/40 bg-muted/20">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div>
-              <DialogTitle className="flex items-center gap-2 text-base sm:text-lg font-bold">
-                <TrendingUp className="h-5 w-5 text-blue-600 shrink-0" />
-                <span className="truncate max-w-[340px] sm:max-w-md">{name ?? symbol}</span>
-                <Badge variant="secondary" className="font-mono text-xs">
-                  {activeTvSymbol}
+              <div className="flex items-center gap-2.5 flex-wrap">
+                <DialogTitle className="flex items-center gap-2 text-lg sm:text-xl font-bold tracking-tight">
+                  <Activity className="h-5 w-5 text-blue-600 dark:text-blue-400 shrink-0" />
+                  <span className="truncate max-w-[280px] sm:max-w-md">{name ?? activeSymbol}</span>
+                </DialogTitle>
+                <Badge variant="secondary" className="font-mono text-xs px-2 py-0.5">
+                  {chartData?.resolvedSymbol || activeSymbol}
                 </Badge>
-              </DialogTitle>
-              {symbol && symbol !== name && (
-                <p className="text-xs text-muted-foreground mt-0.5">Original: {symbol}</p>
+                {exchange && (
+                  <Badge
+                    variant="outline"
+                    className="text-[10px] uppercase font-semibold text-muted-foreground"
+                  >
+                    {exchange}
+                  </Badge>
+                )}
+              </div>
+
+              {/* Price & Change Banner */}
+              {chartData && (
+                <div className="flex items-baseline gap-3 mt-1.5 flex-wrap">
+                  <span className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+                    {formatCurrency(chartData.currentPrice, chartData.currency)}
+                  </span>
+                  <div
+                    className={cn(
+                      "flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-md",
+                      isPositive
+                        ? "bg-emerald-500/10 text-emerald-600 dark:text-emerald-400"
+                        : "bg-rose-500/10 text-rose-600 dark:text-rose-400",
+                    )}
+                  >
+                    {isPositive ? (
+                      <ArrowUpRight className="h-3.5 w-3.5 stroke-[2.5]" />
+                    ) : (
+                      <ArrowDownRight className="h-3.5 w-3.5 stroke-[2.5]" />
+                    )}
+                    <span>
+                      {isPositive ? "+" : ""}
+                      {formatCurrency(chartData.change, chartData.currency)} (
+                      {isPositive ? "+" : ""}
+                      {chartData.changePercent.toFixed(2)}%)
+                    </span>
+                  </div>
+                  <span className="text-[11px] text-muted-foreground font-medium">
+                    Prev Close: {formatCurrency(chartData.previousClose, chartData.currency)}
+                  </span>
+                </div>
               )}
             </div>
 
-            <div className="flex items-center gap-2">
-              {/* Custom Symbol Search */}
+            {/* Quick Actions & Search */}
+            <div className="flex items-center gap-2 pr-6">
               <form onSubmit={handleCustomSearch} className="flex items-center gap-1.5">
                 <div className="relative">
                   <Search className="h-3.5 w-3.5 absolute left-2.5 top-1/2 -translate-y-1/2 text-muted-foreground" />
@@ -283,7 +320,7 @@ export function StockChartModal({
                     placeholder="Search e.g. RELIANCE, TCS"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
-                    className="h-8 pl-8 pr-2 text-xs w-44 rounded-lg font-mono"
+                    className="h-8 pl-8 pr-2 text-xs w-40 sm:w-48 rounded-lg font-mono bg-background"
                   />
                 </div>
                 <Button type="submit" size="sm" variant="outline" className="h-8 text-xs px-2.5">
@@ -291,37 +328,39 @@ export function StockChartModal({
                 </Button>
               </form>
 
-              <button
-                onClick={onClose}
-                className="rounded-full p-1 hover:bg-muted transition-colors text-muted-foreground hover:text-foreground"
+              <a
+                href={`https://www.tradingview.com/chart/?symbol=${encodeURIComponent(tvExternalSymbol)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-background hover:bg-muted/80 px-2.5 py-1.5 text-xs text-muted-foreground hover:text-foreground transition-all shadow-xs"
+                title="Open interactive chart in full screen on TradingView.com"
               >
-                <X className="h-5 w-5" />
-              </button>
+                <ExternalLink className="h-3.5 w-3.5 text-blue-500" />
+                <span className="hidden sm:inline font-medium">TradingView</span>
+              </a>
             </div>
           </div>
 
-          {/* Mutual Fund / ETF Informational Banner */}
-          {activeNote && (
-            <div className="mt-2.5 mb-2 p-2 rounded-lg bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 text-xs flex items-center justify-between text-blue-800 dark:text-blue-200">
+          {/* Mutual Fund or Benchmark Notification */}
+          {note && (
+            <div className="mt-3 p-2 rounded-lg bg-blue-500/10 border border-blue-500/20 text-xs flex items-center justify-between text-blue-800 dark:text-blue-300">
               <div className="flex items-center gap-1.5">
-                <Info className="h-4 w-4 shrink-0 text-blue-600" />
-                <span>{activeNote}</span>
+                <Info className="h-4 w-4 shrink-0 text-blue-600 dark:text-blue-400" />
+                <span>{note}</span>
               </div>
               <div className="flex items-center gap-1 shrink-0 ml-2">
                 <span className="text-[10px] text-muted-foreground">Quick Switch:</span>
                 <button
                   type="button"
-                  onClick={() =>
-                    handleSelectQuickSymbol("NSE:NIFTY", "Displaying Nifty 50 benchmark")
-                  }
-                  className="px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-900 hover:bg-blue-200 text-[10px] font-semibold"
+                  onClick={() => handleSelectQuickSymbol("NSE:NIFTY")}
+                  className="px-1.5 py-0.5 rounded bg-blue-500/20 hover:bg-blue-500/30 text-[10px] font-semibold transition-colors"
                 >
                   Nifty 50
                 </button>
                 <button
                   type="button"
-                  onClick={() => handleSelectQuickSymbol("NSE:GOLDBEES", "Displaying Gold ETF")}
-                  className="px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-900 hover:bg-blue-200 text-[10px] font-semibold"
+                  onClick={() => handleSelectQuickSymbol("GOLDBEES")}
+                  className="px-1.5 py-0.5 rounded bg-blue-500/20 hover:bg-blue-500/30 text-[10px] font-semibold transition-colors"
                 >
                   Gold ETF
                 </button>
@@ -330,19 +369,230 @@ export function StockChartModal({
           )}
         </DialogHeader>
 
-        {/* TradingView Chart */}
-        <div className="relative" style={{ height: "560px" }}>
-          {!loaded && (
-            <div className="absolute inset-0 flex items-center justify-center bg-muted/20">
+        {/* Toolbar: Timeframe Selector & Stats */}
+        <div className="px-4 sm:px-5 py-2.5 bg-muted/10 border-b border-border/30 flex flex-wrap items-center justify-between gap-2">
+          {/* Timeframe Selector */}
+          <div className="flex items-center gap-1 bg-muted/40 p-0.5 rounded-lg border border-border/40">
+            {TIMEFRAMES.map((tf) => (
+              <button
+                key={tf.label}
+                type="button"
+                onClick={() => setActiveTimeframe(tf)}
+                className={cn(
+                  "px-2.5 py-1 text-xs font-semibold rounded-md transition-all",
+                  activeTimeframe.label === tf.label
+                    ? "bg-background text-foreground shadow-xs"
+                    : "text-muted-foreground hover:text-foreground",
+                )}
+              >
+                {tf.label}
+              </button>
+            ))}
+          </div>
+
+          {/* Quick Key Stats Bar */}
+          {chartData && (
+            <div className="hidden md:flex items-center gap-4 text-xs text-muted-foreground">
+              {chartData.regularMarketDayHigh && chartData.regularMarketDayLow && (
+                <div>
+                  <span className="text-[10px] text-muted-foreground/70 uppercase">Day Range:</span>{" "}
+                  <span className="font-semibold text-foreground">
+                    {formatCurrency(chartData.regularMarketDayLow)} -{" "}
+                    {formatCurrency(chartData.regularMarketDayHigh)}
+                  </span>
+                </div>
+              )}
+              {chartData.fiftyTwoWeekHigh && chartData.fiftyTwoWeekLow && (
+                <div>
+                  <span className="text-[10px] text-muted-foreground/70 uppercase">52W Range:</span>{" "}
+                  <span className="font-semibold text-foreground">
+                    {formatCurrency(chartData.fiftyTwoWeekLow)} -{" "}
+                    {formatCurrency(chartData.fiftyTwoWeekHigh)}
+                  </span>
+                </div>
+              )}
+              {chartData.regularMarketVolume && (
+                <div>
+                  <span className="text-[10px] text-muted-foreground/70 uppercase">Vol:</span>{" "}
+                  <span className="font-semibold text-foreground">
+                    {formatVolume(chartData.regularMarketVolume)}
+                  </span>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+
+        {/* Interactive In-App Chart Area */}
+        <div className="relative w-full p-4 sm:p-5" style={{ height: "460px" }}>
+          {loading && (
+            <div className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-card/75 backdrop-blur-xs">
               <div className="flex flex-col items-center gap-2 text-muted-foreground">
                 <div className="h-8 w-8 animate-spin rounded-full border-2 border-blue-500 border-t-transparent" />
-                <span className="text-sm">
-                  Loading TradingView live chart for {activeTvSymbol}…
+                <span className="text-xs font-medium">
+                  Fetching historical chart for {activeSymbol}…
                 </span>
               </div>
             </div>
           )}
-          <div ref={containerRef} style={{ height: "100%", width: "100%" }} />
+
+          {error ? (
+            <div className="h-full flex flex-col items-center justify-center text-center p-6 gap-3">
+              <div className="h-10 w-10 rounded-full bg-rose-500/10 flex items-center justify-center text-rose-500">
+                <Activity className="h-5 w-5" />
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-foreground">{error}</p>
+                <p className="text-xs text-muted-foreground mt-1">
+                  Try searching for another symbol like RELIANCE, TCS, or INFY.
+                </p>
+              </div>
+              <div className="flex items-center gap-2">
+                <Button
+                  size="sm"
+                  variant="outline"
+                  onClick={() => setActiveSymbol("RELIANCE")}
+                  className="text-xs"
+                >
+                  Try RELIANCE
+                </Button>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  onClick={() => setActiveSymbol("WIPRO")}
+                  className="text-xs"
+                >
+                  Try WIPRO
+                </Button>
+              </div>
+            </div>
+          ) : chartData && chartData.points.length > 0 ? (
+            <div className="h-full w-full flex flex-col">
+              {/* Main Price Area Chart */}
+              <div className="flex-1 w-full min-h-[300px]">
+                <ResponsiveContainer width="100%" height="100%">
+                  <AreaChart
+                    data={chartData.points}
+                    margin={{ top: 10, right: 10, left: -20, bottom: 0 }}
+                  >
+                    <defs>
+                      <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="5%" stopColor={fillColor} stopOpacity={0.35} />
+                        <stop offset="95%" stopColor={fillColor} stopOpacity={0.0} />
+                      </linearGradient>
+                    </defs>
+                    <CartesianGrid strokeDasharray="3 3" opacity={0.15} vertical={false} />
+                    <XAxis
+                      dataKey="time"
+                      tickLine={false}
+                      axisLine={false}
+                      tick={{ fontSize: 11, fill: "var(--muted-foreground, #888)" }}
+                      minTickGap={30}
+                    />
+                    <YAxis
+                      domain={[minPrice, maxPrice]}
+                      tickLine={false}
+                      axisLine={false}
+                      tick={{ fontSize: 11, fill: "var(--muted-foreground, #888)" }}
+                      tickFormatter={(val) => `₹${val}`}
+                    />
+                    <Tooltip
+                      content={({ active, payload }) => {
+                        if (!active || !payload || !payload.length) return null;
+                        const data = payload[0].payload as ChartPoint;
+                        const pointChange = data.close - (chartData.previousClose || data.open);
+                        const pointChangePct = chartData.previousClose
+                          ? (pointChange / chartData.previousClose) * 100
+                          : 0;
+
+                        return (
+                          <div className="bg-popover/95 backdrop-blur-md border border-border shadow-xl rounded-xl p-3 text-xs min-w-[160px] font-sans">
+                            <div className="text-[11px] font-semibold text-muted-foreground mb-1.5">
+                              {data.time}
+                            </div>
+                            <div className="text-base font-extrabold text-foreground mb-2">
+                              {formatCurrency(data.close, chartData.currency)}
+                              <span
+                                className={cn(
+                                  "ml-1.5 text-xs font-semibold",
+                                  pointChange >= 0 ? "text-emerald-500" : "text-rose-500",
+                                )}
+                              >
+                                {pointChange >= 0 ? "+" : ""}
+                                {pointChangePct.toFixed(2)}%
+                              </span>
+                            </div>
+                            <div className="grid grid-cols-2 gap-x-3 gap-y-1 text-[11px] border-t border-border/50 pt-1.5 text-muted-foreground">
+                              <div>
+                                <span>Open: </span>
+                                <span className="font-semibold text-foreground">{data.open}</span>
+                              </div>
+                              <div>
+                                <span>High: </span>
+                                <span className="font-semibold text-foreground">{data.high}</span>
+                              </div>
+                              <div>
+                                <span>Low: </span>
+                                <span className="font-semibold text-foreground">{data.low}</span>
+                              </div>
+                              <div>
+                                <span>Vol: </span>
+                                <span className="font-semibold text-foreground">
+                                  {formatVolume(data.volume)}
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      }}
+                    />
+                    <ReferenceLine
+                      y={chartData.previousClose}
+                      stroke="#888888"
+                      strokeDasharray="3 3"
+                      strokeOpacity={0.4}
+                    />
+                    <Area
+                      type="monotone"
+                      dataKey="close"
+                      stroke={strokeColor}
+                      strokeWidth={2.5}
+                      fillOpacity={1}
+                      fill="url(#chartGradient)"
+                    />
+                  </AreaChart>
+                </ResponsiveContainer>
+              </div>
+
+              {/* Volume Subplot */}
+              <div className="h-16 w-full mt-1 border-t border-border/20 pt-1">
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart
+                    data={chartData.points}
+                    margin={{ top: 0, right: 10, left: -20, bottom: 0 }}
+                  >
+                    <YAxis hide />
+                    <Bar dataKey="volume" fill={fillColor} opacity={0.35} radius={[2, 2, 0, 0]} />
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+            </div>
+          ) : (
+            <div className="h-full flex items-center justify-center text-xs text-muted-foreground">
+              No historical data points found for this timeframe.
+            </div>
+          )}
+        </div>
+
+        {/* Modal Footer */}
+        <div className="p-3 px-5 bg-muted/20 border-t border-border/40 flex items-center justify-between text-xs text-muted-foreground">
+          <div className="flex items-center gap-2">
+            <span className="inline-block h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span>Yahoo Finance Live Exchange Feed</span>
+          </div>
+          <Button variant="ghost" size="sm" onClick={onClose} className="h-7 text-xs">
+            Close
+          </Button>
         </div>
       </DialogContent>
     </Dialog>

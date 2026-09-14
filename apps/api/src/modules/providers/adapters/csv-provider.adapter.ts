@@ -326,6 +326,36 @@ export class CsvProviderAdapter implements FinancialDataProvider {
           finalSymbol = finalSymbol.split(" - ")[0].trim();
         }
 
+        // Extract statement snapshot valuation fields if present (e.g. from broker Excel/CSV holding reports)
+        const buyValField = this.getFieldValue(rowObj, headerMap.buyValueHeader);
+        let buyValue = this.cleanNumeric(buyValField);
+        if (buyValue <= 0 && quantity > 0 && pricePerUnit > 0) {
+          buyValue = Number((quantity * pricePerUnit).toFixed(2));
+        }
+
+        const curPriceField = this.getFieldValue(rowObj, headerMap.currentPriceHeader);
+        let curPrice = this.cleanNumeric(curPriceField);
+
+        const curValField = this.getFieldValue(rowObj, headerMap.currentValueHeader);
+        let curVal = this.cleanNumeric(curValField);
+
+        if (curPrice > 0 && curVal <= 0 && quantity > 0) {
+          curVal = Number((quantity * curPrice).toFixed(2));
+        } else if (curVal > 0 && curPrice <= 0 && quantity > 0) {
+          curPrice = Number((curVal / quantity).toFixed(4));
+        }
+
+        const pnlField = this.getFieldValue(rowObj, headerMap.unrealizedPnLHeader);
+        let pnl = this.cleanNumeric(pnlField);
+        const hasExplicitPnl = pnlField !== "" && !isNaN(Number(pnlField.replace(/[^\d.-]/g, "")));
+        if (!hasExplicitPnl && curVal > 0 && buyValue > 0) {
+          pnl = Number((curVal - buyValue).toFixed(2));
+        }
+
+        const hasPnl = hasExplicitPnl || (curVal > 0 && buyValue > 0);
+        const pnlPct =
+          hasPnl && buyValue > 0 ? Number(((pnl / buyValue) * 100).toFixed(4)) : undefined;
+
         transactions.push({
           symbol: finalSymbol,
           type: transactionType,
@@ -335,6 +365,11 @@ export class CsvProviderAdapter implements FinancialDataProvider {
           transactedAt,
           notes: notesVal || undefined,
           assetClassCode,
+          buyValue: buyValue > 0 ? buyValue : undefined,
+          currentPrice: curPrice > 0 ? curPrice : undefined,
+          currentValue: curVal > 0 ? curVal : undefined,
+          unrealizedPnL: hasPnl ? pnl : undefined,
+          unrealizedPnLPct: pnlPct,
         });
       } catch (err: any) {
         skippedRowsCount++;
@@ -494,6 +529,64 @@ export class CsvProviderAdapter implements FinancialDataProvider {
         findMatch(customMapping?.assetClassHeader, ["assetclass", "category", "assettype"]) || "",
       notesHeader:
         findMatch(customMapping?.notesHeader, ["notes", "description", "memo", "remarks"]) || "",
+      buyValueHeader:
+        findMatch(customMapping?.buyValueHeader, [
+          "buyvalue",
+          "buyvaluers",
+          "totalbuyvalue",
+          "investedvalue",
+          "investedamount",
+          "invested",
+          "totalinvested",
+          "totalinvestment",
+          "totalcost",
+          "costvalue",
+          "totalamount",
+          "cost",
+        ]) || "",
+      currentPriceHeader:
+        findMatch(customMapping?.currentPriceHeader, [
+          "closingprice",
+          "closingpricers",
+          "closeprice",
+          "ltp",
+          "ltprs",
+          "marketprice",
+          "currentprice",
+          "curprice",
+          "lastprice",
+          "nav",
+          "cmp",
+        ]) || "",
+      currentValueHeader:
+        findMatch(customMapping?.currentValueHeader, [
+          "closingvalue",
+          "closingvaluers",
+          "closevalue",
+          "currentvalue",
+          "curvalue",
+          "marketvalue",
+          "totalvalue",
+          "holdingvalue",
+          "value",
+          "presentvalue",
+        ]) || "",
+      unrealizedPnLHeader:
+        findMatch(customMapping?.unrealizedPnLHeader, [
+          "unrealisedpnl",
+          "unrealizedpnl",
+          "unrealisedpnlrs",
+          "unrealizedpnlrs",
+          "pnl",
+          "pnlrs",
+          "unrealisedprofitloss",
+          "unrealizedprofitloss",
+          "profitloss",
+          "gainloss",
+          "overallpnl",
+          "returns",
+          "totalpnl",
+        ]) || "",
     };
   }
 

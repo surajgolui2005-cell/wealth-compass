@@ -136,8 +136,26 @@ export const BROKER_CONFIG: Record<BrokerCode, BrokerConfig> = {
 
 export function getBrokerConfig(code: string | null | undefined): BrokerConfig {
   if (!code) return BROKER_CONFIG.MANUAL;
-  const key = code.toUpperCase() as BrokerCode;
-  return BROKER_CONFIG[key] ?? BROKER_CONFIG.MANUAL;
+  const raw = code.toUpperCase().trim().replace(/ /g, "_").replace(/-/g, "_");
+
+  // Direct match
+  if (BROKER_CONFIG[raw as BrokerCode]) {
+    return BROKER_CONFIG[raw as BrokerCode];
+  }
+
+  // Common aliases & substrings
+  if (raw.includes("ZERODHA") || raw.includes("KITE")) return BROKER_CONFIG.ZERODHA;
+  if (raw.includes("ANGEL")) return BROKER_CONFIG.ANGEL_ONE;
+  if (raw.includes("GROWW")) return BROKER_CONFIG.GROWW;
+  if (raw.includes("UPSTOX")) return BROKER_CONFIG.UPSTOX;
+  if (raw.includes("ICICI")) return BROKER_CONFIG.ICICI_DIRECT;
+  if (raw.includes("BINANCE")) return BROKER_CONFIG.BINANCE;
+  if (raw.includes("WAZIR")) return BROKER_CONFIG.WAZIRX;
+  if (raw.includes("CAMS") || raw.includes("CAS")) return BROKER_CONFIG.CAMS_CAS;
+  if (raw.includes("RBI") || raw.includes("AA") || raw.includes("SETU"))
+    return BROKER_CONFIG.RBI_AA;
+
+  return BROKER_CONFIG.MANUAL;
 }
 
 /** Returns all selectable broker options for dropdowns / sheets */

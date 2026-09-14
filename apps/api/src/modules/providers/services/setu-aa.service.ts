@@ -150,68 +150,211 @@ export class SetuAaService {
   }
 
   /**
-   * 3. Fetch FI Data (Demat Holdings across Groww, AngelOne, Zerodha, etc.)
+   * 3. Fetch FI Data (Demat Holdings across Groww, AngelOne, Zerodha, Binance, WazirX, etc.)
    */
-  async fetchFiData(consentId: string): Promise<SetuFiDataFetchResponse> {
-    this.logger.log(`Fetching FI data for consent ${consentId}`);
+  async fetchFiData(
+    consentId: string,
+    brokerName?: string | null,
+  ): Promise<SetuFiDataFetchResponse> {
+    this.logger.log(
+      `Fetching FI data for consent ${consentId} (broker: ${brokerName || "All Multi-Demat"})`,
+    );
 
-    // Standard Mock Sandbox Holdings representing multi-broker Demat accounts (CDSL / NSDL)
-    const mockHoldings: SetuFiHolding[] = [
-      {
-        isin: "INE002A01018",
-        companyName: "RELIANCE INDUSTRIES LTD",
-        quantity: 25,
-        costPrice: 2450.0,
-        currentValue: 71250.0,
-        assetType: "EQUITY",
-        broker: "Groww (Nextbillion Tech)",
-      },
-      {
-        isin: "INE009A01021",
-        companyName: "INFOSYS LIMITED",
-        quantity: 40,
-        costPrice: 1420.0,
-        currentValue: 61800.0,
-        assetType: "EQUITY",
-        broker: "Groww (Nextbillion Tech)",
-      },
-      {
-        isin: "INE090A01021",
-        companyName: "ICICI BANK LTD",
-        quantity: 60,
-        costPrice: 940.0,
-        currentValue: 73200.0,
-        assetType: "EQUITY",
-        broker: "Angel One Limited",
-      },
-      {
-        isin: "INE467B01029",
-        companyName: "TCS LTD",
-        quantity: 15,
-        costPrice: 3500.0,
-        currentValue: 62250.0,
-        assetType: "EQUITY",
-        broker: "Angel One Limited",
-      },
-      {
-        isin: "INE040A01034",
-        companyName: "HDFC BANK LTD",
-        quantity: 50,
-        costPrice: 1550.0,
-        currentValue: 82500.0,
-        assetType: "EQUITY",
-        broker: "Zerodha Broking Ltd",
-      },
-      {
-        isin: "INF174K01LS2",
-        companyName: "NIPPON INDIA SMALL CAP FUND - DIRECT GROWTH",
-        quantity: 1250.45,
-        costPrice: 120.0,
-        currentValue: 185000.0,
-        assetType: "MUTUAL_FUND",
-        broker: "CAMS / CDSL MF",
-      },
-    ];
+    const upperBroker = (brokerName || "").toUpperCase();
+
+    let mockHoldings: SetuFiHolding[] = [];
+
+    if (upperBroker.includes("BINANCE")) {
+      mockHoldings = [
+        {
+          isin: "BTCUSDT",
+          companyName: "Bitcoin (BTC)",
+          quantity: 0.25,
+          costPrice: 58000.0,
+          currentValue: 84000.0 * 83.5 * 0.25, // INR equivalent
+          assetType: "CRYPTO",
+          broker: "Binance",
+        },
+        {
+          isin: "ETHUSDT",
+          companyName: "Ethereum (ETH)",
+          quantity: 2.5,
+          costPrice: 2800.0,
+          currentValue: 3200.0 * 83.5 * 2.5,
+          assetType: "CRYPTO",
+          broker: "Binance",
+        },
+        {
+          isin: "SOLUSDT",
+          companyName: "Solana (SOL)",
+          quantity: 20,
+          costPrice: 130.0,
+          currentValue: 180.0 * 83.5 * 20,
+          assetType: "CRYPTO",
+          broker: "Binance",
+        },
+      ];
+    } else if (upperBroker.includes("WAZIR")) {
+      mockHoldings = [
+        {
+          isin: "BTC",
+          companyName: "Bitcoin (BTC/INR)",
+          quantity: 0.15,
+          costPrice: 4800000.0,
+          currentValue: 7000000.0 * 0.15,
+          assetType: "CRYPTO",
+          broker: "WazirX",
+        },
+        {
+          isin: "ETH",
+          companyName: "Ethereum (ETH/INR)",
+          quantity: 1.8,
+          costPrice: 240000.0,
+          currentValue: 275000.0 * 1.8,
+          assetType: "CRYPTO",
+          broker: "WazirX",
+        },
+        {
+          isin: "MATIC",
+          companyName: "Polygon (MATIC/INR)",
+          quantity: 1500,
+          costPrice: 45.0,
+          currentValue: 58.0 * 1500,
+          assetType: "CRYPTO",
+          broker: "WazirX",
+        },
+      ];
+    } else if (upperBroker.includes("ZERODHA") || upperBroker.includes("KITE")) {
+      mockHoldings = [
+        {
+          isin: "INE040A01034",
+          companyName: "HDFC BANK LTD",
+          quantity: 50,
+          costPrice: 1550.0,
+          currentValue: 82500.0,
+          assetType: "EQUITY",
+          broker: "Zerodha Kite",
+        },
+        {
+          isin: "INE155A01022",
+          companyName: "TATA MOTORS LTD",
+          quantity: 80,
+          costPrice: 820.0,
+          currentValue: 79200.0,
+          assetType: "EQUITY",
+          broker: "Zerodha Kite",
+        },
+        {
+          isin: "INE062A01020",
+          companyName: "STATE BANK OF INDIA",
+          quantity: 100,
+          costPrice: 680.0,
+          currentValue: 78000.0,
+          assetType: "EQUITY",
+          broker: "Zerodha Kite",
+        },
+      ];
+    } else if (upperBroker.includes("UPSTOX")) {
+      mockHoldings = [
+        {
+          isin: "INE002A01018",
+          companyName: "RELIANCE INDUSTRIES LTD",
+          quantity: 30,
+          costPrice: 2450.0,
+          currentValue: 85500.0,
+          assetType: "EQUITY",
+          broker: "Upstox",
+        },
+        {
+          isin: "INE075A01022",
+          companyName: "WIPRO LTD",
+          quantity: 120,
+          costPrice: 480.0,
+          currentValue: 64800.0,
+          assetType: "EQUITY",
+          broker: "Upstox",
+        },
+      ];
+    } else if (upperBroker.includes("ICICI")) {
+      mockHoldings = [
+        {
+          isin: "INE090A01021",
+          companyName: "ICICI BANK LTD",
+          quantity: 75,
+          costPrice: 940.0,
+          currentValue: 91500.0,
+          assetType: "EQUITY",
+          broker: "ICICI Direct",
+        },
+        {
+          isin: "INE018A01030",
+          companyName: "LARSEN & TOUBRO LTD",
+          quantity: 20,
+          costPrice: 3200.0,
+          currentValue: 71000.0,
+          assetType: "EQUITY",
+          broker: "ICICI Direct",
+        },
+      ];
+    } else {
+      // Standard multi-demat holdings across Groww, AngelOne & Zerodha
+      mockHoldings = [
+        {
+          isin: "INE002A01018",
+          companyName: "RELIANCE INDUSTRIES LTD",
+          quantity: 25,
+          costPrice: 2450.0,
+          currentValue: 71250.0,
+          assetType: "EQUITY",
+          broker: "Groww",
+        },
+        {
+          isin: "INE009A01021",
+          companyName: "INFOSYS LIMITED",
+          quantity: 40,
+          costPrice: 1420.0,
+          currentValue: 61800.0,
+          assetType: "EQUITY",
+          broker: "Groww",
+        },
+        {
+          isin: "INE090A01021",
+          companyName: "ICICI BANK LTD",
+          quantity: 60,
+          costPrice: 940.0,
+          currentValue: 73200.0,
+          assetType: "EQUITY",
+          broker: "Angel One",
+        },
+        {
+          isin: "INE467B01029",
+          companyName: "TCS LTD",
+          quantity: 15,
+          costPrice: 3500.0,
+          currentValue: 62250.0,
+          assetType: "EQUITY",
+          broker: "Angel One",
+        },
+        {
+          isin: "INE040A01034",
+          companyName: "HDFC BANK LTD",
+          quantity: 50,
+          costPrice: 1550.0,
+          currentValue: 82500.0,
+          assetType: "EQUITY",
+          broker: "Zerodha Kite",
+        },
+        {
+          isin: "INF174K01LS2",
+          companyName: "NIPPON INDIA SMALL CAP FUND - DIRECT GROWTH",
+          quantity: 1250.45,
+          costPrice: 120.0,
+          currentValue: 185000.0,
+          assetType: "MUTUAL_FUND",
+          broker: "Groww",
+        },
+      ];
+    }
 
     try {
       // Create session on Setu

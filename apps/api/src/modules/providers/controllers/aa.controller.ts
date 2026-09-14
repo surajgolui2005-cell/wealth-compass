@@ -45,6 +45,20 @@ export class FetchAaDataBodyDto {
   brokerName?: string;
 }
 
+function resolveProviderCode(brokerStr?: string | null): ProviderCode {
+  if (!brokerStr) return ProviderCode.RBI_AA;
+  const s = brokerStr.toUpperCase();
+  if (s.includes("ZERODHA") || s.includes("KITE")) return ProviderCode.ZERODHA;
+  if (s.includes("GROWW")) return ProviderCode.GROWW;
+  if (s.includes("ANGEL")) return ProviderCode.ANGEL_ONE;
+  if (s.includes("UPSTOX")) return ProviderCode.UPSTOX;
+  if (s.includes("BINANCE")) return ProviderCode.BINANCE;
+  if (s.includes("ICICI")) return ProviderCode.ICICI_DIRECT;
+  if (s.includes("WAZIR")) return ProviderCode.WAZIRX;
+  if (s.includes("CAMS") || s.includes("CAS")) return ProviderCode.CAMS_CAS;
+  return ProviderCode.RBI_AA;
+}
+
 @Controller("api/v1/aa")
 export class AaController {
   private readonly logger = new Logger(AaController.name);
@@ -102,22 +116,18 @@ export class AaController {
   ) {
     const userId = req.user.id;
     const portfolioId = body.portfolioId;
-    // brokerName is the human-friendly label (e.g. "Groww", "Zerodha")
-    // providerCode stays RBI_AA since the technical transport is always the AA framework
     const brokerName = body.brokerName || null;
-    const accountDisplayName = brokerName ? `${brokerName} (via RBI AA)` : `RBI AA Demat Sync`;
+    const providerCode = resolveProviderCode(brokerName);
+    const accountDisplayName = brokerName || "RBI AA Demat Sync";
 
     // 1. Fetch FI holdings from Setu AA service
-    const fiResult = await this.setuAaService.fetchFiData(consentId);
+    const fiResult = await this.setuAaService.fetchFiData(consentId, brokerName);
 
-    // 2. Find or Create FinancialProviderAccount for RBI AA
-    // Key by brokerName+RBI_AA so each broker gets its own platform card
-    const findKey = brokerName || "RBI_AA_DEFAULT";
+    // 2. Find or Create FinancialProviderAccount with specific ProviderCode
     let providerAccount = await this.prisma.financialProviderAccount.findFirst({
       where: {
         userId,
-        providerCode: ProviderCode.RBI_AA,
-        accountName: { contains: findKey === "RBI_AA_DEFAULT" ? "RBI AA" : brokerName! },
+        providerCode,
         deletedAt: null,
       },
     });
@@ -126,7 +136,7 @@ export class AaController {
       providerAccount = await this.prisma.financialProviderAccount.create({
         data: {
           user: { connect: { id: userId } },
-          providerCode: ProviderCode.RBI_AA,
+          providerCode,
           accountName: accountDisplayName,
           status: "CONNECTED",
           lastSyncAt: new Date(),
@@ -149,7 +159,11 @@ export class AaController {
     const importedHoldings = [];
     for (const h of fiResult.holdings) {
       const assetClassCode =
-        h.assetType === "MUTUAL_FUND" ? AssetClassCode.MUTUAL_FUNDS : AssetClassCode.STOCKS;
+        h.assetType === "CRYPTO"
+          ? AssetClassCode.CRYPTO
+          : h.assetType === "MUTUAL_FUND"
+            ? AssetClassCode.MUTUAL_FUNDS
+            : AssetClassCode.STOCKS;
 
       // Find or create asset class
       let assetClass = await this.prisma.assetClass.findUnique({
@@ -160,8 +174,16 @@ export class AaController {
         assetClass = await this.prisma.assetClass.create({
           data: {
             code: assetClassCode,
-            name: assetClassCode === AssetClassCode.MUTUAL_FUNDS ? "Mutual Funds" : "Equities",
-            category: AssetCategory.EQUITY,
+            name:
+              assetClassCode === AssetClassCode.CRYPTO
+                ? "Cryptocurrency"
+                : assetClassCode === AssetClassCode.MUTUAL_FUNDS
+                  ? "Mutual Funds"
+                  : "Equities",
+            category:
+              assetClassCode === AssetClassCode.CRYPTO
+                ? AssetCategory.ALTERNATIVE
+                : AssetCategory.EQUITY,
           },
         });
       }
