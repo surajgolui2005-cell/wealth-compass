@@ -71,6 +71,7 @@ interface HistoryResponse {
 }
 
 const TIMEFRAMES = [
+  { label: "1D", range: "1d", interval: "2m" },
   { label: "5D", range: "5d", interval: "15m" },
   { label: "1M", range: "1mo", interval: "1d" },
   { label: "6M", range: "6mo", interval: "1d" },
@@ -153,7 +154,7 @@ export function StockChartModal({
   name,
 }: StockChartModalProps) {
   const [activeSymbol, setActiveSymbol] = useState(symbol || "");
-  const [activeTimeframe, setActiveTimeframe] = useState(TIMEFRAMES[1]); // Default 1M (index 1)
+  const [activeTimeframe, setActiveTimeframe] = useState(TIMEFRAMES[0]); // Default 1D (index 0)
   const [chartMode, setChartMode] = useState<"area" | "candle">("area");
   const [searchQuery, setSearchQuery] = useState("");
   const [loading, setLoading] = useState(false);
@@ -182,36 +183,52 @@ export function StockChartModal({
     }
   }, [symbol]);
 
-  // Fetch Historical Chart Data
+  // Fetch Historical Chart Data with live polling for 1D timeframe
   useEffect(() => {
     if (!open || !activeSymbol) return;
 
     let isMounted = true;
-    setLoading(true);
-    setError(null);
 
-    apiClient
-      .get<HistoryResponse>(
-        `/market-data/history?symbol=${encodeURIComponent(activeSymbol)}&range=${activeTimeframe.range}&interval=${activeTimeframe.interval}`,
-      )
-      .then((res) => {
-        if (isMounted) {
-          setChartData(res.data);
-          setLoading(false);
-        }
-      })
-      .catch((err) => {
-        if (isMounted) {
-          setError(
-            err.response?.data?.message ||
-              `Failed to load chart data for ${activeSymbol}. Try searching another ticker.`,
-          );
-          setLoading(false);
-        }
-      });
+    const fetchData = (isInitial = false) => {
+      if (isInitial) setLoading(true);
+      setError(null);
+
+      apiClient
+        .get<HistoryResponse>(
+          `/market-data/history?symbol=${encodeURIComponent(activeSymbol)}&range=${activeTimeframe.range}&interval=${activeTimeframe.interval}`,
+        )
+        .then((res) => {
+          if (isMounted) {
+            setChartData(res.data);
+            if (isInitial) setLoading(false);
+          }
+        })
+        .catch((err) => {
+          if (isMounted) {
+            if (isInitial) {
+              setError(
+                err.response?.data?.message ||
+                  `Failed to load chart data for ${activeSymbol}. Try searching another ticker.`,
+              );
+              setLoading(false);
+            }
+          }
+        });
+    };
+
+    fetchData(true);
+
+    // If 1D live chart is selected, poll every 10 seconds for real-time price action
+    let intervalId: any = null;
+    if (activeTimeframe.range === "1d") {
+      intervalId = setInterval(() => {
+        fetchData(false);
+      }, 10000);
+    }
 
     return () => {
       isMounted = false;
+      if (intervalId) clearInterval(intervalId);
     };
   }, [open, activeSymbol, activeTimeframe]);
 

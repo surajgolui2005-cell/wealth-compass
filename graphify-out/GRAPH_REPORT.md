@@ -1,21 +1,21 @@
 # Graph Report - Investor Portolio Monitoring and Risk Management System  (2026-09-15)
 
 ## Corpus Check
-- 418 files · ~277,537 words
+- 419 files · ~517,509 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 4183 nodes · 7809 edges · 262 communities (187 shown, 75 thin omitted)
+- 4187 nodes · 7820 edges · 270 communities (193 shown, 77 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 507 edges (avg confidence: 0.75)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `493445ed`
+- Built from commit: `be7cd099`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- FinancialDataProvider
+- providers.module.ts
 - PRODUCT_DISCOVERY.md
 - PRD.md
 - AuthService
@@ -24,7 +24,7 @@
 - compilerOptions
 - package.json
 - DATABASE.md
-- PortfolioService
+- portfolio.service.ts
 - compilerOptions
 - PortfolioController
 - CamsCasPdfAdapter
@@ -60,18 +60,18 @@
 - workflows/graphify.md
 - TestDiversificationEndpointSmoke
 - GroupBy
-- [id]/page.tsx
+- alerts/page.tsx
 - test_diversification.py
-- src/analytics/__init__.py
+- routers/risk.py
 - charts/index.ts
 - @nestjs/jwt
 - compute_allocation
 - @nestjs/throttler
-- .getHoldingValuation
+- CacheableAnalytics
 - dependencies
-- src/main.py
+- src/observability.py
 - analytics.dto.ts
-- ProviderController
+- ProviderIngestionService
 - AlphaVantageProvider
 - market-data.module.ts
 - config/tsconfig.json
@@ -79,7 +79,7 @@
 - PrismaService
 - AllocationWeight
 - quant-engine
-- alert.module.ts
+- alert-evaluator.engine.ts
 - _post
 - ioredis
 - WealthCompass Cloud Infrastructure & Deployment Guide
@@ -95,17 +95,17 @@
 - Performance Benchmark & Database Optimization Report
 - mock-benchmark-server.js
 - tests/__init__.py
-- CreateTransactionDto
-- web/src/lib/api-client.ts
+- TransactionService
+- src/hooks/useCopilotChat.ts
 - app/__init__.py
 - src/__init__.py
 - TestBetaBenchmark
 - cn
-- setu-aa.service.ts
-- alert-integration.spec.ts
+- aa.controller.ts
+- alert.module.ts
 - expo
 - compute_var
-- TestSystemPromptAndRuleBasedAdapter
+- [id]/page.tsx
 - _post
 - devDependencies
 - compilerOptions
@@ -113,15 +113,15 @@
 - app.module.ts
 - Endpoints
 - TestDiversificationEndpointValidation
-- TestVolatilityBenchmark
+- RbiAccountAggregatorAdapter
 - dependencies
-- prisma.service.ts
+- report.module.ts
 - AlertController
 - AlertService
 - PdfReportService
 - dependencies
 - alert.service.ts
-- test_risk.py
+- src/analytics/__init__.py
 - Developer Onboarding & Setup Guide — Wealth Compass Platform
 - devDependencies
 - otel-tracer.ts
@@ -141,10 +141,10 @@
 - TestDiversificationScoringThresholds
 - health.service.ts
 - PortfolioDetailScreen.tsx
-- login/page.tsx
+- pdf-report.service.ts
 - 7. Pairwise Asset Correlation Matrix
 - Production Readiness Review & Final Sign-Off — Wealth Compass Platform
-- app/main.py
+- CreateTransactionDto
 - MetricsService
 - TestDrawdownSeriesEndpoint
 - TestCorrelationEndpoint
@@ -154,7 +154,7 @@
 - 5. Maximum Drawdown (MDD)
 - 6. Value at Risk (VaR)
 - 8.5 Composite Diversification Score (0–100)
-- provider.controller.ts
+- ImportCsvDto
 - Risk Methodology Specification
 - 2. Beta (Systematic Risk)
 - TestCompositeScoreInvariants
@@ -165,13 +165,13 @@
 - make_portfolio_context
 - validate-docs-links.js
 - AlertEvaluatorEngine
-- TestRPerformanceAnalyticsBenchmarks
-- @expo/vector-icons
-- 4. Benchmark Comparison Metrics
+- compute_sharpe
+- TestAllocationRouterValidation
+- analytics/allocation.py
 - logging.interceptor.ts
 - TestEffectiveNInvariants
 - TestConcentrationRatioBenchmark
-- 3. C4 Architecture Diagrams
+- src/main.py
 - @react-navigation/native-stack
 - decimal.js
 - zod
@@ -187,12 +187,13 @@
 - react-hook-form
 - tailwind-merge
 - ObservabilityModule
-- providers.module.ts
+- EncryptionService
+- CreatePortfolioDto
 - tailwind.config.ts
 - test-runner.js
 - TestSectorHhiInvariants
 - cookie-parser
-- CopilotQueryRequest
+- TestSystemPromptAndRuleBasedAdapter
 - @nestjs/common
 - WealthCompass Observability & Reliability Operations Guide
 - TestCopilotChatEndpoint
@@ -237,6 +238,7 @@
 - @hookform/resolvers
 - pdfmake
 - @pdfsmaller/pdf-decrypt
+- PortfolioService
 - @prisma/client
 - HoldingService
 - prom-client
@@ -253,16 +255,23 @@
 - analytics/app/routers/__init__.py
 - analytics/app/schemas/__init__.py
 - analytics/tests/__init__.py
+- report.controller.ts
 - react-native-webview
 - @tanstack/react-query
 - @radix-ui/react-dropdown-menu
-- .validate_aligned_lengths
-- Analytics Methodology
+- CurrencyConverterService
+- 9. Inter-Service Communication Contracts
+- CustomDummyBrokerAdapter
+- excel-export.service.spec.ts
+- 7. Security & Isolation Boundaries
+- 4. Benchmark Comparison Metrics
+- .validate_weight_sums
+- react-native-gesture-handler
 - expo-status-bar
 
 ## God Nodes (most connected - your core abstractions)
 1. `compute_diversification()` - 110 edges
-2. `cn()` - 52 edges
+2. `cn()` - 54 edges
 3. `Acceptance Criteria` - 52 edges
 4. `PrismaService` - 47 edges
 5. `AllocationWeight` - 30 edges
@@ -287,11 +296,11 @@
 ## Import Cycles
 - None detected.
 
-## Communities (262 total, 75 thin omitted)
+## Communities (270 total, 77 thin omitted)
 
-### Community 0 - "FinancialDataProvider"
-Cohesion: 0.09
-Nodes (10): ManualEntryAdapter, Injectable, MockBrokerProviderAdapter, Injectable, CsvParseResult, FinancialDataProvider, RawExternalTransaction, ProviderFactoryService (+2 more)
+### Community 0 - "providers.module.ts"
+Cohesion: 0.12
+Nodes (11): ManualEntryAdapter, Injectable, MockBrokerProviderAdapter, Injectable, CsvColumnMapping, CsvParseResult, FinancialDataProvider, RawExternalTransaction (+3 more)
 
 ### Community 1 - "PRODUCT_DISCOVERY.md"
 Cohesion: 0.07
@@ -303,15 +312,15 @@ Nodes (59): 1.1 User Story Format, 1.2 Epic Codes, 1.3 Personas Quick Reference,
 
 ### Community 3 - "AuthService"
 Cohesion: 0.07
-Nodes (31): ArgonService, Injectable, ACCESS_COOKIE_OPTIONS, AuthController, REFRESH_COOKIE_OPTIONS, Body, Controller, Get (+23 more)
+Nodes (33): ArgonService, Injectable, ACCESS_COOKIE_OPTIONS, AuthController, REFRESH_COOKIE_OPTIONS, Body, Controller, Get (+25 more)
 
 ### Community 4 - "Negative / Trade-offs"
 Cohesion: 0.05
 Nodes (87): ADR-0001: Monorepo Strategy, Compliance Check, Consequences, Constraints, Context, Decision, Directory Layout, Negative / Trade-offs (+79 more)
 
 ### Community 5 - "ARCHITECTURE.md"
-Cohesion: 0.21
-Nodes (23): 4.1 Context Relationship Patterns, 4.2 Anti-Corruption Layers, 4. Bounded Context Map, 5.1 End-to-End Pipeline Overview, 5.2 Stage 1 — Raw Data Ingestion, 5.3 Stage 2 — Normalisation, 5.4 Stage 3 — Persistence, 5.5 Stage 4 — Calculation (+15 more)
+Cohesion: 0.24
+Nodes (20): 3.1 Level 1 — System Context Diagram, 3.2 Level 2 — Container Diagram, 3.3 Level 3 — Component Diagram (NestJS API Modular Monolith), 3.4 Level 3 — Component Diagram (Python Quant Engine), 3. C4 Architecture Diagrams, 4.1 Context Relationship Patterns, 4.2 Anti-Corruption Layers, 4. Bounded Context Map (+12 more)
 
 ### Community 6 - "compilerOptions"
 Cohesion: 0.07
@@ -325,17 +334,17 @@ Nodes (26): husky, lint-staged, devDependencies, husky, lint-staged, prettier, t
 Cohesion: 0.16
 Nodes (24): 1. Overview & Technology Selection, 2. Entity-Relationship Diagram (ERD), 3. Financial Precision Standards, 4. Audit Fields & Soft Deletion Strategy, 5.1 Identity & Access Domain, 5.2 Portfolio & Ingestion Domain, 5.3 Asset & Position Domain, 5.4 Analytics, Valuation & Alert Domain (+16 more)
 
-### Community 9 - "PortfolioService"
-Cohesion: 0.12
-Nodes (14): CreatePortfolioDto, IsBoolean, IsNotEmpty, IsOptional, IsString, MaxLength, IsBoolean, IsOptional (+6 more)
+### Community 9 - "portfolio.service.ts"
+Cohesion: 0.19
+Nodes (8): IsBoolean, IsOptional, IsString, MaxLength, UpdatePortfolioDto, PortfolioNotFoundException, PortfolioModule, Module
 
 ### Community 10 - "compilerOptions"
 Cohesion: 0.10
 Nodes (20): packages/config/*, packages/config/src/index.ts, packages/shared-types/src/index.ts, packages/ui-components/src/index.ts, compilerOptions, baseUrl, esModuleInterop, forceConsistentCasingInFileNames (+12 more)
 
 ### Community 11 - "PortfolioController"
-Cohesion: 0.25
-Nodes (11): PortfolioController, Body, Controller, Delete, Get, HttpCode, Param, Post (+3 more)
+Cohesion: 0.30
+Nodes (9): PortfolioController, Controller, Delete, Get, HttpCode, Param, Put, Req (+1 more)
 
 ### Community 12 - "CamsCasPdfAdapter"
 Cohesion: 0.11
@@ -382,8 +391,8 @@ Cohesion: 0.10
 Nodes (19): BatchPriceResult, CircuitBreakerConfig, CircuitBreakerState, MarketDataProvider, ProviderUnavailableException, AlphaVantageGlobalQuote, CoinGeckoPriceResponse, SYMBOL_TO_COINGECKO_ID (+11 more)
 
 ### Community 23 - "AnalyticsCacheManager"
-Cohesion: 0.10
-Nodes (9): AnalyticsCacheManager, CacheStats, MemoryEntry, Injectable, OnEvent, Optional, AnalyticsCacheInterceptor, Injectable (+1 more)
+Cohesion: 0.09
+Nodes (14): AnalyticsCacheManager, CacheStats, MemoryEntry, Injectable, OnEvent, Optional, AnalyticsCacheInterceptor, CACHE_SCOPE_METADATA (+6 more)
 
 ### Community 24 - "scripts"
 Cohesion: 0.17
@@ -406,8 +415,8 @@ Cohesion: 0.14
 Nodes (9): MarketDataController, Body, Controller, Get, HttpCode, Param, Post, Query (+1 more)
 
 ### Community 29 - "config/package.json"
-Cohesion: 0.11
-Nodes (18): dependencies, dotenv, zod, devDependencies, @types/node, typescript, @types/node, typescript (+10 more)
+Cohesion: 0.06
+Nodes (28): dotenv, dependencies, dotenv, zod, devDependencies, @types/node, typescript, @types/node (+20 more)
 
 ### Community 30 - "shared-types/package.json"
 Cohesion: 0.20
@@ -438,8 +447,8 @@ Cohesion: 0.38
 Nodes (4): EnvConfig, envSchema, validateEnv(), runTests()
 
 ### Community 37 - "valuation.engine.ts"
-Cohesion: 0.14
-Nodes (19): CurrencyAmount, CurrencyConverterService, Injectable, AssetAllocationDto, PortfolioValuationSummaryDto, PositionValuationDto, RealizedGainDto, FifoCalculator (+11 more)
+Cohesion: 0.19
+Nodes (16): AssetAllocationDto, PortfolioValuationSummaryDto, PositionValuationDto, RealizedGainDto, FifoCalculator, FifoLot, Injectable, CalcMethod (+8 more)
 
 ### Community 38 - "Troubleshooting & Diagnostics Runbook — Wealth Compass Platform"
 Cohesion: 0.08
@@ -450,48 +459,48 @@ Cohesion: 0.08
 Nodes (13): HTTP smoke tests for POST /api/v1/risk/diversification., Minimal valid request (weights only, no correlation) → HTTP 200., Response must contain all required fields., portfolio_id in response must match request., hhi_sector = null in response when sector_weights not in request., weighted_avg_correlation = null when no correlation_matrix provided., When sector_weights provided, hhi_sector is not null., With a valid correlation matrix, correlation_data_used = true. (+5 more)
 
 ### Community 44 - "GroupBy"
-Cohesion: 0.11
-Nodes (30): GroupBy, Supported portfolio allocation breakdown dimensions., compute_allocation_endpoint(), compute_rebalance_endpoint(), post, Allocation analytics router. Exposes two computation endpoints: POST…, POST /api/v1/allocation/rebalance Accepts current allocation percentages and…, POST /api/v1/allocation/breakdown Accepts a list of portfolio positions with… (+22 more)
+Cohesion: 0.14
+Nodes (27): GroupBy, Supported portfolio allocation breakdown dimensions., compute_allocation_endpoint(), compute_rebalance_endpoint(), post, Allocation analytics router. Exposes two computation endpoints: POST…, POST /api/v1/allocation/rebalance Accepts current allocation percentages and…, POST /api/v1/allocation/breakdown Accepts a list of portfolio positions with… (+19 more)
 
-### Community 45 - "[id]/page.tsx"
+### Community 45 - "alerts/page.tsx"
 Cohesion: 0.09
-Nodes (42): AlertForm, AlertRule, alertSchema, AlertsPage(), alertTypeLabels, AnalyticsData, AnalyticsPage(), PortfolioOption (+34 more)
+Nodes (33): LoginForm, loginSchema, RegisterForm, registerSchema, AlertForm, AlertRule, alertSchema, AlertsPage() (+25 more)
 
 ### Community 46 - "test_diversification.py"
 Cohesion: 0.07
 Nodes (31): _component_a(), _component_b(), _compute_hhi(), ConcentrationRatio, DiversificationResult, Diversification & Concentration Analytics Engine…, Single Top-N concentration ratio result. Attributes ---------- n : The top-N…, Comprehensive diversification and concentration analytics output. Attributes… (+23 more)
 
-### Community 47 - "src/analytics/__init__.py"
-Cohesion: 0.04
-Nodes (84): Analytics math package for the Wealth Compass Quant Engine. Public API: twr —…, BetaResult, compute_beta(), Beta Calculator =============== Pure-math module for computing the systematic…, Beta computation output. Attributes ---------- asset_id : Portfolio or security…, Compute the portfolio beta against a benchmark. Algorithm --------- 1.…, compute_correlation(), _compute_stats() (+76 more)
+### Community 47 - "routers/risk.py"
+Cohesion: 0.06
+Nodes (50): Routers sub-package — FastAPI router modules for all analytics endpoints., compute_correlation_matrix(), compute_diversification_analytics(), compute_drawdown_series(), compute_risk_summary(), _map_var_estimate(), post, Risk Analytics Router ===================== Exposes four computation endpoints:… (+42 more)
 
 ### Community 48 - "charts/index.ts"
 Cohesion: 0.11
 Nodes (37): AllocationDonutChart(), AllocationDonutChartProps, AllocationSlice, CenterLabel(), CustomTooltip(), BenchmarkComparisonChart(), BenchmarkComparisonChartProps, BenchmarkDataPoint (+29 more)
 
 ### Community 50 - "compute_allocation"
-Cohesion: 0.08
-Nodes (27): AllocationBucket, AllocationResult, compute_allocation(), PositionRecord, Asset Allocation Aggregation Engine ===================================== Pure-…, Full allocation breakdown result for a portfolio. Attributes ----------…, Return the classification label for the position on the requested dimension., Aggregate portfolio positions into allocation buckets by the given dimension.… (+19 more)
+Cohesion: 0.12
+Nodes (18): compute_allocation(), PositionRecord, Aggregate portfolio positions into allocation buckets by the given dimension.…, A single portfolio position with its market value and classification labels.…, Normalisation holds even when Unassigned / Other bucket is present., All 5 group_by dimensions produce valid results., Buckets must be sorted descending by weight_pct., 1000 positions of equal value — sum must be exactly 100.0. (+10 more)
 
-### Community 52 - ".getHoldingValuation"
-Cohesion: 0.24
-Nodes (9): Controller, Get, HttpCode, Param, Query, Req, UseGuards, UseInterceptors (+1 more)
+### Community 52 - "CacheableAnalytics"
+Cohesion: 0.23
+Nodes (10): CacheableAnalytics(), Controller, Get, HttpCode, Param, Query, Req, UseGuards (+2 more)
 
 ### Community 53 - "dependencies"
 Cohesion: 0.07
 Nodes (29): dependencies, argon2, axios, bullmq, class-validator, @investor-pm/types, papaparse, passport (+21 more)
 
-### Community 54 - "src/main.py"
-Cohesion: 0.08
-Nodes (22): Any, health_check(), metrics_endpoint(), metrics_middleware(), get, middleware, Request, Response (+14 more)
+### Community 54 - "src/observability.py"
+Cohesion: 0.12
+Nodes (12): Any, QuantEngineMetrics, Quant Engine Observability Module ================================= Provides: -…, Lightweight in-process Prometheus metrics accumulator., Renders metrics in Prometheus text exposition format., Recursively redacts sensitive keys and values from dictionaries and strings., Formats log records as single-line JSON objects., Configures root logger with the structured JSON formatter. (+4 more)
 
 ### Community 55 - "analytics.dto.ts"
 Cohesion: 0.08
-Nodes (44): CACHE_SCOPE_METADATA, CACHE_TTL_METADATA, CacheableAnalytics(), AnalyticsClientService, Injectable, AnalyticsController, Body, Controller (+36 more)
+Nodes (41): AnalyticsClientService, Injectable, AnalyticsController, Body, Controller, HttpCode, Post, UseGuards (+33 more)
 
-### Community 56 - "ProviderController"
-Cohesion: 0.21
-Nodes (10): ProviderController, Body, Controller, Delete, Get, HttpCode, Param, Post (+2 more)
+### Community 56 - "ProviderIngestionService"
+Cohesion: 0.14
+Nodes (12): ProviderController, Body, Controller, Delete, Get, HttpCode, Param, Post (+4 more)
 
 ### Community 58 - "market-data.module.ts"
 Cohesion: 0.17
@@ -502,18 +511,18 @@ Cohesion: 0.22
 Nodes (8): compilerOptions, declaration, outDir, rootDir, extends, include, src/**/*, ../../tsconfig.json
 
 ### Community 60 - "_post"
-Cohesion: 0.11
-Nodes (17): _post(), Full HTTP integration tests for the allocation breakdown endpoint., Standard multi-asset portfolio grouped by asset_class., Sector grouping: missing sector → 'Unassigned / Other'., Geography grouping: 60/30/10 split., Currency grouping: INR/USD/BTC split., Provider grouping: ZERODHA/BINANCE/MANUAL split., Verify schema completeness — all expected fields present. (+9 more)
+Cohesion: 0.20
+Nodes (10): _post(), Full HTTP integration tests for the allocation breakdown endpoint., Standard multi-asset portfolio grouped by asset_class., Sector grouping: missing sector → 'Unassigned / Other'., Geography grouping: 60/30/10 split., Currency grouping: INR/USD/BTC split., Provider grouping: ZERODHA/BINANCE/MANUAL split., Verify schema completeness — all expected fields present. (+2 more)
 
 ### Community 61 - "PrismaService"
-Cohesion: 0.12
-Nodes (8): JwtPayload, JwtStrategy, Injectable, InsufficientCashException, InsufficientHoldingException, Optional, PrismaService, Injectable
+Cohesion: 0.13
+Nodes (10): JwtPayload, JwtStrategy, Injectable, InsufficientCashException, InsufficientHoldingException, PrismaModule, Global, Module (+2 more)
 
 ### Community 64 - "AllocationWeight"
 Cohesion: 0.08
-Nodes (28): AllocationWeight, compute_rebalance(), Portfolio Rebalance Drift Calculation Engine…, Complete rebalance calculation result. Attributes ---------- portfolio_id :…, Compute portfolio drift and required buy/sell amounts to reach target weights.…, A single bucket weight entry for rebalance input. Attributes ---------- label :…, Rebalance calculation result for a single allocation bucket. Attributes…, RebalanceBucket (+20 more)
+Nodes (29): AllocationWeight, compute_rebalance(), Portfolio Rebalance Drift Calculation Engine…, Complete rebalance calculation result. Attributes ---------- portfolio_id :…, Compute portfolio drift and required buy/sell amounts to reach target weights.…, A single bucket weight entry for rebalance input. Attributes ---------- label :…, Rebalance calculation result for a single allocation bucket. Attributes…, RebalanceBucket (+21 more)
 
-### Community 67 - "alert.module.ts"
+### Community 67 - "alert-evaluator.engine.ts"
 Cohesion: 0.16
 Nodes (21): ConcentrationRuleEvaluator, ConcentrationViolation, Injectable, DrawdownRuleEvaluator, Injectable, DriftViolation, NOTE: This evaluator expects targetWeights keys to match assetWeights keys, TargetDriftRuleEvaluator (+13 more)
 
@@ -530,8 +539,8 @@ Cohesion: 0.12
 Nodes (11): AppModule, Module, ApiErrorResponse, HttpExceptionFilter, ApiSuccessResponse, PaginationMeta, ResponseTransformInterceptor, Injectable (+3 more)
 
 ### Community 73 - "System Architecture Document"
-Cohesion: 0.19
-Nodes (17): 10. Observability Architecture, 11. Architecture Decision Records (ADR) Summary, 12. Open Questions Resolved, 1.1 Guiding Principles, 1.2 Architectural Pattern: Modular Monolith + Quant Microservice, 1. System Overview & Architectural Philosophy, 2. Technology Stack Decisions, 9.1 NestJS to Python Quant Engine (Internal REST) (+9 more)
+Cohesion: 0.27
+Nodes (12): 10. Observability Architecture, 11. Architecture Decision Records (ADR) Summary, 12. Open Questions Resolved, 1.1 Guiding Principles, 1.2 Architectural Pattern: Modular Monolith + Quant Microservice, 1. System Overview & Architectural Philosophy, 2. Technology Stack Decisions, Appendix A — Full Portfolio Sync Sequence (End-to-End) (+4 more)
 
 ### Community 74 - "observability.module.ts"
 Cohesion: 0.18
@@ -543,7 +552,7 @@ Nodes (14): _normalise_weights(), Validate and normalise asset weights to sum ex
 
 ### Community 78 - "CashFlow"
 Cohesion: 0.06
-Nodes (44): _brent_dekker(), CashFlow, compute_xirr(), _newton_raphson(), _npv(), _npv_derivative(), Extended Internal Rate of Return (XIRR) — Numerical Root-Finding Engine…, Output of the XIRR computation. Attributes ---------- xirr: Annualised XIRR as… (+36 more)
+Nodes (46): _brent_dekker(), CashFlow, compute_xirr(), _newton_raphson(), _npv(), _npv_derivative(), Extended Internal Rate of Return (XIRR) — Numerical Root-Finding Engine…, Output of the XIRR computation. Attributes ---------- xirr: Annualised XIRR as… (+38 more)
 
 ### Community 79 - "_post"
 Cohesion: 0.11
@@ -555,7 +564,7 @@ Nodes (9): Pearson correlation ρ_ij = Cov(i,j) / (σ_i × σ_j) Dataset E: EQ: 
 
 ### Community 81 - "date"
 Cohesion: 0.05
-Nodes (68): CashFlowEvent, compute_twr(), _modified_dietz(), Time-Weighted Return (TWR) — Sub-Period Compounding Engine…, Output of the TWR computation. Attributes ---------- twr_cumulative: Cumulative…, Computes the Modified Dietz return for a single sub-period. Formula: R = (EMV -…, Computes the Time-Weighted Return (TWR) via sub-period chain-linking. The…, An external cash flow event within a sub-period. Attributes ---------- date:… (+60 more)
+Nodes (65): CashFlowEvent, compute_twr(), _modified_dietz(), Time-Weighted Return (TWR) — Sub-Period Compounding Engine…, Output of the TWR computation. Attributes ---------- twr_cumulative: Cumulative…, Computes the Modified Dietz return for a single sub-period. Formula: R = (EMV -…, Computes the Time-Weighted Return (TWR) via sub-period chain-linking. The…, An external cash flow event within a sub-period. Attributes ---------- date:… (+57 more)
 
 ### Community 82 - "Performance Benchmark & Database Optimization Report"
 Cohesion: 0.11
@@ -565,27 +574,27 @@ Nodes (17): 1. Executive Summary, 2.1 Analytics Cache Manager (`AnalyticsCacheMa
 Cohesion: 0.16
 Nodes (10): BenchmarkCacheManager, cacheManager, computeDiversification(), computeValuation(), holdings, http, portfolios, server (+2 more)
 
-### Community 85 - "CreateTransactionDto"
-Cohesion: 0.07
-Nodes (25): TransactionController, Body, Controller, Get, HttpCode, Param, Post, Req (+17 more)
+### Community 85 - "TransactionService"
+Cohesion: 0.12
+Nodes (12): TransactionController, Body, Controller, Get, HttpCode, Param, Post, Req (+4 more)
 
-### Community 86 - "web/src/lib/api-client.ts"
+### Community 86 - "src/hooks/useCopilotChat.ts"
 Cohesion: 0.06
-Nodes (43): CopilotDrawer(), CopilotTrigger(), CopilotTriggerProps, StarterChips(), StarterChipsProps, CopilotMessage(), CopilotMessageProps, renderInline() (+35 more)
+Nodes (39): CopilotDrawer(), CopilotTrigger(), CopilotTriggerProps, StarterChips(), StarterChipsProps, CopilotMessage(), CopilotMessageProps, renderInline() (+31 more)
 
 ### Community 89 - "TestBetaBenchmark"
 Cohesion: 0.14
 Nodes (8): Beta = Cov(portfolio, benchmark) / Var(benchmark). Dataset A vs Dataset B…, Beta from Dataset A/B must match the closed-form Cov/Var formula., Portfolio A is more volatile than benchmark B → β > 1., The reported covariance must match the direct formula., beta == covariance / benchmark_variance exactly (internal consistency)., Portfolio returns = k × benchmark → β = k exactly., When asset and benchmark are identical except for sign on all deviations, the…, TestBetaBenchmark
 
 ### Community 91 - "cn"
-Cohesion: 0.12
-Nodes (31): AaConnectModal(), AaConnectModalProps, AddTransactionModal(), AddTransactionModalProps, ConnectPlatformModalProps, ImportCsvModal(), ImportCsvModalProps, ChartPoint (+23 more)
+Cohesion: 0.14
+Nodes (27): AaConnectModal(), AaConnectModalProps, AddTransactionModalProps, ConnectPlatformModalProps, ImportCsvModalProps, ChartPoint, formatCurrency(), formatVolume() (+19 more)
 
-### Community 92 - "setu-aa.service.ts"
-Cohesion: 0.11
-Nodes (18): getSetuAaConfig(), SetuAaConfig, AaController, Body, Controller, Get, HttpCode, Param (+10 more)
+### Community 92 - "aa.controller.ts"
+Cohesion: 0.09
+Nodes (24): getSetuAaConfig(), SetuAaConfig, AaController, CreateAaConsentBodyDto, FetchAaDataBodyDto, resolveProviderCode(), Body, Controller (+16 more)
 
-### Community 93 - "alert-integration.spec.ts"
+### Community 93 - "alert.module.ts"
 Cohesion: 0.12
 Nodes (12): RuleEvaluationSummary, AlertEventListener, HoldingUpdatedEvent, PortfolioUpdatedEvent, Injectable, InjectQueue, OnEvent, ALERT_JOBS (+4 more)
 
@@ -597,13 +606,13 @@ Nodes (33): backgroundColor, foregroundImage, adaptiveIcon, package, permissions
 Cohesion: 0.07
 Nodes (20): compute_var(), Compute Value at Risk using both Parametric and Historical Simulation methods.…, Parametric VaR uses z-scores: z_0.95 = 1.6448536, z_0.99 = 2.3263479. VaR_param…, Historical 95% VaR must equal the 5th percentile of sorted returns (negated)., Historical VaR amount = var_pct / 100 × portfolio_value., Parametric 95% VaR must match -(mean - 1.6449 × std) × portfolio_value., Parametric 99% VaR must match -(mean - 2.3263 × std) × portfolio_value., 99% VaR ≥ 95% VaR for both methods — monotonicity property. (+12 more)
 
-### Community 96 - "TestSystemPromptAndRuleBasedAdapter"
-Cohesion: 0.18
-Nodes (9): build_system_prompt(), Construct the grounded LLM system prompt. The prompt contains: - Strict ground…, System prompt must embed net worth and risk metrics., System prompt must instruct the model about SEBI restrictions., Rule-based fallback: 'What is my Sharpe ratio?' returns the correct value., Rule-based fallback: 'Show my holdings' returns allocation text., build_messages must include system + history + user messages in order., TestSystemPromptAndRuleBasedAdapter (+1 more)
+### Community 96 - "[id]/page.tsx"
+Cohesion: 0.14
+Nodes (23): DashboardPage(), Portfolio, Holding, PortfolioDetailPage(), PortfolioSummary, PortfoliosPage(), StatCard(), StatCardProps (+15 more)
 
 ### Community 97 - "_post"
 Cohesion: 0.10
-Nodes (17): _post(), Tests for the rebalance analytics engine and HTTP router.…, Full HTTP integration tests for the rebalance endpoint., All current == target → requires_rebalance = False., Equity 50% → 60%: buy = 10% × 500,000 = 50,000., HTTP response: total_buy_amount must equal total_sell_amount., Tolerance of 5% — drifts within 5% are in_tolerance., Schema completeness — all expected response fields present. (+9 more)
+Nodes (16): _post(), Full HTTP integration tests for the rebalance endpoint., All current == target → requires_rebalance = False., Equity 50% → 60%: buy = 10% × 500,000 = 50,000., HTTP response: total_buy_amount must equal total_sell_amount., Tolerance of 5% — drifts within 5% are in_tolerance., Schema completeness — all expected response fields present., Default tolerance is 2% when not specified. (+8 more)
 
 ### Community 98 - "devDependencies"
 Cohesion: 0.07
@@ -614,12 +623,12 @@ Cohesion: 0.07
 Nodes (26): compilerOptions, allowJs, esModuleInterop, incremental, isolatedModules, jsx, lib, module (+18 more)
 
 ### Community 100 - "ReportService"
-Cohesion: 0.11
-Nodes (20): GenerateCsvReportDto, GeneratePdfReportDto, IsEnum, IsOptional, IsUUID, AuthRequest, ReportController, Body (+12 more)
+Cohesion: 0.14
+Nodes (13): ReportController, Body, Controller, Get, HttpCode, Param, Post, Query (+5 more)
 
 ### Community 101 - "app.module.ts"
-Cohesion: 0.08
-Nodes (23): CacheModule, Global, Module, AlertModule, Module, AnalyticsModule, Module, AuthModule (+15 more)
+Cohesion: 0.13
+Nodes (15): AlertModule, Module, AnalyticsModule, Module, AuthModule, Module, JwtRefreshPayload, JwtRefreshStrategy (+7 more)
 
 ### Community 102 - "Endpoints"
 Cohesion: 0.07
@@ -629,15 +638,15 @@ Nodes (30): Alerts `/api/v1/alerts`, Analytics `/api/v1/analytics`, API Contract
 Cohesion: 0.10
 Nodes (11): Request validation (422) and business-logic validation (400) tests., Request without portfolio_id → HTTP 422., Request without asset_weights → HTTP 422., Empty asset_weights list → HTTP 422 (min_length=1 constraint)., Negative weight (gt=0 Pydantic constraint) → HTTP 422., Zero weight (gt=0 Pydantic constraint) → HTTP 422., correlation_matrix without correlation_asset_ids → HTTP 422., correlation_asset_ids without correlation_matrix → HTTP 422. (+3 more)
 
-### Community 104 - "TestVolatilityBenchmark"
-Cohesion: 0.15
-Nodes (7): Verify annualised volatility against hand-computed reference values. Dataset A…, Daily volatility must match hand-computed Bessel-corrected std dev., Annual volatility = daily_vol × √252 with strict tolerance., annual_volatility_pct must be exactly annual_volatility × 100., Dataset A represents typical equity returns; annual vol should be 15–35%., Minimum viable input (N=2) uses N-1=1 denominator., TestVolatilityBenchmark
+### Community 104 - "RbiAccountAggregatorAdapter"
+Cohesion: 0.18
+Nodes (4): AaAccountPayloadDto, RbiAccountAggregatorAdapter, Injectable, RawExternalHolding
 
 ### Community 105 - "dependencies"
 Cohesion: 0.08
 Nodes (25): dependencies, axios, class-variance-authority, clsx, lucide-react, next, @radix-ui/react-dialog, @radix-ui/react-label (+17 more)
 
-### Community 106 - "prisma.service.ts"
+### Community 106 - "report.module.ts"
 Cohesion: 0.16
 Nodes (8): GenerateReportPayload, REPORT_GENERATION_QUEUE, REPORT_JOBS, ReportJobType, ReportSchedulerProcessor, Processor, ReportModule, Module
 
@@ -650,20 +659,20 @@ Cohesion: 0.29
 Nodes (3): AlertService, Injectable, AlertRuleResponseDto
 
 ### Community 109 - "PdfReportService"
-Cohesion: 0.12
-Nodes (16): AllocationEntry, formatINR(), formatPct(), HoldingRow, pdfFonts, pdfMake, PdfReportService, pnlColor() (+8 more)
+Cohesion: 0.23
+Nodes (4): formatINR(), formatPct(), PdfReportService, Injectable
 
 ### Community 110 - "dependencies"
 Cohesion: 0.12
-Nodes (17): dependencies, axios, expo-secure-store, react, react-native-gesture-handler, react-native-safe-area-context, @react-navigation/bottom-tabs, @react-navigation/native (+9 more)
+Nodes (17): dependencies, axios, expo-secure-store, @expo/vector-icons, react, react-native-safe-area-context, @react-navigation/bottom-tabs, @react-navigation/native (+9 more)
 
 ### Community 111 - "alert.service.ts"
-Cohesion: 0.13
-Nodes (21): AuthRequest, AlertRuleRecord, EVALUABLE_ALERT_TYPES, AlertLogResponseDto, CreateAlertRuleDto, EvaluateAlertDto, IsBoolean, IsEnum (+13 more)
+Cohesion: 0.15
+Nodes (19): AuthRequest, AlertRuleRecord, EVALUABLE_ALERT_TYPES, AlertLogResponseDto, CreateAlertRuleDto, EvaluateAlertDto, IsBoolean, IsEnum (+11 more)
 
-### Community 112 - "test_risk.py"
-Cohesion: 0.05
-Nodes (27): compute_sharpe(), Compute the annualised Sharpe Ratio from a series of daily returns. Algorithm…, compute_sortino(), Compute the annualised Sortino Ratio from a series of daily returns. Algorithm…, Benchmark: R PerformanceAnalytics::SortinoRatio(R, MAR=0.04) Sortino ratio…, Comprehensive Quantitative Risk Engine Test Suite…, Integration endpoint must produce identical results to standalone modules., When all returns exceed the MAR, Sortino = +inf → router normalises to 9999.0. (+19 more)
+### Community 112 - "src/analytics/__init__.py"
+Cohesion: 0.04
+Nodes (61): Analytics math package for the Wealth Compass Quant Engine. Public API: twr —…, BetaResult, compute_beta(), Beta Calculator =============== Pure-math module for computing the systematic…, Beta computation output. Attributes ---------- asset_id : Portfolio or security…, Compute the portfolio beta against a benchmark. Algorithm --------- 1.…, compute_correlation(), _compute_stats() (+53 more)
 
 ### Community 113 - "Developer Onboarding & Setup Guide — Wealth Compass Platform"
 Cohesion: 0.11
@@ -741,9 +750,9 @@ Nodes (7): HealthModule, Module, ComponentHealth, HealthService, LivenessResult,
 Cohesion: 0.13
 Nodes (18): AddAssetModal(), AddAssetModalProps, styles, PlatformBadge(), PlatformBadgeProps, styles, StockChartModal(), StockChartModalProps (+10 more)
 
-### Community 132 - "login/page.tsx"
-Cohesion: 0.20
-Nodes (7): LoginForm, loginSchema, RegisterForm, registerSchema, CardDescription, CardFooter, ApiError
+### Community 132 - "pdf-report.service.ts"
+Cohesion: 0.16
+Nodes (12): AllocationEntry, HoldingRow, pdfFonts, pdfMake, pnlColor(), PortfolioReportData, RiskMetrics, TransactionRow (+4 more)
 
 ### Community 133 - "7. Pairwise Asset Correlation Matrix"
 Cohesion: 0.25
@@ -753,9 +762,9 @@ Nodes (8): 7.1 Definition, 7.2 Formula, 7.3 Parameters, 7.4 Interpretation, 7.5 
 Cohesion: 0.11
 Nodes (17): 1.1 Structural Modularization & Monorepo Topology, 1.2 Type Safety & Static Analysis, 1. Architecture & Code Quality Audit, 2.1 Cryptographic Storage & Encryption at Rest, 2.2 OWASP Top 10 (2021) Compliance Matrix, 2. Security, Cryptography & Compliance Certification, 3.1 Mathematical Soundness & Precision Standards, 3. Quantitative Analytics & Financial Correctness Audit (+9 more)
 
-### Community 135 - "app/main.py"
+### Community 135 - "CreateTransactionDto"
 Cohesion: 0.17
-Nodes (10): dotenv, LLM Adapter =========== Thin async wrapper around any OpenAI-compatible chat…, health_check(), log_request_latency(), get, middleware, Request, Response (+2 more)
+Nodes (11): CreateTransactionDto, IsEnum, IsNotEmpty, IsOptional, IsString, IsUUID, Min, Type (+3 more)
 
 ### Community 137 - "TestDrawdownSeriesEndpoint"
 Cohesion: 0.29
@@ -789,9 +798,9 @@ Nodes (7): 6.1 Definition, 6.2 Method 1: Parametric VaR (Variance-Covariance), 6
 Cohesion: 0.29
 Nodes (7): 8.5.1 Motivation, 8.5.2 Component A — Effective-N Concentration Score, 8.5.3 Component B — Correlation Penalty Score, 8.5.4 Final Composite Score, 8.5.5 Score Interpretation Table, 8.5.6 Validation Archetypes, 8.5 Composite Diversification Score (0–100)
 
-### Community 145 - "provider.controller.ts"
-Cohesion: 0.47
-Nodes (8): ConnectAccountDto, ImportCsvDto, SyncProviderDto, IsNotEmpty, IsObject, IsOptional, IsString, CsvColumnMapping
+### Community 145 - "ImportCsvDto"
+Cohesion: 0.57
+Nodes (7): ConnectAccountDto, ImportCsvDto, SyncProviderDto, IsNotEmpty, IsObject, IsOptional, IsString
 
 ### Community 146 - "Risk Methodology Specification"
 Cohesion: 0.33
@@ -806,8 +815,8 @@ Cohesion: 0.12
 Nodes (9): Composite score must satisfy strict mathematical and financial invariants., Diversification score ∈ [0, 100] for all portfolios., α + β = 1.0 (partition of unity constraint)., Score = α × comp_a + β × comp_b holds for all result objects., Both sub-scores ∈ [0, 100]., Component B = 50.0 exactly when correlation data is absent., correlation_data_used = False without matrix; True with matrix., More positively correlated assets must produce lower Component B. (+1 more)
 
 ### Community 149 - "rbi-account-aggregator.adapter.ts"
-Cohesion: 0.09
-Nodes (24): AaAccountPayloadDto, AaBankAccountData, AaBankTransactionData, AaDematHoldingData, AaEncryptedConsentToken, AaFiType, AaHandle, AaMutualFundData (+16 more)
+Cohesion: 0.13
+Nodes (20): AaBankAccountData, AaBankTransactionData, AaDematHoldingData, AaEncryptedConsentToken, AaFiType, AaHandle, AaMutualFundData, AaTermDepositData (+12 more)
 
 ### Community 150 - "8.2 Herfindahl-Hirschman Index (HHI)"
 Cohesion: 0.40
@@ -818,8 +827,8 @@ Cohesion: 0.33
 Nodes (7): ApiOperation, ApiResponse, ApiTags, HealthController, Controller, Get, Res
 
 ### Community 153 - "make_portfolio_context"
-Cohesion: 0.13
-Nodes (18): HoldingSnapshot, RiskMetricsSnapshot, detect_allocation_drift(), Rule-based engine that generates SuggestedTradeAction objects when: 1. An asset…, make_holding(), make_portfolio_context(), make_risk_metrics(), PyTest suite for the AI Portfolio Copilot service. Tests are fully self-… (+10 more)
+Cohesion: 0.12
+Nodes (19): HoldingSnapshot, RiskMetricsSnapshot, detect_allocation_drift(), Rule-based engine that generates SuggestedTradeAction objects when: 1. An asset…, make_holding(), make_portfolio_context(), make_risk_metrics(), PyTest suite for the AI Portfolio Copilot service. Tests are fully self-… (+11 more)
 
 ### Community 154 - "validate-docs-links.js"
 Cohesion: 0.32
@@ -829,13 +838,17 @@ Nodes (7): EXCLUDE_DIRS, extractLinks(), fs, getAllMarkdownFiles(), path, ROOT_D
 Cohesion: 0.31
 Nodes (3): AlertEvaluatorEngine, Injectable, InjectQueue
 
-### Community 156 - "TestRPerformanceAnalyticsBenchmarks"
-Cohesion: 0.20
-Nodes (6): Validates quantitative risk metrics against R package 'PerformanceAnalytics'…, Benchmark: R PerformanceAnalytics::VaR(R, p=0.95, method="historical") With 20…, Benchmark: R PerformanceAnalytics::SharpeRatio.annualized(R, Rf=0.04), Benchmark: R PerformanceAnalytics::maxDrawdown(R) Computes maximum peak-to-…, Benchmark: R stats::lm(R ~ Benchmark) Beta = Cov(R, R_m) / Var(R_m) Both series…, TestRPerformanceAnalyticsBenchmarks
+### Community 156 - "compute_sharpe"
+Cohesion: 0.07
+Nodes (19): compute_sharpe(), Compute the annualised Sharpe Ratio from a series of daily returns. Algorithm…, Validates quantitative risk metrics against R package 'PerformanceAnalytics'…, Benchmark: R PerformanceAnalytics::VaR(R, p=0.95, method="historical") With 20…, Benchmark: R PerformanceAnalytics::SharpeRatio.annualized(R, Rf=0.04), Benchmark: R PerformanceAnalytics::SortinoRatio(R, MAR=0.04) Sortino ratio…, Benchmark: R PerformanceAnalytics::maxDrawdown(R) Computes maximum peak-to-…, Benchmark: R stats::lm(R ~ Benchmark) Beta = Cov(R, R_m) / Var(R_m) Both series… (+11 more)
 
-### Community 158 - "4. Benchmark Comparison Metrics"
-Cohesion: 0.20
-Nodes (10): 4.1 Daily Returns, 4.2 Portfolio Beta (β), 4.3 Jensen's Alpha (α), 4.4 Tracking Error (TE), 4.5 Information Ratio (IR), 4.6 Sharpe Ratio, 4.7 Sortino Ratio, 4.8 Pearson Correlation (ρ) (+2 more)
+### Community 157 - "TestAllocationRouterValidation"
+Cohesion: 0.17
+Nodes (7): HTTP validation (422/400) tests for the allocation breakdown endpoint., Pydantic min_length=1 → 422 when positions is empty., group_by is required., Unknown dimension value → 422., market_value must be > 0 (gt=0 Pydantic constraint)., portfolio_id is required., TestAllocationRouterValidation
+
+### Community 158 - "analytics/allocation.py"
+Cohesion: 0.18
+Nodes (9): AllocationBucket, AllocationResult, Asset Allocation Aggregation Engine ===================================== Pure-…, Full allocation breakdown result for a portfolio. Attributes ----------…, Return the classification label for the position on the requested dimension., A single allocation bucket representing one group within a dimension.…, _resolve_label(), Tests for the allocation analytics engine and HTTP router.… (+1 more)
 
 ### Community 159 - "logging.interceptor.ts"
 Cohesion: 0.36
@@ -849,9 +862,9 @@ Nodes (6): Effective N must satisfy its mathematical relationships., Neff ≥ 1 
 Cohesion: 0.09
 Nodes (12): Verify Top-N Concentration Ratios (CR_N) against hand-computed values. Formula:…, 3-asset portfolio: CR_3 = 100% (top 3 = all assets)., 3-asset portfolio: CR_5 clips to actual_n=3, weight_pct=100%., 80%-dominant portfolio: CR_1 = 80%., 80%-dominant portfolio: CR_3 = 80+10+5 = 95%., 5-asset portfolio: CR_5 = 100% (all assets included)., Equal-weight 5-asset: CR_3 = 60.0%., Single-asset: all CR_N = 100%, actual_n = 1. (+4 more)
 
-### Community 162 - "3. C4 Architecture Diagrams"
-Cohesion: 0.70
-Nodes (5): 3.1 Level 1 — System Context Diagram, 3.2 Level 2 — Container Diagram, 3.3 Level 3 — Component Diagram (NestJS API Modular Monolith), 3.4 Level 3 — Component Diagram (Python Quant Engine), 3. C4 Architecture Diagrams
+### Community 162 - "src/main.py"
+Cohesion: 0.20
+Nodes (10): health_check(), metrics_endpoint(), metrics_middleware(), get, middleware, Request, Response, Quant Engine — FastAPI Application Entry Point… (+2 more)
 
 ### Community 167 - "run-benchmarks.js"
 Cohesion: 0.24
@@ -866,16 +879,20 @@ Cohesion: 0.26
 Nodes (10): errorEnvelope(), setupMockApi(), successEnvelope(), SEED_ALERTS, SEED_ANALYTICS, SEED_HOLDINGS, SEED_PORTFOLIOS, SEED_REPORTS (+2 more)
 
 ### Community 172 - "button.tsx"
-Cohesion: 0.15
-Nodes (12): ThemeToggle(), Header(), HeaderProps, navItems, Sidebar(), Button, ButtonProps, buttonVariants (+4 more)
+Cohesion: 0.11
+Nodes (15): EmptyState(), EmptyStateProps, Logo(), LogoProps, ThemeToggle(), Header(), HeaderProps, navItems (+7 more)
 
 ### Community 177 - "ObservabilityModule"
 Cohesion: 0.67
 Nodes (3): ObservabilityModule, Global, Module
 
-### Community 178 - "providers.module.ts"
-Cohesion: 0.11
-Nodes (12): CryptoModule, Global, Module, EncryptedPayload, EncryptionService, Injectable, CreateAaConsentBodyDto, FetchAaDataBodyDto (+4 more)
+### Community 178 - "EncryptionService"
+Cohesion: 0.15
+Nodes (6): CryptoModule, Global, Module, EncryptedPayload, EncryptionService, Injectable
+
+### Community 179 - "CreatePortfolioDto"
+Cohesion: 0.22
+Nodes (8): Body, Post, CreatePortfolioDto, IsBoolean, IsNotEmpty, IsOptional, IsString, MaxLength
 
 ### Community 189 - "test-runner.js"
 Cohesion: 0.23
@@ -885,9 +902,9 @@ Nodes (12): colors, fs, main(), parseJestSummary(), parsePlaywrightSummary(), pa
 Cohesion: 0.17
 Nodes (7): Sector HHI must satisfy its structural properties., hhi_sector = None when no sector_weights given., hhi_sector is a float when sector_weights are provided., Single sector → sector HHI = 10,000., Two 50/50 sectors → sector HHI = 5,000., 10 technology stocks each at 10% look diversified at asset level (HHI=1,000)…, TestSectorHhiInvariants
 
-### Community 192 - "CopilotQueryRequest"
+### Community 192 - "TestSystemPromptAndRuleBasedAdapter"
 Cohesion: 0.14
-Nodes (16): ConversationTurn, CopilotQueryRequest, CopilotResponse, HoldingSnapshot, BaseModel, model_validator, Pydantic schemas for POST /copilot/chat. All monetary values are expressed in…, A single turn in the multi-turn conversation history. (+8 more)
+Nodes (18): ConversationTurn, CopilotQueryRequest, CopilotResponse, HoldingSnapshot, BaseModel, model_validator, Pydantic schemas for POST /copilot/chat. All monetary values are expressed in…, A single turn in the multi-turn conversation history. (+10 more)
 
 ### Community 194 - "WealthCompass Observability & Reliability Operations Guide"
 Cohesion: 0.15
@@ -922,8 +939,8 @@ Cohesion: 0.20
 Nodes (6): CR_N must satisfy monotonicity and boundary properties., CR_3 ≤ CR_5 ≤ CR_10 for any portfolio., All CR_N values ∈ [0, 100]., CR_N where N ≥ total assets → 100%., actual_n must not exceed total number of assets., TestConcentrationRatioInvariants
 
 ### Community 214 - "LLMAdapter"
-Cohesion: 0.19
-Nodes (7): LLMAdapter, Call the OpenAI-compatible /chat/completions endpoint., Deterministic keyword-routing fallback used when no API key is set. Extracts…, Extract a specific metric value from the system prompt using a regex pattern…, Async LLM adapter for OpenAI-compatible chat completion APIs. Usage: adapter =…, Returns the active model identifier for inclusion in responses., Send a chat completion request and return the assistant's response text. Falls…
+Cohesion: 0.16
+Nodes (8): LLMAdapter, Call the OpenAI-compatible /chat/completions endpoint., Deterministic keyword-routing fallback used when no API key is set. Extracts…, Extract a specific metric value from the system prompt using a regex pattern…, Async LLM adapter for OpenAI-compatible chat completion APIs. Usage: adapter =…, Returns the active model identifier for inclusion in responses., Send a chat completion request and return the assistant's response text. Falls…, Rule-based fallback: 'Show my holdings' returns allocation text.
 
 ### Community 217 - "validate-workflows.js"
 Cohesion: 0.33
@@ -933,17 +950,21 @@ Nodes (4): fs, path, WORKFLOWS_DIR, yaml
 Cohesion: 0.18
 Nodes (9): PaginationQueryDto, SortOrder, IsEnum, IsInt, IsOptional, IsString, Max, Min (+1 more)
 
+### Community 224 - "CsvProviderAdapter"
+Cohesion: 0.18
+Nodes (3): CsvProviderAdapter, Injectable, Optional
+
 ### Community 233 - "TestFormatInr"
 Cohesion: 0.22
 Nodes (7): format_inr(), Format an INR monetary value using Indian numbering (Lakhs / Crores). Examples:…, ₹1,23,45,678 → '₹1.23 Cr, ₹45,23,00,000 → '₹45.23 Cr, Negative crore values get minus prefix., Negative lakh values get minus prefix., TestFormatInr
 
 ### Community 234 - "ExcelExportService"
-Cohesion: 0.20
-Nodes (6): InjectQueue, ExcelExportService, Injectable, buildMockPrisma(), defaultMockPrisma(), RFC-4180
+Cohesion: 0.32
+Nodes (3): InjectQueue, ExcelExportService, Injectable
 
-### Community 242 - "HoldingService"
-Cohesion: 0.27
-Nodes (3): HoldingService, Injectable, Optional
+### Community 240 - "PortfolioService"
+Cohesion: 0.28
+Nodes (3): PortfolioService, Injectable, Optional
 
 ### Community 244 - "CopilotSheet.tsx"
 Cohesion: 0.15
@@ -954,36 +975,52 @@ Cohesion: 0.21
 Nodes (8): build_portfolio_summary(), Build a structured plain-text summary of the live portfolio. This is the…, Portfolio summary must include total net worth in INR., Portfolio summary must include asset allocation percentages., Portfolio summary must include top holding symbols., When target_allocation is set, the drift section should appear., An empty holdings list should not raise — just omit the Top Holdings section., TestBuildPortfolioSummary
 
 ### Community 249 - "copilot_chat"
-Cohesion: 0.18
-Nodes (10): build_messages(), get_context_sources(), ConversationTurn, Copilot Context Builder ======================= Transforms a live…, Assemble the OpenAI-format messages array for the LLM chat call. Structure:…, Return a list of data source labels that were used to ground this response., copilot_chat(), post (+2 more)
+Cohesion: 0.12
+Nodes (15): build_messages(), build_system_prompt(), get_context_sources(), ConversationTurn, Copilot Context Builder ======================= Transforms a live…, Construct the grounded LLM system prompt. The prompt contains: - Strict ground…, Assemble the OpenAI-format messages array for the LLM chat call. Structure:…, Return a list of data source labels that were used to ground this response. (+7 more)
 
-### Community 263 - ".validate_aligned_lengths"
-Cohesion: 0.29
-Nodes (4): model_validator, Benchmark returns must be aligned (same length) with portfolio returns., All asset return series must have the same length., correlation_matrix and correlation_asset_ids must be both provided or both…
+### Community 257 - "report.controller.ts"
+Cohesion: 0.39
+Nodes (7): GenerateCsvReportDto, GeneratePdfReportDto, IsEnum, IsOptional, IsUUID, AuthRequest, IsDateString
 
-### Community 266 - "Analytics Methodology"
-Cohesion: 0.09
-Nodes (22): 1. Overview & Design Principles, 2.1 Purpose, 2.2 Sub-Period Boundary Rule, 2.3 Modified Dietz Sub-Period Return, 2.4 Chain-Linking, 2.5 Annualisation, 2.6 TWR vs MWR — When to Use Each, 2. Time-Weighted Return (TWR) (+14 more)
+### Community 261 - "CurrencyConverterService"
+Cohesion: 0.32
+Nodes (3): CurrencyAmount, CurrencyConverterService, Injectable
+
+### Community 262 - "9. Inter-Service Communication Contracts"
+Cohesion: 0.36
+Nodes (8): 8.1 Monorepo Structure, 8.2 Kubernetes Deployment Architecture (Production), 8. Infrastructure & Deployment Topology, 9.1 NestJS to Python Quant Engine (Internal REST), 9.2 Redis PubSub — Price Event Schema, 9.3 BullMQ Job Schemas, 9. Inter-Service Communication Contracts, Response — Python Quant Engine returns:
+
+### Community 264 - "excel-export.service.spec.ts"
+Cohesion: 0.40
+Nodes (3): buildMockPrisma(), defaultMockPrisma(), RFC-4180
+
+### Community 265 - "7. Security & Isolation Boundaries"
+Cohesion: 0.70
+Nodes (5): 7.1 Network Boundary Architecture, 7.2 Authentication & Authorisation Architecture, 7.3 Encryption Strategy, 7.4 OWASP Top 10 Controls, 7. Security & Isolation Boundaries
+
+### Community 266 - "4. Benchmark Comparison Metrics"
+Cohesion: 0.06
+Nodes (32): 1. Overview & Design Principles, 2.1 Purpose, 2.2 Sub-Period Boundary Rule, 2.3 Modified Dietz Sub-Period Return, 2.4 Chain-Linking, 2.5 Annualisation, 2.6 TWR vs MWR — When to Use Each, 2. Time-Weighted Return (TWR) (+24 more)
 
 ## Knowledge Gaps
-- **832 isolated node(s):** `name`, `version`, `private`, `dev`, `build` (+827 more)
+- **833 isolated node(s):** `name`, `version`, `private`, `dev`, `build` (+828 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **75 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **77 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `compute_diversification()` connect `compute_diversification` to `TestEffectiveNInvariants`, `TestConcentrationRatioBenchmark`, `TestComponentScoresBenchmark`, `TestEffectiveNBenchmark`, `TestConcentrationRatioInvariants`, `TestDiversificationEndpointSmoke`, `TestHhiBenchmark`, `test_diversification.py`, `src/analytics/__init__.py`, `date`, `TestCompositeScoreInvariants`, `TestEdgeCasesAndErrorHandling`, `TestHhiInvariants`, `TestSectorHhiInvariants`?**
+- **Why does `compute_diversification()` connect `compute_diversification` to `TestEffectiveNInvariants`, `TestConcentrationRatioBenchmark`, `TestComponentScoresBenchmark`, `TestEffectiveNBenchmark`, `TestConcentrationRatioInvariants`, `TestDiversificationEndpointSmoke`, `TestHhiBenchmark`, `test_diversification.py`, `routers/risk.py`, `src/analytics/__init__.py`, `TestCompositeScoreInvariants`, `TestEdgeCasesAndErrorHandling`, `TestHhiInvariants`, `TestSectorHhiInvariants`?**
   _High betweenness centrality (0.034) - this node is a cross-community bridge._
-- **Why does `PrismaService` connect `PrismaService` to `health.service.ts`, `AuthService`, `PortfolioService`, `market-data.service.ts`, `AnalyticsCacheManager`, `MarketDataService`, `AlertEvaluatorEngine`, `valuation.engine.ts`, `providers.module.ts`, `market-data.module.ts`, `alert.module.ts`, `CreateTransactionDto`, `MarketDataProcessor`, `setu-aa.service.ts`, `alert-integration.spec.ts`, `app.module.ts`, `prisma.service.ts`, `ExcelExportService`, `PdfReportService`, `alert.service.ts`, `HoldingService`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
-- **Why does `compute_allocation()` connect `compute_allocation` to `GroupBy`, `src/analytics/__init__.py`?**
+- **Why does `PrismaService` connect `PrismaService` to `providers.module.ts`, `health.service.ts`, `AuthService`, `pdf-report.service.ts`, `portfolio.service.ts`, `market-data.service.ts`, `AnalyticsCacheManager`, `MarketDataService`, `AlertEvaluatorEngine`, `valuation.engine.ts`, `market-data.module.ts`, `alert-evaluator.engine.ts`, `TransactionService`, `MarketDataProcessor`, `aa.controller.ts`, `alert.module.ts`, `CsvProviderAdapter`, `report.module.ts`, `ExcelExportService`, `PdfReportService`, `alert.service.ts`, `PortfolioService`?**
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
+- **Why does `compute_allocation()` connect `compute_allocation` to `src/analytics/__init__.py`, `GroupBy`, `analytics/allocation.py`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **Are the 8 inferred relationships involving `Acceptance Criteria` (e.g. with `1.2 Epic Codes` and `3. Epic 2 — Multi-Provider Data Ingestion & Transaction Recording`) actually correct?**
   _`Acceptance Criteria` has 8 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `name`, `version`, `private` to the rest of the system?**
-  _832 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `FinancialDataProvider` be split into smaller, more focused modules?**
-  _Cohesion score 0.09302325581395349 - nodes in this community are weakly interconnected._
+  _833 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `providers.module.ts` be split into smaller, more focused modules?**
+  _Cohesion score 0.11962833914053426 - nodes in this community are weakly interconnected._
 - **Should `PRODUCT_DISCOVERY.md` be split into smaller, more focused modules?**
   _Cohesion score 0.06835290575127974 - nodes in this community are weakly interconnected._

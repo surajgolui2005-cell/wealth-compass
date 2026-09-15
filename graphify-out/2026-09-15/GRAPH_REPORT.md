@@ -1,7 +1,7 @@
 # Graph Report - Investor Portolio Monitoring and Risk Management System  (2026-09-15)
 
 ## Corpus Check
-- 418 files · ~277,543 words
+- 418 files · ~277,537 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -71,7 +71,7 @@
 - dependencies
 - src/main.py
 - analytics.dto.ts
-- ProviderIngestionService
+- ProviderController
 - AlphaVantageProvider
 - market-data.module.ts
 - config/tsconfig.json
@@ -291,7 +291,7 @@
 
 ### Community 0 - "FinancialDataProvider"
 Cohesion: 0.09
-Nodes (11): ManualEntryAdapter, Injectable, MockBrokerProviderAdapter, Injectable, CsvParseResult, FinancialDataProvider, RawExternalTransaction, ProviderFactoryService (+3 more)
+Nodes (10): ManualEntryAdapter, Injectable, MockBrokerProviderAdapter, Injectable, CsvParseResult, FinancialDataProvider, RawExternalTransaction, ProviderFactoryService (+2 more)
 
 ### Community 1 - "PRODUCT_DISCOVERY.md"
 Cohesion: 0.07
@@ -382,8 +382,8 @@ Cohesion: 0.10
 Nodes (19): BatchPriceResult, CircuitBreakerConfig, CircuitBreakerState, MarketDataProvider, ProviderUnavailableException, AlphaVantageGlobalQuote, CoinGeckoPriceResponse, SYMBOL_TO_COINGECKO_ID (+11 more)
 
 ### Community 23 - "AnalyticsCacheManager"
-Cohesion: 0.09
-Nodes (12): AnalyticsCacheManager, CacheStats, MemoryEntry, Injectable, OnEvent, Optional, AnalyticsCacheInterceptor, Injectable (+4 more)
+Cohesion: 0.10
+Nodes (9): AnalyticsCacheManager, CacheStats, MemoryEntry, Injectable, OnEvent, Optional, AnalyticsCacheInterceptor, Injectable (+1 more)
 
 ### Community 24 - "scripts"
 Cohesion: 0.17
@@ -489,9 +489,9 @@ Nodes (22): Any, health_check(), metrics_endpoint(), metrics_middleware(), get, 
 Cohesion: 0.08
 Nodes (44): CACHE_SCOPE_METADATA, CACHE_TTL_METADATA, CacheableAnalytics(), AnalyticsClientService, Injectable, AnalyticsController, Body, Controller (+36 more)
 
-### Community 56 - "ProviderIngestionService"
-Cohesion: 0.14
-Nodes (12): ProviderController, Body, Controller, Delete, Get, HttpCode, Param, Post (+4 more)
+### Community 56 - "ProviderController"
+Cohesion: 0.21
+Nodes (10): ProviderController, Body, Controller, Delete, Get, HttpCode, Param, Post (+2 more)
 
 ### Community 58 - "market-data.module.ts"
 Cohesion: 0.17
@@ -566,8 +566,8 @@ Cohesion: 0.16
 Nodes (10): BenchmarkCacheManager, cacheManager, computeDiversification(), computeValuation(), holdings, http, portfolios, server (+2 more)
 
 ### Community 85 - "CreateTransactionDto"
-Cohesion: 0.08
-Nodes (22): TransactionController, Body, Controller, Get, HttpCode, Param, Post, Req (+14 more)
+Cohesion: 0.07
+Nodes (25): TransactionController, Body, Controller, Get, HttpCode, Param, Post, Req (+17 more)
 
 ### Community 86 - "web/src/lib/api-client.ts"
 Cohesion: 0.06
@@ -618,8 +618,8 @@ Cohesion: 0.11
 Nodes (20): GenerateCsvReportDto, GeneratePdfReportDto, IsEnum, IsOptional, IsUUID, AuthRequest, ReportController, Body (+12 more)
 
 ### Community 101 - "app.module.ts"
-Cohesion: 0.10
-Nodes (20): AlertModule, Module, AnalyticsModule, Module, AuthModule, Module, JwtRefreshPayload, JwtRefreshStrategy (+12 more)
+Cohesion: 0.08
+Nodes (23): CacheModule, Global, Module, AlertModule, Module, AnalyticsModule, Module, AuthModule (+15 more)
 
 ### Community 102 - "Endpoints"
 Cohesion: 0.07
@@ -975,7 +975,7 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `compute_diversification()` connect `compute_diversification` to `TestEffectiveNInvariants`, `TestConcentrationRatioBenchmark`, `TestComponentScoresBenchmark`, `TestEffectiveNBenchmark`, `TestConcentrationRatioInvariants`, `TestDiversificationEndpointSmoke`, `TestHhiBenchmark`, `test_diversification.py`, `src/analytics/__init__.py`, `date`, `TestCompositeScoreInvariants`, `TestEdgeCasesAndErrorHandling`, `TestHhiInvariants`, `TestSectorHhiInvariants`?**
   _High betweenness centrality (0.034) - this node is a cross-community bridge._
-- **Why does `PrismaService` connect `PrismaService` to `FinancialDataProvider`, `health.service.ts`, `AuthService`, `PortfolioService`, `market-data.service.ts`, `AnalyticsCacheManager`, `MarketDataService`, `AlertEvaluatorEngine`, `valuation.engine.ts`, `providers.module.ts`, `market-data.module.ts`, `alert.module.ts`, `MarketDataProcessor`, `setu-aa.service.ts`, `alert-integration.spec.ts`, `app.module.ts`, `prisma.service.ts`, `ExcelExportService`, `PdfReportService`, `alert.service.ts`, `HoldingService`?**
+- **Why does `PrismaService` connect `PrismaService` to `health.service.ts`, `AuthService`, `PortfolioService`, `market-data.service.ts`, `AnalyticsCacheManager`, `MarketDataService`, `AlertEvaluatorEngine`, `valuation.engine.ts`, `providers.module.ts`, `market-data.module.ts`, `alert.module.ts`, `CreateTransactionDto`, `MarketDataProcessor`, `setu-aa.service.ts`, `alert-integration.spec.ts`, `app.module.ts`, `prisma.service.ts`, `ExcelExportService`, `PdfReportService`, `alert.service.ts`, `HoldingService`?**
   _High betweenness centrality (0.018) - this node is a cross-community bridge._
 - **Why does `compute_allocation()` connect `compute_allocation` to `GroupBy`, `src/analytics/__init__.py`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
@@ -984,6 +984,6 @@ _Questions this graph is uniquely positioned to answer:_
 - **What connects `name`, `version`, `private` to the rest of the system?**
   _832 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `FinancialDataProvider` be split into smaller, more focused modules?**
-  _Cohesion score 0.08985200845665962 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09302325581395349 - nodes in this community are weakly interconnected._
 - **Should `PRODUCT_DISCOVERY.md` be split into smaller, more focused modules?**
   _Cohesion score 0.06835290575127974 - nodes in this community are weakly interconnected._

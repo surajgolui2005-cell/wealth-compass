@@ -228,7 +228,14 @@ export class YahooFinanceProvider implements MarketDataProvider {
         const dateObj = new Date(ts * 1000);
 
         let timeStr = dateObj.toISOString().split("T")[0];
-        if (range === "5d") {
+        if (range === "1d") {
+          timeStr = dateObj.toLocaleTimeString("en-IN", {
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: true,
+            timeZone: "Asia/Kolkata",
+          });
+        } else if (range === "5d") {
           timeStr = dateObj.toLocaleDateString("en-IN", {
             day: "numeric",
             month: "short",

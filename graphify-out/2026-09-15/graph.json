@@ -160,6 +160,19 @@
       "norm_label": "reportservice"
     },
     {
+      "label": "CacheModule",
+      "file_type": "code",
+      "source_file": "apps/api/src/common/cache/cache.module.ts",
+      "source_location": "L12",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_api_src_common_cache_cache_module_cachemodule",
+      "community": 101,
+      "community_name": "app.module.ts",
+      "norm_label": "cachemodule"
+    },
+    {
       "label": "AlertModule",
       "file_type": "code",
       "source_file": "apps/api/src/modules/alerts/alert.module.ts",
@@ -2305,19 +2318,6 @@
       "norm_label": "analyticscacheinterceptor"
     },
     {
-      "label": "CacheModule",
-      "file_type": "code",
-      "source_file": "apps/api/src/common/cache/cache.module.ts",
-      "source_location": "L12",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_api_src_common_cache_cache_module_cachemodule",
-      "community": 23,
-      "community_name": "AnalyticsCacheManager",
-      "norm_label": "cachemodule"
-    },
-    {
       "label": "TestFormatInr",
       "file_type": "code",
       "source_file": "services/analytics/tests/test_copilot.py",
@@ -4251,21 +4251,8 @@
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_controllers_provider_controller_providercontroller",
       "community": 56,
-      "community_name": "ProviderIngestionService",
+      "community_name": "ProviderController",
       "norm_label": "providercontroller"
-    },
-    {
-      "label": "ProviderIngestionService",
-      "file_type": "code",
-      "source_file": "apps/api/src/modules/providers/services/provider-ingestion.service.ts",
-      "source_location": "L19",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "id": "apps_api_src_modules_providers_services_provider_ingestion_service_provideringestionservice",
-      "community": 56,
-      "community_name": "ProviderIngestionService",
-      "norm_label": "provideringestionservice"
     },
     {
       "label": "AlphaVantageProvider",
@@ -5204,6 +5191,19 @@
       "norm_label": "transactionservice"
     },
     {
+      "label": "ProviderIngestionService",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/providers/services/provider-ingestion.service.ts",
+      "source_location": "L19",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "id": "apps_api_src_modules_providers_services_provider_ingestion_service_provideringestionservice",
+      "community": 85,
+      "community_name": "CreateTransactionDto",
+      "norm_label": "provideringestionservice"
+    },
+    {
       "label": "CopilotTriggerProps",
       "file_type": "code",
       "source_file": "apps/web/src/components/copilot/CopilotDrawer.tsx",
@@ -6090,6 +6090,18 @@
       "norm_label": ".validateconfig()"
     },
     {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/providers/controllers/provider.controller.ts",
+      "source_location": "L77",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_api_src_modules_providers_controllers_provider_controller_providercontroller_constructor",
+      "community": 0,
+      "community_name": "FinancialDataProvider",
+      "norm_label": ".constructor()"
+    },
+    {
       "label": ".connect()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/providers/interfaces/provider.interface.ts",
@@ -6196,18 +6208,6 @@
       "community": 0,
       "community_name": "FinancialDataProvider",
       "norm_label": ".registerprovider()"
-    },
-    {
-      "label": ".constructor()",
-      "file_type": "code",
-      "source_file": "apps/api/src/modules/providers/services/provider-ingestion.service.ts",
-      "source_location": "L23",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_api_src_modules_providers_services_provider_ingestion_service_provideringestionservice_constructor",
-      "community": 0,
-      "community_name": "FinancialDataProvider",
-      "norm_label": ".constructor()"
     },
     {
       "label": ".connect()",
@@ -12957,7 +12957,7 @@
       "label": ".checkCircuitBreaker()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/market-data/providers/yahoo-finance.provider.ts",
-      "source_location": "L300",
+      "source_location": "L302",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_market_data_providers_yahoo_finance_provider_yahoofinanceprovider_checkcircuitbreaker",
@@ -12969,7 +12969,7 @@
       "label": ".checkCircuitTransition()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/market-data/providers/yahoo-finance.provider.ts",
-      "source_location": "L310",
+      "source_location": "L312",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_market_data_providers_yahoo_finance_provider_yahoofinanceprovider_checkcircuittransition",
@@ -12993,7 +12993,7 @@
       "label": ".fetchBatchPrices()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/market-data/providers/yahoo-finance.provider.ts",
-      "source_location": "L279",
+      "source_location": "L281",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_market_data_providers_yahoo_finance_provider_yahoofinanceprovider_fetchbatchprices",
@@ -13053,7 +13053,7 @@
       "label": ".getRemainingCooldown()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/market-data/providers/yahoo-finance.provider.ts",
-      "source_location": "L353",
+      "source_location": "L355",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_market_data_providers_yahoo_finance_provider_yahoofinanceprovider_getremainingcooldown",
@@ -13089,7 +13089,7 @@
       "label": ".onFailure()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/market-data/providers/yahoo-finance.provider.ts",
-      "source_location": "L333",
+      "source_location": "L335",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_market_data_providers_yahoo_finance_provider_yahoofinanceprovider_onfailure",
@@ -13101,7 +13101,7 @@
       "label": ".onSuccess()",
       "file_type": "code",
       "source_file": "apps/api/src/modules/market-data/providers/yahoo-finance.provider.ts",
-      "source_location": "L321",
+      "source_location": "L323",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_api_src_modules_market_data_providers_yahoo_finance_provider_yahoofinanceprovider_onsuccess",
@@ -15950,20 +15950,8 @@
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_controllers_provider_controller_providercontroller_connectaccount",
       "community": 56,
-      "community_name": "ProviderIngestionService",
+      "community_name": "ProviderController",
       "norm_label": ".connectaccount()"
-    },
-    {
-      "label": ".constructor()",
-      "file_type": "code",
-      "source_file": "apps/api/src/modules/providers/controllers/provider.controller.ts",
-      "source_location": "L77",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_api_src_modules_providers_controllers_provider_controller_providercontroller_constructor",
-      "community": 56,
-      "community_name": "ProviderIngestionService",
-      "norm_label": ".constructor()"
     },
     {
       "label": ".disconnectAccount()",
@@ -15974,7 +15962,7 @@
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_controllers_provider_controller_providercontroller_disconnectaccount",
       "community": 56,
-      "community_name": "ProviderIngestionService",
+      "community_name": "ProviderController",
       "norm_label": ".disconnectaccount()"
     },
     {
@@ -15986,7 +15974,7 @@
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_controllers_provider_controller_providercontroller_getaccounts",
       "community": 56,
-      "community_name": "ProviderIngestionService",
+      "community_name": "ProviderController",
       "norm_label": ".getaccounts()"
     },
     {
@@ -15998,7 +15986,7 @@
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_controllers_provider_controller_providercontroller_getsupportedproviders",
       "community": 56,
-      "community_name": "ProviderIngestionService",
+      "community_name": "ProviderController",
       "norm_label": ".getsupportedproviders()"
     },
     {
@@ -16010,7 +15998,7 @@
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_controllers_provider_controller_providercontroller_importcsv",
       "community": 56,
-      "community_name": "ProviderIngestionService",
+      "community_name": "ProviderController",
       "norm_label": ".importcsv()"
     },
     {
@@ -16022,7 +16010,7 @@
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_controllers_provider_controller_providercontroller_syncprovideraccount",
       "community": 56,
-      "community_name": "ProviderIngestionService",
+      "community_name": "ProviderController",
       "norm_label": ".syncprovideraccount()"
     },
     {
@@ -16034,7 +16022,7 @@
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_services_provider_factory_service_providerfactoryservice_getsupportedproviders",
       "community": 56,
-      "community_name": "ProviderIngestionService",
+      "community_name": "ProviderController",
       "norm_label": ".getsupportedproviders()"
     },
     {
@@ -16046,68 +16034,8 @@
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_services_provider_ingestion_service_provideringestionservice_deleteprovideraccount",
       "community": 56,
-      "community_name": "ProviderIngestionService",
+      "community_name": "ProviderController",
       "norm_label": ".deleteprovideraccount()"
-    },
-    {
-      "label": ".getProviderAccounts()",
-      "file_type": "code",
-      "source_file": "apps/api/src/modules/providers/services/provider-ingestion.service.ts",
-      "source_location": "L97",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_api_src_modules_providers_services_provider_ingestion_service_provideringestionservice_getprovideraccounts",
-      "community": 56,
-      "community_name": "ProviderIngestionService",
-      "norm_label": ".getprovideraccounts()"
-    },
-    {
-      "label": ".ingestCsvContent()",
-      "file_type": "code",
-      "source_file": "apps/api/src/modules/providers/services/provider-ingestion.service.ts",
-      "source_location": "L157",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_api_src_modules_providers_services_provider_ingestion_service_provideringestionservice_ingestcsvcontent",
-      "community": 56,
-      "community_name": "ProviderIngestionService",
-      "norm_label": ".ingestcsvcontent()"
-    },
-    {
-      "label": ".mapToCreateTransactionDto()",
-      "file_type": "code",
-      "source_file": "apps/api/src/modules/providers/services/provider-ingestion.service.ts",
-      "source_location": "L360",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_api_src_modules_providers_services_provider_ingestion_service_provideringestionservice_maptocreatetransactiondto",
-      "community": 56,
-      "community_name": "ProviderIngestionService",
-      "norm_label": ".maptocreatetransactiondto()"
-    },
-    {
-      "label": ".saveProviderAccount()",
-      "file_type": "code",
-      "source_file": "apps/api/src/modules/providers/services/provider-ingestion.service.ts",
-      "source_location": "L38",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_api_src_modules_providers_services_provider_ingestion_service_provideringestionservice_saveprovideraccount",
-      "community": 56,
-      "community_name": "ProviderIngestionService",
-      "norm_label": ".saveprovideraccount()"
-    },
-    {
-      "label": ".syncProviderAccount()",
-      "file_type": "code",
-      "source_file": "apps/api/src/modules/providers/services/provider-ingestion.service.ts",
-      "source_location": "L256",
-      "_callable": true,
-      "_origin": "ast",
-      "id": "apps_api_src_modules_providers_services_provider_ingestion_service_provideringestionservice_syncprovideraccount",
-      "community": 56,
-      "community_name": "ProviderIngestionService",
-      "norm_label": ".syncprovideraccount()"
     },
     {
       "label": ".checkCircuit()",
@@ -18450,6 +18378,78 @@
       "norm_label": ".updatecashbalance()"
     },
     {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/providers/services/provider-ingestion.service.ts",
+      "source_location": "L23",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_api_src_modules_providers_services_provider_ingestion_service_provideringestionservice_constructor",
+      "community": 85,
+      "community_name": "CreateTransactionDto",
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".getProviderAccounts()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/providers/services/provider-ingestion.service.ts",
+      "source_location": "L97",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_api_src_modules_providers_services_provider_ingestion_service_provideringestionservice_getprovideraccounts",
+      "community": 85,
+      "community_name": "CreateTransactionDto",
+      "norm_label": ".getprovideraccounts()"
+    },
+    {
+      "label": ".ingestCsvContent()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/providers/services/provider-ingestion.service.ts",
+      "source_location": "L157",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_api_src_modules_providers_services_provider_ingestion_service_provideringestionservice_ingestcsvcontent",
+      "community": 85,
+      "community_name": "CreateTransactionDto",
+      "norm_label": ".ingestcsvcontent()"
+    },
+    {
+      "label": ".mapToCreateTransactionDto()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/providers/services/provider-ingestion.service.ts",
+      "source_location": "L360",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_api_src_modules_providers_services_provider_ingestion_service_provideringestionservice_maptocreatetransactiondto",
+      "community": 85,
+      "community_name": "CreateTransactionDto",
+      "norm_label": ".maptocreatetransactiondto()"
+    },
+    {
+      "label": ".saveProviderAccount()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/providers/services/provider-ingestion.service.ts",
+      "source_location": "L38",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_api_src_modules_providers_services_provider_ingestion_service_provideringestionservice_saveprovideraccount",
+      "community": 85,
+      "community_name": "CreateTransactionDto",
+      "norm_label": ".saveprovideraccount()"
+    },
+    {
+      "label": ".syncProviderAccount()",
+      "file_type": "code",
+      "source_file": "apps/api/src/modules/providers/services/provider-ingestion.service.ts",
+      "source_location": "L256",
+      "_callable": true,
+      "_origin": "ast",
+      "id": "apps_api_src_modules_providers_services_provider_ingestion_service_provideringestionservice_syncprovideraccount",
+      "community": 85,
+      "community_name": "CreateTransactionDto",
+      "norm_label": ".syncprovideraccount()"
+    },
+    {
       "label": "CopilotDrawer()",
       "file_type": "code",
       "source_file": "apps/web/src/components/copilot/CopilotDrawer.tsx",
@@ -18849,7 +18849,7 @@
       "label": "formatCurrency()",
       "file_type": "code",
       "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
-      "source_location": "L132",
+      "source_location": "L131",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_web_src_components_portfolio_stockchartmodal_formatcurrency",
@@ -18861,7 +18861,7 @@
       "label": "formatVolume()",
       "file_type": "code",
       "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
-      "source_location": "L141",
+      "source_location": "L140",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_web_src_components_portfolio_stockchartmodal_formatvolume",
@@ -18873,7 +18873,7 @@
       "label": "StockChartModal()",
       "file_type": "code",
       "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
-      "source_location": "L149",
+      "source_location": "L148",
       "_callable": true,
       "_origin": "ast",
       "id": "apps_web_src_components_portfolio_stockchartmodal_stockchartmodal",
@@ -19712,17 +19712,6 @@
       "community": 0,
       "community_name": "FinancialDataProvider",
       "norm_label": "injectable"
-    },
-    {
-      "label": "Optional",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "apps_api_src_modules_providers_services_provider_ingestion_service_ts_optional",
-      "community": 0,
-      "community_name": "FinancialDataProvider",
-      "norm_label": "optional"
     },
     {
       "label": "provider-factory.service.spec.ts",
@@ -21076,6 +21065,28 @@
       "community": 101,
       "community_name": "app.module.ts",
       "norm_label": "app.module.ts"
+    },
+    {
+      "label": "Global",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "apps_api_src_common_cache_cache_module_ts_global",
+      "community": 101,
+      "community_name": "app.module.ts",
+      "norm_label": "global"
+    },
+    {
+      "label": "Module",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "apps_api_src_common_cache_cache_module_ts_module",
+      "community": 101,
+      "community_name": "app.module.ts",
+      "norm_label": "module"
     },
     {
       "label": "Module",
@@ -33299,28 +33310,6 @@
       "norm_label": "cache.module.ts"
     },
     {
-      "label": "Global",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "apps_api_src_common_cache_cache_module_ts_global",
-      "community": 23,
-      "community_name": "AnalyticsCacheManager",
-      "norm_label": "global"
-    },
-    {
-      "label": "Module",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "apps_api_src_common_cache_cache_module_ts_module",
-      "community": 23,
-      "community_name": "AnalyticsCacheManager",
-      "norm_label": "module"
-    },
-    {
       "label": "cache/index.ts",
       "file_type": "code",
       "source_file": "apps/api/src/common/cache/index.ts",
@@ -41029,7 +41018,7 @@
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_controllers_provider_controller_ts_body",
       "community": 56,
-      "community_name": "ProviderIngestionService",
+      "community_name": "ProviderController",
       "norm_label": "body"
     },
     {
@@ -41040,7 +41029,7 @@
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_controllers_provider_controller_ts_controller",
       "community": 56,
-      "community_name": "ProviderIngestionService",
+      "community_name": "ProviderController",
       "norm_label": "controller"
     },
     {
@@ -41051,7 +41040,7 @@
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_controllers_provider_controller_ts_delete",
       "community": 56,
-      "community_name": "ProviderIngestionService",
+      "community_name": "ProviderController",
       "norm_label": "delete"
     },
     {
@@ -41062,7 +41051,7 @@
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_controllers_provider_controller_ts_get",
       "community": 56,
-      "community_name": "ProviderIngestionService",
+      "community_name": "ProviderController",
       "norm_label": "get"
     },
     {
@@ -41073,7 +41062,7 @@
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_controllers_provider_controller_ts_httpcode",
       "community": 56,
-      "community_name": "ProviderIngestionService",
+      "community_name": "ProviderController",
       "norm_label": "httpcode"
     },
     {
@@ -41084,7 +41073,7 @@
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_controllers_provider_controller_ts_param",
       "community": 56,
-      "community_name": "ProviderIngestionService",
+      "community_name": "ProviderController",
       "norm_label": "param"
     },
     {
@@ -41095,7 +41084,7 @@
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_controllers_provider_controller_ts_post",
       "community": 56,
-      "community_name": "ProviderIngestionService",
+      "community_name": "ProviderController",
       "norm_label": "post"
     },
     {
@@ -41106,7 +41095,7 @@
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_controllers_provider_controller_ts_req",
       "community": 56,
-      "community_name": "ProviderIngestionService",
+      "community_name": "ProviderController",
       "norm_label": "req"
     },
     {
@@ -41117,19 +41106,8 @@
       "_origin": "ast",
       "id": "apps_api_src_modules_providers_controllers_provider_controller_ts_useguards",
       "community": 56,
-      "community_name": "ProviderIngestionService",
+      "community_name": "ProviderController",
       "norm_label": "useguards"
-    },
-    {
-      "label": "Injectable",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "apps_api_src_modules_providers_services_provider_ingestion_service_ts_injectable",
-      "community": 56,
-      "community_name": "ProviderIngestionService",
-      "norm_label": "injectable"
     },
     {
       "label": "Injectable",
@@ -45260,6 +45238,28 @@
       "norm_label": "injectable"
     },
     {
+      "label": "Injectable",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "apps_api_src_modules_providers_services_provider_ingestion_service_ts_injectable",
+      "community": 85,
+      "community_name": "CreateTransactionDto",
+      "norm_label": "injectable"
+    },
+    {
+      "label": "Optional",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "apps_api_src_modules_providers_services_provider_ingestion_service_ts_optional",
+      "community": 85,
+      "community_name": "CreateTransactionDto",
+      "norm_label": "optional"
+    },
+    {
       "label": "IsDate",
       "file_type": "code",
       "source_file": "",
@@ -45890,7 +45890,7 @@
       "label": "KNOWN_BENCHMARK_MAPPINGS",
       "file_type": "code",
       "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
-      "source_location": "L83",
+      "source_location": "L82",
       "_origin": "ast",
       "id": "apps_web_src_components_portfolio_stockchartmodal_known_benchmark_mappings",
       "community": 91,
@@ -49289,7 +49289,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/market-data/providers/yahoo-finance.provider.ts",
-      "source_location": "L301",
+      "source_location": "L303",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_market_data_providers_yahoo_finance_provider_yahoofinanceprovider_checkcircuitbreaker",
@@ -49301,7 +49301,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/market-data/providers/yahoo-finance.provider.ts",
-      "source_location": "L304",
+      "source_location": "L306",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_market_data_providers_yahoo_finance_provider_yahoofinanceprovider_checkcircuitbreaker",
@@ -49313,7 +49313,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/market-data/providers/yahoo-finance.provider.ts",
-      "source_location": "L305",
+      "source_location": "L307",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_market_data_providers_yahoo_finance_provider_yahoofinanceprovider_checkcircuitbreaker",
@@ -49325,7 +49325,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/market-data/providers/yahoo-finance.provider.ts",
-      "source_location": "L316",
+      "source_location": "L318",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_market_data_providers_yahoo_finance_provider_yahoofinanceprovider_checkcircuittransition",
@@ -49337,7 +49337,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/market-data/providers/yahoo-finance.provider.ts",
-      "source_location": "L287",
+      "source_location": "L289",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_market_data_providers_yahoo_finance_provider_yahoofinanceprovider_fetchbatchprices",
@@ -49361,7 +49361,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/market-data/providers/yahoo-finance.provider.ts",
-      "source_location": "L270",
+      "source_location": "L272",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_market_data_providers_yahoo_finance_provider_yahoofinanceprovider_fetchhistoricaldata",
@@ -49457,7 +49457,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/market-data/providers/yahoo-finance.provider.ts",
-      "source_location": "L336",
+      "source_location": "L338",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_market_data_providers_yahoo_finance_provider_yahoofinanceprovider_onfailure",
@@ -49469,7 +49469,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/market-data/providers/yahoo-finance.provider.ts",
-      "source_location": "L328",
+      "source_location": "L330",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_market_data_providers_yahoo_finance_provider_yahoofinanceprovider_onsuccess",
@@ -57605,7 +57605,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
-      "source_location": "L282",
+      "source_location": "L281",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_components_portfolio_stockchartmodal_stockchartmodal",
@@ -57618,7 +57618,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
-      "source_location": "L285",
+      "source_location": "L284",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_components_portfolio_stockchartmodal_stockchartmodal",
@@ -57629,7 +57629,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
-      "source_location": "L414",
+      "source_location": "L413",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_components_portfolio_stockchartmodal_stockchartmodal",
@@ -65405,7 +65405,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/market-data/providers/yahoo-finance.provider.ts",
-      "source_location": "L279",
+      "source_location": "L281",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_market_data_providers_yahoo_finance_provider_yahoofinanceprovider_fetchbatchprices",
@@ -101507,7 +101507,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
-      "source_location": "L132",
+      "source_location": "L131",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_components_portfolio_stockchartmodal",
@@ -101518,7 +101518,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
-      "source_location": "L141",
+      "source_location": "L140",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_components_portfolio_stockchartmodal",
@@ -101529,7 +101529,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
-      "source_location": "L149",
+      "source_location": "L148",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_components_portfolio_stockchartmodal",
@@ -101584,7 +101584,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "apps/web/src/components/portfolio/StockChartModal.tsx",
-      "source_location": "L83",
+      "source_location": "L82",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_web_src_components_portfolio_stockchartmodal",
@@ -114498,7 +114498,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/market-data/providers/yahoo-finance.provider.ts",
-      "source_location": "L279",
+      "source_location": "L281",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_market_data_providers_yahoo_finance_provider_yahoofinanceprovider",
@@ -114509,7 +114509,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/market-data/providers/yahoo-finance.provider.ts",
-      "source_location": "L300",
+      "source_location": "L302",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_market_data_providers_yahoo_finance_provider_yahoofinanceprovider",
@@ -114520,7 +114520,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/market-data/providers/yahoo-finance.provider.ts",
-      "source_location": "L310",
+      "source_location": "L312",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_market_data_providers_yahoo_finance_provider_yahoofinanceprovider",
@@ -114531,7 +114531,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/market-data/providers/yahoo-finance.provider.ts",
-      "source_location": "L321",
+      "source_location": "L323",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_market_data_providers_yahoo_finance_provider_yahoofinanceprovider",
@@ -114542,7 +114542,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/market-data/providers/yahoo-finance.provider.ts",
-      "source_location": "L333",
+      "source_location": "L335",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_market_data_providers_yahoo_finance_provider_yahoofinanceprovider",
@@ -114553,7 +114553,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "apps/api/src/modules/market-data/providers/yahoo-finance.provider.ts",
-      "source_location": "L353",
+      "source_location": "L355",
       "weight": 1.0,
       "_origin": "ast",
       "source": "apps_api_src_modules_market_data_providers_yahoo_finance_provider_yahoofinanceprovider",
