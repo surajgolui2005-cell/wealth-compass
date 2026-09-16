@@ -64,7 +64,11 @@ export function RegisterScreen({ navigation }: Props) {
             resizeMode="contain"
             accessibilityLabel="Wealth Compass Logo"
           />
-          <Text style={styles.title}>Create account</Text>
+          <Text style={styles.title}>
+            <Text style={{ color: "#003B7A" }}>Wealth</Text>
+            <Text style={{ color: "#00A99D" }}>Compass</Text>
+          </Text>
+          <Text style={styles.tagline}>PLAN SMARTER • GROW FURTHER</Text>
           <Text style={styles.subtitle}>Start monitoring your investments today</Text>
         </View>
         <View style={styles.card}>
@@ -148,16 +152,17 @@ const styles = StyleSheet.create({
   container: { flexGrow: 1, justifyContent: "center", padding: 24 },
   header: { alignItems: "center", marginBottom: 28 },
   logoImage: { width: 64, height: 64, marginBottom: 12 },
-  title: { fontSize: 24, fontWeight: "700", color: "#0f172a" },
-  subtitle: { fontSize: 14, color: "#64748b", marginTop: 4 },
+  title: { fontSize: 26, fontWeight: "800", color: "#003B7A" },
+  tagline: { fontSize: 10, fontWeight: "700", color: "#008B75", letterSpacing: 1.5, marginTop: 4 },
+  subtitle: { fontSize: 13, color: "#64748b", marginTop: 2 },
   card: {
     backgroundColor: "#fff",
     borderRadius: 16,
     padding: 24,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.06,
-    shadowRadius: 8,
+    shadowColor: "#003B7A",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.08,
+    shadowRadius: 12,
     elevation: 3,
   },
   errorBox: {
@@ -169,20 +174,20 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   errorText: { color: "#dc2626", fontSize: 14 },
-  label: { fontSize: 14, fontWeight: "600", color: "#374151", marginBottom: 6 },
+  label: { fontSize: 14, fontWeight: "600", color: "#2D3E50", marginBottom: 6 },
   input: {
     borderWidth: 1,
     borderColor: "#e2e8f0",
     borderRadius: 8,
     padding: 12,
     fontSize: 16,
-    color: "#0f172a",
-    backgroundColor: "#f8fafc",
+    color: "#2D3E50",
+    backgroundColor: "#F3F5F7",
     marginBottom: 16,
     minHeight: 44,
   },
   button: {
-    backgroundColor: "#3b82f6",
+    backgroundColor: "#003B7A",
     borderRadius: 8,
     padding: 14,
     alignItems: "center",
@@ -193,5 +198,5 @@ const styles = StyleSheet.create({
   buttonText: { color: "#fff", fontSize: 16, fontWeight: "700" },
   linkRow: { marginTop: 16, alignItems: "center" },
   linkText: { fontSize: 14, color: "#64748b" },
-  linkHighlight: { color: "#3b82f6", fontWeight: "600" },
+  linkHighlight: { color: "#00A99D", fontWeight: "700" },
 });

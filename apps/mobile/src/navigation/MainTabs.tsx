@@ -40,8 +40,8 @@ export function MainTabs() {
             const iconName = focused ? icons.focused : icons.unfocused;
             return <Ionicons name={iconName} size={size} color={color} />;
           },
-          tabBarActiveTintColor: "#3b82f6",
-          tabBarInactiveTintColor: "#94a3b8",
+          tabBarActiveTintColor: "#003B7A",
+          tabBarInactiveTintColor: "#64748b",
           tabBarStyle: {
             borderTopColor: "#e2e8f0",
             backgroundColor: "#ffffff",
@@ -50,7 +50,7 @@ export function MainTabs() {
           },
           headerStyle: { backgroundColor: "#ffffff" },
           headerShadowVisible: false,
-          headerTitleStyle: { fontWeight: "700", fontSize: 18 },
+          headerTitleStyle: { fontWeight: "700", fontSize: 18, color: "#003B7A" },
         })}
       >
         <Tab.Screen name="Dashboard" component={DashboardScreen} options={{ title: "Dashboard" }} />

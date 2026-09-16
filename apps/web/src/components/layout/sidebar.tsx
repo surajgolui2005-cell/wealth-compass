@@ -43,14 +43,14 @@ export function Sidebar() {
   }
 
   return (
-    <aside className="flex h-full w-64 flex-col border-r bg-card">
+    <aside className="flex h-full w-64 flex-col border-r bg-card shadow-sm">
       {/* Logo */}
       <div className="flex items-center px-6 py-5 border-b">
-        <Logo size={32} showText href="/dashboard" priority />
+        <Logo size={36} showText showTagline href="/dashboard" priority />
       </div>
 
       {/* Nav */}
-      <nav className="flex-1 px-3 py-4 space-y-1 overflow-y-auto">
+      <nav className="flex-1 px-3 py-4 space-y-1.5 overflow-y-auto">
         {navItems.map(({ href, label, icon: Icon }) => {
           const isActive = pathname === href || pathname.startsWith(`${href}/`);
           return (
@@ -58,13 +58,15 @@ export function Sidebar() {
               key={href}
               href={href}
               className={cn(
-                "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                "flex items-center gap-3 rounded-lg px-3.5 py-2.5 text-sm font-medium transition-all duration-200",
                 isActive
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground hover:bg-accent hover:text-accent-foreground",
+                  ? "bg-gradient-brand text-white shadow-md shadow-[#003B7A]/15 font-semibold"
+                  : "text-muted-foreground hover:bg-[#F3F5F7] hover:text-[#003B7A] dark:hover:bg-accent dark:hover:text-white",
               )}
             >
-              <Icon className="h-4 w-4 flex-shrink-0" />
+              <Icon
+                className={cn("h-4 w-4 flex-shrink-0", isActive ? "text-white" : "text-current")}
+              />
               {label}
             </Link>
           );
