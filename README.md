@@ -101,7 +101,7 @@ Wealth Compass employs a **clean modular monolith gateway** with dedicated **hig
                                                                 ┌──────────────────────────────────┐
                                                                 │    AI PORTFOLIO COPILOT (8001)   │
                                                                 ├──────────────────────────────────┤
-                                                                │ • Google Gemini 1.5 / OpenAI     │
+                                                                │ • llama-3.3-70b-versatile(groq)  │
                                                                 │ • Deterministic Fallback Engine  │
                                                                 │ • Context-Aware Portfolio QA     │
                                                                 │ • Rebalancing & Tax Suggestions  │
