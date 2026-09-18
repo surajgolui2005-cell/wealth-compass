@@ -51,7 +51,12 @@ import Constants from "expo-constants";
 
 // ── Config ────────────────────────────────────────────────────────────────────
 
-const COPILOT_BASE_URL = Constants.expoConfig?.extra?.copilotUrl ?? "http://localhost:8001";
+const hostUri = Constants.expoConfig?.hostUri;
+const hostIp = hostUri ? hostUri.split(":")[0] : "localhost";
+const configuredCopilot = Constants.expoConfig?.extra?.copilotUrl as string;
+const COPILOT_BASE_URL = configuredCopilot
+  ? configuredCopilot.replace("localhost", hostIp)
+  : `http://${hostIp}:8001`;
 
 const SEBI_DISCLAIMER =
   "AI-generated analytics for educational purposes. Not SEBI-registered investment advice.";

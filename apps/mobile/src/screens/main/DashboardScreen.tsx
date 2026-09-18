@@ -121,7 +121,7 @@ export function DashboardScreen() {
             }
           }}
         >
-          <Ionicons name="account-balance" size={16} color="#fff" />
+          <Ionicons name="business" size={16} color="#fff" />
           <Text style={styles.aaBtnText}>Sync AA 🔗</Text>
         </TouchableOpacity>
       </View>

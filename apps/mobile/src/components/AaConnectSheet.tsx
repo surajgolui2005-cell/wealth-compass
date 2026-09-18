@@ -6,12 +6,12 @@ import {
   TextInput,
   TouchableOpacity,
   StyleSheet,
-  SafeAreaView,
   ScrollView,
   ActivityIndicator,
   Linking,
   Alert,
 } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiClient } from "@/lib/api-client";
@@ -99,7 +99,7 @@ export function AaConnectSheet({ visible, onClose, portfolioId }: AaConnectSheet
         <SafeAreaView style={styles.modalContainer}>
           <View style={styles.header}>
             <View style={styles.titleRow}>
-              <Ionicons name="account-balance" size={24} color="#3b82f6" />
+              <Ionicons name="business" size={24} color="#3b82f6" />
               <Text style={styles.title}>🏦 1-Click Demat Sync</Text>
             </View>
             <TouchableOpacity onPress={handleReset}>
